@@ -1,0 +1,1456 @@
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "ફોન રિંગટોન"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "ગાળો"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "સ્થાન"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "આમ ગોઠવો"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "વ્યક્તિગત પૃષ્ઠમાં ઉમેરો"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "વ્યક્તિગત પૃષ્ઠમાંથી દૂર કરો"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "સામાન્ય સંગ્રહ પર ખસેડો"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "વ્યક્તિગત સંગ્રહ પર ખસેડો"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "પસંદ કરેલી વસ્તુઓને %s પર ખસેડવામાં આવશે."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "પસંદ કરેલી વસ્તુને %s પર ખસેડવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "રિંગટોન ઉમેર્યુ."
+
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "બંધ કરો"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "વર્ણોની મહત્તમ સંખ્યાએ પહોંચ્યા."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "બટન"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "રોકો"
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "સંદેશ"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ઓકે"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "રદ કરો"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "તાજું કરવું"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "બધું પસંદ કરો"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "સેટિંગ્સ"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "શેર"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "દૂર કરો"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d પસંદ કર્યા"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "વસ્તુઓ પસંદ કરો"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "પ્રગત"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "કાઢી નાખો"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "ભૂસાઇ ગયું."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "નિષ્ફળ."
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "લોડિંગ..."
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "ઉમેર્યુ."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "નિષ્ફળ."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "કોઈ શોધ પરિણામો નથી"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "પૂર્ણ"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "કોઈ વસ્તુઓ નથી"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "હોમ પર ઉમેરો"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "મનપસંદ"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "વધુ માહિતી"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "વ્યક્તિગત સંગ્રહણમાં ઉમેરો"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "%s થી જોડાણ અલગ થયું. નેટવર્ક દરજ્જો અને જોડાણ કરેલું ઉપકરણ તપાસો."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroring મારફતે"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "હોમ નેટવર્ક મારફતે"
+
+msgid "IDS_COM_SK_SET"
+msgstr "ગોઠવો"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM ફાઇલ શેર કરવામાં અસમર્થ."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "દૂર કરાય છે..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d ઉપકરણો"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "ગતિ સક્રિય કરો"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "ફરીથી પૂછશો નહીં"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "કોઈ પરિણામો મળ્યા નથી."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "ઇનકમિંગ કૉલ, સંદેશ એલર્ટ અને એલાર્મ શાંત કરવા માટે ફોન ઉપર ફેરવો."
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "પછીનું"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "ગેલેરી"
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "એકેય નહિ"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "સામગ્રી ખસેડવા માટે બેવાર ટેપ કરો."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "આસપાસ"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "લિરિક્સ"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમારા મોબાઇલ ઉપકરણ પર સંગીતમાં તમે ટ્રેક્સ ઉમેરો પછી, તે અહીં બતાવવામાં આવશે."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "સેમ્પલીંગ દર"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "મનપસંદ તરીકે માર્ક કર્યુ."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "સંગીત"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "મનપસંદ તરીકે માર્ક નથી કર્યુ."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "સંગીત શોધો"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "સ્વતઃ ભલામણો આ ઓડિયો ફાઇલનું સમર્થન કરતી નથી."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "ક્ષમા કરશો, પ્લેયર આ પ્રકારની ઓડિયો ફાઇલને ટેકો આપતું નથી."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "મનપસંદો"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "ખૂબ વગાડાયેલ"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "તાજેતરમાં ઉમેરાયેલ"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "પ્લેલિસ્ટ તૈયાર કરો"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "દૂર કરો"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "કૉલર રિંગટોન"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "કલાકાર"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "જોડવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "પ્લેલિસ્ટ બનાવવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "ટેગ મેળવવામાં અસમર્થ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "%d કરતાં વધુ મ્યુઝિક ફાઇલ જોડવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "કૉલ દરમ્યાન ચલાવવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "આલ્બમ"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "લેખક"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "કોપિરાઇટ"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "પ્લેલિસ્ટ તૈયાર કરો"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "વિવરણ"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "ફોર્મેટ"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "અશક્ય"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "કોઈ પ્લેલિસ્ટ નથી"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "ટ્રેક નંબર"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "કાઢી નાખવું?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "હટાવો?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "પ્લેલિસ્ટનું નામ બદલવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "આલ્બમ્સ"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "ઉમેરાય છે..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "%d આલબમ્સ હટાવીએ?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "પ્લેલિસ્ટ્સ"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "ઉમેરો"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "બાયોગ્રાફી"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "ક્રેડિટો"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "મીડિયા માહિતિ"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "ડિસ્કોગ્રાફી"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "ગીતકાવ્ય"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "શક્ય"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "સમીક્ષા"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "ટ્રૅક યાદી"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "પ્લેલિસ્ટમાં ઉમેરો"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "કલાકાર"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "ફોરવર્ડિંગ"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "પ્લેલિસ્ટ્સ"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "તાજેતરમાં વગાડાયેલ"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "ટ્રેક લંબાઈ"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "કોઈ ગીતો નથી"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "આ ટ્રેકને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "પસંદ કરેલા ટ્રૅક્સને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "આ કલાકાર હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "પસંદ કરેલા કલાકારોને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "બધા કલાકારો હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "આ ફોલ્ડર હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "પસંદ કરેલા ફોલ્ડર્સ ને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "બધાં ફોલ્ડર્સ હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "આ આલ્બમ હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "પસંદ કરેલા આલ્બમ્સને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "બધા આલ્બમ્સ હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "આ પ્લેલિસ્ટ હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "પસંદ કરેલી પ્લેલિસ્ટ્સને હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "બધી પ્લેલિસ્ટ્સ હટાવવામાં આવશે."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "ગીતો"
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "ફરી નામ આપો"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "પુનઃક્રમાંકિત કરો"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "પ્લેલિસ્ટ તરીકે સાચવો"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "એલાર્મ ધ્વનિ"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "કશું પસંદ કરાયું નથી."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "પ્લે કરવામાં અસમર્થ. ભૂલ થઈ છે."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "ચલાવવામાં અક્ષમ. ફાઇલ પ્રકારને ટેકો નથી."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "શેર કરો"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "સંચાલકો"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "વસ્તુઓ પસંદ કરો"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "આ રીતે જુઓ"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "સામાન્ય"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "ઉપયોગ કર્તા"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "વોકલ"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "બાસ બૂસ્ટ"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "ટ્રેબલ બૂસ્ટ"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "કૅફે"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "વર્ચ્યુઅલ 7.1 ch"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 કલાક પછી"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 કલાક 30 મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 કલાક પછી"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "સંગીત સ્વતઃ બંધ"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "આ અવાજ પ્રભાવ ફક્ત ઇયરફોન અને બ્લ્યુટુથ હેડસેટ મોડ્સમાં કામ કરે છે."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "સંગીત સ્ક્વેર"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "સંગીત સ્ક્વેરમાં પ્લે કરવા માટે પર્યાપ્ત સંગીત ફાઇલ્સ નથી. ઓછામાં ઓછી %d સંગીત ફાઇલ્સ આવશ્યક."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "પૅશન"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "શાંત"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "જૉય"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "પુસ્તકાલય અપડેટ"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "પુસ્તકાલય અપડેટ કરીએ?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "ધરી બદલો"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "જેનર્સ"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 આલ્બમ/1 ટ્રૅક"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 આલ્બમ/%d ટ્રૅક્સ"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d આલ્બમ્સ/%d ટ્રૅક્સ"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "તમે અવાજ કમાન્ડ્સ %1$s, %2$s, %3$s, %4$s, %5$s, અને %6$s સાથે સંગીત પ્લેયરને નિયંત્રિત કરી શકો છો"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "%d ટ્રેક્સને શફલ કરો"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "વધુ માહિતી"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "મારું મ્યુઝિક"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "યાદી દૃશ્ય"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Group Play દ્વારા ચલાવો"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "મનપસંદમાં ટ્રૅક ઉમેર્યો."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "મનપસંદોમાંથી કાઢો"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "નવું"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "ટ્રેક્સ"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "થંબનેલ"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "યાદી"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "પ્લેલિસ્ટ ખોલો"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "બધું ચલાવો"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "પસંદ કરેલી યાદી ખાલી છે."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "મૂડ્સ"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "વર્ષ"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "જૂનું"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "સંગીત ચોરસ તમારા ઉપકરણ પર સંગ્રહિત સંગીત ફાઇલ્સનું ગુણ વિષ્લેષણ કરે છે અને સ્વયં પ્લેલિસ્ટ્સ બનાવે છે."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "સ્ક્રીન પર એક ચોરસ પસંદ કરીને સદૃશ ગુણ સહિત સંગીતની પ્લેલિસ્ટ ચલાવો."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "હાલમાં ચાલુ ચોરસ ટેપ અને પકડી રાખીને પ્લેલિસ્ટ વિગતો જુઓ."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "નજીકનાં ઉપકરણો"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "જો નવા ગીતો ઉમેરવામાં આવ્યા હોય તો તમને પુસ્તકાલય અપડેટ કરવાની જરૂર પડશે"
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "આલ્બમ્સ નથી"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "કોઈ કલાકર નથી"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "ગતિ ચલાવો"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "કોન્સર્ટ હોલ"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "આમાં જોડો"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "જુઓ"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "તાજેતરમાં ઉમેરાયેલ"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "ઉપયોગ નથી"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "ઓફલાઇન ઉપલબ્ધ કરો"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d કલાક %2$d મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d કલાક પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "કોઈ ફોલ્ડર નથી"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "કોઇ ટ્રેક નથી"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d આલ્બમ્સ"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d કલાકારો"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d જેનર્સ"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d પ્લેલિસ્ટ્સ"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d ટ્રૅક્સ"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "પ્લેલિસ્ટ"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "સદૃશ આલ્બમ્સ"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "ટ્રૅક"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "થંબનેઈલ દૃષ્ટિ"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "આ અવાજ પ્રભાવ માત્ર ઇયરફોન મોડમાં કામ કરે છે."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "તમામ સામગ્રી"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "આ ફાઇલ ચલાવવા માટે નેટવર્ક જોડાણ આવશ્યક છે. તમારું નેટવર્ક જોડાણ તપાસો અને ફરી પ્રયાસ કરો."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "ફાઇલ પ્રકારને ટેકો નથી."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "અપડેટ થઇ રહ્યું છે..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "શોધો"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "આના દ્વારા શોધો"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "સંબંધિત વિડિયોઝ"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "સ્માર્ટ અવાજ"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "બધા ટ્રેકનાં અવાજને %d સ્તર પર વ્યવસ્થિત કરવામાં આવશે."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "સ્માર્ટ અવાજ સક્ષમ છે"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "જોડાણ માહિતી"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 કલાક %d મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "મારૂ ઉપકરણ"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "લાંબો સમય સુધી ઊંચા અવાજે સાંભળવું તમારી શ્રવણશક્તિને ક્ષતિ પહોંચાડી શકે છે. અવાજને સલામત સ્તરોની ઉપર વધારીએ?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "અગાઉથી છે."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "નજીકમાં ઉપકરણો માટે સ્કેન કરો"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 કલાક પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 કલાક 1 મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d કલાક 1 મિનિટ પછી"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 મિનિટ પછી"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "સ્ટોર પર જાઓ"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "ટ્રૅક્સ ઉમેરો"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમે સંગીતથી ટ્રૅક ડાઉનલોડ કરી લો, પછી તે અહીં બતાવાશે."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમે તમારા મનપસંદમાં ટ્રેક્સ ઉમેરી લો, પછી તે અહીં દેખાશે."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમે ટ્રેક્સ વગાડી લો પછી, તેઓને અહીં દર્શાવવામાં આવશે."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમે %s ટ્રેક્સ ઉમેરી લો, પછી તે અહીં બતાવવામાં આવશે."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "કોઈ ખરીદેલ સામગ્રી નથી"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "તરીકે સાચવો"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "અપડેટ કરવું નિષ્ફળ."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "રોમાંચક"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "મારું સંગીત શોધો"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "જોડેલ ઉપકરણો"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "મારું પ્લેલિસ્ટ %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "કોઈ ઉપકરણ નથી"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "ઉપલબ્ધ ઉપકરણો"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "ગોઠવો"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "કાઢવું નિષ્ફળ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "જ્યારે નજીકના ઉપકરણો અક્ષમ હોય ત્યારે ઝડપી ફૉર્વર્ડ અને રીવાઇન્ડનો ઉપયોગ કરવામાં અસમર્થ."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "આમ ગોઠવો"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "હેડફોન્સ"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "સ્પીકર"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 ગીત"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d ગીતો"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 ટ્રૅક"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "1 ટ્રૅકને શફલ કરો"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "પસંદ કરેલ સેલ માટે કોઈ સંગીત મળ્યું નથી"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "ફરી બતાવશો નહીં"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "ભિન્ન કલાકારો"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "હોમ સ્ક્રીન પર ઉમેરો"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "મનપસંદોમાં ઉમેરો"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "શીર્ષક સંપાદિત કરો"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "વ્યક્તિગત સંગ્રહણમાંથી દૂર કરો"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "તમે ટ્રેક્સ ડાઉનલોડ કરી લો પછી, ફોલ્ડર્સ બતાવવામાં આવશે."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "અવાજ"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "પુનરાવર્તન બંધ"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "બધું ફરી કરો"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "શફલ બંધ"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "શફલ ચાલુ"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "મારૂ પ્લેલિસ્ટ"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "મૂળભૂત પ્લેલિસ્ટ્સ"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "રેકોર્ડિંગ તારીખ"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "આલ્બમ કળા"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 જેનર"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d ફોલ્ડર્સ"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 ફોલ્ડર"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 કલાકાર"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 આલ્બમ"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 પ્લેલિસ્ટ"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "સંગીત પ્લેયર"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "ખસેડો"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "સ્વતઃ ભલામણો"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "શરૂઆતથી"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "તમારા માટે સલાહો"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "સાચવો"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "મૂળ"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "સાધન"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "ઉંચો સ્વર"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "બાસ"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "આ મોડમાં કોઈ પ્રભાવ લાગુ કરવામાં આવતી નથી"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "ટ્યુબ એમ્પના ટીમ્બરેને ઉત્તેજીત કરે છે."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "ટ્યૂબ એમ્પ્લીફાયર પ્રભાવ"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "આભાસી 7.1 ચેનલ આસપાસનાં અવાજના પ્રભાવને ઉત્તેજીત કરે છે."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "નાનો ખંડ"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "વિશાળ ખંડ"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "મોટા ખંડના રિવર્બને ઉત્તેજીત કરે છે, દા.ત. થિયેટર."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "કોન્સર્ટ હોલના રિવર્બને ઉત્તેજીત કરે છે."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "નાની જગ્યાના રિવર્બને ઉત્તેજીત કરે છે, દા.ત. સ્ટુડિયો."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "સ્પષ્ટતા"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "રીસેટ"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "વર્ષ"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "જેનર્સ"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "રચનાકાર"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "બધા ટ્રૅક્સ"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "ઝડપી યાદી પર જાઓ"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "શોધો"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "ઝડપી યાદીમાં ઉમેરો"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "TV-આઉટ માટે અનધિકૃત વિડિયો ફાઇલ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "બનાવવામાં અક્ષમ. પ્લેલિસ્ટ્સની મહત્તમ સંખ્યાએ પહોંચ્યા"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "બ્લ્યુટુથ હેડસેટ સાથે જોડાણ કરતી વખતે અવાજ વ્યવસ્થિત કરવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "બ્લ્યુટુથ હેડસેટ સાથે જોડાણ હોવા પર અવાજ વ્યવસ્થિત કરવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "સંગીત પ્લેયર રોકીએ?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "કૃપયા શાંત મોડથી બહાર નીકળો."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "નેટવર્ક નિષ્ફળતા."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "સ્મૃતિ કાર્ડ લોડ કરાયુ."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "ઉપકરણ સેટિંગ્સ ભૂલ."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "ગીત માટે યોગ્ય જોડી ના મળી."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "બફરિંગ"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT હેડસેટ ફક્ત સામાન્ય પ્રભાવો સેટિંગ ને ટેકો આપે છે."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "એપ્લિકેશન બંધ થઈ જશે."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "ઉમેર્યુ. ઈચ્છા યાદીમાં જઈએ?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "આ સેવાને પ્રવેશ માટે શુલ્ક ચૂકવવું પડી શકે છે. ચાલુ રાખીએ?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "સંગ્રહના પ્રવેશનો શુલ્ક ચૂકવવો પડી શકે છે. ચાલુ રાખીએ?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 ચેનલ ધ્વનિ પ્રભાવ ફક્ત ઇયરફોન અને બ્લ્યુટુથ હેડસેટ મોડ્સમાં કામ કરે છે."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 ચેનલ ધ્વનિ પ્રભાવ ફક્ત ઇઅરફોન અવસ્થામાં જ કામ કરે છે."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "સ્પીકર દ્વારા 5.1 ચેનલ ધ્વનિ પ્રભાવોને ટેકો નથી."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "કવર કળા દ્વારા દૃશ્ય"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "ટ્રૅક મોકલો"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "રેટ ટ્રેક"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "પ્લેલિસ્ટમાં ટ્રેક ખસેડો"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "ચાલુ"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "પ્લેલિસ્ટ હટાવો"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "પૃષ્ઠભૂમિમાં વાગે"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "પ્રભાવો"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "હમણાં લો"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "ઈચ્છા યાદી"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "પહોળું"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "વ્હા-વ્હા"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "વાઇબ વૂફર"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "ટ્રીમોલો"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "સંગીત વગાડવા/રોકવાં માટે બે વાર ટેપ કરો."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "બ્લ્યુટુથ દ્વારા ટ્રેક શેર કરો"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "સંગીત સેટઅપ વિઝાર્ડમાં આપનું સ્વાગત છે.\nનીચે આપેલી સ્ક્રીન તમારા ફોનને કન્ફિગર કરવામાં તમારી મદદ કરશે. ચાલુ રાખીએ?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "ઝડપી યાદી"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "અવાજ પ્રભાવો"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "બધા"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "અવાજ"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d ટ્રૅક્સ પસંદ કર્યું."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "કોઈ પોડકાસ્ટ નથી"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "સરખું શોધો"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "પૃષ્ઠભૂમિ પ્લે"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "ધ્વનિ પ્રભાવ બંધ હોવા પર 5.1 ચેનલ સક્રિય કરી શકાય છે."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "પોડકાસ્ટ્સ"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "છબી સંપાદિત કરો"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "કોઈ પણ ધ્વનિઓને ચલાવવા તે તમારા અવાજ રેકોર્ડિંગને રોકશે અને સાચવશે. ચલાવીએ?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "વસ્તુઓની મહત્તમ સંખ્યા (%d) પસંદ કરી."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "બ્લ્યુટુથ ડિસ્કનેક્ટેડ."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "ધ્વનિ ઇફેક્ટ બંધ હોવા પર 5.1 ચેનલ સક્રિય કરી શકાય છે."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "છબી લો"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "સંગીત દ્રશ્ય દર્શાવો"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "પોઝ"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "આલ્બમ ચલાવો"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "ના દ્વારા યાદી"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "ઇતિહાસ"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "સંગીત દ્રશ્ય છુપાવો"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "ટેગ શોધો"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "ડ્રોપબોક્સ સામગ્રી"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "ફોન પરની સામગ્રી"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "છબી બદલો"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "ડ્રોપબોક્સનો ડેટા હટાવો"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "ઓલશેર સહ ઉપકરણોમાં તમે તમારા સંગીત સ્ટ્રીમ કરી શકો છો."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "માન્યતા"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "પ્રકાર"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "આ સર્વરમાંથી ફાઇલ અને સાથે સાથે કોઈ પણ જોડેલા ઉપકરણો હટાવશે."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "કલાકાર"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "આલ્બમ કળા"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "અન્ય સામગ્રી"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "નામ ખૂબ લાંબુ."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "સંગીત સ્પષ્ટતા"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "લાંબો સમય ઉચ્ચ અવાજ સાંભળવા પર તે તમારા શ્રવણશક્તિની હાનિ પેદા કરી શકે છે."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "ઉપલબ્ધ ઉપયોગો"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "હેડફોન્સ જોડાયેલા હોય ત્યારે જ માત્ર અવાજ પ્રભાવો ઉપલબ્ધ હોય છે."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "તમારા વ્યક્તિગત સંગ્રહણમાં ઉમેરો"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "તમારા અંગત સંગ્રહણમાંથી દૂર કરો"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "સંદર્ભગત પોપ-અપ"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "સંદર્ભગત પોપ-અપ ખુલ્લું છે. તેને બંધ કરવા માટે બેવાર ટેપ કરો."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "એકનું પુનરાવર્તન કરો"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "ખસેડે છે..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d વસ્તુઓ સુધી પસંદ કરો."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "ટેબ"
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "પ્લેલિસ્ટ નામ %s પહેલેથી ઉપયોગમાં છે."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d ટ્રેક્સને પ્લેલિસ્ટમાં ઉમેરવામાં આવ્યા છે."
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "હાલમાં ઉમેર્યુ"
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 ટ્રેક પ્લેલિસ્ટમાં ઉમેર્યુ"
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "કુલ"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "પ્લેઅર બદલો"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "ટેબ્સ"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "ડ્રોપબોક્સ"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "સ્વતઃ ભલામણો ધ્વનિ ફાઇલો પરના હાઇલાઇટ્સને બહાર કાઢી શકે છે."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "પેરેંટ રેટિંગ"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "સંગીત"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "કોઈ સામગ્રીઓ નથી"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "અજ્ઞાત"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "ભૂલ."
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "ડાઉનલોડ"
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "કાઢી નાખો"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "શીર્ષક"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "સાચવો"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "ઇમેલ"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "બ્લ્યુટુથ"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "કાઢી નાખવું?"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "પસંદ કરો"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "બેટરી લો."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "સમૂહ સંગ્રહ મોડ દરમિયાન ઉપયોગ કરવામાં અસમર્થ."
+
+msgid "IDS_COM_BODY_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "ફાઇલ જડતી નથી."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "જોડાણ નિષ્ફળ."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "આ ફાઇલ હાજર નથી."
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "ઓડિયો ઉપકરણ"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "રદ કરો"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "ફોલ્ડર્સ"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "વિગતો"
+
+msgid "IDS_COM_BODY_END"
+msgstr "અંત"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "સંપાદિત કરો"
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "અપડેટ થયેલું."
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "ડાઉનલોડિંગ..."
+
+msgid "IDS_COM_POP_DONE"
+msgstr "થઇ ગયું"
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "હટાવાયા."
+
+msgid "IDS_COM_BODY_CREATE"
+msgstr "બનાવો"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "ઇન્ટરનેટ"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "ઉમેર્યુ."
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "સમય"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "નવું"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "રીસેટ"
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "સ્મૃતિ છલોછલ."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "સ્કેન કરો"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "પસંદ કરાયેલું"
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "પહેલાનું"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "જોડવામાં અક્ષમ."
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "પોઝ"
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "કૉલર રિંગટોન સાચવી."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "બીટ ઊંડાઈ"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "કદ"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d પસંદ કર્યા"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "તમે આ ઉપકરણ પર ટ્રેક્સ ઉમેરો તે પછી, તેઓને અહીં બતાવવામાં આવશે."
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "ઍલાર્મનો ધ્વનિ ગોઠવ્યો."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "લંબાઈ"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "ફોલ્ડર્સ"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "My playlists"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "ધ્વનિ પ્લેઅર"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "સેટિંગ્સ"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "ઓકે"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "રદ કરો"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "રીફ્રેશ કરો"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "બધું પસંદ કરો"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "હટાવેલ."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "થોભો"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "અજ્ઞાત"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "શીર્ષક"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "ઇમેલ"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "બ્લ્યુટુથ"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "ડાઉનલોડ કરો"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "બેટરી ઓછી."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "ઓડિયો ઉપકરણ"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "વિગતો"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "અંત"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "સંપાદિત કરો"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "અપડેટ થયેલું."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "હટાવાયા."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "પસંદ કરાયેલું"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "સ્કેન કરો"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "ભૂલ."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "સ્મૃતિ છલોછલ."
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "સંગ્રહ સ્થાન"
+
+msgid "IDS_MUSIC_OPT_REMOVE_M_PLAYLIST"
+msgstr "દૂર કરો"
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "કતાર"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "અવાજ"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "શફલ કરો"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "પુનરાવર્તન"
+
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ફાઇલ્સની મહત્તમ કદ વટાવાઈ ગઈ."
+

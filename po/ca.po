@@ -1,0 +1,1680 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Carregant..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privat"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Hora"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Aquest fitxer no existeix"
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Melodia del telèfon"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Durada"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Ubicació"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Definir com a"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Afeg a pàgina personal"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Eliminar de pàg personal"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Moure a l'emmagatzematge normal"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Moure a l'emmagatzematge personal"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Els elements seleccionats es mouran a %s"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "L'element seleccionat es mourà a %s"
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "No es pot utilitzar durant el mode d'emmagatzematge massiu"
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Melodia afegida"
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Botó"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Seleccionar elements"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Avançat"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Anterior"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Tancar"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Afegit"
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Error"
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "No hi ha cap resultat de cerca"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Fet"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "No hi ha elements"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Afegir a l'inici"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Següent"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Descarregant..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Preferit"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Afegir a l'emmagatzematge personal"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Desconnectat de %s. Comprovi l'estat de la xarxa i el dispositiu connectat."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Mitjançant Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Mitjançant xarxa domèstica"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "L'entrada és buida"
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "No està disponible durant una trucada"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "No es pot compartir un fitxer DRM."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Eliminant..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d dispositius"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Habilitar mov"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "No ho tornis a preguntar"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "No s'han trobat resultats."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Giri el telèfon per silenciar trucades d'entrada, avisos de missatges i alarmes"
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Cap"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galeria"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Toqui dos cops per moure's al contingut."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "So envoltant"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Lletra"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després d'afegir pistes a Música al seu dispositiu mòbil, es mostraran aquí."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Freqüència de mostreig"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Marcat com a preferit"
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Música"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "No marcat com a preferit"
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Cercar música"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "La recomanació automàtica no admet aquest fitxer d'àudio"
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Ho sentim, el reproductor no és compatible amb aquest tipus de fitxer d'àudio"
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Preferits"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "El més reproduït"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Afegides fa poc"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Crear llista de reproducció"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Eliminar"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Melodia de la persona que truca"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Artistes"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "No es pot afegir"
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "No es pot crear llista de reproducció"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "No es pot obtenir l'etiqueta"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "No es poden afegir més de %d fitxers de música"
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Àlbum"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autor"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Copyright"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Crear llista de reproducció"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Descripció"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Format"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "No és possible"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "No hi ha llistes de reproducció"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Número de pista"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Esborrar?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Eliminar?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "No es pot canviar el nom de la llista de reproducció"
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Àlbums"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Afegint..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Esborrar %d àlbums?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Llistes de repr"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Afegir"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografia"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Crèdits"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Info multimèdia"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Discografia"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Lletra"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Possible"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Revisar"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Llista de pistes"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Afegir a llista de reproducció"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Artista"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Reenviant"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Llistes de reproducció"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Escoltades recentment"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Durada de pista"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Cap cançó"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "S'esborrarà aquesta pista"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "S'esborraran les pistes seleccionades"
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "S'esborrarà aquest artista"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "S'esborraran els artistes seleccionats."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "S'esborraran tots els artistes"
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "S'esborrarà aquesta carpeta"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "S'esborraran les carpetes seleccionades."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "S'esborraran totes les carpetes"
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "S'esborrarà aquest àlbum"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "S'esborraran els àlbums seleccionats."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "S'esborraran tots els àlbums"
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "S'esborrarà aquesta llista de reproducció"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "S'esborraran les llistes de reproducció seleccionades"
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "S'esborraran totes les llistes de reproducció"
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Cançons"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Tornar a ordenar"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Desar com a llista de reproducció"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "To d'alarma"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "No s'ha seleccionat res"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "No es pot reproduir. S'ha produït un error."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "No es pot reproduir. No s'admet el tipus de fitxer."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Compartir"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Directors"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Seleccioni dispositiu"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Veure com"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normal"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Usuari"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Vocal"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Accentuació de baixos"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Accentuació d'aguts"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Cafè"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "7.1 canals virtuals"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Després de 15 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Després de 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Després d'1 hora"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Després d'1 hora 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Després de 2 hores"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Música automàtica desactivada"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Aquest efecte de so només funciona en els modes auricular i auriculars Bluetooth"
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Music square"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "No hi ha prou fitxers de música per reproduir a Music square. En calen almenys %d."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Passió"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Tranquil"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Alegria"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Actualització de biblioteca"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Actualitzar biblioteca?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Canviar eix"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Gèneres"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 àlbum/1 pista"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 àlbum/%d pistes"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d àlbums/%d pistes"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Pot controlar el Reproductor de música amb les comandes de veu %1$s, %2$s, %3$s, %4$s, %5$s i %6$s"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Ordenar %d pistes aleatòriament"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Més informació"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "La meva música"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Vista de llista"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Reproduir amb Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Pista afegida a preferits"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Eliminar de preferits"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Nou"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Pistes"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Miniatura"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Llistar"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Obrir llista de reproducció"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Reproduir-ho tot"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Llista seleccionada buida"
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Estats d'ànim"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Anys"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Antic"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Music square analitza les característiques dels fitxers de música emmagatzemats al dispositiu i crea llistes de reproducció automàticament"
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Reprodueixi llistes de reproducció amb característiques semblants seleccionant un quadrat de la pantalla"
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Veure detalls de la llista de reproducció mantenint tocat el quadre que s'està reproduint actualment"
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Dispositius propers"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Potser ha d'actualitzar la biblioteca si s'hi han afegit cançons noves"
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Cap àlbum"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Sense artistes"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Velocitat de reprod"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Sala de concerts"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Afegir a"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Veure"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Afegides fa poc"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "No s'ha utilitzat"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Fer disponible fora de línia"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Després de %1$d h %2$d min"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Després de %d h"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Després de %d min"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "No hi ha cap carpeta"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Sense pistes"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d àlbums"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d artistes"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d gèneres"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d llistes de reproducció"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d pistes"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Llista de reproducció"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Àlbums similars"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Pista"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Vista de miniatura"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Aquest efecte de so només funciona en mode auricular"
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Tot el contingut"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Cal una connexió de xarxa per reproduir aquest fitxer. Torni a comprovar la connexió de xarxa i torni-ho a intentar."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "No s'admet el tipus de fitxer"
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Actualitzant..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Cercar"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Cercar per"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Vídeos relacionats"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Volum intel·ligent"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "El volum de totes les pistes s'ajustarà al nivell %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "El volum intel·ligent està habilitat"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Info de connexió"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Després d'1 h %d min"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "El meu dispositiu"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Escoltar a un volum elevat durant molt temps pot malmetre la seva oïda. Augmentar el volum per sobre dels nivells segurs?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Ja existeix"
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Escanejar dispositius propers"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Després d'1 h"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Desp d'1 h 1 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Després de %d h 1 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Després d'1 min"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Anar a la botiga"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Afegir pistes"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després de descarregar pistes des de Música, es mostraran aquí"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després d'afegir pistes als preferits, es mostraran aquí"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després de reproduir pistes, es mostraran aquí"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després d'afegir pistes a %s, es mostraran aquí"
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Sense contingut comprat"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Des com a"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Error en actualitzar"
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Emocionant"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Cercar la meva música"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Dispositius connectats"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "La meva llista de reproducció %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Sense dispositius"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dispositius dispon"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Definir"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Error en eliminar"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "No es pot utilitzar avançament ràpid i rebobinar quan s'han habilitat dispositius propers"
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Definir com a"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Auriculars"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Altaveu"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 cançó"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d cançons"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 pista"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Aleatoritzar 1 pista"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "No s'ha trobar música per a la cel·la seleccionada"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "No ho tornis a mostrar."
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Artistes diversos"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Afegir a pantalla d'inici"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Afegir a Preferits"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Editar titol"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Eliminar de l'emmagatzematge personal"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Després de descarregar pistes, es mostraran carpetes"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Volum"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Desactivar repetició"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Repetir-ho tot"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Ordre aleatori desactivat"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Ordre aleatori activat"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "La meva llista de reproducció"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "LLISTES DE REPRODUCCIÓ PREDETERMINADES"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Data de gravació"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Albumart"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 gènere"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d carpetes"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 carpeta"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 artista"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 àlbum"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 llista de reproducció"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Reproductor de música"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Moure"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Suggeriments automàtics"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Des del començament"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Suggeriments per a vostè"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Desar"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Bàsic"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrument"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Aguts"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Baixos"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "No s'aplica cap efecte en aquest mode."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simula el timbre d'un amplificador de tub."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Efecte amplificador de tub"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simula l'efecte de so envoltant del canal virtual 7.1"
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Sala petita"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Sala gran"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simula la reverberació d'una sala gran, com ara un teatre."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simula la reverberació d'una sala de concerts."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simula la reverberació d'un espai petit, com ara un estudi."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Claredat"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Restablir"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Anys"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Gèneres"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Composit."
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Totes les pistes"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Anar a ll ràpida"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Trobar"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Afeg a ll ràpida"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Fitxer de vídeo no autoritzat per a sortida de televisió"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "No es pot crear. S'ha assolit el nombre màxim de llistes de reproducció."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "No es pot ajustar el volum mentre es connecten els auriculars Bluetooth"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "No es pot ajustar el volum mentre es els auriculars Bluetooth estan connectats"
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Aturar Reproductor de música?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Surti del mode silenci"
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Error de xarxa"
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Targeta de memòria carregada"
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Error d'ajustaments del dispositiu"
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "No s'ha pogut trobar una coincidència per a la cançó"
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Desant a la memòria intermèdia"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "Els auriculars BT només admeten l'ajustament d'efectes normals"
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Es tancarà l'aplicació"
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Afegit. Anar a la llista de desitjos?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "L'accés al servei pot comportar càrrecs. Continuar?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "L'accés a la botiga pot comportar càrrecs. Continuar?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "L'efecte de so de canal 5.1 només funciona en els modes auricular i auriculars Bluetooth"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "L'efecte de so del canal 5.1 només funciona en mode auricular"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Els efectes de so del canal 5.1 no són compatibles amb l'altaveu"
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Veure per caràtula àlbum"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Enviar pista"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Avaluar pista"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Moure pista a la llista de reproducció"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Actual"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Esborrar llista de reproducció"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Reproducció en segon pla"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efectes"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Comprar"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Llista de desitjos"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Ample"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Altaveu amb vibració"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Toqui dos cops per a reproduir/pausar música"
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Compartir pista per Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Benvingut a l'assistent de configuració de Música.\nLes següents pantalles l'ajudaran a configurar el seu telèfon. Vol continuar?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Llista ràpida"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Efectes de so"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Tot"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Volum"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "S'han seleccionat %d pistes"
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Sense podcasts"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Cercar semblant"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Reproducció en segon pla"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Només es pot activar el canal 5.1 quan es desactiven els efectes de so"
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcasts"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Editar la imatge"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Si reprodueix algun so, s'aturarà i desarà la gravació de veu. Reproduir?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "S'ha seleccionat el nombre màxim d'elements (%d)"
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth desconnectat"
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Només es pot activar el canal 5.1 quan es desactiven els efectes de so"
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Fer foto"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Mostrar vista de música"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pausa"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Reproduir àlbum"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Llistar per"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Historial"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Amagar vista de música"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Buscar etiqueta"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Contingut Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Contingut telèfon"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Canviar imatge"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Esborrar dades Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Pot reproduir la seva música en dispositius mitjançant AllShare"
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Validesa"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Tipus"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "S'esborrarà el fitxer del servidor i, també, de qualsevol dispositiu connectat"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Artistes"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Caràtula àlbum"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Altres continguts"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Nom massa llarg"
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Claredat musical"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Volums elevats poden malmetre la seva oïda si els escolta durant molt temps"
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Usos disponibles"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Els efectes de so només estan disponible quan els auriculars estan connectats."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Afegir al seu emmagatzematge personal"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Eliminar del seu emmagatzematge personal"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Finestra emergent contextual"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "S'obre una finestra emergent contextual. Toqui-la dos cops per tancar-la."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Repetir una vegada"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Traslladant..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Seleccioni fins a %d elements"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Pestanya"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Canviar reprod"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Pestanyes"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Les recomanacions automàtiques poden extreure els destacats dels fitxers de so"
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Classificació dels pares"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "No s'ha trobat el fitxer"
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Melodia persona que truca desada"
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Profunditat de bits"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Mida"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d seleccionat"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després d'afegir pistes a aquest dispositiu, es mostraran aquí."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Durada"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 carpeta."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "No hi ha continguts"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Carpetes"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Les meves llistes rep"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Reproductor de so"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Ajustaments"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Esborrant..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 pista."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "S'esborraran totes les pistes"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "S'esborraran %d pistes."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 llista de reproducció."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "S'esborraran %d llistes de reproducció"
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "S'esborraran %d àlbums"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "S'esborraran %d artistes"
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "S'esborraran %d carpetes"
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Error de connexió"
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Clàssica"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Els efectes de so actuals no són compatibles amb HDMI"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Els efectes de so no són compatibles amb Bluetooth"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Els efectes de so no són compatibles amb la línia de sortida"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Els efectes de so no són compatibles amb HDMI"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Amplificador tub"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Personalitzat"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Amplificador tub"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "S'han afegit %d pistes a la llista de reproducció"
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "S'ha afegit 1 pista a la llista de reproducció."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Afegir pistes a llista reprod"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s ja està en ús. Introdueixi un altre nom."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Data de gravació"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Pista definida com a to d'alarma."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "No s'han trobat resultats"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Melodia predeterminada"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Pista definida com a melodia del remitent."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Pista definida com a melodia de trucada."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Afegir a la llista de reproducció en curs"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Els ajustaments d'equalitzador s'aplicaran mentre es reprodueixi música."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Alerta"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 àlbum"
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "Targ SD"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Emmagatzematge de dispositiu"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Nom de llista de reproducció en ús."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Llista de reproducció %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Crear"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Equalitzador presintonitzat"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automàtic"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Clàssica"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Efecte d'entorn"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "El tipus de fitxer no és compatible."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després de crear llistes de reproducció, es mostraran aquí"
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Seleccionar dispositiu d'àudio"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "El nom de la llista de distribució ja està en ús. Introdueixi un altre nom."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Llista de reproducció en curs"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Mostrar lletra"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Ocultar lletra"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "No es pot reproduir la música durant les trucades."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Seleccionar"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "No es pot reproduir la pista"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "REALITZAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ESBORRAR"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Missatge"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "Acceptar"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Actualitzar"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Seleccioni-ho tot"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Esborrat"
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Aturar"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Títol"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "Correu electrònic"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Bateria baixa"
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Dispositiu d’àudio"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Finalitzar"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Editar"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Actualitzat"
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Eliminat"
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Seleccionat"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Escanejar"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Error"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Memòria plena"
+
+
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Cua"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Volum"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Ordre aleatori"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Repetir"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "S'ha excedit la mida màxima de fitxers"
+

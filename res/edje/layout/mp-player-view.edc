@@ -1,0 +1,2586 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define PV_SREEN_W 720 /*480*/
+#define PV_SREEN_H 1280 /*800*/ /*1030*/
+#define PV_BG_COLOR 248 246 239 255
+#define PV_TOP_AREA_W PV_SREEN_W
+#define PV_TOP_AREA_H 730/*480*/
+#define PV_SREEN_ALL_H PV_SREEN_H
+
+/*player view buttong effect*/
+#define PV_BT_W 100
+#define PV_BT_H 95
+#define PV_BT_PRESS_W 95
+#define PV_BT_PRESS_H 103
+#define PV_BT_PRESS_SX ((1.0-PV_BT_PRESS_W/PV_BT_W)/2)
+#define PV_BT_PRESS_SY ((1.0-PV_BT_PRESS_H/PV_BT_H)/2)
+#define PV_BT_PRESS_EX (PV_BT_PRESS_SX+PV_BT_PRESS_W/PV_BT_W)
+#define PV_BT_PRESS_EY (PV_BT_PRESS_SY+PV_BT_PRESS_H/PV_BT_H)
+#define PV_BT_PRESS_BG_COLOR 240 240 240 155
+
+/* album art area */
+#define PV_ALBUM_AREA_W 720 /*S480*/
+#define PV_ALBUM_AREA_H 730 /*S480*/
+#define PV_ALBUM_AREA_TOP_H 0
+#define PV_ALBUM_IMAGE_W 572 /*S480*/
+#define PV_ALBUM_IMAGE_H 572 /*S480*/
+#define PV_ALBUM_IMAGE_FLICK_TIMER 0.35
+#define PV_ALBUM_THUMNAIL_BG "player-view/T02_album_thumbnail_bg.png"
+
+/* options */
+#define PV_OPTIONS_AREA_W PV_SREEN_W
+#define PV_OPTIONS_AREA_H 125
+#define PV_OPTIONS_AREA_TOP_H 30
+#define PV_OPTIONS_AREA_LEFT_W 45
+#define PV_OPTIONS_AREA_LEFT2_W 225
+#define PV_OPTIONS_AREA_RIGHT_W 30
+#define PV_OPTIONS_AREA_RIGHT2_W 225
+#define PV_OPTIONS_AREA_IMAGE_SIZE 60
+#define PV_OPTIONS_VOLUME_POPUP_W 64
+#define PV_OPTIONS_VOLUME_POPUP_H 348
+#define PV_OPTIONS_AREA_SY ((PV_ALBUM_AREA_H+PV_OPTIONS_AREA_TOP_H)/PV_SREEN_H)
+#define PV_OPTIONS_AREA_EY (PV_OPTIONS_AREA_SY+PV_OPTIONS_AREA_H/PV_SREEN_H)
+#define PV_OPTION_SHUFFLE_ON_SX (PV_OPTIONS_AREA_LEFT_W/PV_OPTIONS_AREA_W)
+#define PV_OPTION_SHUFFLE_ON_SY (PV_OPTIONS_AREA_TOP_H/PV_OPTIONS_AREA_H)
+#define PV_OPTION_SHUFFLE_ON_EX ((PV_OPTIONS_AREA_LEFT_W+PV_OPTIONS_AREA_IMAGE_SIZE)/PV_OPTIONS_AREA_W)
+#define PV_OPTION_SHUFFLE_ON_EY ((PV_OPTIONS_AREA_TOP_H+PV_OPTIONS_AREA_IMAGE_SIZE)/PV_OPTIONS_AREA_H)
+#define PV_OPTION_FAVOURITE_ON_SX (PV_OPTION_SHUFFLE_ON_EX+PV_OPTIONS_AREA_LEFT2_W/PV_OPTIONS_AREA_W)
+#define PV_OPTION_FAVOURITE_ON_EX (PV_OPTION_FAVOURITE_ON_SX+PV_OPTIONS_AREA_IMAGE_SIZE/PV_OPTIONS_AREA_W)
+#define PV_OPTION_REP_SX (PV_OPTION_FAVOURITE_ON_EX+PV_OPTIONS_AREA_RIGHT2_W/PV_OPTIONS_AREA_W)
+#define PV_OPTION_REP_EX (PV_OPTION_REP_SX+PV_OPTIONS_AREA_IMAGE_SIZE/PV_OPTIONS_AREA_W)
+
+/* bg */
+#define PV_BG_PATH	"core_theme_bg_01.png"
+#define PV_BG_PATH_DIM "core_theme_bg_dim.png"
+#define PV_CONTROL_CIRCLE_BT_03 "player-view/T02_control_circle_button_03.png"
+#define PV_CONTROL_CIRCLE_BT_03_PRESS "player-view/T02_control_circle_button_03_press.png"
+#define PV_OPTION_VOLUME "lite/player_icon_volume_normal.png"
+#define PV_OPTION_VOLUME_PRESS "lite/player_icon_volume_pressed.png"
+#define PV_OPTION_SHUFFLE_ON "lite/player_icon_Shuffle.png"
+#define PV_OPTION_SHUFFLE_OFF "lite/player_icon_shuffle_off_normal.png"
+#define PV_OPTION_SHUFFLE_ON_PRESS "lite/player_icon_shuffle_on_pressed.png"
+#define PV_OPTION_SHUFFLE_OFF_PRESS "lite/player_icon_shuffle_off_pressed.png"
+#define PV_OPTION_REP_A "lite/player_icon_rep_A_normal.png"
+#define PV_OPTION_REP_A_PRESS "lite/player_icon_rep_A_pressed.png"
+#define PV_OPTION_REP_1 "lite/player_icon_rep_A_pressed.png"
+#define PV_OPTION_REP_1_PRESS "lite/player_icon_rep_1_pressed.png"
+#define PV_OPTION_REP_ALL "lite/player_icon_rep_all_normal.png"
+#define PV_OPTION_REP_ALL_PRESS "lite/player_icon_rep_all_pressed.png"
+#define PV_OPTION_INFO "lite/T02_option_info.png"
+#define PV_OPTION_INFO_PRESS "lite/T02_option_info_press.png"
+//add favourite begin
+#define PV_OPTION_FAVOURITE_ON "lite/player_icon_play_list_favorite_on.png"
+#define PV_OPTION_FAVOURITE_OFF "lite/player_icon_play_list_favorite_off.png"
+#define PV_OPTION_FAVOURITE_ON_PRESS "player-view/T02_option_favorite_on_press.png"
+#define PV_OPTION_ALL_SHARE "T02_player_all_share.png"
+//add favourite end
+#define PV_BOTTOM_BG "player-view/T02_player_bg.png"
+#define PV_BOTTOM_BG_H 286
+//title area
+#define PV_TITLE_W PV_ALBUM_IMAGE_W
+#define PV_TITLE_H 64
+#define PV_MAIN_TITLE_H 23
+#define PV_ARTIST_TITLE_H 18
+#define PV_ALBUM_TITLE_H 18
+//control area
+#define PV_BOTTOM_CONTROL_H 422
+#define PV_OPTION_OFFSET_Y  16
+#define PV_OPTION_PART_H  84
+#define PV_PROGEESS_PART_H  113
+#define PV_CONTROL_PART_H  168
+#define PV_CONTROL_BOTTOM_H  10
+
+/* progress */
+#define PV_PROGRESS_OFFSET_Y  10
+#define PV_PROGRESS_AREA_W PV_SREEN_W
+#define PV_PROGRESS_AREA_H 72/*90*/
+#define PV_PROGRESS_TEXT_W 112
+#define PV_PROGRESS_TEXT_TOP_H 31
+#define PV_PROGRESS_TEXT_H 24
+#define PV_PROGRESS_TEXT_FONT			"Tizen:style=Regular"
+#define PV_PROGRESS_TEXT_SIZE			32
+#define PV_PROGRESS_TEXT_COLOR			248 246 240 255
+#define PV_PROGRESS_AREA_LEFT_SIZE      32
+#define PV_PROGRESS_AREA_RIGHT_SIZE     32
+#define PV_PROGRESS_AREA_SY (PV_OPTIONS_AREA_H/PV_BOTTOM_BG_H)
+#define PV_PROGRESS_AREA_EY ((PV_OPTIONS_AREA_H+PV_PROGRESS_AREA_H)/PV_BOTTOM_BG_H)
+#define PV_PROGRESS_LEFT_TEXT_SX (PV_PROGRESS_AREA_LEFT_SIZE/PV_PROGRESS_AREA_W)
+#define PV_PROGRESS_LEFT_TEXT_SY (40/PV_PROGRESS_AREA_H)
+#define PV_PROGRESS_LEFT_TEXT_EX (PV_PROGRESS_LEFT_TEXT_SX+PV_PROGRESS_TEXT_W/PV_PROGRESS_AREA_W)
+#define PV_PROGRESS_LEFT_TEXT_EY 1
+#define PV_PROGRESS_RIGHT_TEXT_SX (1-(PV_PROGRESS_AREA_RIGHT_SIZE+PV_PROGRESS_TEXT_W)/PV_PROGRESS_AREA_W)
+#define PV_PROGRESS_RIGHT_TEXT_SY PV_PROGRESS_LEFT_TEXT_SY
+#define PV_PROGRESS_RIGHT_TEXT_EX (PV_PROGRESS_RIGHT_TEXT_SX+PV_PROGRESS_TEXT_W/PV_PROGRESS_AREA_W)
+#define PV_PROGRESS_RIGHT_TEXT_EY 1
+#define PV_PROGRESSBAR_SX (PV_PROGRESS_AREA_LEFT_SIZE/PV_PROGRESS_AREA_W)
+#define PV_PROGRESSBAR_EX ((PV_PROGRESS_AREA_W-PV_PROGRESS_AREA_RIGHT_SIZE)/PV_PROGRESS_AREA_W)
+
+/* nearby */
+#define PV_NEARBY_ARER_W        96
+#define PV_NEARBY_ARER_H        441
+#define PV_NEARBY_ICON_W        63
+#define PV_NEARBY_ICON_H        63
+#define PV_NEARBY_ICON_MID      88
+#define PV_NEARBY_VOLUME_SIZE        96 441
+
+/* control */
+#define PV_CONTROL_AREA_W PV_SREEN_W
+#define PV_CONTROL_AREA_H 184
+#define PV_CONTROL_PREVIOUS_SZIE 124
+#define PV_CONTROL_PLAY_SIZE 124
+#define PV_CONTROL_NEXT_SZIE 124
+#define PV_CONTROL_ICON_SIZE 60
+#define PV_CONTROL_ICON_INTERVAL 48
+#define PV_CONTROL_INTERVAL1 39
+#define PV_CONTROL_INTERVAL2 30
+#define PV_CONTROL_RIGHT_PADDING 26
+#define PV_CONTROL_LEFT_W  45;
+#define PV_CONTROL_TOP_H  16;
+#define PV_CONTROL_VOLUME_SX (PV_CONTROL_LEFT_W/PV_CONTROL_AREA_W)
+#define PV_CONTROL_VOLUME_SY ((PV_CONTROL_TOP_H+20)/PV_CONTROL_AREA_H)
+#define PV_CONTROL_VOLUME_EX (PV_CONTROL_VOLUME_SX+PV_CONTROL_ICON_SIZE/PV_CONTROL_AREA_W)
+#define PV_CONTROL_VOLUME_EY (PV_CONTROL_VOLUME_SY+PV_CONTROL_ICON_SIZE/PV_CONTROL_AREA_H)
+#define PV_CONTROL_PLUS_SY (38/PV_NEARBY_ARER_H)
+#define PV_CONTROL_PLUS_EY (PV_CONTROL_PLUS_SY+PV_NEARBY_ICON_H/PV_NEARBY_ARER_H)
+#define PV_CONTROL_MINUS_SY (PV_CONTROL_PLUS_EY+PV_NEARBY_ICON_MID/PV_NEARBY_ARER_H)
+#define PV_CONTROL_MINUS_EY (PV_CONTROL_MINUS_SY+PV_NEARBY_ICON_H/PV_NEARBY_ARER_H)
+#define PV_CONTROL_MUTE_SY (PV_CONTROL_MINUS_EY+PV_NEARBY_ICON_MID/PV_NEARBY_ARER_H)
+#define PV_CONTROL_MUTE_EY (PV_CONTROL_MUTE_SY+PV_NEARBY_ICON_H/PV_NEARBY_ARER_H)
+#define PV_CONTROL_PREVIOUS_SX (PV_CONTROL_VOLUME_EX+PV_CONTROL_INTERVAL1/PV_CONTROL_AREA_W)
+#define PV_CONTROL_PREVIOUS_SY (PV_CONTROL_TOP_H/PV_CONTROL_AREA_H)
+#define PV_CONTROL_PREVIOUS_EX (PV_CONTROL_PREVIOUS_SX+PV_CONTROL_PREVIOUS_SZIE/PV_CONTROL_AREA_W)
+#define PV_CONTROL_PREVIOUS_EY (PV_CONTROL_PREVIOUS_SY+PV_CONTROL_PREVIOUS_SZIE/PV_CONTROL_AREA_H)
+#define PV_CONTROL_PLAY_SX (PV_CONTROL_PREVIOUS_EX+PV_CONTROL_INTERVAL2/PV_CONTROL_AREA_W)
+#define PV_CONTROL_PLAY_SY (PV_CONTROL_TOP_H/PV_CONTROL_AREA_H)
+#define PV_CONTROL_PLAY_EX (PV_CONTROL_PLAY_SX+PV_CONTROL_PLAY_SIZE/PV_CONTROL_AREA_W)
+#define PV_CONTROL_PLAY_EY (PV_CONTROL_PLAY_SY+PV_CONTROL_PLAY_SIZE/PV_CONTROL_AREA_H)
+#define PV_CONTROL_NEXT_SX (PV_CONTROL_PLAY_EX+PV_CONTROL_INTERVAL2/PV_CONTROL_AREA_W)
+#define PV_CONTROL_NEXT_SY (PV_CONTROL_TOP_H/PV_CONTROL_AREA_H)
+#define PV_CONTROL_NEXT_EX (PV_CONTROL_NEXT_SX+PV_CONTROL_NEXT_SZIE/PV_CONTROL_AREA_W)
+#define PV_CONTROL_NEXT_EY (PV_CONTROL_NEXT_SY+PV_CONTROL_NEXT_SZIE/PV_CONTROL_AREA_H)
+#define PV_CONTROL_QUEUE_SX (PV_CONTROL_NEXT_EX+PV_CONTROL_INTERVAL1/PV_CONTROL_AREA_W)
+#define PV_CONTROL_QUEUE_SY ((PV_CONTROL_TOP_H+20)/PV_CONTROL_AREA_H)
+#define PV_CONTROL_QUEUE_EX (PV_CONTROL_QUEUE_SX+PV_CONTROL_ICON_SIZE/PV_CONTROL_AREA_W)
+#define PV_CONTROL_QUEUE_EY (PV_CONTROL_QUEUE_SY+PV_CONTROL_ICON_SIZE/PV_CONTROL_AREA_H)
+#define PV_CONTROL_CIRCLE_BT_01 "player-view/T02_control_circle_button_01.png"
+#define PV_CONTROL_CIRCLE_BT_01_PRESS "player-view/T02_control_circle_button_01_press.png"
+#define PV_CONTROL_CIRCLE_BT_01_FOCUS "player-view/T02_control_circle_button_01_focus.png"
+#define PV_CONTROL_CIRCLE_BT_02 "player-view/T02_control_circle_button_02.png"
+#define PV_CONTROL_CIRCLE_BT_02_PRESS "player-view/T02_control_circle_button_02_press.png"
+#define PV_CONTROL_PREVIOUS "player-view/T02_control_circle_icon_rewind.png"
+#define PV_CONTROL_PREVIOUS_PRESS "player-view/T02_control_circle_icon_rewind_press.png"
+#define PV_CONTROL_PLAY "player-view/T02_control_circle_icon_play.png"
+#define PV_CONTROL_PLAY_PRESS "player-view/T02_control_circle_icon_play_press.png"
+#define PV_CONTROL_PAUSE "player-view/T02_control_circle_icon_pause.png"
+#define PV_CONTROL_PAUSE_PRESS "player-view/T02_control_circle_icon_pause_press.png"
+#define PV_CONTROL_NEXT "player-view/T02_control_circle_icon_ff.png"
+#define PV_CONTROL_NEXT_PRESS "player-view/T02_control_circle_icon_ff_press.png"
+
+/* lyric */
+#define PV_LYRIC_AREA_W PV_SREEN_W
+#define PV_LYRIC_AREA_H 743 /*655*/
+#define PV_LYRIC_TOP_H 18/*43*/
+#define PV_LYRIC_W 608/*400*/
+#define PV_LYRIC_H 720/*600*/
+#define PV_LYRIC_LEFT_W ((PV_LYRIC_AREA_W-PV_LYRIC_W)/2)
+#define PV_LYRIC_BG_COLOR 0 0 0 191
+#define PV_LYRIC_AREA_SY 0 
+#define PV_LYRIC_AREA_EY (PV_LYRIC_AREA_H/PV_SREEN_H)
+#define PV_LYRIC_SX (PV_LYRIC_LEFT_W/PV_LYRIC_AREA_W)
+#define PV_LYRIC_SY (PV_LYRIC_TOP_H/PV_LYRIC_AREA_H)
+#define PV_LYRIC_EX (PV_LYRIC_SX+PV_LYRIC_W/PV_LYRIC_AREA_W)
+#define PV_LYRIC_EY (PV_LYRIC_SY+PV_LYRIC_H/PV_LYRIC_AREA_H)
+
+/* Custom Macro */
+#define MP_FOCUSED_COVER(__name, __over_part_bg) \
+part { \
+	name: __name"_focus"; \
+	type: SWALLOW; \
+	mouse_events: 1; \
+	scale: 1; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		rel1 { \
+			relative: 0 0; \
+			to: __over_part_bg; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __over_part_bg; \
+		} \
+	} \
+}
+
+#define PV_PART_RECT(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	repeat_events: 1; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	}\
+	description { \
+		state: "hide" 0.0; \
+		visible: 0; \
+	}\
+}
+
+#define PV_PART_NO_TRANSPANCE_RECT(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	repeat_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		visible: 0; \
+	} \
+	description { \
+		state: "show" 0.0; \
+		align: 0 0; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: PV_BG_COLOR; \
+	} \
+}
+
+#define PV_PART_SWALLOW(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		fixed: 1 1; \
+		visible: 1; \
+		fixed:1 1;\
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define PV_PART_SWALLOW_CLIP(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	clip_to: __to;\
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		fixed: 1 1; \
+		visible: 1; \
+		fixed:1 1;\
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define PV_PART_SWALLOW_W_CLIP(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name"clip"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		fixed: 1 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+	} \
+}\
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	clip_to: __name"clip";\
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		fixed: 1 1; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define PV_PART_SWALLOW_OPTION(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+	description { \
+		state: "invisible" 0.0; \
+		inherit: "default"; \
+		visible: 0; \
+	} \
+}
+
+#define PV_PART_HIDE_SWALLOW_OPTION(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 0; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+	description { \
+		state: "visible" 0.0; \
+		inherit: "default"; \
+		visible: 1; \
+	} \
+}
+
+#define PV_PART_BUTTON(__name, __to, __sx, __sy, __ex, __ey, __bg_normal, __bg_circle, __normal, __min_max) \
+part { \
+	name: __name"_spacer"; \
+	type: SPACER; \
+	scale: 1; \
+	description { state: "default" 0.0; \
+		rel1 { relative: __sx __sy; to: __to; } \
+		rel2 { relative: __ex __ey; to: __to; } \
+	} \
+} \
+part { \
+	name: __name"_bg"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 1; \
+		color: 0 0 0 0; \
+		rel1 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		rel2 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		min: __min_max; \
+		max: __min_max; \
+		fixed: 1 1; \
+		color: 0 0 0 0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_bg_normal"; \
+	type: IMAGE; \
+	mouse_events:1; \
+	scale : 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __bg_normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+		color: 0 0 0 153; \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		color: 66 162 207 255; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_bg_circle"; \
+	type: IMAGE; \
+	mouse_events:1; \
+	scale : 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __bg_circle; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+		color: 255 255 255 128; \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		color: 66 162 207 255; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name; \
+	type: IMAGE; \
+	mouse_events:1; \
+	scale : 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+}
+
+#define PV_PART_PLAY_BUTTON(__name, __to, __sx, __sy, __ex, __ey, __bg_normal, __bg_circle, __normal, __min_max) \
+	part { \
+		name: __name"_spacer"; \
+		type: SPACER; \
+		scale: 1; \
+		description { state: "default" 0.0; \
+			rel1 { relative: __sx __sy; to: __to; } \
+			rel2 { relative: __ex __ey; to: __to; } \
+		} \
+	} \
+	part { \
+		name: __name"_bg"; \
+		mouse_events: 0; \
+		type: RECT; \
+		scale: 1; \
+		description { \
+			state: "default" 0.0; \
+			align: 0.5 0.5; \
+			visible: 1; \
+			color: 0 0 0 0; \
+			rel1 { \
+				relative: 0.5 0.5; \
+				to: __name"_spacer"; \
+			} \
+			rel2 { \
+				relative: 0.5 0.5; \
+				to: __name"_spacer"; \
+			} \
+			min: __min_max; \
+			max: __min_max; \
+			fixed: 1 1; \
+			color: 0 0 0 0; \
+		} \
+		description { state: "invisible" 0.0; \
+			inherit: "default" 0.0; \
+			visible: 0; \
+		} \
+	} \
+	part{ \
+		name : __name"_bg_normal"; \
+		type: IMAGE; \
+		mouse_events:1; \
+		scale : 1; \
+		description { \
+			state: "default" 0.0; \
+			align: 0 0; \
+			visible:1; \
+			image { normal: __bg_normal; } \
+			rel1 { \
+				relative: 0 0; \
+				to: __name"_bg"; \
+			} \
+			rel2 { \
+				relative: 1 1; \
+				to: __name"_bg"; \
+			} \
+			color: 21 108 148 255; \
+		} \
+		description { \
+			state: "press" 0.0; \
+			inherit: "default" 0.0; \
+			color: 66 162 207 255; \
+		} \
+		description { state: "invisible" 0.0; \
+			inherit: "default" 0.0; \
+			visible: 0; \
+		} \
+	} \
+	part{ \
+		name : __name"_bg_circle"; \
+		type: IMAGE; \
+		mouse_events:1; \
+		scale : 1; \
+		description { \
+			state: "default" 0.0; \
+			align: 0 0; \
+			visible:1; \
+			image { normal: __bg_circle; } \
+			rel1 { \
+				relative: 0 0; \
+				to: __name"_bg"; \
+			} \
+			rel2 { \
+				relative: 1 1; \
+				to: __name"_bg"; \
+			} \
+			color: 0 0 0 128; \
+		} \
+		description { \
+			state: "press" 0.0; \
+			inherit: "default" 0.0; \
+			color: 66 162 207 255; \
+		} \
+		description { state: "invisible" 0.0; \
+			inherit: "default" 0.0; \
+			visible: 0; \
+		} \
+	} \
+	part{ \
+		name : __name; \
+		type: IMAGE; \
+		mouse_events:1; \
+		scale : 1; \
+		description { \
+			state: "default" 0.0; \
+			align: 0 0; \
+			visible:1; \
+			image { normal: __normal; } \
+			rel1 { \
+				relative: 0 0; \
+				to: __name"_bg"; \
+			} \
+			rel2 { \
+				relative: 1 1; \
+				to: __name"_bg"; \
+			} \
+		} \
+		description { \
+			state: "press" 0.0; \
+			inherit: "default" 0.0; \
+		} \
+		description { state: "invisible" 0.0; \
+			inherit: "default" 0.0; \
+			visible: 0; \
+		} \
+}
+
+#define PV_BUTTON_NOSOUND_PROGRAM(__name) \
+program{\
+	name: __name"_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: STATE_SET "press" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_up"; \
+	source: __name; \
+	signal: "mouse,up,1"; \
+	action: STATE_SET "default" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+	transition: DECELERATE 0.02;\
+} \
+program { \
+	name: __name"_clicked"; \
+	source: __name; \
+	signal: "mouse,clicked,1"; \
+	action: SIGNAL_EMIT __name"_clicked" 0.0; \
+}
+
+#define PV_BUTTON_PROGRAM(__name) \
+program{\
+	name: __name"_after_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: STATE_SET "press" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_bg_normal"; \
+	target: __name"_bg_circle"; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: PLAY_SAMPLE "button-pressed" 1.0; \
+	after:  __name"_after_down"; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_up"; \
+	source: __name; \
+	signal: "mouse,up,1"; \
+	action: STATE_SET "default" 0.0; \
+	target: __name"_bg_normal"; \
+	target: __name"_bg_circle"; \
+	transition: DECELERATE 0.02;\
+} \
+program { \
+	name: __name"_clicked"; \
+	source: __name; \
+	signal: "mouse,clicked,1"; \
+	action: SIGNAL_EMIT __name"_clicked" 0.0; \
+}
+
+#define PV_BUTTON_VISIVBLE_PROGRAM(__name) \
+program { \
+	name: __name"_visible" ; \
+	signal: __name"_visible"; \
+	source: __name; \
+	action:   STATE_SET "default" 0.0; \
+	target: __name; \
+} \
+program { \
+	name: __name"_invisible" ; \
+	signal: __name"_invisible"; \
+	source: __name; \
+	action:   STATE_SET "invisible" 0.0; \
+	target: __name; \
+}
+
+#define PV_BUTTON_INVISIVBLE_PROGRAM(__name) \
+program { \
+	name: __name"_visible" ; \
+	signal: __name"_visible"; \
+	source: __name; \
+	action:   STATE_SET "visible" 0.0; \
+	target: __name; \
+} \
+program { \
+	name: __name"_invisible" ; \
+	signal: __name"_invisible"; \
+	source: __name; \
+	action:   STATE_SET "default" 0.0; \
+	target: __name; \
+}
+
+#define PV_LYRIC_PROG \
+program {\
+        signal: "lrc_invisible";\
+        source: "lrc";\
+        action:   STATE_SET "default" 0.0;\
+        target: "lrc";\
+	target: "lrc_bg";\
+	target: "fav_option_disable";\
+        transition: LINEAR 0.0;\
+}\
+program {\
+        signal: "lrc_visible";\
+        source: "lrc";\
+        action:   STATE_SET "show" 0.0;\
+        target: "lrc";\
+        target: "lrc_bg";\
+        target: "fav_option_disable";\
+        transition: LINEAR 0.0;\
+}\
+program {\
+        signal: "lrc_destroy";\
+        source: "lrc";\
+        action:   STATE_SET "default" 0.0;\
+        target: "lrc";\
+        target: "lrc_bg";\
+}
+
+#ifdef MP_IMAGE_ROTATE_FEATURE
+#define DESCRIPTION_ROTATION(param_num, param_name) \
+description { \
+	state: "rotate" 0.#param_num; \
+	inherit: "default" 0.0; \
+	image { \
+		normal: param_name; \
+	} \
+}
+#endif
+
+group {
+	name: "player_view_portrait_base";
+
+	images {
+		image: PV_BG_PATH COMP;
+		image: PV_BG_PATH_DIM COMP;
+		image: PV_CONTROL_CIRCLE_BT_03 COMP;
+		image: PV_CONTROL_CIRCLE_BT_03_PRESS COMP;
+		image: PV_OPTION_VOLUME COMP;
+		image: PV_OPTION_VOLUME_PRESS COMP;
+		image: PV_OPTION_SHUFFLE_ON COMP;
+		image: PV_OPTION_SHUFFLE_OFF COMP;
+		image: PV_OPTION_SHUFFLE_ON_PRESS COMP;
+		image: PV_OPTION_REP_A COMP;
+		image: PV_OPTION_REP_A_PRESS COMP;
+		image: PV_OPTION_REP_1 COMP;
+		image: PV_OPTION_REP_1_PRESS COMP;
+		image: PV_OPTION_REP_ALL COMP;
+		image: PV_OPTION_REP_ALL_PRESS COMP;
+		image: PV_OPTION_INFO COMP;
+		image: PV_OPTION_INFO_PRESS COMP;
+		image: PV_OPTION_FAVOURITE_ON COMP;
+		image: PV_OPTION_FAVOURITE_OFF COMP;
+		image: PV_OPTION_FAVOURITE_ON_PRESS COMP;
+		image: PV_CONTROL_CIRCLE_BT_01 COMP;
+		image: PV_CONTROL_CIRCLE_BT_01_PRESS COMP;
+		image: PV_CONTROL_CIRCLE_BT_01_FOCUS COMP;
+		image: PV_CONTROL_CIRCLE_BT_02 COMP;
+		image: PV_CONTROL_CIRCLE_BT_02_PRESS COMP;
+		image: PV_CONTROL_PREVIOUS COMP;
+		image: PV_CONTROL_PREVIOUS_PRESS COMP;
+		image: PV_CONTROL_PLAY COMP;
+		image: PV_CONTROL_PLAY_PRESS COMP;
+		image: PV_CONTROL_PAUSE COMP;
+		image: PV_CONTROL_PAUSE_PRESS COMP;
+		image: PV_CONTROL_NEXT COMP;
+		image: PV_CONTROL_NEXT_PRESS COMP;
+		image: PV_BOTTOM_BG COMP;
+		image: PV_OPTION_ALL_SHARE COMP;
+	}
+
+	parts {
+		part {
+			name: "bg_image";
+			mouse_events: 0;
+			type: IMAGE;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				fixed: 1 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				image { normal: PV_BG_PATH;}
+			}
+			description {
+				state: "dim" 0.0;
+				inherit: "default";
+				image { normal: PV_BG_PATH_DIM;}
+			}
+		}
+		part {
+			name: "player_view_title_bg";
+			mouse_events: 0;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				fixed: 1 1;
+				visible: 1;
+				rel1 { relative: 30/720 0.0;}
+				rel2 { relative: 690/720 132/1280;}
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+		part {
+			name: "player_view_title_main";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				visible: 1;
+				text {
+				   font: "Tizen:style=Medium";
+				   size: 36;
+				   min: 0 0;
+				   align: 0.5 1.0;
+				}
+				rel1 { relative: 0.0 25/132; to: "player_view_title_bg";}
+				rel2 { relative: 1.0 82/132; to: "player_view_title_bg";}
+				color: 255 255 255 255;
+			}
+		}
+		part {
+			name: "player_view_title_subtitle";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				visible: 1;
+				text {
+				   font: "Tizen:style=Medium";
+				   size: 28;
+				   min: 0 0;
+				   align: 0.5 1.0;
+				}
+				rel1 { relative: 0.0 0.0; to: "player_view_title_main"; }
+				rel2 { relative: 1.0 1.0; to: "player_view_title_bg"; }
+				color: 255 255 255 255;
+			}
+		}
+		part {
+			name: "bg";
+			mouse_events: 0;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				fixed: 1 1;
+				visible: 1;
+				rel1 { relative: 0.0 132/1280;}
+				rel2 { relative: 1.0 1.0;}
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+		part {
+			name: "top_area_cliper";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 1;
+				//min: PV_TOP_AREA_W PV_TOP_AREA_H;
+				//max: PV_TOP_AREA_W PV_TOP_AREA_H;
+				fixed: 1 1;
+				rel1 {
+					relative: 0.0 0.0; to: "bg";
+				}
+				rel2 {
+					relative: 1.0 1.0; to: "bg";
+				}
+			}
+		}
+		part {
+			name: "top_area";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 1;
+				//min: 100 100;
+				//max: PV_TOP_AREA_W PV_TOP_AREA_H;
+				fixed: 1 1;
+				rel1 {
+					relative: 0.0 0.0; to: "bg";
+				}
+				rel2 {
+					relative: 1.0 0.563; to: "bg";
+				}
+				color: 0 0 0 0;
+			}
+		}
+		part {
+			name: "album_top";
+			mouse_events: 0;
+			type: SPACER;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				//min: 0 0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 0.0;}
+			}
+		}
+		part {
+			name: "album_area_cliper";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//align: 0 0;
+				visible: 1;
+				//min: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				//max: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				//fixed: 1 1;
+				rel1 {
+					relative: 0.0 0.0; to: "album_area";
+				}
+				rel2 {
+					relative: 1.0 1.0; to: "album_area";
+				}
+			}
+			description {
+				state: "no_option" 0.0;
+				inherit: "default";
+				min: 0 0;
+				max: 0 0;
+				fixed: 1 1;
+				visible: 1;
+			}
+			description {
+				state: "no_progress" 0.0;
+				inherit: "no_option";
+			}
+		}
+		part {	name: "album_area";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+					state: "default" 0.0;
+					//align: 0.5 0.5;
+					//min: PV_ALBUM_AREA_W PV_ALBUM_AREA_H;
+					//max: PV_ALBUM_AREA_W PV_ALBUM_AREA_H;
+					fixed: 1 1;
+					visible: 1;
+					rel1 {
+						relative: 0.102 0.102; to: "top_area";
+					}
+					rel2 {
+						relative: 0.905 0.905; to: "top_area";
+					}
+					color: 0 0 0 0;
+				}
+		}
+		part { 	name : "album_image";
+			type: SWALLOW;
+			mouse_events: 1;
+			//clip_to: "album_area_cliper";
+			scale: 1;
+			description {
+					state: "default" 0.0;
+					//min: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				 	//max: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+					//fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 {
+						relative: 0.0 0.0; to: "album_area";
+					}
+					rel2 {
+						relative: 1.0 1.0; to: "album_area";
+					}
+						color: 125 255 0 255;
+			}
+
+		}
+		/* UHQ icon */
+		part { name: "right_top_for_uhq";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "album_area"; }
+				rel2 { relative: 1.0 0.0; to: "album_area"; }
+				min: 20 15;
+				fixed: 1 1;
+				align: 1.0 0.0;
+			}
+		}
+		part { name: "uhq_icon_area";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "album_area_cliper";
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "right_top_for_uhq"; }
+				rel2 { relative: 0.0 1.0; to: "right_top_for_uhq"; }
+				min: 63 39;
+				max: 63 39;
+				fixed: 1 1;
+				align: 1.0 0.0;
+			}
+		}
+		part {
+			name: "buffering_area";
+			type: SWALLOW;
+			mouse_events: 0;
+                        clip_to: "album_area_cliper";
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 66 66;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0; to: "album_area"; }
+				rel2 { relative: 1.0 1.0; to: "album_area"; }
+			}
+		}
+		part {
+			name : "album_image_left";
+			type: SWALLOW;
+                        clip_to: "album_area_cliper";
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//min: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				//max: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				fixed: 1 1;
+				visible: 1;
+				align: 1 0;
+				rel1 { relative: 0.0 0.0; to: "album_area"; }
+				rel2 { relative: 0.0 1.0; to: "album_area"; }
+			}
+		}
+		part {
+			name : "album_image_right";
+			type: SWALLOW;
+                        clip_to: "album_area_cliper";
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//min: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				//max: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
+				fixed: 1 1;
+				visible: 1;
+				align: 0 0;
+				rel1 { relative: 1.0 0.0; to: "album_area"; }
+				rel2 { relative: 1.0 1.0; to: "album_area"; }
+			}
+		}
+		part { name: "event_box";
+			type : SWALLOW;
+			mouse_events: 1;
+			clip_to: "album_area_cliper";
+			scale: 0;
+			description {
+				state: "default" 0.0;
+				rel1 {
+					relative: 0 0;
+					to: "album_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "album_area";
+				}
+			}
+		}
+		part {
+			name: "options_favourite_on";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-80 20;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-20 80;
+				}
+				color: 0 0 0 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default";
+				visible: 1;
+			}
+		}
+		part {
+			name: "options_favourite_off";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-80 20;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-20 80;
+				}
+				color: 0 0 0 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default";
+				visible: 1;
+			}
+		}
+		part {
+			name: "favourite_focus_sound";
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				//align: 0 0;
+				color: 0 0 0 0;
+				rel1 {
+					relative: 0 0;
+					to: "options_favourite_on";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "options_favourite_on";
+				}
+			}
+		}
+		part {
+			name: "favourite_focus";
+			type: SWALLOW;
+			description {
+				state: "default" 0.0;
+				//align: 0 0;
+				visible:1;
+				rel1 {
+					relative: 0 0;
+					to: "favourite_focus_sound";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "favourite_focus_sound";
+				}
+			}
+		}
+		part {
+			name: "bottom_area_cliper";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//align: 0.5 0.0;
+				visible:1;
+				//min: PV_SREEN_W PV_BOTTOM_CONTROL_H;
+				//max: PV_SREEN_W PV_BOTTOM_CONTROL_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;to: "bottom_area";}
+				rel2 { relative: 1.0 1.0;to: "bottom_area";}
+			}
+
+			description {
+				state: "no_option" 0.0;
+				inherit: "default";
+				//max: PV_SREEN_W PV_BOTTOM_CONTROL_H-84;
+				visible: 1;
+				rel2 {relative: 1.0 0.95; to: "bg";}
+			}
+
+			description {
+				state: "no_progress" 0.0;
+				inherit: "default";
+				//max: PV_SREEN_W PV_BOTTOM_CONTROL_H-84-94;
+				visible: 1;
+				rel2 { relative: 0.0 0.90; to: "bg";}
+			}
+		}
+		part {
+			name: "bottom_area";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 1.0;
+				visible: 0;
+				color: 90 80 0 150;
+				//min: PV_SREEN_W PV_BOTTOM_CONTROL_H;
+				//max: PV_SREEN_W PV_BOTTOM_CONTROL_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 1.0;   to: "top_area"; }
+				rel2 { relative: 1.0 1.0;   to: "bg"; }
+			}
+			description {
+				state: "no_option" 0.0;
+				inherit: "default";
+				//max: PV_SREEN_W 262;
+				//visible: 1;
+				rel1 { relative: 0.0 0.85; to: "bg";}
+			}
+			description {
+				state: "no_progress" 0.0;
+				inherit: "default";
+				//max: PV_SREEN_W 180;
+				//visible: 1;
+				rel1 { relative: 0.0 0.88; to: "bg";}
+			}
+		}
+		part {
+			name: "nearby_area";
+			type : RECT;
+			mouse_events: 0;
+			scale: 1;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "show" 0.0;
+				visible: 1;
+                                align: 0.0 0.0;
+                                color: 0 0 0 51;
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 0;
+					to: "bottom_area";
+				}
+			}
+                }
+		part {
+			name: "nearby_control_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+                        clip_to: "album_area_cliper";
+			repeat_events: 0;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "show" 0.0;
+				min: PV_NEARBY_VOLUME_SIZE;
+				//max: 94 411;
+				fixed: 1 1;
+                                align: 0.0 1.0;
+                                rel1 {
+                                        relative: 0 (PV_ALBUM_IMAGE_H-PV_NEARBY_ARER_H)/PV_SREEN_H;
+                                        offset: 22 0;
+                                        to: "bg";
+                                }
+                                rel2 {
+                                        relative: 0 1;
+                                        offset: 22 22;
+                                        to_x: "bg";
+                                        to_y: "album_area";
+                                }
+			}
+                }
+		part {
+			name: "nearby_allshare";
+			type : IMAGE;
+			mouse_events: 0;
+			scale: 1;
+                        clip_to: "album_area_cliper";
+			repeat_events: 0;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "show" 0.0;
+				align: 0.0 0.0;
+				visible:1;
+				image { normal: PV_OPTION_ALL_SHARE; }
+				min: 124 100;
+				max: 124 100;
+				fixed: 1 1;
+				rel1 {
+					relative: 0 0;
+					to: "nearby_area";
+					offset: 7 12;
+				}
+				rel2 {
+					relative: 0 0;
+					to: "nearby_area";
+					offset: 7 12;
+				}
+			}
+                }
+		part {
+			name: "options_bg";
+			type : RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//align: 0.5 1;
+				//min : 720 66;
+				//max : -1 66;
+				//min : 720 125;
+				//max : -1 125;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.05; to_x:"progress_area"; to_y: "bottom_area";}
+				rel2 { relative: 1.0 0.0; to: "progress_area"; }
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+		part { 
+			name: "options_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			repeat_events: 1;
+			clip_to: "bottom_area_cliper";
+			description {
+				state: "default" 0.0;
+                		//align: 0.5 1.0;
+				//min: PV_OPTIONS_AREA_W 46;
+				//max: PV_OPTIONS_AREA_W 46;
+				//min: PV_OPTIONS_AREA_W 125;
+				//max: PV_OPTIONS_AREA_W 125;
+				fixed: 1 1;
+				visible: 1;
+				rel1 {
+					relative: 0 0;
+					to: "options_bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "options_bg";
+				}
+			}
+            		description {
+				state: "no_option" 0.0;
+		                inherit: "default";
+                		min: 0 0;
+				max: 0 0;
+                		fixed: 1 1;
+				visible: 0;
+			}
+           		description {
+				state: "no_progress" 0.0;
+		                inherit: "no_option";
+			}
+		}
+
+		/* progress */
+		part {
+		        name: "progress_area";
+			mouse_events: 1;
+			repeat_events: 1;
+			type: RECT;
+			scale: 0;
+			description {
+				state: "default" 0.0;
+				//min: PV_SREEN_W PV_PROGEESS_PART_H;
+				//max: PV_SREEN_W PV_PROGEESS_PART_H;
+				fixed: 1 1;
+				//align: 0 1;
+				visible: 1;
+				rel1 { relative: 0.03 0.72; to: "bg"; }
+				rel2 { relative: 0.97 0.85; to: "bg";}
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+				description {
+					state: "no_option" 0.0;
+					inherit: "default";
+					visible: 1;
+				}
+				description {
+					state: "no_progress" 0.0;
+					inherit: "no_option";
+					min: 0 0;
+					max: 0 0;
+					fixed: 1 1;
+					visible: 0;
+				}
+				description {
+					state: "hide" 0.0;
+					visible: 0;
+				}
+				description {
+					state: "no_option" 0.0;
+					inherit: "default";
+					visible: 1;
+				}
+				description {
+					state: "no_progress" 0.0;
+					inherit: "no_option";
+					min: 0 0;
+					max: 0 0;
+					fixed: 1 1;
+					visible: 0;
+				}
+				description {
+					state: "hide" 0.0;
+					visible: 0;
+				}
+		}
+		PV_PART_SWALLOW_W_CLIP("progress_box", "progress_area", 0, 0, 1, 1)	
+                 part {
+				name: "control_area";
+				type : SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				repeat_events: 1;
+				description {
+				state: "default" 0.0;
+				visible: 1;
+				fixed: 1 1;
+				rel1 {relative : 0.0 0.8578; to: "bg"; }
+				rel2 { relative : 1.0 1.0; to: "bg";}
+				color: 50 86 94 255;;
+				}
+			}
+			part {
+				name: "control_area_shuffle";
+				type : SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					rel1 {relative : 0.0 0.85; to: "bg"; }
+					rel2 { relative : 1.0 1.0; to: "bg";}
+					color: 50 86 94 255;
+				}
+			}
+			part {
+				name: "control_area_bg";
+				type : RECT;
+				mouse_events: 1;
+				scale: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					rel1 {relative : 0.0 0.0; to: "control_area"; }
+					rel2 { relative : 1.0 1.0; to: "control_area";}
+					color: 0 0 0 0;
+				}
+			}
+		/* lyric */
+		//PV_PART_RECT("lrc_area", "bg", 0, PV_LYRIC_AREA_SY, 1, PV_LYRIC_AREA_EY)
+		     part{
+			    name:"lrc_area";
+			    mouse_events: 1;
+			    repeat_events: 1;
+			    type:"RECT";
+			    scale:1;
+			    description {
+				     state: "default" 0.0;
+				     align: 0 0;
+				     visible: 1;
+				     rel1 {
+					relative: 0.0 0.0;
+					to: "bg";
+				         }
+				     rel2 {
+					relative: 1.0 0.0;
+					to: "bottom_area";
+				      }
+				     color: 0 0 0 0;
+			     }
+			    description {
+				  state: "hide" 0.0;
+				  visible: 0;
+			}
+		}
+		part {
+			name: "lrc_bg";
+			mouse_events: 1;
+			repeat_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 0;
+				rel1 {
+					relative: 0 0;
+					to: "lrc_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "lrc_area";
+				}
+				color: PV_LYRIC_BG_COLOR;
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+		part {
+			name: "fav_option_disable";
+			mouse_events: 1;
+			repeat_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-80 20;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-20 80;
+				}
+				color: 0 0 0 0;
+			}
+			description {
+				state: "show" 0.0;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-80 20;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "album_area";
+					offset:-20 80;
+				}
+				color: 0 0 0 0;
+				visible: 1;
+			}
+		}
+		part {
+			name: "lrc";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			scale: 1;
+                        clip_to: "top_area_cliper";
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					//relative: 0 PV_LYRIC_SY;
+					relative: 0 18/795;
+					to: "lrc_bg";
+				}
+				rel2 {
+					//relative: 1 PV_LYRIC_EY;
+					relative: 1 738/795;
+					to: "lrc_bg";
+				}
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+		/* queue list */
+		part {
+			name: "queue_list_area";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+                        clip_to: "top_area_cliper";
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "bottom_area";}
+				rel2 { relative: 1.0 0.0; to: "bottom_area";}
+			}
+			description { state: "show" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "bg";}
+				rel2 { relative: 1.0 0.0; to: "bottom_area";}
+			}
+		}
+		/* volume popup */
+		part {
+			name: "volume_popup";
+			type: SWALLOW;
+			scale: 1;
+			 clip_to: "top_area_cliper";
+			description {
+				state: "default" 0.0;
+				//min: PV_OPTIONS_VOLUME_POPUP_W PV_OPTIONS_VOLUME_POPUP_H;
+				fixed: 1 1;
+				align: 0.0 1.0;
+				rel1 {
+			                 relative: 0.842 0.16;
+				        //offset: -30 86;
+					to_x: "bg";
+					to_y: "album_area";
+				}
+				rel2 {
+					relative: 0.935 1.1;
+					//offset: -30 56;
+					to_x: "bg";
+					to_y: "album_area";
+				}
+			}
+		}
+		}
+	programs {
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_favourite_on")
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_favourite_off")
+
+		/* album image */
+		program { name: "flick_left";
+			signal: "flick_left";
+			source: "album_area";
+			action: STATE_SET "left" 0.0;
+			target: "album_area";
+			transition: LINEAR PV_ALBUM_IMAGE_FLICK_TIMER;
+			after: "album_area_transit_done";
+		}
+		program { name: "flick_right";
+			signal: "flick_right";
+			source: "album_area";
+			action: STATE_SET "right" 0.0;
+			target: "album_area";
+			transition: LINEAR PV_ALBUM_IMAGE_FLICK_TIMER;
+			after: "album_area_transit_done";
+		}
+		program { name: "set_default";
+			signal: "set_default";
+			source: "album_area";
+			action: STATE_SET "default" 0.0;
+			target: "album_area";
+		}
+		 program { name : "album_area_transit_done";
+			 signal: "transit_done";
+			 source: "album_area";
+			 script {
+				emit("transit_done", "album");
+           		}
+           		//after: "set_default";
+		 }
+		/* queue list */
+		program {
+			name : "show_queue_list";
+			signal : "SHOW_QUEUE_LIST";
+			source : "music_app";
+			action : STATE_SET "show" 0.0;
+			target : "queue_list_area";
+			transition: ACCELERATE 0.3;
+		}
+		program {
+			name : "hide_queue_list";
+			signal : "HIDE_QUEUE_LIST";
+			source : "music_app";
+			action : STATE_SET "default" 0.0;
+			target : "queue_list_area";
+			transition: ACCELERATE 0.3;
+		}
+		program {
+			name : "nearby_area_show";
+			signal : "SHOW_NEARBY_AREA";
+			source : "music_app";
+			action : STATE_SET "show" 0.0;
+			target : "nearby_area";
+            		target : "nearby_control_area";
+            		target : "nearby_allshare";
+		}
+        	program {
+			name : "nearby_area_hide";
+			signal : "HIDE_NEARBY_AREA";
+			source : "music_app";
+			action : STATE_SET "default" 0.0;
+			target : "nearby_area";
+            		target : "nearby_control_area";
+            		target : "nearby_allshare";
+		}
+        	program {
+			name : "set_hide_option";
+			signal : "set_hide_option";
+			source : "*";
+			action : STATE_SET "no_option" 0.0;
+            		target : "bottom_area";
+			target : "options_area";
+            		target : "progress_area";
+           		target : "bottom_area_cliper";
+            		target : "album_area_cliper";
+		}
+        	program {
+			name : "set_hide_default";
+			signal : "set_hide_default";
+			source : "*";
+			action : STATE_SET "default" 0.0;
+            		target : "bottom_area";
+			target : "options_area";
+            		target : "progress_area";
+            		target : "bottom_area_cliper";
+            		target : "album_area_cliper";
+		}
+        	program {
+			name : "set_hide_progress";
+			signal : "set_hide_progress";
+			source : "*";
+			action : STATE_SET "no_progress" 0.0;
+            		target : "bottom_area";
+			target : "options_area";
+            		target : "progress_area";
+            		target : "bottom_area_cliper";
+            		target : "album_area_cliper";
+		}
+		program {
+			name: "touch_snd_star";
+			signal: "mouse,down,1";
+			source: "favourite_focus_sound";
+			action: RUN_PLUGIN "touch_sound_plugin";
+			}
+		/* lyric */
+		PV_LYRIC_PROG
+	}
+}
+
+/* options */
+group {
+	name: "player_view_option_area";
+	parts {
+		part { 
+			name: "bg";
+			type : RECT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				color: 0 0 0 0;
+			}
+		}
+
+		PV_PART_SWALLOW_OPTION("options_volume", "bg", 0.864, 0.05, 0.9756, 0.5);
+		PV_PART_SWALLOW_OPTION("options_volume_mute", "bg", 0.864, 0.05, 0.9756, 0.5);
+		MP_FOCUSED_COVER("volume", "options_volume");
+		
+		PV_PART_HIDE_SWALLOW_OPTION("options_like_on", "bg", PV_OPTION_SHUFFLE_ON_SX, PV_OPTION_SHUFFLE_ON_SY, PV_OPTION_SHUFFLE_ON_EX, PV_OPTION_SHUFFLE_ON_EY);
+		PV_PART_HIDE_SWALLOW_OPTION("options_like_off", "bg", PV_OPTION_SHUFFLE_ON_SX, PV_OPTION_SHUFFLE_ON_SY, PV_OPTION_SHUFFLE_ON_EX, PV_OPTION_SHUFFLE_ON_EY);
+
+		PV_PART_SWALLOW_OPTION("options_queue", "bg", 0.0144, 0.05,0.141, 0.5);
+		MP_FOCUSED_COVER("queue", "options_queue");
+
+		PV_PART_HIDE_SWALLOW_OPTION("options_block_on", "bg", PV_OPTION_REP_SX, PV_OPTION_SHUFFLE_ON_SY, PV_OPTION_REP_EX, PV_OPTION_SHUFFLE_ON_EY);
+		PV_PART_HIDE_SWALLOW_OPTION("options_block_off", "bg", PV_OPTION_REP_SX, PV_OPTION_SHUFFLE_ON_SY, PV_OPTION_REP_EX, PV_OPTION_SHUFFLE_ON_EY);
+
+		part{
+			name: "volume_text";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0;
+				visible: 1;
+				rel1 { relative: 0.5 1.0; to: "options_volume";}
+				rel2 { relative: 0.5 1.0; to: "options_volume";}
+				min: 120 27;
+				max: -1 27;
+				text {
+					align: 0.5 0.5;
+					size:25;
+				}
+			}
+		}
+		part{
+			name: "queue_text";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0;
+				visible: 1;
+				rel1 { relative: 0.5 1.0; to: "options_queue";}
+				rel2 { relative: 0.5 1.0; to: "options_queue";}
+				min: 120 27;
+				max: -1 27;
+				text {
+					align: 0.5 0.5;
+					size:25;
+				}
+			}
+		}
+	}
+
+	programs {
+		PV_BUTTON_VISIVBLE_PROGRAM("options_volume")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_volume_mute")
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_like_on")
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_like_off")
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_block_on")
+		PV_BUTTON_INVISIVBLE_PROGRAM("options_block_off")
+	}
+}
+
+/* control */
+group {
+	name: "player_view_control_area";
+	parts {
+		part { 
+			name: "bg";
+			type : RECT;
+			mouse_events: 1;
+			scale: 1;
+			description { 
+				state: "default" 0.0;
+				visible: 1;
+				fixed: 1 1;
+				//min: 0 184;
+				//max: -1 184;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+
+		PV_PART_HIDE_SWALLOW_OPTION("control_shuffle_on", "bg", 0.0484,  0.126, 0.155, 0.5659)
+		PV_PART_HIDE_SWALLOW_OPTION("control_shuffle_off", "bg", 0.0484, 0.126, 0.155, 0.5659)
+		MP_FOCUSED_COVER("shuffle", "control_shuffle_off");
+
+		PV_PART_SWALLOW_OPTION("control_previous", "bg", 0.20, 0.0769, 0.375, 0.7692)
+		MP_FOCUSED_COVER("previous", "control_previous");
+
+		PV_PART_SWALLOW_OPTION("control_play", "bg", 0.4153, 0.0769, 0.5903, 0.7692)
+		PV_PART_SWALLOW_OPTION("control_pause", "bg", 0.4153, 0.0769, 0.5903, 0.7692)
+		MP_FOCUSED_COVER("play_pause", "control_play");
+
+		PV_PART_SWALLOW_OPTION("control_next", "bg", 0.6305, 0.0769,0.8055, 0.7692)
+		MP_FOCUSED_COVER("next", "control_next");
+
+		PV_PART_HIDE_SWALLOW_OPTION("control_rep_A", "bg", 0.834, 0.126, 0.946, 0.5659);
+		PV_PART_HIDE_SWALLOW_OPTION("control_rep_1", "bg", 0.834, 0.126, 0.946, 0.5659);
+		PV_PART_HIDE_SWALLOW_OPTION("control_rep_all","bg", 0.834, 0.126, 0.946, 0.5659);
+		MP_FOCUSED_COVER("repeat", "control_rep_A");
+
+		part{
+			name: "shuffle_text";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0;
+				visible: 1;
+				rel1 { relative: 0.5 1.0; to: "control_shuffle_on";}
+				rel2 { relative: 0.5 1.0; to: "control_shuffle_on";}
+				min: 120 27;
+				max: -1 27;
+				text {
+					align: 0.5 0.5;
+					size:25;
+				}
+			}
+		}
+		part{
+			name: "repeat_text";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0;
+				visible: 1;
+				rel1 { relative: 0.5 1.0; to: "control_rep_A";}
+				rel2 { relative: 0.5 1.0; to: "control_rep_A";}
+				min: 120 27;
+				max: -1 27;
+				text {
+					align: 0.5 0.5;
+					size:25;
+			}
+			}
+		}
+	}
+	programs {
+		PV_BUTTON_VISIVBLE_PROGRAM("control_play")
+		PV_BUTTON_VISIVBLE_PROGRAM("control_pause")
+		PV_BUTTON_INVISIVBLE_PROGRAM("control_shuffle_on")
+		PV_BUTTON_INVISIVBLE_PROGRAM("control_shuffle_off")
+		PV_BUTTON_INVISIVBLE_PROGRAM("control_rep_A")
+		PV_BUTTON_INVISIVBLE_PROGRAM("control_rep_1")
+		PV_BUTTON_INVISIVBLE_PROGRAM("control_rep_all")
+	}
+}
+/*  nearby */
+#define NEARBY_VOLUME_BG        "T02_icon_volume_control_bg.png"
+
+group {
+	name: "player_view_nearby_area";
+        images {
+		image: NEARBY_VOLUME_BG COMP;
+        }
+	parts {
+		part { 
+			name: "bg";
+			type : IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description { 
+				state: "default" 0.0;
+				//visible: 1;
+				min: PV_NEARBY_VOLUME_SIZE;
+				max: PV_NEARBY_VOLUME_SIZE;
+				fixed: 1 1;
+				image { normal: NEARBY_VOLUME_BG;
+				border: 6 6 6 6;}
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+			}
+		}
+		part {
+			name: "button_area";
+			type : SPACER;
+			mouse_events: 1;
+			scale: 1;
+			description { 
+				   state: "default" 0.0;
+				   min: PV_NEARBY_ICON_W PV_NEARBY_ARER_H;
+				   max: PV_NEARBY_ICON_W PV_NEARBY_ARER_H;
+				   fixed: 1 1;
+				   align: 0.5 0;
+			       rel1 { relative: 0.0 0.0; to:"bg"; }
+			       rel2 { relative: 1.0 1.0; to:"bg"; }
+			}
+		}
+		PV_PART_SWALLOW_OPTION("plus", "button_area", 0, PV_CONTROL_PLUS_SY, 1, PV_CONTROL_PLUS_EY )
+		PV_PART_SWALLOW_OPTION("minus", "button_area", 0, PV_CONTROL_MINUS_SY, 1, PV_CONTROL_MINUS_EY )
+		PV_PART_SWALLOW_OPTION("mute", "button_area", 0, PV_CONTROL_MUTE_SY, 1, PV_CONTROL_MUTE_EY )
+	}
+}
+
+group {
+	name: "player_view_progress_box";
+	parts {
+		part { name: "bg";
+			type : RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+
+		PV_PART_RECT("progress_bar_area", "bg", PV_PROGRESSBAR_SX, 32/PV_PROGEESS_PART_H, PV_PROGRESSBAR_EX, 38/PV_PROGEESS_PART_H)
+
+		part {
+			name: "progress_bar";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible: 1;
+				fixed: 1 1;
+				rel1 {
+					relative: 0 0;
+					to: "progress_bar_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "progress_bar_area";
+				}
+				color: 248 246 239 255;
+			}
+			description {
+				state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_center";
+			type: SPACER;
+			scale: 1;
+			description { 
+				state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_y: "progress_bar"; }
+				rel2 { relative: 1.0 1.0; to_y: "progress_bar"; }
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+			description {
+				state: "landscape";
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part { 
+			name: "text_area";
+			type: SPACER;
+			scale: 1;
+			description { 
+				state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_x: "progress_bar_area"; to_y: "padding_center"; }
+				rel2 { relative: 1.0 1.0; to_x: "progress_bar_area"; to_y: "padding_center"; }
+				min: 0 PV_PROGRESS_TEXT_H;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+			description { 
+				state: "landscape";
+				inherit: "default" 0.0;
+				min: 0 26;
+			}
+		}
+		part { 
+			name: "progress_text_playing";
+			type: TEXT;
+			scale: 1;
+			effect: FAR_SHADOW BOTTOM;
+			mouse_events: 1;
+			description { 
+				state: "default" 0.0;
+				visible: 1;
+				align: 0.0 0.5;
+				fixed: 1 1;
+				rel1 {
+					relative: 0.0 0.0;
+					to: "text_area";
+				}
+				rel2 {
+					relative: 0.0 1.0;
+					to: "text_area";
+				}
+				text {
+					text: "00:00";
+					size: 28;
+					align: 0.0 0.5;
+					min: 1 1;
+				}
+				color: 250 250 250 255;;
+			}
+			description { 
+				state: "landscape";
+				inherit: "default" 0.0;
+			}
+		}
+		part {
+			name: "progress_text_total";
+			type: TEXT;
+			scale: 1;
+			effect: FAR_SHADOW BOTTOM;
+			mouse_events: 1;
+			description { 
+                                state: "default" 0.0;
+				visible: 1;
+				align: 1.0 0.5;
+				fixed: 1 1;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "text_area";
+				}
+				rel2 {
+					relative: 1.0 1.0;
+					to: "text_area";
+				}
+				text {
+					text: "00:00";
+					size: 28;
+					align: 1.0 0.5;
+					min: 1 1;
+				}
+				color: 250 250 250 255;
+			}
+			description {
+				state: "landscape";
+				inherit: "default" 0.0;
+			}
+		}
+
+		 program { name: "progress_bar_show";
+			signal: "set_show";
+			source: "progress_bar";
+			action: STATE_SET "default" 0.0;
+			target: "progress_bar";
+		 }
+
+		program { name: "progress_bar_hide";
+			signal: "set_hide";
+			source: "progress_bar";
+			action: STATE_SET "hide" 0.0;
+			target: "progress_bar";
+		 }
+
+		program { signal: "elm,state,landscape";
+			source: "*";
+			action: STATE_SET "landscape" 0.0;
+			target: "padding_center";
+			target: "text_area";
+			target: "progress_text_playing";
+			target: "progress_text_total";
+		}
+	}
+}
+
+group {
+	name: "queue_title_list";
+	parts {
+		part {
+			name: "bg";
+			type : RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { 
+				state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: 255 255 255 255;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+		part {
+			name: "track_info_bg";
+			mouse_events: 0;
+			type: RECT;
+			scale: 1;
+			description {
+				   state: "default" 0.0;
+				   align: 0 0;
+				   visible: 1;
+				   rel1 { relative: 0.0 0.0;}
+				   rel2 { relative: 1.0 0.0; offset: 0 48; }
+				   color: 255 255 255 255;
+			 }
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+		part{
+			name: "track_count";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0.5;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "track_info_bg"; offset: 26 0;}
+				rel2 { relative: 0.5 1.0; to: "track_info_bg";}
+				text {
+					size: 30;
+					align: 0.0 0.5;
+					min: 0 0;
+				}
+				color: 21 108 148 255;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+		part{
+			name: "track_current";
+			mouse_events: 0;
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 1 0.5;
+				visible: 1;
+				rel1 { relative: 0.5 0.0; to: "track_info_bg";}
+				rel2 { relative: 1.0 1.0; to: "track_info_bg"; offset: -26 0;}
+				text {
+					size: 30;
+					align: 1.0 0.5;
+					min: 0 0;
+				}
+				color: 21 108 148 255;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+	   part {
+			name: "queue_list_content";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				visible: 1;
+				rel1 {
+					relative: 0.0 1.0;
+					to: "track_info_bg";
+				}
+				rel2 {
+					relative: 1.0 1.0;
+				}
+				color: 0 0 0 0;
+			}
+	   }
+	   program {
+		   name : "show_queue_title";
+		   signal : "SHOW_QUEUE_TITLE";
+		   source : "music_app";
+		   action : STATE_SET "default" 0.0;
+		   target : "track_info_bg";
+		   target : "track_count";
+		   target : "track_current";
+		   target : "bg";
+	   }
+	   program {
+		   name : "hide_queue_title";
+		   signal : "HIDE_QUEUE_TITLE";
+		   source : "music_app";
+		   action : STATE_SET "hide" 0.0;
+		   target : "track_info_bg";
+		   target : "track_count";
+		   target : "track_current";
+		   target : "bg";
+	   }
+	}
+}
+
+group{ name: "list_popup_swallow_ly";
+parts {
+	part{
+		name: "bg";
+		type: RECT;
+		description {
+			min: 0 185;
+			max: -1 185;
+			rel1 {
+				relative: 0.0 0.0;
+			}
+			rel2 {
+				relative: 1.0 1.0;
+			}
+			color: 255 255 255 255;
+		}
+	}
+	part { 	name: "list";
+		type: SWALLOW;
+		description {
+			//min: 0 185;
+			//max: -1 185;
+			rel1.relative: 0.0 0.0;
+			rel1.to:"bg";
+			rel2.relative: 1.0 1.0;
+			rel2.to:"bg";
+		}
+	}
+}
+  script {
+	  public message(Msg_Type:type,id, ...)
+	  {
+	    if((type == MSG_INT) && (id == 1))
+	    {
+	      new a;
+	      new x, y;
+	      a = getarg(2);
+	      custom_state(PART:"bg","default",0.0);
+	      get_state_val(PART:"bg",STATE_MIN,x,y);
+	      set_state_val(PART:"bg",STATE_MIN,a,y);
+	      set_state_val(PART:"bg",STATE_MAX,a,y);
+	      set_state(PART:"bg","custom",0.0);
+	    }
+	    if((type == MSG_INT) && (id == 2))
+	    {
+	      new a;
+	      new x, y;
+	      a = getarg(2);
+	      custom_state(PART:"bg","default",0.0);
+	      get_state_val(PART:"bg",STATE_MIN,x,y);
+	      set_state_val(PART:"bg",STATE_MIN,x,a);
+	      set_state_val(PART:"bg",STATE_MAX,x,a);
+	      set_state(PART:"bg","custom",0.0);
+
+	    }
+	  }
+	}
+}
+  group { name: "list_popup_content_ly";
+	parts {
+		part {  name : "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+					color: 255 255 255 255;
+				}
+		}
+		part {  name : "bg1";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel1.to: "bg";
+					rel2.relative: 1.0 0.5;
+					rel2.to: "bg";
+					color: 255 255 255 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					color: 165 197 210 255;
+				}
+		}
+		part {  name : "bg2";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.5;
+					rel1.to: "bg";
+					rel1.offset: 0 2;
+					rel2.relative: 1.0 1.0;
+					rel2.to: "bg";
+					color: 255 255 255 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					color: 165 197 210 255;
+				}
+		}
+		part {  name : "septator";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.5;
+					rel1.to: "bg";
+					//rel1.offset: 0 2;
+					rel2.relative: 1.0 0.5;
+					rel2.to: "bg";
+					min: 0 2;
+					max: -1 2;
+					align: 0 0.5;
+					color: 165 197 210 255;
+				}
+		}
+  part {
+			name: "elm.text";
+			type: TEXT;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.0 0.0;
+				rel1.to: "bg1";
+				rel2.relative: 0.6 1.0;
+				rel2.to: "bg1";
+				text {
+					text: "Time";
+					size: 32;
+					align: 0.1 0.5;
+				}
+				color: 23 23 23 255;
+			}
+		}
+		part {
+			name: "elm.swallow";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.8 0.3;
+				rel1.to: "bg1";
+				rel2.relative: 1.0 0.7;
+				rel2.to: "bg1";
+				align: 1.0 0.5;
+			}
+		}
+		part {
+			name: "elm.text.second";
+			type: TEXT;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.0 0.0;
+				rel1.to: "bg2";
+				rel2.relative: 0.6 1.0;
+				rel2.to: "bg2";
+				text {
+					text: "Album";
+					size: 32;
+					align: 0.1 0.5;
+				}
+				color: 23 23 23 255;
+			}
+		}
+		part {
+			name: "elm.swallow.second";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1.relative: 0.8 0.3;
+				rel1.to: "bg2";
+				rel2.relative: 1.0 0.7;
+				rel2.to: "bg2";
+				align: 1.0 0.5;
+			}
+		}
+		part {  name : "button1";
+				type: SWALLOW;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel1.to: "bg";
+					rel2.relative: 1.0 0.5;
+					rel2.to: "bg";
+				}
+		}
+		part {  name : "button2";
+				type: SWALLOW;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.5;
+					rel1.to: "bg";
+					rel1.offset: 0 2;
+					rel2.relative: 1.0 1.0;
+					rel2.to: "bg";
+				}
+		}
+	}
+	programs {
+		program{ name: "item_1_clicked";
+			source: "bg1";
+			signal: "mouse,down,1";
+			action: STATE_SET "pressed" 0.0;
+			target: "bg1";
+		}
+		program{ name: "item_2_clicked";
+			source: "bg2";
+			signal: "mouse,down,1";
+			action: STATE_SET "pressed" 0.0;
+			target: "bg2";
+		}
+		program{ name: "item_1_released";
+			source: "bg1";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "bg1";
+		}
+		program{ name: "item_2_released";
+			source: "bg2";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "bg2";
+		}
+	}
+
+}

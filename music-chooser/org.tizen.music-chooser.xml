@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.music-chooser" version="0.1.1" install-location="internal-only">
+	<label>Music Appcontrol</label>
+	<label xml:lang="hy-am">Music Appcontrol</label>
+	<label xml:lang="az-az">Music Appcontrol</label>
+	<label xml:lang="eu-es">Music Appcontrol</label>
+	<label xml:lang="bg-bg">Music Appcontrol</label>
+	<label xml:lang="ca-es">Music Appcontrol</label>
+	<label xml:lang="zh-cn">Music Appcontrol</label>
+	<label xml:lang="zh-hk">Music Appcontrol</label>
+	<label xml:lang="zh-tw">Music Appcontrol</label>
+	<label xml:lang="hr-hr">Music Appcontrol</label>
+	<label xml:lang="cs-cz">Music Appcontrol</label>
+	<label xml:lang="da-dk">Music Appcontrol</label>
+	<label xml:lang="nl-nl">Music Appcontrol</label>
+	<label xml:lang="en-gb">Music Appcontrol</label>
+	<label xml:lang="en-us">Music Appcontrol</label>
+	<label xml:lang="et-ee">Music Appcontrol</label>
+	<label xml:lang="fi-fi">Music Appcontrol</label>
+	<label xml:lang="fr-fr">Music Appcontrol</label>
+	<label xml:lang="gl-es">Music Appcontrol</label>
+	<label xml:lang="ka-ge">Music Appcontrol</label>
+	<label xml:lang="de-de">Music Appcontrol</label>
+	<label xml:lang="el-gr">Music Appcontrol</label>
+	<label xml:lang="hu-hu">Music Appcontrol</label>
+	<label xml:lang="is-is">Music Appcontrol</label>
+	<label xml:lang="ga-ie">Music Appcontrol</label>
+	<label xml:lang="it-it">Music Appcontrol</label>
+	<label xml:lang="ja-jp">Music Appcontrol</label>
+	<label xml:lang="kk-kz">Music Appcontrol</label>
+	<label xml:lang="ko-kr">Music Appcontrol</label>
+	<label xml:lang="lv-lv">Music Appcontrol</label>
+	<label xml:lang="lt-lt">Music Appcontrol</label>
+	<label xml:lang="mk-mk">Music Appcontrol</label>
+	<label xml:lang="nb-no">Music Appcontrol</label>
+	<label xml:lang="pl-pl">Music Appcontrol</label>
+	<label xml:lang="pt-pt">Music Appcontrol</label>
+	<label xml:lang="pt-br">Music Appcontrol</label>
+	<label xml:lang="ro-ro">Music Appcontrol</label>
+	<label xml:lang="ru-ru">Music Appcontrol</label>
+	<label xml:lang="sr-rs">Music Appcontrol</label>
+	<label xml:lang="sk-sk">Music Appcontrol</label>
+	<label xml:lang="sl-si">Music Appcontrol</label>
+	<label xml:lang="es-es">Music Appcontrol</label>
+	<label xml:lang="es-mx">Music Appcontrol</label>
+	<label xml:lang="sv-se">Music Appcontrol</label>
+	<label xml:lang="tr-tr">Music Appcontrol</label>
+	<label xml:lang="uk-ua">Music Appcontrol</label>
+	<label xml:lang="uz-uz">Music Appcontrol</label>
+	<label xml:lang="ar-ae">Music Appcontrol</label>
+	<label xml:lang="zh-sg">Music Appcontrol</label>
+	<label xml:lang="hi-in">Music Appcontrol</label>
+	<label xml:lang="en-ph">Music Appcontrol</label>
+	<label xml:lang="fr-ca">Music Appcontrol</label>
+        <author email="hm2007.kim" href="www.samsung.com">Hyungmin Kim</author>
+        <description>Music chooser</description>
+        <ui-application appid="org.tizen.music-chooser" exec="/usr/apps/org.tizen.music-chooser/bin/music-chooser" nodisplay="true" multiple="true" type="capp" taskmanage="false" launch_mode="caller">
+                <icon>/usr/share/icons/default/small/music-chooser.png</icon>
+                <label>Music</label>
+		<label xml:lang="hy-am">Երաժշտությն</label>
+		<label xml:lang="az-az">Musiqi</label>
+		<label xml:lang="eu-es">Musika</label>
+		<label xml:lang="bg-bg">Музика</label>
+		<label xml:lang="ca-es">Música</label>
+		<label xml:lang="zh-cn">音乐</label>
+		<label xml:lang="zh-hk">音樂</label>
+		<label xml:lang="zh-tw">音樂</label>
+		<label xml:lang="hr-hr">Glazba</label>
+		<label xml:lang="cs-cz">Hudba</label>
+		<label xml:lang="da-dk">Musik</label>
+		<label xml:lang="nl-nl">Muziek</label>
+		<label xml:lang="en-gb">Music</label>
+		<label xml:lang="en-us">Music</label>
+		<label xml:lang="et-ee">Muusika</label>
+		<label xml:lang="fi-fi">Musiikki</label>
+		<label xml:lang="fr-fr">Musique</label>
+		<label xml:lang="gl-es">Música</label>
+		<label xml:lang="ka-ge">მუსიკა</label>
+		<label xml:lang="de-de">Musik</label>
+		<label xml:lang="el-gr">Μουσική</label>
+		<label xml:lang="hu-hu">Zenék</label>
+		<label xml:lang="is-is">Tónlist</label>
+		<label xml:lang="ga-ie">Ceol</label>
+		<label xml:lang="it-it">Musica</label>
+		<label xml:lang="ja-jp">音楽</label>
+		<label xml:lang="kk-kz">Музыка</label>
+		<label xml:lang="ko-kr">음악</label>
+		<label xml:lang="lv-lv">Mūzika</label>
+		<label xml:lang="lt-lt">Muzika</label>
+		<label xml:lang="mk-mk">Музика</label>
+		<label xml:lang="nb-no">Musikk</label>
+		<label xml:lang="pl-pl">Muzyka</label>
+		<label xml:lang="pt-pt">Música</label>
+		<label xml:lang="pt-br">Músicas</label>
+		<label xml:lang="ro-ro">Muzică</label>
+		<label xml:lang="ru-ru">Музыка</label>
+		<label xml:lang="sr-rs">Muzika</label>
+		<label xml:lang="sk-sk">Hudba</label>
+		<label xml:lang="sl-si">Glasba</label>
+		<label xml:lang="es-es">Música</label>
+		<label xml:lang="es-mx">Música</label>
+		<label xml:lang="sv-se">Musik</label>
+		<label xml:lang="tr-tr">Müzik</label>
+		<label xml:lang="uk-ua">Музика</label>
+		<label xml:lang="uz-uz">Musiqa</label>
+		<label xml:lang="ar-ae">الموسيقى</label>
+		<label xml:lang="zh-sg">音乐</label>
+		<label xml:lang="hi-in">संगीत</label>
+		<label xml:lang="en-ph">Music</label>
+		<label xml:lang="fr-ca">Musique</label>
+		<application-service>
+			<operation name="http://tizen.org/appcontrol/operation/pick" />
+			<mime name="audio/*" />
+		</application-service>
+        </ui-application>
+
+	<privileges>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/systemsettings</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/notification</privilege>
+	</privileges>
+</manifest>

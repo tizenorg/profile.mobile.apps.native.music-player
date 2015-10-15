@@ -1,0 +1,488 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define GENLIST_NAME(NAME) \
+      name: "elm/genlist/item/"NAME; \
+
+
+//**************************************************************************//
+//**********Macros for lite 2014.7.19**************************************//
+//**************************************************************************//
+// Generic Macros, EDJE description have 24 patterns
+//**************************************************************************//
+// ------------------
+
+// | --> HERE
+// ------------------
+ #define DSC_FROM_L( STATE, PARAM ) \
+   description { state: STATE;\
+      fixed: 1 0; \
+      align: 0.0 0.0; \
+      rel1.relative: 0.0 0.0; \
+      rel2.relative: 0.0 1.0; \
+      PARAM\
+   }
+
+// ------------------
+//         HERE <-- |
+// ------------------
+ #define DSC_FROM_R( STATE, PARAM ) \
+   description { state: STATE;\
+      fixed: 1 0; \
+      align: 1.0 0.5; \
+      rel1.relative: 1 0; \
+      PARAM\
+   }
+
+// ----------
+// |  HERE  |
+// ----------
+// |        |
+// ----------
+ #define DSC_FROM_T( STATE, PARAM ) \
+   description { state: STATE;\
+      fixed: 0 0; \
+      align: 0.0 0.0; \
+      rel2.relative: 1.0 0.0; \
+      PARAM\
+   }
+   #define DSC_FROM_T1( STATE, PARAM ) \
+   description { state: STATE;\
+      fixed: 0 0; \
+      align: 0.0 0.0; \
+      rel1.relative: 0.0 0.3; \
+      rel2.relative: 1.0 0.8; \
+      PARAM\
+   }
+
+// ----------
+// |  HERE  |
+// ----------
+// |        |
+// ----------
+ #define DSC_FROM_B( STATE, PARAM ) \
+   description { state: STATE;\
+      fixed: 0 1; \
+      rel1.relative: 0.0 1.0; \
+      align: 0.5 1.0; \
+      PARAM\
+   }
+
+// ------------------
+// |  PART == HERE  |
+// ------------------
+ #define DSC_TO( STATE, PART, PARAM ) \
+   description { state: STATE;\
+      rel1 { \
+         relative: 0 0; \
+         to: PART; \
+      }\
+      rel2 {\
+         relative: 1 1;\
+         to: PART; \
+      }\
+      PARAM\
+   }
+
+//      |   TOP  |
+// ---------------------
+// LEFT |  HERE  | RIGHT
+// ---------------------
+//      | BOTTOM |
+#define DSC_LRTB( STATE, LEFT, RIGHT, TOP, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+// ---------------------
+// LEFT |--> HERE
+// ---------------------
+#define DSC_L( STATE, LEFT, PARAM ) \
+   description { state: STATE;\
+      align: 0 0; \
+      fixed: 1 0; \
+      rel1 { \
+         relative: 1 0; \
+         to_x: LEFT; \
+      }\
+      rel2 { \
+         relative: 1 1;\
+         to_x: LEFT; \
+      }\
+      PARAM\
+   }
+
+// ---------------------
+//   HERE  <--| RIGHT
+// ---------------------
+#define DSC_R( STATE, RIGHT, PARAM ) \
+   description { state: STATE;\
+      align: 1 0.5; \
+      fixed: 1 0; \
+      rel1 { \
+         relative: 0 0; \
+         to_x: RIGHT; \
+      }\
+      rel2 {\
+         relative: 0 1;\
+         to_x: RIGHT; \
+      }\
+      PARAM\
+   }
+
+// --------------------------
+// LEFT |--> HERE  <--| RIGHT
+// --------------------------
+#define DSC_LR( STATE, LEFT, RIGHT, PARAM ) \
+   description { state: STATE;\
+      rel1 { \
+         relative: 1 0; \
+         to_x: LEFT; \
+      }\
+      rel2 {\
+         relative: 0 1;\
+         to_x: RIGHT;\
+      }\
+      PARAM\
+   }
+
+//   |  TOP     |
+// -----------------
+//  |  HERE  <--| RIGHT
+// -----------------
+//  | BOTTOM   |
+#define DSC_RTB( STATE, RIGHT, TOP, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 1 0.5;\
+      rel1 { \
+         relative: 0 1; \
+         to_x: RIGHT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+// LEFT |  HERE  | RIGHT
+// ---------------------
+//      | BOTTOM |
+#define DSC_LRB( STATE, LEFT, RIGHT, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 0.5 1;\
+      rel1 { \
+         relative: 1 0; \
+         to_x: LEFT; \
+         to_y: BOTTOM; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+//      |   TOP  |
+// ---------------------
+// LEFT |  HERE  | RIGHT
+#define DSC_LRT( STATE, LEFT, RIGHT, TOP, PARAM ) \
+   description { state: STATE;\
+      align: 0.5 0;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 1;\
+         to_x: RIGHT;\
+         to_y: TOP;\
+      }\
+      PARAM\
+   }
+
+//      |       TOP  |
+// ---------------------
+// LEFT | -->  HERE  |
+#define DSC_LT( STATE, LEFT, TOP, PARAM ) \
+   description { state: STATE;\
+      align: 0 0;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 1 1;\
+         to_x: LEFT;\
+         to_y: TOP;\
+      }\
+      PARAM\
+   }
+
+// LEFT |  --> HERE  |
+// ---------------------
+//      |     BOTTOM |
+#define DSC_LB( STATE, LEFT, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 0 1;\
+      rel1 { \
+         relative: 1 0; \
+         to_x: LEFT; \
+         to_y: BOTTOM; \
+      }\
+      rel2 {\
+         relative: 1 0;\
+         to_x: LEFT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+//      |     TOP  |
+// ---------------------
+// LEFT |--> HERE  |
+// ---------------------
+//      |   BOTTOM |
+#define DSC_LTB( STATE, LEFT, TOP, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 0 0;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 1 0;\
+         to_x: LEFT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+//      |   TOP  |
+// ---------------------
+//     |  HERE <--| RIGHT
+#define DSC_RT( STATE, RIGHT, TOP, PARAM ) \
+   description { state: STATE;\
+      align: 1 0;\
+      rel1 { \
+         relative: 0 1; \
+         to_x: RIGHT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 1;\
+         to_x: RIGHT;\
+         to_y: TOP;\
+      }\
+      PARAM\
+   }
+
+//  | HERE <-- | RIGHT
+// ---------------------
+//  |  BOTTOM  |
+#define DSC_RB( STATE, RIGHT, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 1 1;\
+      rel1 { \
+         relative: 0 0; \
+         to_x: RIGHT; \
+         to_y: BOTTOM; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+// |   TOP  |
+// ----------
+// |  HERE  |
+// ----------
+// | BOTTOM |
+#define DSC_TB( STATE, TOP, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 0.5 0.5;\
+      rel1 { \
+         relative: 0 1; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 1 0;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+// |   TOP  |
+// ----------
+// |  HERE  |
+// ----------
+#define DSC_T( STATE, TOP, PARAM ) \
+   description { state: STATE;\
+      align: 0.5 0.0;\
+      rel1 { \
+         relative: 0 1; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 1 1;\
+         to_y: TOP;\
+      }\
+      PARAM\
+   }
+
+// |  HERE  |
+// ----------
+// |  BOTTOM  |
+// ----------
+#define DSC_B( STATE, BOTTOM, PARAM ) \
+   description { state: STATE;\
+      align: 0.5 1.0;\
+      rel1 { \
+         relative: 0 0; \
+         to_y: BOTTOM; \
+      }\
+      rel2 {\
+         relative: 1 0;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+// PART
+#define PART(TYPE, NAME, DESCRIPION) \
+   part { name: NAME; \
+      scale: 0; \
+      type: TYPE; \
+      DESCRIPION \
+   }
+
+//**************************************************************************//
+// Genlist Macros
+//**************************************************************************//
+#define LIST_PART_BG \
+   PART(RECT, "bg", \
+      description { state: "default" 0.0; \
+         color_class: "B0211"; \
+      } \
+      description { state: "pressed" 0.0; \
+         inherit: "default" 0.0; \
+         color_class: "B0211P"; \
+      } \
+      description { state: "disabled" 0.0; \
+         color_class: "B0211D"; \
+      } \
+   )
+
+#define LIST_PROGRAM_DEFAULT( TARGET ) \
+   program { name: "default"; \
+      signal: "elm,state,default"; \
+      source: "elm"; \
+      action: STATE_SET "default" 0.0; \
+      TARGET \
+   } \
+
+#define LIST_PROGRAM_DISABLED( TARGET ) \
+   program { name: "enabled"; \
+      signal: "elm,state,enabled"; \
+      source: "elm"; \
+      action: STATE_SET "default" 0.0; \
+      TARGET \
+   } \
+   program { name: "disabled"; \
+      signal: "elm,state,disabled"; \
+      source: "elm"; \
+      action: STATE_SET "disabled" 0.0; \
+      TARGET \
+   }
+
+#define LIST_PROGRAM_SELECT( TARGET ) \
+   program { name: "pressed"; \
+      signal: "elm,state,selected"; \
+      source: "elm"; \
+      action: STATE_SET "pressed" 0.0; \
+      TARGET \
+   } \
+   program { name: "unselected"; \
+      signal: "elm,state,unselected"; \
+      source: "elm"; \
+      action: STATE_SET "default" 0.0; \
+      TARGET \
+   } \
+	program { name: "show_color"; \
+      signal: "show_color"; \
+      source: "*"; \
+      action: STATE_SET "show_color" 0.0; \
+      TARGET \
+   } \
+	program { name: "hide_color"; \
+      signal: "hide_color"; \
+      source: "*"; \
+      action: STATE_SET "default" 0.0; \
+      TARGET \
+   }
+
+#define LIST_PROGRAM_SOUND \
+   program { name: "play_sound"; \
+      signal: "elm,state,clicked"; \
+      source: "elm"; \
+      script { \
+         run_program(PROGRAM:"touch_sound"); \
+      } \
+   } \
+   program { name: "touch_sound"; \
+      action: RUN_PLUGIN "touch_sound"; \
+   }
+
+#define LIST_PROGRAMS( TARGET ) \
+   programs { \
+      LIST_PROGRAM_DEFAULT( TARGET \
+         target: "bg"; \
+      ) \
+      LIST_PROGRAM_DISABLED( TARGET \
+         target: "bg"; \
+      ) \
+      LIST_PROGRAM_SELECT( TARGET \
+         target: "bg"; \
+      ) \
+      LIST_PROGRAM_SOUND \
+   }
+
+#define PARAM_TEXT(STYLE)\
+   text { \
+      min: 0 1; \
+      style: STYLE; \
+   }
+

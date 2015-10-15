@@ -1,0 +1,243 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+
+#define STYLE_TAG \
+      tag:  "br" "\n";\
+      tag:  "ps" "ps";\
+      tag:  "tab" "\t";\
+      tag:  "b" "+ font=Tizen:style=Bold";
+
+#define STYLE_TAG_MATCH \
+      tag:  "match" GENLIST_PART_MATCH_TAG_COLOR;
+
+// FIXME: Why this is needed? just don't use match color, right? damn textblock bug...
+#define STYLE_TAG_MATCH_FOCUS \
+      tag:  "match" GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE;
+
+styles {
+   // ********************** groupindex text
+   style { name: "genlist_style_groupindex_text";
+      base: "font=Tizen:style=Regular font_size="GENLIST_GROUPINDEX_LIST_SIZE" color="GENLIST_GROUPINDEX_LIST_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_groupindex_text_focus";
+      base: "font=Tizen:style=Regular font_size="GENLIST_GROUPINDEX_LIST_SIZE" color="GENLIST_GROUPINDEX_LIST_FOCUS_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   // ********************** dialgoue group help text
+   style { name: "genlist_style_dialogue_group_help_text";
+      base: "font=Tizen:style=Regular font_size="GENLIST_DIALOGUE_GROUP_HELP_TEXT_SIZE" color="GENLIST_DIALOGUE_GROUP_HELP_TEXT_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   // ********************** list main text
+   style { name: "genlist_style_list_main_text_unread";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_unread_black";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color=#FFFFFF text_color:ATO025 ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_unread_live_box_black";
+      base: "font=Tizen:style=Regular font_size="38" color="GENLIST_LIST_MAIN_TEXT_LIVEBOX_COLOR_STYLE_BLACK" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_livebox";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_LIVEBOX_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_unread_dim";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+
+   style { name: "genlist_style_list_main_text_unread_dim_black";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR_STYLE_BLACK" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_read";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_READ_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_read_dim";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_READ_DIM_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_focus";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   style { name: "genlist_style_list_main_text_focus_black";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE_BLACK" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+  // **********************  list main text (multiline)
+   style { name: "genlist_style_list_main_text_unread_wrap";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_unread_dim_wrap";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_main_text_focus_wrap";
+      base: "font=Tizen:style=Regular font_size="GENLIST_LIST_MAIN_TEXT_SIZE" color="GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   // ********************** list sub text
+   style { name: "genlist_style_list_sub_text_default";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_default_dim";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   style { name: "genlist_style_list_sub_text_livebox";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_LIVEBOX_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_settings";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_SETTINGS_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_settings_dim";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_SETTINGS_DIM_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_focus";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   // ********************** list sub text (multiline)
+   style { name: "genlist_style_list_sub_text_default_wrap";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_default_dim_wrap";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "genlist_style_list_sub_text_focus_wrap";
+      base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color="GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE" wrap=mixed";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+
+   // **** style for download queue ****
+   style { name: "genlist_style_download_queue_progress_state_dim";
+      base: "font=Tizen:style=Regular font_size=24 color="GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR_STYLE" ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   style { name: "genlist_style_download_queue_progress_size_dim";
+      base: "font=Tizen:style=Regular font_size=24 color="GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR_STYLE" align=right ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH_FOCUS
+   }
+   // ************* for lite textblock******* //
+   // ************* list main text ********** //
+   style { name: "list_text_main";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_main_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_main_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   // ************* list sub text ********** //
+   style { name: "list_text_sub_01";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_sub_01_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_sub_01_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_sub_02";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_sub_02_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_sub_02_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#000000 ellipsis=1.0";
+      STYLE_TAG
+   }
+      // ************* list index text ********** //
+   style { name: "list_text_index_main";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_index_main_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_index_main_press";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_index_sub";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_index_sub_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+   style { name: "list_text_index_sub_press";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff ellipsis=1.0";
+      STYLE_TAG
+   }
+}

@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "불러오는 중..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "프라이빗"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "시간"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "파일이 존재하지 않습니다."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "기본 벨소리"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "재생 시간"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "저장 위치"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "벨소리로 설정"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "프라이빗 페이지에 추가"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "프라이빗 페이지에서 제거"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "일반 저장공간으로 이동"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간으로 이동"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "선택한 항목을 %s(으)로 이동합니다."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "선택한 항목을 %s(으)로 이동합니다."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "[대용량 저장공간 모드] 실행 중에는 사용할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "벨소리를 추가하였습니다."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "버튼"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "항목 선택"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "고급"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "이전"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "닫기"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "추가하였습니다."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "완료하지 못하였습니다."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "검색 결과가 없습니다"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "완료"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "항목이 없습니다"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "홈에 추가"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "다음"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "다운로드 중..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "즐겨찾기"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간에 추가"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "%s 연결을 해제하였습니다. 네트워크 상태와 연결된 디바이스를 확인하세요."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroring으로 연결"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "홈 네트워크로 연결"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "입력된 내용이 없습니다."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "통화 중에는 사용할 수 없습니다."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "최대 글자 수에 도달하였습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM 파일은 공유할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "제거 중..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "디바이스 %d개"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "모션 실행"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "다시 묻지 않기"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "검색 결과가 없습니다."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "디바이스를 뒤집어 벨소리, 메시지 알림음, 알람을 끕니다."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "설정 안 함"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "인터넷"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "갤러리"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "컨텐츠로 이동하려면 두 번 누르세요."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "서라운드"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "가사"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "모바일 디바이스에서 [뮤직]에 곡을 추가하면 여기에 표시됩니다."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "샘플링 주파수"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "즐겨찾기로 표시하였습니다."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "음악"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "즐겨찾기로 표시되지 않았습니다."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "음악 검색"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "[자동 추천]에서 지원하지 않는 오디오 파일입니다."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "사용할 수 없는 파일 형식입니다."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "즐겨찾기"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "많이 재생된 음악"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "최근 추가 순"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "새 재생 목록 추가"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "발신자별 벨소리"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "아티스트"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "추가할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "새 재생 목록을 추가할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "태그를 가져올 수 없습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "%d개 이상 추가할 수 없습니다."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "앨범"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "저자"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "저작권"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "새 재생 목록 추가"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "내용"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "형식"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "불가능"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "재생 목록이 없습니다"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "곡 번호"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "삭제할까요?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "제거할까요?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "이름을 변경할 수 없습니다."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "앨범"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "추가 중..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "앨범 %d개를 삭제할까요?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "재생 목록"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "추가"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "아티스트"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "크레디트"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "미디어 정보"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "전체 앨범"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "가사"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "가능"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "리뷰"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "곡 목록"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "재생 목록에 추가"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "아티스트"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "전송"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "재생 목록"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "최근 재생"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "재생 시간"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "음악 없음"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "이 트랙을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "선택한 곡을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "선택한 아티스트를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "선택한 아티스트를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "모든 아티스트를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "폴더를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "선택한 폴더를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "모든 폴더를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "선택한 앨범을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "선택한 앨범을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "모든 앨범을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "재생 목록을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "선택한 재생 목록을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "모든 재생 목록을 삭제합니다."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "음악"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "순서 변경"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "재생 목록으로 저장"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "알람음"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "선택한 것이 없습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "재생할 수 없습니다. 오류가 발생하였습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "지원하지 않는 파일 형식이어서 재생할 수 없습니다."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "공유"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "지휘자"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "디바이스 선택"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "보기 방식"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "일반"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "사용자"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "보컬"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "중저음 강화"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "고음 강화"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "카페"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "가상 7.1채널"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1시간 후"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1시간 30분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2시간 후"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "음악 자동 끄기"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "선택한 음향 효과는 이어폰과 블루투스 헤드셋을 연결한 경우에만 적용됩니다."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "뮤직 스퀘어"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "[뮤직 스퀘어]에서 재생할 음악 파일이 부족합니다. 저장된 음악이 최소 %d곡 필요합니다."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "열정적인"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "차분한"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "기쁜"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "라이브러리 업데이트"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "라이브러리를 업데이트할까요?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "축 변경"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "장르"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "앨범 1개/ 곡 1개"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "앨범 1개/ 곡 %d개"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "앨범 %d개/곡 %d개"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "%1$s, %2$s, %3$s, %4$s, %5$s, %6$s 등의 음성 명령으로 [뮤직]을 제어할 수 있습니다."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "곡 %d개 셔플"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "추가정보"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "내 음악"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "목록 보기"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Group Play로 재생"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "곡을 [즐겨찾기]에 추가하였습니다."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "즐겨찾기에서 제거"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "최신"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "곡"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "썸네일"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "목록"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "재생 목록 열기"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "모두 재생"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "선택한 목록이 비어 있습니다."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "분위기"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "연도"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "오래된"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "뮤직 스퀘어는 디바이스에 저장된 음악 파일의 속성을 분석하여 자동으로 새 재생 목록을 추가합니다."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "화면 위의 사각형을 선택하여 비슷한 장르의 곡으로 구성된 재생 목록을 추가할 수 있습니다."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "재생 중인 사각형을 길게 눌러 재생 목록의 상세정보를 확인할 수 있습니다."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "주변 디바이스"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "새 음악 파일을 추가한 경우 라이브러리를 업데이트하세요."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "앨범이 없습니다"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "아티스트가 없습니다"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "재생 속도"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "콘서트 홀"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "추가"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "보기"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "최근 추가 순"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "사용 안 함"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "오프라인에서도 볼 수 있도록 함"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d시간 %2$d분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d시간 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d분 후"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "폴더가 없습니다"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "곡이 없습니다"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "앨범 %d개"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "아티스트 %d명"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "장르 %d개"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "재생 목록 %d개"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "곡 %d개"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "재생 목록"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "비슷한 앨범"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "곡"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "썸네일 보기"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "선택한 음향 효과는 이어폰을 연결한 경우에만 적용됩니다."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "모든 컨텐츠"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "이 파일을 재생하려면 네트워크 연결이 필요합니다. 네트워크 연결을 확인한 후 다시 시도하세요."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "지원되지 않는 파일 형식입니다."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "업데이트 중..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "검색"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "검색 방식"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "관련 동영상"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "스마트 음량"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "모든 곡의 음량을 %d(으)로 조절합니다."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "스마트 음량 실행"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "연결정보"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1시간 %d분 후"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "음질 최적화"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "내 디바이스"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "높은 음량으로 오랫동안 들으면 청각이 손상될 수 있습니다. 안전 기준보다 높게 음량을 올릴까요?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "동일한 항목이 있습니다."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "주변 디바이스 찾기"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1시간 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1시간 1분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d시간 1분 후"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1분 후"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "스토어로 이동"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "곡 추가"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "[뮤직]에서 다운로드한 곡은 여기에 표시됩니다."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "곡을 [즐겨찾기]에 추가하면 여기에 표시됩니다."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "곡을 재생하면 여기에 표시됩니다."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "%s에 추가한 곡은 여기에 표시합니다."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "구매한 컨텐츠가 없습니다"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "저장 옵션"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "업데이트하지 못하였습니다."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "신나는"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "내 음악 검색"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "연결된 디바이스"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "내 재생 목록 %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "디바이스가 없습니다"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "사용 가능한 디바이스"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "설정"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "제거하지 못하였습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "주변 디바이스를 실행하는 중에는 빨리감기 및 되감기 기능을 사용할 수 없습니다."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "다음으로 설정"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "헤드폰"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "스피커"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1곡"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "음악 %d곡"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "곡 1개"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "곡 1개 셔플"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "선택한 셀에 음악이 없습니다"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "다시 보지 않기"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "다양한 아티스트"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "홈 화면에 추가"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "즐겨찾기에 추가"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "제목 편집"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간에서 제거"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "곡을 다운로드하면 폴더에 표시합니다."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "음량"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "반복재생 해제"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "전체 반복"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "셔플 해제"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "셔플 설정"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "내 재생 목록"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "기본 재생 목록"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "만든 날짜"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "앨범 아트"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "장르 1개"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "폴더 %d개"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "폴더 1개"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "아티스트 1명"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "앨범 1개"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "재생 목록 1개"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "뮤직"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "이동"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "자동 추천"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "처음부터"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "나를 위한 추천"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "저장"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "기본"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "악기"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "고음"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "저음"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "이 모드에는 아무 효과도 적용되지 않습니다."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "진공관 앰프 효과를 사용하여 선명한 음색을 제공합니다."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "진공관 앰프 효과"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "가상 7.1 채널의 서라운드 효과를 적용합니다."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "작은 공간"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "큰 공간"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "큰 극장에서 생기는 소리의 울림 효과를 적용합니다."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "콘서트 홀에서 생기는 울림 효과를 적용합니다."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "스튜디오 같은 공간에서 생기는 소리의 울림 효과를 적용합니다."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "명료도"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "초기화"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "연도"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "장르"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "작곡가"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "모든 곡"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "퀵리스트"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "찾기"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "퀵리스트에 추가"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "인증되지 않은 TV출력용 동영상 파일입니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "새로 추가할 수 없습니다. 최대 재생 목록 수에 도달하였습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "블루투스 헤드셋이 연결된 경우 음량을 조절할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "블루투스 헤드셋이 연결된 경우 음량을 조절할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "음악 재생을 중지할까요?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "[무음 모드]를 해제하세요."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "네트워크에 연결할 수 없습니다."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "SD 카드를 불러왔습니다."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "디바이스 설정에 오류가 있습니다."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "해당 음악과 어울리는 곡을 찾을 수 없습니다."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "버퍼링 중..."
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "블루투스 헤드셋은 일반 음향 효과만 지원합니다."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "애플리케이션을 종료합니다."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "추가하였습니다. 위시리스트로 이동할까요?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "요금이 부과될 수 있는 서비스입니다. 계속할까요?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "사이트에 접속하면 요금이 부과될 수 있습니다. 계속할까요?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 채널 음향 효과는 이어폰과 블루투스 헤드셋을 연결한 경우에만 적용됩니다."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1채널 음향 효과는 이어폰을 연결한 경우에만 적용됩니다."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "스피커에서 5.1채널 음향 효과가 지원되지 않습니다."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "앨범 커버로 보기"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "곡 전송"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "등급 지정"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "곡 순서 변경"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "현재"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "재생 목록 삭제"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "배경음악 설정"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "효과"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "지금 구매"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "위시리스트"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "와이드"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "와-와"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "바이브 우퍼"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "트레몰로"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "음악을 재생/일시정지하려면 두 번 누르세요."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "블루투스로 곡 공유"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "음악 설정 마법사에 오신 것을 환영합니다. 다음 화면을 따라 휴대전화를 구성하세요. 계속할까요?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "퀵리스트"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "음향 효과"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "전체"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "음량"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "곡 %d개를 선택하였습니다."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "팟 캐스트가 없습니다"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "유사 음악 찾기"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "배경음악 재생"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "음향 효과를 해제한 경우에만 5.1 채널을 실행할 수 있습니다."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "팟캐스트"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "이미지 편집"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "소리를 재생하면 음성 녹음을 중지하고 저장합니다. 재생할까요?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "최대 항목 수(%d)를 선택하였습니다."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "블루투스 연결을 해제하였습니다."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "음향 효과를 해제한 경우에만 5.1 채널을 실행할 수 있습니다."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "사진 촬영"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "음악 보기 표시"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "일시정지"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "앨범 재생"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "정렬 기준"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "기록"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "음악 보기 숨기기"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "태그 찾기"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox 컨텐츠"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "디바이스 컨텐츠"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "이미지 변경"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Dropbox 데이터 삭제"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "AllShare를 사용하여 음악을 디바이스로 스트리밍할 수 있습니다."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "유효 횟수"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "종류"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "서버뿐만 아니라 연결된 디바이스의 파일도 삭제합니다."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "아티스트"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "앨범 아트"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "다른 컨텐츠"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "이름이 너무 깁니다."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "선명한 음질"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "오랫동안 큰 소리로 음악을 들으면 청각이 손상될 수 있습니다."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "사용 가능"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "해당 음향 효과는 헤드폰이 연결된 경우에만 사용할 수 있습니다."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간에 추가"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간에서 제거"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "상황별 팝업 메뉴입니다"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "상황별 팝업 메뉴가 열렸습니다. 닫으려면 팝업 메뉴를 두 번 누르세요"
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "1곡 반복"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "이동 중..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Select up to %d items."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "탭"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "플레이어 변경"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "탭"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "음악 파일의 하이라이트 부분만 추출합니다."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "부모의 시청 지도가 필요한 등급"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "파일을 찾을 수 없습니다."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "발신자별 벨소리를 저장하였습니다."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "비트 심도"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "크기"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d개 선택"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "디바이스에 곡을 추가하면 여기에 표시됩니다."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "길이"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "폴더 1개를 삭제합니다."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "내용이 없습니다"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "폴더"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "내 재생 목록"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "사운드 플레이어"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "설정"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "삭제 중..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "트랙 1개를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "모든 곡을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "트랙 %d개를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "재생 목록 1개를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "재생 목록 %d개를 삭제합니다."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "앨범 %d개를 삭제합니다."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "아티스트 %d명을 삭제합니다."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "폴더 %d개를 삭제합니다."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "연결하지 못하였습니다."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "클래식"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "락"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "재즈"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "팝"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "자동"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI에서 지원되지 않는 음향 효과입니다."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "블루투스에서 해당 음향 효과가 지원되지 않습니다."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "외부 출력에서 해당 음향 효과가 지원되지 않습니다."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI에서 음향 효과가 지원되지 않습니다."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "진공관 앰프"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "직접 설정"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "진공관 앰프"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "재생 목록에 곡 %d개를 추가하였습니다."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "재생 목록에 곡 1개를 추가하였습니다."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "재생 목록에 곡 추가"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s 이름은 이미 사용 중입니다. 다른 이름을 입력하세요."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "녹음 날짜"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "곡을 알람음으로 설정하였습니다."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "검색 결과가 없습니다"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "기본 벨소리"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "곡을 발신자별 벨소리로 설정하였습니다."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "곡을 벨소리로 설정하였습니다."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "현재 재생 목록에 추가"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "음악을 재생할 때 이퀄라이저 설정을 적용합니다."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "알림"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "앨범 1개를 삭제합니다."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD 카드"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "디바이스 저장공간"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "사용 중인 재생 목록 이름입니다."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "재생 목록%d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "추가"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "이퀄라이저 사용자 설정"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "자동"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "클래식"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "환경 효과"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "지원되지 않는 파일 형식입니다."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "새 재생 목록을 추가하면 여기에 표시합니다."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "오디오 디바이스 선택"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "사용 중인 재생 목록 이름입니다. 다른 이름을 입력하세요."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "현재 재생 목록"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "가사 표시"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "가사 숨기기"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "통화 중에는 음악을 재생할 수 없습니다."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "삭제"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "선택"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "곡을 재생할 수 없음"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "완료"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "취소"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "삭제"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "이름 변경"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "메시지"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "확인"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "취소"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "새로고침"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "모두 선택"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "삭제하였습니다."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "중지"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "알 수 없음"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "제목"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "이메일"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "블루투스"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "다운로드"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "배터리가 부족합니다."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "오디오 디바이스"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "상세정보"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "종료"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "편집"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "업데이트를 완료하였습니다."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "제거하였습니다."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "하나만 선택"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "찾기"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "오류가 발생하였습니다."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "저장공간을 모두 사용 중입니다."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "현재 재생 목록"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "음량"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "셔플"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "반복"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "최대 파일 크기를 초과하였습니다."
+

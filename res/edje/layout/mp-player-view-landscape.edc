@@ -1,0 +1,1643 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define PV_LD_SREEN_W 1280.
+#define PV_LD_SREEN_H 720.
+#define PV_LD_BG_COLOR 248 246 239 255
+#define PV_LD_MV_VIEW_LEFT 112
+#define PV_LD_MV_VIEW_W 496
+#define PV_LD_MV_VIEW_H 160
+
+#define LD_BG_COLOR MP_COLOR_BG_BLACK_TRANSPARENT
+/*player view wave */
+#define PV_LD_MV_LEFT (PV_LD_MV_VIEW_LEFT/PV_LD_SREEN_H)
+#define PV_LD_MV_RIGHT ((PV_LD_MV_VIEW_LEFT+PV_LD_MV_VIEW_W)/PV_LD_SREEN_W)
+/*player view buttong effect*/
+#define PV_LD_BT_W 100.
+#define PV_LD_BT_H 95.
+#define PV_LD_BT_PRESS_W 95.
+#define PV_LD_BT_PRESS_H 103.
+#define PV_LD_BT_PRESS_SX ((1.0-PV_LD_BT_PRESS_W/PV_LD_BT_W)/2)
+#define PV_LD_BT_PRESS_SY ((1.0-PV_LD_BT_PRESS_H/PV_LD_BT_H)/2)
+#define PV_LD_BT_PRESS_EX (PV_LD_BT_PRESS_SX+PV_LD_BT_PRESS_W/PV_LD_BT_W)
+#define PV_LD_BT_PRESS_EY (PV_LD_BT_PRESS_SY+PV_LD_BT_PRESS_H/PV_LD_BT_H)
+#define PV_LD_BT_PRESS_BG_COLOR 240 240 240 155
+
+/* album art area */
+#define PV_LD_ALBUM_AREA_W 720.
+#define PV_LD_ALBUM_AREA_H 720.
+#define PV_LD_ALBUM_AREA_TOP_H 0.
+#define PV_LD_ALBUM_THUMNAIL_BG_W 720
+#define PV_LD_ALBUM_THUMNAIL_BG_H 720.
+#define PV_LD_ALBUM_TURN_TABLE_W 720./*484*/
+#define PV_LD_ALBUM_TURN_TABLE_H 720./*497*/
+#define PV_LD_ALBUM_IMAGE_W 720.
+#define PV_LD_ALBUM_IMAGE_H 720.
+#define PV_LD_ALBUM_IMAGE_TOP_H 8.
+#define PV_LD_ALBUM_IMAGE_BOTTOM_H 25.
+#define PV_LD_ALBUM_IMAGE_LEFT_W 15.
+#define PV_LD_ALBUM_IMAGE_RIGHT_W 16.
+#define PV_LD_ALBUM_IMAGE_FLICK_TIMER 0.5
+
+#define PV_LD_ALBUM_PLAYING_LEFT_W 14.
+#define PV_LD_ALBUM_PLAYING_RIGHT_W 14.
+#define PV_LD_ALBUM_TURN_TABLE_LEFT_W 160./*198*/
+#define PV_LD_ALBUM_TURN_TABLE_TOP_H 14.
+#define PV_LD_ALBUM_TURN_TABLE_MOVE_W 100.
+#define PV_LD_ALBUM_TURN_TABLE_MOVE_TIMER 0.2
+#define PV_LD_ALBUM_TURN_TABLE_FLICK_OFFSET 0.2
+
+#define PV_LD_RIGHT_AREA_W 560
+
+#define PV_LD_ALBUM_THUMNAIL_BG "player-view/T02_album_thumbnail_bg_h.png"
+#define PV_CAST_ALBUM_BG_1 "player-view/T02_player_album_bg_01.png"
+
+/* options */
+#define PV_LD_OPTIONS_AREA_W PV_LD_RIGHT_AREA_W
+#define PV_LD_OPTIONS_AREA_H 54
+#define PV_LD_OPTIONS_AREA_TOP_H 8
+#define PV_LD_OPTIONS_AREA_LEFT_W 26
+#define PV_LD_OPTIONS_AREA_LEFT2_W 173
+#define PV_LD_OPTIONS_AREA_RIGHT_W 26
+#define PV_LD_OPTIONS_AREA_RIGHT2_W 174
+#define PV_LD_OPTIONS_AREA_IMAGE_SIZE 54
+#define PV_LD_OPTIONS_VOLUME_POPUP_TOP 14
+#define PV_LD_OPTIONS_VOLUME_POPUP_W 116
+#define PV_LD_OPTIONS_VOLUME_POPUP_H 438
+
+#define PV_LD_OPTIONS_AREA_SY (458/PV_LD_SREEN_H)
+#define PV_LD_OPTIONS_AREA_EY (PV_LD_OPTIONS_AREA_SY+PV_LD_OPTIONS_AREA_H/PV_LD_SREEN_H)
+
+/*#define PV_LD_OPTION_VOLUME_SX (PV_LD_OPTIONS_AREA_LEFT_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_VOLUME_EX (PV_LD_OPTION_VOLUME_SX+PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+
+#define PV_LD_OPTION_SHUFFLE_ON_SX (PV_LD_OPTION_VOLUME_EX+PV_LD_OPTIONS_AREA_LEFT2_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_SHUFFLE_ON_EX (PV_LD_OPTION_SHUFFLE_ON_SX+PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+
+#define PV_LD_OPTION_INFO_SX (PV_LD_OPTION_SHUFFLE_ON_EX+PV_LD_OPTIONS_AREA_LEFT2_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_INFO_EX (PV_LD_OPTION_INFO_SX+PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+
+#define PV_LD_OPTION_REP_SX (PV_LD_OPTION_REP_EX-PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_REP_EX (PV_LD_OPTION_FAVOURITE_ON_SX-PV_LD_OPTIONS_AREA_RIGHT2_W/PV_LD_OPTIONS_AREA_W)
+
+//add favourite begin
+#define PV_LD_OPTION_FAVOURITE_ON_SX (PV_LD_OPTION_FAVOURITE_ON_EX-PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_FAVOURITE_ON_EX (1-PV_LD_OPTIONS_AREA_RIGHT_W/PV_LD_OPTIONS_AREA_W)
+//add favourite end
+*/
+
+#define PV_LD_OPTION_SHUFFLE_ON_SX (PV_LD_OPTIONS_AREA_LEFT_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_SHUFFLE_ON_EX (PV_LD_OPTION_SHUFFLE_ON_SX+PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+
+#define PV_LD_OPTION_FAVOURITE_ON_SX (PV_LD_OPTION_SHUFFLE_ON_EX+PV_LD_OPTIONS_AREA_LEFT2_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_FAVOURITE_ON_EX (PV_LD_OPTION_FAVOURITE_ON_SX+PV_LD_OPTIONS_AREA_IMAGE_SIZE/PV_LD_OPTIONS_AREA_W)
+
+#define PV_LD_OPTION_REP_SX (PV_LD_OPTION_FAVOURITE_ON_EX+PV_LD_OPTIONS_AREA_RIGHT2_W/PV_LD_OPTIONS_AREA_W)
+#define PV_LD_OPTION_REP_EX (1-PV_LD_OPTIONS_AREA_RIGHT_W/PV_OPTIONS_AREA_W)
+
+#define PV_LD_CONTROL_CIRCLE_BT_03 "player-view/T02_control_circle_button_03.png"
+#define PV_LD_CONTROL_CIRCLE_BT_03_PRESS "player-view/T02_control_circle_button_03_press.png"
+#define PV_LD_OPTION_VOLUME "player-view/T02_option_volume.png"
+#define PV_LD_OPTION_VOLUME_PRESS "player-view/T02_option_volume_press.png"
+#define PV_LD_OPTION_SHUFFLE_ON "player-view/T02_option_shuffle_on.png"
+#define PV_LD_OPTION_SHUFFLE_OFF "player-view/T02_option_shuffle_off.png"
+#define PV_LD_OPTION_SHUFFLE_ON_PRESS "player-view/T02_option_shuffle_on_press.png"
+#define PV_LD_OPTION_REP_A "player-view/T02_option_rep_A.png"
+#define PV_LD_OPTION_REP_A_PRESS "player-view/T02_option_rep_A_press.png"
+#define PV_LD_OPTION_REP_1 "player-view/T02_option_rep_1.png"
+#define PV_LD_OPTION_REP_1_PRESS "player-view/T02_option_rep_1_press.png"
+#define PV_LD_OPTION_REP_ALL "player-view/T02_option_rep_all.png"
+#define PV_LD_OPTION_REP_ALL_PRESS "player-view/T02_option_rep_all_press.png"
+#define PV_LD_OPTION_INFO "player-view/T02_option_info.png"
+#define PV_LD_OPTION_INFO_PRESS "player-view/T02_option_info_press.png"
+//add favourite begin
+#define PV_LD_OPTION_FAVOURITE_ON "player-view/T02_option_favorite.png"
+#define PV_LD_OPTION_FAVOURITE_OFF "player-view/T02_option_favorite_dim.png"
+#define PV_LD_OPTION_FAVOURITE_ON_PRESS "player-view/T02_option_favorite_press.png"
+//add favourite end
+
+#define PV_LD_PROGRESS_BG "player-view/T02_player_bg_h.png"
+#define PV_LD_PROGRESS_BG_H 254
+
+/* progress */
+#define PV_LD_PROGRESS_AREA_W PV_LD_RIGHT_AREA_W
+#define PV_LD_PROGRESS_AREA_H 57
+#define PV_LD_PROGRESS_TEXT_W 122
+#define PV_LD_PROGRESS_TEXT_TOP_H 18
+#define PV_LD_PROGRESS_TEXT_H 26
+#define PV_LD_PROGRESS_TEXT_FONT			"Tizen:style=Regular"
+#define PV_LD_PROGRESS_TEXT_SIZE			23
+#define PV_LD_PROGRESS_TEXT_COLOR			58 58 58 255
+
+#define PV_LD_PROGRESS_AREA_SY (PV_LD_OPTIONS_AREA_SY+99/PV_LD_SREEN_H)
+#define PV_LD_PROGRESS_AREA_EY (PV_LD_PROGRESS_AREA_SY+(PV_LD_PROGRESS_AREA_H/PV_LD_SREEN_H))
+#define PV_LD_WAVE_AREA_SY (PV_LD_PROGRESS_AREA_SY-(120/PV_LD_SREEN_H))
+
+#define PV_LD_PROGRESS_LEFT_TEXT_SY (PV_LD_PROGRESS_TEXT_TOP_H/PV_LD_PROGRESS_AREA_H)
+#define PV_LD_PROGRESS_LEFT_TEXT_EX (PV_LD_PROGRESS_TEXT_W/PV_LD_PROGRESS_AREA_W)
+#define PV_LD_PROGRESS_LEFT_TEXT_EY (PV_LD_PROGRESS_LEFT_TEXT_SY+PV_LD_PROGRESS_TEXT_H/PV_LD_PROGRESS_AREA_H)
+
+#define PV_LD_PROGRESS_RIGHT_TEXT_SX (1-PV_LD_PROGRESS_TEXT_W/PV_LD_PROGRESS_AREA_W)
+#define PV_LD_PROGRESS_RIGHT_TEXT_SY PV_LD_PROGRESS_LEFT_TEXT_SY
+#define PV_LD_PROGRESS_RIGHT_TEXT_EY PV_LD_PROGRESS_LEFT_TEXT_EY
+
+#define PV_LD_PROGRESSBAR_SX ((PV_LD_PROGRESS_TEXT_W)/PV_LD_PROGRESS_AREA_W)
+#define PV_LD_PROGRESSBAR_EX ((PV_LD_PROGRESS_AREA_W-PV_LD_PROGRESS_TEXT_W)/PV_LD_PROGRESS_AREA_W)
+
+/* control */
+#define PV_LD_CONTROL_AREA_W PV_LD_RIGHT_AREA_W
+#define PV_LD_CONTROL_AREA_H 104
+#define PV_LD_CONTROL_PREVIOUS_SZIE 84
+#define PV_LD_CONTROL_PLAY_SIZE 104
+#define PV_LD_CONTROL_NEXT_SZIE 84
+#define PV_LD_CONTROL_INTERVAL 24
+#define PV_LD_CONTROL_ICON_SIZE 70
+#define PV_LD_CONTROL_ICON_INTERVAL 40
+#define PV_LD_CONTROL_LEFT_W ((PV_LD_CONTROL_AREA_W-PV_LD_CONTROL_PREVIOUS_SZIE-PV_LD_CONTROL_PLAY_SIZE-PV_LD_CONTROL_NEXT_SZIE-PV_LD_CONTROL_INTERVAL*2)/2)
+
+#define PV_LD_CONTROL_AREA_SY ((PV_LD_SREEN_H-PV_LD_CONTROL_AREA_H-2)/PV_LD_SREEN_H)
+#define PV_LD_CONTROL_AREA_EY (PV_LD_CONTROL_AREA_SY+(PV_LD_CONTROL_AREA_H/PV_LD_SREEN_H))
+
+#define PV_LD_CONTROL_VOLUME_SX (PV_LD_CONTROL_VOLUME_EX-PV_LD_CONTROL_ICON_SIZE/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_VOLUME_SY (((PV_LD_CONTROL_AREA_H-PV_LD_CONTROL_ICON_SIZE)/PV_LD_CONTROL_AREA_H)/2)
+#define PV_LD_CONTROL_VOLUME_EX (PV_LD_CONTROL_PREVIOUS_SX-PV_LD_CONTROL_ICON_INTERVAL/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_VOLUME_EY (PV_LD_CONTROL_VOLUME_SY+PV_LD_CONTROL_ICON_SIZE/PV_LD_CONTROL_AREA_H)
+
+#define PV_LD_CONTROL_PREVIOUS_SX (PV_LD_CONTROL_LEFT_W/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_PREVIOUS_SY (((PV_LD_CONTROL_AREA_H-PV_LD_CONTROL_PREVIOUS_SZIE)/PV_LD_CONTROL_AREA_H)/2)
+#define PV_LD_CONTROL_PREVIOUS_EX (PV_LD_CONTROL_PREVIOUS_SX+PV_LD_CONTROL_PREVIOUS_SZIE/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_PREVIOUS_EY (PV_LD_CONTROL_PREVIOUS_SY+PV_LD_CONTROL_PREVIOUS_SZIE/PV_LD_CONTROL_AREA_H)
+
+#define PV_LD_CONTROL_PLAY_SX (PV_LD_CONTROL_PREVIOUS_EX+PV_LD_CONTROL_INTERVAL/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_PLAY_SY (((PV_LD_CONTROL_AREA_H-PV_LD_CONTROL_PLAY_SIZE)/PV_LD_CONTROL_AREA_H)/2)
+#define PV_LD_CONTROL_PLAY_EX (PV_LD_CONTROL_PLAY_SX+PV_LD_CONTROL_PLAY_SIZE/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_PLAY_EY (PV_LD_CONTROL_PLAY_SY+PV_LD_CONTROL_PLAY_SIZE/PV_LD_CONTROL_AREA_H)
+
+#define PV_LD_CONTROL_NEXT_SX (PV_LD_CONTROL_PLAY_EX+PV_LD_CONTROL_INTERVAL/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_NEXT_SY (((PV_LD_CONTROL_AREA_H-PV_LD_CONTROL_NEXT_SZIE)/PV_LD_CONTROL_AREA_H)/2)
+#define PV_LD_CONTROL_NEXT_EX (PV_LD_CONTROL_NEXT_SX+PV_LD_CONTROL_NEXT_SZIE/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_NEXT_EY (PV_LD_CONTROL_NEXT_SY+PV_LD_CONTROL_NEXT_SZIE/PV_LD_CONTROL_AREA_H)
+
+#define PV_LD_CONTROL_QUEUE_SX (PV_LD_CONTROL_NEXT_EX+PV_LD_CONTROL_ICON_INTERVAL/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_QUEUE_SY (((PV_LD_CONTROL_AREA_H-PV_LD_CONTROL_ICON_SIZE)/PV_LD_CONTROL_AREA_H)/2)
+#define PV_LD_CONTROL_QUEUE_EX (PV_LD_CONTROL_QUEUE_SX+PV_LD_CONTROL_ICON_SIZE/PV_LD_CONTROL_AREA_W)
+#define PV_LD_CONTROL_QUEUE_EY (PV_LD_CONTROL_QUEUE_SY+PV_LD_CONTROL_ICON_SIZE/PV_LD_CONTROL_AREA_H)
+
+#define PV_LD_CONTROL_CIRCLE_BT_01 "player-view/T02_control_circle_button_01.png"
+#define PV_LD_CONTROL_CIRCLE_BT_01_PRESS "player-view/T02_control_circle_button_01_press.png"
+#define PV_LD_CONTROL_CIRCLE_BT_01_FOCUS "player-view/T02_control_circle_button_01_focus.png"
+#define PV_LD_CONTROL_CIRCLE_BT_02 "player-view/T02_control_circle_button_02.png"
+#define PV_LD_CONTROL_CIRCLE_BT_02_PRESS "player-view/T02_control_circle_button_02_press.png"
+#define PV_LD_CONTROL_PREVIOUS "player-view/T02_control_circle_icon_rewind.png"
+#define PV_LD_CONTROL_PREVIOUS_PRESS "player-view/T02_control_circle_icon_rewind_press.png"
+#define PV_LD_CONTROL_PLAY "player-view/T02_control_circle_icon_play.png"
+#define PV_LD_CONTROL_PLAY_PRESS "player-view/T02_control_circle_icon_play_press.png"
+#define PV_LD_CONTROL_PAUSE "player-view/T02_control_circle_icon_pause.png"
+#define PV_LD_CONTROL_PAUSE_PRESS "player-view/T02_control_circle_icon_pause_press.png"
+#define PV_LD_CONTROL_NEXT "player-view/T02_control_circle_icon_ff.png"
+#define PV_LD_CONTROL_NEXT_PRESS "player-view/T02_control_circle_icon_ff_press.png"
+
+/* lyric */
+#define PV_LD_LYRIC_AREA_W (PV_LD_ALBUM_AREA_W-10)
+#define PV_LD_LYRIC_AREA_H 655
+
+#define PV_LD_LYRIC_TOP_H 18
+#define PV_LD_LYRIC_W 14
+#define PV_LD_LYRIC_H 600
+#define PV_LD_LYRIC_LEFT_W ((PV_LD_LYRIC_AREA_W-PV_LD_LYRIC_W)/2)
+#define PV_LD_LYRIC_BG_COLOR 0 0 0 190 /*248 246 239 204*/
+
+#define PV_LD_LYRIC_AREA_SY (PV_LD_LYRIC_TOP_H/PV_LD_ALBUM_AREA_W)
+#define PV_LD_LYRIC_AREA_EY 1
+
+#define PV_LD_LYRIC_SX (PV_LD_LYRIC_LEFT_W/PV_LD_LYRIC_AREA_W)
+#define PV_LD_LYRIC_SY (PV_LD_LYRIC_TOP_H/PV_LD_LYRIC_AREA_H)
+#define PV_LD_LYRIC_EX (PV_LD_LYRIC_SX+PV_LD_LYRIC_W/PV_LD_LYRIC_AREA_W)
+#define PV_LD_LYRIC_EY (PV_LD_LYRIC_SY+PV_LD_LYRIC_H/PV_LD_LYRIC_AREA_W)
+
+/* Custom Macro */
+#define PV_LD_PART_RECT(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	repeat_events: 1; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	}\
+	description { \
+		state: "hide" 0.0; \
+		visible: 0; \
+	}\
+}
+
+#define PV_LD_PART_NO_TRANSPANCE_RECT(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	repeat_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		visible: 0; \
+	} \
+	description { \
+		state: "show" 0.0; \
+		align: 0 0; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: PV_LD_BG_COLOR; \
+	} \
+}
+
+#define PV_LD_PART_SWALLOW_OPTION(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		fixed: 1 1; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+	description { \
+		state: "invisible" 0.0; \
+		inherit: "default"; \
+		visible: 0; \
+	} \
+}
+
+#define PV_LD_PART_SWALLOW(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 1; \
+		fixed: 1 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 248 246 239 255; \
+	} \
+}
+
+#define PV_LD_LYRIC_PROG \
+program {\
+        signal: "lrc_invisible";\
+        source: "lrc";\
+        action:   STATE_SET "default" 0.0;\
+        target: "lrc";\
+	target: "lrc_bg";\
+        transition: LINEAR 0.0;\
+}\
+program {\
+        signal: "lrc_visible";\
+        source: "lrc";\
+        action:   STATE_SET "show" 0.0;\
+        target: "lrc";\
+        target: "lrc_bg";\
+        transition: LINEAR 0.0;\
+}\
+program {\
+        signal: "lrc_destroy";\
+        source: "lrc";\
+        action:   STATE_SET "default" 0.0;\
+        target: "lrc";\
+        target: "lrc_bg";\
+}
+
+
+group {
+	name: "player_view_ld";
+
+	images {
+		image: PV_LD_ALBUM_THUMNAIL_BG COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_03 COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_03_PRESS COMP;
+		image: PV_LD_OPTION_VOLUME COMP;
+		image: PV_LD_OPTION_VOLUME_PRESS COMP;
+		image: PV_LD_OPTION_SHUFFLE_ON COMP;
+		image: PV_LD_OPTION_SHUFFLE_OFF COMP;
+		image: PV_LD_OPTION_SHUFFLE_ON_PRESS COMP;
+		image: PV_LD_OPTION_REP_A COMP;
+		image: PV_LD_OPTION_REP_A_PRESS COMP;
+		image: PV_LD_OPTION_REP_1 COMP;
+		image: PV_LD_OPTION_REP_1_PRESS COMP;
+		image: PV_LD_OPTION_REP_ALL COMP;
+		image: PV_LD_OPTION_REP_ALL_PRESS COMP;
+		image: PV_LD_OPTION_INFO COMP;
+		image: PV_LD_OPTION_INFO_PRESS COMP;
+		image: PV_LD_OPTION_FAVOURITE_ON COMP; //add favourite begin
+		image: PV_LD_OPTION_FAVOURITE_OFF COMP;
+		image: PV_LD_OPTION_FAVOURITE_ON_PRESS COMP; //add favourite end
+		image: PV_LD_CONTROL_CIRCLE_BT_01 COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_01_PRESS COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_02 COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_02_PRESS COMP;
+		image: PV_LD_CONTROL_PREVIOUS COMP;
+		image: PV_LD_CONTROL_PREVIOUS_PRESS COMP;
+		image: PV_LD_CONTROL_PLAY COMP;
+		image: PV_LD_CONTROL_PLAY_PRESS COMP;
+		image: PV_LD_CONTROL_PAUSE COMP;
+		image: PV_LD_CONTROL_PAUSE_PRESS COMP;
+		image: PV_LD_CONTROL_NEXT COMP;
+		image: PV_LD_CONTROL_NEXT_PRESS COMP;
+		image: PV_LD_PROGRESS_BG COMP;
+	}
+
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				color: MP_COLOR_BG_BLACK_TRANSPARENT;
+			}
+		}
+
+		part{ name : "right_bg";
+			type: RECT;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 1 0;}
+				rel2 { relative: 1 1;}
+				min: 560 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				color: LD_BG_COLOR;
+			}
+			description {
+				state: "hide_albumart" 0.0;
+				inherit: "default" 0.0;
+				align: 0.0 0.0;
+				rel1{relative: 0 0;}
+				rel2{relative: 1 1;}
+			}
+		}
+
+
+		part {
+			name: "left_area";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 1 0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 0.0 1.0; to: "right_bg"; }
+			}
+			description {
+				state: "hide_albumart" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+
+		/* album image */
+		part {
+			name : "album_image";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "left_area";
+			description {
+				state: "default" 0.0;
+				min: PV_LD_ALBUM_THUMNAIL_BG_W PV_LD_ALBUM_THUMNAIL_BG_W;
+				fixed :1 1;
+				rel1 { relative: 0 0;to: "right_bg";offset:-720 0;}
+				rel2 {relative: 0 1; to: "right_bg";}
+			}
+		}
+
+		/* UHQ icon */
+		part { name: "right_top_for_uhq";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "album_image"; }
+				rel2 { relative: 1.0 0.0; to: "album_image"; }
+				min: 20 15;
+				fixed: 1 1;
+				align: 1.0 0.0;
+			}
+		}
+		part { name: "uhq_icon_area";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "left_area";
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "right_top_for_uhq"; }
+				rel2 { relative: 0.0 1.0; to: "right_top_for_uhq"; }
+				min: 63 39;
+				max: 63 39;
+				fixed: 1 1;
+				align: 1.0 0.0;
+			}
+		}
+
+		part {
+			name: "buffering_area";
+			type: SWALLOW;
+			mouse_events: 0;
+			scale: 1;
+			clip_to: "left_area";
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 100 100;
+				align: 1.0 1.0;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to: "album_image"; }
+				rel2 { relative: 1.0 1.0; to: "album_image"; }
+			}
+		}
+
+		part {
+			name : "album_image_left";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "left_area";
+			description {
+				state: "default" 0.0;
+				min: PV_LD_ALBUM_THUMNAIL_BG_W PV_LD_ALBUM_THUMNAIL_BG_W;
+				max: PV_LD_ALBUM_THUMNAIL_BG_W PV_LD_ALBUM_THUMNAIL_BG_W;
+				fixed: 1 1;
+				align: 1 0;
+				rel1 { relative: 0.0 0.0; to: "album_image"; }
+				rel2 { relative: 0.0 1.0; to: "album_image"; }
+			}
+		}
+
+		part {
+			name : "album_image_right";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "left_area";
+			description {
+				state: "default" 0.0;
+				min: PV_LD_ALBUM_THUMNAIL_BG_W PV_LD_ALBUM_THUMNAIL_BG_W;
+				max: PV_LD_ALBUM_THUMNAIL_BG_W PV_LD_ALBUM_THUMNAIL_BG_W;
+				fixed: 1 1;
+				align: 0 0;
+				rel1 { relative: 1.0 0.0; to: "album_image"; }
+				rel2 { relative: 1.0 1.0; to: "album_image"; }
+			}
+		}
+
+		part { name: "event_box";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0 0; to: "left_area";}
+				rel2 {relative: 1 1; to: "left_area";}
+			}
+		}
+
+		part {
+			name: "nearby_area";
+			type : RECT;
+			clip_to: "left_area";
+			mouse_events: 0;
+			scale: 1;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "show" 0.0;
+				visible: 1;
+                                align: 0.0 0.0;
+                                color: 0 0 0 51;
+				rel1 { relative: 0 0; to: "left_area";}
+				rel2 {relative: 1 1; to: "left_area";}
+			}
+                }
+
+
+		part {
+			name: "nearby_allshare";
+			type : IMAGE;
+			mouse_events: 0;
+			scale: 1;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 { relative: 0 0; to: "nearby_area"; offset: 7 12; }
+				rel2 { relative: 0 0; to: "nearby_area"; offset: 7 12; }
+				image { normal: PV_OPTION_ALL_SHARE; }
+				align: 0.0 0.0;
+				min: 124 100;
+				max: 124 100;
+				fixed: 1 1;
+			}
+			description {
+				state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible:1;
+			}
+                }
+
+                /* lyric */
+		PV_LD_PART_RECT("lrc_area", "left_area", 0, PV_LD_LYRIC_AREA_SY, 1.0, PV_LD_LYRIC_AREA_EY)
+		part {
+			name: "lrc_bg";
+			mouse_events: 1;
+			repeat_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 0;
+				rel1 {
+					relative: 0 0;
+					to: "left_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "left_area";
+				}
+				color: PV_LD_LYRIC_BG_COLOR;
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+
+		part {
+			name: "lrc";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					relative: 0 0;
+					to: "lrc_area";
+				}
+				rel2 {
+					relative: 1.0 1.0;
+					to: "lrc_area";
+				}
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+
+		/* queue list */
+		part {
+			name: "queue_list_area";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "left_area";}
+				rel2 { relative: 1.0 1.0; to: "left_area";}
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+
+		/*right parts*/
+		part{ name : "right_title";
+			type: SWALLOW;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				rel1.to: "right_bg";
+				rel2.to: "right_bg";
+			}
+		}
+
+		/* progress bg image */
+		part {
+			name: "player_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 1.0 0;
+				visible:0;
+				image { normal: PV_LD_PROGRESS_BG; }
+				min: 0 PV_LD_PROGRESS_BG_H;
+				fixed: 1 1;
+				rel1 {
+					relative: 0.0 (PV_LD_SREEN_H - PV_LD_PROGRESS_BG_H)/PV_LD_SREEN_H;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 1.0 1.0;
+					to: "right_bg";
+				}
+			}
+		}
+                		/* options */
+		part { name: "options_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 PV_LD_OPTIONS_AREA_H;
+				fixed: 1 1;
+				visible: 1;
+				rel1 {
+					relative: 0 PV_LD_OPTIONS_AREA_SY;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 1 PV_LD_OPTIONS_AREA_EY;
+					to: "right_bg";
+				}
+			}
+		}
+
+		/* progress */
+		PV_LD_PART_RECT("progress_area", "right_bg", 0, PV_LD_PROGRESS_AREA_SY, 1, PV_LD_PROGRESS_AREA_EY)
+		PV_LD_PART_SWALLOW("progress_box", "progress_area", 0, 0, 1, 1)
+
+		/* control */
+		part { name: "control_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				rel1 {
+					relative: 0 PV_LD_CONTROL_AREA_SY;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 1 PV_LD_CONTROL_AREA_EY;
+					to: "right_bg";
+				}
+			}
+		}
+
+		/* volume popup */
+		part {
+			name: "volume_popup";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: PV_LD_OPTIONS_VOLUME_POPUP_W PV_LD_OPTIONS_VOLUME_POPUP_H;
+				max: PV_LD_OPTIONS_VOLUME_POPUP_W PV_LD_OPTIONS_VOLUME_POPUP_H;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				rel1 {
+					relative: 22/PV_LD_RIGHT_AREA_W 10/PV_SREEN_H;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 22/PV_LD_RIGHT_AREA_W 10/PV_SREEN_H;
+					to: "right_bg";
+				}
+			}
+		}
+
+		part {
+			name: "nearby_control_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			repeat_events: 0;
+                        description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "show" 0.0;
+				min: 96 441;
+				max: 96 441;
+				fixed: 1 1;
+				visible: 1;
+                                align: 0.0 0.0;
+				rel1 {
+					relative: 22/PV_LD_RIGHT_AREA_W 10/PV_SREEN_H;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 22/PV_LD_RIGHT_AREA_W 10/PV_SREEN_H;
+					to: "right_bg";
+				}
+			}
+                }
+	}
+
+	programs {
+
+		/* queue list */
+		program {
+			name : "show_queue_list";
+			signal : "SHOW_QUEUE_LIST";
+			source : "music_app";
+			action : STATE_SET "show" 0.0;
+			target : "queue_list_area";
+		}
+		program {
+			name : "hide_queue_list";
+			signal : "HIDE_QUEUE_LIST";
+			source : "music_app";
+			action : STATE_SET "default" 0.0;
+			target : "queue_list_area";
+		}
+
+		program {
+			name : "nearby_area_show";
+			signal : "SHOW_NEARBY_AREA";
+			source : "music_app";
+			action : STATE_SET "show" 0.0;
+			target : "nearby_area";
+                        target : "nearby_control_area";
+                        target : "nearby_allshare";
+		}
+
+                program {
+			name : "nearby_area_hide";
+			signal : "HIDE_NEARBY_AREA";
+			source : "music_app";
+			action : STATE_SET "default" 0.0;
+			target : "nearby_area";
+                        target : "nearby_control_area";
+                        target : "nearby_allshare";
+		}
+
+                program {
+			name : "set_hide_albumart";
+			signal : "set_hide_albumart";
+			source : "*";
+			action : STATE_SET "hide_albumart" 0.0;
+			target : "right_bg";
+                        target : "left_area";
+		}
+                program {
+			name : "set_show_albumart";
+			signal : "set_show_albumart";
+			source : "*";
+			action : STATE_SET "default" 0.0;
+			target : "right_bg";
+                        target : "left_area";
+		}
+
+		/* lyric */
+		PV_LD_LYRIC_PROG
+	}
+}
+
+/* options */
+group {
+	name: "player_view_option_area_ld";
+	parts {
+		part { name: "bg";
+			type : RECT;
+			mouse_events: 1;
+			scale: 1;
+			description { state: "default" 0.0;
+                                visible: 1;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+                                color: 0 0 0 0;
+			}
+		}
+
+		//PV_LD_PART_SWALLOW_OPTION("options_volume", "bg", PV_LD_OPTION_VOLUME_SX, 0, PV_LD_OPTION_VOLUME_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_shuffle_on", "bg", PV_LD_OPTION_SHUFFLE_ON_SX, 0, PV_LD_OPTION_SHUFFLE_ON_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_shuffle_off", "bg", PV_LD_OPTION_SHUFFLE_ON_SX, 0, PV_LD_OPTION_SHUFFLE_ON_EX, 1)
+		MP_FOCUSED_COVER("shuffle", "options_shuffle_off");
+		PV_LD_PART_SWALLOW_OPTION("options_rep_A", "bg", PV_LD_OPTION_REP_SX, 0, PV_LD_OPTION_REP_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_rep_1", "bg", PV_LD_OPTION_REP_SX, 0, PV_LD_OPTION_REP_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_rep_all", "bg", PV_LD_OPTION_REP_SX, 0, PV_LD_OPTION_REP_EX, 1)
+		MP_FOCUSED_COVER("repeat", "options_rep_A");
+		//PV_LD_PART_SWALLOW_OPTION("options_info", "bg", PV_LD_OPTION_INFO_SX, 0, PV_LD_OPTION_INFO_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_favourite_on", "bg", PV_LD_OPTION_FAVOURITE_ON_SX, 0, PV_LD_OPTION_FAVOURITE_ON_EX, 1)
+		PV_LD_PART_SWALLOW_OPTION("options_favourite_off", "bg", PV_LD_OPTION_FAVOURITE_ON_SX, 0, PV_LD_OPTION_FAVOURITE_ON_EX, 1)
+		MP_FOCUSED_COVER("favourite", "options_favourite_on");
+	}
+
+	programs {
+		PV_BUTTON_VISIVBLE_PROGRAM("options_shuffle_on")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_shuffle_off")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_rep_A")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_rep_1")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_rep_all")
+		//add favourite begin
+		PV_BUTTON_VISIVBLE_PROGRAM("options_favourite_on")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_favourite_off")
+		//add favourite end
+	}
+
+}
+
+/* control */
+group {
+	name: "player_view_control_area_ld";
+	parts {
+		part { name: "bg";
+			type : RECT;
+			mouse_events: 1;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: 0 0 0 0;
+			}
+		}
+		PV_LD_PART_SWALLOW_OPTION("control_volume", "bg", PV_LD_CONTROL_VOLUME_SX, PV_LD_CONTROL_VOLUME_SY,
+				PV_LD_CONTROL_VOLUME_EX, PV_LD_CONTROL_VOLUME_EY)
+
+                PV_LD_PART_SWALLOW_OPTION("control_volume_mute", "bg", PV_LD_CONTROL_VOLUME_SX, PV_LD_CONTROL_VOLUME_SY,
+                                        PV_LD_CONTROL_VOLUME_EX, PV_LD_CONTROL_VOLUME_EY)
+		MP_FOCUSED_COVER("volume", "control_volume");
+
+		PV_LD_PART_SWALLOW_OPTION("control_previous", "bg", PV_LD_CONTROL_PREVIOUS_SX, PV_LD_CONTROL_PREVIOUS_SY,
+				PV_LD_CONTROL_PREVIOUS_EX, PV_LD_CONTROL_PREVIOUS_EY)
+		MP_FOCUSED_COVER("previous", "control_previous");
+
+		PV_LD_PART_SWALLOW_OPTION("control_play", "bg", PV_LD_CONTROL_PLAY_SX, PV_LD_CONTROL_PLAY_SY,
+				PV_LD_CONTROL_PLAY_EX, PV_LD_CONTROL_PLAY_EY)
+
+		PV_LD_PART_SWALLOW_OPTION("control_pause", "bg", PV_LD_CONTROL_PLAY_SX, PV_LD_CONTROL_PLAY_SY,
+				PV_LD_CONTROL_PLAY_EX, PV_LD_CONTROL_PLAY_EY)
+		MP_FOCUSED_COVER("play_pause", "control_play");
+
+		PV_LD_PART_SWALLOW_OPTION("control_next", "bg", PV_LD_CONTROL_NEXT_SX, PV_LD_CONTROL_NEXT_SY,
+				PV_LD_CONTROL_NEXT_EX, PV_LD_CONTROL_NEXT_EY)
+		MP_FOCUSED_COVER("next", "control_next");
+
+		PV_LD_PART_SWALLOW_OPTION("control_queue", "bg", PV_LD_CONTROL_QUEUE_SX, PV_LD_CONTROL_QUEUE_SY,
+				PV_LD_CONTROL_QUEUE_EX, PV_LD_CONTROL_QUEUE_EY)
+		MP_FOCUSED_COVER("queue", "control_queue");
+	}
+	programs {
+		PV_BUTTON_VISIVBLE_PROGRAM("control_play")
+		PV_BUTTON_VISIVBLE_PROGRAM("control_pause")
+		PV_BUTTON_VISIVBLE_PROGRAM("control_volume")
+		PV_BUTTON_VISIVBLE_PROGRAM("control_volume_mute")
+	}
+}
+
+
+group {
+	name: "player_view_progress_box_ld";
+
+	parts {
+		part { name: "bg";
+			type : RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: 0 0 0 0;
+			}
+		}
+
+		PV_LD_PART_RECT("progress_bar_area", "bg", PV_LD_PROGRESSBAR_SX, 0, PV_LD_PROGRESSBAR_EX, 1)
+		//PV_LD_PART_SWALLOW("progress_bar", "progress_bar_area", 0, 0, 1, 1)
+
+
+		part {
+			name: "progress_bar";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible: 1;
+				rel1 {
+					relative: 0 0;
+					to: "progress_bar_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "progress_bar_area";
+				}
+				color: 248 246 239 255;
+			}
+			description {
+				state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "progress_text_playing";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 1;
+				min: 0 PV_LD_PROGRESS_TEXT_H;
+				fixed: 0 1;
+				align: 0.5 0.5;
+				rel1 {
+					relative: 0 PV_LD_PROGRESS_LEFT_TEXT_SY;
+					to: "bg";
+				}
+				rel2 {
+					relative: PV_LD_PROGRESS_LEFT_TEXT_EX PV_LD_PROGRESS_LEFT_TEXT_EY;
+					to: "bg";
+				}
+				text {
+					text: "00:00";
+					font: PV_LD_PROGRESS_TEXT_FONT;
+					size: PV_LD_PROGRESS_TEXT_SIZE;
+					align: 0.5 0.5;
+					min: 1 1;
+				}
+				color: PV_LD_PROGRESS_TEXT_COLOR;
+			}
+		}
+
+		part {
+			name: "progress_text_total";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 1;
+				min: 0 PV_LD_PROGRESS_TEXT_H;
+				fixed: 0 1;
+				align: 0.5 0.5;
+				rel1 {
+					relative: PV_LD_PROGRESS_RIGHT_TEXT_SX PV_LD_PROGRESS_RIGHT_TEXT_SY;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 PV_LD_PROGRESS_RIGHT_TEXT_EY;
+					to: "bg";
+				}
+				text {
+					text: "00:00";
+					font: PV_LD_PROGRESS_TEXT_FONT;
+					size: PV_LD_PROGRESS_TEXT_SIZE;
+					align: 0.5 0.5;
+					min: 1 1;
+				}
+				color: PV_LD_PROGRESS_TEXT_COLOR;
+			}
+		}
+
+		 program { name: "progress_bar_show";
+			signal: "set_show";
+			source: "progress_bar";
+			action: STATE_SET "default" 0.0;
+			target: "progress_bar";
+		 }
+
+		program { name: "progress_bar_hide";
+			signal: "set_hide";
+			source: "progress_bar";
+			action: STATE_SET "hide" 0.0;
+			target: "progress_bar";
+		 }
+	}
+}
+
+
+
+/* control */
+group {
+	name: "player_view_control_area_cast";
+	parts {
+		part { name: "bg";
+			type : RECT;
+			mouse_events: 1;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: 0 0 0 0;
+			}
+		}
+		PV_LD_PART_SWALLOW_OPTION("control_previous", "bg", 32/464, 13/124,
+				(32+98)/464, (13+98)/124)
+		MP_FOCUSED_COVER("previous", "control_previous");
+
+		PV_LD_PART_SWALLOW_OPTION("control_play", "bg", 166/464, 0.0,
+				(166+124)/464, 1.0)
+
+		PV_LD_PART_SWALLOW_OPTION("control_pause", "bg", 166/464, 0.0,
+				(166+124)/464, 1.0)
+		MP_FOCUSED_COVER("play_pause", "control_play");
+
+		PV_LD_PART_SWALLOW_OPTION("control_next", "bg", (166+124+36)/464, 13/124,
+				(166+124+36+98)/464, (13+98)/124)
+		MP_FOCUSED_COVER("next", "control_next");
+
+	}
+	programs {
+		PV_BUTTON_VISIVBLE_PROGRAM("control_play")
+		PV_BUTTON_VISIVBLE_PROGRAM("control_pause")
+		}
+}
+
+
+
+#define  PV_CAST_LEFT_WIDTH  464
+#define  PV_CAST_LEFT_AREA_TOPPADDING  30
+#define  PV_CAST_LEFT_AREA_LEFTPADDING 24
+#define  PV_CAST_LEFT_AREA_RIGHTPADDING 34
+#define  PV_CAST_LEFT_AREA_IMAGE_AREA_SIZE 406 460
+#define  PV_CAST_LEFT_AREA_IMAGE_SIZE 380 380
+#define  PV_CAST_ALBUM_TITLE1_SIZE 28
+#define  PV_CAST_ALBUM_TITLE2_SIZE 26
+#define  PV_CAST_ARTIST_TITLE1_SIZE 20
+#define  PV_CAST_ARTIST_TITLE2_SIZE 18
+#define  PV_CAST_SUGGEST_TITLE_SIZE 36
+#define  PV_CAST_RIGHT_AREA_TOPPADDING  140
+#define  PV_CAST_RIGHT_AREA_BOTTOMPADDING  146
+#define  PV_CAST_SUGGESTION_AREA_HEIGHT  376
+
+group {
+	name: "player_view_side_cast";
+
+	images {
+		image: PV_LD_ALBUM_THUMNAIL_BG COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_03 COMP;
+		image: PV_LD_CONTROL_CIRCLE_BT_03_PRESS COMP;
+		image: PV_LD_OPTION_VOLUME COMP;
+		image: PV_LD_OPTION_VOLUME_PRESS COMP;
+
+
+		image: PV_LD_OPTION_INFO COMP;
+		image: PV_LD_OPTION_INFO_PRESS COMP;
+		image: PV_LD_OPTION_FAVOURITE_ON COMP; //add favourite begin
+		image: PV_LD_OPTION_FAVOURITE_OFF COMP;
+		image: PV_LD_OPTION_FAVOURITE_ON_PRESS COMP; //add favourite end
+
+		image: PV_LD_CONTROL_PREVIOUS COMP;
+		image: PV_LD_CONTROL_PREVIOUS_PRESS COMP;
+		image: PV_LD_CONTROL_PLAY COMP;
+		image: PV_LD_CONTROL_PLAY_PRESS COMP;
+		image: PV_LD_CONTROL_PAUSE COMP;
+		image: PV_LD_CONTROL_PAUSE_PRESS COMP;
+		image: PV_LD_CONTROL_NEXT COMP;
+		image: PV_LD_CONTROL_NEXT_PRESS COMP;
+		image: PV_LD_PROGRESS_BG COMP;
+		image: PV_CAST_ALBUM_BG_1 COMP;
+	}
+	styles {
+		style { name: "help_text_style";
+			base: "font=Tizen:style=Regular font_size=28 align=center color=#FFFFFF wrap=mixed ellipsis=1.0";
+			tag:  "br" "\n";
+			tag:  "hilight" "+ font_weight=Bold";
+			tag:  "b" "+ font_weight=Bold";
+			tag:  "tab" "\t";
+		}
+	}
+
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				color: 255 0 0 255;
+				visible: 0;
+			}
+		}
+		part {
+	                 name : "base_bg";
+	                 type: SWALLOW;
+	                 description {
+	                         state: "default" 0.0;
+	                         fixed: 1 1;
+	                         //align: 0 0;
+	                         rel1 {
+	                                 relative: 0.0 0.0;
+	                         }
+	                         rel2 {
+	                                 relative: 1.0 1.0;
+	                         }
+	                 }
+	         }
+		/* player bg */
+		part {
+			name: "player_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible:1;
+				image { normal: PV_LD_PROGRESS_BG; }
+				fixed: 1 1;
+				rel1 {
+					relative:0.0 0.0;
+				}
+				rel2 {
+					relative: 1.0 1.0;
+				}
+			}
+		}
+
+		part{ name : "right_bg";
+			type: RECT;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 0.0 1.0;}
+				min: PV_CAST_LEFT_WIDTH 0;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				visible: 1;
+			}
+		}
+		part {
+			name: "left_area";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1 { relative: 1.0 0.0;to: "right_bg";}
+				rel2 { relative: 1.0 1.0;}
+				color:255 0 0 255;
+				visible: 0;
+			}
+		}
+
+		/* album top padding */
+		part {
+			name : "album_image_top_padding";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "right_bg";
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				min: 0 PV_CAST_LEFT_AREA_TOPPADDING;
+				color:255 0 0 255;
+				visible: 0;
+				rel1 { relative: 0.0 0.0;to: "right_bg";}
+				rel2 {relative: 1.0 0.0; to: "right_bg";}
+			}
+		}
+		/* album left padding */
+		part {
+			name : "album_image_left_padding";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "right_bg";
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.5;
+				min: PV_CAST_LEFT_AREA_LEFTPADDING 0 ;
+				color: 0 255 0 255;
+				visible: 0;
+				rel1 { relative: 0.0 0.0;to: "right_bg";}
+				rel2 {relative: 0.0 1.0; to: "right_bg";}
+			}
+		}
+		/* album right padding */
+		part {
+			name : "album_image_right_padding";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "right_bg";
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.5;
+				min: PV_CAST_LEFT_AREA_RIGHTPADDING 0 ;
+				color: 255 100 100 255;
+				visible: 0;
+				rel1 { relative: 1.0 0.0;to: "right_bg";}
+				rel2 {relative: 1.0 1.0; to: "right_bg";}
+			}
+		}
+
+		part {
+			name : "album_image_area";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "right_bg";
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				min : PV_CAST_LEFT_AREA_IMAGE_AREA_SIZE;
+				max:  PV_CAST_LEFT_AREA_IMAGE_AREA_SIZE;
+				color: 0 0 255 255;
+				visible: 0;
+				rel1 { relative: 1.0 1.0;to_x: "album_image_left_padding";to_y: "album_image_top_padding";}
+				rel2 {relative: 0.0 1.0;to_x: "album_image_right_padding";to_y: "album_image_top_padding"; }
+			}
+		}
+
+		part {
+			name: "album_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible:0;
+				image { normal: PV_CAST_ALBUM_BG_1; }
+				fixed: 1 1;
+				rel1 {
+					relative:0.0 0.0;to:"album_image_area";
+				}
+				rel2 {
+					relative: 1.0 1.0;to:"album_image_area";
+				}
+			}
+		}
+
+		/* album image */
+		part {
+			name : "album_image";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			clip_to: "right_bg";
+			description {
+				state: "default" 0.0;
+				min: PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				max: PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				align:0.5 0.0;
+			        rel1 { relative: 0.0 0.0;to: "album_image_area";}
+				rel2 {relative: 1.0 0.0;to: "album_image_area";}
+			}
+		}
+
+		part {
+			name : "artist_name";
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 1.0;
+				min : 264 24;
+				max:  264 24;
+				color: 255 255 255 255;
+				rel1 { relative: 0.0 1.0;to: "album_image_area";}
+				rel2 {relative: 1.0 1.0;to: "album_image_area";}
+				color: 240 240 240 255;
+				text {
+					size: 24;
+					 align: 0.5 0.5;
+
+				}
+			}
+		}
+
+		part {
+			name : "song_name";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 1.0;
+				min : 264 32;
+				max:  264 32;
+				color: 255 255 255 255;
+				rel1 { relative: 0.0 0.0;to: "artist_name"; offset:0 -2;}
+				rel2 {relative: 1.0 0.0;to: "artist_name";offset:0 -2;}
+			}
+		}
+
+		part {
+			name : "options_favourite_on";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				min : 32 32;
+				max:  32 32;
+				rel1 { relative: 1.0 0.0;to: "song_name";offset:6 0;}
+				rel2 {relative: 1.0 1.0; to: "song_name";offset:38 0;}
+			}
+			description {
+				state: "invisible" 0.0;
+				inherit: "default";
+				visible: 0;
+			}
+		}
+
+		part {
+			name : "options_favourite_off";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				min : 32 32;
+				max:  32 32;
+				rel1 { relative: 1.0 0.0;to: "song_name";offset:6 0;}
+				rel2 {relative: 1.0 1.0; to: "song_name";offset:38 0;}
+			}
+			description {
+				state: "invisible" 0.0;
+				inherit: "default";
+				visible: 0;
+			}
+		}
+
+		MP_FOCUSED_COVER("favourite", "options_favourite_on");
+
+		part {
+			name : "suggest_top_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				min: 0 PV_CAST_RIGHT_AREA_TOPPADDING;
+				max: -1 PV_CAST_RIGHT_AREA_TOPPADDING;
+				visible: 0;
+				rel1 { relative: 0.0 0.0;to: "left_area";}
+				rel2 {relative: 1.0 0.0;to: "left_area";}
+			}
+		}
+
+		part {
+			name : "suggest_bottom_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 1.0;
+				min: 0 PV_CAST_RIGHT_AREA_BOTTOMPADDING;
+				max: -1 PV_CAST_RIGHT_AREA_BOTTOMPADDING;
+				visible: 0;
+				rel1 { relative: 0.0 1.0;to:  "left_area";}
+				rel2 {relative: 1.0 1.0;to:  "left_area";}
+			}
+		}
+
+		part {
+			name : "suggest_song_rect";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 1.0;
+				min: 0 PV_CAST_SUGGESTION_AREA_HEIGHT;
+				max: -1 PV_CAST_SUGGESTION_AREA_HEIGHT;
+				fixed: 0 1;
+				visible: 0;
+				rel1 { relative: 0.0 0.0;to: "suggest_bottom_padding";}
+				rel2 {relative: 1.0 0.0; to: "suggest_bottom_padding";}
+			}
+		}
+
+		part {
+			name : "suggest_default_area";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				min: 0 252;
+				max: -1 252;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0;to: "suggest_song_rect";}
+				rel2 {relative: 1.0 0.0; to: "suggest_song_rect";}
+			}
+		}
+		part { name: "help_text";
+			type: TEXTBLOCK;
+			scale: 1;
+			description { state: "default" 0.0;
+				min: 0 76;
+				max: -1 76;
+				fixed: 0 1;
+				align:0.5 0.5;
+				rel1 { relative: 104/816 480/720;to: "left_area";}
+				rel2 {relative: (104+564)/816 (76+480)/720; to: "left_area";}
+				text {
+					style: "help_text_style";
+				}
+			}
+			 description {
+			            state: "hide" 0.0;
+			            inherit: "default" 0.0;
+			            visible: 0;
+			         }
+		}
+		part {
+			name : "suggest_song_area";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				min: 0 PV_CAST_SUGGESTION_AREA_HEIGHT;
+				max: -1 PV_CAST_SUGGESTION_AREA_HEIGHT;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0;to: "suggest_song_rect";}
+				rel2 {relative: 1.0 1.0; to: "suggest_song_rect";}
+			}
+		}
+		part {
+			name : "suggest_album_text";
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.0;
+				min : 0 40;
+				max:  -1 40;
+				color: 255 255 255 255;
+				rel1 { relative: 0.0 1.0;to:"suggest_top_padding";
+					offset:14 0;    }
+				rel2 {relative: 1.0 1.0;to:"suggest_top_padding"; }
+				text {
+					font: "Tizen:style=Regular";
+					size: PV_CAST_SUGGEST_TITLE_SIZE;
+					align: 0.0 0.5;
+					text:  "";
+				}
+			}
+		}
+		part {
+			name : "album_image_left";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "album_image_area";
+			description {
+				state: "default" 0.0;
+				min: PV_CAST_LEFT_AREA_IMAGE_SIZE PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				max: PV_CAST_LEFT_AREA_IMAGE_SIZE PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				fixed: 1 1;
+				align: 1 0;
+				rel1 { relative: 0.0 0.0; to: "album_image"; }
+				rel2 { relative: 0.0 1.0; to: "album_image"; }
+			}
+		}
+
+		part {
+			name : "album_image_right";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "album_image_area";
+			description {
+				state: "default" 0.0;
+				min: PV_CAST_LEFT_AREA_IMAGE_SIZE PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				max: PV_CAST_LEFT_AREA_IMAGE_SIZE PV_CAST_LEFT_AREA_IMAGE_SIZE;
+				fixed: 1 1;
+				align: 0 0;
+				rel1 { relative: 1.0 0.0; to: "album_image"; }
+				rel2 { relative: 1.0 1.0; to: "album_image"; }
+			}
+		}
+
+		part { name: "event_box";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0 0; to: "album_image";}
+				rel2 {relative: 1 1; to: "album_image";}
+			}
+		}
+		/* progress */
+
+		PV_LD_PART_RECT("progress_area", "right_bg", 28/464, (720-80-131)/720, (28+400)/464, (720-131)/720)
+		PV_LD_PART_SWALLOW("progress_box", "progress_area", 0, 0, 1, 1)
+
+		/* control */
+		part { name: "control_area";
+			type : SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				rel1 {
+					relative: 0 (720-131)/720;
+					to: "right_bg";
+				}
+				rel2 {
+					relative: 1 (720-7)/720;;
+					to: "right_bg";
+				}
+			}
+		}
+
+	}
+	programs {
+		//add favourite begin
+		PV_BUTTON_VISIVBLE_PROGRAM("options_favourite_on")
+		PV_BUTTON_VISIVBLE_PROGRAM("options_favourite_off")
+		program {
+		         name:   "label_hide";
+		         signal: "elm,state,text,hidden";
+		         source: "*";
+		         action: STATE_SET "hide" 0.0;
+		         target: "help_text";
+		 }
+		program {
+		         name:   "label_show";
+		         signal: "elm,state,text,shown";
+		         source: "*";
+		         action: STATE_SET "default" 0.0;
+		         target: "help_text";
+		 }
+		//add favourite end
+	}
+}
+

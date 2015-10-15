@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Φόρτωση..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Προσωπικό"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Ώρα"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Δεν υπάρχει αρχείο."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Ήχος κλήσης τηλεφώνου"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Διάρκεια"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Θέση"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Ορισμός ως"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Προσθήκη σε προσωπική σελίδα"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Κατάργ. από προσ. σελίδα"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Μετακίνηση στον κανονικό χώρο αποθήκευσης"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Μετακίνηση στον προσωπικό χώρο αποθήκευσης"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Τα επιλεγμένα στοιχεία θα μετακινηθούν στο %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Το επιλεγμένο στοιχείο θα μετακινηθεί στο %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Δεν είναι δυνατή η χρήση κατά τη λειτουργία μαζικής αποθήκευσης."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Προσθήκη ήχου κλήσης."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Κουμπί"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Επιλογή στοιχείων"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Για προχωρ."
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Προηγούμενο"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Κλείσιμο"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Προστέθηκε."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Αποτυχία."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Δεν υπάρχουν αποτελέσματα αναζήτησης"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Ok"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Κανένα στοιχείο"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Προσθήκη σε αρχική σελίδα"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Επόμενο"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Λήψη..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Αγαπημένα"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Προσθήκη στον προσωπικό χώρο αποθήκευσης"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Έγινε αποσύνδεση από το %s. Ελέγξτε την κατάσταση του δικτύου και της συνδεδεμένης συσκευής."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Μέσω Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Μέσω οικιακού δικτύου"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Κενή καταχώρηση."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Μη διαθέσιμο κατά την κλήση."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Ο μέγιστος αριθμός χαρακτήρων συμπληρώθηκε."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Δεν είναι δυνατή η κοινή χρήση του αρχείου DRM."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Αφαίρεση..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d συσκευές"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Ενερ. κίνησης"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Να μην ερωτηθώ ξανά"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Δεν βρέθηκαν αποτελέσματα."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Για την πραγματοποίηση σίγασης των εισερχόμενων κλήσεων, των ειδοποιήσεων μηνυμάτων και των αφυπνίσεων, γυρίστε ανάποδα το τηλέφωνο."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Κανένα"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Συλλογή"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Πατήστε δύο φορές για μετάβαση σε περιεχόμενο."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Surround"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Στίχοι"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Μόλις προσθέσετε κομμάτια στο φάκελο «Μουσική» της κινητής συσκευής σας, θα εμφανιστούν εδώ."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Ρυθμός δειγματοληψίας"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Επισημάνθηκε ως αγαπημένο."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Μουσική"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Δεν επισημάνθηκε ως αγαπημένο."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Αναζήτηση μουσικής"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Η λειτουργία αυτόματων προτάσεων δεν υποστηρίζει αυτόν τον τύπο αρχείου ήχου."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Λυπούμαστε, αλλά το πρόγραμμα αναπαραγωγής δεν υποστηρίζει αυτόν τον τύπο αρχείου ήχου."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Αγαπημένα"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Επιλέχθηκε πρόσφατα"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Προστέθηκε πρόσφατα"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Δημιουργία λίστας αναπαραγωγής"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Κατάργηση"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Ήχος κλήσης καλούντος"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Καλλιτέχνες"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Δεν είναι δυνατή η προσθήκη."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Δεν είναι δυνατή η δημιουργία λίστας αναπαραγωγής."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Δεν είναι δυνατή η λήψη φράσης."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Δεν είναι δυνατή η προσθήκη περισσότερων από %d αρχείων μουσικής."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Άλμπουμ"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Συντάκτης"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Πνευματικά δικαιώματα"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Δημιουργία λίστας αναπαραγωγής"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Περιγραφή"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Μορφή"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Αδύνατο"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Καμία λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Αριθμός κομματιού"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Διαγραφή;"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Αφαίρεση;"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Δεν είναι δυνατή η μετονομασία της λίστας αναπαραγωγής."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Άλμπουμ"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Προσθήκη..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Να διαγραφούν %d άλμπουμ;"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Λίστες αναπαραγ."
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Προσθήκη"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biography"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Συντελεστές"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Πληροφορίες πολυμέσων"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Δισκογραφία"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Στίχοι"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Δυνατό"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Εξέταση"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Λίστα κομματιών"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Προσθήκη στη λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Καλλιτέχνης"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Προώθηση"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Λίστες αναπαραγωγής"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Αναπ/χθηκε πρόσφατα"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Διάρκεια κομματιού"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Δεν βρέθηκαν τραγούδια"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Αυτό το κομμάτι θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Τα επιλεγμένα κομμάτια θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Αυτός ο καλλιτέχνης θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Οι επιλεγμένοι καλλιτέχνες θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Όλοι οι καλλιτέχνες θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ο φάκελος θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Οι επιλεγμένοι φάκελοι θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν όλοι οι φάκελοι."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Αυτό το άλμπουμ θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Τα επιλεγμένα άλμπουμ θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Όλα τα άλμπουμ θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Αυτή η λίστα αναπαραγωγής θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Οι επιλεγμένες λίστες αναπαραγωγής θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Όλες οι λίστες αναπαραγωγής θα διαγραφούν."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Τραγούδια"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Αναδιάταξη"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Αποθήκευση ως λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Ήχος ειδοποίησης"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Δεν έχει γίνει καμία επιλογή."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή. Προέκυψε σφάλμα."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή. Ο τύπος αρχείου δεν υποστηρίζεται."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Κοινή χρήση"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Αρχιμ."
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Επιλογή συσκευής"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Προβ. ως"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Κανονικό"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Χρήστης"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Φωνητικά"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Ενίσχυση μπάσων"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Ενίσχυση πρίμων"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Καφετέρια"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Εικονικό κανάλι 7.1"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Μετά από 15 λεπτά"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Μετά από 30 λεπτά"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Μετά από 1 ώρα"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Μετά από 1 ώρα 30 λεπτά"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Μετά από 2 ώρες"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Αυτόματη απενεργοποίηση μουσικής"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Αυτό το εφέ ήχων εκτελείται μόνο στη λειτουργία ακουστικών και Bluetooth."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Μουσικό κουτί"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Δεν υπάρχουν αρκετά αρχεία μουσικής προς αναπαραγωγή στο Music square. Απαιτούνται τουλάχιστον %d αρχεία μουσικής."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Πάθος"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Ήρεμος"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Χαρά"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Ενημέρωση βιβλιοθήκης"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Ενημέρωση βιβλιοθήκης;"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Αλλαγή άξονα"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Είδη"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 άλμπουμ/1 κομμάτι"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 άλμπουμ/%d κομμάτια"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d άλμπουμ /%d κομμάτια"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Μπορείτε να ελέγξετε το πρόγραμμα αναπαραγωγής μουσικής με τις φωνητικές εντολές %1$s, %2$s, %3$s, %4$s, %5$s και %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Τυχαία σειρά %d κομματιών"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Περισσότερες πληροφορίες"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Η μουσική μου"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Προβολή λίστας"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Αναπαραγωγή μέσω του Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Το κομμάτι προστέθηκε στα αγαπημένα."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Αφαίρεση από τα αγαπημένα"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Νέο"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Κομμάτια"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Μικρογραφία"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Λίστα"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Άνοιγμα λίστας αναπαραγωγής"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Αναπαραγωγή όλων"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Η επιλεγμένη λίστα είναι κενή."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Διάθεση"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Έτη"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Παλιό"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Το Music square αναλύει τα χαρακτηριστικά των αρχείων μουσικής που είναι αποθηκευμένα στη συσκευή σας και δημιουργεί αυτόματα λίστες αναπαραγωγής."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Μπορείτε να κάνετε αναπαραγωγή λιστών μουσικής με παρόμοια χαρακτηριστικά επιλέγοντας ένα από τα τετράγωνα της οθόνης."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Προβ. τις λεπτομέρειες τις λίστας αναπαραγωγής πατώντας παρατεταμένα στο τετραγωνίδιο που αντιστοιχεί στη λίστα που αναπαράγεται αυτήν τη στιγμή."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Κοντινές συσκευές"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Απαιτείται ενημέρωση της βιβλιοθήκης, αν έχετε προσθέσει νέα τραγούδια."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Δεν υπάρχουν άλμπουμ"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Δεν υπάρχουν καλλιτέχνες"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Ταχύτητα αναπαραγ"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Αίθουσα συναυλιών"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Προσθήκη σε"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Προβολή"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Προστέθηκε πρόσφατα"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Δεν χρησιμοποιείται"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Διαθ. για εργ. εκτός σύνδεσης"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Μετά από %1$d ώρες και %2$d λεπτά"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Μετά από %d ώρες"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Μετά από %d λεπτά"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Δεν υπάρχουν φάκελοι"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Κανένα κομμάτι"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d άλμπουμ"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d καλλιτ."
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d είδη"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d λίστ.αναπ."
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d κομμάτια"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Παρόμοια άλμπουμ"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Κομμάτι"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Προβολή μικρογραφιών"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Αυτό το ηχητικό εφέ λειτουργεί μόνο σε λειτουργία ακουστικών."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Όλο το περιεχ."
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Για την αναπαραγωγή αυτού του αρχείου, απαιτείται σύνδεση δικτύου. Ελέγξτε τη σύνδεση δικτύου και προσπαθήστε ξανά."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Ο τύπος αρχείου δεν υποστηρίζεται."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Ενημέρωση..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Αναζήτηση"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Αναζήτηση κατά"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Σχετικά βίντεο"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Έξυπνη ένταση ήχου"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Η ένταση όλων των κομματιών θα ρυθμιστεί το επίπεδο %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Ενεργοποιήθηκε η έξυπνη ένταση"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Πληροφορίες σύνδεσης"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Μετά από 1 ώρα και %d λεπτά"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Η συσκευή μου"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Η ακρόαση ήχων σε υψηλή ένταση για μεγάλο χρονικό διάστημα ενδέχεται να βλάψει την ακοή σας. Αύξηση ένταση ήχου πάνω από τα ασφαλή επίπεδα;"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Υπάρχει ήδη."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Σάρωση για κοντινές συσκευές"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Μετά από 1 ώρες"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Μετά από 1 ώρα και 1 λεπτά"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Μετά από %d ώρες και 1 λεπτό"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Μετά από 1 λεπτά"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Μετάβαση στο χώρο αποθήκευσης"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Προσθ.\nκομματ."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Αφού πραγματοποιήσετε λήψη κομματιών από τη Μουσική, τα κομμάτια θα εμφανιστούν εδώ."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Τα στοιχεία θα εμφανιστούν εδώ, μετά την προσθήκη κομματιών στα αγαπημένα σας."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Μετά την αναπαραγωγή κομματιών, τα στοιχεία θα εμφανίζονται εδώ."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Μετά την προσθήκη κομματιών στο %s, τα στοιχεία θα εμφανίζονται εδώ."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Δεν έχετε αγοράσει περιεχόμενο"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Αποθήκευση ως"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Αποτυχία\nενημέρωσης."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Συναρπαστ."
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Αναζήτηση στη μουσική μου"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Συνδεδεμένες συσκευές"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Η λίστα αναπαραγωγής μου %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Καμία συσκευή"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Διαθέσιμες συσκευές"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Ορισμός"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Αποτυχία αφαίρεσης."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Δεν είναι δυνατή η χρήση της γρήγορης προώθησης και επαναφοράς, όταν είναι ενεργοποιημένες κοντινές συσκευές."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Ορισμός ως"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Ακουστικά"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Ηχείο"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 τραγούδι"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d τραγούδια"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 κομμάτι"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Τυχαία σειρά 1 κομματιού"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Δεν βρέθηκε μουσική για το επιλεγμένο κινητό"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Να μην εμφανιστεί ξανά"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Διάφοροι καλλιτέχνες"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Προσθ. σε αρχ. οθόνη"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Προσθήκη στα αγαπημένα"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Επεξεργασία τίτλου"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Κατάργηση από τον προσωπικό χώρο αποθήκευσης"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Μετά τη λήψη κομματιών, οι φάκελοι θα εμφανίζονται εδώ"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Ένταση"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Επανάληψη ανενεργή"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Επανάληψη όλων"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Τυχαία εκτέλεση ανενεργή"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Τυχαία εκτέλεση ενεργή"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Η λίστα αναπαραγωγής μου"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Προεπ. λίσ. αναπ/γωγής"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Ημερομηνία εγγραφής"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Εξώφυλλο"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 είδος"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d φάκελοι"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 φάκελος"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 καλλιτέχνης"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 άλμπουμ"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Μουσική"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Μετακίνηση"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Αυτόματες προτάσεις"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Από την αρχή"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Προτάσεις για εσάς"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Αποθήκευση"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Βασικό"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Όργανο"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Πρίμα"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Μπάσα"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Δεν έχουν εφαρμοστεί εφέ σε αυτήν τη λειτουργία."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Προσομοιώνει το τέμπο ενισχυτή λάμπας."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Ενισχ. Λάμπας"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Προσομοιώνει το εφέ εικονικού καναλιού 7.1 ήχου surround."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Μικρό δωμάτιο"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Μεγάλος χώρος"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Προσομοιώνει την αντήχηση ενός μεγάλου χώρου, π.χ. θεάτρου."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Προσομοιώνει την αντήχηση μιας αίθουσας συναυλιών."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Προσομοιώνει την αντήχηση ενός μικρού χώρου, π.χ. στούντιο."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Καθαρός ήχος"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Μηδενισμ."
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Έτη"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Είδη"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Συνθέτες"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Όλα τα κομμάτια"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Γρήγορη λίστα"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Εύρεση"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Πρ.σε γρήγ.λίστα"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Μη εξουσιοδοτημένο αρχείο βίντεο για τη λειτουργία TV-out."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Δεν είναι δυνατή η δημιουργία. Συμπληρώθηκε ο μέγιστος αριθμός λιστών αναπαραγωγής."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Δεν ήταν δυνατή η ρύθμιση της έντασης κατά τη σύνδεση του ακουστικού Bluetooth."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Δεν ήταν δυνατή η ρύθμιση της έντασης κατά τη σύνδεση του ακουστικού Bluetooth."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Διακοπή της εφαρμογής «Μουσική»;"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Πραγματοποιήστε έξοδο από την αθόρυβη λειτουργία."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Σφάλμα δικτύου."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Φόρτωση κάρτας μνήμης."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Σφάλμα ρυθμίσεων συσκευής."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Δεν βρέθηκε κάποιο τραγούδι που να ταιριάζει."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Προσωρινή αποθήκευση"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "Το σετ ακουστικού-μικροφώνου BT υποστηρίζει μόνο τη ρύθμιση κανονικών εφέ."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Η εφαρμογή θα τερματιστεί."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Προστέθηκε. Θέλετε να μεταβείτε στη λίστα επιθυμιών;"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Ενδέχεται να χρεωθείτε για την πρόσβαση στην υπηρεσία. Θέλετε να συνεχίσετε;"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Ενδέχεται να χρεωθείτε για την πρόσβαση στο κατάστημα. Θέλετε να συνεχίσετε;"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "Τo εφέ ήχων του καναλιού 5.1 εκτελείται μόνο στη λειτουργία ακουστικών και Bluetooth."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Τo εφέ ήχων του καναλιού 5.1 εκτελείται μόνο στη λειτουργία ακουστικών."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Τα εφέ ήχου 5.1 καναλιών δεν υποστηρίζονται από το ηχείο."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Προβολή ανά εξώφυλλο"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Αποστολή κομματιού"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Βαθμολόγηση κομματιού"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Μετακίνηση κομματιού μέσα στη λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Τρέχουσα"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Διαγραφή λίστας αναπαραγωγής"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Αναπαραγωγή στο παρασκήνιο"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Εφέ"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Αγορ.τώρα"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Λίστα επιθυμιών"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Ευρύς"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Γούφερ vibe"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Τρέμολο"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Πατήστε δύο φορές για αναπαραγωγή/παύση μουσικής."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Κοινή χρήση κομματιού μέσω Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Καλώς ορίσατε στον Οδηγό εγκατάστασης μουσικής.\nΟι ακόλουθες οδηγίες θα σας βοηθήσουν να ρυθμίσετε τις παραμέτρους του τηλεφώνου σας. Συνέχεια;"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Γρήγορη λίστα"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Εφέ ήχου"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Όλα"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Ένταση"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "Επιλέχθηκαν %d κομμάτια."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Δεν υπάρχουν podcast"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Εύρεση παρόμοιου"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Αναπαραγωγή στο παρασκήνιο"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Το κανάλι 5.1 μπορεί να ενεργοποιηθεί μόνο όταν τα ηχητικά εφέ είναι απενεργοποιημένα."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcasts"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Επεξεργασία εικόνας"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Η αναπαραγωγή θα διακοπεί και υα γίνει αποθήκευση της φωνητικής ηχογράφησης. Αναπαραγωγή;"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Επιλέχθηκε ο μέγιστος αριθμός στοιχείων (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Αποσυνδεδεμένο Bluetooth."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Το κανάλι 5.1 μπορεί να ενεργοποιηθεί μόνο όταν τα ηχητικά εφέ είναι απενεργοποιημένα."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Λήψη φωτογραφίας"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Εμφάν. προβολής μουσικής"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Παύση"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Αναπαραγωγή άλμπουμ"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Εμφάνιση ανά"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Ιστορικό"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Απόκρ. προβολής μουσικής"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Αναζήτηση ετικέτας"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Περιεχ. Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Περιεχ. στο τηλ."
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Αλλαγή εικόνας"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Διαγραφή δεδομ. Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Μπορείτε να ακούσετε τη μουσική σας μέσω ροής σε συσκευές χρησιμοποιώντας το AllShare."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Ισχύς"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Τύπος"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Με αυτήν την επιλογή θα διαγραφεί το αρχείο από το διακομιστή και τυχόν συνδεδεμένες συσκευές."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Καλλιτέχνες"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Είδος άλμπουμ"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Άλλα περιεχόμενα"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Πολύ μεγάλο όνομα."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Καθαρότητα μουσικής"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Η ακρόαση μουσικής σε υψηλή ένταση για μεγάλο χρονικό διάστημα μπορεί να βλάψει την ακοή σας."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Διαθέσιμες χρήσεις"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Τα εφέ ήχου είναι διαθέσιμα μόνο όταν υπάρχουν συνδεδεμένα ακουστικά."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Προσθήκη στον προσωπικό σας χώρο αποθήκευσης"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Κατάργηση από τον προσωπικό σας χώρο αποθήκευσης"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Αναδυόμενο μενού περιβάλλοντος"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Ένα αναδυόμενο μενού περιβάλλοντος είναι ανοιχτό. Πατήστε δύο φορές για κλείσιμο."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Επανάληψη μία φορά"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Μετακίνηση..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Επιλέξτε μέχρι %d στοιχεία"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Καρτέλα"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Αλλαγή μέσου αναπαραγωγής"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Καρτέλες"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Οι αυτόματες προτάσεις μπορούν να κάνουν εξαγωγή των σημαντικότερων σημείων από ηχητικά αρχεία."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Γονική αξιολόγηση"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Δεν εντοπίστηκε το αρχείο."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Ο ήχος κλήσης καλούντος αποθηκεύτηκε."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Βάθος bit"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Μέγεθος"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d επιλέχθηκαν"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Μετά την προσθήκη κομματιών σε αυτήν τη συσκευή, τα στοιχεία θα εμφανίζονται εδώ."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Μήκος"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 φάκελος θα διαγραφεί."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Κανένα περιεχόμενο"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Φάκελοι"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Οι λίστες αναπαραγ. μου"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Αναπαραγωγή ήχου"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Ρυθμίσεις"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Διαγραφή..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 κομμάτι θα διαγραφεί."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Όλα τα κομμάτια θα διαγραφούν"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "%d κομμάτια θα διαγραφούν."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "Θα διαγραφεί 1 λίστα αναπαραγωγής."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d λίστες αναπαραγωγής."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d άλμπουμ."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d καλλιτέχνες."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d φάκελοι."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Αποτυχία σύνδεσης. Επανάληψη;"
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Κλασική"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Ροκ"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Τζαζ"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Ποπ"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Το τρέχον εφέ ήχου δεν υποστηρίζεται από το HDMI."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Τα εφέ ήχου δεν υποστηρίζονται από το Bluetooth."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Τα εφέ ήχου δεν υποστηρίζονται από τη θύρα line out."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Τα εφέ ήχου δεν υποστηρίζονται από τη θύρα HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Ενισχ. λάμπας"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Προσαρμοσμένη"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Ενισχ. Λάμπας"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d κομμάτια προστέθηκαν στη λίστα αναπαραγωγής."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 κομμάτι προστέθηκε στη λίστα αναπαραγωγής."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Προσθ. κομματ. στη λίστα αναπ."
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Το %s χρησιμοποιείται ήδη. Εισαγάγετε άλλο όνομα."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Ημερομηνία εγγραφής"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Το κομμάτι ορίστηκε ως ήχος αφύπνισης."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Δεν βρέθηκαν αποτελέσματα"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Προεπιλεγμένος ήχος κλήσης"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Το κομμάτι ορίστηκε ως ήχος κλήσης καλούντος."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Το κομμάτι ορίστηκε ως ήχος κλήσης."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Προσθήκη στην τρέχουσα λίστα αναπαραγωγής"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Θα εφαρμοστούν οι ρυθμίσεις ισοσταθμιστή κατά την αναπαραγωγή μουσικής."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Ειδοποίηση"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "Θα διαγραφεί 1 άλμπουμ."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "Κάρτα SD"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Χώρος αποθήκευσης συσκευής"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Το όνομα λίστας αναπαραγωγής χρησιμοποιείται ήδη."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Λίστα αναπαραγωγής %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Δημιουργία"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Προεπιλογές ισοσταθμιστή"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Αυτόματα"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Κλασική"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Εφέ περιβάλλοντος"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Ο τύπος αρχείου δεν υποστηρίζεται."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Τα στοιχεία θα εμφανιστούν εδώ, μετά την δημιουργία λιστών αναπαραγωγής."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Επιλογή συσκευής ήχου"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Το όνομα της λίστας αναπαραγωγής χρησιμοποιείται ήδη. Εισαγάγετε άλλο όνομα."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Λίστα αναπαραγωγής σε εξέλιξη"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Εμφάνιση στίχων"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Απόκρυψη στίχων"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή μουσικής κατά τις κλήσεις."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Επιλογή"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Αδύνατη η αναπαραγωγή του κομματιού"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ΤΕΛΟΣ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ΑΚΥΡΟ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ΔΙΑΓΡΑΦΗ"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Μετονομασία"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Μήνυμα"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Άκυρο"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Ανανέωση"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Επιλογή όλων"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Διαγράφηκε."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Διακοπή"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Άγνωστο"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Τίτλος"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "Email"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Λήψη"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Χαμηλή μπαταρία."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Συσκευή ήχου"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Λεπτομέρειες"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Λήξη"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Επεξεργασία"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Ενημερώθηκε."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Αφαιρέθηκε."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Επιλεγμένο"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Σάρωση"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Σφάλμα."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Μνήμη ημερολογίου πλήρης."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Ουρά"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Ένταση"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Τυχαία σειρά"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Επανάληψη"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων."
+

@@ -1,0 +1,1396 @@
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "ఫోన్ రింగ్టోన్"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "వ్యవధి"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "స్థానం"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "ఇలా సెట్ చేయి"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "వ్యక్తిగత పేజీకి జోడించు"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "వ్యక్తిగత పేజీ నుండి తీసివేయి"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "సాధారణ నిల్వకు తరలించు"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "వ్యక్తిగత నిల్వకు తరలించు"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "ఎంచుకున్న ఐటెమ్‌లు %sకు తరలించబడతాయి."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "ఎంచుకున్న ఐటెమ్ %sకు తరలించబడుతుంది."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "రింగ్‌టోన్ జోడించబడింది."
+
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "మూసివేయి"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "అక్షరాల గరిష్ఠ సంఖ్యకు చేరుకున్నారు."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "బటన్"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "ఆపు"
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "సందేశం"
+
+msgid "IDS_COM_SK_OK"
+msgstr "సరే"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "రద్దు"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "రిఫ్రెష్"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "అన్నీ ఎంచుకోండి"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "సెట్టింగులు"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "పంచుకో"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "తొలగించు"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d ఎన్నుకోబడింది."
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "ఐటమ్‌లను ఎంచుకోండి"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "ఆధునిక"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "తొలగించు"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "తొలగించబడింది."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "విఫలమైనది."
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "లోడ్ అవుతోంది..."
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "జోడించబడింది."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "విఫలమైనది."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "శోధన ఫలితాలు లేవు"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "పూర్తయింది"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "ఐటమ్‌లు లేవు"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "హోమ్‌కు జోడించండి"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "ఇష్టమైనది"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "మరింత సమాచారం"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "వ్యక్తిగత నిల్వకు జోడించండి"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "%s నుండి డిస్‌కనెక్ట్ చేయబడింది. నెట్‌వర్క్ స్థితి మరియు అనుసంధానించిన పరికరాన్ని తనిఖీ చేయండి."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroring ద్వారా"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "హోమ్ నెట్‌వర్క్ ద్వారా"
+
+msgid "IDS_COM_SK_SET"
+msgstr "సెట్ చేయి"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM ఫైల్‌ను భాగస్వామ్యం చేయడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "తొలగిస్తున్నది..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d పరికరాలు"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "కదలికను ప్రారంభించు"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "మళ్లీ అడగవద్దు"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "ఫలితాలు దొరకలేదు."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "ఇన్‌కమింగ్ కాల్‌లు, సందేశం హెచ్చరికలు, మరియు అలారమ్‌లను మ్యూట్ చేసేందుకు ఫోన్‌ను టర్న ఓవర్ చేయండి."
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "తదుపరి"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "గేలరీ"
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "ఏదీకాదు"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "కంటెంట్‌ని తరలించడానికి డబుల్ ట్యాప్ చేయండి."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "పరిసరాలు"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "లిరిక్స్"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "మీరు మీ మొబైల్ పరికరంలో సంగీతానికి ట్రాక్‌లను జోడించిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "నమూనా రేటు"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "ఇష్టమైనవిగా గుర్తు చేయబడ్డాయి."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "మ్యూజిక్"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "ఇష్టమైనవిగా గుర్తు చేయబడలేదు."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "మ్యూజిక్‌ను వెతకండి"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "స్వీయ సిఫార్సు ఈ ఆడియో ఫైల్‌కి మద్దతు ఇవ్వదు."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "క్షమించండి, ఈ రకమైన ఆడియో ఫైల్ ని ప్లేయర్ మద్దతు లేదు."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "ఇష్టమైనవి"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "ఎక్కువ ప్లే చేసినవి"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "ఇటీవల జోడించినవి"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "ప్లేజాబితా రూపొందించు"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "తొలగించు"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "కాలర్ రింగ్టోన్"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "ఆర్టిస్ట్‌లు"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "జోడించడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "ప్లేజాబితాను రూపొందించడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "ట్యాగ్ పొందడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "%d మ్యూజిక్ ఫైల్ కంటే మరిన్ని జోడించడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "కాల్ సమయంలో ప్లే చేయడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "ఆల్బమ్"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "ఆథర్"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "కాపీరైట్"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "ప్లేజాబితా రూపొందించు"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "వివరణ"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "ఫార్మాట్"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "అసాధ్యం"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "ప్లేజాబితాలు లేవు"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "ట్రాక్ సంఖ్య"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "తొలగించాలా?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "తొలగించాలా?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "ప్లేజాబితా పేరు మార్చడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "ఆల్బమ్‌లు"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "జోడిస్తోంది..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "%d ఆల్బమ్‌లను తొలగించాలా?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "ప్లేజాబితాలు"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "జోడించు"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "జీవిత చరిత్ర"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "క్రెడిట్స్"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "మీడియా సమాచారం"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "డిస్కోగ్రఫీ"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "గేయకావ్యము"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "సాధ్యం"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "సమీక్ష"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "ట్రాక్ జాబితా"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "ప్లేజాబితా కు జోడించు"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "కళాకారుడు"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "ఫార్వార్డ్ చేస్తోంది"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "ప్లేజాబితాలు"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "ఇటీవల ప్లేచేసినవి"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "ట్రాక్ నిడివి"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "పాటలు లేవు"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "ఈ ట్రాక్ తొలగించబడుతుంది."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "ఎంచుకున్న ట్రాక్‌లు తొలగించబడతాయి."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "ఈ కళాకారుడు తొలగించబడుతాడు."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "ఎంచుకున్న కళాకారులు తొలగించబడుతారు."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "అన్ని కళాకారులు తొలగించబడుతాయి."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "ఈ ఫోల్డర్ తొలగించబడుతుంది."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "ఎంచుకున్న ఫోల్డర్‌లు తొలగించబడతాయి."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "అన్ని ఫోల్డర్లు తొలగించబడుతాయి."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "ఈ ఆల్బమ్ తొలగించబడుతుంది."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "ఎంచుకున్న ఆల్బమ్‌లు తొలగించబడతాయి."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "అన్ని ఆల్బమ్‌లు తొలగించబడుతాయి."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "ఈ ప్లేబాబితా తొలగించబడుతుంది."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "ఎంచుకున్న ప్లేజాబితాలు తొలగించబడతాయి."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "అన్ని ప్లేజాబితాలు తొలగించబడుతాయి."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "పాటలు"
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "పేరుమార్చు"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "క్రమాన్ని మార్చండి"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "ప్లేజాబితా లాగా సేవ్ చెయ్యండి"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "అలారం టోన్"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "ఏదీ ఎంపిక కాలేదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ప్లే చేయడం సాధ్యం కాదు. లోపం ఏర్పడింది."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "ప్లే చేయడం సాధ్యం కాదు. మద్దతులేని ఫైల్ రకం."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "పంచు"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "కండక్టర్స్"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "పరికరాన్ని ఎంచుకోండి"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "దీని వలె వీక్షిం."
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "సాధారణ"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "యూజర్"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "కంఠ ధ్వని"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "బాస్ బూస్ట్"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "ట్రెబుల్ బూస్ట్"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "కెఫే"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "వర్చువల్ 7.1 ch"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 నిమిషాల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 నిమిషాల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 గంట తర్వాత"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 గంట 30 నిమి తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 గంటల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "మ్యూజిక్ స్వీయ ఆఫ్"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "ఈ ధ్వని ప్రభావము ఇయర్ఫోన్ మరియు బ్లూటూత్ హెడ్సెట్ మోడ్‌లో మాత్రమే పనిచేస్తుంది."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "మ్యూజిక్ స్క్వేర్"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "మూజ్యిక్ స్కేర్ లో ప్లే చేయుటకు తగినంత మూజ్యిక్ ఫైళ్లు లేవు. కనిసం %d మూజ్యిక్ ఫైళ్లు అవసరం."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "పాషన్"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "ప్రశాంతమైన"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "సంతోషం"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "లైబ్రరీ అప్‌డేట్"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "లైబ్రరీని అప్డేట్ చేయాలా?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "అక్షం మార్చండి"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "జనర్‌లు"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 ఆల్బమ్/1 ట్రాక్"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 ఆల్బమ్/%d ట్రాక్‌లు"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d ఆల్బమ్‌లు/%d ట్రాక్‌లు"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "మీరు %1$s, %2$s, %3$s, %4$s, %5$s, మరియు %6$s వాయిస్ ఆదేశాలతో మ్యూజిక్ ప్లేయర్‌ను నియంత్రించండి."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "%d ట్రాక్‌లను షఫుల్ చేయి"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "మరింత సమా"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "నా మ్యూజిక్"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "జాబితా వీక్షణ"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "గ్రూప్ ప్లే ద్వారా ప్లే చేయి"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "ఇష్టమైనవాటికి ట్రాక్ జోడించబడింది."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "ఇష్టమైనవాటి నుండి తొలగింపు"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "కొత్త"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "ట్రాక్‌లు"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "థంబ్నెయిల్"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "జాబితా"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "ప్లేజాబితాను తెరువు"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "అన్ని ప్లే చేయి"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "ఎంపికైన జాబితా ఖాళీగా ఉంది."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "మూడ్‌లు"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "సంవత్సరాలు"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "పాత"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "మీ పరికరమలో నిల్వచేసిన మ్యూజిక్ ఫైళ్ల యొక్క గుణాలను మ్యూజిక్ స్కేర్ ను నిశ్లేషించుతుంది మరియు ఆటోమేటిక్‌గా ప్లే జాబితాలను రూపొందించుతుంది."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "స్క్రీన్ పై ఒక స్కేర్ ను ఎంచుకోవడంచే సారూప్య గుణాలతో మ్యూజిక్ యొక్క ప్లే జాబితాను ప్లే చేయండి."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "స్క్వేర్ ప్రస్తుతం ప్లే అయ్యే దాన్ని నొక్కి పట్టి ఉంచడం ద్వారా ప్లే జాబితాను వీక్షించండి."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "దగ్గరలో ఉన్న పరికరాలు"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "కొత్త పాటలు జోడించబడితే మీరు లైబ్రరీని నవీకరించాలి."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "ఆల్బమ్‌లు లేవు"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "కళాకారులు లేరు"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "ప్లే వేగం"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "సంగీత కచేరీ హాలు"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "దీనికి జోడించు"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "వీక్షణ"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "ఇటీవల జోడించినవి"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "ఉపయోగించబడలేదు"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "ఆఫ్‌లైన్ను అందుబాటులో ఉంచు"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d గంటలు %2$d నిమిషాలు తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d గంటల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d నిమిషాల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "ఫోల్డర్లు లేవు"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "ట్రాక్‌లు లేవు"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d ఆల్బమ్లు"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d కళాకారులు"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d శైలులు"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d ప్లే జాబితాలు"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d ట్రాక్‌లు"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "ప్లేజాబితా"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "సారూప్య ఆల్బమ్‌లు"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "ట్రాక్"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "థంబ్నెయిల్‌ వీక్షణ"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "ఈ ధ్వని ప్రభావము ఇయర్‌ఫోన్ మోడ్‌లో మాత్రమే పనిచేస్తుంది."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "మొత్తం కంటెంట్‌లు"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "ఈ ఫైల్‌ని ప్లే చేయడానికి నెట్‌వర్క్ కనెక్షన్ అవసరం. మీ నెట్‌వర్క్ కనెక్షన్‌ను తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "ఫైల్ రకానికి మద్దతు లేదు."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "అప్డేట్ చేస్తోంది..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "శోధన"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "వెతుకు"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "సంబంధిచిన వీడియోలు"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "స్మార్ట్ వాల్యూమ్"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "అన్ని ట్రాక్‌ల వాల్యూమ్ $ స్థాయికి సర్దుబాటు చేయబడుతుంది."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "స్మార్ట్ వాల్యూమ్ ప్రారంభించబడింది"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "కనెక్షన్ సమాచారం"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 గంట %d నిమిషాల తర్వాత"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "నా పరికరం"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "ఎక్కువ వాల్యూమ్ వద్ద ఎక్కువ సమయం వినడం వల్ల మీ వినికిడికి హాని కలగవచ్చు. వాల్యూమ్‌ని సురక్షిత స్థాయిల కంటే ఎక్కవ పెంచాలా?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "ఇప్పటికే ఉంది."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "దగ్గరలో ఉన్న పరికరాల కొరకు స్కాన్ చెయ్యి"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 గంట తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 గంట 1 నిమి తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d గంటల 1 నిమి తర్వాత"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 నిమి తర్వాత"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "స్టోర్ కు వెళ్లండి"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "ట్రాక్‌లను జోడించు"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "సంగీతం నుండి ట్రాక్‌లను మీరు డౌన్‌లోడ్ చేసిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "మీరు మీకు ఇష్టమైన వాటికి ట్రాక్‌లను జోడించిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "మీరు ట్రాక్‌లను ప్లే చేసిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "మీరు %sకు ట్రాక్‌లను జోడించిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "కొనుగోలు చేసిన కంటెంట్ లేదు"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "ఇలా సేవ్ చే."
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "అప్డేట్ విఫలమయింది."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "ఉత్తేజితం"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "నా సంగీతాన్ని శోధించండి"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "కనెక్ట్ చేసిన పరికరాలు"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "నా ప్లేజాబితా %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "పరికరాలు లేవు"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "లభ్యంలో ఉన్న పరికరాలు"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "సెట్ చేయి"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "వైఫల్యమైనది తొలగింపు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "సమీప పరికరాలు ప్రారంభించబడినప్పుడు ఫాస్ట్ ఫార్వార్డ్ లేదా రీవైండ్ చేయడానికి ఉపయోగించలేరు."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "ఇలా సెట్ చేయి"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "హెడ్‌ఫోన్లు"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "స్పీకర్"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 పాట"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d పాటలు"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 ట్రాక్‌"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "1 ట్రాక్ షఫుల్ చేయండి"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "ఎన్నుకున్న సెల్ కొరకు మూజ్యిక్ కనుగొనబడలేదు"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "మళ్లీ చూపవద్దు."
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "వేర్వేరు కళాకారులు"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "హోమ్ స్క్రీన్‌కు జోడించు"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "ఇష్టమైన వాటికి జోడించు"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "శీర్షికను సవరించు"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "వ్యక్తిగత నిల్వ నుండి తీసివేయండి"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "మీరు ట్రాక్‌లను డౌన్‌లోడ్ చేసిన తర్వాత, ఫోల్డర్‌లు ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "వాల్యూమ్"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "రిపీట్ ఆఫ్"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "అన్ని రిపీట్"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "కలగాపులగం ఆఫ్"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "కలగాపులగం ఆన్"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "నా ప్లేజాబితా"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "డిఫాల్ట్ ప్లేజాబితాలు"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "రికార్డింగ్ తేదీ"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "ఆల్బమ్ ఆర్ట్"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 శైలి"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d ఫోల్డర్లు"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 ఫోల్డర్"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 కళాకారుడు"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 ఆల్బమ్"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 ప్లే జాబితా"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "మ్యూజిక్ ప్లేయర్"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "తరలించు"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "స్వీయ సిఫార్సులు"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "ప్రారంభం నుండి"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "మీ కోసం సూచనలు"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "సేవ్ చేయి"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "ప్రాథమిక"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "పరికరం"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "ట్రెబుల్"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "బాస్"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "ఈ మోడ్‌లో ఏ ప్రభావాలు వర్తించబడలేదు."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "ట్యూబ్ ఏఎమ్‌పి యొక్క ధ్వనిని అనుకరిస్తుంది."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "ట్యూబ్ ఆంప్ ప్రభావం"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "వర్చువల్ 7.1 ఛానెల్ పరిసర ధ్వని యొక్క ప్రభావాన్ని అనుకరిస్తుంది."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "చిన్న గది"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "పెద్ద గది"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "ఎక్కువ స్థలంలో ప్రతిధ్వనిని అనుకరిస్తుంది, ఉదాహరణకు థియేటర్."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "సంగీత కచేరీ హాలు ప్రతిధ్వనిని అనుకరిస్తుంది."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "తక్కువ స్థలంలో ప్రతిధ్వనిని అనుకరిస్తుంది, ఉదాహరణకు స్టూడియో."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "స్పష్టత"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "రీసెట్"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "సంవత్సరాలు"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "జనర్‌లు"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "కంపోజర్స్"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "అన్ని ట్రాక్‌లు"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "క్విక్ జాబితాకు వెళ్లండి"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "వెతుకు"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "క్విక్ జాబితాకు జోడించు"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "TV-అవుట్ కొరకు అనాధీకృత వీడియో."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "రూపొందించడం సాధ్యం కాదు. ప్లేజాబితా‌ల గరిష్ఠ సంఖ్యకు చేరుకుంది"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Bluetooth headset కనెక్ట్ చేస్తున్నప్పుడు వాల్యూమ్ ను సరి చెయ్యడం కుదరడంలేదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Bluetooth Headset కనెక్ట్ చేస్తున్నప్పుడు వాల్యూమ్ ను సరి చెయ్యడం కుదరడంలేదు."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "మ్యూజిక్ ప్లేయర్ ఆపాలా?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "దయచేసి నిశ్శబ్ద మోడ్ నుండి నిష్క్రమించండి."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "నెట్వర్క్ వైఫల్యం."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "మెమరీ కార్డ్ లోడ్ అయ్యింది."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "పరికరం Settings లోపం."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "పాట జత అయ్యింది దొరుకుటలేదు."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "బఫరింగ్"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "బీటీ హ్యాండ్‌‌సెట్ సాధారణ ప్రభావాల సెట్టింగ్‌ను మాత్రమే మద్దతు ఇస్తుంది."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "అప్లికేషన్ మూసివెయ్యబడుతుంది."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "జోడించబడింది. అభినందన జాబితాకు వెళ్ళవచ్చా?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "సేవను యాక్సెస్ చేసేందుకు ఛార్జ్ చేయబడవచ్చు. కొనసాగాలా?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "స్టోర్ కు యాక్సెస్ చేసేందుకు ఛార్జ్ చెయ్యబడచ్చు. కొనసాగాలా?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 ఛానెల్ ధ్వని ప్రభావము ఇయర్‌ఫోన్ మరియు Bluetooth Headset మోడ్‌లో మాత్రమే పనిచేస్తుంది."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 ఛానల్ యొక్క శబ్ధ ప్రభావ పనులు ఇయర్‌ఫోన్ మోడ్ లోనే ఉన్నాయి."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "స్పీకర్ ద్వారా 5.1 ఛానెల్ ధ్వని ప్రభావాల మద్దతు లేదు."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "కవర్ ఆర్ట్ చే వీక్షించండి"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "ట్రాక్‌ను పంపు"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "రేట్ ట్రాక్"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "ప్లేజాబితాలో ట్రాక్‌ను తరలించు"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "కరెంట్"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "ప్లేజాబితాను తొలగించు"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "నేపథ్య ప్లే అవుతోంది"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "ప్రభావాలు"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "ఇప్పుడే కొనండి"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "కోరిక జాబితా"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "విశాలం"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "వా-వా"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "వైబ్ వుఫర్"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "ట్రేమోలో"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "మ్యూజిక్ ను ప్లే/పాజ్ చేయటానికి రెండుసార్లు ట్యాప్ చెయ్యండి."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "బ్లూటూత్ ద్వారా ట్రాక్‌ను పంచుకోండి"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "మ్యూజిక్ సెటప్ విజార్డ్కు స్వాగతం.\nమీ ఫోన్‌ను మీరు కన్ఫిగర్ చేసుకునేందుకు కింది స్క్రీన్‌లు సహాయపడతాయి. కొనసాగాలా?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "త్వరిత జాబితా"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "ధ్వని ప్రభావాలు"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "అన్ని"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "వాల్యూమ్"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d ట్రాక్‌లు ఎంపికైనవి."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "పాడ్కాస్ట్లు లేవు"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "పోలినవాటిని కనుగొనండి"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "నేపథ్య ప్లే"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "ధ్వని ప్రభావాలు ఆఫ్‌లో ఉన్నప్పుడు 5.1 ఛానెల్ మాత్రమే యాక్టివేట్ చేయబడుతుంది."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "పోడ్కాస్ట్"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "చిత్రాన్ని ఎడిట్ చేయి"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "ఏదైనా ధ్వనులను ప్లే చేయడం ఆపివేయబడుతుంది మరియు మీ వాయిస్ రికార్డింగ్ సేవ్ చేయబడుతుంది. ప్లే చేయాలా?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "ఐటెమ్‌లు (%d) యొక్క గరిష్ఠ సంఖ్యకు ఎంపికైనవి."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "బ్లూటూత్ డిస్‌కనెక్ట్ చేయబడింది."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "ధ్వని ప్రభావాలు ఆఫ్‌లో ఉన్నప్పుడు 5.1 ఛానెల్ మాత్రమే యాక్టివేట్ చేయబడుతుంది."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "చిత్రాన్ని తీయి"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "సంగీత వీక్షణను చూపు"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "పాజ్"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "ఆల్బమ్‌ను ప్లే చేయి"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "దీని ద్వారా జాబితా చేయి"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "చరిత్ర"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "సంగీత వీక్షణను దాచు"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "ట్యాగ్ను కనుగొను"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox కం"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "ఫోన్‌లో ఉన్న కం."
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "చిత్రాన్ని మార్చు"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Dropbox డేటా. తొ."
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "మీరు ఆల్‌షేర్ ను ఉపయోగిస్తూ పరికరాలకు మీ మ్యూజిక్ కు ప్రవాహించవచ్చు."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "వ్యాలిడిటీ"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "రకం"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "ఇది సర్వర్ నుండి, అలాగే కనెక్ట్ చేసిన పరికరాలను నుండి ఫైల్‌ని తొలగిస్తుంది."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "ఆర్టిస్ట్‌లు"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "ఆల్బమ్ ఆర్ట్"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "ఇతర కాంటెంట్లు"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "పేరు చాలా పెద్దగా ఉంది."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "మ్యూజిక్ స్పష్టత"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "ఎక్కువ వాల్యూమ్ మీరు వినడానికి హాని కలగించవచ్చును ఒకవేళ మీరు దీన్ని చాలా సమయం కొరకు వింటే."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "లభ్యమయ్యే ఉపయోగాలు"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "హెడ్‌ఫోన్‌లు అనుసంధానమై ఉన్నప్పుడు మాత్రమే శబ్ద ప్రభావాలు అందుబాటులో ఉంటాయి."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "మీ వ్యక్తిగత నిల్వకు జోడించండి"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "మీ వ్యక్తిగత నిల్వ నుండి తీసివేయండి"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "సందర్భోచిత పాప్-అప్"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "సందర్భోచిత పాప్-అప్ తెరవబడి ఉంది. దీన్ని మూసివేయడానికి డబుల్ ట్యాప్ చేయండి."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "రిపీట్ ఒకటి"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "తరలిస్తోంది..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "గరిష్టంగా %d ఐటెమ్‌లను ఎంచుకోండి."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "టాబ్"
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "ప్లేజాబితా పేరు %s ఇప్పటికే ఉపయోగంలో ఉంది."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d ట్రాక్‌లు ప్లేజాబితాకు జోడించబడ్డాయి."
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "ఇటీవల జోడించబడింది"
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 ట్రాక్ ప్లేజాబితాకు జోడించబడింది."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "మొత్తం"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "ప్లేయర్ ను మార్చండి"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "ట్యాబ‌్‌లు"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "డ్రాప్‌బాక్స్"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "స్వీయ సిఫార్సులు ధ్వని ఫైళ్ల నుండి హైలైట్‌లను సంగ్రహించగలవు."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "పేరెంట్ రేటింగ్"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "మ్యూజిక్"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "కంటెంట్‌లు లేవు"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "తెలియని"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "లోపం."
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "డౌన్లోడ్‌"
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "తొలగించు"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "శీర్షిక"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "సేవ్ చేయి"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "ఈమెయిల్"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "బ్లూటూత్"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "తొలగించాలా?"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "ఎంచు."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "బ్యాటరీ తక్కువగా ఉంది."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "అధిక నిల్వ మోడ్ సమయంలో ఉపయోగించడం సాధ్యం కాదు."
+
+msgid "IDS_COM_BODY_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "ఫైల్ దొరకలేదు."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "కనెక్షన్ విఫలమైంది."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "ఈ ఫైల్ ఉనికిలో లేదు."
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "ఆడియో పరికరం"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "రద్దు"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "ఫోల్డర్‌లు"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "వివరాలు"
+
+msgid "IDS_COM_BODY_END"
+msgstr "ముగింపు"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "సవరించు"
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "అప్డేట్ చేయబడింది."
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "డౌన్లోడ్ అవుతోంది..."
+
+msgid "IDS_COM_POP_DONE"
+msgstr "పూర్తయింది"
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "తొలగించబడినది."
+
+msgid "IDS_COM_BODY_CREATE"
+msgstr "రూపొందించు"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "ఇంటర్నెట్"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "జోడించబడింది."
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "సమయం"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "కొత్త"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "రీసెట్"
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "మెమరీ నిండింది."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "స్కాన్"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "ఎంపికైంది"
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "మునుపటి"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "జోడించడం సాధ్యం కాదు."
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "పాజ్"
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "కాలర్ రింగ్టోన్ సేవ్ అయింది."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "బిట్ డెప్త్"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "పరిమాణం"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d ఎన్నుకోబడింది"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "మీరు ఈ పరికరానికి ట్రాక్‌లను జోడించిన తర్వాత, అవి ఇక్కడ చూపబడతాయి."
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "అలారమ్ టోన్ సెట్ చేయబడింది."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "పొడవు"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "ఫోల్డర్లు"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "My playlists"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "సౌండ్ ప్లేయర్"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "సెట్టింగులు"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "స్కాన్"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "లోపం."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "మెమరీ నిండింది."
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "నిల్వ స్థానం"
+
+msgid "IDS_MUSIC_OPT_REMOVE_M_PLAYLIST"
+msgstr "తీసివేయి"
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "వరుస"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "వాల్యూమ్"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "కలగాపులగం చేయి"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "పునరావృతం"
+
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ఫైళ్ల యొక్క గరిష్ట సంఖ్యను మించిపోయారు."
+

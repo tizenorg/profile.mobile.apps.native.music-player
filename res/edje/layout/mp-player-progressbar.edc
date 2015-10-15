@@ -1,0 +1,156 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define PLAYER_PROGRESSBAR_H	9
+#define PLAYER_CIRCLE_W 40
+#define PLAYER_CIRCLE_H 40
+#define PLAYER_CIRCLE_PRESS_W 40
+#define PLAYER_CIRCLE_PRESS_H 40
+
+#define IMG_PLAYER_PROGRESSBAR_BG "lite/core_progress_bar.#.png"
+//#define IMG_PLAYER_PROGRESSBAR "lite/mini_player_bar.#.png"
+#define IMG_PLAYER_PROGRESSBAR_HANDLE "lite/mini_player_button_01.png"
+#define IMG_PLAYER_PROGRESSBAR_HANDLE_PRESS"lite/player_icon_progress_button.png"
+
+group { name: "player_progressbar";
+
+	images {
+		image: IMG_PLAYER_PROGRESSBAR_BG COMP;
+		//image: IMG_PLAYER_PROGRESSBAR COMP;
+		image: IMG_PLAYER_PROGRESSBAR_HANDLE COMP;
+		image: IMG_PLAYER_PROGRESSBAR_HANDLE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				color: 0 0 0 0;
+			}
+		}
+		part { name: "progressbar_bg";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.5; to: "bg";}
+				rel2 { relative: 1.0 0.5; to: "bg";}
+				image { normal: IMG_PLAYER_PROGRESSBAR_BG; }
+				min: 0 PLAYER_PROGRESSBAR_H;
+				max: -1 PLAYER_PROGRESSBAR_H;
+				fixed: 0 1;
+				align: 0.5 0.5;
+				color: 179 179 179 255;
+			}
+		}
+		part { name: "progressbar_current";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "progressbar_bg";}
+				rel2 { relative: 1.0 1.0; to_x: "progressbar_playing"; to_y: "progressbar_bg"; offset: -13 0;}
+				image { normal: IMG_PLAYER_PROGRESSBAR_BG; }
+				min: 0 PLAYER_PROGRESSBAR_H;
+				max: -1 PLAYER_PROGRESSBAR_H;
+				fixed: 0 1;
+				align: 0.5 0.5;
+				color: 0 112 204 255;
+			}
+		}
+		part { name: "progressbar_playing_confine_rect";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+				rel1 { relative: 0.0 0.5; to: "progressbar_bg"; offset: -13 0; }
+				rel2 { relative: 1.0 0.5; to: "progressbar_bg"; offset: 13 0; }
+				min: 0 PLAYER_CIRCLE_H;
+				fixed: 0 1;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "progressbar_playing";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				image { normal: IMG_PLAYER_PROGRESSBAR_HANDLE; }
+				min: PLAYER_CIRCLE_W PLAYER_CIRCLE_H;
+				fixed: 1 1;
+				color: 0 112 204 255;
+			}
+			dragable {
+				confine: "progressbar_playing_confine_rect";
+				x: 1 1 1;
+				y: 0 0 0;
+			}
+		}
+		part { name: "progressbar_playing_press_circle";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				image { normal: IMG_PLAYER_PROGRESSBAR_HANDLE_PRESS; }
+				min: PLAYER_CIRCLE_PRESS_W PLAYER_CIRCLE_PRESS_H;
+				color: 0 112 204 255;
+				fixed: 1 1;
+				rel1 { relative: 0.5 0.5; to: "progressbar_playing"; }
+				rel2 { relative: 0.5 0.5; to: "progressbar_playing"; }
+				visible: 0;
+			}
+			description { state: "press" 0.0;
+			inherit: "default";
+			visible: 1;
+			}
+		}
+		part { name: "touch_area";
+			type: RECT;
+			mouse_events: 1;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { to: "bg"; offset: -29 -10; }
+				rel2 { to: "bg"; offset: 29 10; }
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+		program{
+			name: "progress_bar_down";
+			source: "*";
+			signal: "mouse,down,1";
+			action: STATE_SET "press" 0.0;
+			target: "progressbar_playing_press_circle";
+		}
+		program{
+			name: "progress_bar_up";
+			source: "*";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "progressbar_playing_press_circle";
+		}
+	}
+}
+

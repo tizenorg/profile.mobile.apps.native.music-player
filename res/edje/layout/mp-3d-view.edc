@@ -1,0 +1,717 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#ifdef MP_3D_FEATURE
+#define COVER_FLOW_VOLUME_W	626
+#define COVER_FLOW_VOLUME_H	112
+#define COVER_FLOW_VOLUME_START_Y	400
+#define COVER_FLOW_INDICATOR_H	50
+#define COVER_FLOW_W		1280
+#define COVER_FLOW_H		(720-COVER_FLOW_INDICATOR_H)
+#define COVER_FLOW_VOLUME_SX	(((COVER_FLOW_W-COVER_FLOW_VOLUME_W)/2)/COVER_FLOW_VOLUME_W)
+#define COVER_FLOW_VOLUME_SY	(COVER_FLOW_VOLUME_START_Y/COVER_FLOW_H)
+#define COVER_FLOW_VOLUME_EX	(1-COVER_FLOW_VOLUME_SX)
+#define COVER_FLOW_VOLUME_EY	((COVER_FLOW_VOLUME_START_Y+COVER_FLOW_VOLUME_H)/COVER_FLOW_H)
+
+#define COVER_FLOW_PAD_W	8
+#define COVER_FLOW_BACK_BUTTON_W	104
+#define COVER_FLOW_BACK_BUTTON_H	74
+#define COVER_FLOW_TAP	10
+#define COVER_FLOW_ALL_TRACKS_PAD_W	20
+
+#define COVER_FLOW_CIRCLE_BACK_BT_BG "Cover_flow/T02_music_player_back_button.png"
+
+/* for now playing */
+#define COVER_FLOW_CIRCLE_BG "T02_music_player_circle_bg.png"
+#define COVER_FLOW_CIRCLE_PLAY "T02_music_player_circle_play.png"
+#define COVER_FLOW_CIRCLE_PAUSE "T02_music_player_circle_pause.png"
+#define COVER_FLOW_NOW_PLAYING_H	88
+#define COVER_FLOW_THUMB_SIZE	COVER_FLOW_NOW_PLAYING_H
+#define COVER_FLOW_CIRCLE_BG_SIZE 64
+#define COVER_FLOW_CIRCLE_BG_SX ((COVER_FLOW_THUMB_SIZE-COVER_FLOW_CIRCLE_BG_SIZE)/2)
+#define COVER_FLOW_CIRCLE_BG_EX (COVER_FLOW_CIRCLE_BG_SIZE+COVER_FLOW_CIRCLE_BG_SX)
+#define COVER_FLOW_CIRCLE_BG_SY ((COVER_FLOW_THUMB_SIZE-COVER_FLOW_CIRCLE_BG_SIZE)/2)
+#define COVER_FLOW_CIRCLE_BG_EY (COVER_FLOW_CIRCLE_BG_SIZE+COVER_FLOW_CIRCLE_BG_SY)
+
+/* for all tracks */
+#define COVER_FLOW_EXPAND_CIRCLE_BG "Cover_flow/T02_music_expand_circle_bg.png"
+#define COVER_FLOW_EXPAND_CIRCLE_OPEN "Cover_flow/T02_music_expand_circle_open.png"
+#define COVER_FLOW_EXPAND_CIRCLE_CLOSE "Cover_flow/T02_music_expand_circle_close.png"
+#define COVER_FLOW_EXPAND_CIRCLE_BG_SIZE	COVER_FLOW_CIRCLE_BG_SIZE
+#define COVER_FLOW_EXPAND_CIRCLE_CLICK_OFFSET 25
+#define COVER_FLOW_ALL_TRACKS_PAD_W	20
+
+#define COVER_FLOW_DIM_COLOR 0 0 0 100
+group {
+        name: "3d-layout";
+
+	images {
+		image: COVER_FLOW_CIRCLE_BACK_BT_BG COMP;
+	}
+
+        parts {
+			part { name: "background";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name : "content";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+			   		rel1 { relative: 0.0 0.0;to: "background";}
+					rel2 { relative: 1.0 1.0;to: "background";}
+				}
+			}
+
+			part {
+				name : "genlist_ly";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					visible:0;
+					state: "default" 0.0;
+			   		rel1 { relative: 0.3 1.0;to: "content";}
+					rel2 { relative: 0.7 2.0;to: "content";}
+				}
+				description {
+					visible:1;
+					state: "normal" 0.0;
+			   		rel1 { relative: 0.3 0.0;to: "content";}
+					rel2 { relative: 0.7 1.0;to: "content";}
+				}
+				description {
+					visible:1;
+					state: "bottom" 0.0;
+			   		rel1 { relative: 0.3 1.0;to: "content";}
+					rel2 { relative: 0.7 2.0;to: "content";}
+				}
+			}
+
+			part {
+				name : "now_playing";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 COVER_FLOW_NOW_PLAYING_H;
+					fixed: 0 1;
+					visible: 1;
+					align: 0 0;
+					rel1 { relative: 0.02 0.02;to: "content";}
+					rel2 { relative: 0.27 0.02;to: "content";}
+				}
+			}
+
+			part {
+				name : "all_tracks";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 COVER_FLOW_EXPAND_CIRCLE_BG_SIZE;
+					fixed: 0 1;
+					visible: 1;
+					align: 1 0;
+					rel1 { relative: 0.8 0.02; to: "content";}
+					rel2 { relative: 1.0 0.02; offset: 0 COVER_FLOW_EXPAND_CIRCLE_BG_SIZE; to: "content";}
+				}
+			}
+
+			part { name: "back_button_bg";
+				type : IMAGE;
+				scale: 1;
+				mouse_events: 1;
+				description { state: "default" 0.0;
+					visible: 1;
+					min: COVER_FLOW_BACK_BUTTON_W COVER_FLOW_BACK_BUTTON_H;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { 	relative: 1.0 1.0;
+							offset: (-COVER_FLOW_TAP) (-COVER_FLOW_TAP);
+							to, "background";
+						}
+					rel2 { 	relative: 1.0 1.0;
+							offset: (-COVER_FLOW_TAP) (-COVER_FLOW_TAP);
+							to, "background";
+						}
+					image {
+						normal: COVER_FLOW_CIRCLE_BACK_BT_BG;
+						border : 6 6 0 0;
+						border_scale: 1;
+					}
+				}
+			}
+
+			part { name: "back_button";
+				type : SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description { state: "default" 0.0;
+					visible: 1;
+					min: COVER_FLOW_BACK_BUTTON_W COVER_FLOW_BACK_BUTTON_H;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { 	relative: 0.0 0.0;
+							offset: 0.0 0.0;
+							to, "back_button_bg";
+						}
+					rel2 { 	relative: 1.0 1.0;
+							offset: 0.0 0.0;
+							to, "back_button_bg";
+						}
+				}
+			}
+			part {
+				name : "dim_area1";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					visible:0;
+					state: "default" 0.0;
+			   		rel1 { relative: 0.0 0.0;to: "content";}
+					rel2 { relative: 0.3 1.0;to: "content";}
+					color: COVER_FLOW_DIM_COLOR;
+				}
+
+				description {
+					state: "dim" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name : "dim_area2";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					visible:0;
+					state: "default" 0.0;
+			   		rel1 { relative: 0.7 0.0;to: "content";}
+					rel2 { relative: 1.0 1.0;to: "content";}
+					color: COVER_FLOW_DIM_COLOR;
+				}
+
+				description {
+					state: "dim" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part  { name: "volume_layout";
+				type: SWALLOW;
+				scale: 1;
+				description { state: "default" 0.0;
+					rel1 { relative: COVER_FLOW_VOLUME_SX COVER_FLOW_VOLUME_SY; to: "background"; }
+					rel2 { relative: COVER_FLOW_VOLUME_EX COVER_FLOW_VOLUME_EY; to: "background"; }
+				}
+			}
+		}
+
+		programs {
+			program { name: "show_track_list";
+					signal: "show_track_list";
+					source: "genlist_ly";
+					action: STATE_SET "bottom" 0.0;
+					target: "genlist_ly";
+					after :"set_normal";
+				 }
+
+			program { name: "set_normal";
+					signal: "set_normal";
+					source: "genlist_ly";
+					action: STATE_SET "normal" 0.0;
+					target: "genlist_ly";
+					transition: LINEAR 0.5;
+					after :"show_dim";
+				 }
+
+			program { name: "hide_track_list";
+					signal: "hide_track_list";
+					source: "genlist_ly";
+					action: STATE_SET "normal" 0.0;
+					target: "genlist_ly";
+					after :"set_bottom";
+				 }
+
+			program { name: "set_bottom";
+					signal: "set_bottom";
+					source: "genlist_ly";
+					action: STATE_SET "bottom" 0.0;
+					target: "genlist_ly";
+					transition: LINEAR 0.5;
+					after :"hide_dim";
+				 }
+
+			program { name: "show_dim";
+					signal: "show_dim";
+					source: "dim_area1";
+					source: "dim_area2";
+					action: STATE_SET "dim" 0.0;
+					target: "dim_area1";
+					target: "dim_area2";
+				 }
+
+			program { name: "hide_dim";
+					signal: "hide_dim";
+					source: "dim_area1";
+					source: "dim_area2";
+					action: STATE_SET "default" 0.0;
+					target: "dim_area1";
+					target: "dim_area2";
+				 }
+
+			program {
+				name: "dim_area1_clicked";
+				source: "dim_area1";
+				signal: "mouse,up,1";
+				after: "hide_track_list";
+			}
+
+			program {
+				name: "dim_area2_clicked";
+				source: "dim_area2";
+				signal: "mouse,up,1";
+				after: "hide_track_list";
+			}
+		}
+}
+
+group {
+        name: "3d-genlist";
+        parts {
+			part { name: "background";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 229;
+				}
+			}
+
+			part {
+				name : "list_content";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+			   		rel1 { relative: 0.0 0.0;to: "background";}
+					rel2 { relative: 1.0 1.0;to: "background";}
+				}
+			}
+		}
+}
+
+group {
+        name: "3d-now-playing";
+
+        images {
+			image: 	COVER_FLOW_CIRCLE_BG COMP;
+			image: 	COVER_FLOW_CIRCLE_PLAY COMP;
+			image: 	COVER_FLOW_CIRCLE_PAUSE COMP;
+		}
+
+        parts {
+			part { name: "background";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 COVER_FLOW_NOW_PLAYING_H;
+					fixed: 0 1;
+					align: 0 0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name : "thumb_image";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: COVER_FLOW_THUMB_SIZE COVER_FLOW_THUMB_SIZE;
+					max: COVER_FLOW_THUMB_SIZE COVER_FLOW_THUMB_SIZE;
+					visible: 1;
+					fixed: 1 1;
+					align: 0.0 0.5;
+			   		rel1 { relative: 0 0;to: "background";}
+					rel2 { relative: 1 1;to: "background";}
+				}
+			}
+
+			part { name: "innerline.top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 1;
+				fixed: 1 1;
+				align: 0 0;
+				min: 1 1;
+				rel1 {relative: 0.0 0.0; to, "thumb_image";}
+				rel2 {relative: 1.0 0.0; to, "thumb_image";}
+				color: MP_COLOR_BG_BLACK;
+				}
+			}
+
+			part { name: "innerline.bottom";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description { state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					align: 0 0;
+					min: 1 1;
+					rel1 {relative: 0.0 1.0; to, "thumb_image";}
+					rel2 {relative: 1.0 1.0; to, "thumb_image";}
+					color: MP_COLOR_BG_BLACK;
+				}
+			}
+
+			part { name: "innerline.left";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description { state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					align: 0 0;
+					min: 1 1;
+					rel1 {relative: 0.0 0.0; to, "thumb_image";}
+					rel2 {relative: 0.0 1.0; to, "thumb_image";}
+					color: MP_COLOR_BG_BLACK;
+				}
+			}
+
+			part { name: "innerline.right";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description { state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					align: 0 0;
+					min: 1 1;
+					rel1 {relative: 1.0 0.0; to, "thumb_image";}
+					rel2 {relative: 1.0 1.0; to, "thumb_image";}
+					color: MP_COLOR_BG_BLACK;
+				}
+			}
+
+         	part { name, "now_playing_bg";
+				type, IMAGE;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					image { normal: COVER_FLOW_CIRCLE_BG; }
+					//min: COVER_FLOW_CIRCLE_BG_SIZE COVER_FLOW_CIRCLE_BG_SIZE;
+					//max: COVER_FLOW_CIRCLE_BG_SIZE COVER_FLOW_CIRCLE_BG_SIZE;
+					visible: 1;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 {
+	                  relative: COVER_FLOW_CIRCLE_BG_SX/COVER_FLOW_THUMB_SIZE COVER_FLOW_CIRCLE_BG_SY/COVER_FLOW_THUMB_SIZE;
+	                  offset: 0 0;
+	                  to: "thumb_image";
+	               }
+	               rel2 {
+	                  relative: COVER_FLOW_CIRCLE_BG_EX/COVER_FLOW_THUMB_SIZE COVER_FLOW_CIRCLE_BG_EY/COVER_FLOW_THUMB_SIZE;
+	                  offset: 0 0;
+	                  to: "thumb_image";
+	               }
+				}
+			}
+
+			part { name, "now_playing_arrow";
+				type, IMAGE;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					image { normal: COVER_FLOW_CIRCLE_PLAY; }
+					visible: 1;
+					align: 0.5 0.5;
+					rel1 {
+	                  relative: 0.0 0.0;
+	                  offset: 0 0;
+	                  to: "now_playing_bg";
+	               }
+	               rel2 {
+	                  relative: 1.0 1.0;
+	                  offset: 0 0;
+	                  to: "now_playing_bg";
+	               }
+				}
+				description {
+					state: "pause" 0.0;
+					inherit: "default" 0.0;
+					image { normal: COVER_FLOW_CIRCLE_PAUSE; }
+				}
+			}
+
+			part { name: "track_name";
+	            type: TEXT;
+	            scale: 1;
+	            description { state: "default" 0.0;
+	               align: 0.0 0.5;
+	               rel1 {
+	                  relative: 1.0 0.0;
+	                  offset: COVER_FLOW_PAD_W 0;
+	                  to: "thumb_image";
+	               }
+	               rel2 {
+	                  relative: 1.0 0.5;
+	                  offset: 0 0;
+	                  to: "background";
+	               }
+	               color: 7 180 211 255;
+	               text {
+	                 font: FONT_STYLE_REGULAR;
+	                 size: 35;
+	                 min: 0 1;
+	                 align: 0.0 0.5;
+	               }
+	            }
+         	}
+
+         	part { name: "artist_name";
+	            type: TEXT;
+	            scale: 1;
+	            description { state: "default" 0.0;
+	               align: 0.0 0.0;
+	               rel1 {
+	                  relative: 1.0 0.5;
+	                  offset: COVER_FLOW_PAD_W 0;
+	                  to: "thumb_image";
+	               }
+	               rel2 {
+	                  relative: 1.0 1.0;
+	                  offset: 0 0;
+	                  to: "background";
+	               }
+	               color: 122 122 122 255;
+	               text {
+	                 font: FONT_STYLE_REGULAR;
+	                 size: 28;
+	                 min: 0 1;
+	                 align: 0.0 0.0;
+	               }
+	            }
+         	}
+		}
+
+		programs {
+			program {
+				name: "now_playing_clicked";
+				source: "now_playing_bg";
+				signal: "mouse,clicked,1";
+				action: SIGNAL_EMIT "now_playing_clicked" 0.0;
+			}
+			program {
+				name: "pause";
+				source: "now_playing_arrow";
+				signal: "pause";
+				action: STATE_SET "pause" 0.0;
+				target: "now_playing_arrow";
+			}
+			program {
+				name: "play";
+				source: "now_playing_arrow";
+				signal: "play";
+				action: STATE_SET "default" 0.0;
+				target: "now_playing_arrow";
+			}
+
+      }
+}
+
+group {
+        name: "3d-all-tracks";
+        parts {
+
+        	 images {
+				image: 	COVER_FLOW_EXPAND_CIRCLE_BG COMP;
+				image: 	COVER_FLOW_EXPAND_CIRCLE_OPEN COMP;
+				image: 	COVER_FLOW_EXPAND_CIRCLE_CLOSE COMP;
+			}
+
+			part { name: "background";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					min: COVER_FLOW_EXPAND_CIRCLE_BG_SIZE COVER_FLOW_EXPAND_CIRCLE_BG_SIZE;
+					fixed: 0 1;
+					align: 0 0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+			part { name, "expand_circle_bg";
+				type, IMAGE;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					image { normal: COVER_FLOW_CIRCLE_BG; }
+					min: COVER_FLOW_EXPAND_CIRCLE_BG_SIZE COVER_FLOW_EXPAND_CIRCLE_BG_SIZE;
+					max: COVER_FLOW_EXPAND_CIRCLE_BG_SIZE COVER_FLOW_EXPAND_CIRCLE_BG_SIZE;
+					visible: 1;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 {
+			                  relative: 0.0 0.0;
+			                  offset: 0 0;
+			                  to: "background";
+			               }
+			               rel2 {
+			                  relative: 1.0 1.0;
+			                  offset: -COVER_FLOW_ALL_TRACKS_PAD_W 0;
+			                  to: "background";
+			               }
+				}
+			}
+
+			part { name, "expand_circle";
+				type, IMAGE;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					image { normal: COVER_FLOW_EXPAND_CIRCLE_CLOSE; }
+					visible: 1;
+					align: 0.5 0.5;
+					rel1 {
+			                  relative: 0.0 0.0;
+			                  offset: 0 0;
+			                  to: "expand_circle_bg";
+			               }
+			               rel2 {
+			                  relative: 1.0 1.0;
+			                  offset: 0 0;
+			                  to: "expand_circle_bg";
+			               }
+				}
+				description {
+					state: "open" 0.0;
+					inherit: "default" 0.0;
+					image { normal: COVER_FLOW_EXPAND_CIRCLE_OPEN; }
+				}
+			}
+
+			part { name: "click_area";
+				type: RECT;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					fixed: 0 0;
+					align: 0 0;
+					rel1 {
+			                  relative: 0.0 0.0;
+			                  offset: (-COVER_FLOW_EXPAND_CIRCLE_CLICK_OFFSET) (-COVER_FLOW_EXPAND_CIRCLE_CLICK_OFFSET);
+			                  to: "expand_circle";
+			               }
+			               rel2 {
+			                  relative: 1.0 1.0;
+					  offset: COVER_FLOW_EXPAND_CIRCLE_CLICK_OFFSET COVER_FLOW_EXPAND_CIRCLE_CLICK_OFFSET;
+			                  to: "expand_circle";
+			               }
+					color: 0 0 0 0;
+				}
+			}
+
+		part { name: "all_tracks_text";
+	            type: TEXT;
+	            scale: 1;
+		    mouse_events: 1;
+	            description { state: "default" 0.0;
+	               align: 1.0 0.5;
+	               rel1 {
+	                  relative: 0.0 0.0;
+	                  offset: 0 0;
+	                  to: "background";
+	               }
+	               rel2 {
+	                  relative: 0.0 1.0;
+	                  offset: -COVER_FLOW_ALL_TRACKS_PAD_W 0;
+	                  to_x: "expand_circle_bg";
+	                  to_y: "background";
+	               }
+	               color: 255 255 255 255;
+	               text {
+	                 font: FONT_STYLE_REGULAR;
+	                 size: 32;
+	                 min: 0 1;
+	                 //text: "All Tracks";
+	                 text: "";
+	                 align: 1.0 0.5;
+	               }
+	            }
+         	}
+		}
+
+		programs {
+			program {
+				name: "expand_circle_clicked";
+				source: "click_area";
+				signal: "mouse,clicked,1";
+				action: SIGNAL_EMIT "expand_circle_clicked" 0.0;
+			}
+			program {
+				name: "open";
+				source: "expand_circle";
+				signal: "open";
+				action: STATE_SET "open" 0.0;
+				target: "expand_circle";
+			}
+			program {
+				name: "close";
+				source: "expand_circle";
+				signal: "close";
+				action: STATE_SET "default" 0.0;
+				target: "expand_circle";
+			}
+      }
+}
+#endif

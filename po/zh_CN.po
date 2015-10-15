@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "载入中…"
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "私人"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "时间"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "此文件不存在"
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "手机铃声"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "持续期间"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "位置"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "设定为"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "添加至个人页面"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "从个人页面移除"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "移動至標準儲存"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "移動至個人儲存"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "选定项目将移动至 %s。"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "选定项目将移动至 %s。"
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "在大容量存储模式下无法使用。"
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "铃声已设置"
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "按钮"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "选择项目"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "高级设定"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "上一步"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "关闭"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "已添加"
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "失败"
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "无搜索结果"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "完成"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "无项目"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "添加至主页"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "下一步"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "下载中..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "收藏"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "添加至个人存储空间"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "从 %s 断开。检查网络状态与连接的设备。"
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "通过屏幕共享"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "通过家庭网络"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "空记录。"
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "通话中无法使用。"
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "已达到最大字符限制"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "无法共享DRM文件。"
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "正在移除..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d 个设备"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "启用动作"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "不要再询问"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "未找到结果"
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "将手机正面朝下以将来电铃声、信息提示音和闹钟铃声静音。"
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "无"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "互联网"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "相册"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "双击以移动至内容。"
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "环绕"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "歌词"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "将曲目添加至移动设备上的音乐后，其将显示在此处。"
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "采样率"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "已标记为收藏"
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "音乐"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "未标记为收藏"
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "搜索音乐"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "自动推荐不支持该音频文件"
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "抱歉，播放器不支持该类型的音频文件。"
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "我的收藏"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "最常播放"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "最近添加的"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "新建播放列表"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "移除"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "特定联系人铃声"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "艺术家"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "无法添加。"
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "无法创建播放列表。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "无法获取标签。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "不能添加超过 %d 的音乐文件。"
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "专辑"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "作者"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "版权"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "新建播放列表"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "说明"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "格式"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "不可以"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "无播放列表"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "曲目号"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "删除？"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "移除?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "无法重命名播放列表。"
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "专辑"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "添加中..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "是否删除 %d 本相册？"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "播放列表"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "添加"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "传记"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "制作"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "媒体信息"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "唱片目录"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "抒情"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "可以"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "查看"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "曲目列表"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "添加到播放列表"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "艺术家"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "转发"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "播放列表"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "最近播放"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "曲目长度"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "没有歌曲"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "将删除该曲目"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "选中曲目将被删除。"
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "该艺术家将被删除。"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "选中艺术家将被删除。"
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "全部艺术家将被删除。"
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "该文件夹将被删除"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "选中文件夹将被删除。"
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "全部文件夹将被删除"
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "该专辑将被删除。"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "选中专辑将被删除。"
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "全部音乐库将被删除。"
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "此播放列表将被删除。"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "选中播放列表将被删除。"
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "全部播放列表将被删除。"
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "音乐"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "重新排序"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "另存为播放列表"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "闹钟铃声"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "未选择"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "无法播放。出错。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "无法播放。不支持的文件类型。"
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "共享"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "乐队指挥"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "选择设备"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "查看方式"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "普通"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "用户"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "声乐"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "低音增强"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "高音增强"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "咖啡馆"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "虚拟 7.1 声道"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 小时后"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 小时 30 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 小时后"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "音乐自动关"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "此声音效果仅在耳机和蓝牙耳机模式下有效。"
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "音乐广场"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "音乐文件不足以在音乐广场中播放。需要至少 %d 个音乐文件。"
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "激情"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "平静的"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "欢乐"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "音乐库更新"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "更新库"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "更改轴线"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "流派"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 张专辑/1 首曲目"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 张专辑/%d 首曲目"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d 张专辑/%d 首曲目"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "您可用语音命令 %1$s、%2$s、%3$s、%4$s、%5$s 和 %6$s 控制音乐播放器。"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "随机播放 %d 首曲目"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "更多信息"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "我的音乐"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "列表视图"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "通过 Group Play 播放"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "曲目已添加至收藏。"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "从收藏中移除"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "新的"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "曲目"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "缩略图"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "列表"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "打开播放列表"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "全部播放"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "选择的列表为空"
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "基调"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "年"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "旧的"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "音乐广场分析保存在设备中的音乐文件的特征，并自动创建播放列表。"
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "通过在屏幕上选择广场来播放具有类似特征的音乐播放列表。"
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "点住当前播放的广场查看播放列表详情。"
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "附近的设备"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "如果已添加新的歌曲，您将需要更新音乐库。"
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "没有专辑"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "没有艺术家"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "播放速度"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "音乐厅"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "添加到"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "查看"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "最近添加的"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "未使用"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "选择离线浏览"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d 小时 %2$d 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d 小时后"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d 分钟后"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "没有文件夹"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "无曲目"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d张专辑"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d 位艺术家"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d 种流派"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d 个播放列表"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d首曲目"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "播放列表"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "类似专辑"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "曲目"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "缩略图查看"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "此声音效果仅在耳机模式下有效。"
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "全部内容"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "需要网络连接以播放该文件。检查您的网络连接并重试。"
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "不支持的文件类型"
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "正在更新"
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "搜索"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "搜索方式"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "相关视频"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "智能音量"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "所有曲目的音量将调节为水平 %d。"
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "已启用智能音量"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "连接信息"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 小时 %d 分钟后"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "优化声音"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "我的设备"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "长时间以高音量收听可能损害您的听力。是否将音量升至安全水平以上？"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "已存在。"
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "扫描附近的设备"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 小时后"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 小时 1 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d 小时 1 分钟后"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 分钟后"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "转至商店"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "添加曲目"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "在您从音乐下载曲目后，将在此处显示。"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "添加曲目至收藏后，其将显示于此。"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "在您播放曲目后，其将显示在此处。"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "在您将曲目添加至 %s 后，将在此处显示。"
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "无已购买内容"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "另存为"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "更新失败。"
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "激动人心的"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "搜索我的音乐"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "已连接设备"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "我的播放列表 %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "没有设备"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "可用设备"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "设置"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "移除失败"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "当附近设备已启用时无法使用快进和后退。"
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "设定为"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "耳机"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "扬声器"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 首歌"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d 首歌"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1个曲目"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "随机播放 1 首曲目"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "所选单元未找到音乐"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "不要再显示"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "不同的艺术家"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "添加至主屏"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "添加到收藏"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "编辑标题"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "从个人存储空间移除"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "下载曲目后，文件夹将显示"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "音量"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "重复关"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "重复全部"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "随机播放关"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "随机播放开"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "我的播放列表"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "默认播放列表"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "录制时间"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "音乐库艺术"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 个流派"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d 个文件夹"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1个文件夹"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 个歌唱艺术家"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1张专辑"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 个播放列表"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "音乐播放器"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "移动"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "自动建议"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "从头开始"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "给您的建议"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "保存"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "基本"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "乐器"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "高音"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "低音"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "此模式中未应用效果"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "仿真真空管音色。"
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "真空管放大效果"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "模拟虚拟 7.1 声道环绕音效效果。"
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "小空间"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "大空间"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "模拟大空间回音，例如剧院。"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "模拟音乐厅回音。"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "模拟小空间回音，例如录音室。"
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D 声音"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "清晰度"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "重置"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "年代"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "流派"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "作曲家"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "全部曲目"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "转到快速列表"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "寻找"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "添加到快速列表"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "未授权的电视输出视频文件。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "无法创建。已达到播放列表的最大数量。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "连接蓝牙耳机时无法调节音量。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "连接到蓝牙耳机时，无法调节音量。"
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "停止音乐播放器?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "请退出静音模式。"
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "网络失败"
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "存储卡已载入。"
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "设备设置错误。"
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "无法找到歌曲的匹配"
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "正在缓冲"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "蓝牙耳机仅支持普通效果设置。"
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "应用程序将关闭。"
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "已添加。转到愿望列表？"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "访问该服务可能需要付费。 继续？"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "进入商店可能收费。继续？"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1声道的声音效果仅在耳机或蓝牙耳机模式下才可运行。"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 声道声音效果只适用于耳机模式。"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "扬声器不支持5.1信道声音效果。"
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "以专辑封面显示"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "发送曲目"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "曲目等级"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "移动播放列表的曲目"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "目前"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "删除播放列表"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "背景播放"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "效果"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "现在购买"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "愿望列表"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "宽广"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "哇哇音"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "低音扬声器"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "颤音"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "点击两次以播放/暂停音乐。"
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "经过蓝牙"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "欢迎进入音乐设置向导。\n接下来的屏幕将帮助您配置您的手机。继续？"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "快捷列表"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "音效"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "全部"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "音量"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "已选择%d个曲目"
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "没有播客"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "查找类似"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "背景播放"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1声道仅在声音效果关闭时才可启动。"
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "播客"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "编辑图片"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "播放任何声音将停止并保存您的语音录制。是否播放？"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "已达到项目最大数量上限(%d)。"
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "蓝牙连接已断开"
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1声道仅在关闭声音效果时才能激活。"
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "拍照"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "显示音乐视图"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "暂停"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "播放专辑"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "排序方式"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "历史记录"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "隐藏音乐视图"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "查找标签"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox 内容"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "手机上的内容"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "更改图片"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "删除 Dropbox 数据"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "您可使用 AllShare 将您的音乐导入至设备。"
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "有效"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "类型"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "这将从服务器和任何已连接的设备删除文件。"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "艺术家"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "专辑艺术"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "其他内容"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "姓名太长"
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "音乐清晰"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "如果长时间用高音量收听，可能会损坏听力。"
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "可用于"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "音效仅在连接耳机时可用。"
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "添加至您的个人存储空间"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "自个人存储空间移除"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "上下文提示窗"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "上下文提示窗已打开。双击以关闭。"
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "重复一个"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "移动中…"
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "选择多达 %d 个项目"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "选项卡"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "更改播放器"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "标签"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "自动建议可从声音文件中提取最精彩的部分。"
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "父速率"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "找不到文件"
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "已储存来电铃声"
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "比特深度"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "大小"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d 已选择"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "添加曲目至该设备后，其将显示在此处。"
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "长度"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "将删除 1 个文件夹。"
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "无内容"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "文件夹"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "我的播放列表"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "声音播放器"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "设定"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "删除中.."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "将删除 1 首曲目。"
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "将删除所有曲目"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "将删除 %d 首曲目。"
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "将删除 1 个播放列表。"
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d 个播放列表将被删除。"
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "将删除 %d 个相册。"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d 位艺术家将被删除。"
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d个文件夹将被删除。"
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "连接失败"
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "古典"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "摇滚"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "爵士"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "流行"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "自动"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI 不支持当前音效。"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "蓝牙不支持声音效果。"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "线路输出不支持声音效果。"
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI不支持声音效果。"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "电子管功放"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "自定义"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "真空管"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d 首曲目已添加至播放列表"
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "已添加 1 首曲目至播放列表"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "将曲目添加至播放列表"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s 播放列表名称已使用。请输入其它名称。"
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "录制日期"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "曲目已设置为闹钟铃声"
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "未找到结果"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "默认铃声"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "曲目已设置为来电铃声"
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "曲目已设置为铃声"
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "添加至当前播放列表"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "均衡器设定将在播放音乐时应用"
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "提示"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "将删除 1 个相册。"
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD 卡"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "设备存储"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "播放列表名称已被使用"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "播放列表 %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "创建"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "均衡器预设"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "自动"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "古典"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "环境效果"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "不支持此文件类型。"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "在您创建播放列表后，将在此处显示。"
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "选择音频设备"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "播放列表名称已被使用。请输入其他名称。"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "当前播放列表"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "显示歌词"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "隐藏歌词"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "通话期间无法播放音乐。"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "删除"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "选择"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "无法播放曲目"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完成"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "删除"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "重命名"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "信息"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "确定"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "取消"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "刷新"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "全选"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "已删除"
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "停止"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "未知"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "标题"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "电子邮件"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "蓝牙"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "下载"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "电量低"
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "音频设备"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "详情"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "结束"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "编辑"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "已更新"
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "已移除"
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "已选择"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "扫描"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "出错"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "内存已满"
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "列表"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "音量"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "随机播放"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "重复"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "已达到文件最大尺寸。"
+

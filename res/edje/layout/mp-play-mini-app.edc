@@ -1,0 +1,3245 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define MULTI_WIN_TITLE_H	40
+#define MULTI_WIN_TITLE_AREA_H	67
+#define MULTI_WIN_TITLE_BOTTOM  10
+#define MULTI_WIN_PLAY_CONTROL_H 100
+
+#define MULTI_WIN0_APP_W	362
+#define MULTI_WIN0_APP_H	177
+
+#define MULTI_WIN1_APP_W	540
+#define MULTI_WIN1_APP_H	177
+
+#define MULTI_WIN2_APP_W	720
+#define MULTI_WIN2_APP_H	177
+
+#define MULTI_WIN3_APP_W	362
+#define MULTI_WIN3_APP_H	365
+#define MULTI_WIN3_ALBUM_W	348
+#define MULTI_WIN3_ALBUM_H	188
+
+#define MULTI_WIN4_APP_W	720
+#define MULTI_WIN4_APP_H	723
+#define MULTI_WIN4_ALBUM_W	706
+#define MULTI_WIN4_ALBUM_H	546
+
+
+#define CONTROL_BTN_W	54
+#define CONTROL_BTN_H	54
+#define CLOSE_BTN_W		50
+#define CLOSE_BTN_H		50
+
+#define CONTROL_BT_LEFT		108
+#define CONTROL_BT_CENTER	104
+#define CONTROL_BT_RIGHT	108
+#define CONTROL_BT_HIGH		72
+
+#define CONTROL_AREA_SY_WIN0		67/MULTI_WIN0_APP_H
+#define CONTROL_AREA_SY_WIN1		67/MULTI_WIN1_APP_H
+#define CONTROL_AREA_SY_WIN2		67/MULTI_WIN2_APP_H
+#define CONTROL_AREA_SY_WIN3		255/MULTI_WIN3_APP_H
+#define CONTROL_AREA_SY_WIN4		613/MULTI_WIN4_APP_H
+
+#define IMG_BG_CENTER		"multi_window/T02_mw_control_bg_center.png"
+#define IMG_BG_CENTER_PRESS	"multi_window/T02_mw_control_bg_center_press.png"
+#define IMG_BG_LEFT		"multi_window/T02_mw_control_bg_left.png"
+#define IMG_BG_LEFT_PRESS	"multi_window/T02_mw_control_bg_left_press.png"
+#define IMG_BG_RIGHT		"multi_window/T02_mw_control_bg_right.png"
+#define IMG_BG_RIGHT_PRESS	"multi_window/T02_mw_control_bg_right_press.png"
+#define IMG_ICON_FF		"multi_window/T02_mw_control_icon_ff.png"
+#define IMG_ICON_FF_DIM		"multi_window/T02_mw_control_icon_ff_dim.png"
+#define IMG_ICON_FF_PRESS	"multi_window/T02_mw_control_icon_ff_press.png"
+#define IMG_ICON_PAUSE		"multi_window/T02_mw_control_icon_pause.png"
+#define IMG_ICON_PAUSE_DIM	"multi_window/T02_mw_control_icon_pause_dim.png"
+#define IMG_ICON_PAUSE_PRESS	"multi_window/T02_mw_control_icon_pause_press.png"
+#define IMG_ICON_PLAY		"multi_window/T02_mw_control_icon_play.png"
+#define IMG_ICON_PLAY_DIM	"multi_window/T02_mw_control_icon_play_dim.png"
+#define IMG_ICON_PLAY_PRESS	"multi_window/T02_mw_control_icon_play_press.png"
+#define IMG_ICON_REW		"multi_window/T02_mw_control_icon_rew.png"
+#define IMG_ICON_REW_DIM	"multi_window/T02_mw_control_icon_rew_dim.png"
+#define IMG_ICON_REW_PRESS	"multi_window/T02_mw_control_icon_rew_press.png"
+#define IMG_MW_FRAME		"multi_window/T02_mw_frame.png"
+#define IMG_MW_FRAME_EDIT	"multi_window/T02_mw_frame_edit.png"
+#define IMG_ICON_CLOSE		"multi_window/T02_mw_icon_close.png"
+#define IMG_ICON_CLOSE_PRESS	"multi_window/T02_mw_icon_close_press.png"
+#define IMG_ICON_RESIZE		"multi_window/T02_mw_icon_resize.png"
+#define IMG_ICON_RESIZE_PRESS	"multi_window/T02_mw_icon_resize_press.png"
+#define IMG_ICON_RESIZE_BUTTON	"multi_window/T01-2_resize_controller.png"
+
+
+group { name: "mini-app-0";
+	images {
+		image: IMG_BG_CENTER COMP;
+		image: IMG_BG_CENTER_PRESS COMP;
+		image: IMG_BG_LEFT COMP;
+		image: IMG_BG_LEFT_PRESS COMP;
+		image: IMG_BG_RIGHT COMP;
+		image: IMG_BG_RIGHT_PRESS COMP;
+		image: IMG_ICON_FF COMP;
+		image: IMG_ICON_FF_DIM COMP;
+		image: IMG_ICON_FF_PRESS COMP;
+		image: IMG_ICON_PAUSE COMP;
+		image: IMG_ICON_PAUSE_DIM COMP;
+		image: IMG_ICON_PAUSE_PRESS COMP;
+		image: IMG_ICON_PLAY COMP;
+		image: IMG_ICON_PLAY_DIM COMP;
+		image: IMG_ICON_PLAY_PRESS COMP;
+		image: IMG_ICON_REW COMP;
+		image: IMG_ICON_REW_DIM COMP;
+		image: IMG_ICON_REW_PRESS COMP;
+		image: IMG_MW_FRAME COMP;
+		image: IMG_MW_FRAME_EDIT COMP;
+		image: IMG_ICON_CLOSE COMP;
+		image: IMG_ICON_CLOSE_PRESS COMP;
+		image: IMG_ICON_RESIZE COMP;
+		image: IMG_ICON_RESIZE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			scale: 1;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME;
+					border: 176 176 67 106;
+				}
+			}
+		}
+
+		part { name: "padding.inner.left";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 0 0;
+			}
+		}
+
+		part { name: "padding.inner.right";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 1; to: "bg"; offset: -7 0; }
+				rel2 { relative: 1 1; to: "bg"; offset: -7 0; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 1 1;
+			}
+		}
+
+		part { name: "title_area";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 19 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -19 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				fixed: 1 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.close";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area"; }
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_CLOSE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_CLOSE_PRESS;
+				}
+			}
+		}
+
+		part { name: "text.title";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			//effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 {relative:1 0; to: "icon.close"; offset: 6 0;}
+				rel2 { relative: 1 1; to: "title_area"; offset: -46 0; }
+				min: 0 40;
+				fixed: 0 1;
+				align: 0 0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part { name: "icon.resize";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "text.title"; offset: 6 0; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_RESIZE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_RESIZE_PRESS;
+				}
+			}
+		}
+
+		part { name: "title_touch";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 60 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -60 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 1;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				align: 0 0;
+			}
+		}
+
+		part { name: "title_bottom";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 0 10;
+				max: 0 10;
+				fixed: 0 1;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+		part { name: "thumb_nail";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible:0;
+			}
+		}
+
+		part { name: "control_area";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "title_bottom"; }
+				rel2 { relative: 1.0 1.0; to: "bg"; offset: -19 -10; }
+				//min: 320 72;
+				max: 540 72;
+				align: 0.5 0.5;
+				visible: 0;
+			}
+		}
+
+		part { name: "albumart";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "event_box";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "albumart";
+				rel2 { relative: 1 0; to: "control_area"; }
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "rew_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "control_area"; }
+				rel2 { relative: 0.33 1; to: "control_area"; offset: 4 0; }
+				//min: CONTROL_BT_LEFT CONTROL_BT_HIGH;
+				max: 164 72;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_LEFT;
+					border: 36 2 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_LEFT_PRESS;
+					border: 36 2 0 0;
+				}
+			}
+		}
+
+		part { name: "rew_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "rew_btn_bg";
+				rel2.to: "rew_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				image { normal: IMG_ICON_REW;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_REW_PRESS;
+				}
+			}
+		}
+
+		part { name: "play_pause_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "rew_btn_bg"; }
+				rel2 { relative: 0 1; to: "ff_btn_bg"; }
+				//min: CONTROL_BT_CENTER CONTROL_BT_HIGH;
+				max: 160 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_CENTER;
+					border: 19 19 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_CENTER_PRESS;
+					border: 19 19 0 0;
+				}
+			}
+		}
+
+		part { name: "play_default_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PLAY;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_PLAY_PRESS;
+				}
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "play_pause_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+
+			description { state: "hide" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PAUSE;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "hide" 0.0;
+				image { normal: IMG_ICON_PAUSE_PRESS;
+				}
+			}
+
+		}
+
+		part { name: "ff_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.66 0; to: "control_area"; offset: -4 0;}
+				rel2 { relative: 1 1; to: "control_area"; }
+				//min: CONTROL_BT_RIGHT CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_RIGHT;
+					border: 2 36 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_RIGHT_PRESS;
+					border: 2 36 0 0;
+				}
+			}
+		}
+
+		part { name: "ff_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "ff_btn_bg";
+				rel2.to: "ff_btn_bg";
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				image { normal: IMG_ICON_FF;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_FF_PRESS;
+				}
+			}
+		}
+
+		part { name: "bg_edit";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME_EDIT;
+					border: 176 176 67 106;
+				}
+				visible: 1;
+			}
+		}
+
+		part { name: "size_bt";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				min: 36 36;
+				max: 36 36;
+				fixed: 1 1;
+				rel1 { relative: 1 1; to: "bg"; offset: -43 -46; }
+				rel2 { relative: 1 1; to: "bg"; }
+				//image { normal: IMG_ICON_RESIZE_BUTTON;}
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+
+		program { name: "pgm_exit_btn_clicked";
+			signal: "mouse,clicked,1";
+			source: "icon.close";
+			action: SIGNAL_EMIT "sig_exit_btn_clicked" "edje";
+		}
+
+		program { name: "pgm_full_screen_up";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: SIGNAL_EMIT "sig_full_screen_up" "icon.resize";
+		}
+
+		program { name: "pgm_size_btn_down";
+			signal: "mouse,down,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_down" "size_bt";
+		}
+
+		program { name: "pgm_size_btn_up";
+			signal: "mouse,up,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_up" "size_bt";
+		}
+
+		program { name: "pgm_exit_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "press" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_exit_btn_press";
+			signal: "mouse,up,1";
+			source: "icon.close";
+			action: STATE_SET "default" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_resize_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "press" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_resize_btn_down";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: STATE_SET "default" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_down" "rew_btn";
+		}
+
+		program { name: "pgm_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_up" "rew_btn";
+		}
+
+		program { name: "pgm_play_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_clicked";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: SIGNAL_EMIT "sig_play_pause_btn_clicked" "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_down";
+			signal: "mouse,down,1";
+			source: "play_default_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_default_btn";
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_down";
+			signal: "mouse,down,1";
+			source: "play_pause_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_pause_btn_bg";
+		   	target: "play_pause_btn";
+		}
+
+		program { name: "pgm_play_pause_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_down" "ff_btn";
+		}
+
+		program { name: "pgm_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_up" "ff_btn";
+		}
+
+		program { name: "pgm_play_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: STATE_SET "press" 0.0;
+			target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "pgm_play_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   action: STATE_SET "hide" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_bg_edit_default";
+		   signal: "bg_edit_hide";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_bg_edit_show";
+		   signal: "bg_edit_show";
+		   source: "*";
+		   action: STATE_SET "show" 0.0;
+		   target: "bg_edit";
+		}
+	}
+}
+
+
+
+group { name: "mini-app-1";
+	images {
+		image: IMG_BG_CENTER COMP;
+		image: IMG_BG_CENTER_PRESS COMP;
+		image: IMG_BG_LEFT COMP;
+		image: IMG_BG_LEFT_PRESS COMP;
+		image: IMG_BG_RIGHT COMP;
+		image: IMG_BG_RIGHT_PRESS COMP;
+		image: IMG_ICON_FF COMP;
+		image: IMG_ICON_FF_DIM COMP;
+		image: IMG_ICON_FF_PRESS COMP;
+		image: IMG_ICON_PAUSE COMP;
+		image: IMG_ICON_PAUSE_DIM COMP;
+		image: IMG_ICON_PAUSE_PRESS COMP;
+		image: IMG_ICON_PLAY COMP;
+		image: IMG_ICON_PLAY_DIM COMP;
+		image: IMG_ICON_PLAY_PRESS COMP;
+		image: IMG_ICON_REW COMP;
+		image: IMG_ICON_REW_DIM COMP;
+		image: IMG_ICON_REW_PRESS COMP;
+		image: IMG_MW_FRAME COMP;
+		image: IMG_MW_FRAME_EDIT COMP;
+		image: IMG_ICON_CLOSE COMP;
+		image: IMG_ICON_CLOSE_PRESS COMP;
+		image: IMG_ICON_RESIZE COMP;
+		image: IMG_ICON_RESIZE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME;
+					border: 176 176 67 106;
+				}
+			}
+		}
+
+		part { name: "padding.inner.left";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 0 0;
+			}
+		}
+
+
+		part { name: "padding.inner.right";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 1; to: "bg"; offset: -7 0; }
+				rel2 { relative: 1 1; to: "bg"; offset: -7 0; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 1 1;
+			}
+		}
+
+		part { name: "title_area";
+			type : SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 19 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -19 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				fixed: 1 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.close";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area"; }
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_CLOSE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_CLOSE_PRESS;
+				}
+			}
+		}
+
+		part { name: "text.title";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			//effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 {relative:1 0; to: "icon.close"; offset: 6 0;}
+				rel2 { relative: 1 1; to: "title_area"; offset: -46 0; }
+				min: 0 40;
+				fixed: 0 1;
+				align: 0 0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part { name: "icon.resize";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "text.title"; offset: 6 0; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_RESIZE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_RESIZE_PRESS;
+				}
+			}
+		}
+
+		part { name: "title_touch";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 60 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -60 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 1;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				align: 0 0;
+			}
+		}
+
+
+		part { name: "title_bottom";
+			type : SPACER;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 0 10;
+				max: 0 10;
+				fixed: 0 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "thumb_nail";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible:0;
+			}
+		}
+
+		part { name: "control_area";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "title_bottom"; }
+				rel2 { relative: 1.0 1.0; to: "bg"; offset: 0 -10; }
+				//min: 488 72;
+				max: 488 72;
+				align: 0.5 0.5;
+				visible: 0;
+			}
+		}
+
+		part { name: "albumart";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "event_box";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "albumart";
+				rel2 { relative: 1 0; to: "control_area"; }
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "rew_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "control_area"; }
+				rel2 { relative: 1 1; to: "control_area"; }
+				min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_LEFT;
+					border: 36 2 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_LEFT_PRESS;
+					border: 36 2 0 0;
+				}
+			}
+		}
+
+		part { name: "rew_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "rew_btn_bg";
+				rel2.to: "rew_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				image { normal: IMG_ICON_REW;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_REW_PRESS;
+				}
+			}
+		}
+
+		part { name: "play_pause_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "rew_btn_bg"; }
+				rel2 { relative: 1 1; to: "rew_btn_bg"; }
+				min: 160 CONTROL_BT_HIGH;
+				max: 160 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_CENTER;
+					border: 19 19 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_CENTER_PRESS;
+					border: 19 19 0 0;
+				}
+			}
+		}
+
+		part { name: "play_default_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PLAY;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_PLAY_PRESS;
+				}
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "play_pause_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+
+			description { state: "hide" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PAUSE;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "hide" 0.0;
+				image { normal: IMG_ICON_PAUSE_PRESS;
+				}
+			}
+
+		}
+
+		part { name: "ff_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "play_pause_btn_bg"; }
+				rel2 { relative: 1 1; to: "play_pause_btn_bg"; }
+				min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_RIGHT;
+					border: 2 36 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_RIGHT_PRESS;
+					border: 2 36 0 0;
+				}
+			}
+		}
+
+		part { name: "ff_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "ff_btn_bg";
+				rel2.to: "ff_btn_bg";
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				image { normal: IMG_ICON_FF;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_FF_PRESS;
+				}
+			}
+		}
+
+		part { name: "bg_edit";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME_EDIT;
+					border: 176 176 67 106;
+				}
+				visible: 1;
+			}
+		}
+
+		part { name: "size_bt";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				min: 36 36;
+				max: 36 36;
+				fixed: 1 1;
+				rel1 { relative: 1 1; to: "bg"; offset: -43 -46; }
+				rel2 { relative: 1 1; to: "bg"; }
+				//image { normal: IMG_ICON_RESIZE_BUTTON;}
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+
+		program { name: "pgm_exit_btn_clicked";
+			signal: "mouse,clicked,1";
+			source: "icon.close";
+			action: SIGNAL_EMIT "sig_exit_btn_clicked" "edje";
+		}
+
+		program { name: "pgm_full_screen_up";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: SIGNAL_EMIT "sig_full_screen_up" "icon.resize";
+		}
+
+		program { name: "pgm_size_btn_down";
+			signal: "mouse,down,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_down" "size_bt";
+		}
+
+		program { name: "pgm_size_btn_up";
+			signal: "mouse,up,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_up" "size_bt";
+		}
+
+		program { name: "pgm_exit_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "default" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_exit_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "press" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_resize_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "press" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_resize_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "default" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_down" "rew_btn";
+		}
+
+		program { name: "pgm_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_up" "rew_btn";
+		}
+
+		program { name: "pgm_play_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_clicked";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: SIGNAL_EMIT "sig_play_pause_btn_clicked" "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_down";
+			signal: "mouse,down,1";
+			source: "play_default_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_default_btn";
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_down";
+			signal: "mouse,down,1";
+			source: "play_pause_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_pause_btn_bg";
+		   	target: "play_pause_btn";
+		}
+
+		program { name: "pgm_play_pause_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_down" "ff_btn";
+		}
+
+		program { name: "pgm_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_up" "ff_btn";
+		}
+
+		program { name: "pgm_play_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: STATE_SET "press" 0.0;
+			target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "pgm_play_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_bg_edit_default";
+		   signal: "bg_edit_hide";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_bg_edit_show";
+		   signal: "bg_edit_show";
+		   source: "*";
+		   action: STATE_SET "show" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   action: STATE_SET "hide" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+	}
+}
+
+
+group { name: "mini-app-2";
+	images {
+		image: IMG_BG_CENTER COMP;
+		image: IMG_BG_CENTER_PRESS COMP;
+		image: IMG_BG_LEFT COMP;
+		image: IMG_BG_LEFT_PRESS COMP;
+		image: IMG_BG_RIGHT COMP;
+		image: IMG_BG_RIGHT_PRESS COMP;
+		image: IMG_ICON_FF COMP;
+		image: IMG_ICON_FF_DIM COMP;
+		image: IMG_ICON_FF_PRESS COMP;
+		image: IMG_ICON_PAUSE COMP;
+		image: IMG_ICON_PAUSE_DIM COMP;
+		image: IMG_ICON_PAUSE_PRESS COMP;
+		image: IMG_ICON_PLAY COMP;
+		image: IMG_ICON_PLAY_DIM COMP;
+		image: IMG_ICON_PLAY_PRESS COMP;
+		image: IMG_ICON_REW COMP;
+		image: IMG_ICON_REW_DIM COMP;
+		image: IMG_ICON_REW_PRESS COMP;
+		image: IMG_MW_FRAME COMP;
+		image: IMG_MW_FRAME_EDIT COMP;
+		image: IMG_ICON_CLOSE COMP;
+		image: IMG_ICON_CLOSE_PRESS COMP;
+		image: IMG_ICON_RESIZE COMP;
+		image: IMG_ICON_RESIZE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME;
+					border: 176 176 67 106;
+				}
+			}
+		}
+
+		part { name: "padding.inner.left";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+
+		part { name: "padding.inner.right";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 1; to: "bg"; offset: -7 0; }
+				rel2 { relative: 1 1; to: "bg"; offset: -7 0; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 1 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "title_area";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 19 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -19 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 0;
+				fixed: 1 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.close";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area"; }
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_CLOSE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_CLOSE_PRESS;
+				}
+			}
+		}
+
+		part { name: "text.title";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			//effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 {relative:1 0; to: "icon.close"; offset: 6 0;}
+				rel2 { relative: 1 1; to: "title_area"; offset: -46 0; }
+				min: 0 40;
+				fixed: 0 1;
+				align: 0 0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part { name: "icon.resize";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "text.title"; offset: 6 0; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_RESIZE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_RESIZE_PRESS;
+				}
+			}
+		}
+
+		part { name: "title_touch";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 60 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -60 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 1;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				align: 0 0;
+			}
+		}
+
+
+		part { name: "title_bottom";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 0 10;
+				max: 0 10;
+				fixed: 0 1;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+		part { name: "thumb_nail";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 42/720 0; to: "bg"; offset: 0 67;}
+				rel2 { relative: 132/170 1.0; to: "bg"; offset: 0 -10;}
+				min: 90 90;
+				max: 90 90;
+				fixed: 1 1;
+				align: 0 0.5;
+				visible: 1;
+			}
+		}
+
+		part { name: "control_area";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 182/720 0.0; to: "bg"; offset: 0 67; }
+				rel2 { relative: 1.0 1.0; to: "bg"; offset: -50 -10; }
+				//min: 540 72;
+				max: 720 72;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				visible: 0;
+			}
+		}
+
+		part { name: "albumart";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+		}
+
+/*
+		part { name: "text.artist";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "text.title"; }
+				rel2 { relative: 1 1; to: "text_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0 0;
+				text {
+					font: "SLP";
+					style: "Roman";
+					size: 20;
+					align: 0 0.5;
+				}
+				color: 255 255 255 255;
+			}
+		}
+*/
+		part { name: "event_box";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "albumart";
+				rel2 { relative: 1 0; to: "control_area"; }
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "rew_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "control_area"; }
+				rel2 { relative: 0.33 1; to: "control_area"; offset: 4 0; }
+				//min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 0 1;
+				align: 0 0;
+				image { normal: IMG_BG_LEFT;
+					border: 36 2 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_LEFT_PRESS;
+					border: 36 2 0 0;
+				}
+			}
+		}
+
+		part { name: "rew_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "rew_btn_bg";
+				rel2.to: "rew_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				image { normal: IMG_ICON_REW;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_REW_PRESS;
+				}
+			}
+		}
+
+		part { name: "play_pause_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "rew_btn_bg"; }
+				rel2 { relative: 0 1; to: "ff_btn_bg"; }
+				//min: 160 CONTROL_BT_HIGH;
+				max: 160 CONTROL_BT_HIGH;
+				fixed: 0 1;
+				align: 0 0;
+				image { normal: IMG_BG_CENTER;
+					border: 19 19 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_CENTER_PRESS;
+					border: 19 19 0 0;
+				}
+			}
+		}
+
+		part { name: "play_default_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PLAY;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_PLAY_PRESS;
+				}
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "play_pause_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+
+			description { state: "hide" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PAUSE;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "hide" 0.0;
+				image { normal: IMG_ICON_PAUSE_PRESS;
+				}
+			}
+
+		}
+
+		part { name: "ff_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.66 0; to: "control_area"; offset: -4 0;}
+				rel2 { relative: 1 1; to: "control_area";  }
+				//min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 0 1;
+				align: 0 0;
+				image { normal: IMG_BG_RIGHT;
+					border: 2 36 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_RIGHT_PRESS;
+					border: 2 36 0 0;
+				}
+			}
+		}
+
+		part { name: "ff_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "ff_btn_bg";
+				rel2.to: "ff_btn_bg";
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				image { normal: IMG_ICON_FF;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_FF_PRESS;
+				}
+			}
+		}
+
+		part { name: "bg_edit";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME_EDIT;
+					border: 176 176 67 106;
+				}
+				visible: 1;
+			}
+		}
+
+		part { name: "size_bt";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				min: 36 36;
+				max: 36 36;
+				fixed: 1 1;
+				rel1 { relative: 1 1; to: "bg"; offset: -43 -46; }
+				rel2 { relative: 1 1; to: "bg"; }
+				//image { normal: IMG_ICON_RESIZE_BUTTON;}
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+
+		program { name: "pgm_exit_btn_clicked";
+			signal: "mouse,clicked,1";
+			source: "icon.close";
+			action: SIGNAL_EMIT "sig_exit_btn_clicked" "edje";
+		}
+
+		program { name: "pgm_full_screen_up";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: SIGNAL_EMIT "sig_full_screen_up" "icon.resize";
+		}
+
+		program { name: "pgm_size_btn_down";
+			signal: "mouse,down,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_down" "size_bt";
+		}
+
+		program { name: "pgm_size_btn_up";
+			signal: "mouse,up,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_up" "size_bt";
+		}
+
+		program { name: "pgm_exit_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "default" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_exit_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "press" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_resize_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "press" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_resize_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "default" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_down" "rew_btn";
+		}
+
+		program { name: "pgm_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_up" "rew_btn";
+		}
+
+		program { name: "pgm_play_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_clicked";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: SIGNAL_EMIT "sig_play_pause_btn_clicked" "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_down";
+			signal: "mouse,down,1";
+			source: "play_default_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_default_btn";
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_down";
+			signal: "mouse,down,1";
+			source: "play_pause_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_pause_btn_bg";
+		   	target: "play_pause_btn";
+		}
+
+		program { name: "pgm_play_pause_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_down" "ff_btn";
+		}
+
+		program { name: "pgm_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_up" "ff_btn";
+		}
+
+		program { name: "pgm_play_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: STATE_SET "press" 0.0;
+			target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "pgm_play_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_bg_edit_default";
+		   signal: "bg_edit_hide";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_bg_edit_show";
+		   signal: "bg_edit_show";
+		   source: "*";
+		   action: STATE_SET "show" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   action: STATE_SET "hide" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+	}
+}
+
+
+
+group { name: "mini-app-3";
+	images {
+		image: IMG_BG_CENTER COMP;
+		image: IMG_BG_CENTER_PRESS COMP;
+		image: IMG_BG_LEFT COMP;
+		image: IMG_BG_LEFT_PRESS COMP;
+		image: IMG_BG_RIGHT COMP;
+		image: IMG_BG_RIGHT_PRESS COMP;
+		image: IMG_ICON_FF COMP;
+		image: IMG_ICON_FF_DIM COMP;
+		image: IMG_ICON_FF_PRESS COMP;
+		image: IMG_ICON_PAUSE COMP;
+		image: IMG_ICON_PAUSE_DIM COMP;
+		image: IMG_ICON_PAUSE_PRESS COMP;
+		image: IMG_ICON_PLAY COMP;
+		image: IMG_ICON_PLAY_DIM COMP;
+		image: IMG_ICON_PLAY_PRESS COMP;
+		image: IMG_ICON_REW COMP;
+		image: IMG_ICON_REW_DIM COMP;
+		image: IMG_ICON_REW_PRESS COMP;
+		image: IMG_MW_FRAME COMP;
+		image: IMG_MW_FRAME_EDIT COMP;
+		image: IMG_ICON_CLOSE COMP;
+		image: IMG_ICON_CLOSE_PRESS COMP;
+		image: IMG_ICON_RESIZE COMP;
+		image: IMG_ICON_RESIZE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME;
+					border: 176 176 67 106;
+				}
+			}
+		}
+
+		part { name: "padding.inner.left";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+
+		part { name: "padding.inner.right";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 1; to: "bg"; offset: -7 0; }
+				rel2 { relative: 1 1; to: "bg"; offset: -7 0; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 1 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "title_area";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 19 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -19 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 0;
+				fixed: 1 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.close";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area"; }
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_CLOSE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_CLOSE_PRESS;
+				}
+			}
+		}
+
+		part { name: "text.title";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			//effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 {relative:1 0; to: "icon.close"; offset: 6 0;}
+				rel2 { relative: 1 1; to: "title_area"; offset: -46 0; }
+				min: 0 40;
+				fixed: 0 1;
+				align: 0 0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part { name: "icon.resize";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "text.title"; offset: 6 0; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_RESIZE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_RESIZE_PRESS;
+				}
+			}
+		}
+
+		part { name: "title_touch";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 60 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -60 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 1;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				align: 0 0;
+			}
+		}
+
+
+		part { name: "title_bottom";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 0 10;
+				max: 0 10;
+				fixed: 0 1;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+		part { name: "thumb_nail";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible:0;
+			}
+		}
+
+		part { name: "control_area";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1; to, "bg"; offset: 0 -100; }
+				rel2 { relative: 1.0 1.0; to, "bg"; offset: 0 -10; }
+				min: 320 72;
+				max: 320 72;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "albumart_bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1;
+				       to_y: "title_bottom"; offset: 7 0;}
+				rel2 { relative: 1 1;
+				       to: "bg"; offset: -8 -110;}
+				min: 0 0;
+				max: 720 99999;
+				fixed: 0 0;
+				align: 0.5 0.5;
+				visible: 0;
+			}
+		}
+
+		part { name: "albumart";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0;
+				       to: "albumart_bg";}
+				rel2 { relative: 1 1;
+				       to: "albumart_bg";}
+				align: 0.5 0.5;
+				visible: 1;
+			}
+		}
+
+/*
+		part { name: "text.artist";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "text.title"; }
+				rel2 { relative: 1 1; to: "text_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0 0;
+				text {
+					font: "SLP";
+					style: "Roman";
+					size: 20;
+					align: 0 0.5;
+				}
+				color: 255 255 255 255;
+			}
+		}
+*/
+
+		part { name: "rew_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "control_area"; }
+				rel2 { relative: 1 1; to: "control_area"; }
+				min: CONTROL_BT_LEFT CONTROL_BT_HIGH;
+				max: CONTROL_BT_LEFT CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_LEFT;
+					border: 36 2 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_LEFT_PRESS;
+					border: 36 2 0 0;
+				}
+			}
+		}
+
+		part { name: "rew_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "rew_btn_bg";
+				rel2.to: "rew_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				image { normal: IMG_ICON_REW;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_REW_PRESS;
+				}
+			}
+		}
+
+		part { name: "play_pause_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "rew_btn_bg"; }
+				rel2 { relative: 1 1; to: "rew_btn_bg"; }
+				min: CONTROL_BT_CENTER CONTROL_BT_HIGH;
+				max: CONTROL_BT_CENTER CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_CENTER;
+					border: 19 19 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_CENTER_PRESS;
+					border: 19 19 0 0;
+				}
+			}
+		}
+
+		part { name: "play_default_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PLAY;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_PLAY_PRESS;
+				}
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "play_pause_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+
+			description { state: "hide" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PAUSE;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "hide" 0.0;
+				image { normal: IMG_ICON_PAUSE_PRESS;
+				}
+			}
+
+		}
+
+		part { name: "ff_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "play_pause_btn_bg"; }
+				rel2 { relative: 1 1; to: "play_pause_btn_bg"; }
+				min: CONTROL_BT_LEFT CONTROL_BT_HIGH;
+				max: CONTROL_BT_LEFT CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_RIGHT;
+					border: 2 36 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_RIGHT_PRESS;
+					border: 2 36 0 0;
+				}
+			}
+		}
+
+		part { name: "ff_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "ff_btn_bg";
+				rel2.to: "ff_btn_bg";
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				image { normal: IMG_ICON_FF;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_FF_PRESS;
+				}
+			}
+		}
+
+		part { name: "event_box";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "albumart";
+				rel2.to: "albumart";
+			}
+		}
+
+		part { name: "bg_edit";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME_EDIT;
+					border: 176 176 67 106;
+				}
+				visible: 1;
+			}
+		}
+
+		part { name: "size_bt";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				min: 36 36;
+				max: 36 36;
+				fixed: 1 1;
+				rel1 { relative: 1 1; to: "bg"; offset: -43 -46; }
+				rel2 { relative: 1 1; to: "bg"; }
+				//image { normal: IMG_ICON_RESIZE_BUTTON;}
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+
+		program { name: "pgm_exit_btn_clicked";
+			signal: "mouse,clicked,1";
+			source: "icon.close";
+			action: SIGNAL_EMIT "sig_exit_btn_clicked" "edje";
+		}
+
+		program { name: "pgm_full_screen_up";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: SIGNAL_EMIT "sig_full_screen_up" "icon.resize";
+		}
+
+		program { name: "pgm_size_btn_down";
+			signal: "mouse,down,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_down" "size_bt";
+		}
+
+		program { name: "pgm_size_btn_up";
+			signal: "mouse,up,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_up" "size_bt";
+		}
+
+		program { name: "pgm_exit_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "default" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_exit_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "press" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_resize_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "press" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_resize_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "default" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_down" "rew_btn";
+		}
+
+		program { name: "pgm_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_up" "rew_btn";
+		}
+
+		program { name: "pgm_play_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_clicked";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: SIGNAL_EMIT "sig_play_pause_btn_clicked" "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_down";
+			signal: "mouse,down,1";
+			source: "play_default_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_default_btn";
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_down";
+			signal: "mouse,down,1";
+			source: "play_pause_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_pause_btn_bg";
+		   	target: "play_pause_btn";
+		}
+
+		program { name: "pgm_play_pause_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_down" "ff_btn";
+		}
+
+		program { name: "pgm_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_up" "ff_btn";
+		}
+
+		program { name: "pgm_play_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: STATE_SET "press" 0.0;
+			target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "pgm_play_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_bg_edit_default";
+		   signal: "bg_edit_hide";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_bg_edit_show";
+		   signal: "bg_edit_show";
+		   source: "*";
+		   action: STATE_SET "show" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   action: STATE_SET "hide" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+	}
+}
+
+
+
+group { name: "mini-app-4";
+	images {
+		image: IMG_BG_CENTER COMP;
+		image: IMG_BG_CENTER_PRESS COMP;
+		image: IMG_BG_LEFT COMP;
+		image: IMG_BG_LEFT_PRESS COMP;
+		image: IMG_BG_RIGHT COMP;
+		image: IMG_BG_RIGHT_PRESS COMP;
+		image: IMG_ICON_FF COMP;
+		image: IMG_ICON_FF_DIM COMP;
+		image: IMG_ICON_FF_PRESS COMP;
+		image: IMG_ICON_PAUSE COMP;
+		image: IMG_ICON_PAUSE_DIM COMP;
+		image: IMG_ICON_PAUSE_PRESS COMP;
+		image: IMG_ICON_PLAY COMP;
+		image: IMG_ICON_PLAY_DIM COMP;
+		image: IMG_ICON_PLAY_PRESS COMP;
+		image: IMG_ICON_REW COMP;
+		image: IMG_ICON_REW_DIM COMP;
+		image: IMG_ICON_REW_PRESS COMP;
+		image: IMG_MW_FRAME COMP;
+		image: IMG_MW_FRAME_EDIT COMP;
+		image: IMG_ICON_CLOSE COMP;
+		image: IMG_ICON_CLOSE_PRESS COMP;
+		image: IMG_ICON_RESIZE COMP;
+		image: IMG_ICON_RESIZE_PRESS COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME;
+					border: 176 176 67 106;
+				}
+			}
+		}
+
+		part { name: "padding.inner.left";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+
+		part { name: "padding.inner.right";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 1; to: "bg"; offset: -7 0; }
+				rel2 { relative: 1 1; to: "bg"; offset: -7 0; }
+				min: 7 0;
+				max: 7 0;
+				fixed: 1 0;
+				align: 1 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "title_area";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 19 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -19 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 0;
+				fixed: 1 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.close";
+			type: IMAGE;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area"; }
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_CLOSE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_CLOSE_PRESS;
+				}
+			}
+		}
+
+		part { name: "text.title";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			//effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 {relative:1 0; to: "icon.close"; offset: 6 0;}
+				rel2 { relative: 1 1; to: "title_area"; offset: -46 0; }
+				min: 0 40;
+				fixed: 0 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "icon.resize";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "text.title"; offset: 6 0; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 40 40;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_ICON_RESIZE;}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_RESIZE_PRESS;
+				}
+			}
+		}
+
+		part { name: "title_touch";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; offset: 60 17;}
+				rel2 { relative: 1 0; to: "bg"; offset: -60 57;}
+				min: 0 MULTI_WIN_TITLE_H;
+				visible: 1;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				align: 0 0;
+			}
+		}
+
+
+		part { name: "title_bottom";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "title_area"; }
+				rel2 { relative: 1 1; to: "title_area";}
+				min: 0 10;
+				max: 0 10;
+				fixed: 0 1;
+				align: 0 0;
+				visible: 0;
+			}
+		}
+
+		part { name: "thumb_nail";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible:0;
+			}
+		}
+
+		part { name: "albumart";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1 ;
+				       to_y: "title_bottom"; offset: 7 0;}
+				rel2 { relative: 1 1; to: "bg"; offset: -8 -110; }
+				//min: 706 546;
+				max: 720 723;
+				//fixed: 1 1;
+				align: 0 0;
+				visible: 1;
+			}
+		}
+
+
+		part {
+			name: "lrc_area";
+			mouse_events: 1;
+			repeat_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 1;
+				rel1 {
+					relative: 0 0;
+					to: "albumart";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "albumart";
+				}
+				color: 0 0 0 0;
+			}
+			description {
+				state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+		part {
+			name: "lrc_bg";
+			mouse_events: 1;
+			repeat_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible: 0;
+				rel1 {
+					relative: 0 0;
+					to: "lrc_area";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "lrc_area";
+				}
+				color: 248 246 239 204;
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+
+		part {
+			name: "lrc";
+			type: SWALLOW;
+			mouse_events: 1;
+			repeat_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				rel1 {
+					relative: 0 0;
+					to: "lrc_bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "lrc_bg";
+				}
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+
+
+		part { name: "control_area";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1; to: "albumart"; offset: -7 0; }
+				rel2 { relative: 1.0 1; to: "bg"; offset: 0 -10; }
+				min: 488 72;
+				max: 488 72;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				color: 0 0 0 0;
+				visible: 1;
+			}
+		}
+
+/*
+		part { name: "text.artist";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 1;
+			effect: SOFT_SHADOW BOTTOM_RIGHT;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "text.title"; }
+				rel2 { relative: 1 1; to: "text_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0 0;
+				text {
+					font: "SLP";
+					style: "Roman";
+					size: 20;
+					align: 0 0.5;
+				}
+				color: 255 255 255 255;
+			}
+		}
+*/
+
+
+		part { name: "rew_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "control_area"; }
+				rel2 { relative: 1 1; to: "control_area"; }
+				min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_LEFT;
+					border: 36 2 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_LEFT_PRESS;
+					border: 36 2 0 0;
+				}
+			}
+		}
+
+		part { name: "rew_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "rew_btn_bg";
+				rel2.to: "rew_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				image { normal: IMG_ICON_REW;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_REW_PRESS;
+				}
+			}
+		}
+
+		part { name: "play_pause_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "rew_btn_bg"; }
+				rel2 { relative: 1 1; to: "rew_btn_bg"; }
+				min: 160 CONTROL_BT_HIGH;
+				max: 160 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_CENTER;
+					border: 19 19 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_CENTER_PRESS;
+					border: 19 19 0 0;
+				}
+			}
+		}
+
+		part { name: "play_default_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PLAY;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_PLAY_PRESS;
+				}
+			}
+			description { state: "hide" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "play_pause_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+
+			description { state: "hide" 0.0;
+				rel1.to: "play_pause_btn_bg";
+				rel2.to: "play_pause_btn_bg";
+				align: 0.5 0.5;
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				visible: 1;
+				image { normal: IMG_ICON_PAUSE;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "hide" 0.0;
+				image { normal: IMG_ICON_PAUSE_PRESS;
+				}
+			}
+
+		}
+
+		part { name: "ff_btn_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "play_pause_btn_bg"; }
+				rel2 { relative: 1 1; to: "play_pause_btn_bg"; }
+				min: 164 CONTROL_BT_HIGH;
+				max: 164 CONTROL_BT_HIGH;
+				fixed: 1 1;
+				align: 0 0;
+				image { normal: IMG_BG_RIGHT;
+					border: 2 36 0 0;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_BG_RIGHT_PRESS;
+					border: 2 36 0 0;
+				}
+			}
+		}
+
+		part { name: "ff_btn";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "ff_btn_bg";
+				rel2.to: "ff_btn_bg";
+				min: 40 40;
+				max: 40 40;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				image { normal: IMG_ICON_FF;
+				}
+			}
+			description { state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_ICON_FF_PRESS;
+				}
+			}
+		}
+
+		part { name: "event_box";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "albumart";
+				rel2.to: "albumart";
+			}
+		}
+
+		part { name: "bg_edit";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				rel1 { relative: 0 0; }
+				rel2 { relative: 1 1;}
+				image { normal: IMG_MW_FRAME_EDIT;
+					border: 176 176 67 106;
+				}
+				visible: 1;
+			}
+		}
+
+		part { name: "size_bt";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				min: 36 36;
+				max: 36 36;
+				fixed: 1 1;
+				rel1 { relative: 1 1; to: "bg"; offset: -43 -46; }
+				rel2 { relative: 1 1; to: "bg"; }
+				//image { normal: IMG_ICON_RESIZE_BUTTON;}
+				color: 0 0 0 0;
+			}
+		}
+	}
+
+	programs {
+
+		program { name: "pgm_exit_btn_clicked";
+			signal: "mouse,clicked,1";
+			source: "icon.close";
+			action: SIGNAL_EMIT "sig_exit_btn_clicked" "edje";
+		}
+
+		program { name: "pgm_full_screen_up";
+			signal: "mouse,up,1";
+			source: "icon.resize";
+			action: SIGNAL_EMIT "sig_full_screen_up" "icon.resize";
+		}
+
+		program { name: "pgm_size_btn_down";
+			signal: "mouse,down,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_down" "size_bt";
+		}
+
+		program { name: "pgm_size_btn_up";
+			signal: "mouse,up,1";
+			source: "size_bt";
+			action: SIGNAL_EMIT "sig_size_bt_btn_up" "size_bt";
+		}
+
+		program { name: "pgm_exit_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "default" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_exit_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.close";
+			action: STATE_SET "press" 0.0;
+			target: "icon.close";
+		}
+
+		program { name: "pgm_resize_btn_press";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "press" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_resize_btn_down";
+			signal: "mouse,down,1";
+			source: "icon.resize";
+			action: STATE_SET "default" 0.0;
+			target: "icon.resize";
+		}
+
+		program { name: "pgm_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_down" "rew_btn";
+		}
+
+		program { name: "pgm_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: SIGNAL_EMIT "sig_rew_btn_up" "rew_btn";
+		}
+
+		program { name: "pgm_play_rew_down";
+			signal: "mouse,down,1";
+			source: "rew_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_rew_up";
+			signal: "mouse,up,1";
+			source: "rew_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "rew_btn";
+		   	target: "rew_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_clicked";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: SIGNAL_EMIT "sig_play_pause_btn_clicked" "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_down";
+			signal: "mouse,down,1";
+			source: "play_default_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_default_btn";
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_default_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_play_pause_down";
+			signal: "mouse,down,1";
+			source: "play_pause_btn";
+			action: STATE_SET "press" 0.0;
+		   	target: "play_pause_btn_bg";
+		   	target: "play_pause_btn";
+		}
+
+		program { name: "pgm_play_pause_up";
+			signal: "mouse,up,1";
+			source: "play_pause_btn_bg";
+			action: STATE_SET "default" 0.0;
+		   	target: "play_pause_btn_bg";
+		}
+
+		program { name: "pgm_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_down" "ff_btn";
+		}
+
+		program { name: "pgm_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: SIGNAL_EMIT "sig_ff_btn_up" "ff_btn";
+		}
+
+		program { name: "pgm_play_ff_down";
+			signal: "mouse,down,1";
+			source: "ff_btn";
+			action: STATE_SET "press" 0.0;
+			target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "pgm_play_ff_up";
+			signal: "mouse,up,1";
+			source: "ff_btn";
+			action: STATE_SET "default" 0.0;
+		   	target: "ff_btn";
+		   	target: "ff_btn_bg";
+		}
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program { name: "set_bg_edit_default";
+		   signal: "bg_edit_hide";
+		   source: "*";
+		   action: STATE_SET "default" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_bg_edit_show";
+		   signal: "bg_edit_show";
+		   source: "*";
+		   action: STATE_SET "show" 0.0;
+		   target: "bg_edit";
+		}
+
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   action: STATE_SET "hide" 0.0;
+		   target: "play_pause_btn";
+		   target: "play_default_btn";
+		}
+
+		program {
+        		signal: "lrc_invisible";
+        		source: "lrc";
+        		action:   STATE_SET "default" 0.0;
+        		target: "lrc";
+			target: "lrc_bg";
+        		transition: LINEAR 0.3;
+		}
+		program {
+       			signal: "lrc_visible";
+        		source: "lrc";
+        		action:   STATE_SET "show" 0.0;
+        		target: "lrc";
+        		target: "lrc_bg";
+        		transition: LINEAR 0.3;
+		}
+		program {
+        		signal: "lrc_destroy";
+        		source: "lrc";
+        		action:   STATE_SET "default" 0.0;
+        		target: "lrc";
+        		target: "lrc_bg";
+		}
+	}
+}
+

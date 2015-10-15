@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Yükleniyor..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Özel"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Saat"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Dosya yok."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Telefon zil sesi"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Süre"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Konum"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Farklı ayarla"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Kişisel sayfaya ekle"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Kişisel sayfadan kaldır"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Normal depolamaya taşı"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Kişisel depolamaya taşı"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Seçilen öğeler %s öğesine taşınacak."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Seçilen öğe %s öğesine taşınacak."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Toplu saklama modu sırasında kullanılamıyor."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Zil sesi eklendi."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Düğme"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Öğeleri seç"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Gelişmiş"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Önceki"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Kapat"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Eklendi."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Başarısız oldu."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Hiç arama sonucu bulunamadı"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Tamam"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Öğe yok"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Ana sayfaya ekle"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "İleri"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "İndiriliyor..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Sık kullanılanlar"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Kişisel belleğe ekle"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "%s ile bağlantı kesildi. Ağ durumunu ve bağlı cihazı kontrol edin."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroring yoluyla"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Ev ağı yoluyla"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Girdi yok."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Arama sırasında kullanılamaz."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maksimum karakter sayısına ulaşıldı."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM dosyası paylaşılamıyor."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Çıkartılıyor..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d cihaz"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Hareket etkinleştir"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Tekrar sorma"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Sonuç bulunamadı."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Telefonunuzu döndürerek gelen aramaları, mesaj uyarılarını ve alarmları susturun."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Hiçbiri"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "İnternet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galeri"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "İçeriğe taşımak için çift dokunun."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Surround"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Sözler"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Mobil cihazınızda Müzik'e parça ekledikten sonra parçalar burada gösterilir."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Örnekleme hızı"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Favori olarak işaretlendi."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Müzik"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Favori olarak işaretlenmedi."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Müzik ara"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Otomatik öneri bu ses dosyasını desteklemiyor."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Üzgünüm, müzik çalar bu ses dosyası türünü desteklemiyor."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Favorilerim"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "En sık çalınanlar"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Son eklenenler"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Çalma listesi oluştur"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Kaldır"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Arayan zil sesi tonu"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Sanatçılar"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Eklenemiyor."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Parça listesi oluşturulamıyor."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "İm alınamıyor."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr " %d müzik dosyasından fazlası eklenemiyor."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Albüm"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Yazar"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Telif hakkı"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Çalma listesi oluştur"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Açıklama"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Biçim"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "İmkansız"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Parça listesi yok"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Parça numarası"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Sil?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Kaldır?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Parça listesi yeniden adlandırılamıyor."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albümler"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Ekleniyor..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "%d albüm silinsin mi?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Parça listeleri"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Ekle"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biyografi"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Krediler"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Medya bilgisi"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Diskografi"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Lirik"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Mümkün"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "İzleme"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Parça listesi"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Çalma listesine ekle"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Sanatçı"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "İletme"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Parça listeleri"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Son çalınanlar"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Parça uzunluğu"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Hiç şarkı yok"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Bu parça silinecek."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Seçilen parçalar silinecek."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Bu sanatçı silinecek."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Seçilen sanatçılar silinecek."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Tüm sanatçılar silinecek."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "%d klasör silinecek."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Seçilen klasörler silinecek."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Tüm klasörler silinecek."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Bu albüm silinecek."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Seçilen albümler silinecek."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Tum albümler silinecek."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Bu parça listesi silinecek."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Seçilen çalma listeleri silinecek."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Tüm çalma listeleri silinecek."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Şarkılar"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Yeniden düzenle"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Parça listesi olarak kaydet"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Alarm sesi"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Bir şey seçilmedi."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Çalınamıyor. Hata meydana geldi."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Çalınamıyor. Desteklenmeyen dosya türü."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Paylaş"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Kondüktor"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Cihaz seçin"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Göster"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normal"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Kullanıcı"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Vokal"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Bas güçlendirme"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Tiz güçlendirme"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kafe"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtual 7.1 ch"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 dakika sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 dakika sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 saat sonra"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 saat 30 dakika sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 saat sonra"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Müziği otomatik kapat"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Bu ses efekti sadece kulaklık ve Bluetooth kulaklık modlarında çalışır."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Müzik meydanı"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Müzik meydanında çalmak için yeterli müzik dosyası yok. En az %d müzik dosyası gerekli."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Tutku"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Sakin"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Eğlence"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Kütüphane güncellemesi"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Kütüphane güncellensin mi?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Ekseni değiştir"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Tarzlar"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 albüm/1 parça"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 albüm/%d parça"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d albüm/%d parça"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Müzik Oynatıcıya %1$s, %2$s, %3$s, %4$s, %5$s ve %6$s gibi sesli komutlarla kumanda edebilirsiniz."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "%d parçayı karışık çal"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Daha fazla bilgi"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Müziğim"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Liste görünümü"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Group Play yoluyla oynat"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Parça favorilere eklendi."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Favorilerden kaldır"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Yeni"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Parçalar"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Küçük resim görüntüsü"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Liste"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Yürütme listesini aç"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Tümünü çal"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Seçilen liste boş."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Ruh halleri"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Yıl"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Eski"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Music square cihazınıza kayıtlı müzik dosyalarının karakteristiklerini analiz eder ve otomatik olarak parça listeleri oluşturur."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Ekran üzerinde square'ı işaretleyerek benzer karakterdeki müzik parça listelerini yürütün."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Çalmakta olan square üzerine basılı tutarak parça listesinin ayrıntılarını görüntüleyin."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Yakındaki cihazlar"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Yeni şarkılar eklenmişse, kütüphaneyi güncellemeniz gerekir."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Albüm yok"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Sanatçı yok"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Oynatma hızı"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Konser salonu"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Ekle"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Göster"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Son eklenenler"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Kullanılmıyor"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Offline kullanıma izin ver"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d saat %2$d dk sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d sa sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d dak sonra"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Klasör yok"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Parça yok"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albüm"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d sanatçı"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d tür"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d parça listesi"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d parça"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Çalma listesi"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Benzer albümler"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Parça"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Küçük resim görünümü"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Bu ses efekti sadece kulaklık modunda çalışır."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Tüm içerik"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Bu dosyayı çalmak için bir ağ bağlantısı gerekli. Ağ bağlantınızı kontrol edin ve tekrar deneyin."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Dosya tipi desteklenmiyor."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Güncelleniyor..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Ara"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Ara"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "İlgili videolar"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Akıllı ses düzeyi"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Tüm parçaların ses düzeyi %d düzeyine ayarlanacaktır."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Akıllı ses düzeyi etkin"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Bağlantı bilgisi"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 sa %d dk sonra"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Cihazım"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Uzun bir süre yüksek bir sesle dinlemek işitmenize zarar verebilir. Ses güvenli seviyelerin üstüne çıkarılsın mı?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Zaten var."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Yakın cihazları tara"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 sa sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 sa 1 dak. sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d saat 1 dakika sonra"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 dak sonra"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Mağazaya git"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Parça ekle"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Müzik'ten parçaları indirdikten sonra burada gösterilecektir"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Favorilerinize parcalar ekledikten sonra, burada gösterilecektir."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Parçaları çaldıktan sonra, burada gösterileceklerdir."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "%s konumuna parça ekledikten sonra, burada gösterileceklerdir"
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Satın alınmış içerik yok"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Frklı kyt"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Güncelleme başarısız."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Heyecanlı"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Müziğimde ara"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Bağlı cihazlar"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Parça listem %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Cihaz yok"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Kllanılablr cihazlar"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Ayarlandı"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Kaldırılamadı."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Civardaki cihazlar etkinken ileri veya geri sarma kullanılamaz."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Yap"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kulaklıklar"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Hoparlör"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 şarkı"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d şarkı"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 parça"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "1 parçayı karışık çal"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Seçili hücre için müzik dosyası bulunamadı"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Bir daha gösterme"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Çeşitli sanatçılar"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Ana ekrana ekle"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Favorilere ekle"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Başlığı düzenle"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Kişisel depolamadan kaldır"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Klasörler siz parçaları indirdikten sonra gösterilecek"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Ses seviyesi"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Tekrarlama kapalı"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Tümünü tekrarla"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Karışık çalmayı kapat"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Karışık çalmayı aç"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Parça listem"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Varsayılan parça listelri"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Kayıt tarihi"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Albüm kpğı"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 tarz"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d klasörleri"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 klasör"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 sanatçı"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 albüm"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 çalma listesi"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Müzik Çalar"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Taşı"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Otomatik öneriler"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Baştan"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Sizin için öneriler"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Kaydet"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Temel"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Enstrüman"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Tiz"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Bass"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Bu moda efekt uygulanmadı."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Boru amfi tınısını simüle eder."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Tube amp efekti"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Kanal 7.1 kanal surround ses efektini simule eder."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Küçük oda"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Büyük oda"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Tiyatro gibi büyük bir odanın yankısını simule eder."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Konser salonunun yankısını simule eder."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Stüdyo gibi küçük bir alanın yankısını simule eder."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Netlik"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Sıfırla"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Yıl"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Tarzlar"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Besteci"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Tüm parçalar"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Hızlı lsteye git"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Bul"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Hzlı lsteye ekle"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "TV çıkışı için video yetkisiz."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Oluşturulamıyor. Maksimum parça listesi sayısına ulaşıldı."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Bluetooth kulaklığa bağlanırken ses şiddeti ayarlanamıyor."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Bluetooth kulaklığa bağlanırken ses şiddeti ayarlanamıyor."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Müzik Çalar durdurulsun mu?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Lütfen sessiz moddan çıkın."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Şebeke hatası var."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Hafıza kartı yüklendi."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Cihaz ayarları hatalı."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Şarkı için eşleşme bulunamadı."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Ara Bel. Alma"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT kulaklık sadece normal efekt ayarını destekler."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Uygulama kapatılacak."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Eklendi. İstek listesine gidilsin mi?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Bu servise erişim ücretli olabilir. Devam edilsin mi?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Erişim ücretli olabilir. Devam edilsin mi?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 kanal ses efekti sadece kulaklık ve Bluetooth kulaklık modlarında çalışır."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 kanal ses efekti sadece kulaklık modunda çalışır."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "5.1 kanal ses efektleri hoparlör tarafından desteklenmiyor."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Kapak resmine göre göster"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Parçayı gönder"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Parçayı notlandır"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Parçayı çalma listesinde taşı"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Geçerli"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Parça listesini sil"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Arkaplanda yürütme"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efektler"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Satın al"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "İstek listesi"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Geniş"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Vibe woofer"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Titreklik"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Muzik oynatmak/duraklatmak için iki kez dokun."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Şarkıyı Bluetooth ile paylaş"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Müzik kurulum sihirbazına hoşgeldiniz.Takip eden ekranlar telefonunuzu yapılandırmanıza yardım edecek. Devam edilsin mi?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Hızlı liste"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Ses efektleri"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Hepsi"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Ses seviyesi"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d parca seçildi."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Podcast yok"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Benzer bul"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Arka plan yürütme"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalı sadece ses efektleri kapalı olduğunda etkinleştirilebilir."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Pod cast’ler"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Resmi düzenle"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Herhangi bir sesin çalınması ses kaydını durduracak kaydedecektir. Çalınsın mı?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Maksimum seçilen öğe sayısı (%d)'dır."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth bağlantısı kesildi."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalı sadece ses efektleri kapalı olduğunda etkinleştirilebilir."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Resim çek"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Müzik görünümünü göster"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Duraklat"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Albümü çal"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Listele"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Geçmiş"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Müzik görünümünü gizle"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Etiket bul"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox içeriği"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Telfondaki içerik"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Görüntüyü değiştir"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Dropbox verilerini sil"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "AllShare kullanarak, müziğinizi cihazlara yayınlayabilirsiniz."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Geçerlilik"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Tür"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Bu, dosyayı sunucudan ve bağlı tüm cihazlardan silecektir."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Sanatçılar"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Albüm kapağı"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Diğer içerikler"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Ad çok uzun."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Müzik netliği"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Yüksek ses düzeyi, uzun süre dinlemeniz durumunda işitme duyunuza zarar verebilir."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Mevcut kullanımlar"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Ses efektleri yalnızca kulaklık bağlıyken kullanılabilir."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Kişisel depolamanıza ekleyin"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Kişisel depolamanızdan çıkartın"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Bağlamsal pencere"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Bağlamsal bir pencere açık. Bunu kapamak için çift dokunun."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Birini tekrarla"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Taşınıyor..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "En fazla %d öğe seç"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Sekme"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Oynatıcı değiştir"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Sekmeler"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "DropBox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Otomatik öneriler ses dosyalarındaki vurguları ortaya çıkarabilir."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Ebeveyn sıralaması"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Dosya bulunamadı."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Arayan zil tonu kaydedildi."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bit derinliği"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Boyut"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d seçildi"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Parçalar, bu cihaza eklendikten sonra burada gösterilecektir."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Uzunluk"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 klasör silinecek."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "İçerik yok"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Klasörler"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Parça listelerim"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Ses oynatıcı"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Ayarlar"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Siliniyor..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 parça silinecek."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Tüm parçalar silinecek"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "%d parça silinecek."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 çalma listesi silinecek."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d çalma listesi silinecek."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albüm silinecek."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d sanatçı silinecek."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d klasör silinecek."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Bağlantı başarısız."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klasik"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Otomatik"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Geçerli ses efekti HDMI tarafından desteklenmiyor."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Ses efektleri Bluetooth tarafından desteklenmiyor."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Ses efektleri hat çıkış tarafından desteklenmiyor."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Ses efektleri HDMI tarafından desteklenmiyor."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Boru amfi"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Özel"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Boru amfi"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "Çalma listesine %d parça eklendi."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "Çalma listesine 1 parça eklendi"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Parçaları çalma listsne ekle"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s zaten kullanımda. Başka ad girin."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Kayıt tarihi"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Parça alarm sesi olarak ayarlandı."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Sonuç bulunamadı"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Varsayılan zil sesi"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Parça, arayan zil sesi olarak ayarlandı."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Parça zil sesi olarak ayarlandı."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Şimdi çalan listesine ekle"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Müzik oynatırken ekolayzır ayarları uygulanacak."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Uyarı"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 albüm silinecek"
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD kart"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Cihaz hafızası"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Çalma listesi ismi zaten kullanılıyor."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Çalma listesi %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Oluştur"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Ekolayzır önayarı"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Otomatik"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klasik"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Çevre efekti"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Bu dosya türü desteklenmiyor."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Parça listesi oluşturduktan sonra, burada gösterileceklerdir"
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Ses cihazını seç"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Çalma listesi ismi zaten kullanılıyor. Başka bir isim girin."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Şimdi yürütülüyor listesi"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Şarkı sözlerini göster"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Şarkı sözlerini gizle"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Arama esnasında müzik çalınamıyor."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Sil"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Seç"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Parça oynatılamıyor"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BİTTİ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "İPTAL"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "SİL"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Yeniden adlandır"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Mesaj"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "Tamam"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "İptal"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Yenile"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Hepsini seç"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Silindi."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Durdur"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Bilinmeyen"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Başlık"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-posta"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "İndir"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Düşük pil."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Ses cihazı"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Ayrıntılar"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Bitir"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Düzenle"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Güncelleştirildi."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Kaldırıldı."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Seçili"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Tara"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Hata"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Bellek dolu."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Liste"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Ses"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Karışık"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Tekrarla"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maksimum dosya boyutu aşıldı."
+

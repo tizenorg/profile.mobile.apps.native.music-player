@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Ładuję..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Prywatne"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Godzina"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Plik nie istnieje."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Dzwonek telefonu"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Czas trwania"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Miejsce"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Ustaw jako"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Dodaj do strony osobistej"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Usuń ze strony osobistej"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Przenieś do pamięci zwykłej"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Przenieś do pamięci osobistej"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Wybrane elementy zostaną przeniesione do lokalizacji %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Wybrany element zostanie przeniesiony do lokalizacji %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Nie można użyć w trybie pamięci masowej."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Dodano dzwonek."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Przycisk"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Wybierz elementy"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Zaawansowane"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Wstecz"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Zamknij"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Dodano."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Błąd"
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Brak wyników wyszukiwania"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Gotowe"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Brak elementów"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Dodaj do ekranu startowego"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Dalej"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Pobieranie..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Ulubione"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Dodaj do pamięci osobistej"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Rozłączono z %s. Sprawdź stan sieci i podłączone urządzenie."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Przez apl. Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Przez sieć macierzystą"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Wpis jest pusty."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Niedostępne podczas połączenia."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Osiągnięto maksymalną liczbę znaków."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Nie można udostępnić pliku DRM."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Usuwanie..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "Urządzeń: %d"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Wł. f. ruchu"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Nie pytaj ponownie"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Nie znaleziono wyników."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Odwróć telefon, aby wyciszyć połączenia przychodzące, dźwięki wiad. i alarmy."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Brak"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galeria"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Dotknij dwukrotnie, aby przenieść do zawartości."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Surround"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Tekst"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po ich dodaniu do katalogu Muzyka na urządzeniu przenośnym."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Częstotliwość próbkowania"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Oznaczone jako ulubione."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Muzyka"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Nieoznaczone jako ulubione."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Wyszukaj muzykę"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automatyczne zalecenia nie obsługują tego pliku audio."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Niestety odtwarzacz nie obsługuje tego typu pliku audio."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Ulubione"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Najczęściej odtwarzane"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Ostatnio dodane"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Utwórz listę odtwarzania"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Usuń"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Dzwonek kontaktu"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Wykonawcy"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Nie można dodać."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Nie można utworzyć listy odtwarzania."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Nie można pobrać etykiety."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Nie można dodać więcej utworów muzycznych niż %d."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Album"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autor"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Copyright"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Utwórz listę odtwarzania"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Opis"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Format"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Niemożliwe"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Brak list odtwarzania"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Numer utworu"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Usunąć?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Usunąć?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Nie można zmienić nazwy listy odtwarzania."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumy"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Dodawanie..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Usunąć albumy: %d?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Listy odtwarz."
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Dodaj"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografia"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Kredyty"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Multimedia"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Dyskografia"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Tekst"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Możliwe"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Podgląd zdjęcia"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Lista utworów"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Dodaj do listy odtwarzania"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Wykonawca"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Przesyłanie"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Listy odtwarzania"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Ostatnio odtwarzane"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Długość utworu"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Brak utworów"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Ten utwór zostanie usunięty."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Wybrane utwory zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Ten wykonawca zostanie usunięty."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Wybrani artyści zostaną usunięci."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Wszyscy wykonawcy zostaną usunięci."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ten katalog zostanie usunięty."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Wybrane katalogi zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Wszystkie katalogi zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Ten album zostanie usunięty."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Wybrane albumy zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Wszystkie albumy zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Lista odtwarzania zostanie usunięta."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Wybrane listy odtwarzania zostaną usunięte."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Wszystkie listy odtwarzania zostaną usunięte."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Piosenki"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Zmień kolejność"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Zapisz jako listę odtwarzania"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Sygnał alarmu"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Niczego nie zaznaczono."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nie można odtworzyć. Wystąpił błąd."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Nie można odtworzyć. Nieobsługiwany typ pliku"
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Udostęp."
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dyrygenci"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Wybierz urządzenie"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Widok"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Wył."
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Użytkownik"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Śpiew"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Podbicie basów"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Podbicie tonów wysokich"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kawiarnia"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Wirtualne 7.1"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Po 15 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Po 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Po 1 godz."
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Po 1 godz. 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Po 2 godz."
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Auto-wył. odtwarzacza"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "To ustawienie jest dostępne tylko w trybie słuchawek przewodowych lub Bluetooth."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Plac muzyczny"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Niewystarczająca liczba plików muzycznych do odtwarzania na Placu muzycznym. Minimalna liczba wymaganych plików muzycznych: %d."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Pasja"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Spokojne"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Radość"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Aktualizacja biblioteki"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Zaktualizować bibliotekę?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Zmień oś"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Gatunki"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 album/1 utwór"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "Albumów: 1/utworów: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "Albumów: %d/utworów: %d"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Możesz sterować Odtwarzaczem muzyki za pomocą poleceń głosowych %1$s, %2$s, %3$s, %4$s, %5$s i %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Losowo utworów: %d"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Więcej informacji"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Moja muzyka"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Widok listy"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Odtwarzaj przez Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Utwór dodano do ulubionych."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Usuń z ulubionych"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Nowe"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Utwory"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Miniatura"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Lista"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Otwórz listę odtwarzania"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Odtwórz wszystkie"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Wybrana lista jest pusta."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Rodzaje"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Lata"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Stare"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Plac muzyczny analizuje cechy plików muzycznych przechowywanych w urządzeniu i automatycznie tworzy listy odtwarzania."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Odtwarzanie list odtwarzania zawierających podobne utwory przez wybranie kwadratu na ekranie."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Wyświetlanie szczegółów listy odtwarzania przez dotknięcie i przytrzymanie aktualnie odtwarzanego kwadratu."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Urządzenia w pobliżu"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Po dodaniu nowych piosenek musisz zaktualizować bibliotekę."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Brak albumów"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Brak wykonawców"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Szybkość odtwarzania"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Sala koncertowa"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Dodaj do"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Podgląd"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Ostatnio dodane"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Ręcznie"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Udostępnij w trybie Offline"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Po %1$d godz. %2$d min"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Po godz.: %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Po min: %d"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Brak katalogów"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Brak utworów"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "Liczba albumów: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "Wykonawców: %d"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "Rodzajów: %d"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "List odtwarzania: %d"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "Utworów: %d"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Lista odtwarzania"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Podobne albumy"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Utwór"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Miniatury"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Ten efekt dźwiękowy działa tylko w trybie słuchawek."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Cała zawartość"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Aby odtworzyć ten plik, wymagane jest połączenie z siecią. Sprawdź połączenie z siecią i spróbuj ponownie."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Nieobsługiwany typ pliku."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Aktualizacja..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Szukaj"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Szukaj wg"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Powiązane filmy"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Głośność inteligentna"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Głośność wszystkich utworów będzie dostosowywana do poziomu %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Głośność inteligentna została włączona"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Inform. o połączeniu"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Po godz. 1 min: %d"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Moje urządzenie"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Długotrwałe słuchanie głośnych dźwięków może uszkodzić słuch. Podnieść głośność powyżej bezpiecznego poziomu?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Już istnieje."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Pokaż dostępne urządzenia"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Po godz.: 1"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Po godz. 1 min 1"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Po godz. %d min 1"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Po min: 1"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Idź do sklepu"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Dodaj utwory"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po ich pobraniu z obszaru Muzyka."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po ich dodaniu do ulubionych."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po ich odtworzeniu."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po ich dodaniu do %s."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Brak kupionej zawartości"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Zapisz jako"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Błąd aktualizacji"
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Pasjonujące"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Wyszukaj w bibliotece Moja muzyka"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Podłączone urządzenia"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Moja lista odtwarzania %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Brak urządzeń"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostępne urządzenia"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Ustawiono"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Usuwanie nie powiodło się."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Nie można używać przewijania do przodu ani do tyłu, gdy włączone są urządzenia w pobliżu."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Ustaw jako"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Słuchawki"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Głośnik"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 utwór"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "Utworów: %d"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 utwór"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Losowo utworów: 1"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Nie znaleziono muzyki dla wybranej komórki"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Nie wyświetlaj ponownie"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Różni wykonawcy"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Dodaj do ekranu startowego"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Dodaj do Ulubionych"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Edytuj tytuł"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Usuń z pamięci osobistej"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Katalogi zostaną wyświetlone po pobraniu utworów"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Głośność"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Powtarzanie wyłączone"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Powtórz wszystko"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Wyłącz kolejność losową"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Włącz kolejność losową"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Moja lista odtwarzania"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Domyślne listy odtwarz."
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Data nagrania"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Okład.alb."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "Gatunków: 1"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "Katalogów: %d"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "Katalogów: 1"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "Wykonawców: 1"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 album"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "List odtwarzania: 1"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Odtwarzacz muzyki"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Przenieś"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automatyczne zalecenia"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Od początku"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Sugestie dla Ciebie"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Zapisz"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Podstawowy"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrument"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Tony wysokie"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Tony niskie"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "W tym trybie nie są stosowane żadne efekty."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Symuluje barwę wzmacniacza lampowego."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Efekt wzmacniacza lampowego"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Symuluje efekt wirtualnego dźwięku przestrzennego 7.1."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Małe pomieszcz."
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Duże pomieszcz."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Symuluje pogłos dużego pomieszczenia, na przykład teatru."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Symuluje pogłos sali koncertowej."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Symuluje pogłos małej przestrzeni, na przykład studia."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Czystość"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Zeruj"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Lata"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Rodzaje"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Kompozytorzy"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Wszystkie utwory"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Idź do ulubion."
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Wyszukaj"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Dod. do ulubion."
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Nieuwierzytelniony film wideo na wyjściu TV"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Nie można utworzyć. Osiągnięto maksymalną liczbę list odtwarzania."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Nie można regulować głośności przy podłączonej słuchawce Bluetooth."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Nie można regulować głośności przy podłączonych słuchawkach Bluetooth."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Zatrzymać Odtwarzacz muzyki?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Wyłącz tryb cichy."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Błąd sieci"
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Załadowano kartę pamięci."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Błąd ustawień urządzenia"
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Nie znaleziono wyników odpowiadających temu utworowi."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Buforowanie"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "Zestaw słuchawkowy BT nie obsługuje efektów."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Aplikacja zostanie zamknięta."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Dodano. Przejść do listy życzeń?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Dostęp do tej usługi może być płatny. Kontynuować?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Dostęp do sklepu może być płatny. Kontynuować?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "Podłącz słuchawki lub słuchawkę Bluetooth, aby korzystać z dźwięku przestrzennego 5.1."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Podłącz słuchawki, aby korzystać z dźwięku przestrzennego 5.1."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Efekty dźwięku przestrzennego 5.1 nie są obsługiwane przez głośnik."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Sortuj wg okładki"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Wyślij utwór"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Oceń utwór"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Zmień kolejność"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Bieżące"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Usuń listę odtwarzania"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Granie w tle"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efekty"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Kup"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Lista życzeń"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Wide"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Głośnik niskotonowy wibracji"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Dwukrotnie dotknij, aby odtworzyć/wstrzymać utwór."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Udostępnij utwór za pomocą Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Witamy w kreatorze konfiguracji muzyki.\nKolejne ekrany ułatwią skonfigurowanie telefonu. Kontynuować?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Szybka lista"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Equalizer"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Wszystkie"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Głośność"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "Wybranych utworów: %d."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Brak podcastów"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Znajdź podobne"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Granie w tle"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Dźwięk przestrzenny 5.1 można włączyć tylko wtedy, gdy efekty dźwiękowe są wyłączone."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcasty"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Edytuj obraz"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Odtworzenie dowolnych dźwięków spowoduje zatrzymanie i zapisanie nagrywania głosu. Odtworzyć?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Wybrano maksymalną liczbę elementów (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Przerwano połączenie Bluetooth."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "Dźwięk przestrzenny 5.1 można włączyć tylko wtedy, gdy efekty dźwiękowe są wyłączone."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Zrób zdjęcie"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Pokaż widok muzyki"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauza"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Odtwórz album"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Sortuj według"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Historia"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Ukryj widok muzyki"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Znajdź tag"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Zawart. w Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Zawart. w telef."
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Zmień obraz"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Usuń dane Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Możesz przesyłać muzykę strumieniowo do urządzeń przez AllShare."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Ważność"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Typ"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Spowoduje to usunięcie pliku z serwera oraz wszystkich podłączonych urządzeń."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Artyści"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Okładka"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Inna zawartość"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Zbyt długa nazwa."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Muzyka"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Słuchanie muzyki przy wysokim ustawieniu głośności przez długi czas może spowodować uszkodzenie słuchu."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Dostępne zastosowania"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Efekty dźwiękowe dostępne tylko po podłączeniu słuchawek."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Dodaj do pamięci osobistej"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Usuń z pamięci osobistej"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Wyskakujące okno kontekstowe"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Wyskakujące okno kontekstowe jest otwarte. Dotknij dwukrotnie, aby je zamknąć."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Powtórz jeden"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Przenoszenie..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Wybierz maksymalnie elementów: %d"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Karta"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Zmień odtwarzacz"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Karty"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Automatyczne rekomendacje mogą wywołać fragmenty plików dźwiękowych."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Ocena rodzica"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Nie znaleziono pliku."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Dzwonek rozmówcy zapisany."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Głębia bitowa"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Rozmiar"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "Wybrano %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Utwory zostaną tu wyświetlone po dodaniu ich do tego urządzenia."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Długość"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Usuniętych zostanie katalogów: 1."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Brak zawartości"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Foldery"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Moje listy odtwarzania"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Odtwarzacz muzyki"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Ustawienia"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Usuwanie..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "Utworów, które zostaną usunięte: 1."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Wszystkie utwory zostaną usunięte"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "Utworów, które zostaną usunięte: %d."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "Zostanie usuniętych list odtwarzania: 1."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Liczba list odtwarzania, które zostaną usunięte: %d."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "Liczba albumów, które zostaną usunięte: %d."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "Liczba wykonawców, którzy zostaną usunięci: %d."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Zostanie usuniętych katalogów: %d."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Błąd łączenia"
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Classic"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Bieżący efekt dźwiękowy nie jest obsługiwany przez urządzenie HDMI."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Efekty dźwiękowe nie są obsługiwane przez łącze Bluetooth."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Efekty dźwiękowe nie są obsługiwane przez wyjście liniowe."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Efekty dźwiękowe nie są obsługiwane przez wyjście HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Wzmacniacz lampowy"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Niestand."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Wzmacniacz lamp."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "Utworów dodanych do listy odtwarzania: %d."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "Utworów dodanych do listy odtwarzania: 1."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Dod. utw. do listy odtwarzania"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s jest już w użyciu. Wprowadź inną nazwę."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Data nagrania"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Utwór ustawiono jako sygnał alarmu."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Nie znaleziono wyników"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Domyślny dzwonek"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Utwór ustawiono jako dzwonek rozmówcy."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Utwór ustawiono jako dzwonek."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Dodaj do listy Odtwarzany teraz"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Ustawienia korektora zostaną zastosowane podczas odtwarzania muzyki."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Alarm"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album zostanie usunięty."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "Karta pamięci"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Pamięć urządzenia"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Nazwa listy odtwarzania jest już w użyciu."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Lista odtwarzania %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Tworzenie"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Zaprogramowanie korektora"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automatyczny"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klasyczny"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Efekt środowiska"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Ten typ pliku nie jest obsługiwany."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Listy odtwarzania będą tutaj widoczne po ich utworzeniu."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Wybór urządzenia audio"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Ta nazwa listy odtwarzania jest już w użyciu. Wprowadź inną nazwę."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Obecnie odtwarzana lista"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Wyświetl tekst"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Ukryj tekst"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Nie można odtwarzać muzyki podczas połączeń."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Usuń"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Wybór"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Nie można odtworzyć utworu"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOWE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULUJ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "USUŃ"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Zmień nazwę"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Wiadomość"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Anuluj"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Odśwież"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Zaznacz wszystko"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Usunięto."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Zatrzymaj"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Nieznany"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Tytuł"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-mail"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Pobierz"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Bateria rozładowana."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Urządzenie audio"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Szczegóły"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Koniec"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Edytuj"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Zaktualizowano."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Usunięto."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Wybrany"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Skanuj"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Błąd"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Pamięć pełna."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Kolejka"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Głośność"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Kolejność losowa"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Powtórz"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Przekroczono maksymalny rozmiar plików."
+

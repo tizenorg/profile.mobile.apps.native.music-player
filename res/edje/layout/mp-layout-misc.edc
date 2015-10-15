@@ -1,0 +1,1831 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define THUMBNAIL_SIZE          78
+#define IMAGE_SIZE              68
+#define THUMBNAIL_PADDING       6
+#define THUMBNAIL_AREA_H        THUMBNAIL_SIZE
+#define THUMBNAIL_AREA_W        270
+#define THUMBNAIL_INTERVAL      -24
+
+#define THUMNAIL_BG_NOARMAL     "T02_music_artist_thumbnail02_bg.png"
+#define THUMNAIL_BG_MORE        "T02_music_artist_thumbnail_bg_more.png"
+
+styles {
+        style {
+                name: "textblock_style_default";
+                base: "font=Tizen:style=Roman font_size=30 color=#000f align=center wrap=mixed ellipsis=1.0";
+                tag:  "br" "\n";
+                tag:  "ps" "ps";
+                tag:  "hilight" "+ font=Tizen:style=Roman";
+                tag:  "b" "+ font=Tizen:style=Roman";
+                tag:  "tab" "\t";
+        }
+}
+
+#define MS_BTN_ADD_SHADOW(__name) \
+        part { name: __name"_shadow"; \
+           type: PROXY; \
+           scale: 1; \
+           clip_to: __name"_clipper"; \
+           description { state: "default" 0.0; \
+              source: __name; \
+              rel1 { to: __name; offset: 0 2; } \
+              rel2 { to: __name; offset: 0 2; } \
+           } \
+           description { state: "clicked" 0.0; \
+              inherit: "default" 0.0; \
+           } \
+           description { state: "disabled" 0.0; \
+              inherit: "default" 0.0; \
+           } \
+        } \
+        part { name: __name"_clipper"; \
+           type: RECT; \
+           description { state: "default" 0.0; \
+              color:  255 255 255 230; \
+           } \
+           description { state: "clicked" 0.0; \
+              color: 255 255 255 230; \
+           } \
+           description { state: "disabled" 0.0; \
+              color: 255 255 255 255; \
+           } \
+        }
+
+
+
+group { name: "artist_list_thumbnail_group";
+
+	images {
+		image: THUMNAIL_BG_MORE COMP;
+        }
+
+	parts {
+		part { name: "bg";
+                        type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+			}
+		}
+                part { name: "first_box_area";
+                        type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+                        description { state: "default" 0.0;
+                                align: 0 0.5;
+                                rel1 { relative: 1.0 0.0; to: "bg"; offset: -78 0; }
+                                rel2 { relative: 1.0 1.0; to: "bg"; }
+			}
+		}
+                part { name: "more";
+                        type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+                                visible: 0;
+			}
+                        description { state: "show" 0.0;
+                                align: 0 0.5;
+                                image { normal: THUMNAIL_BG_MORE; }
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                rel1 { relative: 0.0 0.0; to: "first_box_area"; }
+                                rel2 { relative: 1.0 1.0; to: "bg"; }
+                                visible: 1;
+			}
+		}
+                part { name: "box_0";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "first_box_area"; }
+                                rel2 { relative: 1.0 1.0; to: "bg"; }
+			}
+                        description { state: "show" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "more"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "more"; }
+			}
+		}
+                part { name: "box_1";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_0"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_0"; }
+			}
+		}
+                part { name: "box_2";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_1"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_1"; }
+			}
+		}
+                part { name: "box_3";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_2"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_2"; }
+			}
+		}
+                part { name: "box_4";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_3"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_3"; }
+			}
+		}
+                part { name: "box_5";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_4"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_4"; }
+			}
+		}
+                part { name: "box_6";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_5"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_5"; }
+			}
+		}
+                part { name: "box_7";
+                        type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+                                align: 0 0.5;
+				min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 0.0; to: "box_6"; offset: THUMBNAIL_INTERVAL 0; }
+                                rel2 { relative: 1.0 1.0; to: "box_6"; }
+			}
+		}
+        }
+        programs {
+		program { signal: "show_more";
+			source: "more";
+			action: STATE_SET "show" 0.0;
+			target: "more";
+                        target: "box_0";
+		}
+		program { signal: "hide_more";
+			source: "more";
+			action: STATE_SET "default" 0.0;
+			target: "more";
+                        target: "box_0";
+		}
+	}
+}
+
+group { name: "artist_list_thumbnail";
+	images {
+		image: THUMNAIL_BG_NOARMAL COMP;
+        }
+	parts {
+		part { name: "bg";
+                        type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+                                visible:1;
+                                image { normal: THUMNAIL_BG_NOARMAL; }
+                                min: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+                                max: THUMBNAIL_SIZE THUMBNAIL_SIZE;
+			}
+		}
+
+		part { name: "image_clip";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				min: IMAGE_SIZE IMAGE_SIZE;
+				max: IMAGE_SIZE IMAGE_SIZE;
+				rel1 { relative: 0.0 0.0; to: "bg"; }
+				rel2 { relative: 1.0 1.0; to: "bg"; }
+			}
+		}
+
+		part { name: "image_bg";
+                        type: RECT;
+			scale: 1;
+			clip_to: "image_clip";
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "image_clip"; }
+				rel2 { relative: 1.0 1.0; to: "image_clip"; }
+				color: 255 255 255 255;
+			}
+		}
+
+		part { name: "image";
+                        type: SWALLOW;
+			scale: 1;
+			clip_to: "image_clip";
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "image_clip"; }
+				rel2 { relative: 1.0 1.0; to: "image_clip"; }
+			}
+		}
+        }
+}
+
+group { name: "artist_list_default";
+	parts {
+		part { name: "bg";
+                        type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				min: 0 232;
+			}
+		}
+
+		part { name: "padding_left";
+                        type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel2 { relative: 0.0 1.0; }
+				min: 16 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_right";
+                        type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; }
+				min: 16 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "title_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to_x: "padding_left"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_right"; }
+				min: 0 36;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "more_btn";
+                        type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "title_area"; }
+				rel2 { relative: 1.0 1.0; to: "title_area"; }
+				min: 18 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "elm.padding.more_left";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "more_btn"; }
+				rel2 { relative: 0.0 1.0; to: "more_btn"; }
+				min: 8 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "elm.text.2";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				fixed: 1 0;
+				rel1 { relative: 0.0 0.0; to: "elm.padding.more_left"; }
+				rel2 { relative: 0.0 1.0; to: "elm.padding.more_left"; }
+				align: 1.0 0.0;
+				color: 120 120 120 255;	//GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR
+				text {
+					align: 1.0 0.5;
+					min: 1 0;
+					font: "Tizen:style=Bold";
+					size: 28;
+				}
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				color: GENLIST_LIST_TEXT_FOCUS_COLOR;
+			}
+		}
+
+		part { name: "elm.padding.subtext_left";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "elm.text.2"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.2"; }
+				min: 8 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "elm.text.1";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_area"; }
+				rel2 { relative: 0.0 1.0; to_x: "elm.padding.subtext_left"; to_y: "title_area";}
+				align: 0.0 0.0;
+				color: GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR;	//0 0 0 255
+				text {
+					align: 0.0 0.5;
+					min: 0 1;
+					font: "Tizen:style=Regular";
+					size: 35;
+				}
+				fixed: 1 1;
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				color: GENLIST_LIST_TEXT_FOCUS_COLOR;
+			}
+		}
+
+		part { name: "padding_ceter_horizontal";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "title_area"; }
+				rel2 { relative: 1.0 1.0; to: "title_area"; }
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "album_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_x: "title_area"; to_y: "padding_ceter_horizontal"; }
+				rel2 { relative: 1.0 1.0; to_x: "title_area"; to_y: "padding_ceter_horizontal"; }
+				min: 0 162;
+				max: -1 162;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_bottom";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_y: "album_area"; }
+				min: 0 24;
+				fixed: 0 1;
+			}
+		}
+		part { name: "padding_center";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "album_area"; }
+				rel2 { relative: 0.5 1.0; to: "album_area"; }
+				min: 13 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+		part { name: "left_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "album_area";
+				rel2 { relative: 0.0 1.0; to: "padding_center"; }
+			}
+		}
+		part { name: "right_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "padding_center"; }
+				rel2.to: "album_area";
+			}
+		}
+
+		part { name: "padding_left_center";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "left_area"; }
+				rel2 { relative: 0.5 1.0; to: "left_area"; }
+				min: 13 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+		part { name: "padding_right_center";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "right_area"; }
+				rel2 { relative: 0.5 1.0; to: "right_area"; }
+				min: 13 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "elm.icon.1";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "album_area";
+				rel2 { relative: 0.0 1.0; to: "padding_left_center"; }
+				color: 255 0 0 100;
+				min: 162 162;
+				max: 162 162;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.2";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "padding_left_center"; }
+				rel2 { relative: 0.0 1.0; to: "padding_center"; }
+				color: 255 0 0 120;
+				min: 162 162;
+				max: 162 162;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.3";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "padding_center"; }
+				rel2 { relative: 0.0 1.0; to: "padding_right_center"; }
+				color: 255 0 0 150;
+				min: 162 162;
+				max: 162 162;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.4";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "padding_right_center"; }
+				rel2.to: "album_area";
+				color: 255 0 0 180;
+				min: 162 162;
+				max: 162 162;
+				fixed: 1 1;
+			}
+		}
+	}
+
+	programs {
+		program { signal: "mouse,down,1";
+			source: "more_btn";
+			action: STATE_SET "pressed" 0.0;
+			target: "more_btn";
+		}
+		program { signal: "mouse,up,1";
+			source: "more_btn";
+			action: STATE_SET "show" 0.0;
+			target: "more_btn";
+		}
+		program { signal: "mouse,clicked,1";
+			source: "more_btn";
+			action: SIGNAL_EMIT "more_btn_clicked" "edje";
+		}
+
+		program { signal: "elm,state,selected";
+			source: "*";
+			action: STATE_SET "pressed" 0.0;
+			target: "elm.text.1";
+			target: "elm.text.2";
+		}
+		program { signal: "elm,state,unselected";
+			source: "*";
+			action: STATE_SET "default" 0.0;
+			target: "elm.text.1";
+			target: "elm.text.2";
+		}
+	}
+}
+
+#define LANDSCAPE_WIDTH 1280
+#define LANDSCAPE_HIGHT 720
+#define LANDSCAPE_ARTIST_SIZE 166
+#define LANDSCAPE_PADDING_LEFT 20
+#define LANDSCAPE_PADDING_RIGHT 20
+#define LANDSCAPE_PADDING_CENTER 13
+#define LANDSCAPE_DEVIDE_WIDTH 1240
+group { name: "landscape_artist_list_default";
+	parts {
+		part { name: "bg";
+                        type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				min: 0 236;
+				fixed: 0 1;
+			}
+		}
+
+		part { name: "padding_left";
+                        type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel2 { relative: 0.0 1.0; }
+				min: 20 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_right";
+                        type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; }
+				min: 20 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "title_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to_x: "padding_left"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_right"; }
+				min: 0 36;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "more_btn";
+                        type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "title_area"; }
+				rel2 { relative: 1.0 1.0; to: "title_area"; }
+				min: 18 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "elm.padding.more_left";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "more_btn"; }
+				rel2 { relative: 0.0 1.0; to: "more_btn"; }
+				min: 8 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "elm.text.2";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "elm.padding.more_left"; }
+				rel2 { relative: 0.0 1.0; to: "elm.padding.more_left"; }
+				align: 1.0 0.0;
+				color: 120 120 120 255;	//GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR;
+				text {
+					align: 1.0 0.5;
+					min: 1 0;
+					font: "Tizen:style=Medium";
+					size: 28;
+				}
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				color: GENLIST_LIST_TEXT_FOCUS_COLOR;
+			}
+		}
+
+		part { name: "elm.padding.subtext_left";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "elm.text.2"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.2"; }
+				min: 8 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "elm.text.1";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_area"; }
+				rel2 { relative: 0.0 1.0; to_x: "elm.padding.subtext_left"; to_y: "title_area";}
+				align: 0.0 0.0;
+				color: GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR;	//0 0 0 255
+				text {
+					align: 0.0 0.5;
+					min: 0 1;
+					font: "Tizen:style=Regular";
+					size: 35;
+				}
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				color: GENLIST_LIST_TEXT_FOCUS_COLOR;
+			}
+		}
+
+		part { name: "padding_ceter_horizontal";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "title_area"; }
+				rel2 { relative: 1.0 1.0; to: "title_area"; }
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "album_area";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_x: "title_area"; to_y: "padding_ceter_horizontal"; }
+				rel2 { relative: 1.0 1.0; to_x: "title_area"; to_y: "padding_ceter_horizontal"; }
+				min: 0 166;
+				max: -1 166;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_bottom";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_y: "album_area"; }
+				min: 0 24;
+				fixed: 0 1;
+			}
+		}
+
+		part { name: "elm.icon.1";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "album_area";}
+				rel2 { relative: LANDSCAPE_ARTIST_SIZE/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.2";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE+LANDSCAPE_PADDING_CENTER)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*2+LANDSCAPE_PADDING_CENTER)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.3";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE*2+LANDSCAPE_PADDING_CENTER*2)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*3+LANDSCAPE_PADDING_CENTER*2)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.4";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE*3+LANDSCAPE_PADDING_CENTER*3)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*4+LANDSCAPE_PADDING_CENTER*3)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.5";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE*4+LANDSCAPE_PADDING_CENTER*4)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*5+LANDSCAPE_PADDING_CENTER*4)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.6";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE*5+LANDSCAPE_PADDING_CENTER*5)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*6+LANDSCAPE_PADDING_CENTER*5)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+		part { name: "elm.icon.7";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: (LANDSCAPE_ARTIST_SIZE*6+LANDSCAPE_PADDING_CENTER*6)/LANDSCAPE_DEVIDE_WIDTH 0.0; to: "album_area";}
+				rel2 { relative: (LANDSCAPE_ARTIST_SIZE*7+LANDSCAPE_PADDING_CENTER*6)/LANDSCAPE_DEVIDE_WIDTH 1.0; to: "album_area"; }
+				color: 255 0 0 100;
+				min: 166 166;
+				max: 166 166;
+				fixed: 1 1;
+			}
+		}
+	}
+
+	programs {
+		program { signal: "mouse,down,1";
+			source: "more_btn";
+			action: STATE_SET "pressed" 0.0;
+			target: "more_btn";
+		}
+		program { signal: "mouse,up,1";
+			source: "more_btn";
+			action: STATE_SET "show" 0.0;
+			target: "more_btn";
+		}
+		program { signal: "mouse,clicked,1";
+			source: "more_btn";
+			action: SIGNAL_EMIT "more_btn_clicked" "edje";
+		}
+
+		program { signal: "elm,state,selected";
+			source: "*";
+			action: STATE_SET "pressed" 0.0;
+			target: "elm.text.1";
+			target: "elm.text.2";
+		}
+		program { signal: "elm,state,unselected";
+			source: "*";
+			action: STATE_SET "default" 0.0;
+			target: "elm.text.1";
+			target: "elm.text.2";
+		}
+	}
+}
+
+#define IMG_CONNECTION_INFO_PROGRESS_1	"nearby_device/T02_Player_Nearby_device_progress1.png"
+#define IMG_CONNECTION_INFO_PROGRESS_2	"nearby_device/T02_Player_Nearby_device_progress2.png"
+#define IMG_CONNECTION_INFO_PROGRESS_3	"nearby_device/T02_Player_Nearby_device_progress3.png"
+#define IMG_CONNECTION_INFO_PROGRESS_4	"nearby_device/T02_Player_Nearby_device_progress4.png"
+
+group {
+        name: "connection_info_layout";
+
+
+        images {
+                image: IMG_CONNECTION_INFO_PROGRESS_1 COMP;
+                image: IMG_CONNECTION_INFO_PROGRESS_2 COMP;
+                image: IMG_CONNECTION_INFO_PROGRESS_3 COMP;
+                image: IMG_CONNECTION_INFO_PROGRESS_4 COMP;
+        }
+
+        parts {
+                part {
+                        name: "bg";
+                        type: RECT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description {
+                                state: "default" 0.0;
+                                min: 652 242;
+                                color: 0 0 0 0;
+                        }
+                }
+                part {
+                        name: "bg_rect";
+                        type: RECT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description {
+                                state: "default" 0.0;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+                                color: 0 0 0 0;
+                        }
+                }
+
+                part {
+                        name: "left_padding";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 20 0;
+                                fixed: 1 0;
+                                align: 0.0 0.0;
+                                rel1 { relative: 0.0 0.0; to: "bg_rect"; }
+                                rel2 { relative: 0.0 1.0; to: "bg_rect"; }
+                        }
+                }
+
+                part {
+                        name: "right_padding";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 20 0;
+                                fixed: 1 0;
+                                align: 1.0 0.0;
+                                rel1 { relative: 1.0 0.0; to: "bg_rect"; }
+                                rel2 { relative: 1.0 1.0; to: "bg_rect"; }
+                        }
+                }
+                part {
+                        name: "top_padding";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 0 20;
+                                fixed: 0 1;
+                                align: 0.0 0.0;
+                                rel1 { relative: 0.0 0.0; to: "bg_rect"; }
+                                rel2 { relative: 1.0 0.0; to: "bg_rect"; }
+                        }
+                }
+
+                part {
+                        name: "bottom_padding";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 0 20;
+                                fixed: 0 1;
+                                align: 0.0 1.0;
+                                rel1 { relative: 0.0 1.0; to: "bg_rect"; }
+                                rel2 { relative: 1.0 1.0; to: "bg_rect"; }
+                        }
+                }
+
+                part {
+                        name: "bottom_area";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 0 20;
+                                fixed: 0 1;
+                                align: 0.0 1.0;
+                                rel1 { relative: 0.0 1.0; to: "bottom_padding"; }
+                                rel2 { relative: 1.0 1.0; to: "bottom_padding"; }
+                        }
+                }
+
+                part {
+                        name: "top_box";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 0 120;
+                                fixed: 0 1;
+                                align: 0.0 0.0;
+                                rel1 { relative: 0.0 1.0; to_y: "top_padding"; }
+                                rel2 { relative: 1.0 1.0; to_y: "top_padding"; }
+                        }
+                }
+
+                part {
+                        name: "progressing_image";
+                        type: IMAGE;
+                        scale: 1;
+                        mouse_events: 0;
+                        description {
+                                state: "default" 0.0;
+                                min: 96 24;
+                                fixed: 1 1;
+                                align: 0.5 0.5;
+                                rel1 { relative: 0.5 0.5; to: "top_box"; }
+                                rel2 { relative: 0.5 0.5; to: "top_box"; }
+                                image.normal: IMG_CONNECTION_INFO_PROGRESS_1;
+
+                        }
+                        description { state: "default" 0.1;
+                                inherit: "default" 0.0;
+                                image.normal: IMG_CONNECTION_INFO_PROGRESS_2;
+                        }
+                        description { state: "default" 0.2;
+                                inherit: "default" 0.0;
+                                image.normal: IMG_CONNECTION_INFO_PROGRESS_3;
+                        }
+                        description { state: "default" 0.3;
+                                inherit: "default" 0.0;
+                                image.normal: IMG_CONNECTION_INFO_PROGRESS_4;
+                        }
+                }
+
+                part {
+                        name: "progressing_left";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 40 0;
+                                fixed: 1 0;
+                                align: 1.0 0.0;
+                                rel1 { relative: 0.0 0.0; to_x: "progressing_image"; to_y: "top_box";}
+                                rel2 { relative: 0.0 1.0; to_x: "progressing_image"; to_y: "top_box";}
+                        }
+                }
+
+                part {
+                        name: "progressing_right";
+                        type: SPACER;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 40 0;
+                                fixed: 1 0;
+                                align: 0.0 0.0;
+                                rel1 { relative: 1.0 0.0; to_x: "progressing_image"; to_y: "top_box";}
+                                rel2 { relative: 1.0 1.0; to_x: "progressing_image"; to_y: "top_box";}
+                        }
+                }
+
+
+                part {
+                        name: "elm.icon.source";
+                        type: SWALLOW;
+                        scale: 1;
+                        mouse_events: 0;
+                        description {
+                                state: "default" 0.0;
+                                min: 120 120;
+                                fixed: 1 1;
+                                align: 1.0 0.0;
+                                rel1 { relative: 0.0 0.0; to_x: "progressing_left"; to_y: "top_box";}
+                                rel2 { relative: 0.0 1.0; to_x: "progressing_left"; to_y: "top_box";}
+                        }
+                }
+
+                part {
+                        name: "elm.text.source";
+                        type: TEXTBLOCK;
+                        multiline: 1;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 300 120;
+                                max: 300 120;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                rel1 { relative: 1.0 0.0; to_x: "left_padding"; to_y: "bottom_padding"; offset: 0 20;}
+                                rel2 { relative: 0.5 0.0; to_x: "bg_rect"; to_y: "bottom_padding"; offset: 0 20;}
+                                text {
+                                        style: "textblock_style_default";
+                                        align: 0.5 0.5;
+                                }
+                                color: 0 0 0 255;
+                        }
+                }
+
+                part {
+                        name: "elm.icon.destination";
+                        type: SWALLOW;
+                        scale: 1;
+                        mouse_events: 0;
+                        description {
+                                state: "default" 0.0;
+                                min: 120 120;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                rel1 { relative: 1.0 0.0; to_x: "progressing_right"; to_y: "top_box";}
+                                rel2 { relative: 1.0 1.0; to_x: "progressing_right"; to_y: "top_box";}
+                        }
+                }
+
+                part {
+                        name: "elm.text.destination";
+                        type: TEXTBLOCK;
+                        multiline: 1;
+                        scale: 1;
+                        description {
+                                state: "default" 0.0;
+                                min: 300 120;
+                                max: 300 120;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                rel1 { relative: 0.5 0.0; to_x: "bg_rect"; to_y: "bottom_padding"; offset: 0 20;}
+                                rel2 { relative: 0.0 0.0; to_x: "right_padding"; to_y: "bottom_padding"; offset: 0 20;}
+                                text {
+                                        style: "textblock_style_default";
+                                        align: 0.5 0.5;
+                                }
+                                color: 0 0 0 255;
+                        }
+                }
+        }
+
+        programs {
+                program { name: "pgm_change_progress_image";
+			signal: "sig_update_progress_image";
+			source: "*";
+			script {
+				new st[31];
+				new Float:vl;
+				get_state(PART:"progressing_image", st, 30, vl);
+				if (vl == 0.3) vl = 0.0
+				else vl = vl + 0.1;
+				set_state(PART:"progressing_image", st, vl);
+			}
+		}
+
+        }
+}
+
+#define PS_MINUS "T02_slider_icon_minus.png"
+#define PS_MINUS_PRESS "T02_slider_icon_minus_press.png"
+#define PS_PLUS "T02_slider_icon_plus.png"
+#define PS_PLUS_PRESS "T02_slider_icon_plus_press.png"
+
+group { name: "play_speed_layout";
+
+	images {
+			image: PS_MINUS COMP;
+			image: PS_MINUS_PRESS COMP;
+			image: PS_PLUS COMP;
+			image: PS_PLUS_PRESS COMP;
+
+	}
+
+	parts {
+		part { name: "bg";
+                        type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				min: 0 112;
+				fixed: 0 1;
+			}
+		}
+
+                MS_BTN_ADD_SHADOW("ps_minus_bt");
+		part {
+			name: "ps_minus_bt";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible:1;
+				max: 72 72;
+				image { normal: PS_MINUS; }
+				rel1 {
+					relative: 30/720 20/112;
+					to: "bg";
+				}
+				rel2 {
+					relative: 102/720 92/112;
+					to: "bg";
+				}
+                               color: 255 255 255 255;
+			}
+			description {
+				state: "press" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 255;
+			}
+		}
+
+		part {
+			name: "ps_slider";
+			mouse_events: 1;
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				visible: 1;
+				rel1 {
+					relative: 112/720 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 608/720 1;
+					to: "bg";
+				}
+				color: 220 218 211 255;
+			}
+		}
+
+                MS_BTN_ADD_SHADOW("ps_plus_bt");
+
+		part {
+			name: "ps_plus_bt";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible:1;
+				max: 72 72;
+				image { normal: PS_PLUS; }
+				rel1 {
+					relative: 618/720 20/112;
+					to: "bg";
+				}
+				rel2 {
+					relative: 690/720 92/112;
+					to: "bg";
+				}
+                                color: 255 255 255 255;
+			}
+			description {
+				state: "press" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 255;
+			}
+		}
+	}
+	programs {
+
+		program {
+			name: "ps_minus_bt_clicked";
+			source: "ps_minus_bt";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "ps_minus_bt_clicked" 0.0;
+		}
+		program{
+			name: "ps_minus_bt_after_down";
+			source: "ps_minus_bt";
+			//signal: "mouse,down,1";
+			//action: STATE_SET "press" 0.0;
+			//target: "ps_minus_bt";
+                        script {
+                            set_state(PART:"ps_minus_bt", "press", 0.0);
+                            set_state(PART:"ps_minus_bt_clipper", "clicked", 0.0);
+                            set_state(PART:"ps_minus_bt_shadow", "clicked", 0.0);
+                            emit("ps_minus_bt_press_down", "*");
+                        }
+			transition: ACCELERATE 0.02;
+		}
+		program {
+			name: "ps_minus_bt_down";
+			source: "ps_minus_bt";
+			signal: "mouse,down,1";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after:	"ps_minus_bt_after_down";
+			transition: ACCELERATE 0.02;
+		}
+
+		program {
+			name: "ps_minus_bt_up";
+			source: "ps_minus_bt";
+			signal: "mouse,up,1";
+			//action: STATE_SET "default" 0.0;
+			//target: "ps_minus_bt";
+                        script {
+                            set_state(PART:"ps_minus_bt", "default", 0.0);
+                            set_state(PART:"ps_minus_bt_clipper", "default", 0.0);
+                            set_state(PART:"ps_minus_bt_shadow", "default", 0.0);
+                            emit("ps_minus_bt_up", "*");
+                        }
+			transition: DECELERATE 0.02;
+		}
+
+		program {
+			name: "ps_plus_bt_clicked";
+			source: "ps_plus_bt";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "ps_plus_bt_clicked" 0.0;
+		}
+		program{
+			name: "ps_plus_bt_after_down";
+			source: "ps_plus_bt";
+			//signal: "mouse,down,1";
+			//action: STATE_SET "press" 0.0;
+			//target: "ps_plus_bt";
+                        script {
+                            set_state(PART:"ps_plus_bt", "press", 0.0);
+                            set_state(PART:"ps_plus_bt_clipper", "default", 0.0);
+                            set_state(PART:"ps_plus_bt_shadow", "default", 0.0);
+                            emit("ps_plus_bt_press_down", "*");
+                        }
+			transition: ACCELERATE 0.02;
+		}
+		program {
+			name: "ps_plus_bt_down";
+			source: "ps_plus_bt";
+			signal: "mouse,down,1";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after:	"ps_plus_bt_after_down";
+			transition: ACCELERATE 0.02;
+		}
+
+		program {
+			name: "ps_plus_bt_up";
+			source: "ps_plus_bt";
+			signal: "mouse,up,1";
+			//action: STATE_SET "default" 0.0;
+			//target: "ps_plus_bt";
+                        script {
+                            set_state(PART:"ps_plus_bt", "default", 0.0);
+                            set_state(PART:"ps_plus_bt_clipper", "default", 0.0);
+                            set_state(PART:"ps_plus_bt_shadow", "default", 0.0);
+                            emit("ps_plus_bt_up", "*");
+                        }
+			transition: DECELERATE 0.02;
+		}
+	}
+}
+
+group {
+	name: "scroller_layout";
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+			}
+		}
+		part {
+			name: "scroller";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 {relative: 0.0 0.0; to: "bg";}
+				rel2 {relative: 1.0 0.0; to: "controller";}
+				align: 0.5 0.5;
+			}
+		}
+		part {
+			name: "controller";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 0 1;
+				align: 0.5 1.0;
+				rel1 { relative: 0.0 1.0; }
+				visible: 0;
+			}
+			description { state: "show" 0.0;
+				inherit: "default" 0.0;
+				min: 0 50;
+				visible: 1;
+			}
+		}
+	}
+	programs {
+		program { name: "pgm_show_controller";
+			signal: "sig_show_controller";
+			source: "*";
+			action: STATE_SET "show" 0.0;
+			target: "controller";
+		}
+	}
+}
+
+group { name: "page_layout";
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+			}
+			description { state: "landscape" 0.0;
+				inherit: "default" 0.0;
+			}
+		}
+
+		part {
+			name: "page";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+			}
+		}
+	}
+
+	programs {
+		program { name: "change_to_landscape";
+	            signal: "elm,state,landscape";
+	            source: "elm";
+	            action: STATE_SET "landscape" 0.0;
+	            target: "bg";
+	         }
+	         program { name: "change_to_portrait";
+	            signal: "elm,state,portrait";
+	            source: "elm";
+	            action: STATE_SET "default" 0.0;
+	            target: "bg";
+	         }
+	         program { name: "landscape_mode";
+	            source: "elm";
+	            signal: "elm,state,orient,90";
+	            //action: SIGNAL_EMIT "elm,state,landscape" "elm";
+	            after: "change_to_landscape";
+	         }
+	         program { name: "landscape_mode2";
+	            source: "elm";
+	            signal: "elm,state,orient,270";
+	            //action: SIGNAL_EMIT "elm,state,landscape" "elm";
+		    after: "change_to_landscape";
+	         }
+	         program { name: "portrait_mode";
+	            source: "elm";
+	            signal: "elm,state,orient,0";
+	            //action: SIGNAL_EMIT "elm,state,portrait" "elm";
+	            after: "change_to_portrait";
+	         }
+	         program { name: "portrait_mode2";
+	            source: "elm";
+	            signal: "elm,state,orient,180";
+	            //action: SIGNAL_EMIT "elm,state,portrait" "elm";
+	            after: "change_to_portrait";
+	         }
+	}
+}
+
+/*the followed edc is used for music store data loading popup*/
+group{ name: "popup_processingview";
+#define POPUP_PROCESSINGVIEW_CONTENT_MIN 568 222
+   parts {
+      part { name: "base";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: POPUP_PROCESSINGVIEW_CONTENT_MIN;
+            fixed: 1 0;
+         }
+      }
+      part { name:"pad_t";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 0 60;
+            fixed: 0 1;
+            align: 0 0;
+            rel1.to: "base";
+            rel2 {
+               relative: 1.0 0.0;
+               to: "base";
+            }
+         }
+      }
+      part { name:"elm.swallow.content";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "pad_t";
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               to: "pad_t";
+            }
+         }
+      }
+      part { name:"pad_after_content";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 0 9;
+            fixed: 0 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+      part { name:"elm.swallow.text";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.5 0.5;
+            fixed: 1 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "pad_after_content";
+            }
+            rel2 {
+               relative: 1.0 0.0;
+               to: "pad_b";
+            }
+	    text {
+               font: "Tizen:style=Bold";
+               size: 36;
+               min: 0 0;
+               align: 0.5 0.5;
+            }
+            color: 0 0 0 255;
+         }
+      }
+      /*
+      part { name:"elm.swallow.text";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "pad_after_content";
+            }
+            rel2 {
+               relative: 1.0 0.0;
+               to: "pad_b";
+            }
+         }
+      }*/
+      part { name:"pad_b";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 0 0;
+            fixed: 0 1;
+            align: 1 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "base";
+            }
+            rel2.to: "base";
+         }
+      }
+   }
+#undef POPUP_PROCESSINGVIEW_CONTENT_MIN
+}
+
+//#ifdef MP_FEATURE_PERSONAL_PAGE
+/*thumbnail with lock part*/
+group
+{
+	name:"thumbnail_only";
+	parts
+	{
+		part
+		{
+			name:"base";
+			type:RECT;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				color: MP_COLOR_BG_BLACK;
+			}
+		}
+		part
+		{
+			name:"bg";
+			//type:IMAGE;
+			type:RECT;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				//min: 72 72;
+				//max: 72 72;
+				//fixed:1 1;
+				align: 0.5 0.5;
+				rel1 { relative: 0.0 0.0; to:"base";}
+				rel2 { relative: 1.0 1.0; to:"base";}
+				//image.normal: IMG_GENLIST_BG;
+				color: MP_COLOR_BG_BLACK;
+			}
+		}
+		part
+		{
+			name:"thumbnail";
+			type:SWALLOW;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to:"bg";}
+				rel2 { relative: 1.0 1.0; to:"bg";}
+			}
+		}
+		part
+		{
+			name:"default_thumbnail";
+			type:SWALLOW;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				rel1 { relative: 0.0 0.0; to:"bg";}
+				rel2 { relative: 1.0 1.0; to:"bg";}
+			}
+		}
+
+		part
+		{
+			name:"video_play";
+			type:SWALLOW;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				rel1 { to:"thumbnail"; }
+				rel2 { to:"thumbnail"; }
+			}
+		}
+		part
+		{
+			name: "lock.sub";
+			type: SWALLOW;
+			scale: 1;
+			description
+			{
+				state: "default" 0.0;
+				rel1 { relative:0.5 0.5; to:"thumbnail";}
+				rel2 { relative:1.0 1.0; to:"thumbnail";}
+			}
+		}
+	}
+}
+
+group { name: "popup_center_progressview";
+#define MP_POPUP_PROGRESSVIEW_CONTENT_MIN 568 120
+#define MP_POPUP_PROGRESSVIEW_TITLE_MIN 568 50
+#define MP_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX 324 60
+   parts {
+      part { name: "pad_t";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.5 0.0;
+            min: 0 32;
+            fixed: 0 1;
+            rel1 {
+               relative: 1.0 0.0;to_x: "pad_l";
+            }
+            rel2 {
+               relative: 0.0 0.0;to_x: "pad_r";
+            }
+         }
+      }
+      part { name: "pad_l";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 26 0;
+            max: 26 0;
+            fixed: 1 0;
+            rel1 {
+               relative: 0.0 0.0;
+            }
+            rel2 {
+               relative: 0.0 1.0;
+            }
+            align: 0.0 0.0;
+         }
+      }
+      part { name: "pad_r";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 26 0;
+            max: 26 0;
+            fixed: 1 0;
+            rel1 {
+               relative: 1.0 0.0;
+            }
+            rel2 {
+               relative: 1.0 1.0;
+            }
+            align: 1.0 0.0;
+         }
+      }
+      part { name: "pad_b";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 1.0;
+            min: 0 32;
+            fixed: 0 1;
+            rel1 {
+               relative: 1.0 1.0;
+               to_x: "pad_l";
+            }
+            rel2 {
+               relative: 0.0 1.0;
+               to_x: "pad_r";
+            }
+         }
+      }
+      part { name: "elm.title";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: MP_POPUP_PROGRESSVIEW_TITLE_MIN;
+            fixed: 1 1;
+            text {
+               font: "Tizen:style=Bold";
+               size: 38;
+               min: 0 0;
+               align: 0.5 0.0;
+            }
+            color: 128 128 128 255;
+            align: 0.5 0.0;
+            rel1 {
+               relative: 0.0 0.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 1.0 0.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+      part{ name:"elm.swallow.content";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: MP_POPUP_PROGRESSVIEW_CONTENT_MIN;
+            align: 0.5 0.5;
+            fixed: 1 0;
+            rel1 {
+               relative: 1.0 1.0;
+               to_x: "pad_l";
+               to_y: "pad_t";
+            }
+            rel2 {
+               relative: 0.0 0.0;
+               to_x: "pad_r";
+               to_y: "pad_b";
+            }
+         }
+      }
+      part { name: "elm.text.left";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            max: MP_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX;
+            text {
+               font: "Tizen:style=Medium";
+               size: 36;
+               min: 0 0;
+               align: 0.0 1.0;
+            }
+            color: 128 128 128 255;
+            align: 0.0 1.0;
+            rel1 {
+               relative: 0.0 0.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 0.5 1.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+      part { name: "elm.text.right";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            max: MP_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX;
+            text {
+               font: "Tizen:style=Medium";
+               size: 36;
+               min: 0 0;
+               align: 1.0 1.0;
+            }
+            color: 128 128 128 255;
+            align: 1.0 1.0;
+            rel1 {
+               relative: 0.5 0.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+   }
+
+#undef MP_POPUP_PROGRESSVIEW_CONTENT_MIN
+#undef MP_POPUP_PROGRESSVIEW_TITLE_MIN
+#undef MP_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX
+}
+
+//#endif

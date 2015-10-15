@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Įkeliama..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privatus"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Laikas"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Tokio failo nėra."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Skambučio tonas"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Trukmė"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Vieta"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Nustatyti kaip"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Pridėti prie asmeninio puslapio"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Pašalinti iš asmen. pusl."
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Perkelti į įprastą saugyklą"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Perkelti į asmeninę saugyklą"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Pasirinkti elementai bus perkelti į %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Pasirinktas elementas bus perkeltas į %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Neįmanoma naudotis, kai įjungtas duomenų saugyklos režimas."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Skambėjimo tonas pridėtas."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Mygtukas"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Rinktis elementus"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Išsamiau"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Ankst."
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Uždaryti"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Pridėta."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Nepavyko."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Nėra paieškos rezultatų"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Atlikta"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Elementų nėra"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Įdėti į pradžios ekraną"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Kitas"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Atsisiunčiama..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Mėgstamiausias"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Pridėti prie asmeninės saugyklos"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Atsijungiama nuo %s. Patikrinkite tinklo būseną ir prijungtą prietaisą."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Per ekrano dubliavimo f-ją"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Per namų tinklą"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Įrašas tuščias."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Pokalbio metu nepasiekiama."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Pasiektas didžiausias simbolių skaičius."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Neįmanoma bendrinti DRM failo."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Šalinama..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d įrenginiai (-ių)"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Įjungt judes."
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Kitą kartą neklausti"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Rezultatų nerasta."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Nutildykite gaunamus skambučius, naujos žinutės signalą ir žadintuvą apversdami telefoną."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Nėra"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internetas"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galerija"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Bakstelėkite du kartus, kad pereitumėte prie turinio."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Erdvinis garsas"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Dainos žodžiai"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Pridėjus takelių prie muzikos mobiliajame įrenginyje, jie bus rodomi čia."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Diskretizavimo dažnis"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Pažymėta kaip mėgstamiausia."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Muzika"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Nepažymėta kaip mėgstamiausia."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Ieškoti muzikos"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automatinė rekomendacija nepalaiko šio garso failo."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Apgailestaujame, bet leistuvas nepalaiko šio tipo garso failo."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Mėgstamiausieji"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Dažniausiai grojami"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Neseniai pridėti"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Sukurti grojaraštį"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Šalinti"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Skambintojo skambėjimo tonas"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Atlikėjai"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Negalima pridėti."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Negalima sukurti grojaraščio."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Neįmanoma gauti žymos."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Negalima pridėti daugiau kaip %d muzikos failo (-ų)."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Albumas"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autorius"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Autorių teisės"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Sukurti grojaraštį"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Aprašas"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Formatas"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Neįmanoma"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Nėra grojaraščių"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Įrašo numeris"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Ar trinti?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Ar šalinti?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Negalima pakeisti grojaraščio pavadinimo."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumai"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Pridedama..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Trinti %d albumus (-ų)?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Grojaraščiai"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Pridėti"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografija"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Naudinga informacija"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Informacija apie mediją"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Įrašų sąrašas"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Lyrinė"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Įmanoma"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Peržiūrėti"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Takelių sąrašas"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Pridėti prie grojaraščio"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Atlikėjas"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Persiuntimas"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Grojaraščiai"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Neseniai groti"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Įrašo ilgis"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Dainų nėra"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Šis takelis bus ištrintas."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Pasirinkti takeliai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Šis atlikėjas bus ištrintas."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Pasirinkti atlikėjai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Visi atlikėjai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Šis aplankas bus ištrintas."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Pasirinkti aplankai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Bus ištrinti visi aplankai."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Šis albumas bus ištrintas."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Pasirinkti albumai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Visi albumai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Šis grojaraštis bus ištrintas."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Pasirinkti grojaraščiai bus ištrinti."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Visi grojaraščiai bus ištrinti."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Dainos"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Pertvarkyti"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Išsaugoti kaip grojaraštį"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Signalo tonas"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Niekas nepasirinkta."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Neįmanoma paleisti. Įvyko klaida."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Negalima paleisti. Nepalaikomas failo tipas."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Bendrinti"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dirigentai"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Pasirinkite įrenginį"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Žr.kaip"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Įprastas"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Vartotojas"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Vokalinė"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Žemųjų dažnių stiprinimas"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Aukštųjų dažnių stiprin."
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kavinė"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtualus 7.1 kan."
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Po 15 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Po 30 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Po 1 val."
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Po 1 val. 30 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Po 2 val."
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Automatinis muzikos išjungimas"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Šis garso efektas veikia tik ausinių ir „Bluetooth“ ausinių režimu."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Muzikos kvadrat."
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Nepakanka muzikos failų, kad juos būtų galima atkurti muzikos kvadrate. Reikia ne mažiau kaip %d muzikos failų."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Aistra"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Rami"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Džiaugsmas"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Bibliotekos naujinys"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Atnaujinti biblioteką?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Keisti ašį"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Žanrai"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 albumas / 1 takelis"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 albumas / %d takeliai (-ių)"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "Albumai: %d / takeliai: %d"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Galite valdyti muzikos grotuvą balso komandomis %1$s, %2$s, %3$s, %4$s, %5$s ir %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Maišyti %d įrašus (-ų)"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Daugiau informacijos"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Mano muzika"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Sąrašo vaizdas"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Leiskite per „Group Play“"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Takelis pridėtas prie mėgstamiausiųjų."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Pašalinti iš parankinių"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Nauja"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Takeliai"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Miniatiūra"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Sąrašas"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Atidaryti grojaraštį"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Groti viską"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Pasirinktas sąrašas yra tuščias."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Nuotaikos"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Metai"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Sena"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Muzikos kvadratas analizuoja muzikos failų, laikomų jūsų įrenginyje, ypatybes ir automatiškai kuria grojaraščius."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Pasirinkite kvadratą ekrane ir leiskite muzikos grojaraštį su panašiomis ypatybėmis."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Peržiūrėkite išsamesnę grojaraščio informaciją spustelėdami ir laikydami šiuo metu leidžiamą kvadratą."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Įrenginiai netoliese"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Pridėję naujų dainų biblioteką turėsite atnaujinti."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Albumų nėra"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Atlikėjų nėra"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Leidimo greitis"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Koncertų salė"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Pridėti prie"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Peržiūrėti"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Neseniai pridėti"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Nenaudojama"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Padaryti prieinamą atsijungus"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Po %1$d val. %2$d min."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Po %d val."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Po %d min."
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Nėra aplankų"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Takelių nėra"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albumai (-ų)"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "Atlikėjai: %d"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "Žanrai: %d"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "Grojaraščiai: %d"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d dainos (-ų)"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Grojaraštis"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Panašūs albumai"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Kūrinys"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Miniatiūrų rodinys"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Šis garso efektas veikia tik ausinių režimu."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Visas turinys"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Norint paleisti šį failą, reikalingas tinklo ryšys. Patikrinkite tinklo ryšį ir bandykite dar kartą."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Failo tipas nepalaikomas."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Atnaujinama..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Ieškoti"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Ieškoti pagal"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Susiję vaizdo įrašai"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Išmanusis garsas"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Visų kūrinių garsas bus sureguliuotas į %d lygį."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Įjungtas išmanusis garsas"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Ryšio informacija"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Po 1 val. %d min."
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Mano įrenginys"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Ilgai klausantis muzikos dideliu garsu gali sutrikti klausa. Padidinti garsumą viršijant saugų garsumo lygį?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Jau yra."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Ieškoti netoliese esančių įrenginių"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Po 1 val."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Po 1 val. 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Po %d val. 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Po 1 min."
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Eiti į parduotuvę"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Pridėti takelius"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kai atsisiųsite garso įrašų iš „Muzikos“, jie bus rodomi čia."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Pridėjus takelių prie mėgstamiausiųjų, jie bus rodomi čia."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Leidžiant takelius jie bus rodomi čia."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kai pridėsite garso įrašų prie %s, jie bus rodomi čia."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Pirkto turinio nėra"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Išsaugoti kaip"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Atnaujinti nepavyko."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Jaudinanti"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Ieškoti mano muzikoje"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Prijungti įrenginiai"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Mano grojaraštis %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Nėra įrenginių"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Galimi įrenginiai"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Nustatyta"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Nepavyko pašalinti."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Neįmanoma naudoti greito persukimo pirmyn ir atsukimo atgal funkcijos, kai išjungti netoliese esantys įrenginiai."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Nustatyti kaip"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Ausinės"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Garsiakalbis"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 daina"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d dainos (-ų)"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 takelis"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Maišyti 1 garso takelį"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Pasirinktame elemente muzikos failų nerasta"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Daugiau nerodyti"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Įvairūs atlikėjai"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Pridėti pradžios ekrane"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Įtraukti į Parankinius"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Redaguoti antraštę"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Pašalinti iš asmeninės saugyklos"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Atsisiuntus garso takelių bus rodomi aplankai"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Garsumas"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Kartojimas išjungtas"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Kartoti viską"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Išjungti maišymą"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Įjungti maišymą"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Mano grojaraštis"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Numatytieji grojaraščiai"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Įrašoma data"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Alb.ilius."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 žanras"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d aplankai (-ų)"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 aplankas"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 atlikėjas"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 albumas"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 grojaraštis"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Muzikos grotuvas"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Perkelti"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automatinės rekomendacijos"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Nuo pradžių"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Jums skirti pasiūlymai"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Išsaugoti"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Pagrindinės"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrumentinė"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Aukštieji dažniai"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Žemieji dažniai"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Šiuo režimu taikytinų efektų nėra."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Imituojamas lempinio stiprintuvo tembras."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Stiprintuvo efektas"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Imituojamas virtualiųjų 7.1 kanalų erdvinio garso efektas."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Nedidelė patalpa"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Didelis kambarys"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Imituojamas didelio kambario aidėjimas, pvz., teatro."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Imituojamas koncertų salės aidėjimas."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Imituojamas mažos erdvės aidėjimas, pvz., studijos."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Aiškumas"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Atstatyti"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Metai"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Žanrai"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Kompozitoriai"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Visi takeliai"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Eiti į sprt.sąr."
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Rasti"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Pr.prie sprč.sąr."
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Nepatvirtintas vaizdo įrašo failas TV išvesčiai."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Negalima sukurti. Pasiektas didžiausias grojaraščių skaičius."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Jungiant „Bluetooth“ ausines garsumo reguliuoti negalima."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Garsumo reguliuoti negalima, kol prijungta prie „Bluetooth“ ausinių."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Stabdyti muzikos grotuvą?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Prašome išeiti iš tyliojo režimo."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Tinklo klaida."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Įdėta atminties kortelė."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Įrenginio nustatymų klaida."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Nepavyko rasti dainos atitikmens."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Buferizuojama"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT ausinės palaiko tik įprastinių efektų nustatymą."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Programa bus uždaryta."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Pridėta. Pereiti prie norų sąrašo?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Prieiga prie paslaugos gali būti mokama. Tęsti?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Prieiga prie saugyklos gali būti apmokestinama. Tęsti?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 kanalų garso efektas veikia tik prijungus ausines ir „Bluetooth“ ausinių režimu."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 kanalo garso efektas veikia tik ausinių režimu."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "5.1 kanalų garso efektų nepalaiko garsiakalbis."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Rodyti pagal viršelio apipavidalinimą"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Siųsti įrašą"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Takelio įvertinimas"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Perkelti grojaraščio įrašą"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Esamasis"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Ištrinti grojaraštį"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Foninis grojimas"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efektai"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Pirkti"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "„Wow HD“"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Pageidaujamų sąrašas"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Platus"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Ua-ua"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Žemųjų dažnių garsiakalbis"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Palieskite du kartus muzikai groti/pristabdyti."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Dalytis įrašu per „Bluetooth“"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Sveiki, čia – Muzikos sąrankos vedlys.\nPateikiami ekranai padės jums sukonfigūruoti telefoną. Tęsti?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Spartusis sąrašas"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Garso efektai"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Visos"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Garsumas"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "Pasirinkta takelių: %d"
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Transliacijų internetu nėra"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Rasti panašų"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Grojimas fone"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalas gali būti naudojamas tik išjungus garso efektus."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Interneto trans."
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Redaguoti vaizdą"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Bus sustabdytas bet kokio garso leidimas ir išsaugotas jūsų balso įrašas. Leisti?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Pasirinktas didžiausias elementų skaičius (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "„Bluetooth“ atjungta."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalai gali būti naudojami tik išjungus garso efektus."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Fotografuoti"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Rodyti muzikos rodinį"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauzė"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Groti albumą"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Rūšiuoti pagal"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Istorija"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Slėpti muzikos rodinį"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Rasti žymę"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "„Dropbox“ turinys"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Telefono turinys"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Keisti vaizdą"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Trinti Dropbox duomenis"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Galite siųsti savo muzikos įrašus į įrenginius naudojančius „AllShare“."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Galiojimas"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Tipas"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Bus ištrintas serveryje ir kituose prijungtuose įrenginiuose esantis failas."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Atlikėjai"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Albumų menas"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Kitas turinys"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Pavadinimas per ilgas."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Muzikos aiškumas"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Jei klausysitės garsiai ilgą laiką, gali būti pažeista klausa."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Galimi panaudojimai"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Garso efektai veikia tik prijungus ausines."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Pridėti prie asmeninės saugyklos"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Pašalinti iš asmeninės saugyklos"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Kontekstinis iškylantysis langas"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Kontekstinis iškylantysis langas atidarytas. Bakstelėkite du kartus norėdami uždaryti."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Kartoti vieną"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Perkeliama..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Pasirinkite iki %d elementų"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Skirtukas"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Keisti grotuvą"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Ąselės"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Naudojant automatines rekomendacijas iš garso failų galima išskirti fragmentus."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Tėvų vertinimas"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Failas nerastas."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Skambintojo skambėjimo tonas išsaugotas."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bitų gylis"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Dydis"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "Pasirinkta: %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Pridėjus takelių šiame įrenginyje, jie bus rodomi čia."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Ilgis"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Bus ištrintas 1 aplankas."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Nėra turinio"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Aplankai"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Mano grojaraščiai"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Garso grotuvas"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Nustatymai"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Trinama..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "Bus ištrintas 1 įrašas."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Visi takeliai bus ištrinti"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "Bus ištrinta įrašų: %d."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 grojaraštis bus ištrintas."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Bus ištrinta grojaraščių: %d."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "Bus ištrinta albumų: %d."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "Bus ištrinta atlikėjų: %d."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Bus ištrinti aplankai: %d."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Prisijungti nepavyko."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klasika"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rokas"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Džiazas"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Popmuzika"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Automatinis"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Dabartinio garso efekto nepalaiko HDMI."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Garso efektų nepalaiko „Bluetooth“."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Garso efektų nepalaiko išvesties linija."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Garso efektų nepalaiko HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Lempinis stiprintuvas"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Pasirinktinis"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Lemp. stiprint."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "Takeliai pridėti prie grojaraščio: %d"
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 takelis pridėtas prie grojaraščio"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Pridėti takelių prie grojar."
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s jau naudojamas. Įveskite kitą pavadinimą."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Įrašymo data"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Takelis nustatytas kaip signalo tonas."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Rezultatų nerasta"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Numatytas skambėjimo tonas"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Takelis nustatytas kaip skambintojo skambėjimo tonas."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Takelis nustatytas kaip skambėjimo tonas."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Pridėti prie dabar grojamų sąrašo"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Vienodintuvo nustatymai bus pritaikyti leidžiant muziką."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Įspėjimas"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 albumas bus ištrintas."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD kortelė"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Įrenginio atmintis"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Grojaraščio pavadinimas jau naudojamas."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "%d grojaraštis"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Kurti"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Išankstinis vienodintuvo nustatymas"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automatinis"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klasika"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Aplinkos efektas"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Šis failo tipas nepalaikomas."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kai sukursite grojaraščių, jie bus rodomi čia."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Rinktis garso įrenginį"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Grojaraščio pavadinimas jau naudojamas. Įveskite kitą pavadinimą."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Dabartiniu metu grojamų sąrašas"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Rodyti dainos žodžius"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Slėpti dainos žodžius"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Muzikos negalima leisti vykstant skambučiui."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Trinti"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Pasirinkti"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Neįmanoma leisti takelio"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ATLIKTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATŠAUKTI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "IŠTRINTI"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Pervardyti"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Žinutė"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "Gerai"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Atšaukti"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Atnaujinti"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Pasirinkti visus"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Ištrinta."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Stabdyti"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Nežinomas"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Pavadinimas"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "El. paštas"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Atsisiųsti"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Senka akumuliatorius!"
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Garso įrenginys"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Išsami informacija"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Baigti"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Redaguoti"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Atnaujinta."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Pašalinta."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Pasirinkta"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Skenuoti"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Klaida"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Atmintis pilna."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Eilė"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Garsumas"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Maišyti"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Kartoti"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Viršytas leistinas failų dydis."
+

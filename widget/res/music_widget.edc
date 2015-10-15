@@ -1,0 +1,515 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+collections {
+	base_scale: 2.4;
+	group {
+		name:"mp_widget_main";
+		images {
+			image: "box_image_shadow.#.png" COMP;
+			image: "music_btn_player_next_dim.png" COMP;
+			image: "music_btn_player_next_nor.png" COMP;
+			image: "music_btn_player_next_press.png" COMP;
+			image: "music_btn_player_pause_dim.png" COMP;
+			image: "music_btn_player_pause_nor.png" COMP;
+			image: "music_btn_player_pause_press.png" COMP;
+			image: "music_btn_player_play_dim.png" COMP;
+			image: "music_btn_player_play_nor.png" COMP;
+			image: "music_btn_player_play_press.png" COMP;
+			image: "music_btn_player_prev_dim.png" COMP;
+			image: "music_btn_player_prev_nor.png" COMP;
+			image: "music_btn_player_prev_press.png" COMP;
+			image: "music_btn_player_stop_dim.png" COMP;
+			image: "music_btn_player_stop_nor.png" COMP;
+			image: "music_btn_player_stop_press.png" COMP;
+		}
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 1.0;
+					color: 0 0 0 0;
+				}
+			}//end bg
+
+			part {
+				name:"track_image";
+				type:SWALLOW;
+				scale: 1;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.031 0.174;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.374 0.783;
+						to : "bg";
+					}
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+			}//end track_image
+
+			part {
+				name:"track_title";
+				type:TEXT;
+				scale: 1;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.424 0.174;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.956 0.332;
+						to : "bg";
+					}
+					text {
+						font:"Tizen";
+						size:35;
+						min:0 1;
+						align:0.0 0.5;
+					}
+					color : 255 255 255 255;
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+			}//end track_title
+
+			part {
+				name:"track_artist_title";
+				type:TEXT;
+				scale: 1;
+				//effect: TIZEN_GLOW_SHADOW;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.424 0.332;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.956 0.461;
+						to : "bg";
+					}
+					text {
+						font:"Tizen";
+						size:35;
+						min:0 1;
+						align:0.0 0.5;
+					}
+					color: 255 255 255 255;
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+			}//end track_title
+
+			part {
+				name:"track_prev_image";
+				type: IMAGE;
+				scale: 1;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.46 0.533;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.6 0.783;
+						to : "bg";
+					}
+					image.normal : "music_btn_player_prev_nor.png";
+					align:0.0 0.5;
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_prev_press.png";
+					visible : 1;
+				}
+				description {
+					state: "dim" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_prev_dim.png";
+					visible : 1;
+				}
+			}//end track_prev_image
+
+			part {
+				name:"track_play_image";
+				type:IMAGE;
+				scale: 1;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.637 0.533;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.778 0.783;
+						to : "bg";
+					}
+					image.normal : "music_btn_player_pause_nor.png";
+					align:0.0 0.5;
+				}
+				description {
+					state: "play_pressed" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_pause_press.png";
+					visible : 1;
+				}
+				description {
+					state: "play_dim" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_pause_dim.png";
+					visible : 1;
+				}
+				description {
+					state:"paused" 0.0;
+					inherit:"default" 0.0;
+					image.normal : "music_btn_player_play_nor.png";
+					visible : 1;
+				}
+				description {
+					state: "pause_pressed" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_play_press.png";
+					visible : 1;
+				}
+				description {
+					state: "pause_dim" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_play_dim.png";
+					visible : 1;
+				}
+				description {
+					state: "stopped" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_stop_nor.png";
+					visible : 1;
+				}
+				description {
+					state: "stop_pressed" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_stop_press.png";
+					visible : 1;
+				}
+				description {
+					state: "stop_dim" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_stop_dim.png";
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+			}//end track_play_image
+
+			part {
+				name:"track_next_image";
+				type:IMAGE;
+				scale: 1;
+				mouse_events : 1;
+				repeat_events : 1;
+				description {
+					state : "default" 0.0;
+					rel1 {
+						relative : 0.815 0.533;
+						to : "bg";
+					}
+					rel2 {
+						relative : 0.956 0.783;
+						to : "bg";
+					}
+					image.normal : "music_btn_player_next_nor.png";
+					align:0.0 0.5;
+					visible : 1;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 0;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_next_press.png";
+					visible : 1;
+				}
+				description {
+					state: "dim" 0.0;
+					inherit: "default" 0.0;
+					image.normal: "music_btn_player_next_dim.png";
+					visible : 1;
+				}
+			}//end track_next_image
+
+			part {
+				name:"noitems_title";
+				type:TEXT;
+				scale: 1;
+				mouse_events:1;
+				repeat_events:1;
+				description {
+			    	state:"default" 0.0;
+					rel1 {
+						relative: 0.044 0.263;
+						to:"bg";
+					}
+					rel2 {
+						relative: 0.956 0.493;
+						to:"bg";
+					}
+					text {
+						font:"Tizen";
+						size:43;
+						min:1 1;
+						align:0.0 0.5;
+					}
+					color: 255 255 255 255;
+					visible : 0;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 1;
+				}
+			}//end noitems_title
+
+			part {
+				name:"noitems_subtitle";
+				type:TEXT;
+				scale: 1;
+				mouse_events:1;
+				repeat_events:1;
+				description {
+					state:"default" 0.0;
+					rel1 {
+						relative: 0.044 0.513;
+						to:"bg";
+					}
+					rel2 {
+						relative: 0.956 0.655;
+						to:"bg";
+					}
+					text {
+						font:"Tizen";
+						size:38;
+						min:1 1;
+						align:0.0 0.5;
+					}
+					color: 255 255 255 255;
+					visible : 0;
+				}
+				description {
+					state:"no_music" 0.0;
+					inherit : "default" 0.0;
+					visible : 1;
+				}
+			}//end noitems_subtitle
+
+		}//end parts
+
+		programs {
+			program {
+				name : "change_to_play";
+				signal : "play_music";
+				source : "elm";
+				action : STATE_SET "default" 0.0;
+				target : "track_play_image";
+			}//end change_to_play
+
+			program {
+				name : "change_to_pause";
+				signal : "pause_music";
+				source : "elm";
+				action : STATE_SET "paused" 0.0;
+				target : "track_play_image";
+			}//end change_to_pause
+
+			program {
+				name : "change_to_stop";
+				signal : "stop_music";
+				source : "elm";
+				action : STATE_SET "stopped" 0.0;
+				target : "track_play_image";
+			}//end change_to_stop
+			
+			program {
+				name: "on_press";
+				signal: "mouse,down,1";
+				source: "track_play_image";
+				script {
+				   new st[31];
+				   new Float:vl;
+				   get_state(PART:"track_play_image", st, 30, vl);
+				   if (!strcmp(st, "default")) {
+					 set_state(PART:"track_play_image", "play_pressed", 0.0);
+				   }
+				   if (!strcmp(st, "paused")) {
+					   set_state(PART:"track_play_image", "pause_pressed", 0.0);
+				   }
+				   if (!strcmp(st, "stopped")) {
+					   set_state(PART:"track_play_image", "stop_pressed", 0.0);
+				   }
+					   
+				}
+			}//end on_press
+
+			program {
+				name: "on_press_next";
+				signal: "mouse,down,1";
+				source: "track_next_image";
+				script {
+				   new st[31];
+				   new Float:vl;
+				   get_state(PART:"track_next_image", st, 30, vl);
+				   if (!strcmp(st, "default")) {
+					 set_state(PART:"track_next_image", "pressed", 0.0);
+				   }					   
+				}
+			}//end on_press_next
+
+			program {
+				name: "on_press_prev";
+				signal: "mouse,down,1";
+				source: "track_prev_image";
+				script {
+					new st[31];
+					new Float:vl;
+					get_state(PART:"track_prev_image", st, 30, vl);
+					if (!strcmp(st, "default")) {
+						set_state(PART:"track_prev_image", "pressed", 0.0);
+					}					   
+				}
+			}//end on_press_prev
+
+			program {
+				name: "on_release";
+				signal: "mouse,up,1";
+				source: "track_play_image";
+				script {
+					new st[31];
+					new Float:vl;
+					get_state(PART:"track_play_image", st, 30, vl);
+					if (!strcmp(st, "pause_pressed")) {
+						set_state(PART:"track_play_image", "paused", 0.0);
+					}
+					if (!strcmp(st, "play_pressed")) {
+						set_state(PART:"track_play_image", "default", 0.0);
+					}
+					if (!strcmp(st, "stop_pressed")) {
+						set_state(PART:"track_play_image", "default", 0.0);
+					}
+
+				}
+			}//end on_release
+			
+			program {
+				name: "on_release_next";
+				signal: "mouse,up,1";
+				source: "track_next_image";
+				script {
+					new st[31];
+					new Float:vl;
+					get_state(PART:"track_next_image", st, 30, vl);
+					if (!strcmp(st, "pressed")) {
+						set_state(PART:"track_next_image", "default", 0.0);
+					}					   
+				}
+			}//end on_release_next
+
+			program {
+				name: "on_release_prev";
+				signal: "mouse,up,1";
+				source: "track_prev_image";
+				script {
+					new st[31];
+					new Float:vl;
+					get_state(PART:"track_prev_image", st, 30, vl);
+					if (!strcmp(st, "pressed")) {
+						set_state(PART:"track_prev_image", "default", 0.0);
+					}					   
+				}
+			}//end on_release_prev
+
+			program {
+				name : "show_no_music_view";
+				signal : "no_music";
+				source : "elm";
+				action : STATE_SET "no_music" 0.0;
+				target : "track_image";
+				target : "track_title";
+				target : "track_artist_title";
+				target : "track_prev_image";
+				target : "track_play_image";
+				target : "track_next_image";
+				target : "noitems_title";
+				target : "noitems_subtitle";
+			}//end show_no_music_view
+
+			program {
+				name : "show_music_view";
+				signal : "music_present";
+				source : "elm";
+				action : STATE_SET "default" 0.0;
+				target : "track_image";
+				target : "track_title";
+				target : "track_artist_title";
+				target : "track_prev_image";
+				target : "track_play_image";
+				target : "track_next_image";
+				target : "noitems_title";
+				target : "noitems_subtitle";
+			}//end show_music_view
+		}
+	}//end group
+}//end collections

@@ -1,0 +1,71 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#include "mp-defines.h"
+
+externals {
+	external: "elm";
+	external: "feedback";
+	}
+
+collections {
+	base_scale: 2.4;
+	sounds {
+		sample { name: "button-pressed" AS_IS;
+			source: MP_BUTTON_PRESSED_NAME;
+		}
+	}
+	plugins {
+	plugin {
+	    name: "touch_sound_plugin";
+	    source: "feedback";
+	    param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+	    }
+	}
+	#include "mp-play-view.edc"
+	#include "mp-player-view.edc"
+	#include "mp-player-view-landscape.edc"
+	#include "mp-play-vew-landscape.edc"
+	#include "mp-play-control.edc"
+	#include "mp-play-menu.edc"
+	#include "mp-play-progress.edc"
+	#include "mp-player-progressbar.edc"
+	#include "mp-play-info.edc"
+	#include "mp-now-playing.edc"
+	#include "mp-rich-info.edc"
+	#include "mp-lrc.edc"
+	#include "mp-play-mini-app.edc"
+	#include "mp-play-option.edc"
+	#include "mp-motion-popup.edc"
+#ifdef MP_3D_FEATURE
+	#include "mp-3d-view.edc"
+#endif
+
+#ifdef MP_SQUARE_FEATURE
+	#include "mp-square-view.edc"
+#endif
+
+	#include "mp-view.edc"
+	#include "mp-list-view.edc"
+	#include "mp-all-view.edc"
+	#include "mp-list.edc"
+	#include "mp-volume-widget.edc"
+
+	#include "mp-layout-misc.edc"
+	#include "mp-info-view.edc"
+	#include "mp-set-as.edc"
+}

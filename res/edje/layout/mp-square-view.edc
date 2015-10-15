@@ -1,0 +1,876 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define NOW_PLAYING_H	100
+#define GRID_BG_COLOR 0 0 135 255
+#define GRID_H 656
+#define GRID_HALF_H 328
+#define GRID_TITLE_H 38
+#define GRID_MAIN_W 720
+
+#define SQUARE_AXIS_TEXT_FONT	        "Tizen:style=Bold"
+#define SQUARE_AXIS_TEXT_SIZE 	        30
+#define SQUARE_AXIS_LD_TEXT_SIZE 	25
+#define SQUARE_AXIS_TEXT_COLOR 	        133 136 139 255
+
+#define SQUARE_BG				"square/T02_square_bg.png"
+#define SQUARE_GENGRID_BG		"square/T02_square_cell_nor_bg.png"
+#define SQUARE_GENGRID_EF		"square/T02_square_cell_nor_ef.png"
+#define SQUARE_CELL_FOCUSED		"square/T02_square_cell_focus.png"
+#define SQUARE_CELL_PRESSED_BG		"square/T02_square_cell_press_bg.png"
+#define SQUARE_CELL_PRESSED_EF		"square/T02_square_cell_press_ef.png"
+
+#define SQUARE_HELP_ICON                "square/T02_square_help.png"
+#define SQUARE_HELP_ICON_PRESS          "square/T02_square_help_press.png"
+#define SQUARE_HELP_ICON_H              "square/T02_square_help_h.png"
+#define SQUARE_HELP_ICON_PRESS_H        "square/T02_square_help_press_h.png"
+
+#define SQUARE_BG_LD			"square/T02_square_bg01_h.png"
+#define SQUARE_GENGRID_BG_LD		"square/T02_square_bg01_h.png"
+#define SQUARE_CELL_FOCUSED_LD		"square/T02_square_cell_focus_h.png"
+
+group {
+	name: "mp_square_view_split_right_layout";
+
+	images {
+		image: 	"00_winset_control_toolbar_bg.png" COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			mouse_events: 0;
+			type: RECT;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;
+						offset : 0 0;}
+				rel2 { relative: 1.0 1.0;}
+				color: 37 37 37 255;
+			}
+		}
+
+		part {
+			name : "list_content";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				visible:1;
+				fixed: 1 1;
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0;to: "bg";}
+				rel2 { relative: 1.0 0.82;to: "bg";}
+			}
+		}
+
+		part {
+			name : "options_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				visible:0;
+				fixed: 1 1;
+				state: "default" 0.0;
+				image { normal: "00_winset_control_toolbar_bg.png";}
+				rel1 { relative: 0.0 0.82; to: "bg";}
+				rel2 { relative: 1.0 1.0; to: "bg";}
+			}
+		}
+		part {
+			name : "options";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				visible:1;
+				fixed: 1 1;
+				state: "default" 0.0;
+		   		rel1 { relative: 0.0 0.0;to: "options_bg";}
+				rel2 { relative: 1.0 1.0;to: "options_bg";}
+			}
+		}
+	}
+}
+
+group {
+	name: "mp_square_view";
+
+	images {
+		image: 	SQUARE_GENGRID_BG COMP;
+		image: SQUARE_HELP_ICON COMP;
+		image: SQUARE_HELP_ICON_PRESS COMP;
+	}
+
+	parts {
+		part {
+			name: "square_bg";
+			mouse_events: 0;
+			type: IMAGE;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				image { normal: SQUARE_GENGRID_BG;}
+				min: 720 722;
+				max: 720 722;
+				fixed: 1 1;
+			}
+		}
+
+		part {
+		    name: "gengrid";
+		    mouse_events: 1;
+		    type: SWALLOW;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            min: 616 616;
+	            max: 616 616;
+		    fixed: 1 1;
+	            align: 0.5 0.5;
+				rel1 { relative: 0.5 0.5; to: "square_bg"; }
+				rel2 { relative: 0.5 0.5; to: "square_bg"; }
+			}
+		}
+
+		part {
+			name: "help";
+			mouse_events: 1;
+			type: IMAGE;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				image { normal: SQUARE_HELP_ICON;}
+				color: 59 59 59 255;
+				rel1 {
+					relative: 1.0 0.0;
+					to: "gengrid";
+					offset: -46 -50;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "gengrid";
+					offset: 0 -4;
+				}
+			}
+			description {
+				state: "pressed" 0.0;
+				inherit: "default";
+				image { normal: SQUARE_HELP_ICON_PRESS;}
+				color: 21 108 148 255;
+			}
+
+		}
+
+		part {
+		    name: "title_top";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            min: 616 42;
+	            fixed: 1 1;
+	            align: 0 1;
+	            rel1 { relative: 0.0 0.0; to: gengrid;}
+	            rel2 { relative: 1.0 0.0; to: gengrid;}
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "Exciting";
+				}
+			}
+		}
+
+		part {
+		    name: "title_bottom";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            min: 616 42;
+	            fixed: 1 1;
+	            align: 0 0;
+	            rel1 { relative: 0.0 1.0; to: gengrid;}
+	            rel2 { relative: 1.0 1.0; to: gengrid;}
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "Calm";
+				}
+			}
+		}
+
+		part { name: "title_left_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "gengrid";
+				rel2 { relative: 0.0 1.0; to: "gengrid"; }
+				min: 42 616;
+				fixed: 1 1;
+				align: 1.0 0.0;
+				visible: 0;
+			}
+		}
+		part {
+		    name: "title_left";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+		    min: 42 616;
+	            fixed: 1 1;
+				rel1 { relative: 0.5 0.5; to: "title_left_area"; }
+				rel2 { relative: 0.5 0.5; to: "title_left_area"; }
+				map {
+					on: 1;
+					rotation { center: "title_left_area";
+						x: 0.0;
+						y: 0.0;
+						z: -90.0;
+					}
+				}
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "Old";
+				}
+			}
+		}
+
+		part { name: "title_right_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "gengrid"; }
+				rel2.to: "gengrid";
+				min: 42 616;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				visible: 0;
+			}
+		}
+		part {
+		    name: "title_right";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+		    min: 42 616;
+	            fixed: 1 1;
+	            rel1 { relative: 0.5 0.5; to: "title_right_area"; }
+				rel2 { relative: 0.5 0.5; to: "title_right_area"; }
+				map {
+					on: 1;
+					rotation { center: "title_right_area";
+						x: 0.0;
+						y: 0.0;
+						z: 90.0;
+					}
+				}
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "New";
+				}
+			}
+		}
+	}
+
+	programs {
+		program {
+			signal: "mouse,down,1";
+			source: "help";
+			action: STATE_SET "pressed" 0.0;
+			target: "help";
+		}
+		program {
+			signal: "mouse,up,1";
+			source: "help";
+			action: STATE_SET "default" 0.0;
+			target: "help";
+		}
+		program {
+			signal: "mouse,clicked,1";
+			source: "help";
+			action: SIGNAL_EMIT "clicked" "elm";
+			after: "play_sound";
+		}
+		program { name: "play_sound";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+		}
+	}
+}
+
+group {
+	name: "mp_square_view_landscape";
+
+	images {
+		image: 	SQUARE_CELL_FOCUSED_LD COMP;
+		image: 	SQUARE_BG_LD COMP;
+		image: SQUARE_HELP_ICON_H COMP;
+		image: SQUARE_HELP_ICON_PRESS_H COMP;
+	}
+
+	parts {
+		part { name: "square_bg";
+		    mouse_events: 0;
+		    type: IMAGE;
+		    scale: 1;
+		    description {
+	            		state: "default" 0.0;
+	            		visible: 1;
+				image { normal: SQUARE_BG_LD;}
+				min: 505 505;
+				max: 505 505;
+				align: 0.5 0.0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0;}
+	           		rel2 { relative: 1.0 1.0;}
+			}
+		}
+
+		part {
+			name: "square_cell_bg";
+			mouse_events: 0;
+		    type: IMAGE;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 0;
+	            image { normal: SQUARE_CELL_FOCUSED_LD;}
+	            rel1.to: "square_bg";
+	            rel2.to: "square_bg";
+			}
+		}
+
+		part {
+		    name: "gengrid";
+		    mouse_events: 1;
+		    type: SWALLOW;
+		    scale: 1;
+		    description {
+	            	state: "default" 0.0;
+	            	visible: 1;
+	            	max: 437 437;
+	            	align: 0.5 0.5;
+	            	rel1 { relative: 0.0 0.0; to: "square_bg";}
+	            	rel2 { relative: 1.0 1.0; to: "square_bg";}
+		    }
+		}
+
+		part {
+			name: "help";
+			mouse_events: 1;
+			type: IMAGE;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				image { normal: SQUARE_HELP_ICON_H;}
+				rel1 {
+					relative: 1.0 0.0;
+					to: "gengrid";
+					offset: -32 -33.5;
+				}
+				rel2 {
+					relative: 1.0 0.0;
+					to: "gengrid";
+					offset: 0 -1.5;
+				}
+			}
+			description {
+				state: "pressed" 0.0;
+				inherit: "default";
+				image { normal: SQUARE_HELP_ICON_PRESS_H;}
+			}
+
+		}
+
+		part {
+		    name: "title_top";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            min: 0 34;
+	            fixed: 0 1;
+	            align: 0 1;
+	            rel1 { relative: 0.0 0.0; to: gengrid;}
+	            rel2 { relative: 1.0 0.0; to: gengrid;}
+	             color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      0 1;
+					align:    0.5 0.5;
+					text:     "Exciting";
+				}
+			}
+		}
+
+		part {
+		    name: "title_bottom";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            min: 0 34;
+	            fixed: 0 1;
+	            align: 0 0;
+	            rel1 { relative: 0.0 1.0; to: gengrid;}
+	            rel2 { relative: 1.0 1.0; to: gengrid;}
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      0 1;
+					align:    0.5 0.5;
+					text:     "Calm";
+				}
+			}
+		}
+
+		part { name: "title_left_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "gengrid";
+				rel2 { relative: 0.0 1.0; to: "gengrid"; }
+				min: 34 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				visible: 0;
+			}
+		}
+
+
+		part {
+		    name: "title_left";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            fixed: 1 1;
+	            rel1 { relative: 0.5 0.5; to: "title_left_area";}
+	            rel2 { relative: 0.5 0.5; to: "title_left_area";}
+		    map {
+			on: 1;
+			rotation { center: "title_left_area";
+			x: 0.0;
+			y: 0.0;
+			z: -90.0;
+		        }
+		    }
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "Old";
+				}
+			}
+		}
+
+		part { name: "title_right_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "gengrid"; }
+				rel2.to: "gengrid";
+				min: 34 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				visible: 0;
+			}
+		}
+
+		part {
+		    name: "title_right";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+	            state: "default" 0.0;
+	            visible: 1;
+	            fixed: 1 1;
+	            rel1 { relative: 0.5 0.5; to: "title_right_area";}
+	            rel2 { relative: 0.5 0.5; to: "title_right_area";}
+	            map {
+			on: 1;
+			rotation { center: "title_right_area";
+				x: 0.0;
+				y: 0.0;
+				z: 90.0;
+			}
+		    }
+	            color: 59 59 59 255;
+	            text {
+					size: 30;
+					min:      1 1;
+					align:    0.5 0.5;
+					text:     "New";
+				}
+			}
+		}
+	}
+
+	programs {
+		program {
+			signal: "mouse,down,1";
+			source: "help";
+			action: STATE_SET "pressed" 0.0;
+			target: "help";
+		}
+		program {
+			signal: "mouse,up,1";
+			source: "help";
+			action: STATE_SET "default" 0.0;
+			target: "help";
+		}
+		program {
+			signal: "mouse,clicked,1";
+			source: "help";
+			action: SIGNAL_EMIT "clicked" "elm";
+			after: "play_sound";
+		}
+		program { name: "play_sound";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+		}
+	}
+}
+
+#define MP_SQ_POPUP_PROGRESSVIEW_CONTENT_MIN 568 110
+#define MP_SQ_POPUP_PROGRESSVIEW_TITLE_MIN 568 60
+#define MP_SQ_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX 324 60
+
+group { name: "popup_update_library_progressview";
+
+   parts {
+      part { name: "pad_t";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.5 0.0;
+            min: 0 0;
+            fixed: 0 1;
+            rel1 {
+               relative: 1.0 0.0;to_x: "pad_l";
+            }
+            rel2 {
+               relative: 0.0 0.0;to_x: "pad_r";
+            }
+         }
+      }
+      part { name: "pad_l";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 26 0;
+            max: 26 0;
+            fixed: 1 0;
+            rel1 {
+               relative: 0.0 0.0;
+            }
+            rel2 {
+               relative: 0.0 1.0;
+            }
+            align: 0.0 0.0;
+         }
+      }
+      part { name: "pad_r";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 26 0;
+            max: 26 0;
+            fixed: 1 0;
+            rel1 {
+               relative: 1.0 0.0;
+            }
+            rel2 {
+               relative: 1.0 1.0;
+            }
+            align: 1.0 0.0;
+         }
+      }
+      part { name: "pad_b";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 1.0;
+            min: 0 32;
+            fixed: 0 1;
+            rel1 {
+               relative: 1.0 1.0;
+               to_x: "pad_l";
+            }
+            rel2 {
+               relative: 0.0 1.0;
+               to_x: "pad_r";
+            }
+         }
+      }
+      part{ name:"elm.swallow.content";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: MP_SQ_POPUP_PROGRESSVIEW_CONTENT_MIN;
+            align: 0.5 0.0;
+            fixed: 1 0;
+            rel1 {
+               relative: 1.0 1.0;
+               to_x: "pad_l";
+               to_y: "pad_t";
+            }
+            rel2 {
+               relative: 0.0 0.0;
+               to_x: "pad_r";
+               to_y: "pad_b";
+            }
+         }
+      }
+      part { name: "elm.text.left";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            max: MP_SQ_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX;
+            text {
+               font: "Tizen:style=Medium";
+               size: 36;
+               min: 0 0;
+               align: 0.0 1.0;
+            }
+            color: 128 128 128 255;
+            align: 0.0 1.0;
+            rel1 {
+               relative: 0.0 0.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 0.5 1.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+      part { name: "elm.text.right";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            max: MP_SQ_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX;
+            text {
+               font: "Tizen:style=Medium";
+               size: 36;
+               min: 0 0;
+               align: 1.0 1.0;
+            }
+            color: 128 128 128 255;
+            align: 1.0 1.0;
+            rel1 {
+               relative: 0.5 0.0;
+               to: "elm.swallow.content";
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               to: "elm.swallow.content";
+            }
+         }
+      }
+   }
+}
+
+#define SQUARE_VIEW_BACK_BUTTON_W	104
+#define SQUARE_VIEW_BACK_BUTTON_H	74
+#define NAVIFRAME_TOOLBAR_BG_COLOR_INC 248 246 239 255
+
+group { name: "square_toolbar";
+	parts{
+		part { name: "base";
+			type: RECT;
+			mouse_events:  0;
+			description { state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				color: NAVIFRAME_TOOLBAR_BG_COLOR_INC;
+			}
+		}
+
+		part { name: "toolbar_button1";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				rel1 { relative: 0.10 0.0; to: "base"; }
+				rel2 { relative: 0.40 1.0; to: "base"; }
+			}
+		}
+
+		part { name: "toolbar_button2";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				rel1 { relative: 0.50 0.0; to: "base"; }
+				rel2 { relative: 0.80 1.0; to: "base"; }
+			}
+		}
+
+		part { name: "prev_btn";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				min: SQUARE_VIEW_BACK_BUTTON_W SQUARE_VIEW_BACK_BUTTON_H;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 1.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 1.0; to: "base"; }
+			}
+		}
+	}
+}
+
+group { name: "square_focused_cell";
+	images {
+		image: SQUARE_CELL_FOCUSED COMP;
+		image: SQUARE_CELL_PRESSED_BG COMP;
+		image: SQUARE_GENGRID_BG COMP;
+		image: SQUARE_GENGRID_EF COMP;
+		image: SQUARE_CELL_PRESSED_EF COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				image.normal: SQUARE_GENGRID_BG;
+				color: 227 227 227 255;
+			}
+			description { state: "pressed" 0.0;
+				image.normal: SQUARE_CELL_PRESSED_BG;
+			}
+			description { state: "focus" 0.0;
+				image.normal: SQUARE_CELL_FOCUSED;
+				color: 24 126 173 255;
+			}
+		}
+
+		part { name: "cell_selected_bg";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+			}
+		}
+
+		part { name: "effect";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				image.normal: SQUARE_GENGRID_EF;
+			}
+			description { state: "pressed" 0.0;
+				image.normal: SQUARE_CELL_PRESSED_EF;
+			}
+			description { state: "focus" 0.0;
+				inherit: "default";
+			}
+		}
+
+		part { name: "top_left_padding";
+			type: SPACER;
+			scale: 0;
+			description { state: "default" 0.0;
+				rel2 { relative: 0 0; to: "bg"; }
+				min: 2 2;
+				fixed: 1 1;
+			}
+		}
+
+		part { name: "bottom_right_padding";
+			type: SPACER;
+			scale: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 1.0; to: "bg"; }
+				min: 2 2;
+				fixed: 1 1;
+				align: 1.0 1.0;
+			}
+		}
+
+		part { name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 1.0; to: "top_left_padding"; }
+				rel2 { relative: 0.0 0.0; to: "bottom_right_padding"; }
+			}
+		}
+	}
+	programs {
+		program {
+			signal: "set_normal";
+			source: "*";
+			action: STATE_SET "default" 0.0;
+			target: "bg";
+			target: "effect";
+		}
+		program {
+			signal: "set_focused";
+			source: "*";
+			action: STATE_SET "focus" 0.0;
+			target: "bg";
+			target: "effect";
+		}
+		program {
+			signal: "set_pressed";
+			source: "*";
+			action: STATE_SET "pressed" 0.0;
+			target: "bg";
+			target: "effect";
+		}
+	}
+}

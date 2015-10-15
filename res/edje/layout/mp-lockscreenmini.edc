@@ -1,0 +1,772 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+#include "mp-defines.h"
+
+#define LOCKSCREEN_MINI_W 300
+#define LOCKSCREEN_MINI_H 93
+#define LOCKSCREEN_TOP_PADDING 19.2
+#define LOCKSCREEN_LEFT_PADDING 24
+#define LOCKSCREEN_RIGHT_PADDING 22.5
+#define LOCKSCREEN_BOTTOM_PADDING 36.8
+
+#define LOCKSCREEN_BUTTON_SIZE_MIN_MAX	99 105
+#define LOCKSCREEN_BIG_BTN_SIZE_MIN_MAX 126 134
+
+#define MC_LOCKSCREEN_BG 30 28 28 0
+
+#define MC_LOCKSCREEN_PREVIOUS "lock_screen/control_circle_icon_rewind.png"
+#define MC_LOCKSCREEN_PREVIOUS_PRESS "lock_screen/control_circle_icon_rewind_press.png"
+#define MC_LOCKSCREEN_NEXT "lock_screen/control_circle_icon_ff.png"
+#define MC_LOCKSCREEN_NEXT_PRESS "lock_screen/control_circle_icon_ff_press.png"
+
+#define MC_LOCKSCREEN_PLAY "lock_screen/control_circle_icon_play.png"
+#define MC_LOCKSCREEN_PAUSE "lock_screen/control_circle_icon_pause.png"
+#define MC_LOCKSCREEN_PLAY_PRESS "lock_screen/control_circle_icon_play_press.png"
+#define MC_LOCKSCREEN_PAUSE_PRESS "lock_screen/control_circle_icon_pause_press.png"
+
+
+#define LOCKSCREEN_INTERVAL 34.5
+#define MC_LOCKSCREEN_FOCUSED_COVER(__name, __over_part_bg) \
+part { \
+	name: __name"_focus"; \
+	type: SWALLOW; \
+	mouse_events: 1; \
+	scale: 1; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		rel1 { \
+			relative: 0 0; \
+			to: __over_part_bg; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __over_part_bg; \
+		} \
+	} \
+}
+
+#define MC_LOCKSCREEN_PART_AREA_FROM_LEFT(__name, __left_part, __width, __height) \
+part { name: __name; \
+	type: SPACER; \
+	scale: 1; \
+	mouse_events: 0; \
+	description { state: "default" 0.0; \
+		rel1 { relative: 1.0 0.5; to: __left_part; } \
+		rel2 { relative: 1.0 0.5; to: __left_part; } \
+		min: __width __height; \
+		fixed: 1 1; \
+		align: 0.0 0.5; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PROGRAM_PLAY_TOUCH_SOUND \
+program { name: "play_sound"; \
+	  action: RUN_PLUGIN "touch_sound_plugin"; \
+}
+
+#define MC_LOCKSCREEN_PART_ICON_BTN(__name, __to, __normal, __pressed, __btn_min_max) \
+part { name: __name"_clip"; \
+	type: RECT; \
+	scale: 1; \
+	mouse_events: 0; \
+	description { state: "default" 0.0; \
+		rel1.to: __name"_bg"; \
+		rel2.to: __name"_bg"; \
+		color: 255 255 255 255; \
+	} \
+	description { state: "hide" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part { name: __name"_bg"; \
+	type: IMAGE; \
+	scale: 1; \
+	mouse_events: 0; \
+	clip_to: __name"_clip"; \
+	description { state: "default" 0.0; \
+		rel1 { relative: 0.5 0.5; to: __to; } \
+		rel2 { relative: 0.5 0.5; to: __to; }\
+		min: __btn_min_max; \
+		max: __btn_min_max; \
+		image.normal: __normal; \
+		fixed: 1 1; \
+		align: 0.5 0.5; \
+	} \
+	description { state: "pressed" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+} \
+part { name: __name; \
+	type: RECT; \
+	scale: 1; \
+	mouse_events: 1; \
+	clip_to: __name"_clip"; \
+	description { state: "default" 0.0; \
+		rel1.to: __name"_bg"; \
+		rel2.to: __name"_bg"; \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PART_BUTTON(__name, __to, __normal, __pressed, __min_max) \
+part { \
+	name: __name"_spacer"; \
+	type: SPACER; \
+	scale: 1; \
+	description { state: "default" 0.0; \
+		rel1 { relative: 0 0; to: __to; } \
+		rel2 { relative: 1 1; to: __to; } \
+	} \
+} \
+part { \
+	name: __name"_bg"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 0; \
+		rel1 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		rel2 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		min: __min_max; \
+		max: __min_max; \
+		fixed: 1 1; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_press_bg"; \
+	type: RECT; \
+	mouse_events:0; \
+	scale : 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		color: 0 0 0 0; \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part { \
+	name: __name; \
+	type: IMAGE; \
+	mouse_events: 1; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		image { normal: __pressed; } \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PAUSE_PART_BUTTON(__name, __to, __normal, __pressed, __min_max) \
+part { \
+	name: __name"_spacer"; \
+	type: SPACER; \
+	scale: 1; \
+	description { state: "default" 0.0; \
+		rel1 { relative: 0 0; to: __to; } \
+		rel2 { relative: 1 1; to: __to; } \
+	} \
+} \
+part { \
+	name: __name"_bg"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 0; \
+		rel1 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		rel2 { \
+			relative: 0.5 0.5; \
+			to: __name"_spacer"; \
+		} \
+		min: __min_max; \
+		max: __min_max; \
+		fixed: 1 1; \
+		color: 0 0 0 0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_press_bg"; \
+	type: RECT; \
+	mouse_events:0; \
+	scale : 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		color: 0 0 0 0; \
+		visible:1; \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part { \
+	name: __name; \
+	type: IMAGE; \
+	mouse_events: 1; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		image { normal: __pressed; } \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PART_TEXT_BTN(__name, __to, __text_part_name) \
+part { name: __name"_clip"; \
+	type: RECT; \
+	scale: 1; \
+	mouse_events: 0; \
+	description { state: "default" 0.0; \
+		rel1.to: __to; \
+		rel2.to: __to; \
+		color: 255 255 255 255; \
+	} \
+	description { state: "hide" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part { name: __name"_bg"; \
+	type: SPACER; \
+	scale: 1; \
+	mouse_events: 0; \
+	clip_to: __name"_clip"; \
+	description { state: "default" 0.0; \
+		rel1.to: __to; \
+		rel2.to: __to; \
+	} \
+	description { state: "pressed" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+} \
+part { name: __text_part_name; \
+	type: TEXT; \
+	scale: 1; \
+	mouse_events: 0; \
+	clip_to: __name"_clip"; \
+	description { state: "default" 0.0; \
+		rel1.to: __name"_bg"; \
+		rel2.to: __name"_bg"; \
+		text { \
+			font: "Tizen:style=Medium"; \
+			text_class: "tizen"; \
+			size: 28; \
+			align: 0.5 0.5; \
+		} \
+		color: 149 149 149 255; \
+	} \
+} \
+part { name: __name; \
+	type: RECT; \
+	scale: 1; \
+	mouse_events: 1; \
+	clip_to: __name"_clip"; \
+	description { state: "default" 0.0; \
+		rel1.to: __to; \
+		rel2.to: __to; \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PART_RECT(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	repeat_events: 1; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible: 1; \
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	}\
+	description { \
+		state: "hide" 0.0; \
+		visible: 0; \
+	}\
+}
+
+#define MC_LOCKSCREEN_PART_SWALLOW(__name, __to, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		fixed: 1 1; \
+		visible: 1; \
+		fixed:1 1;\
+		rel1 { \
+			relative: __sx __sy; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+}
+
+#define MC_LOCKSCREEN_PROGRAM_BTN_ACTION(__btn, __down_emission, __down_src, __up_emission, __up_src, __clicked_emission, __clicked_src) \
+program { \
+	source: __btn; \
+	signal: "mouse,down,1"; \
+	script { \
+		set_state(PART:__btn"_bg", "pressed", 0.0); \
+		emit(__down_emission, __down_src); \
+	} \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	signal: "mouse,up,1"; \
+	source: __btn; \
+	script { \
+		set_state(PART:__btn"_bg", "default", 0.0); \
+		emit(__up_emission, __up_src); \
+	} \
+} \
+program { \
+	signal: "mouse,clicked,1"; \
+	source: __btn; \
+	action: SIGNAL_EMIT __clicked_emission __clicked_src; \
+	after: "play_sound"; \
+}
+
+#define MC_LOCKSCREEN_BUTTON_PROGRAM(__name) \
+program { \
+	name: __name"_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: STATE_SET "press" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_up"; \
+	source: __name; \
+	signal: "mouse,up,1"; \
+	action: STATE_SET "default" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+	transition: DECELERATE 0.02;\
+} \
+program { \
+        name: __name"_unpressed"; \
+        source: __name; \
+        signal: "signal.button.unpressed"; \
+        action: STATE_SET "default" 0.0; \
+        target: __name"_bg"; \
+        target: __name"_press_bg"; \
+        target: __name; \
+        transition: DECELERATE 0.02;\
+} \
+program { \
+	name: __name"_clicked"; \
+	source: __name; \
+	signal: "mouse,clicked,1"; \
+	action: SIGNAL_EMIT __name"_clicked" 0.0; \
+	after: "play_sound"; \
+}
+
+#define MC_LOCKSCREEN_BUTTON_VISIVBLE_PROGRAM(__name) \
+program { \
+	name: __name"_visible" ; \
+	signal: __name"_visible"; \
+	source: __name; \
+	action:   STATE_SET "default" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+} \
+program { \
+	name: __name"_invisible" ; \
+	signal: __name"_invisible"; \
+	source: __name; \
+	action:   STATE_SET "invisible" 0.0; \
+	target: __name"_bg"; \
+	target: __name"_press_bg"; \
+	target: __name; \
+}
+
+#define MC_LOCKSCREEN_PROGRAM_BTN_VISIBLE(__btn, __show_signal, __hide_signal) \
+program { \
+	signal: __show_signal; \
+	source: "*"; \
+	action: STATE_SET "default" 0.0; \
+	target: __btn"_clip"; \
+} \
+program { \
+	signal: __hide_signal; \
+	source: "*"; \
+	action: STATE_SET "hide" 0.0; \
+	target: __btn"_clip"; \
+}
+
+#define MC_LOCKSCREEN_MINI_CONTROL_HIDE_SWALLOW_OPTION(__name, __to) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	scale: 1; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible: 0; \
+		rel1 { \
+			relative: 0 0; \
+			to: __to; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __to; \
+		} \
+		color: 0 0 0 0; \
+	} \
+	description { \
+		state: "visible" 0.0; \
+		inherit: "default"; \
+		visible: 1; \
+	} \
+}
+
+#define MC_LOCKSCREEN_MINI_CONTROL_BUTTON_INVISIVBLE_PROGRAM(__name) \
+program { \
+	name: __name"_visible" ; \
+	signal: __name"_visible"; \
+	source: __name; \
+	action:   STATE_SET "visible" 0.0; \
+	target: __name; \
+} \
+program { \
+	name: __name"_invisible" ; \
+	signal: __name"_invisible"; \
+	source: __name; \
+	action:   STATE_SET "default" 0.0; \
+	target: __name; \
+}
+
+externals {
+	external: "elm";
+	external: "feedback";
+}
+
+collections {
+base_scale: 2.4;
+sounds {
+	sample {
+		name: "button-pressed" AS_IS;
+		source: MP_BUTTON_PRESSED_NAME;
+	}
+}
+plugins {
+	 plugin {
+		name: "touch_sound_plugin";
+	  	source: "feedback";
+	  	param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+	 }
+}
+group {
+	name: "music-lockscreenmini";
+	images {
+		image: MC_LOCKSCREEN_PREVIOUS COMP;
+		image: MC_LOCKSCREEN_PREVIOUS_PRESS COMP;
+		image: MC_LOCKSCREEN_NEXT COMP;
+		image: MC_LOCKSCREEN_NEXT_PRESS COMP;
+		image: MC_LOCKSCREEN_PLAY COMP;
+		image: MC_LOCKSCREEN_PAUSE COMP;
+		image: MC_LOCKSCREEN_PLAY_PRESS COMP;
+		image: MC_LOCKSCREEN_PAUSE_PRESS COMP;
+	}
+	parts {
+		part{ name: "bg";
+			type : RECT;
+			scale : 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min : 0 LOCKSCREEN_MINI_H;
+				fixed: 1 1;
+				rel1{ relative : 0 0;}
+				rel2{ relative : 1 1;}
+				color : MC_LOCKSCREEN_BG;
+			}
+		}
+
+		part { name: "padding.top";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 1 0; to: "bg"; }
+				min: 0 LOCKSCREEN_TOP_PADDING;
+				fixed: 0 1;
+				align: 0 0;
+			}
+		}
+
+		part { name: "padding.left";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 0 1; to: "bg"; }
+				min: LOCKSCREEN_LEFT_PADDING 0;
+				fixed: 1 0;
+				align: 0 0;
+			}
+		}
+
+		part { name: "padding.right";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1 0; to: "bg"; }
+				rel2 { relative: 1 1; to: "bg"; }
+				min: LOCKSCREEN_RIGHT_PADDING 0;
+				fixed: 1 0;
+				align: 1 0;
+			}
+		}
+
+		part { name: "padding.bottom";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "bg"; }
+				rel2 { relative: 1 1; to: "bg"; }
+				min: 0 LOCKSCREEN_BOTTOM_PADDING;
+				fixed: 0 1;
+				align: 0 1;
+			}
+		}
+		part { name: "elm.text";
+			type: SWALLOW;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+			   rel1 { relative: 1.0 1.0; to_x: "padding.left"; to_y: "padding.top";}
+			   rel2 { relative: 0 1.0; to_x: "padding.right"; to_y: "padding.top"; offset: 0 57;}
+			   fixed: 1 1;
+			}
+		}
+
+		part { name: "control_area";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 1.0; to_x: "padding.left"; to_y: "elm.text"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding.right"; to_y: "padding.bottom"; }
+				min: 0 134.4;
+				fixed: 0 1;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "rew_btn_area";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.27 0.45; to_x: "control_area"; to_y: "control_area";}
+				rel2 { relative: 0.27 0.45; to_x: "control_area"; to_y: "control_area";}
+				min: 99 134;
+				fixed: 1 1;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "left_area";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "rew_btn_area"; }
+				rel2 { relative: 1.0 1.0; to: "rew_btn_area"; }
+				min: LOCKSCREEN_BUTTON_SIZE_MIN_MAX;
+				fixed: 1 1;
+				align: 0.5 0.5;
+			}
+		}
+
+		MC_LOCKSCREEN_PART_BUTTON("rew_btn", "left_area", MC_LOCKSCREEN_PREVIOUS, MC_LOCKSCREEN_PREVIOUS_PRESS, LOCKSCREEN_BUTTON_SIZE_MIN_MAX)
+		MC_LOCKSCREEN_FOCUSED_COVER("rew", "left_area");
+
+		MC_LOCKSCREEN_PART_AREA_FROM_LEFT("rew_right_padding", "left_area", LOCKSCREEN_INTERVAL, 134)
+
+		MC_LOCKSCREEN_PART_AREA_FROM_LEFT("play_pause_btn_area", "rew_right_padding", 126, 134)
+
+		MC_LOCKSCREEN_PART_BUTTON("play_btn", "play_pause_btn_area", MC_LOCKSCREEN_PAUSE, MC_LOCKSCREEN_PAUSE_PRESS, LOCKSCREEN_BIG_BTN_SIZE_MIN_MAX)
+		MC_LOCKSCREEN_PAUSE_PART_BUTTON("pause_btn", "play_pause_btn_area", MC_LOCKSCREEN_PLAY, MC_LOCKSCREEN_PLAY_PRESS, LOCKSCREEN_BIG_BTN_SIZE_MIN_MAX)
+
+		MC_LOCKSCREEN_FOCUSED_COVER("play_pause", "play_pause_btn_area");
+
+		MC_LOCKSCREEN_PART_AREA_FROM_LEFT("play_pause_right_padding", "play_pause_btn_area", LOCKSCREEN_INTERVAL, 134)
+
+		MC_LOCKSCREEN_PART_AREA_FROM_LEFT("ff_btn_area", "play_pause_right_padding", 99, 105)
+
+		MC_LOCKSCREEN_PART_BUTTON("ff_btn", "ff_btn_area", MC_LOCKSCREEN_NEXT, MC_LOCKSCREEN_NEXT_PRESS, LOCKSCREEN_BUTTON_SIZE_MIN_MAX)
+		MC_LOCKSCREEN_FOCUSED_COVER("ff", "ff_btn_area");
+
+	}
+
+	programs {
+		MC_LOCKSCREEN_PROGRAM_PLAY_TOUCH_SOUND
+
+		MC_LOCKSCREEN_BUTTON_PROGRAM("rew_btn")
+		MC_LOCKSCREEN_BUTTON_PROGRAM("ff_btn")
+
+		MC_LOCKSCREEN_BUTTON_PROGRAM("play_btn")
+		MC_LOCKSCREEN_BUTTON_VISIVBLE_PROGRAM("play_btn")
+		MC_LOCKSCREEN_BUTTON_PROGRAM("pause_btn")
+		MC_LOCKSCREEN_BUTTON_VISIVBLE_PROGRAM("pause_btn")
+
+		program { name: "set_pause_icon";
+		   signal: "set_pause";
+		   source: "*";
+		   script{
+				emit("hide_play_btn", "edje");
+				emit("show_pause_btn", "edje");
+		   }
+		}
+		program { name: "set_play_icon";
+		   signal: "set_play";
+		   source: "*";
+		   script{
+				emit("show_play_btn", "edje");
+				emit("hide_pause_btn", "edje");
+		   }
+		}
+	}
+
+}
+
+
+} // collection
+

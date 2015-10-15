@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChangeableColorTable num="1">
+	<Theme style="Dark">
+		<ChangeableColorInfo id="AO001" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002E01" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002F" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002P" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002S" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002D" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003E01" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003F" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003P" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003S" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003D" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO002E02" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO003E02" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO006" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO006D" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO004P" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO004D" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO004F" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="AO005" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO001" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO002" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO006" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO007" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO013" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO008" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO009" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO010" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO011" inputColor="-" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO012" inputColor="1" hue="" saturation="" value="" alpha="" />
+		<ChangeableColorInfo id="ATO011" inputColor="1" hue="" saturation="" value="" alpha="" />
+	</Theme>
+	<Theme style="Light">
+		<ChangeableColorInfo id="AO001" inputColor="-" hue="0" saturation="0" value="16" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002E01" inputColor="-" hue="0" saturation="0" value="0" alpha="60" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002F" inputColor="1" hue="4" saturation="-66" value="-38" alpha="100" />
+		<ChangeableColorInfo id="AO002P" inputColor="-" hue="199" saturation="68" value="81" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002S" inputColor="-" hue="0" saturation="0" value="6" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002D" inputColor="-" hue="0" saturation="0" value="0" alpha="60" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003E01" inputColor="-" hue="0" saturation="0" value="100" alpha="50" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003F" inputColor="1" hue="4" saturation="3" value="39" alpha="100" />
+		<ChangeableColorInfo id="AO003P" inputColor="-" hue="199" saturation="68" value="81" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003S" inputColor="1" hue="0" saturation="0" value="0" alpha="50" />
+		<ChangeableColorInfo id="AO003D" inputColor="-" hue="0" saturation="0" value="100" alpha="20" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002E02" inputColor="-" hue="199" saturation="86" value="58" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003E02" inputColor="-" hue="0" saturation="0" value="0" alpha="50" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO006" inputColor="-" hue="0" saturation="0" value="100" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO006D" inputColor="-" hue="0" saturation="0" value="100" alpha="50" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO004P" inputColor="1" hue="2" saturation="14" value="33" alpha="100" />
+		<ChangeableColorInfo id="AO004D" inputColor="-" hue="0" saturation="0" value="100" alpha="30" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO004F" inputColor="1" hue="4" saturation="3" value="39" alpha="100" />
+		<ChangeableColorInfo id="AO005" inputColor="1" hue="0" saturation="0" value="0" alpha="100" />
+		<ChangeableColorInfo id="ATO001" inputColor="-" hue="0" saturation="0" value="96" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO002" inputColor="-" hue="0" saturation="0" value="0" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO006" inputColor="1" hue="2" saturation="11" value="20" alpha="100" />
+		<ChangeableColorInfo id="ATO007" inputColor="-" hue="0" saturation="0" value="96" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO013" inputColor="-" hue="0" saturation="0" value="0" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO008" inputColor="-" hue="0" saturation="0" value="96" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO009" inputColor="1" hue="0" saturation="0" value="0" alpha="100" />
+		<ChangeableColorInfo id="ATO010" inputColor="1" hue="0" saturation="0" value="0" alpha="100" />
+		<ChangeableColorInfo id="ATO011" inputColor="-" hue="0" saturation="0" value="96" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO012" inputColor="1" hue="0" saturation="0" value="0" alpha="100" />
+		<ChangeableColorInfo id="ATO011" inputColor="1" hue="0" saturation="0" value="0" alpha="100" />
+		<!-- copy from quick panel color table, use for minicontrol, do not delete!!!!-->
+		<ChangeableColorInfo id="AO009" inputColor="1" hue="1" saturation="-77" value="4" alpha="100" />
+		<ChangeableColorInfo id="AO010" inputColor="-" hue="0" saturation="85" value="88" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO011L1" inputColor="1" hue="-19" saturation="-84" value="38" alpha="100" />
+		<ChangeableColorInfo id="AO011L1P" inputColor="1" hue="-1" saturation="-69" value="29" alpha="100" />
+		<ChangeableColorInfo id="AO011L1F" inputColor="1" hue="-19" saturation="-84" value="38" alpha="5" />
+		<ChangeableColorInfo id="AO011L2" inputColor="1" hue="0" saturation="0" value="58" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO011L2P" inputColor="1" hue="0" saturation="0" value="58" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true"/>
+		<ChangeableColorInfo id="AO011L2D" inputColor="1" hue="1" saturation="-77" value="4" alpha="30" />
+		<ChangeableColorInfo id="AO011L2F" inputColor="1" hue="5" saturation="11" value="18" alpha="100" />
+		<ChangeableColorInfo id="AO011L3" inputColor="1" hue="0" saturation="0" value="19" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true"/>
+		<ChangeableColorInfo id="AO011L3P" inputColor="1" hue="0" saturation="0" value="19" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true"/>
+		<ChangeableColorInfo id="AO011L3D" inputColor="1" hue="6" saturation="-69" value="-19" alpha="30" />
+		<!-- copy from home screen table, use for dbox, do not delete!!!!-->
+		<ChangeableColorInfo id="HATO005" inputColor="-" hue="0" saturation="0" value="100" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="HATO006" inputColor="-" hue="0" saturation="0" value="100" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="HATO008" inputColor="-" hue="0" saturation="0" value="100" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="HATO009" inputColor="-" hue="0" saturation="0" value="100" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+	</Theme>
+</ChangeableColorTable>
+<ChangeableColorTable num="2">
+	<Theme style="Dark">
+		<ChangeableColorInfo id="AO001" inputColor="2" hue="1" saturation="7" value="-11" alpha="100" />
+		<ChangeableColorInfo id="AO002P" inputColor="K" hue="0" saturation="0" value="0" alpha="70" />
+		<ChangeableColorInfo id="AO003E01" inputColor="2" hue="0" saturation="9" value="2" alpha="100" />
+		<ChangeableColorInfo id="ATO002" inputColor="W" hue="0" saturation="0" value="-33" alpha="100" />
+		<ChangeableColorInfo id="ATO006" inputColor="3" hue="3" saturation="3" value="14" alpha="100" />
+		<ChangeableColorInfo id="ATO007" inputColor="3" hue="3" saturation="3" value="18" alpha="40" />
+		<ChangeableColorInfo id="ATO008" inputColor="3" hue="3" saturation="3" value="18" alpha="40" />
+		<ChangeableColorInfo id="ATO009" inputColor="3" hue="3" saturation="3" value="18" alpha="40" />
+	</Theme>
+	<Theme style="Light">
+		<ChangeableColorInfo id="AO001" inputColor="2" hue="-3" saturation="4" value="97" alpha="100" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002P" inputColor="K" hue="0" saturation="0" value="3" alpha="70" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003E01" inputColor="2" hue="0" saturation="-18" value="68" alpha="100" />
+		<ChangeableColorInfo id="ATO002" inputColor="W" hue="0" saturation="0" value="-46" alpha="100" />
+		<ChangeableColorInfo id="ATO006" inputColor="3" hue="4" saturation="12" value="3" alpha="100" />
+		<ChangeableColorInfo id="ATO007" inputColor="3" hue="4" saturation="12" value="3" alpha="40" />
+		<ChangeableColorInfo id="ATO008" inputColor="3" hue="4" saturation="12" value="3" alpha="40" />
+		<ChangeableColorInfo id="ATO009" inputColor="3" hue="4" saturation="12" value="3" alpha="40" />
+	</Theme>
+</ChangeableColorTable>
+<ChangeableColorTable num="3">
+	<Theme style="Dark">
+		<ChangeableColorInfo id="AO001" inputColor="2" hue="0" saturation="-5" value="-20" alpha="100" minValue="25" />
+		<ChangeableColorInfo id="AO002P" inputColor="K" hue="0" saturation="0" value="0" alpha="70" />
+		<ChangeableColorInfo id="AO003E01" inputColor="2" hue="1" saturation="13" value="-3" alpha="100" />
+		<ChangeableColorInfo id="ATO002" inputColor="W" hue="0" saturation="0" value="-33" alpha="100" />
+		<ChangeableColorInfo id="ATO006" inputColor="1" hue="3" saturation="-4" value="5" alpha="100" />
+		<ChangeableColorInfo id="ATO007" inputColor="1" hue="-12" saturation="0" value="-20" alpha="40" />
+		<ChangeableColorInfo id="ATO008" inputColor="1" hue="-12" saturation="0" value="-20" alpha="40" />
+		<ChangeableColorInfo id="ATO009" inputColor="1" hue="-12" saturation="0" value="-20" alpha="40" />
+	</Theme>
+	<Theme style="Light">
+		<ChangeableColorInfo id="AO001" inputColor="2" hue="0" saturation="0" value="96" alpha="100" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO002P" inputColor="K" hue="0" saturation="0" value="3" alpha="70" fixedHue="true" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="AO003E01" inputColor="2" hue="0" saturation="8" value="100" alpha="100" fixedSaturation="true" fixedValue="true" />
+		<ChangeableColorInfo id="ATO002" inputColor="W" hue="0" saturation="0" value="-46" alpha="100" />
+		<ChangeableColorInfo id="ATO006" inputColor="1" hue="3" saturation="15" value="-8" alpha="100" />
+		<ChangeableColorInfo id="ATO007" inputColor="1" hue="0" saturation="20" value="-15" alpha="40" />
+		<ChangeableColorInfo id="ATO008" inputColor="1" hue="0" saturation="20" value="-15" alpha="40" />
+		<ChangeableColorInfo id="ATO009" inputColor="1" hue="0" saturation="20" value="-15" alpha="40" />
+	</Theme>
+</ChangeableColorTable>

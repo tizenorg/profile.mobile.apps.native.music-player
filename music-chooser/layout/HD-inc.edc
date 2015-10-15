@@ -1,0 +1,1043 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+//****************************************************************************//
+// This file defines the width, height (not color!) for each widgets
+// We can define different INC file by Resolution (HD, WVGA, HVGA)
+//
+// ************* Naming Rule ************ //
+// {WIDGET}_{GROUP}_{PART}_{STATE}_{TYPE}
+//   WIDGET: NAVIFRAME, LIST, DATETIME, POPUP, etc.
+//   GROUP:  INDEX
+//   PART:   TEXT, ICON, BG, PADDING, DIVIDER, ICON, etc.
+//   STATE:  LEFT, RIGHT, TOP, BOTTOM, MIN, MAX,
+//   TYPE:   HEIGHT, WIDTH, SIZE
+// e.g. LIST_PADDING_LEFT_HEIGHT
+//****************************************************************************//
+#define BASE_SCALE_INC 2.4
+#define SMALL "WVGA/"
+#define MEDIUM "HD/"
+#define DEFAULT_IMAGE "WVGA/"
+//****************************************************************************//
+// Colorselector
+//****************************************************************************//
+#define COLORSELECTOR_PALETTE_COLORPLANE_HEIGHT_INC 238
+#define COLORSELECTOR_PALETTE_COLORPLANE_WIDTH_INC 720
+#define COLORSELECTOR_PORTRAIT_HOR_PAD_COLORPLANE_INC "7"
+#define COLORSELECTOR_PORTRAIT_VER_PAD_COLORPLANE_INC "10"
+#define COLORSELECTOR_PALETTE_COLORBG_MIN_COLORPLANE_INC 90 90
+#define COLORPLANE_MIN_HEIGHT_INC 80
+#define COLORSELECTOR_TOPBOTTOM_PAD_COLORPLANE_INC 24 
+//****************************************************************************//
+// Naviframe
+//****************************************************************************//
+#define NAVIFRAME_TITLE_HEIGHT_INC 108
+#define NAVIFRAME_INDICATOR_HEIGHT_INC 54
+#define NAVIFRAME_SUBTITLE_HEIGHT_INC 42
+#define NAVIFRAME_TITLE_TOP_PADDING_HEIGHT_INC 4
+#define NAVIFRAME_SUBTITLE_BOTTOM_PADDING_HEIGHT_INC 4
+#define NAVIFRAME_TABBAR_HEIGHT_INC 108
+#define NAVIFRAME_NAVIGATIONBAR_HEIGHT_INC 76
+#define NAVIFRAME_NAVIGATIONBAR_TOP_DIVIDER_HEIGHT_INC 1
+#define NAVIFRAME_TABBAR2_HEIGHT_INC 156
+#define NAVIFRAME_TABBAR_TOP_DIVIDER_HEIGHT_INC 2
+#define NAVIFRAME_TITLE_LEFT_PADDING_WIDTH_INC 22
+#define NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC 114 108
+#define NAVIFRAME_BADGE_ICON_LEFT_PADDING_WIDTH_INC 22
+#define NAVIFRAME_BADGE_TEXT_LEFT_PADDING_WIDTH_INC 22
+#define NAVIFRAME_BADGE_HEIGHT_INC 48
+#define NAVIFRAME_BADGE2_PADDING_WIDTH_INC (NAVIFRAME_BADGE_ICON_LEFT_PADDING_WIDTH_INC + NAVIFRAME_BADGE_TEXT_LEFT_PADDING_WIDTH_INC + NAVIFRAME_BADGE_TEXT_LEFT_PADDING_WIDTH_INC)
+#define NAVIFRAME_DRAWERS_WIDTH_INC 82
+#define NAVIFRAME_TOOLBAR_HEIGHT_INC 162
+#define NAVIFRAME_TOOLBAR_COLOR_INC 245 245 245 255
+
+#define BUTTON_NAVIFRAME_TITLE_TEXT_BTN_MIN_W_INC 180
+#define BUTTON_NAVIFRAME_TITLE_TEXT_LEFT_RIGHT_PADDING_INC 22.5
+#define BUTTON_NAVIFRAME_TITLE_TEXT_TEXTBLOCK_MIN_W_INC 135
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_TEXT_SIZE_INC 180 108
+#define BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC 33
+
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_SIZE_INC 114 108
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_BG_PADDING_WIDTH_INC 22
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_BG_SIZE_INC 70 70
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_IMAGE_PADDING_WIDTH_INC 22
+#define BUTTON_NAVIFRAME_TITLE_BUTTON_IMAGE_SIZE_INC 70 70
+#define BUTTON_NAVIFRAME_DRAWERS_WIDTH_INC 82
+#define BUTTON_NAVIFRAME_DRAWERS_IMAGE_SIZE_INC 82 108
+
+#define NAVIFRAME_TITLE_TEXT_FONT_SIZE_INC 54
+#define NAVIFRAME_SUBTITLE_VISIBLE_TEXT_FONT_SIZE_INC 45
+#define NAVIFRAME_VISIBLE_TEXT_FONT_SIZE_INC 31
+#define NAVIFRAME_TITLE_TEXT_FONT_RANGE_MIN 30
+#define NAVIFRAME_TITLE_TEXT_FONT_RANGE_MAX 36
+
+#define NAVIFRAME_TITLE_TEXT_SHADOW_COLOR_INC "#080808BF"
+#define NAVIFRAME_SUBTITLE_VISIBLE_TEXT_SHADOW_COLOR_INC "#080808BF"
+#define NAVIFRAME_SUBTITLE_TEXT_SHADOW_COLOR_INC "#080808BF"
+//****************************************************************************//
+// Label
+//****************************************************************************//
+#define LABEL_FONT_SIZE_INC 24
+
+//****************************************************************************//
+// Layout
+//****************************************************************************//
+#define LAYOUT_INDICATOR_HEIGHT_INC 48  // FIXME: indicator UX is not updated yet.
+
+#define FLOATING_BUTTON_BOTTOM_PADDING_INC 42
+#define FLOATING_BUTTON_WIDTH 138
+#define FLOATING_BUTTON_HEIGHT 108
+#define FLOATING_BUTTON_ICON_LEFT_PADDING 51
+#define FLOATING_BUTTON_ICON_RIGHT_PADDING 33
+#define FLOATING_BUTTON_ICON_WIDTH 54
+#define FLOATING_BUTTON_ICON_HEIGHT 54
+
+#define SEARCHBAR_CANCEL_BUTTON_W_INC 30
+#define SEARCHBAR_CANCEL_BUTTON_LEFT_PADDING_INC 10
+#define SEARCHBAR_H_INC 63
+#define SEARCHBAR_HEIGHT_INC 63
+#define SEARCHBAR_BASE_HEIGHT_INC 63
+#define SEARCHBAR_WIDTH_INC 320
+#define SEARCHBAR_TOP_PADDING_INC 0
+#define SEARCHBAR_BOTTOM_PADDING_INC 0
+#define SEARCHBAR_LEFT_PADDING_INC 0
+#define SEARCHBAR_RIGHT_PADDING_INC 0
+#define SEARCHBAR_BOTTOM_LINE_HEIGHT 1
+
+//****************************************************************************//
+// Ctxpopup
+//****************************************************************************//
+#define CTXPOPUP_OUTSIDE_LEFT_PADDING 7
+#define CTXPOPUP_OUTSIDE_RIGHT_PADDING 7
+#define CTXPOPUP_MOVE_PAD 40
+#define CTXPOPUP_OUTLINE_SIZE 1
+#define CTXPOPUP_WIDTH 720
+#define CTXPOPUP_TEXT_MAX 676
+#define CTXPOPUP_ITEM_TEXT_SIZE 20
+#define CTXPOPUP_ITEM_TEXT_MAX_SIZE 40
+#define CTXPOPUP_ITEM_HEIGHT_MIN 140
+#define CTXPOPUP_ITEM_HEIGHT_MAX 153
+#define CTXPOPUP_ITEM_TEXT_LR_PADDING 22
+#define CTXPOPUP_ITEM_TEXT_TB_PADDING 41
+#define CTXPOPUP_ITEM_TEXT_HEIGHT_MIN 58
+#define CTXPOPUP_DROPDOWN_LIST_WIDTH 674
+#define CTXPOPUP_DROPDOWN_LABEL_MIN_WIDTH 201
+#define CTXPOPUP_DROPDOWN_TEXT_MAX 630
+#define CTXPOPUP_DROPDOWN_ITEM_TEXT_SIZE 40
+#define CTXPOPUP_DROPDOWN_ITEM_TEXT_MAX_SIZE (CTXPOPUP_DROPDOWN_ITEM_TEXT_SIZE*2)
+#define CTXPOPUP_DROPDOWN_ITEM_HEIGHT_MIN 108
+#define CTXPOPUP_DROPDOWN_ITEM_HEIGHT_MAX 138
+#define CTXPOPUP_DROPDOWN_ITEM_TEXT_LR_PADDING 22
+#define CTXPOPUP_DROPDOWN_CONTENT_LR_PADDING 1
+#define CTXPOPUP_DROPDOWN_CONTENT_TB_PADDING 1
+#define CTXPOPUP_DROPDOWN_SEPARATOR_HEIGHT 2
+#define CTXPOPUP_ITEM_HORIZONTAL_HEIGHT_INC 94
+#define CTXPOPUP_ITEM_TEXT_HORIZONTAL_PADDING_INC 15
+#define CTXPOPUP_CONTENT_PADDING_HEIGHT 1
+#define CTXPOPUP_ITEM_ICON_HORIZONTAL_WIDTH_INC 124
+#define CTXPOPUP_ITEM_BOTTOM_PADDING_INC 23
+#define CTXPOPUP_ITEM_TOP_PADDING_INC 23
+#define CTXPOPUP_ITEM_HEIGHT_INC 154
+#define CTXPOPUP_CONTENT_PADDING 1
+#define CTXPOPUP_ITEM_HORIZONTAL_WIDTH_MIN_INC 106
+#define CTXPOPUP_ITEM_HORIZONTAL_WIDTH_MAX_INC 136
+#define CTXPOPUP_ITEM_HORIZONTAL_TEXT_HEIGHT_MIN 48
+#define CTXPOPUP_SEPARATOR_MIN_SIZE_INC 1 CTXPOPUP_ITEM_HORIZONTAL_HEIGHT_INC
+#define CTXPOPUP_SEPARATOR_MAX_SIZE_INC 1 -1
+#define CTXPOPUP_ICON_WIDTH_INC 45
+#define CTXPOPUP_ICON_HEIGHT_INC 45
+#define CTXPOPUP_ITEM_ICON_BOTTOM_PADDING_INC 9
+#define CTXPOPUP_TEXT_SIZE_INC 26
+#define CTXPOPUP_ITEM_TEXT_TOP_PADDING_INC 23
+#define CTXPOPUP_ITEM_TEXT_BOTTOM_PADDING_INC 23
+
+//****************************************************************************//
+// Copypaste
+//****************************************************************************//
+#define CTXPOPUP_SHADOW_TOP_PADDING 0
+#define CTXPOPUP_SHADOW_BOTTOM_PADDING 0
+#define CTXPOPUP_SHADOW_LEFT_PADDING 1
+#define CTXPOPUP_SHADOW_RIGHT_PADDING 1
+#define CTXPOPUP_ITEM_DISABLED_COLOR 0 0 0 0
+#define CTXPOPUP_ITEM_TEXT_LR_PADDING_INC 15
+#define CTXPOPUP_ICON_ITEM_HORIZONTAL_WIDTH_INC 88
+#define CTXPOPUP_FRAME_CORNER_ARROW_PADDING 18
+#define CTXPOPUP_CONTENT_TOP_PADDING 3
+#define CTXPOPUP_CONTENT_BOTTOM_PADDING 5
+#define CTXPOPUP_CONTENT_LEFT_PADDING 3
+#define CTXPOPUP_CONTENT_RIGHT_PADDING 3
+#define CTXPOPUP_ARROW_PADDING 0
+#define CTXPOPUP_ARROW_SIZE_INC 30 30
+#define CTXPOPUP_COPYPASTE_SHADOW_LEFT_PADDING 1
+#define CTXPOPUP_COPYPASTE_SHADOW_RIGHT_PADDING 1
+#define CTXPOPUP_COPYPASTE_CONTENT_TOP_PADDING 3
+#define CTXPOPUP_COPYPASTE_CONTENT_BOTTOM_PADDING 5
+#define CTXPOPUP_COPYPASTE_CONTENT_LEFT_PADDING 3
+#define CTXPOPUP_COPYPASTE_CONTENT_RIGHT_PADDING 3
+#define CTXPOPUP_COPYPASTE_ITEM_HORIZONTAL_WIDTH_MIN_INC 128
+#define CTXPOPUP_COPYPASTE_TEXT_SIZE_INC 26
+#define CTXPOPUP_COPYPASTE_TEXT_MAX_SIZE_INC (CTXPOPUP_COPYPASTE_TEXT_SIZE_INC * 2)
+#define CTXPOPUP_COPYPASTE_WIDTH_MAX_INC 706
+#define CTXPOPUP_COPYPASTE_ITEM_HEIGHT_MIN_INC 132
+#define CTXPOPUP_COPYPASTE_ICON_WIDTH_INC 45
+#define CTXPOPUP_COPYPASTE_ICON_HEIGHT_INC 45
+#define CTXPOPUP_COPYPASTE_ITEM_TEXT_TOP_PADDING_INC 23
+#define CTXPOPUP_COPYPASTE_ITEM_ICON_BOTTOM_PADDING_INC 10
+#define CTXPOPUP_COPYPASTE_ITEM_TEXT_PADDING_INC 15
+#define CTXPOPUP_COPYPASTE_ITEM_TEXT_BOTTOM_PADDING_INC 23
+#define CTXPOPUP_COPYPASTE_SEPARATOR_MIN_SIZE_INC 1 CTXPOPUP_COPYPASTE_ITEM_HEIGHT_MIN_INC
+#define CTXPOPUP_COPYPASTE_SEPARATOR_MAX_SIZE_INC 1 -1
+
+//****************************************************************************//
+// Tabbar
+//****************************************************************************//
+#define TABBAR_TWO_ITEMS_SIZE_INC 280 0;
+#define TABBAR_THREE_ITEMS_SIZE_INC 240 0;
+#define TABBAR_FOUR_ITEMS_SIZE_INC 180 0;
+#define TABBAR_SCROLLABLE_ITEMS_SIZE_INC 202 0;
+#define TABBAR_LANDSCAPE_TWO_ITEMS_SIZE_INC 640 0;
+#define TABBAR_LANDSCAPE_THREE_ITEMS_SIZE_INC  427 0;
+#define TABBAR_LANDSCAPE_FOUR_ITEMS_SIZE_INC 320 0;
+#define TABBAR_LANDSCAPE_SCROLLABLE_ITEMS_SIZE_INC 280 0;
+#define TABBAR_SELECTED_LINE_SIZE_INC 0 5
+#define TABBAR_TEXT_CENTER_PADDING_SIZE_INC 0 2
+#define TABBAR_TEXT_LEFT_RIGHT_PADDING_SIZE_INC 12 0
+#define TABBAR_TEXT_LEFT_TOP_PADDING_SIZE_INC 12 27
+#define TABBAR_TEXT_RIGHT_BOTTOM_PADDING_SIZE_INC 12 20
+#define TABBAR_ICON_TEXT_LEFT_TOP_PADDING_SIZE_INC 12 20
+#define TABBAR_ICON_TEXT_RIGHT_BOTTOM_PADDING_SIZE_INC 12 15
+#define TABBAR_ICON_TEXT_LAND_LEFT_TOP_PADDING_SIZE_INC 12 27
+#define TABBAR_ICON_TEXT_LAND_RIGHT_BOTTOM_PADDING_SIZE_INC 12 20
+#define TABBAR_ICON_SIZE_INC 70 70
+#define TABBAR_ICON_TEXT_PAD_INC 22 0
+#define TABBAR_ICON_RECT_SIZE_INC 92 70
+#define TABBAR_TEXT_TEXT_SIZE_INC 0 56
+#define TABBAR_ICON_TEXT_TEXT_SIZE_INC 0 47
+#define TABBAR_ICON_TEXT_LAND_TEXT_SIZE_INC 0 56
+//Navigation style
+#define TOOLBAR_NAVI_HEIGHT_INC 78
+#define TOOLBAR_NAVI_PADDING_INC 22
+#define TOOLBAR_NAVI_DIVIDER_INC 64
+
+//****************************************************************************//
+// Genlist
+//****************************************************************************//
+// Group index
+#define LIST_INDEX_PADDING_LEFT_SIZE        15
+#define LIST_INDEX_PADDING_RIGHT_SIZE       15
+#define LIST_INDEX_PADDING_TOP_SIZE         7
+#define LIST_INDEX_PADDING_BOTTOM_SIZE      8
+
+#define LIST_INDEX_HEIGHT                   36
+
+#define LIST_INDEX_TEXT_MAIN_SIZE           27
+#define LIST_INDEX_TEXT_SUB_SIZE            27
+#define LIST_INDEX_TEXT_SUB_WIDTH_MAX       240
+#define LIST_INDEX_TEXT_PADDING_SIZE        22
+#define LIST_INDEX_BOTTOMLINE_HEIGHT        2
+
+// Normal style
+#define LIST_ITEM_HEIGHT                     120
+#define LIST_PADDING_TOP_SIZE                29   // FIXME: please check font height
+#define LIST_PADDING_BOTTOM_SIZE             24   // FIXME: please check font height
+#define LIST_2LINE_PADDING_TOP_SIZE          24   // FIXME: please check font height
+#define LIST_2LINE_PADDING_BOTTOM_SIZE       24   // FIXME: please check font height
+#define LIST_PADDING_CENTER_LEFT_SIZE        24
+#define LIST_PADDING_CENTER_RIGHT_SIZE       24
+#define LIST_PADDING_TEXT_SIZE               24
+#define LIST_PADDING_DEFAULT_SIZE            24
+
+#define LIST_TEXT_MAIN_HEIGHT                38
+#define LIST_TEXT_SUB_HEIGHT                 32
+
+#define LIST_TEXT_MAIN_SIZE                  30
+#define LIST_TEXT_SUB_SIZE                   24
+#define LIST_TEXT_SUB_WIDTH_MAX              130
+
+//Expand style
+#define GENLIST_TREESIZE_DEFAULT            32
+
+//****************************************************************************//
+// SCROLLER
+//****************************************************************************//
+#define SCROLLER_DEFAULT_SCROLLBAR_VBAR_MIN_SIZE_INC 12 32
+#define SCROLLER_DEFAULT_SCROLLBAR_VBAR_MAX_SIZE_INC 12 99999
+#define SCROLLER_DEFAULT_SCROLLBAR_HBAR_MIN_SIZE_INC 32 12 
+#define SCROLLER_DEFAULT_SCROLLBAR_HBAR_MAX_SIZE_INC 99999 12
+#define SCROLLER_TABBAR_SCROLLBAR_HBAR_HEIGHT 20
+#define SCROLLER_TABBAR_SCROLLBAR_HBAR_MIN_SIZE_INC 3 SCROLLER_TABBAR_SCROLLBAR_HBAR_HEIGHT
+#define SCROLLER_TABBAR_SCROLLBAR_HBAR_MAX_SIZE_INC 99999 SCROLLER_TABBAR_SCROLLBAR_HBAR_HEIGHT
+#define SCROLLER_DEFAULT_SCROLLBAR_VBAR_PADDING_SIZE 6
+#define SCROLLER_DEFAULT_SCROLLBAR_HBAR_PADDING_SIZE 6
+#define SCROLLER_HANDLER_SCROLLBAR_VBAR_MIN_SIZE_INC 38 70
+#define SCROLLER_HANDLER_SCROLLBAR_HBAR_MIN_SIZE_INC 70 38
+#define SCROLLER_HANDLER_SCROLLBAR_VBAR_MIDDLE_MIN_SIZE_INC 30 30
+#define SCROLLER_HANDLER_SCROLLBAR_HBAR_MIDDLE_MIN_SIZE_INC 30 30
+#define SCROLLER_HANDLER_SCROLLBAR_VBAR_PADDING_SIZE 6
+#define SCROLLER_EFFECT_SHADOW_FIRST_LAYER_MAX_SIZE 120
+#define SCROLLER_EFFECT_SHADOW_FIRST_LAYER_MIN_SIZE 75
+#define SCROLLER_EFFECT_SHADOW_FIRST_LAYER_MOVE_CORRECTION_VALUE 45
+#define SCROLLER_EFFECT_SHADOW_SECOND_LAYER_MAX_SIZE 96
+#define SCROLLER_EFFECT_SHADOW_SECOND_LAYER_MIN_SIZE 60
+#define SCROLLER_EFFECT_SHADOW_SECOND_LAYER_MOVE_CORRECTION_VALUE 36
+#define SCROLLER_EFFECT_SHADOW_THIRD_LAYER_MAX_SIZE 72
+#define SCROLLER_EFFECT_SHADOW_THIRD_LAYER_MIN_SIZE 45
+#define SCROLLER_EFFECT_SHADOW_THIRD_LAYER_MOVE_CORRECTION_VALUE 27
+#define SCROLLER_EFFECT_SHADOW_FOURTH_LAYER_MAX_SIZE 48
+#define SCROLLER_EFFECT_SHADOW_FOURTH_LAYER_MIN_SIZE 30
+#define SCROLLER_EFFECT_SHADOW_FOURTH_LAYER_MOVE_CORRECTION_VALUE 18
+#define SCROLLER_EFFECT_SHADOW_FIFTH_LAYER_MAX_SIZE 24
+#define SCROLLER_EFFECT_SHADOW_FIFTH_LAYER_MIN_SIZE 15
+#define SCROLLER_EFFECT_SHADOW_FIFTH_LAYER_MOVE_CORRECTION_VALUE 9
+
+//****************************************************************************//
+// Entry
+//****************************************************************************//
+// Normal Entry
+#define ENTRY_TEXT_SIZE_INC 24
+#define ENTRY_PREEDIT_BACKGROUND_COLOR_INC "#FAFAFA"
+#define ENTRY_PREEDIT_TEXT_COLOR_INC "#000000"
+#define ENTRY_PREEDIT_UNDERLINE_COLOR_INC "#FAFAFA"
+#define ENTRY_PREEDIT_SUB1_COLOR_INC "#2EA8E1"
+#define ENTRY_PREEDIT_SUB2_COLOR_INC "#9962C3"
+#define ENTRY_PREEDIT_SUB3_COLOR_INC "#76DE37"
+#define ENTRY_PREEDIT_SUB4_COLOR_INC "#999999"
+#define ENTRY_SELECTION_BLOCK_HANDLE_MIN_WIDTH_INC 34
+#define ENTRY_SELECTION_BLOCK_HANDLE_MIN_HEIGHT_INC 34
+#define ENTRY_SELECTION_BLOCK_HANDLE_EDGE_WIDTH 3
+#define ENTRY_CURSOR_HANDLE_MIN_WIDTH_INC 50
+#define ENTRY_CURSOR_HANDLE_MIN_HEIGHT_INC 50
+#define ENTRY_CURSOR_SIZE_INC 3 0
+#define MAGNIFIER_WIDTH_FIXED_INC 264
+#define MAGNIFIER_HEIGHT_MIN 78
+#define MAGNIFIER_HEIGHT_MAX 108
+#define MAGNIFIER_ARROW_HEIGHT_INC 10
+#define MAGNIFIER_LEFT_OFFSET_INC 11 11
+#define MAGNIFIER_RIGHT_OFFSET_INC 11 22
+#define ENTRY_EMOTICON_SIZE 26 26
+
+// Editfield
+#define ENTRY_EDITFIELD_TEXT_SIZE_INC 24
+#define ENTRY_EDITFIELD_CLEAR_BUTTON_PADDING_MIN_MAX_INC 34 0
+#define ENTRY_EDITFIELD_FOCUS_UNDERLINE_SIZE_INC 0 1
+#define ENTRY_EDITFIELD_FOCUS_UNDERLINE_BOTTOM_PADDING_SIZE_INC 0 7
+#define ENTRY_EDITFIELD_TOP_PADDING_HEIGHT 0 15
+#define ENTRY_EDITFIELD_BOTTOM_PADDING_HEIGHT 0 15
+#define ENTRY_EDITFIELD_LEFT_PADDING_HEIGHT 10 0
+#define ENTRY_EDITFIELD_RIGHT_PADDING_HEIGHT 10 0
+#define ENTRY_EDITFIELD_SEARCHBAR_TEXT_SIZE_INC 24
+#define ENTRY_EDITFIELD_LEFT_RIGHT_PADDING 8 0
+#define ENTRY_EDITFIELD_LEFT_RIGHT_MARGIN 8
+#define ENTRY_EDITFIELD_TOP_PADDING_HEIGHT_MULTILINE 0 43
+#define ENTRY_EDITFIELD_BOTTOM_PADDING_HEIGHT_MULTILINE 0 43
+#define ENTRY_EDITFIELD_FOCUS_UNDERLINE_BOTTOM_PADDING_SIZE_MULTILINE 0 28
+// Clear Button
+#define BUTTON_EDITFIELD_CLEAR_BUTTON_MIN_MAX_INC 60 144
+#define BUTTON_EDITFIELD_CLEAR_BUTTON_IMAGE_MIN_MAX_INC 54 54
+
+// Editfield Layout
+#define EDITFIELD_BASE_HEIGHT_INC 140
+#define EDITFIELD_TOP_LEFT_PADDING_MIN_INC 22 15
+#define EDITFIELD_MULTILINE_TOP_LEFT_PADDING_MIN_INC 22 42
+#define EDITFIELD_BOTTOM_RIGHT_PADDING_MIN_INC 22 24
+#define EDITFIELD_MULTILINE_BOTTOM_RIGHT_PADDING_MIN_INC 22 42
+#define EDITFIELD_BUTTON_FIELD_MIN_INC 54 54
+#define EDITFIELD_FOCUSED_BOTTOM_RIGHT_PADDING_MIN_INC 22+54+22 24
+#define EDITFIELD_ENTRY_FIELD_MIN_INC 0 56
+#define EDITFIELD_LINE_BOTTOM_PADDING_MIN_INC 0 15
+#define EDITFIELD_LINE_RECT_MIN_INC 0 3
+#define EDITFIELD_ENTRY_SWALLOW_ALIGN 0.5 1.0-(15/24/2)
+#define EDITFIELD_BASE_HEIGHT_MULTILINE_INC 96
+#define EDITFIELD_LINE_BOTTOM_PADDING_MIN_MULTILINE_INC 0 15
+
+#define BUTTON_OPTION_MIN_MAX_INC 70 70
+#define BUTTON_OPTION_IMAGE_MIN_MAX_INC 70 70
+
+//Slider
+#define SLIDER_BASE_HEIGHT_INC 10
+#define SLIDER_INDICATOR_SIZE_INC 64
+#define SLIDER_SWALLOWBAR_HEIGHT_INC 64
+#define SLIDER_LEFT_RIGHT_PADDING_SIZE_INC 32 0
+#define SLIDER_ICON_PADDING_SIZE_INC 6 0
+#define SLIDER_CENTER_POINT_SIZE_INC 16 36
+
+//Slider vertical
+#define SLIDER_VERTICAL_BASE_HEIGHT_INC 10
+#define SLIDER_SWALLOWBAR_WIDTH_INC 64
+#define SLIDER_VERTICAL_CENTER_POINT_SIZE_INC 36 16
+#define SLIDER_VERTICAL_ICON_PADDING_SIZE_INC 28 4
+#define SLIDER_TOP_BOTTOM_PADDING_SIZE_INC 64 32
+#define SLIDER_TOP_BOTTOM_HANDLER_OFFSET_SIZE 32
+
+#define SLIDER_POPUP_WIDTH_INC 120
+#define SLIDER_POPUP_HEIGHT_INC 138
+#define SLIDER_INDICATOR_PADDING_TOP 30
+#define SLIDER_INDICATOR_PADDING_BOTTOM 48
+#define SLIDER_INDICATOR_TEXT_SIZE_HEIGHT 30
+#define SLIDER_INDICATOR_TEXT_SIZE_WIDTH 30
+
+//Progressbar
+#define PROGRESSBAR_BG_DEFAULT_HEIGHT_INC 63
+#define PROGRESSBAR_BG_ONE_TEXT_HEIGHT_INC 72
+#define PROGRESSBAR_BG_TWO_TEXT_HEIGHT_INC 114
+#define PROGRESSBAR_LIST_PROGRESS_HEIGHT_INC 10
+#define PROGRESSBAR_PADDING_HEIGHT_INC 10
+#define PROCESS_LARGE_IMAGE_HEIGHT_INC 100
+#define PROCESS_LARGE_IMAGE_WIDTH_INC 100
+#define PROCESS_MEDIUM_IMAGE_HEIGHT_INC 54
+#define PROCESS_MEDIUM_IMAGE_WIDTH_INC 54
+#define PROCESS_SMALL_IMAGE_HEIGHT_INC 42
+#define PROCESS_SMALL_IMAGE_WIDTH_INC 42
+
+//Check and Radio
+#define CHECK_GEN_SIZE 90 90
+#define CHECK_SIZE  40 40
+#define CHECK_ICON_SIZE 46 46
+#define CHECK_BG_SIZE 60 60
+#define CHECK_BG_STROKE_SIZE 60 60
+#define CHECK_FAVORITE_LIST 82
+#define CHECK_FAVORITE_LIST_LEFT_PADDING_WIDTH 0
+#define CHECK_FAVORITE_LIST_RIGHT_PADDING_WIDTH 22
+#define RADIO_SIZE 46 46
+#define RADIO_BG_SIZE 60 60
+#define RADIO_BG_STROKE_SIZE 60 60
+#define CHECK_TEXT_FONT_SIZE_INC 45
+#define CHECK_PAD_BEFORE_TEXT_INC 23 0
+// No Content
+#define NO_CONTENT_WIDTH_INC 720
+#define NO_CONTENT_WIDTH_LANDSCAPE_INC 800
+#define NO_CONTENT_BG_HEIGHT_INC 373
+#define NO_CONTENT_BG_LANDSCAPE_HEIGHT_INC 200
+#define NO_CONTENT_MAX_HEIGHT_INC 504
+#define NO_CONTENT_LEFT_RIGHT_PADDING_WIDTH_INC 20
+#define NO_CONTENT_TITLE_TEXT_HEIGHT_INC 51
+#define NO_CONTENT_TEXT_PADDING_HEIGHT_INC 26
+#define NO_CONTENT_TITLE_TEXT_FONT_SIZE_INC 40
+#define NO_CONTENT_TEXT_FONT_SIZE_INC 32
+//Button
+#define BUTTON_BOTTOM_MIN_HEIGHT 110
+#define BUTTON_MIN_WIDTH 150
+#define BUTTON_MIN_HEIGHT 84
+#define BUTTON_MAX_WIDTH 676
+#define BUTTON_ICON_DEFAULT_WIDTH 45
+#define BUTTON_ICON_DEFAULT_HEIGHT 45
+#define BUTTON_PADDING_ICON_RIGHT 18
+#define BUTTON_BOTTOM_PADDING_LEFT_RIGHT 12
+#define BUTTON_PADDING_LEFT_RIGHT 5
+#define BUTTON_DROPDOWN_PADDING_LEFT_RIGHT 22
+#define BUTTON_DROPDOWN_ICON_SIZE 36 36
+#define BUTTON_DROPDOWN_ICON_WIDTH 36
+#define BUTTON_DROPDOWN_ICON_BOTTOM_PADDING 14
+#define BUTTON_DROPDOWN_LABEL_ICON_BOTTOM_PADDING 29
+#define BUTTON_DROPDOWN_MIN_HEIGHT 108
+#define BUTTON_DROPDOWN_LABEL_HEIGHT 87
+#define BUTTON_DROPDOWN_UNDERLINE_HEIGHT 2
+#define BUTTON_DROPDOWN_LABEL_UNDERLINE_HEIGHT 3
+#define BUTTON_DROPDOWN_PADDING_TEXT_WIDTH 12
+#define BUTTON_ICON_HEIGHT 70
+#define BUTTON_ICON_WIDTH 70
+#define BUTTON_CIRCLE_SIZE 110 110
+#define BUTTON_CIRCLE_ICON_SIZE 70 70
+#define BUTTON_CIRCLE_LABEL_SIZE 180 258
+#define BUTTON_CIRCLE_TOP_PADDING_HEIGHT 22
+#define BUTTON_CIRCLE_LEFT_RIGHT_PADDING_WIDTH 12
+#define BUTTON_CIRCLE_MIDDDLE_PADDING_HEIGHT 15
+#define BUTTON_CIRCLE_BOTTOM_PADDING_HEIGHT 15
+#define BUTTON_CIRCLE_TEXT_HEIGHT 96
+#define BUTTON_TEXT_SIZE  36
+#define BUTTON_BOTTOM_TEXT_SIZE  44
+#define BUTTON_DATE_TEXT_SIZE  20
+#define BUTTON_AMPM_TEXT_SIZE  63
+#define BUTTON_TEXT_CIRCLE_SIZE 36
+#define BUTTON_POPUP_TEXT_SIZE 43
+#define BUTTON_DROPDOWN_TEXT_SIZE 40
+//Multibuttonentry
+#define MULTIBUTTONENTRY_BOX_HORIZONTAL_PAD_INC 22
+#define MULTIBUTTONENTRY_BOX_VERTICAL_PAD_INC 22
+#define MULTIBUTTONENTRY_WIDTH_PAD_INC 22
+#define MULTIBUTTONENTRY_HEIGHT_PAD_INC 22
+#define MULTIBUTTONENTRY_BOTTOM_HEIGHT_PAD_INC 22
+#define MULTIBUTTONENTRY_GUIDE_HEIGHT_INC 84
+#define MULTIBUTTONENTRY_GUIDE_TEXT_SIZE_INC 20
+#define MULTIBUTTONENTRY_BUTTON_TEXT_SIZE_INC 20
+#define MULTIBUTTONENTRY_BUTTON_PAD_INC 32
+#define MULTIBUTTONENTRY_BUTTON_WIDTH_INC 105
+#define MULTIBUTTONENTRY_BUTTON_HEIGHT_INC 84
+#define MULTIBUTTONENTRY_LABEL_TEXT_SIZE_INC 20
+#define MULTIBUTTONENTRY_LABEL_HEIGHT_INC 84 // same as button
+#define MULTIBUTTONENTRY_LABEL_PAD_INC 0
+
+//****************************************************************************//
+// Index
+//****************************************************************************//
+// FastScrol
+#define INDEX_ITEM_WIDTH_INC                        50
+#define INDEX_ITEM_HEIGHT_INC                       42
+#define INDEX_POPUP_TEXT_SIZE_INC                   50
+#define INDEX_DIVIDER_WIDTH_INC                     1
+#define INDEX_SCROLL_BG_LINE_WIDTH_INC              1
+#define INDEX_TEXT_LEFT_PADDING_SIZE_INC            0
+#define INDEX_TEXT_RIGHT_PADDING_SIZE_INC           0
+#define INDEX_PADDING_SIZE_INC                      4
+#define INDEX_ITEM_PADDING_SIZE_INC                 0
+#define INDEX_SCROLL_DRAG_PART_SIZE                 50 42
+#define INDEX_SCROLL_PADDING_COLOR                  34 34 34 255
+#define INDEX_SCROLL_POPUP_SIZE                     152 152
+#define INDEX_SCROLL_POPUP_ACTIVE_SIZE              152 152
+#define INDEX_SCROLL_TEXT1_DEFAULT_SIZE             96 96
+#define INDEX_SCROLL_TEXT1_ACTIVE_SIZE              96 96
+
+// Page Control
+#define INDEX_PAGECONTROL_IND_INC 48 42
+#define INDEX_PAGECONTROL_IND_MIN_INC 42 42
+
+//****************************************************************************//
+// Popup
+//****************************************************************************//
+#define POPUP_BASE_DEFAULT_TEXT_FONT_SIZE_INC 44
+#define POPUP_SUBTITLE_TEXT_FONT_SIZE_INC 32
+#define POPUP_DESCRIPTION_DEFAULT_TEXT_FONT_SIZE_INC 44
+
+#define POPUP_OUTSIDE_PADDING "63"
+
+#define POPUP_BASE_DEFAULT_BASE_DEFAULT_MIN_INC 720 0
+#define POPUP_BASE_DEFAULT_BASE_DEFAULT_MAX_INC 720 1208
+#define POPUP_BASE_DEFAULT_BASE_LANDSCAPE_MIN_INC 720 0
+#define POPUP_BASE_DEFAULT_BASE_LANDSCAPE_MAX_INC 720 648
+#define POPUP_BASE_DEFAULT_TITLE_DEFAULT_MIN_INC 720 108
+#define POPUP_BASE_DEFAULT_TITLE_SUBTITLE_DEFAULT_MIN_INC 0 125
+#define POPUP_BASE_DEFAULT_BUTTON_BG_DEFAULT_MIN_INC 676 162
+#define POPUP_BASE_DEFAULT_TEXT_SHADOW_COLOR_INC "#08080855"
+#define POPUP_SUBTITLE_TEXT_SHADOW_COLOR_INC "#08080855"
+#define POPUP_CONTENT_AREA_DEFAULT_MIN_INC 720 0
+#define POPUP_CONTENT_AREA_LANDSCAPE_MIN_INC 720 0
+
+#define POPUP_TITLE_LEFT_PADDING 22
+#define POPUP_TITLE_RIGHT_PADDING 22
+#define POPUP_TITLE_TOP_PADDING 4
+#define POPUP_TITLE_BOTTOM_PADDING 4
+#define POPUP_SUBTITLE_HEIGHT 42
+
+#define POPUP_CONTENT_DEFAULT_PADDING_TOP_MIN_INC 40
+#define POPUP_CONTENT_DEFAULT_PADDING_LEFT_MIN_INC 22
+#define POPUP_CONTENT_DEFAULT_PADDING_RIGHT_MIN_INC 22
+#define POPUP_CONTENT_DEFAULT_PADDING_BOTTOM_MIN_INC 40
+
+#define POPUP_BUTTON_DEFAULT_ACTION_AREA_HEIGHT "162"
+#define POPUP_BUTTON1_DEFAULT_HEIGHT_INC 110
+#define POPUP_BUTTON1_DEFAULT_PADDING_LEFT_RIGHT_WIDTH_INC 22
+#define POPUP_BUTTON2_DEFAULT_HEIGHT_INC 110
+#define POPUP_BUTTON2_DEFAULT_PADDING_BUTTON_MIN_MAX_INC 22 110
+#define POPUP_BUTTON2_DEFAULT_PADDING_LEFT_RIGHT_WIDTH_INC 22
+#define POPUP_BUTTON3_DEFAULT_HEIGHT_INC 110
+#define POPUP_BUTTON3_DEFAULT_PADDING_BUTTON_MIN_MAX_INC 22 110
+#define POPUP_BUTTON3_DEFAULT_PADDING_LEFT_RIGHT_WIDTH_INC 22
+
+#define POPUP_TOAST_BG_MAX_WIDTH_INC 676
+#define POPUP_TOAST_BG_MAX_HEIGHT_INC 1074
+#define POPUP_TOAST_BOTTOM_PAD_INC 0
+#define POPUP_TOAST_TITLE_TOP_BOTTOM_PAD_INC 26
+#define POPUP_TOAST_TITLE_LEFT_RIGHT_PAD_INC 42
+#define POPUP_TOAST_TEXT_MAX_WIDTH_INC 588
+#define POPUP_TOAST_TEXT_MIN_HEIGHT_INC 48
+#define POPUP_TOAST_TEXT_MAX_HEIGHT_INC 628
+#define POPUP_TOAST_CONTENT_HEIGHT_MIN_INC 100
+
+#define STYLE_TAGS \
+   tag:  "br" "\n";\
+   tag:  "ps" "ps";\
+   tag:  "tab" "\t";\
+   tag:  "b" "+ font_weight=Bold";
+
+#define STYLE_TAG_MATCH \
+   tag:  "match" "+ color=#ffffff color_class=T1067";
+
+styles {
+   /*// ************* list main text ********** //
+   style { name: "list_text_selectall";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T033 text_class=T033 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_selectall_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T033D text_class=T033D ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_selectall_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T033P text_class=T033P ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_progress_text_main";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T057L3 text_class=T057L3 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_progress_text_main_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T057L3P text_class=T057L3P ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_progress_text_main_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T057L3D text_class=T057L3D ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   // ************* list sub text ********** //
+   style { name: "list_text_sub_03";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#ffffff color_class=T024L2 text_class=T024L2 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_sub_03_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#ffffff color_class=T024L2D text_class=T024L2D ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_sub_03_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#3867f5 color_class=T024L2P text_class=T024L2P ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   // ************* list index text ********** //
+   style { name: "list_text_index_main";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff color_class=T027L1 text_class=T027L1 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_index_main_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff color_class=T027L1 text_class=T027L1 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_index_main_press";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_MAIN_SIZE" color=#ffffff color_class=T027L1 text_class=T027L1 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_index_sub";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff color_class=T027L2 text_class=T027L2 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_index_sub_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff color_class=T027L2 text_class=T027L2 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_index_sub_press";
+      base: "font=Tizen:style=Regular font_size="LIST_INDEX_TEXT_SUB_SIZE" color=#ffffff color_class=T027L2 text_class=T027L2 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   // multiline text
+   style { name: "list_text_multiline_main";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T023 text_class=T023 wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_multiline_main_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T023D text_class=T023D wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_multiline_main_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_MAIN_SIZE" color=#ffffff color_class=T023P text_class=T023P wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_multiline_sub";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#ffffff color_class=T024 text_class=T024 wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_multiline_sub_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#ffffff color_class=T024D text_class=T024D wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_multiline_sub_press";
+      base: "font=Tizen:style=Regular font_size="LIST_TEXT_SUB_SIZE" color=#ffffff color_class=T024P text_class=T024P wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_desc";
+      base: "font=Tizen:style=Regular font_size="LIST_DESC_TEXT_SIZE" color=#ffffff color_class=T129 text_class=T129 wrap=mixed";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_text_select";
+      base: "font=Tizen:style=Regular font_size="LIST_DESC_TEXT_SIZE" color=#ffffff color_class=T129 text_class=T129 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   // ************* Sub title text ******* //
+   style { name: "list_sub_title_text";
+      base: "font=Tizen:style=Regular font_size="LIST_ENTRY_TITLE_TEXT_SIZE" color=#ffffff color_class=T0231 text_class=T0231 ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_sub_title_text_press";
+      base: "font=Tizen:style=Regular font_size="LIST_ENTRY_TITLE_TEXT_SIZE" color=#ffffff color_class=T0231P text_class=T0231P ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   style { name: "list_sub_title_text_dim";
+      base: "font=Tizen:style=Regular font_size="LIST_ENTRY_TITLE_TEXT_SIZE" color=#ffffff color_class=T0231D text_class=T0231D ellipsis=1.0";
+      STYLE_TAGS
+      STYLE_TAG_MATCH
+   }
+   // ************* button text ********** //
+   style { name: "naviframe_left_btn_text";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=left color=#ffffff color_class=T043 text_class=T043 wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "naviframe_left_btn_text_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=left color=#ffffff color_class=T043P text_class=T043P wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "naviframe_left_btn_text_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=left color=#ffffff color_class=T043D text_class=T043D wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "naviframe_right_btn_text";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=right color=#ffffff color_class=T044 text_class=T044 wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "naviframe_right_btn_text_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=right color=#ffffff color_class=T044P text_class=T044P wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "naviframe_right_btn_text_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_NAVIFRAME_TITLE_TEXT_SIZE_INC" align=right color=#ffffff color_class=T044D text_class=T044D wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }*/
+
+   style { name: "button_main";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=T051L2 text_class=T051L2 ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_main_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=T051L2D text_class=T051L2D ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_main_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=T051L2P text_class=T051L2P ellipsis=1.0";
+      STYLE_TAGS
+   }
+   /*style { name: "button_custom";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=button_custom_text text_class=button_custom_text ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_custom_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=button_custom_text_disabled text_class=button_custom_text_disabled ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_custom_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" align=center color=#ffffff color_class=button_custom_text_pressed text_class=button_custom_text_pressed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_list";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1235 text_class=T1235 ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_list_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1235P text_class=T1235P ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_list_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1235D text_class=T1235D ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_label";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1236 text_class=T1236 ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_label_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1236P text_class=T1236P ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_dropdown_label_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_DROPDOWN_TEXT_SIZE" color=#ffffff color_class=T1236D text_class=T1236D ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_ampm";
+      base: "font=Tizen:style=Regular font_size="BUTTON_AMPM_TEXT_SIZE" color=#ffffff color_class=T1234 text_class=T1234 ellipsis=0.0";
+      STYLE_TAGS
+   }
+      style { name: "button_ampm_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_AMPM_TEXT_SIZE" color=#ffffff color_class=T1234D text_class=T1234D ellipsis=0.0";
+      STYLE_TAGS
+   }
+      style { name: "button_ampm_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_AMPM_TEXT_SIZE" color=#ffffff color_class=T1234P text_class=T1234P ellipsis=0.0";
+      STYLE_TAGS
+   }
+      style { name: "button_ampm_select";
+      base: "font=Tizen:style=Regular font_size="BUTTON_AMPM_TEXT_SIZE" color=#ffffff color_class=T1234S text_class=T1234S ellipsis=0.0";
+      STYLE_TAGS
+   }
+   style { name: "button_bottom";
+      base: "font=Tizen:style=Regular font_size="BUTTON_BOTTOM_TEXT_SIZE" align=center color=#ffffff color_class=T051L1 text_class=T051L1 ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_bottom_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_BOTTOM_TEXT_SIZE" align=center color=#ffffff color_class=T051L1D text_class=T051L1D ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_bottom_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_BOTTOM_TEXT_SIZE" align=center color=#ffffff color_class=T051L1P text_class=T051L1P ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_popup";
+      base: "font=Tizen:style=Regular font_size="BUTTON_POPUP_TEXT_SIZE" align=center color=#ffffff color_class=T051L1 text_class=T051L1 ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_popup_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_POPUP_TEXT_SIZE" align=center color=#ffffff color_class=T051L1D text_class=T051L1D ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_popup_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_POPUP_TEXT_SIZE" align=center color=#ffffff color_class=T051L1P text_class=T051L1P ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_trans";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" color=#ffffff color_class=T1221 text_class=T1221 ellipsis=0.0";
+      STYLE_TAGS
+   }
+   style { name: "button_circle";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_CIRCLE_SIZE" align=center color=#ffffff color_class=T127 text_class=T127 wrap=mixed";
+      STYLE_TAGS
+   }
+   style { name: "button_circle_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_CIRCLE_SIZE" align=center color=#ffffff color_class=T127P text_class=T127P wrap=mixed";
+      STYLE_TAGS
+   }
+   style { name: "button_circle_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_CIRCLE_SIZE" align=center color=#ffffff color_class=T127D text_class=T127D wrap=mixed";
+      STYLE_TAGS
+   }
+   style { name: "button_contacts";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" color=#ffffff align=center color_class=T051L2 text_class=T051L2  wrap=none ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_contacts_dim";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" color=#ffffff align=center color_class=T051L2D text_class=T051L2D wrap=none  ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "button_contacts_press";
+      base: "font=Tizen:style=Regular font_size="BUTTON_TEXT_SIZE" color=#ffffff align=center color_class=T051L2P text_class=T051L2P wrap=none  ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "check_popup";
+      base: "font=Tizen:style=Regular font_size="CHECK_TEXT_FONT_SIZE_INC" color=#ffffff color_class=T131 text_class=T131 wrap=mixed";
+      STYLE_TAGS
+   }
+   style { name: "check_popup_press";
+      base: "font=Tizen:style=Regular font_size="CHECK_TEXT_FONT_SIZE_INC" color=#ffffff color_class=T131P text_class=T131P wrap=mixed";
+      STYLE_TAGS
+   }
+   style { name: "check_popup_dim";
+      base: "font=Tizen:style=Regular font_size="CHECK_TEXT_FONT_SIZE_INC" color=#ffffff color_class=T131D text_class=T131D wrap=mixed";
+      STYLE_TAGS
+   }
+  // ************* no Content text ********** //
+   style { name: "empty_state_1";
+      base: "font=Tizen:style=Regular font_size="NO_CONTENT_TITLE_TEXT_FONT_SIZE_INC" align=center color=#ffffff color_class=T0222L1 text_class=T0222L1 wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }
+   style { name: "empty_state_2";
+      base: "font=Tizen:style=Light font_size="NO_CONTENT_TEXT_FONT_SIZE_INC" align=center color=#ffffff color_class=T0222L2 text_class=T0222L2 wrap=mixed ellipsis=1.0";
+      STYLE_TAGS
+   }*/
+}
+
+
+//****************************************************************************//
+// Gengrid
+//****************************************************************************//
+
+#define GRID_PADDING_LEFT_TOP_SIZE            1 1
+#define GRID_PADDING_RIGHT_BOTTOM_SIZE        1 1
+#define GRID_POPUP_PADDING_LEFT_TOP_SIZE      63 30
+#define GRID_POPUP_PADDING_RIGHT_BOTTOM_SIZE  63 15
+#define GRID_POPUP_ITEM_REAL_BG_SIZE          234 250
+#define GRID_POPUP_SWALLOW_ICON_SIZE          108 108
+#define GRID_POPUP_TEXT_SIZE                  194 97
+#define GENGRID_POPUP_CONTENT_TOP_PADDING     27
+#define GENGRID_POPUP_CONTENT_BOTTOM_PADDING  27
+
+//**************************DATETIME SPINNER****************//
+
+#define DATETIME_LAYOUT_BUTTON_HEIGHT              84 //FIXME : widget UX not provided, default button height
+#define DATETIME_LAYOUT_BUTTON_PADDING_WIDTH_INC   17 //FIXME : widget UX not provided
+
+#define DATETIME_LAYOUT_AMPM_BUTTON_SIZE_INC              113 130
+#define DATETIME_LAYOUT_AMPM_BUTTON_PADDING_HEIGHT_INC              18
+
+#define DATETIME_LAYOUT_CONTENT_SIZE_INC 720 334
+#define TIME_LAYOUT_CONTENT_TIME_24HR_LEFT_RIGHT_PADDING_WIDTH_INC 128
+#define TIME_LAYOUT_CONTENT_TIME_24HR_CENTER_PADDING_WIDTH_INC 56
+#define TIME_LAYOUT_CONTENT_TIME_24HR_COLON_COMBINED_PADDING_INC 150
+#define TIME_LAYOUT_CONTENT_COLON_WIDTH_INC 36
+#define TIME_LAYOUT_CONTENT_COLON_COMBINED_PADDING_INC 102
+
+#define DATETIME_AMPM_BUTTON_SIZE_INC 169 166
+#define DATETIME_AMPM_BUTTON_PRESSED_AREA_SIZE_INC 169 102
+#define DATETIME_AMPM_BUTTON_TOP_BOTTOM_PADDING_HEIGHT_INC 40
+#define DATETIME_FIELD_BUTTON_LEFT_RIGHT_PADDING_WIDTH_INC 18
+
+#define TIME_LAYOUT_CONTENT_LEFT_PADDING_WIDTH_INC 70
+#define TIME_LAYOUT_CONTENT_RIGHT_PADDING_WIDTH_INC 28
+#define TIME_LAYOUT_CONTENT_FIELD_WIDTH_INC 158
+#define TIME_LAYOUT_CONTENT_CENTER_PADDING_WIDTH_INC 33
+
+#define DATE_LAYOUT_CONTENT_FIELD_WIDTH_INC 210
+#define DATE_LAYOUT_CONTENT_LEFT_PADDING_WIDTH_INC 36
+#define DATE_LAYOUT_CONTENT_RIGHT_PADDING_WIDTH_INC 36
+#define DATE_LAYOUT_CONTENT_CENTER_PADDING_WIDTH_INC 9
+
+#define SPINNER_LEFT_RIGHT_ARROW_IMAGE_SIZE_INC 64 90
+#define SPINNER_LEFT_RIGHT_BG_IMAGE_SIZE_INC 64 90
+#define SPINNER_UP_DOWN_ARROW_IMAGE_SIZE_INC 90 64
+#define SPINNER_UP_DOWN_BG_IMAGE_SIZE_INC 90 64
+#define SPINNER_TEXT_HEIGHT_INC 166
+#define SPINNER_TEXT_TOP_BOTTOM_PADDING_HEIGHT_INC 20
+#define SPINNER_UP_DOWN_BG_EVENT_AREA_HEIGHT_INC 84
+#define SPINNER_VERTICAL_BG_WIDTH_INC 158
+#define SPINNER_VERTICAL_BG_HEIGHT_INC 334
+
+#define ENTRY_TIME_LAYOUT_TEXT_SIZE_INC 60
+#define ENTRY_DATE_LAYOUT_TEXT_SIZE_INC 40
+
+//***************************DATETIME SPINNER*************************//
+
+//****************************************************************************//
+// Map
+//****************************************************************************//
+#define MAP_OVERLAY_SCALE_PADDING_WIDTH 10
+
+/* definitions for EDC build */
+#define MP_COLOR_BG_BLACK				8 8 8 255
+#define MP_COLOR_BG_BLACK_TRANSPARENT		        8 8 8 0
+#define FOCUS_BORDER		8 8 8 8
+
+#define GENLIST_PADDING_5_INC 5
+#define GENLIST_PADDING_24_INC 24
+#define GENLIST_PADDING_64_INC 64
+#define GENLIST_PADDING_88_INC 88
+#define GENLIST_PADDING_34_INC 34
+#define GENLIST_PADDING_32_INC 32
+#define GENLIST_PADDING_16_INC 16
+#define GENLIST_SIZE_80_INC 80
+
+#define BUBBLE_DISCLIP_COLOR                        255 255 255 102 // opacity 40%
+
+// List bg color
+#define GENLIST_LIST_BG_COLOR                       248 246 239 255
+#define GENLIST_DIALOGUE_BG_COLOR                   248 246 239 255
+#define GENLIST_LIST_PRESS_COLOR                    87 135 194 255
+#define GENLIST_LIST_DIM_COLOR                      219 217 212 255
+#define GENLIST_LIST_LIVEBOX_BG_COLOR               MP_COLOR_BG_BLACK
+#define GENLIST_LIST_LIVEBOX_PRESS_COLOR	33 49 99 255
+#define GENLIST_LIST_LIVEBOX_COLOR                  255 255 255 25
+#define GENLIST_LIST_LINE1_COLOR                    204 203 199 255
+#define GENLIST_LIST_LINE2_COLOR                    255 255 255 255
+#define GENLIST_LIST_DIVIDER1_COLOR                 185 184 178 255
+#define GENLIST_LIST_DIVIDER2_COLOR                 255 255 255 255
+#define GENLIST_LIST_CENTERLINE1_COLOR              206 205 202 255
+#define GENLIST_SELECT_ALL_BG_COLOR                 220 218 211 255
+
+// now playing list black theme
+#define GENLIST_LIST_BG_COLOR_BLACK                       8 8 8 0
+#define GENLIST_LIST_PRESS_COLOR_BLACK                    33 49 99 255
+#define GENLIST_LIST_DIM_COLOR_BLACK                      8 8 8 255
+
+#define GENLIST_LIST_LINE1_COLOR_BLACK                    8 8 8 255
+#define GENLIST_LIST_LINE2_COLOR_BLACK                    64 64 64 255
+
+#define GENLIST_PART_MATCH_TAG_COLOR_BLACK                    "+ color=#FE5400"
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR_STYLE_BLACK           "#FAFAFAFF"
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR_STYLE_BLACK       "#6B6C6DFF"
+#define GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE_BLACK                 "#FAFAFAFF"
+#define GENLIST_LIST_MAIN_TEXT_LIVEBOX_COLOR_STYLE_BLACK           "#F5F5F5FF"
+
+//end of now playing black theme
+
+// Group Index
+#define GENLIST_GROUPINDEX_LIST_SIZE                     32
+#define GENLIST_GROUPINDEX_LIST_COLOR                    59 115 182 255
+#define GENLIST_GROUPINDEX_LIST_FOCUS_COLOR              255 255 255 255
+
+#define GENLIST_GROUPINDEX_LIST_BG_COLOR                 248 246 239 255
+#define GENLIST_GROUPINDEX_LIST_PRESS_COLOR              132 162 198 255
+#define GENLIST_GROUPINDEX_LINE_COLOR                    59 115 182 255
+#define GENLIST_GROUPINDEX_LINE_FOCUS_COLOR              255 255 255 255
+
+// Genlist Text
+#define GENLIST_LIST_MAIN_TEXT_SIZE                         44
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR                 0 0 0 255
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_COLOR_STYLE           "#000000FF"
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR             0 0 0 102
+#define GENLIST_LIST_MAIN_TEXT_UNREAD_DIM_COLOR_STYLE       "#00000066"
+#define GENLIST_LIST_MAIN_TEXT_READ_COLOR                   128 128 128 255
+#define GENLIST_LIST_MAIN_TEXT_READ_DIM_COLOR               128 128 128 204
+#define GENLIST_LIST_TEXT_FOCUS_COLOR                       255 255 255 255
+#define GENLIST_LIST_TEXT_FOCUS_COLOR_STYLE                 "#FFFFFFFF"
+#define GENLIST_LIST_MAIN_TEXT_LIVEBOX_COLOR_STYLE          "#FFFFFFFF"
+
+#define GENLIST_LIST_SUB_TEXT_LIVEBOX_COLOR_STYLE           "#C9C9C9FF"
+#define GENLIST_LIST_SUB_TEXT_SIZE                          32
+#define GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR                 128 128 128 255
+#define GENLIST_LIST_SUB_ALBUM_TEXT_DEFAULT_COLOR           14  104 173 255
+#define GENLIST_LIST_SUB_TEXT_DEFAULT_COLOR_STYLE           "#808080FF"
+#define GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR             128 128 128 204
+#define GENLIST_LIST_SUB_TEXT_DEFAULT_DIM_COLOR_STYLE       "#808080CC"
+#define GENLIST_LIST_SUB_TEXT_SETTINGS_COLOR                59 115 182 255
+#define GENLIST_LIST_SUB_TEXT_SETTINGS_COLOR_STYLE          "#3B73B6FF"
+#define GENLIST_LIST_SUB_TEXT_SETTINGS_DIM_COLOR            59 115 182 76
+#define GENLIST_LIST_SUB_TEXT_SETTINGS_DIM_COLOR_STYLE      "#3B73B64C"
+
+#define GENLIST_CONTENTS_TEXT_SIZE                          28
+#define GENLIST_CONTENTS_TEXT_COLOR                         128 128 128 255
+#define GENLIST_CONTENTS_TEXT_COLOR_STYLE                   "#808080FF"
+
+#define GENLIST_LIST_BUBBLE_TEXT_SIZE                       32
+#define GENLIST_LIST_BUBBLE_TEXT_COLOR                      249 249 249 255
+
+// Dialogue group
+#define GENLIST_DIALOGUE_GROUP_TITLE_SIZE           32
+#define GENLIST_DIALOGUE_GROUP_TITLE_COLOR          59 115 182 255
+
+#define GENLIST_APPS_NAME_SIZE                          30
+#define GENLIST_APPS_NAME_COLOR                         128 128 128 255
+#define GENLIST_APPS_INC_SIZE                           30
+#define GENLIST_APPS_INC_COLOR                          MP_COLOR_BG_BLACK
+#define GENLIST_APPS_RATING_SIZE                        24
+#define GENLIST_APPS_RATING_COLOR                       128 128 128 255
+#define GENLIST_APPS_PRICE_SIZE                         24
+#define GENLIST_APPS_PRICE_ORIGINAL_COLOR               59 115 182 255
+#define GENLIST_APPS_PRICE_SALE_COLOR                   229 33 52 255
+#define GENLIST_APPS_PRICE_FREE_COLOR                   59 115 182 255
+
+#define DIALOGUE_PASSWORD_TITLE_SIZE                    32
+#define DIALOGUE_PASSWORD_TITLE_COLOR                   128 128 128 255
+
+#define GENLIST_DIALOGUE_GROUP_HELP_TEXT_SIZE           32
+#define GENLIST_DIALOGUE_GROUP_HELP_TEXT_COLOR_STYLE    "#808080FF"
+#define GENLIST_PART_MATCH_TAG_COLOR                    "+ color=#2A71E7"

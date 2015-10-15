@@ -1,0 +1,1681 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#include "../../../res/edje/layout/mp-defines.h"
+
+#define MP_EQ_CUSTOM_SEGMENT_W  532
+#define MP_EQ_CUSTOM_SEGMENT_H  62
+
+#define MP_EQ_CUSTOM_POPUP_W 440
+#define MP_EQ_CUSTOM_POPUP_H 507
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_H 621
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_W 13
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_TOP 126
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_LEFT 0
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_MIDDLE 14
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_RIGHT 11
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_HANDLER_H 90
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_HANDLER_W 48
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_HANDLER_BUBBLE_H 64
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_HANDLER_BUBBLE_W 54
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PROGRESS_H 20
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PROGRESS_W 16
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PROGRESS_BG_H 20
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_PROGRESS_BG_W 16
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H 24
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W 40
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_BAR 50
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_TOP (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_TOP+MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_H+MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_BAR)
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_LEFT 11
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_MIDDLE 14
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_RIGHT 11
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_H 58
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_W 436
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TEXT 5
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TOP (MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_TOP+MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H+MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TEXT)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_LEFT 2
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_RIGHT 2
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_H 46
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_W 194
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_BUTTONBG 5
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_TOP (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TOP+MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_BUTTONBG)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_LEFT (2+15)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_RIGHT (2+15)
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_H 46
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_W 194
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_BUTTONBG 5
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_TOP (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TOP+MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_BUTTONBG)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_LEFT (2+15+194+18)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_RIGHT (2+15)
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_H (MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_H+MP_EQ_CUSTOM_POPUP_VALUE_BAR_HANDLER_H)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_W
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_MIDDLE/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_W/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_OFFSET_SX (MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_MIDDLE/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_OFFSET_EX (MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W/MP_EQ_CUSTOM_POPUP_W)
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR1_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_LEFT/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR1_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_LEFT+MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_W)/MP_EQ_CUSTOM_POPUP_W
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR2_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR1_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR2_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR2_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR3_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR2_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR3_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR3_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR4_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR3_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR4_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR4_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR5_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR4_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR5_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR5_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR6_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR5_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR6_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR6_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR7_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR6_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR7_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR7_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR8_SX (MP_EQ_CUSTOM_POPUP_VALUE_BAR7_EX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_SX)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR8_EX (MP_EQ_CUSTOM_POPUP_VALUE_BAR8_SX+MP_EQ_CUSTOM_POPUP_VALUE_BAR_OFFSET_EX)
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_TOP/MP_EQ_CUSTOM_POPUP_H)
+#define MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY (MP_EQ_CUSTOM_POPUP_VALUE_BAR_PAD_TOP+MP_EQ_CUSTOM_POPUP_VALUE_BAR_BG_H)/MP_EQ_CUSTOM_POPUP_H
+
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY (MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_TOP/MP_EQ_CUSTOM_POPUP_H)
+#define MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY (MP_EQ_CUSTOM_POPUP_VALUE_TEXT_PAD_TOP+MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H)/MP_EQ_CUSTOM_POPUP_H
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_SX (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_LEFT/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_SY (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TOP/MP_EQ_CUSTOM_POPUP_H)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_EX (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_LEFT+MP_EQ_CUSTOM_POPUP_BUTTON_BG_W)/MP_EQ_CUSTOM_POPUP_W
+#define MP_EQ_CUSTOM_POPUP_BUTTON_BG_EY (MP_EQ_CUSTOM_POPUP_BUTTON_BG_PAD_TOP+MP_EQ_CUSTOM_POPUP_BUTTON_BG_H)/MP_EQ_CUSTOM_POPUP_H
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_SX (MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_LEFT/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_SY (MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_TOP/MP_EQ_CUSTOM_POPUP_H)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_EX (MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_LEFT+MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_W)/MP_EQ_CUSTOM_POPUP_W
+#define MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_EY (MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_PAD_TOP+MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_H)/MP_EQ_CUSTOM_POPUP_H
+
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_SX (MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_LEFT/MP_EQ_CUSTOM_POPUP_W)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_SY (MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_TOP/MP_EQ_CUSTOM_POPUP_H)
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_EX (MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_LEFT+MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_W)/MP_EQ_CUSTOM_POPUP_W
+#define MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_EY (MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_PAD_TOP+MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_H)/MP_EQ_CUSTOM_POPUP_H
+
+collections {
+
+group { name: "mp_eq_custom_popup_layout";
+   parts{
+      part{ name:"content";
+         type: SWALLOW;
+         scale : 1;
+         description { state: "default" 0.0;
+            min: MP_EQ_CUSTOM_POPUP_W MP_EQ_CUSTOM_POPUP_H;
+            align: 0.5 0.5;
+            fixed: 1 0;
+            rel1 {
+               relative: 0.0 0.0;
+            }
+            rel2 {
+               relative: 1.0 1.0;
+            }
+         }
+      }
+   }
+}
+
+group {
+	name: "mp_eq_custom_popup";
+	min: MP_EQ_CUSTOM_POPUP_W MP_EQ_CUSTOM_POPUP_H;
+
+	images {
+		image: 	"T02_popup_bg.png" COMP;
+		image: 	"T02_popup_bottom_bg.png" COMP;
+		image: 	"T02_popup_button_normal.png" COMP;
+		image: 	"T02_popup_button_press.png" COMP;
+		image:  "T02_progress_bar.png" COMP;
+	}
+
+	parts {
+		part {
+			name: "eq_custom_popup_bg";
+			type: IMAGE;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				image { normal: "T02_popup_bg.png";
+					border: 5 5 5 5;}
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+
+		part {
+			name: "eq_custom_popup_value_bar1";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR1_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR1_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar2";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR2_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR2_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar3";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR3_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR3_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar4";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR4_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR4_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar5";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR5_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR5_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar6";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR6_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR6_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar7";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR7_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR7_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+		part {
+			name: "eq_custom_popup_value_bar8";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_BAR_W MP_EQ_CUSTOM_POPUP_VALUE_BAR_H;
+				fixed: 1 1;
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR8_SX MP_EQ_CUSTOM_POPUP_VALUE_BAR_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_VALUE_BAR8_EX MP_EQ_CUSTOM_POPUP_VALUE_BAR_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+
+		part {
+			name: "eq_custom_popup_value1_text1";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar1"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar1"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "125";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text2";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar2"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar2"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "250";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text3";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar3"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar3"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "500";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text4";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar4"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar4"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "1K";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text5";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar5"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar5"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "2k";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text6";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar6"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar6"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "4k";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text7";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar7"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar7"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "8k";
+				}
+				color: 171 171 171 255;
+			}
+		}
+		part {
+			name: "eq_custom_popup_value1_text8";
+			type: TEXT;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: MP_EQ_CUSTOM_POPUP_VALUE_TEXT_W MP_EQ_CUSTOM_POPUP_VALUE_TEXT_H;
+				fixed: 1 1;
+				rel1 { relative: 0.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_SY; to_x: "eq_custom_popup_value_bar8"; to_y: "eq_custom_popup_bg";}
+				rel2 { relative: 1.0 MP_EQ_CUSTOM_POPUP_VALUE_TEXT_EY; to_x: "eq_custom_popup_value_bar8"; to_y: "eq_custom_popup_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "12k";
+				}
+				color: 171 171 171 255;
+			}
+		}
+
+		part {
+			name: "eq_custom_popup_button_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				image { normal: "T02_popup_bottom_bg.png";
+					border: 3 3 0 0; }
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_BG_SX MP_EQ_CUSTOM_POPUP_BUTTON_BG_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_BG_EX MP_EQ_CUSTOM_POPUP_BUTTON_BG_EY; to, "eq_custom_popup_bg";}
+			}
+		}
+
+		part {
+			name: "eq_custom_popup_button_set_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				image { normal: "T02_popup_button_normal.png";
+					border: 4 4 0 0; }
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_SX MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_EX MP_EQ_CUSTOM_POPUP_BUTTON_LEFT_EY; to, "eq_custom_popup_bg";}
+
+			}
+			description {
+				state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: "T02_popup_button_press.png";
+					border: 4 4 0 0;}
+			}
+		}
+		part {
+			name: "eq_custom_popup_button_set";
+			type: TEXT;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "eq_custom_popup_button_set_bg";}
+				rel2 { relative: 1.0 1.0; to: "eq_custom_popup_button_set_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "Set";
+				}
+				color: 78 73 69 255;
+			}
+		}
+
+		part {
+			name: "eq_custom_popup_button_cancel_bg";
+			type: IMAGE;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				image { normal: "T02_popup_button_normal.png";
+					border: 4 4 0 0; }
+				rel1 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_SX MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_SY; to, "eq_custom_popup_bg";}
+				rel2 { relative: MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_EX MP_EQ_CUSTOM_POPUP_BUTTON_RIGHT_EY; to, "eq_custom_popup_bg";}
+			}
+			description {
+				state: "press" 0.0;
+				inherit: "default" 0.0;
+				image { normal: "T02_popup_button_press.png";
+					border: 4 4 0 0;}
+			}
+		}
+		part {
+			name: "eq_custom_popup_button_cancel";
+			type: TEXT;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "eq_custom_popup_button_cancel_bg";}
+				rel2 { relative: 1.0 1.0; to: "eq_custom_popup_button_cancel_bg";}
+				text {
+					font: FONT_STYLE_ROMAN;
+					size: 20;
+					align: 0.5 0.5;
+					text: "Cancel";
+				}
+				color: 78 73 69 255;
+			}
+		}
+	}
+
+	programs {
+		program {
+			name: "button_set_down";
+			source: "eq_custom_popup_button_set_bg";
+			signal: "mouse,down,1";
+			action: STATE_SET "press" 0.0;
+			target: "eq_custom_popup_button_set_bg";
+			}
+		program {
+			name: "button_set_up";
+			source: "eq_custom_popup_button_set_bg";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "eq_custom_popup_button_set_bg";
+		}
+		program {
+			name: "button_cancel_down";
+			source: "eq_custom_popup_button_cancel_bg";
+			signal: "mouse,down,1";
+			action: STATE_SET "press" 0.0;
+			target: "eq_custom_popup_button_cancel_bg";
+			}
+		program {
+			name: "button_cancel_up";
+			source: "eq_custom_popup_button_cancel_bg";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "eq_custom_popup_button_cancel_bg";
+		}
+
+		program {
+			name: "button_set_clicked";
+			source: "eq_custom_popup_button_set_bg";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "button_set_clicked" 0.0;
+		}
+
+		program {
+			name: "button_cancel_clicked";
+			source: "eq_custom_popup_button_cancel_bg";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "button_cancel_clicked" 0.0;
+		}
+	}
+}
+
+
+#define EQ_PROGRESS_BG_W		13
+#define EQ_PROGRESS_BG_H		621
+#define EQ_HANDLER_W			54
+#define EQ_HANDLER_H			54
+#define IMG_EQ_PROGRESS_BG		"T02_user_progress_bg.png"
+#define IMG_EQ_PROGRESS_BAR		"T02_user_progress_bar.png"
+#define IMG_EQ_HANDLER_NORMAL	"T02_user_progress_handler.png"
+#define IMG_EQ_HANDLER_PRESSED	"T02_user_progress_handler_press.png"
+
+group { name: "mp_eq_custom_popup_value_bar";
+	images {
+		image: IMG_EQ_PROGRESS_BG COMP;
+		image: IMG_EQ_PROGRESS_BAR COMP;
+		image: IMG_EQ_HANDLER_NORMAL COMP;
+		image: IMG_EQ_HANDLER_PRESSED COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "progress_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to: "bg"; }
+				rel2 { relative: 0.5 1; to: "bg"; }
+				image { normal: IMG_EQ_PROGRESS_BG; border: 0 0 13 13; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "progress_bar";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0.5; to_x: "progress_bg"; to_y: "progressbar_control"; }
+				rel2 { relative: 1 1; to: "progress_bg"; }
+				image { normal: IMG_EQ_PROGRESS_BAR; border: 0 0 13 13; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "progress_bar_confine";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "progress_bg"; offset: 0 (EQ_HANDLER_H/-2); }
+				rel2 { relative: 0.5 1.0; to: "progress_bg"; offset: 0 (EQ_HANDLER_H/2); }
+				min: EQ_HANDLER_W 0;
+				fixed: 1 0;
+				align: 0.5 0.0;
+				visible: 0;
+			}
+		}
+
+		part { name: "progressbar_control";
+			type: IMAGE;
+			scale: 1;
+          mouse_events: 0;
+			description { state: "default" 0.0;
+				image.normal: IMG_EQ_HANDLER_NORMAL;
+				min: EQ_HANDLER_W EQ_HANDLER_H;
+				fixed: 1 1;
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				image.normal: IMG_EQ_HANDLER_PRESSED;
+			}
+			dragable { confine: "progress_bar_confine";
+				x: 0 0 0;
+				y: 1 1 0;
+			}
+		}
+
+		part { name: "touch_area";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+                        repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1 { to: "progress_bar_confine"; offset: -10 0; }
+				rel2 { to: "progress_bar_confine"; offset: 10 0; }
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "disabler";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "touch_area";
+				rel2.to: "touch_area";
+				color: 0 0 0 0;
+				visible: 0;
+			}
+			description { state: "disabled" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+	}
+
+	programs {
+		program { name: "progressbar_control_down";
+			source: "touch_area";
+			signal: "mouse,down,1";
+			action: STATE_SET "pressed" 0.0;
+			target: "progressbar_control";
+		}
+		program { name: "progressbar_control_up";
+			source: "touch_area";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "progressbar_control";
+		}
+		program { name: "progressbar_set_disabled";
+			source: "*";
+			signal: "sig_set_disabled";
+			action: STATE_SET "disabled" 0.0;
+			target: "disabler";
+		}
+		program { name: "progressbar_set_enabled";
+			source: "*";
+			signal: "sig_set_enabled";
+			action: STATE_SET "default" 0.0;
+			target: "disabler";
+		}
+	}
+}
+
+#define USER_LAYOUT_W		720
+#define USER_LAYOUT_H		1008
+#define _X(x)				((x)/USER_LAYOUT_W)
+#define _Y(y)				(((y)-158)/USER_LAYOUT_H)
+#define USER_EFFECT_LAYOUT_BG_COLOR	248 246 239 255
+#define IMG_USER_BTN_PRESS_EQ_BG	"T02_user_segment_01.png"
+#define IMG_USER_BTN_PRESS_EX_BG	"T02_user_segment_02.png"
+
+sounds {
+      sample {
+         name: "button-pressed" AS_IS;
+         source: MP_BUTTON_PRESSED_NAME;
+      }
+}
+
+group { name: "user_audio_effect_layout";
+	images {
+		image: IMG_USER_BTN_PRESS_EQ_BG COMP;
+		image: IMG_USER_BTN_PRESS_EX_BG COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 1;
+				color: USER_EFFECT_LAYOUT_BG_COLOR;
+			}
+		}
+
+		part { name: "padding_top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "bg"; }
+				rel2 { relative: 1 0; to: "bg"; }
+				min: 0 96;
+				fixed: 0 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "segment_area_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 1; to: "padding_top"; }
+				rel2 { relative: 0.5 1; to: "padding_top"; }
+				min: MP_EQ_CUSTOM_SEGMENT_W MP_EQ_CUSTOM_SEGMENT_H;
+				fixed: 1 1;
+				align: 0.5 0.0;
+				visible: 1;
+				image.normal: IMG_USER_BTN_PRESS_EQ_BG;
+			}
+			description { state: "extended_pressed" 0.0;
+				rel1 { relative: 0.5 1; to: "padding_top"; }
+				rel2 { relative: 0.5 1; to: "padding_top"; }
+				min: MP_EQ_CUSTOM_SEGMENT_W MP_EQ_CUSTOM_SEGMENT_H;
+				fixed: 1 1;
+				align: 0.5 0.0;
+				visible: 1;
+				image.normal: IMG_USER_BTN_PRESS_EX_BG;
+			}
+		}
+
+
+		part { name: "segment_area";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 1; to: "padding_top"; }
+				rel2 { relative: 0.5 1; to: "padding_top"; }
+				min: MP_EQ_CUSTOM_SEGMENT_W MP_EQ_CUSTOM_SEGMENT_H;
+				fixed: 1 1;
+				align: 0.5 0.0;
+			}
+			description { state: "extended_pressed" 0.0;
+				rel1 { relative: 0.5 1; to: "padding_top"; }
+				rel2 { relative: 0.5 1; to: "padding_top"; }
+				min: MP_EQ_CUSTOM_SEGMENT_W MP_EQ_CUSTOM_SEGMENT_H;
+				fixed: 1 1;
+				align: 0.5 0.0;
+				color: MP_COLOR_BG_BLACK;
+			}
+		}
+
+		part { name: "segment_text_left";
+			type: TEXT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "segment_area_bg"; }
+				rel2 { relative: 0.5 1;  to: "segment_area_bg"; }
+				min: 100 50;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "EQ";
+					font: "Tizen:style=Regular";
+					size: "28";
+				}
+				visible: 1;
+				color: 248 246 239 255;
+			}
+			description { state: "extended_pressed" 0.0;
+				inherit: "default";
+				color: 68 68 68 255;
+			}
+
+		}
+
+		part { name: "segment_text_right";
+			type: TEXT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to: "segment_area_bg"; }
+				rel2 { relative: 1 1;  to: "segment_area_bg"; }
+				min: 100 50;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "Extended";
+					font: "Tizen:style=Regular";
+					size: "30";
+				}
+				visible: 1;
+				color: 68 68 68 255;
+			}
+			description { state: "extended_pressed" 0.0;
+				inherit: "default";
+				visible: 1;
+				color: 248 246 239 255;
+			}
+		}
+
+		part { name: "segment_left_event_layer";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "segment_area_bg";
+				rel2 { relative: 0.5 1.0; to: "segment_area_bg"; }
+				color: 0 0 0 0;
+			}
+		}
+		part { name: "segment_right_event_layer";
+			type: RECT;
+			scale: 1;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "segment_area_bg"; }
+				rel2.to: "segment_area_bg";
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "padding_middle";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to_x: "bg"; to_y: "segment_area"; }
+				rel2 { relative: 1 1; to_x: "bg"; to_y: "segment_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "padding_bottom";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "bg"; }
+				rel2 { relative: 1 1; to: "bg"; }
+				min: 0 40;
+				align: 0.0 1.0;
+				fixed: 0 1;
+				visible: 0;
+			}
+		}
+
+		part { name: "equalizer_area_bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+				rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "padding_middle"; }
+				rel2 { relative: 1.0 0.0; to_x: "bg"; to_y: "padding_bottom"; }
+			}
+		}
+
+		part { name: "equalizer_area";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "equalizer_area_bg";
+				rel2.to: "equalizer_area_bg";
+			}
+		}
+	}
+
+	programs {
+
+		program {
+			name : "eq_press";
+			signal: "mouse,clicked,1";
+			source : "segment_left_event_layer";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after : "after_eq_press";
+		}
+
+		program {
+			name : "ex_press";
+			signal : "mouse,clicked,1";
+			source : "segment_right_event_layer";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after : "after_ex_press";
+		}
+
+		program {
+			name : "after_eq_press";
+			source : "*";
+			signal : "EQ_PRESS1";
+			action : STATE_SET "default" 0.0;
+			target : "segment_area_bg";
+			target : "segment_area";
+			target : "segment_text_right";
+			target : "segment_text_left";
+
+		}
+		program {
+			name : "after_ex_press";
+			source : "*";
+			signal : "EX_PRESS2";
+			action : STATE_SET "extended_pressed" 0.0;
+			target : "segment_area_bg";
+			target : "segment_area";
+			target : "segment_text_right";
+			target : "segment_text_left";
+		}
+	}
+}
+
+#define EQ_TEXT_FONT	"Tizen:style=Bold"
+#define EQ_TEXT_SIZE	23
+#define EQ_TEXT_COLOR	68 68 68 255
+#define EQ_LAYOUT_W		656
+#define EQ_LAYOUT_H		782
+
+#undef _X
+#undef _Y
+#define _X(x)	((x)/720)
+#define _Y(y)	((y)/782)
+#define MS_EQ_EQUALIZER_TEXT_SIZE 66 23
+
+group { name: "equalizer_layout";
+	parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				//min: EQ_LAYOUT_W EQ_LAYOUT_H;
+				visible: 0;
+			}
+		}
+
+		part { name: "text_left_top";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: "12 dB";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+                part { name: "text_mid1";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.1; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.1; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+                part { name: "text_mid2";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.2; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.2; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+                part { name: "text_mid3";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.3; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.3; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+                part { name: "text_mid4";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.4; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.4; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+		part { name: "text_left_middle";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				text { text: "0 dB";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+                part { name: "text_mid6";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.6; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.6; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+                part { name: "text_mid7";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.7; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.7; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+                part { name: "text_mid8";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.8; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.8; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+                part { name: "text_mid9";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(36) 0.9; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 0.9; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: " - ";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+		part { name: "text_left_bottom";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(0) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(36+66) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EQUALIZER_TEXT_SIZE;
+				fixed: 1 1;
+				align: 1.0 1.0;
+				text { text: "-12 dB";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+		part { name: "eq_custom_popup_value_bar1";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(138) _Y(92); to: "bg"; }
+				rel2 { relative: _X(138) 0.0 ; to_x: "bg"; to_y: "padding_center"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "padding_center";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "text_eq_bar1"; }
+				rel2 { relative: 1 0; to: "text_eq_bar1"; }
+				min: 0 50;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+			}
+		}
+		part { name: "text_eq_bar1";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 _Y(690); to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+				rel2 { relative: 0.5 _Y(690+21); to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "50";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar2";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(222) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(222) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar2";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar2"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar2"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "150";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar3";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(306) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(306) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar3";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar3"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar3"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "400";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar4";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(390) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(390) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar4";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar4"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar4"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "1.1K";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar5";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(474) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(474) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar5";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar5"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar5"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "3.5K";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar6";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(558) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(558) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar6";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar6"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar6"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "8K";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar7";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(642) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(642) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar7";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar7"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar7"; to_y: "text_eq_bar1"; }
+				min: 52 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "14K";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+	}
+}
+
+#define MS_EQ_EXTENDED_LEFT_TEXT_SIZE 20 23
+group { name: "extended_layout";
+	parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				//min: EQ_LAYOUT_W EQ_LAYOUT_H;
+				visible: 0;
+			}
+		}
+
+		part { name: "text_left_1";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(0) 0; to: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(100) 0; to: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EXTENDED_LEFT_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				text { text: "3";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "text_left_2";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 (1/3); to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: 1 (1/3); to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EXTENDED_LEFT_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				text { text: "2";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "text_left_3";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 (2/3); to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: 1 (2/3); to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EXTENDED_LEFT_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				text { text: "1";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "text_left_4";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1.0; to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: 1 1.0; to_x: "text_left_1"; to_y: "eq_custom_popup_value_bar1"; }
+				min: MS_EQ_EXTENDED_LEFT_TEXT_SIZE;
+				fixed: 1 1;
+				align: 0.0 1.0;
+				text { text: "0";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 1.0 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+
+		part { name: "eq_custom_popup_value_bar1";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(146) _Y(92); to: "bg"; }
+				rel2 { relative: _X(146) 0.0; to_x: "bg"; to_y: "padding_center";}
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "padding_center";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0; to: "text_eq_bar1"; }
+				rel2 { relative: 1 0; to: "text_eq_bar1"; }
+				min: 0 50;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+			}
+		}
+		part { name: "text_eq_bar1";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 _Y(690); to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+				rel2 { relative: 0.5 _Y(690+21); to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+				min: 80 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "3D";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar2";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(253) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(253) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar2";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar2"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar2"; to_y: "text_eq_bar1"; }
+				min: 80 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "Bass";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar3";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(360) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(360) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar3";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar3"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar3"; to_y: "text_eq_bar1"; }
+				min: 80 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "Room";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "text_eq_bar3_2";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "text_eq_bar3"; }
+				rel2 { relative: 1 1; to: "text_eq_bar3"; }
+				min: 0 21;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				text { text: "Size";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.0;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar4";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(467) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(467) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar4";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar4"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar4"; to_y: "text_eq_bar1"; }
+				min: 80 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "Reverb";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "text_eq_bar4_2";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 1; to: "text_eq_bar4"; }
+				rel2 { relative: 1 1; to: "text_eq_bar4"; }
+				min: 0 21;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				text { text: "Level";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+		part { name: "eq_custom_popup_value_bar5";
+			type: SWALLOW;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: _X(574) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				rel2 { relative: _X(574) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+				min: EQ_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+			}
+		}
+		part { name: "text_eq_bar5";
+			type: TEXT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to_x: "eq_custom_popup_value_bar5"; to_y: "text_eq_bar1"; }
+				rel2 { relative: 0.5 1; to_x: "eq_custom_popup_value_bar5"; to_y: "text_eq_bar1"; }
+				min: 80 21;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				text { text: "Clarity";
+					font: EQ_TEXT_FONT;
+					size: EQ_TEXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: EQ_TEXT_COLOR;
+			}
+		}
+	}
+}

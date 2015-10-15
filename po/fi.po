@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Ladataan..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Yksityinen"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Aika"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Tiedostoa ei ole."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Puhelimen soittoääni"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Kesto"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Sijainti"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Aseta"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Lisää omalle sivulle"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Poista omalta sivulta"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Siirrä normaaliin tallennustilaan"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Siirrä henkilökohtaiseen tallennustilaan"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Valitut kohteet siirretään kohteeseen %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Valittu kohde siirretään kohteeseen %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Ei voi käyttää massamuistitilassa."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Soittoääni lisätty."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Painike"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Valitse kohteet"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Lisäasetukset"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Edellinen"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Sulje"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Lisätty."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Epäonnistui."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Ei hakutuloksia"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Valmis"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Ei kohteita"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Lisää etusivulle"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Seuraava"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Ladataan..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Suosikit"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Lisää henkilökohtaiseen tallennustilaan"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Yhteys laitteeseen %s on katkaistu. Tarkista verkon tila ja yhdistetty laite."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroringilla"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Kotiverkon kautta"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Tyhjä tieto"
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Ei saatavilla puhelun aikana."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä saavutettu."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM-tiedostoa ei voi jakaa."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Poistetaan..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d laitetta"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Käytä liikettä"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Älä kysy uudelleen"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Tuloksia ei löytynyt."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Mykistä saapuvat puhelut, viestihälytykset ja herätykset kääntämällä puhelin ylösalaisin."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Ei mitään"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galleria"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Siirrä sisältöä kaksoisnapauttamalla."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Tilaääni"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Sanoitus"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet lisännyt kappaleet mobiililaitteen Musiikki-kansioon, ne näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Näytteenottotaajuus"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Merkitty suosikiksi."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Musiikki"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Ei ole merkitty suosikiksi."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Hae musiikkia"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automaattinen suositus ei tue tätä äänitiedostoa."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Soitin ei tue tätä äänitiedostotyyppiä."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Suosikit"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Eniten soitetut"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Viimeksi lisätyt"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Luo soittolista"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Poista"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Soittajan soittoääni"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Esittäjät"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Lisääminen ei onnistu."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Soittolistan luonti epäonnistui."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Tunnistetta ei voi hakea."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Yli %d musiikkitiedostoa ei voi lisätä."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Albumi"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Tekijä"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Tekijänoikeus"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Luo soittolista"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Kuvaus"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Muoto"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Mahdoton"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Ei soittolistoja"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Kappaleen numero"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Poistetaanko?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Poistetaanko?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Soittolistan nimeäminen uudelleen epäonnistui."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumit"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Lisätään..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Poistetaanko %d albumia?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "S.listat"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Lisää"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografia"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Tekijät"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Median tiedot"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Diskografia"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Sanoitus"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Mahdollinen"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Tarkista"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Kappaleluettelo"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Lisää toistoluetteloon"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Esittäjä"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Edelleenlähetys"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Soittolistat"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Viimeksi soitetut"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Kappaleen pituus"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Ei kappaleita"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Tämä kappale poistetaan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Valitut kappaleet poistetaan."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Tämä esittäjä poistetaan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Valitut esittäjät poistetaan."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Kaikki esittäjät poistetaan."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Tämä kansio poistetaan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Valitut kansiot poistetaan."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Kaikki kansiot poistetaan."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Tämä albumi poistetaan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Valitut albumit poistetaan."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Kaikki albumit poistetaan."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Tämä soittolista poistetaan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Valitut soittolistat poistetaan."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Kaikki soittolistat poistetaan."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Kappaleet"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Järjestä uudelleen"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Tallenna soittolistana"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Hälytysääni"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Mitään ei valittu."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ei voi toistaa. Tapahtui virhe."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Toisto ei onnistu. Tiedostotyyppiä ei tueta."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Jaa"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Kap.m."
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Valitse laite"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "N.tapa"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normaali"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Käyttäjä"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Laulu"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Bassokorostus"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Diskanttikorostus"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kahvila"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtuaalinen 7.1-kanava"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 tunnin kuluttua"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 h 30 min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 tunnin kuluttua"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Automaattinen musiikin lopetus"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Tämä äänitehoste toimii vain kuuloke- ja Bluetooth-kuuloketiloissa."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Musiikki-\nneliö"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Musiikkineliössä ei ole riittävästi toistettavia musiikkitiedostoja. Vaaditaan vähintään %d musiikkitiedostoa."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Intohimo"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Rauhallinen"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Ilo"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Kirjaston päivitys"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Päivitetäänkö kirjasto?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Vaihda akselia"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Tyylil."
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 albumi / 1 kappale"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 albumi / %d kappaletta"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d albumia / %d kappaletta"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Voit hallita Musiikkisoitinta puhekomennoilla %1$s, %2$s, %3$s, %4$s, %5$s ja %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Sekoita %d kappaletta"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Lisätietoja"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Oma musiikki"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Luettelonäkymä"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Toista Ryhmätoistolla"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Kappale lisätty suosikkeihin."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Poista suosikeista"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Uusi"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Raidat"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Pienoiskuva"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Luettelo"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Avaa soittolista"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Toista kaikki"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Valittu luettelo on tyhjä."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Tunnelmat"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Vuodet"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Vanha"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Musiikkineliö analysoi laitteeseen tallennettujen musiikkitiedostojen luonteen ja luo automaattisesti soittolistoja."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Toista samantyyppistä musiikkia sisältävä soittolista valitsemalla näytöstä ruutu."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Näytä soittolistan tiedot napauttamalla toistettavaa neliötä ja pitämällä sitä painettuna."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Lähellä olevat laitteet"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Uusia kappaleita lisättäessä kirjasto on päivitettävä."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Ei albumeita"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Ei esittäjiä"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Toistonopeus"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Konserttisali"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Lisää"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Näytä"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Viimeksi lisätyt"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Ei käytössä"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Salli käyttö offline-tilassa"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d h %2$d min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d h kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d min kuluttua"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Ei kansioita"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Ei kappaleita"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albumia"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d esittäjää"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d tyylilajia"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d soittolistaa"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d kappaletta"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Toistoluettelo"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Samanlaiset albumit"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Kappale"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Pikkukuvanäkymä"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Tämä äänitehoste toimii vain kuuloketilassa."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Kaikki sisältö"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Tiedoston toistamiseen vaaditaan verkkoyhteys. Tarkista verkkoyhteys ja yritä uudelleen."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Tiedostotyyppiä ei tueta."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Päivitetään..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Hae"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Hakukriteeri:"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Aiheeseen liittyvät videot"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Älykäs äänenvoimakkuus"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Kaikkien kappaleiden äänenvoimakkuus säädetään tasolle %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Älykäs äänenvoimakkuus käytössä"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Yhteystiedot"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 h %d min kuluttua"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Oma laite"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Kuunteleminen suurella äänenvoimakkuudella pitkän aikaa voi vahingoittaa kuuloasi. Nostetaanko äänenvoimakkuus turvallisen tason yläpuolelle?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "On jo olemassa."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Hae lähellä olevia laitteita"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 h kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 h 1 min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d h 1 min kuluttua"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 min kuluttua"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Siirry kauppaan"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Lisää\nkappaleita"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet ladannut kappaleet Musiikkipalvelusta, ne näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet lisännyt kappaleet suosikkeihin, ne näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet toistanut kappaleet, ne näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet lisännyt kappaleet soittolistaan %s, ne näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Ostettua sisältöä ei ole"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Tallenna nimellä"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Päivitys epäonnistui."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Jännittävä"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Hae omasta musiikista"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Yhdistetyt laitteet"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Oma soittolista %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Ei laitteita"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Käyt. olevat laitt."
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Aseta"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Poistaminen epäonnistui."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Pikakelausta eteen- ja taaksepäin ei voi käyttää, kun lähellä olevat laitteet ovat käytössä."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Aseta"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kuulokkeet"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Kaiutin"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 kappale"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d kappaletta"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 kappale"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "1 kappaleen satunnaistoisto"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Valitusta solusta ei löydy musiikkia"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Älä näytä uudestaan"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Eri esittäjiä"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Lisää alkunäyttöön"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Lisää Suosikkeihin"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Muokkaa otsikkoa"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Poista henkilökohtaisesta tallennustilasta"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Kun olet ladannut kappaleita, kansiot näytetään täällä."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Äänenvoimakkuus"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Toisto ei käytössä"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Toista kaikki uudelleen"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Satunnaistoisto pois käytöstä"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Satunnaistoisto käytössä"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Oma soittolista"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Oletussoittolistat"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Tallennuspäivämäärä"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Kansitaide"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 tyylilaji"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d kansiota"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 kansio"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 esittäjä"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 albumi"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 soittolista"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Musiikki"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Siirrä"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automaattiset suositukset"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Alusta"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Ehdotuksia sinulle"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Tallenna"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Perus"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrumentti"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Diskantti"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Basso"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Tässä tilassa ei käytetä tehosteita."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simuloi putkivahvistimen sointia."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Putkivahvistintehoste"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simuloi 7.1-kanavaista virtuaalista tilaääntä."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Pieni huone"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Suuri tila"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simuloi suuren tilan, kuten teatterin, kaikua."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simuloi konserttisalin kaikua."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simuloi pienen tilan, kuten studion, kaikua."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Selkeys"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Nollaa"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Vuotta"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Tyylilajit"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Säveltäjät"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Kaikki kappaleet"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Siirry pikal."
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Etsi"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Lisää pikal."
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "TV-lähdön videotiedosto on luvaton."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Ei voi luoda. Soittolistojen enimmäismäärä on saavutettu."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Äänenvoimakkuutta ei voi säätää Bluetooth-kuulokkeisiin yhteyttä muodostettaessa."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Äänenvoimakkuutta ei voi säätää Bluetooth-kuulokkeisiin yhteyttä käytettäessä."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Pysäytetäänkö Musiikkisoitin?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Poistu äänettömästä tilasta."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Verkkovirhe"
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Muistikortti lisätty."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Laiteasetusten virhe"
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Vastaavaa kappaletta ei löytynyt."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Puskuroidaan"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT-kuulokemikrofoni tukee vain normaalia tehosteasetusta."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Sovellus suljetaan."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Lisätty. Siirrytäänkö toivelistaan?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Palvelun käytöstä voidaan veloittaa maksu. Jatketaanko?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Säilön käytöstä voidaan veloittaa maksu. Jatketaanko?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1-kanavainen äänitehoste toimii vain kuuloke- ja Bluetooth-kuuloketiloissa."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1-kanavainen äänitehoste toimii vain kuuloketilassa."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Kaiutin ei tue 5.1-kanavaisia äänitehosteita."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Näytä levynkansien mukaan"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Lähetä kappale"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Luokita kappale"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Siirrä kappaletta toistoluettelossa"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Nykyinen"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Poista soittolista"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Toisto taustalla"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Tehosteet"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Osta nyt"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Toivomuslista"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Leveä"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wah-wah"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Värinäsubbari"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Toista/keskeytä musiikki napauttamalla kaksi kertaa."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Jaa kappale Bluetoothin kautta"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Tervetuloa ohjattuun musiikkiasennukseen.\nSeuraavat ruudut auttavat puhelimen asetusten määrittämisessä. Jatketaanko?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Pikaluettelo"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Äänitehosteet"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Kaikki"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Äänenvoimakkuus"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d kappaletta valittu."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Ei podcasteja"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Etsi samanlainen"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Taustatoisto"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanava voidaan aktivoida vain silloin, kun äänitehosteet on poistettu käytöstä."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcast"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Muokkaa kuvaa"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Äänten toistaminen lopetetaan ja äänitallenne tallennetaan. Toistetaanko?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Valittujen kohteiden enimmäismäärä (%d) saavutettu."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth-yhteys on katkennut."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanava voidaan aktivoida vain silloin, kun äänitehosteet on poistettu käytöstä."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Ota kuva"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Näytä musiikkinäkymä"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Tauko"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Toista levy"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Lajitteluperuste"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Historia"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Piilota musiikkinäkymä"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Etsi tunniste"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropboxin sisältö"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Puhelimen sisältö"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Vaihda kuva"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Poista Dropboxin tiedot"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Voit virtauttaa musiikin AllShare-laitteisiin."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Kelpoisuus"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Tyyppi"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Tiedosto poistetaan myös palvelimelta ja siihen yhteydessä olevista laitteista."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Esittäjät"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Kansitaide"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Muu sisältö"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Nimi on liian pitkä."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Musiikin selkeys"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Suuri äänenvoimakkuus vaurioittaa kuuloasi pitkäaikaisen kuuntelun aikana."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Jäljellä olevat käyttökerrat"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Äänitehosteet ovat käytettävissä vain silloin, kun kuulokkeet ovat kytkettynä."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Lisää henkilökohtaiseen tallennustilaan"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Poista henkilökohtaisesta tallennustilasta"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Tilannekohtainen ponnahdusikkuna"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Tilannekohtainen ponnahdusikkuna on auki. Voit sulkea sen kaksoisnapauttamalla."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Toista yksi"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Siirretään..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Valitse enintään %d kohdetta."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Välilehti"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Vaihda soitinta"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Välilehdet"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Automaattiset suositukset pystyvät hakemaan äänitiedostojen kohokohdat."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Aikuisluokitus"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Tiedostoa ei löydy."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Soittajan soittoääni on tallennettu."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bittisyvyys"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Koko"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d valittu"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet lisännyt kappaleita tähän laitteeseen, ne näytetään täällä."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Pituus"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 kansio poistetaan."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Ei sisältöjä"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Kansiot"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Omat soittolistat"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Soitin"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Asetukset"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Poistetaan..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 kappale poistetaan."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Kaikki kappaleet poistetaan."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "%d kappaletta poistetaan."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 soittolista poistetaan."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d soittolistaa poistetaan."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albumia poistetaan."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d esittäjää poistetaan."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d kansiota poistetaan."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Yhdistäminen epäonnistui."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klassinen"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI ei tue nykyistä äänitehostetta."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Bluetooth ei tue äänitehosteita."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Linjalähtö ei tue äänitehosteita."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI ei tue äänitehosteita."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Putkivahvistin"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Mukautettu"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Putkivahvistin"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d kappaletta lisätty soittolistaan."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 kappale lisätty soittolistaan."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Lisää kappaleita soittolistaan"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s on jo käytössä. Anna toinen nimi."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Tallennuspäivämäärä"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Kappale asetettu hälytysääneksi."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Tuloksia ei löytynyt"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Oletussoittoääni"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Kappale asetettu soittajan soittoääneksi."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Kappale asetettu soittoääneksi."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Lisää Nyt soi -listaan"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Taajuuskorjaimen asetukset otetaan käyttöön musiikkia toistettaessa."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Hälytys"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 albumi poistetaan."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD-kort."
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Laitteen muisti"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Soittolistan nimi on jo käytössä."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Soittolista %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Luo"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Taajuuskorjaimen esiasetus"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automaattinen"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klassinen"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Ympäristötehoste"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Tiedostotyyppiä ei tueta."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet luonut soittolistat, ne näytetään täällä."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Valitse äänilaite"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Soittolistan nimi on jo käytössä. Anna toinen nimi."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Nyt soi -lista"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Näytä sanoitus"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Piilota sanoitus"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Musiikkia ei voi toistaa puheluiden aikana."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Poista"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Valitse"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Kappaletta ei voi toistaa"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PERUUTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "POISTA"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Viesti"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Peruuta"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Päivitä"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Valitse kaikki"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Poistettu."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Lopeta"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Otsikko"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "Sähköposti"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Akku on loppumassa."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Äänilaite"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Yksityiskohdat"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Sulje"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Muokkaa"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Päivitetty."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Poistettu."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Valittu"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Hae"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Virhe"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Muisti on täynnä."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Jono"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Äänenvoimakkuus"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Sekoitus"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Toista"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Tiedostojen enimmäiskoko on saavutettu."
+

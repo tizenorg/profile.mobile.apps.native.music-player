@@ -1,0 +1,1679 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "جاري التحميل ..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "خاص"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "التوقيت"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "هذا الملف غير موجود."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "نغمة رنين الهاتف"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "المدة"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "الموقع"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "تعيين"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "إضافة للصفحة الشخصية"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "إزالة من الصفحة الشخصية"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "نقل إلى وحدة التخزين العادية"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "نقل إلى وحدة التخزين الشخصية"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "سيتم نقل العناصر المحددة إلى %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "سيتم نقل العنصر المحدد إلى %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "تعذر الاستخدام خلال وضع التخزين كبير السعة."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "تمت إضافة نغمة رنين."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "الزر"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "تحديد عناصر"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "متقدم"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "السابق"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "إغلاق"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "تمت الإضافة."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "فشل."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "لا توجد نتائج للبحث"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "تمت"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "لا توجد عناصر"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "إضافة الى الرئيسية"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "التالي"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "جاري التنزيل..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "المفضلة"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "إضافة إلى مساحة التخزين الشخصية"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "تم قطع الاتصال عن %s. تحقق من حالة الشبكة والجهاز المتصل."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "عبر Screen mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "عبر الشبكة المنزلية"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "المدخل خالي."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "لا يتوفّر أثناء المكالمة."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "تم الوصول إلى أقصى عدد من الحروف."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "يتعذر مشاركة ملف DRM."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "جاري الحذف..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d أجهزة"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "تفعيل الحركة"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "عدم السؤال مرة أخرى"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "لا توجد نتائج."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "اقلب الهاتف‬ لكتم المكالمات الواردة وتنبيهات الرسائل والتنبيهات."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "لا شيء"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "الإنترنت"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "استوديو"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "انقر نقرا مزدوجا للانتقال إلى المحتوى."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "مجسم"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "كلمات الأغاني"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد إضافة المقاطع إلى الموسيقى على جهازك المحمول، ستظهر هنا."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "معدل أخذ العينات"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "تم التحديد كمفضلة."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "الموسيقى"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "لم يتم التحديد كمفضلة."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "بحث في الموسيقى"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "التوصيات التلقائية لا تدعم هذا الملف الصوتي."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "عذرا، لا يدعم المشغل هذا النوع من ملفات الصوت."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "المفضلة"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "أكثر ما تم عرضه"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "المضاف حديثا"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "إنشاء قائمة تشغيل"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "حذف"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "نغمة رنين المتصل"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "الفنانون"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "تتعذر الإضافة."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "يتعذر إنشاء قائمة تشغيل."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "يتعذر الحصول على رمز."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "تتعذر إضافة أكثر من %d ملف موسيقى."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "الألبوم"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "المؤلف"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "حقوق النسخ"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "إنشاء قائمة تشغيل"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "الشرح"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "هيئة"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "غير ممكن"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "لا توجد قوائم تشغيل"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "رقم الأغنية"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "مسح؟"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "حذف؟"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "تتعذر إعادة تسمية قائمة التشغيل."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "الألبومات"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "جاري الإضافة..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "هل تريد حذف %d من الألبومات؟"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "قوائم التشغيل"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "إضافة"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "سيرة"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "الإعتمادات"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "معلومات الوسائط"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "جمع الاسطوانات وتصنيفها"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "كلمات الأغنية"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "ممكن"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "إعادة عرض"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "قائمة المسارات"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "إضافة إلى قائمة التشغيل"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "الفنان"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "التحويل"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "قوائم التشغيل"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "المعروض حديثا"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "مدة الأغنية"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "لا توجد أغاني"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "سيتم حذف هذا المسار‬."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "سيتم حذف المقاطع المحددة."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "سيتم حذف هذا الفنان."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف الفنانين المحددين."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف جميع الفنانين."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "سيتم حذف هذا المجلد."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "سيتم حذف المجلدات المحددة."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "سيتم حذف كل المجلدات."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "سيتم حذف هذا الألبوم."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "سيتم حذف الألبومات المحددة."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "سيتم حذف جميع الألبومات."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "سيتم حذف قائمة التشغيل هذه."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف قوائم التشغيل المحددة."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف جميع قوائم التشغيل."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "أغاني"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "إعادة ترتيب"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "حفظ كقائمة تشغيل"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "نغمة المنبه"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "لم يتم تحديد أي شيء."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "تعذر التشغيل. حدث خطأ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "يتعذر التشغيل. نوع ملف غير مدعوم."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "مشاركة"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "القادة"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "تحديد جهاز"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "عرض كـ"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "عادي"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "المستخدم"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "لفظي"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "تحسين صوت الجهير"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "تحسين الصوت الثلاثي"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "مقهى"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "القناة الافتراضية ٧,۱"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "بعد ۱٥دقيقة"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "بعد ٣٠ دقيقة"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "بعد ساعة"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "بعد ساعة واحدة و30 دقيقة"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "بعد ساعتين"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "إيقاف الموسيقى التلقائي"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "مؤثر الصوت هذا يعمل في وضعي سماعة الأذن وسماعة البلوتوث فقط."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "مربع الموسيقى"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "لا توجد ملفات موسيقى كافية للتشغيل في‏‫ مربع الموسيقى. يلزم وجود %d ملفات موسيقى على الأقل."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "عاطفة"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "هادئ"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "بهجة"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "تحديث المكتبة"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "هل تريد تحديث المكتبة؟"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "تغيير المحور"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "الأنواع"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "ألبوم واحد/مقطع واحد"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "ألبوم واحد/%d مقطع/مقاطع"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d ألبوم/ألبومات/%d مقطع/مقاطع"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "يمكنك التحكم في مشغل الموسيقى‬ باستخدام الأوامر الصوتية‬ %1$s و%2$s و%3$s و%4$s و%5$s و%6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "تشغيل %d مقاطع عشوائيا"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "مزيد من المعلومات"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "الموسيقى الخاصة بي"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "عرض القائمة"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "تشغيل عبر ميزة Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "تمت إضافة المقطع إلى المفضلة."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "إزالة من المفضلة"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "جديد"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "المسارات"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "مختصر"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "اللائحة"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "فتح لائحة العرض"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "تشغيل الكل"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "فرغت القائمة المحددة."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "أنماط"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "أعوام"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "قديمة"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "يقوم مربع الموسيقى‬ بتحليل خصائص ملفات الموسيقى المخزنة على الجهاز وإنشاء قوائم تشغيل تلقائيا."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "يعمل على تشغيل قائمة تشغيل موسيقى بنفس الخصائص من خلال تحديد مربع على الشاشة."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "يعرض تفاصيل قائمة التشغيل من خلال النقر مع الاستمرار فوق المربع الجاري تشغيله حاليا."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "الأجهزة المجاورة"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "سيلزم ‏‫تحديث المكتبة‬ إذا تمت إضافة أغان جديدة."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "لا توجد ألبومات"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "لا يوجد فنانين"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "سرعة التشغيل"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "قاعة احتفال"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "إضافة إلى"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "عرض"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "المضاف حديثا"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "غير مستخدمة"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "الإتاحة عند عدم الاتصال"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "بعد %1$d ساعات %2$d دقائق"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "بعد %d ساعات"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "بعد %d دقائق"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "لا توجد مجلدات"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "لايوجد مسارات مسارات"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d ألبوم"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d فنانون"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d أنواع"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d قوائم التشغيل"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d مسارات"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "قائمة التشغيل"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "ألبومات متشابهة"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "مادة صوتية"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "عرض مختصر"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "يعمل المؤثر الصوتي هذا في وضع سماعة الأذن فقط."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "المحتوى بأكمله"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "يلزم الاتصال بالشبكة لتشغيل هذا الملف. تحقق من اتصال الشبكة وحاول مرة أخرى."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "نوع الملف غير مدعوم."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "جاري التحديث..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "بحث"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "البحث حسب"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "مقاطع الفيديو ذات الصلة"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "مستوى الصوت الذكي"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "سيتم ضبط مستوى الصوت الخاص بجميع المقاطع إلى المستوى %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "تم تفعيل مستوى الصوت الذكي"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "معلومات الاتصال"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "بعد ساعة و%d دقائق"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "تكيف الصوت"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "جهازي"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "قد يؤدي الاستماع في مستوى صوت عال لفترة زمنية طويلة إلى الإضرار بحاسة السمع. هل تريد رفع مستوى الصوت إلى مستوى يتجاوز الحدود الآمنة؟"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "موجود مسبقا."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "المسح بحثا عن أجهزة مجاورة‬"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "بعد ساعة واحدة"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "بعد ساعة ودقيقة واحدة"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "بعد %d ساعات ودقيقة واحدة"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "بعد دقيقة واحدة"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "ذهاب إلى المتجر"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "إضافة\nمسارات"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد تنزيل مقاطع من الموسيقى، يتم عرضها هنا"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد إضافة مقاطع إلى المفضلة، يتم عرضها هنا."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد تشغيل المقاطع، يتم عرضها هنا."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد إضافة مقاطع إلى %s. يتم عرضها هنا"
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "لا يوجد محتويات تم شراؤها"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "حفظ بإسم"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "فشل التحديث."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "مثير"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "بحث في الموسيقى"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "الأجهزة المتصلة"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "قائمة التشغيل %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "لا توجد أجهزة"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "الأجهزة المتاحة"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "ضبط"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "فشلت الإزالة."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "يتعذر استخدام وظيفتي التقديم السريع والإرجاع‬ عندما تكون الأجهزة القريبة مفعلة."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "تعيين"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "سماعات رأس"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "مكبر الصوت"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "أغنية واحدة"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d أغاني"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "مقطع واحد"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "تشغيل مقطع واحد عشوائيًا"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "لم يتم العثور على موسيقى للخلية المحددة"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "عدم العرض مرة أخرى"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "فنانون متنوعون"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "إضافة إلى الشاشة الرئيسية"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "إضافة إلى المفضلة"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "تعديل العنوان"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "إزالة من مساحة التخزين الشخصية"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "بعد تنزيل المقاطع، يتم عرض المجلدات"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "درجة الصوت"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "إيقاف التكرار"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "تكرار الكل"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "الخلط غير فعال"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "الخلط فعال"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "قائمة التشغيل الخاصة بي"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "قوائم التشغيل الافتراضية"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "تاريخ التسجيل"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "صورة ألبوم"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "نوع واحد"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "مجلدات %d"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "مجلد واحد"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "فنان واحد"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "ألبوم واحد"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "قائمة تشغيل واحدة"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "مشغل الموسيقى"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "نقل"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "التوصيات التلقائية"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "من البداية"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "اقتراحات من أجلك"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "حفظ"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "أساسي"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "آلة"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "الصوت الثلاثي"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "جهير"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "لا يتم تطبيق أي تأثيرات في هذا الوضع."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "يمكنك محاكاة جرس مضخم صوت الأنبوب."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "تأثير مضخم الصوت الأنبوبي"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "يمكنك محاكاة تأثير الصوت المجسم للقناة الظاهرية 7.1."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "غرفة صغيرة"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "غرفة كبيرة"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "يقوم بمحاكاة ارتداد الصدى‬ في غرفة كبيرة، على سبيل المثال، مسرح."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "يقوم بمحاكاة ارتداد الصدى‬ في ‏‫قاعة احتفال‬."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "يقوم محاكاة ارتداد الصدى‬ في مساحة صغيرة، كالاستوديو مثلا."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "الوضوح"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "إرجاع"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "أعوام"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "الأنواع"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "المؤلفون"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "كل المسارات"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "ذهاب للقائمة س."
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "بحث"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "إضافة للقائمة س."
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "ملف فيديو غير معتمد لمخرج التلفاز."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "يتعذر الإنشاء. تم بلوغ الحد الأقصى لعدد قوائم التشغيل."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "يتعذر ضبط الصوت أثناء الاتصال بسماعة بلوتوث."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "يتعذر ضبط مستوى الصوت أثناء الاتصال بسماعة بلوتوث."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "إيقاف مشغل الموسيقى؟"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "يرجى الخروج من نمط الصمت."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "فشلت الشبكة."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "بطاقة الذاكرة محملة."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "حدث خطأ في إعدادات الجهاز."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "تعذر إيجاد تطابق للأغنية."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "جاري التنزيل"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "تدعم سماعة البلوتوث إعدادات التأثيرات العادية فقط."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "سيتم اغلاق التطبيق."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "تمت الإضافة. ذهاب إلى قائمة الأماني؟"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "الوصول إلى الخدمة قد يحتاج إلى دفع تكلفة. متابعة؟"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "قد تتغير طريقة الدخول إلى المتجر. متابعة؟"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1 مؤثر صوت القناة يعمل فقط في وضعي سماعة الأذن وسماعة البلوتوث."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "يعمل مؤثر صوت القناة 5.1 في وضع سماعة الأذن فقط."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "ليست مؤثرات صوت القناة 5.1 مدعومة بواسطة السماعة."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "عرض عبر رسم الغطاء"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "إرسال المسار"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "تصنيف المسار"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "نقل المسار إلى قائمة التشغيل"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "الحالي"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "حذف قائمة التشغيل"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "التشغيل في خلفية العرض"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "التأثيرات"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "شراء الآن"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "واو HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "قائمة الرغبات"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "عريض"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "مضخم صوت الاهتزاز"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "اضغط مرتين لتشغيل/إيقاف الموسيقى مؤقتًا."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "مشاركة مادة صوتية عبر البلوتوث"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "مرحبا بك في معالج ضبط الموسيقى. ستساعدك الشاشات التالية في اعداد هاتفك. متابعة؟"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "قائمة سريعة"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "المؤثرات الصوتية"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "الكل"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "درجة الصوت"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "تم تحديد %d مسارات."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "لا يوجد podcasts"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "البحث عن المتشابه"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "تشغيل في الخلفية"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "يمكن تنشيط القناة 5.1 فقط عند إيقاف المؤثرات الصوتية."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "بودكاست"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "تعديل صورة"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "سيتم إيقاف تشغيل أي صوت وحفظ تسجيل الصوت. هل تريد التشغيل؟"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "تم تحديد أقصى عدد للعناصر (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "تم فصل البلوتوث."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "يمكن تنشيط القناة 5.1 فقط عند إيقاف المؤثرات الصوتية."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "التقاط صورة"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "إظهار عرض الموسيقي"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "إيقاف مؤقت"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "تشغيل ألبوم"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "فرز بواسطة"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "المحفوظات"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "إخفاء عرض الموسيقي"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "العثور على علامة"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "محتوى Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "محتوى على الهاتف"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "تغيير الصورة"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "حذف بيانات Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "يمكنك بث الموسيقى إلى الأجهزة باستخدام AllShare."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "الصلاحية"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "النوع"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "سيؤدي ذلك إلى حذف الملف من الخادم، بالإضافة إلى أي أجهزة متصلة."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "الفنانون"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "ألبوم الفن"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "محتويات أخرى"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "الاسم طويل."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "نقاء صوت الموسيقى"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "قد تضر مستويات الصوت العالية بسمعك إذا استمعت إليها لفترة طويلة."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "الاستخدامات المتوفرة"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "ستتوفر المؤثرات الصوتية فقط عندما تكون سماعات الرأس متّصلة."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "إضافة لجهة التخزين الخاصة بك"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "حذف من جهة التخزين الشخصي."
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "إطار سياق منبثق"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "يوجد إطار سياق منبثق مفتوح. انقر نقرا مزدوجا لإغلاقه."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "التكرار مرة"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "جاري النقل..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "تحديد ما يصل إلى %d عنصر/عناصر"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "علامة تبويب"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "تغيير المشغل"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "علامات تبويب"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "تستطيع ‏‫التوصيات التلقائية‬ استخراج التمييزات من ملفات الصوت."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "التصنيف الأصلي"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "الملف غير موجود."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "تم حفظ نغمة رنين المتصل."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "عمق البت"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "الحجم"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "تم تحديد %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "ستظهر المقاطع هنا بعد إضافتها إلى هذا الجهاز."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "الطول"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "سيتم حذف مجلد واحد."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "بدون محتويات"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "مجلدات"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "قوائم التشغيل"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "مشغل الصوت"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "الضبط"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "جاري المسح..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "سيتم حذف مقطعًا واحدًا."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "سيتم حذف جميع المسارات"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d من المقاطع."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "سيتم حذف قائمة تشغيل واحدة."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d قوائم تشغيل."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d ألبومات."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d فنانين."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d مجلدات."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "فشل التوصيل."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "كلاسيك"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "الروك"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "الجاز"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "البوب"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "تلقائي"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "لا يدعم HDMI المؤثر الصوتي الحالي."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "ليست المؤثرات الصوتية مدعومة بواسطة البلوتوث."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "ليست المؤثرات الصوتية مدعومة بواسطة مخرج الصوت."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "ليست المؤثرات الصوتية مدعومة بواسطة HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "مضخم الصوت الأنبوبي"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "ضبط مخصص"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "مضخم صوت الأنبوب"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "تمت إضافة %d مقاطع إلى قائمة التشغيل."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "تمت إضافة مقطع واحد إلى قائمة التشغيل"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "إضافة المقاطع إلى قائمة التشغيل"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s مستخدم بالفعل. إدخال اسم آخر."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "تاريخ التسجيل"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "تم ضبط المقطع كنغمة التنبيه."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "لم يتم العثور على أي نتيجة"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "نغمة الرنين الافتراضية"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "تم ضبط المقطع كنغمة رنين المتصل."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "تم ضبط المقطع كنغمة الرنين."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "إضافة إلى قائمة التشغيل الحالية"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "سيتم تطبيق ضبط المعادل أثناء تشغيل الموسيقى."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "تنبيه"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "سيتم حذف ألبوم واحد"
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "بطاقة SD"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "وحدة تخزين الجهاز"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "اسم قائمة التشغيل مستخدم مسبقاً."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "قائمة التشغيل %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "إنشاء"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "إعادة ضبط المعادل"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "تلقائي"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "كلاسيكي"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "تأثير المحيط"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "إن نوع الملف غير مدعوم."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "بعد إنشاء قوائم تشغيل، يتم عرضها هنا"
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "تحديد جهاز الصوت"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "اسم قائمة التشغيل مستخدم مسبقاً. أدخل اسماً آخر."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "قائمة المواد الجاري تشغيلها"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "إظهار كلمات الأغنية"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "إخفاء كلمات الأغاني"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "يتعذّر تشغيل الموسيقى أثناء المكالمات."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "حذف"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "تحديد"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "يتعذر تشغيل المقطع"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "تم"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "إلغاء"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "حذف"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "تغيير الاسم"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "رسالة"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "موافق"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "إلغاء"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "تحديث"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "اختيار الكل"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "تم المسح."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "إيقاف"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "مجهول"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "العنوان"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "بريد إلكتروني"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "البلوتوث"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "تنزيل"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "البطارية ضعيفة."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "جهاز صوت"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "التفاصيل"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "إنهاء"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "تعديل"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "تم التحديث."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "تم الحذف."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "محدد"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "بحث"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "خطأ"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "امتلأت الذاكرة."
+
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "قائمة الانتظار"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "درجة الصوت"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "الخلط"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "التكرار"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "تم تجاوز الحد الأقصى لحجم الملفات."
+

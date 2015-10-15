@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.music-player" version="0.1.0" install-location="internal-only" api-version="2.4">
+	<label>Music</label>
+	<author email="hm2007.kim@samsung.com" href="www.samsung.com">Hyungmin Kim</author>
+	<description>Music player</description>
+	<ui-application appid="org.tizen.music-player" exec="/usr/apps/org.tizen.music-player/bin/music-player" nodisplay="false" multiple="false" type="capp" taskmanage="true" process-pool="true" indicatordisplay="false" effectimage-type="edj-light" portrait-effectimage="/usr/apps/org.tizen.music-player/shared/res/mp-fake-effect.edj">
+		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
+		<label>Music</label>
+		<icon>org.tizen.music-player.png</icon>
+		<label xml:lang="hy-am">Երաժշտություն</label>
+		<label xml:lang="az-az">Musiqi</label>
+		<label xml:lang="eu-es">Musika</label>
+		<label xml:lang="bg-bg">Музика</label>
+		<label xml:lang="ca-es">Música</label>
+		<label xml:lang="zh-cn">音乐</label>
+		<label xml:lang="zh-hk">音樂</label>
+		<label xml:lang="zh-tw">音樂</label>
+		<label xml:lang="hr-hr">Glazba</label>
+		<label xml:lang="cs-cz">Hudba</label>
+		<label xml:lang="da-dk">Musik</label>
+		<label xml:lang="nl-nl">Muziek</label>
+		<label xml:lang="en-gb">Music</label>
+		<label xml:lang="en-us">Music</label>
+		<label xml:lang="et-ee">Muusika</label>
+		<label xml:lang="fi-fi">Musiikki</label>
+		<label xml:lang="fr-fr">Musique</label>
+		<label xml:lang="gl-es">Música</label>
+		<label xml:lang="ka-ge">მუსიკა</label>
+		<label xml:lang="de-de">Musik</label>
+		<label xml:lang="el-gr">Μουσική</label>
+		<label xml:lang="hu-hu">Zenék</label>
+		<label xml:lang="is-is">Tónlist</label>
+		<label xml:lang="ga-ie">Ceol</label>
+		<label xml:lang="it-it">Musica</label>
+		<label xml:lang="ja-jp">音楽</label>
+		<label xml:lang="kk-kz">Музыка</label>
+		<label xml:lang="ko-kr">음악</label>
+		<label xml:lang="lv-lv">Mūzika</label>
+		<label xml:lang="lt-lt">Muzika</label>
+		<label xml:lang="mk-mk">Музика</label>
+		<label xml:lang="nb-no">Musikk</label>
+		<label xml:lang="pl-pl">Muzyka</label>
+		<label xml:lang="pt-pt">Música</label>
+		<label xml:lang="pt-br">Músicas</label>
+		<label xml:lang="ro-ro">Muzică</label>
+		<label xml:lang="ru-ru">Музыка</label>
+		<label xml:lang="sr-rs">Muzika</label>
+		<label xml:lang="sk-sk">Hudba</label>
+		<label xml:lang="sl-si">Glasba</label>
+		<label xml:lang="es-es">Música</label>
+		<label xml:lang="es-us">Música</label>
+		<label xml:lang="sv-se">Musik</label>
+		<label xml:lang="tr-tr">Müzik</label>
+		<label xml:lang="uk-ua">Музика</label>
+		<label xml:lang="uz-uz">Musiqa</label>
+		<label xml:lang="ar-ae">الموسيقى</label>
+		<label xml:lang="zh-sg">音乐</label>
+		<label xml:lang="hi-in">संगीत</label>
+		<label xml:lang="en-ph">Music</label>
+		<label xml:lang="fr-ca">Musique</label>
+		<background-category value="media"/>
+		<application-service>
+			<mime name="music-player.uri" />
+		</application-service>
+	</ui-application>
+
+	 <ui-application appid="org.tizen.sound-player" exec="/usr/apps/org.tizen.sound-player/bin/sound-player" nodisplay="true" multiple="false" type="capp" taskmanage="true" launch_mode="caller">
+		<label>Sound Player</label>
+		<icon>org.tizen.sound-player.png</icon>
+		<label xml:lang="hy-am">Ձայնի նվագարկում</label>
+		<label xml:lang="az-az">Səs pleyeri</label>
+		<label xml:lang="eu-es">Soinu erreproduzitzailea</label>
+		<label xml:lang="bg-bg">Звуков плейър</label>
+		<label xml:lang="ca-es">Reproductor de so</label>
+		<label xml:lang="zh-cn">声音播放器</label>
+		<label xml:lang="zh-hk">聲音播放器</label>
+		<label xml:lang="zh-tw">聲音播放器</label>
+		<label xml:lang="hr-hr">MP3 player</label>
+		<label xml:lang="cs-cz">Zvukový přehrávač</label>
+		<label xml:lang="da-dk">Lydafspiller</label>
+		<label xml:lang="nl-nl">MP3-speler</label>
+		<label xml:lang="en-gb">Sound player</label>
+		<label xml:lang="en-us">Sound player</label>
+		<label xml:lang="et-ee">Helimängija</label>
+		<label xml:lang="fi-fi">Soitin</label>
+		<label xml:lang="fr-fr">Lecteur de son</label>
+		<label xml:lang="gl-es">Reprodutor de son</label>
+		<label xml:lang="ka-ge">პლეერი</label>
+		<label xml:lang="de-de">Sound-Player</label>
+		<label xml:lang="el-gr">Αναπαραγωγή ήχου</label>
+		<label xml:lang="hu-hu">Hanglejátszó</label>
+		<label xml:lang="is-is">Hljóðspilun</label>
+		<label xml:lang="ga-ie">Seinnteoir fuaime</label>
+		<label xml:lang="it-it">Lettore suoni</label>
+		<label xml:lang="ja-jp">サウンドプレーヤー</label>
+		<label xml:lang="kk-kz">Дыбыс ойнатқышы</label>
+		<label xml:lang="ko-kr">사운드 플레이어</label>
+		<label xml:lang="lv-lv">Audio atskaņotājs</label>
+		<label xml:lang="lt-lt">Garso grotuvas</label>
+		<label xml:lang="mk-mk">Плеер за звук</label>
+		<label xml:lang="nb-no">Lydspiller</label>
+		<label xml:lang="pl-pl">Odtwarzacz muzyki</label>
+		<label xml:lang="pt-pt">Leitor de som</label>
+		<label xml:lang="pt-br">Player de som</label>
+		<label xml:lang="ro-ro">Player sunete</label>
+		<label xml:lang="ru-ru">Аудиоплеер</label>
+		<label xml:lang="sr-rs">Plejer zvuka</label>
+		<label xml:lang="sk-sk">Prehrávač zvuku</label>
+		<label xml:lang="sl-si">Predvajalnik zvoka</label>
+		<label xml:lang="es-es">Reproductor de sonido</label>
+		<label xml:lang="es-us">Música</label>
+		<label xml:lang="sv-se">Ljudspelare</label>
+		<label xml:lang="tr-tr">Ses oynatıcı</label>
+		<label xml:lang="uk-ua">Музичний плеєр</label>
+		<label xml:lang="uz-uz">Tovush pleyeri</label>
+		<label xml:lang="ar-ae">مشغل الصوت</label>
+		<label xml:lang="zh-sg">声音播放器</label>
+		<label xml:lang="hi-in">ध्वनि प्‍लेयर</label>
+		<label xml:lang="en-ph">Sound player</label>
+		<label xml:lang="fr-ca">Lecteur de son</label>
+		<background-category value="media"/>
+		<application-service>
+			<operation name="http://tizen.org/appcontrol/operation/view" />
+			<mime name="application/ogg" />
+			<mime name="application/x-smaf" />
+			<mime name="application/vnd.smaf" />
+			<mime name="audio/aac" />
+			<mime name="audio/ac3" />
+			<mime name="audio/amr" />
+			<mime name="audio/amr-wb" />
+			<mime name="audio/AMR" />
+			<mime name="audio/AMR-WB" />
+			<mime name="audio/imelody" />
+			<mime name="audio/iMelody" />
+			<mime name="audio/imy" />
+			<mime name="audio/isma" />
+			<mime name="audio/melody" />
+			<mime name="audio/mid" />
+			<mime name="audio/midi" />
+			<mime name="audio/mmf" />
+			<mime name="audio/mobile-xmf" />
+			<mime name="audio/mpeg" />
+			<mime name="audio/mpeg3" />
+			<mime name="audio/mpeg4" />
+			<mime name="audio/mpg" />
+			<mime name="audio/mpg3" />
+			<mime name="audio/mp3" />
+			<mime name="audio/mp4" />
+			<mime name="audio/MP4A-LATM" />
+			<mime name="audio/m4a" />
+			<mime name="audio/ogg" />
+			<mime name="audio/rmf" />
+			<mime name="audio/smaf" />
+			<mime name="audio/sp-midi" />
+			<mime name="audio/vnd.ms-playready.media.pya" />
+			<mime name="audio/vorbis" />
+			<mime name="audio/wav" />
+			<mime name="audio/wave" />
+			<mime name="audio/wma" />
+			<mime name="audio/xmf" />
+			<mime name="audio/x-amr" />
+			<mime name="audio/x-flac" />
+			<mime name="audio/x-mid" />
+			<mime name="audio/x-midi" />
+			<mime name="audio/x-mpeg" />
+			<mime name="audio/x-mpeg3" />
+			<mime name="audio/x-mpegaudio" />
+			<mime name="audio/x-mpg" />
+			<mime name="audio/x-mp3" />
+			<mime name="audio/x-ms-asf" />
+			<mime name="audio/x-ms-wma" />
+			<mime name="audio/x-rmf" />
+			<mime name="audio/x-wav" />
+			<mime name="audio/x-wave" />
+			<mime name="audio/x-xmf" />
+			<mime name="text/x-iMelody" />
+			<mime name="audio/x-vorbis+ogg" />
+			<mime name="audio/webm" />
+			<mime name="audio/3gpp" />
+			<mime name="audio/x-ms-asx" />
+			<uri name="http" />
+			<uri name="https" />
+			<uri name="rtsp" />
+			<uri name="rtp" />
+		</application-service>
+		<application-service>
+			<operation name="http://tizen.org/appcontrol/operation/view" />
+			<mime name="application/x-smaf" />
+			<mime name="application/vnd.smaf" />
+			<mime name="audio/aac" />
+			<mime name="audio/ac3" />
+			<mime name="audio/amr" />
+			<mime name="audio/amr-wb" />
+			<mime name="audio/AMR" />
+			<mime name="audio/AMR-WB" />
+			<mime name="audio/imelody" />
+			<mime name="audio/iMelody" />
+			<mime name="audio/imy" />
+			<mime name="audio/isma" />
+			<mime name="audio/melody" />
+			<mime name="audio/mid" />
+			<mime name="audio/midi" />
+			<mime name="audio/mmf" />
+			<mime name="audio/mobile-xmf" />
+			<mime name="audio/mpeg" />
+			<mime name="audio/mpeg3" />
+			<mime name="audio/mpeg4" />
+			<mime name="audio/mpg" />
+			<mime name="audio/mpg3" />
+			<mime name="audio/mp3" />
+			<mime name="audio/mp4" />
+			<mime name="audio/MP4A-LATM" />
+			<mime name="audio/m4a" />
+			<mime name="audio/ogg" />
+			<mime name="audio/rmf" />
+			<mime name="audio/smaf" />
+			<mime name="audio/sp-midi" />
+			<mime name="audio/vnd.ms-playready.media.pya" />
+			<mime name="audio/vorbis" />
+			<mime name="audio/wav" />
+			<mime name="audio/wave" />
+			<mime name="audio/wma" />
+			<mime name="audio/xmf" />
+			<mime name="audio/x-amr" />
+			<mime name="audio/x-flac" />
+			<mime name="audio/x-mid" />
+			<mime name="audio/x-midi" />
+			<mime name="audio/x-mpeg" />
+			<mime name="audio/x-mpeg3" />
+			<mime name="audio/x-mpegaudio" />
+			<mime name="audio/x-mpg" />
+			<mime name="audio/x-mp3" />
+			<mime name="audio/x-ms-asf" />
+			<mime name="audio/x-ms-wma" />
+			<mime name="audio/x-rmf" />
+			<mime name="audio/x-wav" />
+			<mime name="audio/x-wave" />
+			<mime name="audio/x-xmf" />
+			<mime name="text/x-iMelody" />
+			<mime name="audio/x-vorbis+ogg" />
+			<mime name="audio/webm" />
+			<mime name="audio/3gpp" />
+			<mime name="audio/x-ms-asx" />
+
+		</application-service>
+	</ui-application>
+
+	<ui-application component-type="svcapp" auto-restart="false" on-boot="false" appid="org.tizen.music-player.service" exec="/usr/apps/org.tizen.music-player/bin/music-player-service" nodisplay="true"  multiple="false" type="capp" taskmanage="false" submode="true" submode-mainid="org.tizen.music-player">
+		<label>music-player service</label>
+		<metadata key="launch-on-attach" value="true"></metadata>
+	</ui-application>
+
+	<privileges>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/systemsettings</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/notification</privilege>
+		<privilege>http://tizen.org/privilege/display</privilege>
+		<privilege>http://tizen.org/privilege/telephony</privilege>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/volume.set</privilege>
+	</privileges>
+
+	<livebox appid="org.tizen.music-player.livebox" primary='true' script="edje" pinup="FALSE" secured="FALSE" auto_launch="true" network="FALSE" abi="c" timeouot="10" period="30" libexec="/usr/apps/org.tizen.music-player/lib/liblive-org.tizen.music-player.so">
+		<label>Music Player</label>
+		<label xml:lang="hy-am">Նվագարկիչ</label>
+		<label xml:lang="az-az">Pleyer</label>
+		<label xml:lang="eu-es">Musika Jogailua</label>
+		<label xml:lang="bg-bg">Музикален плейър</label>
+		<label xml:lang="ca-es">Reproductor de música</label>
+		<label xml:lang="zh-cn">音乐播放器</label>
+		<label xml:lang="zh-hk">音樂播放器</label>
+		<label xml:lang="zh-tw">音樂播放器</label>
+		<label xml:lang="hr-hr">Music Player</label>
+		<label xml:lang="cs-cz">Hudební přehrávač</label>
+		<label xml:lang="da-dk">Musikafspiller</label>
+		<label xml:lang="nl-nl">MP3-speler</label>
+		<label xml:lang="en-gb">Music Player</label>
+		<label xml:lang="en-us">Music Player</label>
+		<label xml:lang="et-ee">MP3-mängija</label>
+		<label xml:lang="fi-fi">Musiikki</label>
+		<label xml:lang="fr-fr">Lecteur MP3</label>
+		<label xml:lang="gl-es">Reprodutor de Música</label>
+		<label xml:lang="ka-ge">პლეერი</label>
+		<label xml:lang="de-de">MP3-Player</label>
+		<label xml:lang="el-gr">Μουσική</label>
+		<label xml:lang="hu-hu">Zenelejátszó</label>
+		<label xml:lang="is-is">Tónlistarspilari</label>
+		<label xml:lang="ga-ie">Seinnteoir Ceoil</label>
+		<label xml:lang="it-it">Lettore musicale</label>
+		<label xml:lang="ja-jp">音楽</label>
+		<label xml:lang="kk-kz">Музыкалық плейер</label>
+		<label xml:lang="ko-kr">뮤직</label>
+		<label xml:lang="lv-lv">Mūzikas Atskaņotājs</label>
+		<label xml:lang="lt-lt">Muzikos grotuvas</label>
+		<label xml:lang="mk-mk">Плеер за музика</label>
+		<label xml:lang="nb-no">Musikk-spiller</label>
+		<label xml:lang="pl-pl">Odtwarzacz muzyki</label>
+		<label xml:lang="pt-pt">Leitor de Música</label>
+		<label xml:lang="pt-br">Music Player</label>
+		<label xml:lang="ro-ro">Player muzical</label>
+		<label xml:lang="ru-ru">Музыка</label>
+		<label xml:lang="sr-rs">Muzički plejer</label>
+		<label xml:lang="sk-sk">Prehrávač hudby</label>
+		<label xml:lang="sl-si">Predvajalnik glasbe</label>
+		<label xml:lang="es-es">Música</label>
+		<label xml:lang="es-us">Música</label>
+		<label xml:lang="sv-se">Musikspelare</label>
+		<label xml:lang="tr-tr">Müzik Çalar</label>
+		<label xml:lang="uk-ua">Музичний плеєр</label>
+		<label xml:lang="uz-uz">Musiqa pleyeri</label>
+		<label xml:lang="ar-ae">مشغل الموسيقى</label>
+		<label xml:lang="zh-sg">音樂播放器</label>
+		<label xml:lang="hi-in">संगीत प्लेयर</label>
+		<label xml:lang="en-ph">Music Player</label>
+		<label xml:lang="fr-ca">Lecteur de musique</label>
+				<icon>/usr/share/icons/default/small/org.tizen.music-player.png</icon>
+		<box type="buffer" mouse_event="true" touch_effect="false">
+			<size need_frame="true" touch_effect="false" preview="/usr/apps/org.tizen.music-player/shared/res/livebox/Music_4x2.png">4x2</size>
+			<script src="/usr/apps/org.tizen.music-player/res/edje/org.tizen.music-player.edj" group="disclosure" />
+		</box>
+
+		<pd type="buffer"><!--pd type="SCRIPT"-->
+			<size>720x607</size>
+			<!--<script src="/usr/apps/org.tizen.music-player/res/edje/org.tizen.music-player.edj" group="disclosure" />-->
+		</pd>
+
+		<group>
+			<cluster name="music">
+				<category name="Recently played" context="music_recently"/>
+				<option key="data_provider" value="org.tizen.music-player"/>
+				<option key="time_span" value="00-03-00"/>
+				<option key="result_size" value="10"/>
+			</cluster>
+		</group>
+
+	</livebox>
+	<livebox appid="org.tizen.music-player.easymode.livebox" primary='true' script="edje" pinup="FALSE" secured="FALSE" auto_launch="false" network="FALSE" abi="c" timeouot="10" period="0.0" libexec="/usr/apps/org.tizen.music-player/lib/liblive-org.tizen.music-player.so">
+		<label>Music Player</label>
+		<label xml:lang="hy-am">Նվագարկիչ</label>
+		<label xml:lang="az-az">Pleyer</label>
+		<label xml:lang="eu-es">Musika Jogailua</label>
+		<label xml:lang="bg-bg">Музикален плейър</label>
+		<label xml:lang="ca-es">Reproductor de música</label>
+		<label xml:lang="zh-cn">音乐播放器</label>
+		<label xml:lang="zh-hk">音樂播放器</label>
+		<label xml:lang="zh-tw">音樂播放器</label>
+		<label xml:lang="hr-hr">Music Player</label>
+		<label xml:lang="cs-cz">Hudební přehrávač</label>
+		<label xml:lang="da-dk">Musikafspiller</label>
+		<label xml:lang="nl-nl">MP3-speler</label>
+		<label xml:lang="en-gb">Music Player</label>
+		<label xml:lang="en-us">Music Player</label>
+		<label xml:lang="et-ee">MP3-mängija</label>
+		<label xml:lang="fi-fi">Musiikki</label>
+		<label xml:lang="fr-fr">Lecteur MP3</label>
+		<label xml:lang="gl-es">Reprodutor de Música</label>
+		<label xml:lang="ka-ge">პლეერი</label>
+		<label xml:lang="de-de">MP3-Player</label>
+		<label xml:lang="el-gr">Μουσική</label>
+		<label xml:lang="hu-hu">Zenelejátszó</label>
+		<label xml:lang="is-is">Tónlistarspilari</label>
+		<label xml:lang="ga-ie">Seinnteoir Ceoil</label>
+		<label xml:lang="it-it">Lettore musicale</label>
+		<label xml:lang="ja-jp">音楽</label>
+		<label xml:lang="kk-kz">Музыкалық плейер</label>
+		<label xml:lang="ko-kr">뮤직</label>
+		<label xml:lang="lv-lv">Mūzikas Atskaņotājs</label>
+		<label xml:lang="lt-lt">Muzikos grotuvas</label>
+		<label xml:lang="mk-mk">Плеер за музика</label>
+		<label xml:lang="nb-no">Musikk-spiller</label>
+		<label xml:lang="pl-pl">Odtwarzacz muzyki</label>
+		<label xml:lang="pt-pt">Leitor de Música</label>
+		<label xml:lang="pt-br">Music Player</label>
+		<label xml:lang="ro-ro">Player muzical</label>
+		<label xml:lang="ru-ru">Музыка</label>
+		<label xml:lang="sr-rs">Muzički plejer</label>
+		<label xml:lang="sk-sk">Prehrávač hudby</label>
+		<label xml:lang="sl-si">Predvajalnik glasbe</label>
+		<label xml:lang="es-es">Música</label>
+		<label xml:lang="es-us">Música</label>
+		<label xml:lang="sv-se">Musikspelare</label>
+		<label xml:lang="tr-tr">Müzik Çalar</label>
+		<label xml:lang="uk-ua">Музичний плеєр</label>
+		<label xml:lang="uz-uz">Musiqa pleyeri</label>
+		<label xml:lang="ar-ae">مشغل الموسيقى</label>
+		<label xml:lang="zh-sg">音樂播放器</label>
+		<label xml:lang="hi-in">संगीत प्लेयर</label>
+		<label xml:lang="en-ph">Music Player</label>
+		<label xml:lang="fr-ca">Lecteur de musique</label>
+		<icon>/usr/share/icons/default/small/org.tizen.music-player.png</icon>
+		<box type="script" touch_effect="false"  mouse_event="true">
+			<size mode="easy" need_frame="true" preview="/usr/apps/org.tizen.music-player/shared/res/livebox/dummy_sel_livebox_04.png">3x1</size>
+			<script src="/usr/apps/org.tizen.music-player/res/edje/org.tizen.music-player.edj" group="livebox" />
+		</box>
+
+	</livebox>
+
+    <widget-application appid="org.tizen.music-player.widget" exec="/usr/apps/org.tizen.music-player/bin/music-player-widget" main="false" update-period="60" nodisplay="false">
+        <label>Music player</label>
+      <label xml:lang="hy-am">Նվագարկիչ</label>
+		<label xml:lang="az-az">Pleyer</label>
+		<label xml:lang="eu-es">Musika Jogailua</label>
+		<label xml:lang="bg-bg">Музикален плейър</label>
+		<label xml:lang="ca-es">Reproductor de música</label>
+		<label xml:lang="zh-cn">音乐播放器</label>
+		<label xml:lang="zh-hk">音樂播放器</label>
+		<label xml:lang="zh-tw">音樂播放器</label>
+		<label xml:lang="hr-hr">Music Player</label>
+		<label xml:lang="cs-cz">Hudební přehrávač</label>
+		<label xml:lang="da-dk">Musikafspiller</label>
+		<label xml:lang="nl-nl">MP3-speler</label>
+		<label xml:lang="en-gb">Music Player</label>
+		<label xml:lang="en-us">Music Player</label>
+		<label xml:lang="et-ee">MP3-mängija</label>
+		<label xml:lang="fi-fi">Musiikki</label>
+		<label xml:lang="fr-fr">Lecteur MP3</label>
+		<label xml:lang="gl-es">Reprodutor de Música</label>
+		<label xml:lang="ka-ge">პლეერი</label>
+		<label xml:lang="de-de">MP3-Player</label>
+		<label xml:lang="el-gr">Μουσική</label>
+		<label xml:lang="hu-hu">Zenelejátszó</label>
+		<label xml:lang="is-is">Tónlistarspilari</label>
+		<label xml:lang="ga-ie">Seinnteoir Ceoil</label>
+		<label xml:lang="it-it">Lettore musicale</label>
+		<label xml:lang="ja-jp">音楽</label>
+		<label xml:lang="kk-kz">Музыкалық плейер</label>
+		<label xml:lang="ko-kr">뮤직</label>
+		<label xml:lang="lv-lv">Mūzikas Atskaņotājs</label>
+		<label xml:lang="lt-lt">Muzikos grotuvas</label>
+		<label xml:lang="mk-mk">Плеер за музика</label>
+		<label xml:lang="nb-no">Musikk-spiller</label>
+		<label xml:lang="pl-pl">Odtwarzacz muzyki</label>
+		<label xml:lang="pt-pt">Leitor de Música</label>
+		<label xml:lang="pt-br">Music Player</label>
+		<label xml:lang="ro-ro">Player muzical</label>
+		<label xml:lang="ru-ru">Музыка</label>
+		<label xml:lang="sr-rs">Muzički plejer</label>
+		<label xml:lang="sk-sk">Prehrávač hudby</label>
+		<label xml:lang="sl-si">Predvajalnik glasbe</label>
+		<label xml:lang="es-es">Música</label>
+		<label xml:lang="es-us">Música</label>
+		<label xml:lang="sv-se">Musikspelare</label>
+		<label xml:lang="tr-tr">Müzik Çalar</label>
+		<label xml:lang="uk-ua">Музичний плеєр</label>
+		<label xml:lang="uz-uz">Musiqa pleyeri</label>
+		<label xml:lang="ar-ae">مشغل الموسيقى</label>
+		<label xml:lang="zh-sg">音樂播放器</label>
+		<label xml:lang="hi-in">संगीत प्लेयर</label>
+		<label xml:lang="en-ph">Music Player</label>
+		<label xml:lang="fr-ca">Lecteur de musique</label>
+        <icon>org.tizen.music-player.png</icon>
+        <category name="http://tizen.org/widget/default"></category>
+	<support-size preview="/usr/share/icons/default/small/preview_music_4x2.png">4x2</support-size>
+    </widget-application>
+</manifest>

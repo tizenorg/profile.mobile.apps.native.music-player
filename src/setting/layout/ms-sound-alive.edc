@@ -1,0 +1,1872 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+collections {
+
+styles {
+        style {
+                name: "ms_textblock_style_default";
+                base: "font=Tizen:style=Regular font_size=25 color=#FFFFFF align=left wrap=mixed linegap= -5";
+                tag:  "br" "\n";
+                tag:  "ps" "ps";
+                tag:  "hilight" "+ font=Tizen:style=Regular";
+                tag:  "b" "+ font=Tizen:style=Regular";
+                tag:  "tab" "\t";
+        }
+}
+
+#define MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_ON      "T02_soundalive_effect_icon_01.png"
+#define MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_OFF     "T02_soundalive_effect_icon_01_off.png"
+#define MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_ON      "T02_soundalive_effect_icon_02.png"
+#define MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_OFF     "T02_soundalive_effect_icon_02_off.png"
+#define MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_ON      "T02_soundalive_effect_icon_03.png"
+#define MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_OFF     "T02_soundalive_effect_icon_03_off.png"
+#define MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_ON      "T02_soundalive_effect_icon_04.png"
+#define MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_OFF     "T02_soundalive_effect_icon_04_off.png"
+#define MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_ON      "T02_soundalive_effect_icon_05.png"
+#define MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_OFF     "T02_soundalive_effect_icon_05_off.png"
+#define MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_ON      "T02_soundalive_effect_icon_06.png"
+#define MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_OFF     "T02_soundalive_effect_icon_06_off.png"
+
+#define MS_SOUNDALIVE_GENGRID_ITEM_NORMAL      "T02_soundalive_effect_bg.png"
+#define MS_SOUNDALIVE_GENGRID_ITEM_PRESSED     "T02_soundalive_effect_bg_press.png"
+#define MS_SOUNDALIVE_GENGRID_ITEM_FOCUSED     "T02_soundalive_effect_bg_focus.png"
+
+images {
+   image : MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_ON COMP;
+   image : MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_OFF COMP;
+   image : MS_SOUNDALIVE_GENGRID_ITEM_NORMAL COMP;
+   image : MS_SOUNDALIVE_GENGRID_ITEM_PRESSED COMP;
+   image : MS_SOUNDALIVE_GENGRID_ITEM_FOCUSED COMP;
+
+}
+
+#define MS_SOUNDALIVE_ITEM_W 420
+#define MS_SOUNDALIVE_ITEM_H 176
+
+#define MS_EFFECT_GENGRID_ITEM_STYLE(__name,__icon_on,__icon_off) \
+      group { name: __name; \
+        script { \
+        public selected = 0; \
+        } \
+        parts { \
+           part { name: "bg"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 visible: 0; \
+                 rel1 { \
+                    relative: 0.0 0.0; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 1.0; \
+                 } \
+              } \
+           } \
+           part { name: "bg_image"; \
+              type: IMAGE; \
+              description { state: "default" 0.0; \
+                 visible: 1; \
+                 rel1 { \
+                    relative: 0.0 0.0; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 1.0; \
+                 } \
+                 image.normal: MS_SOUNDALIVE_GENGRID_ITEM_NORMAL; \
+                 image.border: 14 14 14 14; \
+              } \
+                description { state: "pressed" 0.0; \
+                inherit: "default"; \
+                image.normal: MS_SOUNDALIVE_GENGRID_ITEM_PRESSED; \
+              } \
+                description { state: "focused" 0.0; \
+                inherit: "default"; \
+                image.normal: MS_SOUNDALIVE_GENGRID_ITEM_FOCUSED; \
+              } \
+           } \
+           part { name: "padding_left"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 visible: 0; \
+                 min: 24 0; \
+                 fixed: 1 0; \
+                 align: 0 0; \
+                 rel1 { \
+                    relative: 0.0 0.0; \
+                 } \
+                 rel2 { \
+                    relative: 0.0 1.0; \
+                 } \
+              } \
+           } \
+           part { name: "padding_right"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 visible: 0; \
+                 min: 24 0; \
+                 fixed: 1 0; \
+                 align: 1 0; \
+                 rel1 { \
+                    relative: 1.0 0.0; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 1.0; \
+                 } \
+              } \
+           } \
+           part { name: "padding_bottom"; \
+                 type: RECT; \
+                 description { state: "default" 0.0; \
+                 visible: 0; \
+                 min: 0 10; \
+                 fixed: 0 1; \
+                 align: 0 1; \
+                 rel1 { \
+                    relative: 0.0 1.0; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 1.0; \
+                 } \
+                 } \
+              } \
+           part { name: "text_area"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 visible: 0; \
+                 min: 240 133; \
+                 max: 240 133; \
+                 fixed: 1 1; \
+                 align: 0 0; \
+                 rel1 { \
+                    relative: 1.0 15/MS_SOUNDALIVE_ITEM_H; \
+                    to_x: "padding_left"; \
+                    to_y: "bg"; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 148/MS_SOUNDALIVE_ITEM_H; \
+                    to_x: "padding_left"; \
+                    to_y: "bg"; \
+                 } \
+              } \
+           } \
+           part { name: "title"; \
+              type : TEXT; \
+              mouse_events: 1; \
+              repeat_events: 1; \
+              scale: 1; \
+              description { state: "default" 0.0; \
+                 min: 0 36; \
+                 fixed: 0 1; \
+                 align: 0.0 0.0; \
+                 rel1 { \
+                    relative: 0.0 0.0; \
+                    to: "text_area"; \
+                 } \
+                 rel2 { \
+                         relative: 1.0 0.0; \
+                         to: "text_area"; \
+                 } \
+                 text { \
+                        size: 32; \
+                        align: 0.0 0.5; \
+                        text:  ""; \
+                  } \
+                  color: 255 255 255 255; \
+              } \
+           } \
+           part { name: "sub_title"; \
+              type : TEXTBLOCK; \
+              mouse_events: 1; \
+              scale: 1; \
+              description { state: "default" 0.0; \
+                 min: 240 90; \
+                 max: 240 90; \
+                 fixed: 1 1; \
+                 align: 0.0 1.0; \
+                 rel1 { \
+                    relative: 0.0 1.0; \
+                    to: "title"; \
+                    offset: 0 7; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 1.0; \
+                    to: "text_area"; \
+                 } \
+                 text { \
+                         style: "ms_textblock_style_default"; \
+                 } \
+              } \
+           } \
+           part { name: "icon_left_margin"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 visible: 0; \
+                 min: 32 0; \
+                 fixed: 1 0; \
+                 align: 0 0; \
+                 rel1 { \
+                    relative: 1.0 0.0; \
+                    to_x: "text_area"; \
+                    to_y: "bg"; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 0.0; \
+                    to_x: "text_area"; \
+                    to_y: "bottom_line"; \
+                 } \
+              } \
+           } \
+           part { name: "icon"; \
+              type: IMAGE; \
+              description { state: "default" 0.0; \
+                 min: 110 110; \
+                 max: 110 110; \
+                 fixed: 1 1; \
+                 align: 1 0.0; \
+                 visible: 1; \
+                 image.normal: __icon_off; \
+                 rel1 { \
+                    relative: 1.0 0.0; \
+                    to: "icon_left_margin"; \
+                    offset: 0 25; \
+                 } \
+                 rel2 { \
+                    relative: 0.0 1.0; \
+                    to_x: "padding_right"; \
+                    to_y: "icon_left_margin"; \
+                 } \
+              } \
+              description { state: "pressed" 0.0; \
+                inherit: "default"; \
+                image.normal: __icon_on; \
+              } \
+              description { state: "focused" 0.0; \
+                inherit: "default"; \
+                image.normal: __icon_on; \
+              } \
+           } \
+        part { name: "bottom_line"; \
+              type: RECT; \
+              description { state: "default" 0.0; \
+                 min: 396 6; \
+                 fixed: 1 1; \
+                 align: 0.5 1.0; \
+                 visible: 1; \
+                 rel1 { \
+                    relative: 0.0 0.0; \
+                    to_x: "bg"; \
+                    to_y: "padding_bottom"; \
+                    offset: 12 0; \
+                 } \
+                 rel2 { \
+                    relative: 1.0 0.0; \
+                    to_x: "bg"; \
+                    to_y: "padding_bottom"; \
+                    offset: -12 0; \
+                 } \
+                 color: 52 125 158 255; \
+              } \
+              description { state: "pressed" 0.0; \
+                inherit: "default"; \
+                color_class: "AO044"; \
+              } \
+              description { state: "focused" 0.0; \
+                inherit: "default"; \
+                color: 255 255 255 255; \
+              } \
+           } \
+      } \
+      programs { \
+        program { \
+                name : "mouse_down"; \
+                signal : "set_selected"; \
+                source : "*"; \
+                action : STATE_SET "pressed" 0.0; \
+                target : "icon"; \
+                target : "bg_image"; \
+                target : "bottom_line"; \
+        } \
+        program { \
+                name : "mouse_up"; \
+                signal : "set_default"; \
+                source : "*"; \
+                action : STATE_SET "default" 0.0; \
+                target : "icon"; \
+                target : "bg_image"; \
+                target : "bottom_line"; \
+        } \
+        program { name: "selected"; \
+            signal: "elm,state,selected"; \
+            source: "elm"; \
+            script { \
+               if (!get_int(selected)) { \
+                        set_int(selected, 1); \
+                        set_state(PART:"bg_image", "pressed", 0.0); \
+                        set_state(PART:"bottom_line", "pressed", 0.0); \
+                        set_state(PART:"icon", "pressed", 0.0); \
+               } \
+            } \
+         } \
+         program { name: "unselected"; \
+            signal: "elm,state,unselected"; \
+            source: "elm"; \
+            script { \
+               if (get_int(selected)) { \
+                        set_int(selected, 0); \
+                        set_state(PART:"bg_image", "default", 0.0); \
+                        set_state(PART:"bottom_line", "default", 0.0); \
+                        set_state(PART:"icon", "default", 0.0); \
+               } \
+            } \
+         } \
+      } \
+}
+
+group { name: "ms-effect-layout";
+      parts {
+           part { name: "bg";
+                type: RECT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        visible: 0;
+                        rel1 { relative: 0.0 0.0; }
+                        rel2 { relative: 1.0 1.0; }
+			min:0 1180;
+                }
+		  description { state: "landscape" 0.0;
+                        inherit: "default";
+                        rel1 { relative: 0.0 0.0; }
+                        rel2 { relative: 1.0 1.0; }
+			min:1280 0;
+                }
+           }
+           part { name: "sa_toolbar_box";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.0 0; to: "bg"; }
+                        rel2 { relative: 1.0 0; to: "bg"; }
+                        min: 0 75;
+                        fixed: 0 1;
+                        visible: 1;
+                        align: 0.0 0.0;
+                 }
+                 description { state: "Advanced_pressed" 0.0;
+                        inherit: "default";
+                 }
+           }
+           part { name: "effect_area";
+                type: RECT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        align: 0 1;
+                        min: 0 252;
+                        fixed: 0 1;
+                        visible: 0;
+                        color: 0 0 0 0;
+                        rel1 { relative: 0.0 1.0; to: "bg";}
+                        rel2 { relative: 1.0 1.0; to: "bg";}
+                }
+                description { state: "landscape" 0.0;
+                        inherit: "default";
+                        rel1 { relative: 1.0 1.0; to_x: "bg"; to_y: "sa_toolbar_box"; offset: 0 20;}
+                        rel2 { relative: 1.0 1.0; to: "bg";}
+                        min: 436 0;
+                        fixed: 1 0;
+                        align: 1 0;
+                }
+           }
+	   #if 0
+           part { name: "padding_top";
+                type: RECT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0 1; to_x: "effect_area"; to_y: "sa_toolbar_box"; }
+                        rel2 { relative: 1 1; to_x: "effect_area"; to_y: "sa_toolbar_box"; }
+                        min: 0 0;
+                        fixed: 0 1;
+                        visible: 0;
+                }
+           }
+           part { name: "padding_bottom";
+                type: RECT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0 1; to: "effect_area"; }
+                        rel2 { relative: 1 1; to: "effect_area"; }
+                        min: 0 40;
+                        align: 0.0 1.0;
+                        fixed: 0 1;
+                        visible: 0;
+                }
+           }
+	   #endif
+           part { name: "contain_area_bg";
+                type: RECT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        visible: 0;
+                        rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "sa_toolbar_box"; }
+                        rel2 { relative: 1.0 0.0; to_x: "bg"; to_y: "effect_area"; }
+                }
+                description { state: "landscape" 0.0;
+                        inherit: "default";
+                        rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "sa_toolbar_box";}
+                        rel2 { relative: 0.0 1.0; to_x: "effect_area"; }
+                }
+           }
+           part { name: "contain_area";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1.to: "contain_area_bg";
+                        rel2.to: "contain_area_bg";
+                }
+           }
+           part { name: "effect_title";
+                type: TEXT;
+                scale: 1;
+		mouse_events: 1;
+                description { state: "default" 0.0;
+                        align: 0 0;
+                        min: 0 52;
+                        fixed: 0 1;
+                        visible: 1;
+                        text {
+                                text: "";
+                                size: 30;
+                                align: 0.0 0.5;
+                                min: 1 0;
+	                }
+                        color: 21 108 148 255;
+                        rel1 { relative: 0.0 0.0; to: "effect_area"; offset: 32 0;}
+                        rel2 { relative: 1.0 0.0; to: "effect_area";}
+                }
+                description { state: "landscape" 0.0;
+                        inherit: "default";
+                        min: 0 60;
+                }
+           }
+           part { name: "title_bottom_line";
+                type: RECT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        align: 0 0;
+                        min: 0 4;
+                        fixed: 0 1;
+                        visible: 1;
+                        color: 217 217 217 255;
+                        rel1 { relative: 0.0 1.0; to_x: "effect_area"; to_y: "effect_title";}
+                        rel2 { relative: 1.0 1.0; to_x: "effect_area"; to_y: "effect_title";}
+                }
+           }
+           part { name: "effect-content";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        align: 0 0.5;
+                        fixed: 1 1;
+                        visible: 1;
+                        rel1 { relative: 0.0 1.0; to_x: "effect_area"; to_y: "title_bottom_line"; }
+                        rel2 { relative: 1.0 1.0; to: "effect_area"; }
+                }
+           }
+        }
+
+      programs {
+           program {
+                name : "set_landscape_mode";
+                signal : "set_landscape_mode";
+                source : "*";
+                action : STATE_SET "landscape" 0.0;
+		target : "bg";
+                target : "effect_area";
+                target : "effect_title";
+                target : "contain_area_bg";
+           }
+           program {
+                name : "set_protial_mode";
+                signal : "set_protial_mode";
+                source : "*";
+                action : STATE_SET "default" 0.0;
+		target : "bg";
+                target : "effect_area";
+                target : "effect_title";
+                target : "contain_area_bg";
+           }
+      }
+}
+
+/*************  gengrid effect custom layout  ***************/
+MS_EFFECT_GENGRID_ITEM_STYLE("none_layout", MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON5_NORMAL_OFF);
+MS_EFFECT_GENGRID_ITEM_STYLE("tube_layout", MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON4_NORMAL_OFF);
+MS_EFFECT_GENGRID_ITEM_STYLE("virtual_layout", MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON6_NORMAL_OFF);
+MS_EFFECT_GENGRID_ITEM_STYLE("small_room_layout", MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON1_NORMAL_OFF);
+MS_EFFECT_GENGRID_ITEM_STYLE("large_room_layout", MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON2_NORMAL_OFF);
+MS_EFFECT_GENGRID_ITEM_STYLE("concert_layout", MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_ON, MS_SOUNDALIVE_GENGRID_ICON3_NORMAL_OFF);
+
+
+group { name: "basic_layout";
+        parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+			}
+		}
+                part { name: "padding_top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+                                min: 0 26;
+                                align: 0.0 0.0;
+                                fixed: 1 1;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 0.0; to: "bg";}
+                                rel2 { relative: 1.0 0.0; to: "bg";}
+			}
+		}
+                part { name: "auto_box";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+                                min: 63 63;
+                                max: 63 63;
+                                align: 0.0 0.0;
+                                fixed: 1 1;
+                                rel1 { relative: 0.0 1.0; to: "padding_top"; offset: 15 0; }
+                                rel2 { relative: 0.0 1.0; to: "padding_top"; offset: 15 0; }
+			}
+                        description { state: "landscape" 0.0;
+				visible: 1;
+                                inherit: "default";
+                                rel1 { relative: 0.0 0.0; to: "bg"; offset: 30 74; }
+                                rel2 { relative: 0.0 0.0; to: "bg"; offset: 30 74; }
+			}
+		}
+		part { name: "reset_box";
+                        type: SWALLOW;
+                        scale: 1;
+                        mouse_events: 1;
+                        description { state: "default" 0.0;
+                                min: 186 74;
+                                max: 186 74;
+                                align: 1.0 0.0;
+                                fixed: 1 1;
+                                visible: 1;
+                                rel1 { relative: 1.0 1.0; to: "padding_top"; offset:-74 0;}
+                                rel2 { relative: 1.0 1.0; to: "padding_top";offset:-74 0; }
+                        }
+                        description { state: "landscape" 0.0;
+                                  inherit: "default";
+                                  min: 170 74;
+                                  max: 170 74;
+				  align: 0.0 1.0;
+                                  rel1 { relative: 0.0 1.0; to: "bg"; offset:30 -55;}
+                                  rel2 { relative: 0.0 1.0; to: "bg";offset:30 -55; }
+                        }
+                }
+                part { name: "auto_box_label";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+                                visible: 1;
+                                min: 100 50;
+                                fixed: 1 1;
+                                text {
+                                        size: 45;
+                                        text: "";
+                                        align: 0.0 0.5;
+                                        min: 1 0;
+                                }
+                                align: 0.0 0.5;
+                                color: 0 0 0 255;
+                                rel1 { relative: 1.0 0.0; to_x: "auto_box"; to_y: "auto_box"; offset: 15 0;}
+                                rel2 { relative: 1.0 1.0; to_x: "bg"; to_y: "auto_box"; }
+			}
+		}
+                part {
+			name: "square_top";
+			mouse_events: 0;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				min: 0 25;
+                                align: 0.0 0.0;
+                                color: 0 0 0 0;
+				fixed: 0 1;
+                                rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "auto_box";}
+                                rel2 { relative: 1.0 1.0; to_x: "bg"; to_y: "auto_box";}
+			}
+                }
+                part {
+			name: "square_bg";
+			mouse_events: 0;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				min: 720 720;
+				max: 720 720;
+				fixed: 1 1;
+                                align: 0 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "square_top";}
+                                rel2 { relative: 1.0 1.0; to_x: "bg"; to_y: "square_top";}
+			}
+                        description { state: "landscape" 0.0;
+				visible: 1;
+                                inherit: "default";
+                                min: 530 530;
+                                max: 530 530;
+                                rel1 { relative: 209/844 9/594; to: "bg";}
+                                rel2 { relative: 1.0 1.0; to: "bg";}
+			}
+		}
+		part {
+		    name: "gengrid";
+		    mouse_events: 1;
+		    type: SWALLOW;
+		    scale: 1;
+		    description {
+	                state: "default" 0.0;
+	                visible: 1;
+	                min: 610 610;
+	                max: 610 610;
+		        fixed: 1 1;
+	                align: 0.5 0.5;
+			rel1 { relative: 0.0 0.0; to: "square_bg"; }
+			rel2 { relative: 1.0 1.0; to: "square_bg"; }
+		    }
+                    description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: 460 460;
+                                max: 460 460;
+		    }
+		}
+                part {
+		    name: "title_top";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+        	            state: "default" 0.0;
+        	            visible: 1;
+        	            min: 0 45;
+        	            fixed: 0 1;
+        	            align: 0 1;
+			    rel1 { relative: 0.0 0.0; to: "gengrid";}
+			    rel2 { relative: 1.0 0.0; to: "gengrid";}
+        	            color: 11 70 97 255;
+        	            text {
+        			        size: 28;
+        				min: 0 1;
+        				align: 0.5 0.0;
+        				text: "";
+        		    }
+		   }
+                   description { state: "landscape" 0.0;
+                            inherit: "default";
+                            min: 0 35;
+                            text {
+                                        size: 28;
+                                        min: 0 1;
+                                        align: 0.5 0.0;
+                                        text: "";
+                            }
+		   }
+		}
+		part {
+		    name: "title_bottom";
+		    mouse_events: 1;
+		    type: TEXT;
+		    scale: 1;
+		    description {
+        	            state: "default" 0.0;
+        	            visible: 1;
+        	            min: 0 45;
+        	            fixed: 0 1;
+        	            align: 0 0;
+			    rel1 { relative: 0.0 1.0; to: "gengrid";}
+			    rel2 { relative: 1.0 1.0; to: "gengrid";}
+        	            color: 11 70 97 255;
+        	            text {
+        				size: 28;
+        				min: 0 1;
+        				align: 0.5 1.0;
+        				text: "";
+        		    }
+		    }
+                    description { state: "landscape" 0.0;
+                            inherit: "default";
+                            min: 0 35;
+                            text {
+                                        size: 28;
+                                        min: 0 1;
+                                        align: 0.5 0.0;
+                                        text: "";
+                            }
+		    }
+		}
+		part { name: "title_left_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "gengrid";
+				rel2 { relative: 0.0 1.0; to: "gengrid"; }
+				min: 45 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				visible: 0;
+			}
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: 35 0;
+		        }
+		}
+		part {
+		        name: "title_left";
+		        mouse_events: 1;
+		        type: TEXT;
+		        scale: 1;
+		        description {
+        	                state: "default" 0.0;
+        	                fixed: 1 1;
+				rel1 { relative: 0.5 0.5; to: "title_left_area"; }
+				rel2 { relative: 0.5 0.5; to: "title_left_area"; }
+				map {
+					on: 1;
+					rotation { center: "title_left_area";
+						x: 0.0;
+						y: 0.0;
+						z: -90.0;
+					}
+				}
+        	                color: 11 70 97 255;
+        	                text {
+					size: 28;
+					min:      1 1;
+					align:    0.5 0.0;
+					text:     "";
+				}
+			}
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                text {
+                                        size: 28;
+                                        min: 1 1;
+                                        align: 0.5 0.0;
+                                        text: "";
+                                }
+		        }
+		}
+		part { name: "title_right_area";
+			mouse_events: 1;
+			type:RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "gengrid"; }
+				rel2.to: "gengrid";
+				min: 45 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				visible: 0;
+			}
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: 35 0;
+		        }
+		}
+		part {
+		        name: "title_right";
+		        mouse_events: 1;
+		        type: TEXT;
+		        scale: 1;
+		        description {
+        	                state: "default" 0.0;
+        	                fixed: 1 1;
+        	                rel1 { relative: 0.5 0.5; to: "title_right_area"; }
+        		        rel2 { relative: 0.5 0.5; to: "title_right_area"; }
+        			map {
+        			        on: 1;
+        				rotation { center: "title_right_area";
+        				        x: 0.0;
+        				        y: 0.0;
+        				        z: 90.0;
+        				}
+        			}
+        	                color: 11 70 97 255;
+        	                text {
+        			        size: 28;
+        			        min: 1 1;
+        			        align: 0.5 1.0;
+        			        text: "";
+        				}
+        			}
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                text {
+                                        size: 28;
+                                        min: 1 1;
+                                        align: 0.5 1.0;
+                                        text: "";
+                                }
+		        }
+		}
+	}
+        programs {
+                program {
+                        name : "set_landscape_mode";
+                        signal : "set_landscape_mode";
+                        source : "*";
+                        action : STATE_SET "landscape" 0.0;
+                        target : "square_bg";
+                        target : "gengrid";
+                        target : "square_bg";
+                        target : "auto_box";
+                        target : "title_top";
+                        target : "title_bottom";
+                        target : "title_right";
+                        target : "title_left";
+                        target : "title_left_area";
+                        target : "title_right_area";
+			target : "reset_box";
+                }
+                program {
+                        name : "set_protial_mode";
+                        signal : "set_protial_mode";
+                        source : "*";
+                        action : STATE_SET "default" 0.0;
+                        target : "square_bg";
+                        target : "gengrid";
+                        target : "square_bg";
+                        target : "auto_box";
+                        target : "title_top";
+                        target : "title_bottom";
+                        target : "title_right";
+                        target : "title_left";
+                        target : "title_left_area";
+                        target : "title_right_area";
+			target : "reset_box";
+                }
+        }
+}
+
+
+
+#define MS_EA_TEXT_COLOR	68 68 68 255
+
+#define MS_EA_PROGRESS_BG_W		12
+#define MS_EA_PROGRESS_BG_H		492
+#define MS_EA_HANDLER_W			60
+#define MS_EA_HANDLER_H			60
+#define IMG_EA_PROGRESS_BG		"T02_soundalive_progress_bg.png"
+#define IMG_EA_PROGRESS_BAR		"T02_soundalive_progress_bar.png"
+#define IMG_EA_HANDLER_NORMAL	"T02_soundalive_progress_handler.png"
+#define IMG_EA_HANDLER_PRESSED	"T02_soundalive_progress_handler_press.png"
+
+#define MS_ADVANCED_LEFT_EQ_W   720
+#define MS_ADVANCED_LEFT_EQ_H   550
+
+#define MS_ADVANCED_LEFT_EQ_LD_W   542
+#define MS_ADVANCED_LEFT_EQ_LD_H   452
+
+#undef _X
+#undef _Y
+#define _X(x)	((x)/MS_ADVANCED_LEFT_EQ_W)
+#define _Y(y)	((y)/MS_ADVANCED_LEFT_EQ_H)
+#define _X_LD(x)	((x)/MS_ADVANCED_LEFT_EQ_LD_W)
+#define _Y_LD(y)	((y)/MS_ADVANCED_LEFT_EQ_LD_H)
+
+#define MS_EA_TEXT_FIXED_SIZE 66 23
+
+group { name: "progress_layout";
+        parts {
+
+                part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+			}
+		}
+                part { name: "text_left_top";
+                        type: TEXT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(48) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(48+66) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_TEXT_FIXED_SIZE;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                text {
+                                        text: "10 dB";
+                                        size: 23;
+                                        align: 1.0 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "text_left_middle";
+                        type: TEXT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(48) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(48+66) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_TEXT_FIXED_SIZE;
+                                fixed: 1 1;
+                                align: 0.0 0.5;
+                                text {
+                                        text: "0 dB";
+                                        size: 23;
+                                        align: 1.0 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "text_left_bottom";
+                        type: TEXT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(0) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(48+66) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_TEXT_FIXED_SIZE;
+                                fixed: 1 1;
+                                align: 1.0 1.0;
+                                text { text: "-10 dB";
+                                        size: 23;
+                                        align: 1.0 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar1";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(152) 0.0; to_y: "bg"; }
+                                rel2 { relative: _X(152) 0.0 ; to_y: "progress_bottom"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                max: MS_EA_PROGRESS_BG_W MS_EA_PROGRESS_BG_H;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                        }
+                }
+                part { name: "progress_bottom";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0 1; to: "bg"; }
+                                rel2 { relative: 1 1; to: "bg"; }
+                                min: 0 58;
+                                fixed: 0 1;
+                                align: 0.0 1.0;
+                                visible: 0;
+                        }
+                }
+                part { name: "text_eq_bar1";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar1"; to_y: "bg"; }
+                                min: 60 30;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "60";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar2";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(238) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(238) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar2";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar2"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar2"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "150";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar3";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(314) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(314) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar3";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar3"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar3"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "400";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar4";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(390) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(390) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar4";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar4"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar4"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "1.1K";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar5";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(466) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(466) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar5";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar5"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar5"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "3.5K";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar6";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(542) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(542) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar6";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar6"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar6"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "8K";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+                part { name: "eq_custom_popup_value_bar7";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: _X(618) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                rel2 { relative: _X(618) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                                min: MS_EA_PROGRESS_BG_W 0;
+                                fixed: 1 0;
+                                align: 0.0 0.5;
+                        }
+                }
+                part { name: "text_eq_bar7";
+                        type: TEXT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                rel1 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar7"; to_y: "bg"; }
+                                rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar7"; to_y: "bg"; }
+                                min: 52 21;
+                                fixed: 1 1;
+                                align: 0.5 1.0;
+                                text {
+                                        text: "14K";
+                                        size: 23;
+                                        align: 0.5 0.5;
+                                }
+                                color: 59 59 59 255;
+                        }
+                }
+        }
+}
+
+group { name: "progress_layout_landscape";
+     parts {
+
+        part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+                                rel1 { relative: 0.0 0.0; }
+                                rel2 { relative: 1.0 1.0; }
+			}
+		}
+
+        part { name: "text_left_top";
+                type: TEXT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(41) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(41+66) 0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_TEXT_FIXED_SIZE;
+                        fixed: 1 1;
+                        align: 0.0 0.0;
+                        text {
+                                text: "10 dB";
+                                size: 23;
+                                align: 1.0 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+
+        part { name: "text_left_middle";
+                type: TEXT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(41) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(41+66) 0.5; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_TEXT_FIXED_SIZE;
+                        fixed: 1 1;
+                        align: 0.0 0.5;
+                        text {
+                                text: "0 dB";
+                                size: 23;
+                                align: 1.0 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+
+        part { name: "text_left_bottom";
+                type: TEXT;
+                scale: 1;
+                mouse_events: 0;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(0) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(41+66) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_TEXT_FIXED_SIZE;
+                        fixed: 1 1;
+                        align: 1.0 1.0;
+                        text {
+                                text: "-10 dB";
+                                size: 23;
+                                align: 1.0 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+
+        part { name: "eq_custom_popup_value_bar1";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(134) 0.0; to_y: "bg"; }
+                        rel2 { relative: _X_LD(134) 0.0; to_y: "progress_bottom"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        max: MS_EA_PROGRESS_BG_W 406;
+                        fixed: 1 1;
+                        align: 0.0 0.0;
+                }
+        }
+        part { name: "progress_bottom";
+                type: RECT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0 1; to: "bg"; }
+                        rel2 { relative: 1 1; to: "bg"; }
+                        min: 0 46;
+                        fixed: 0 1;
+                        align: 0.0 1.0;
+                        visible: 0;
+                }
+        }
+        part { name: "text_eq_bar1";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar1"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar1"; to_y: "progress_bottom"; }
+                        min: 60 30;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "60";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar2";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(196) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(196) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar2";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar2"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar2"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "150";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar3";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(258) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(258) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar3";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar3"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar3"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "400";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar4";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(320) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(320) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar4";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar4"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar4"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "1.1K";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar5";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(382) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(382) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar5";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar5"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar5"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "3.5K";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar6";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(444) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(444) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar6";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar6"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar6"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "8K";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+        part { name: "eq_custom_popup_value_bar7";
+                type: SWALLOW;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: _X_LD(506) 0.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        rel2 { relative: _X_LD(506) 1.0; to_x: "bg"; to_y: "eq_custom_popup_value_bar1"; }
+                        min: MS_EA_PROGRESS_BG_W 0;
+                        fixed: 1 0;
+                        align: 0.0 0.5;
+                }
+        }
+        part { name: "text_eq_bar7";
+                type: TEXT;
+                scale: 1;
+                description { state: "default" 0.0;
+                        rel1 { relative: 0.5 0.0; to_x: "eq_custom_popup_value_bar7"; to_y: "progress_bottom"; }
+                        rel2 { relative: 0.5 1.0; to_x: "eq_custom_popup_value_bar7"; to_y: "progress_bottom"; }
+                        min: 52 21;
+                        fixed: 1 1;
+                        align: 0.5 1.0;
+                        text {
+                                text: "14K";
+                                size: 23;
+                                align: 0.5 0.5;
+                        }
+                        color: 59 59 59 255;
+                }
+        }
+    }
+}
+
+
+group { name: "advanced_layout";
+        parts {
+                part { name: "bg";
+                        type: RECT;
+                        scale: 1;
+                        mouse_events: 0;
+                        description { state: "default" 0.0;
+                                visible: 0;
+                        }
+                }
+                part { name: "right_top";
+                        type: RECT;
+                        scale: 1;
+                        mouse_events: 1;
+                        description { state: "default" 0.0;
+                                min: 64 21;
+                                align: 1.0 0.0;
+                                fixed: 1 1;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 1.0 0.0; to: "bg"; }
+                                rel2 { relative: 1.0 0.0; to: "bg"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: 47 71;
+                                max: 47 71;
+                        }
+                }
+                part { name: "reset_box";
+                        type: SWALLOW;
+                        scale: 1;
+                        mouse_events: 1;
+                        description { state: "default" 0.0;
+                                min: 186 74;
+                                max: 186 74;
+                                align: 1.0 0.0;
+                                fixed: 1 1;
+                                visible: 1;
+                                rel1 { relative: 0.0 1.0; to: "right_top"; }
+                                rel2 { relative: 0.0 1.0; to: "right_top"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: 202 74;
+                                max: 202 74;
+                        }
+                }
+                part { name: "progress_top";
+                        type: RECT;
+                        scale: 1;
+                        mouse_events: 1;
+                        description { state: "default" 0.0;
+                                min: 0 34;
+                                align: 0.0 0.0;
+                                fixed: 0 1;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "reset_box"; }
+                                rel2 { relative: 1.0 1.0; to_x: "bg"; to_y: "reset_box"; }
+                        }
+                }
+                part { name: "progress_area";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: MS_ADVANCED_LEFT_EQ_W MS_ADVANCED_LEFT_EQ_H;
+                                max: MS_ADVANCED_LEFT_EQ_W MS_ADVANCED_LEFT_EQ_H;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                visible: 1;
+                                rel1 { relative: 0.0 1.0; to: "progress_top"; }
+                                rel2 { relative: 1.0 1.0; to: "progress_top"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                min: MS_ADVANCED_LEFT_EQ_LD_W MS_ADVANCED_LEFT_EQ_LD_H;
+                                max: MS_ADVANCED_LEFT_EQ_LD_W MS_ADVANCED_LEFT_EQ_LD_H;
+                                rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "right_top"; }
+                                rel2 { relative: 1.0 1.0; to: "bg"; }
+                        }
+                }
+                part { name: "advanced_effect_area";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                align: 0.0 0.0;
+                                rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "progress_area";}
+                                rel2 { relative: 1.0 1.0; to: "bg"; }
+                                color: 0 0 0 0;
+                        }
+                }
+                part { name: "effect_box_top";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 0 52;
+                                fixed: 0 1;
+                                align: 0.0 0.0;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to: "progress_area"; }
+                                rel2 { relative: 1.0 1.0; to: "progress_area"; }
+                         }
+                }
+                part { name: "effect_box";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 610 102;
+                                max: 610 102;
+                                fixed: 1 1;
+                                align: 0.5 0.0;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to: "effect_box_top"; }
+                                rel2 { relative: 1.0 1.0; to: "effect_box_top"; }
+                         }
+                }
+                part { name: "threed_box";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 202 102;
+                                max: 202 102;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                visible: 1;
+                                rel1 { relative: 0.0 0.0; to: "effect_box"; }
+                                rel2 { relative: 0.0 1.0; to: "effect_box"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                rel1 { relative: 0.0 1.0; to: "reset_box"; offset: 0 20; }
+                                rel2 { relative: 1.0 1.0; to: "reset_box"; offset: 0 20; }
+                        }
+                }
+                part { name: "gap_1";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 2 86;
+                                max: 2 86;
+                                fixed: 1 1;
+                                align: 0.0 0.5;
+                                visible: 1;
+                                color: 0 0 0 255;
+                                rel1 { relative: 1.0 0.0; to: "threed_box"; }
+                                rel2 { relative: 1.0 1.0; to: "threed_box"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                min: 0 20;
+                                fixed: 0 1;
+                                align: 0.0 0.0;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to: "threed_box"; }
+                                rel2 { relative: 1.0 1.0; to: "threed_box"; }
+                        }
+                }
+                part { name: "bass_box";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 202 102;
+                                max: 202 102;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                visible: 1;
+                                rel1 { relative: 1.0 0.0; to_x: "gap_1"; to_y: "effect_box"; }
+                                rel2 { relative: 1.0 1.0; to_x: "gap_1"; to_y: "effect_box"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                rel1 { relative: 0.0 1.0; to: "gap_1"; }
+                                rel2 { relative: 1.0 1.0; to: "gap_1"; }
+                        }
+                }
+                part { name: "gap_2";
+                        type: RECT;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 2 86;
+                                max: 2 86;
+                                fixed: 1 1;
+                                align: 0.0 0.5;
+                                visible: 1;
+                                color: 0 0 0 255;
+                                rel1 { relative: 1.0 0.0; to: "bass_box"; }
+                                rel2 { relative: 1.0 1.0; to: "bass_box"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                min: 0 20;
+                                fixed: 0 1;
+                                align: 0.0 0.0;
+                                visible: 0;
+                                color: 0 0 0 0;
+                                rel1 { relative: 0.0 1.0; to: "bass_box"; }
+                                rel2 { relative: 1.0 1.0; to: "bass_box"; }
+                        }
+                }
+                part { name: "clarity_box";
+                        type: SWALLOW;
+                        scale: 1;
+                        description { state: "default" 0.0;
+                                min: 202 102;
+                                max: 202 102;
+                                fixed: 1 1;
+                                align: 0.0 0.0;
+                                visible: 1;
+                                rel1 { relative: 1.0 0.0; to_x: "gap_2"; to_y: "effect_box"; }
+                                rel2 { relative: 1.0 1.0; to_x: "gap_2"; to_y: "effect_box"; }
+                        }
+                        description { state: "landscape" 0.0;
+                                inherit: "default";
+                                rel1 { relative: 0.0 1.0; to: "gap_2"; }
+                                rel2 { relative: 1.0 1.0; to: "gap_2"; }
+                        }
+                }
+        }
+
+        programs {
+                program {
+                        name : "set_landscape_mode";
+                        signal : "set_landscape_mode";
+                        source : "*";
+                        action : STATE_SET "landscape" 0.0;
+                        target : "right_top";
+                        target : "reset_box";
+                        target : "threed_box";
+                        target : "gap_1";
+                        target : "bass_box";
+                        target : "gap_2";
+                        target : "clarity_box";
+                        target : "progress_area";
+                }
+                program {
+                        name : "set_protial_mode";
+                        signal : "set_protial_mode";
+                        source : "*";
+                        action : STATE_SET "default" 0.0;
+                        target : "right_top";
+                        target : "reset_box";
+                        target : "threed_box";
+                        target : "gap_1";
+                        target : "bass_box";
+                        target : "gap_2";
+                        target : "clarity_box";
+                        target : "progress_area";
+                }
+        }
+}
+
+
+group { name: "ms_effect_custom_popup_value_bar";
+	images {
+		image: IMG_EA_PROGRESS_BG COMP;
+		image: IMG_EA_PROGRESS_BAR COMP;
+		image: IMG_EA_HANDLER_NORMAL COMP;
+		image: IMG_EA_HANDLER_PRESSED COMP;
+	}
+
+	parts {
+		part { name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				visible: 0;
+			}
+		}
+		part { name: "progress_bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0; to: "bg"; }
+				rel2 { relative: 0.5 1; to: "bg"; }
+				image { normal: IMG_EA_PROGRESS_BG; border: 0 0 8 8; }
+				min: MS_EA_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+		part { name: "progress_bar";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0 0.5; to_x: "progress_bg"; to_y: "progressbar_control"; }
+				rel2 { relative: 1 1; to: "progress_bg"; }
+				image { normal: IMG_EA_PROGRESS_BAR; border: 0 0 8 8; }
+				min: MS_EA_PROGRESS_BG_W 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+		part { name: "progress_bar_confine";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "progress_bg"; offset: 0 (MS_EA_HANDLER_H/-2); }
+				rel2 { relative: 0.5 1.0; to: "progress_bg"; offset: 0 (MS_EA_HANDLER_H/2); }
+				min: MS_EA_HANDLER_W 0;
+				fixed: 1 0;
+				align: 0.5 0.0;
+				visible: 0;
+			}
+		}
+		part { name: "progressbar_control";
+			type: IMAGE;
+			scale: 1;
+                        mouse_events: 0;
+			description { state: "default" 0.0;
+				image.normal: IMG_EA_HANDLER_NORMAL;
+				min: MS_EA_HANDLER_W MS_EA_HANDLER_H;
+				fixed: 1 1;
+			}
+			description { state: "pressed" 0.0;
+				inherit: "default" 0.0;
+				image.normal: IMG_EA_HANDLER_PRESSED;
+			}
+			dragable { confine: "progress_bar_confine";
+				x: 0 0 0;
+				y: 1 1 0;
+			}
+		}
+		part { name: "touch_area";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+                        repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1 { to: "progress_bar_confine"; offset: -10 0; }
+				rel2 { to: "progress_bar_confine"; offset: 10 0; }
+				color: 0 0 0 0;
+			}
+		}
+		part { name: "disabler";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "touch_area";
+				rel2.to: "touch_area";
+				color: 0 0 0 0;
+				visible: 0;
+			}
+			description { state: "disabled" 0.0;
+				inherit: "default" 0.0;
+				visible: 1;
+			}
+		}
+	}
+
+	programs {
+		program { name: "progressbar_control_down";
+			source: "touch_area";
+			signal: "mouse,down,1";
+			action: STATE_SET "pressed" 0.0;
+			target: "progressbar_control";
+		}
+		program { name: "progressbar_control_up";
+			source: "touch_area";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "progressbar_control";
+		}
+		program { name: "progressbar_set_disabled";
+			source: "*";
+			signal: "sig_set_disabled";
+			action: STATE_SET "disabled" 0.0;
+			target: "disabler";
+		}
+		program { name: "progressbar_set_enabled";
+			source: "*";
+			signal: "sig_set_enabled";
+			action: STATE_SET "default" 0.0;
+			target: "disabler";
+		}
+	}
+}
+
+
+} // end collection
+

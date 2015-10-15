@@ -1,0 +1,2191 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define IMG_ARTIST_LIST_MORE_BTN_NORMAL		"button/T02_artist_list_more.png"
+#define IMG_ARTIST_LIST_MORE_BTN_PRESSED	"button/T02_artist_list_more_press.png"
+
+#define IMG_PLAYER_VIEW_OPTION_BTN  		"player-view/T02_control_circle_button_03.png"
+#define IMG_PLAYER_VIEW_OPTION_BTN_PRESS  	"player-view/T02_control_circle_button_03_press.png"
+
+/******************  lite path   ****************/
+#define IMG_PLAYER_VIEW_ICON_PATH		"lite/Icon/"
+#define IMG_PLAYER_VIEW_BUTTON_PATH		"lite/Button/"
+
+#define IMG_PLAYER_VIEW_OPTION_VOLUME		IMG_PLAYER_VIEW_ICON_PATH"play_icon_vol.png"
+#define IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON	IMG_PLAYER_VIEW_ICON_PATH"play_icon_shuffle.png"
+#define IMG_PLAYER_VIEW_OPTION_SHUFFLE_OFF	IMG_PLAYER_VIEW_ICON_PATH"play_icon_shuffle_off.png"
+#define IMG_PLAYER_VIEW_OPTION_REP_A		IMG_PLAYER_VIEW_ICON_PATH"play_icon_rep_a.png"
+#define IMG_PLAYER_VIEW_OPTION_REP_1		IMG_PLAYER_VIEW_ICON_PATH"play_icon_rep_one.png"
+#define IMG_PLAYER_VIEW_OPTION_REP_ALL		IMG_PLAYER_VIEW_ICON_PATH"play_icon_rep_all.png"
+#define IMG_PLAYER_VIEW_OPTION_INFO		IMG_PLAYER_VIEW_ICON_PATH"play_icon_list.png"
+//add favourite begin
+#define IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON "player-view/T02_option_favorite_on.png"
+#define IMG_PLAYER_VIEW_OPTION_FAVOURITE_OFF "player-view/T02_option_favorite_off.png"
+
+//add like begin
+#define IMG_PLAYER_VIEW_OPTION_LIKE_ON "player-view/T02_option_favorite_on.png"
+#define IMG_PLAYER_VIEW_OPTION_LIKE_OFF "player-view/T02_option_favorite_off.png"
+#define IMG_PLAYER_VIEW_OPTION_LIKE_ON_PRESS "player-view/T02_option_like_press.png"
+//add block begin
+#define IMG_PLAYER_VIEW_OPTION_BLOCK_ON "player-view/T02_option_blocking_on.png"
+#define IMG_PLAYER_VIEW_OPTION_BLOCK_OFF "player-view/T02_option_blocking_dim.png"
+#define IMG_PLAYER_VIEW_OPTION_BLOCK_ON_PRESS "player-view/T02_option_blocking_press.png"
+
+//add favorite radio
+#define IMG_PLAYER_VIEW_TITLE_FAVORITE_RADIO_ON "player-view/T02_radio_favorite_on.png"
+#define IMG_PLAYER_VIEW_TITLE_FAVORITE_RADIO_OFF "player-view/T02_radio_favorite_off.png"
+
+// control img
+#define IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01		IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_01.png"
+#define IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01_CIRCLE	IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_01_ef.png"
+#define IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02		IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_02.png"
+#define IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02_CIRCLE	IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_02_ef.png"
+#define IMG_PLAYER_VIEW_CONTROL_PREVIOUS		IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_prev.png"
+#define IMG_PLAYER_VIEW_CONTROL_PLAY			IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_play.png"
+#define IMG_PLAYER_VIEW_CONTROL_PAUSE			IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_pause.png"
+#define IMG_PLAYER_VIEW_CONTROL_NEXT			IMG_PLAYER_VIEW_BUTTON_PATH"full_player_button_next.png"
+#define IMG_PLAYER_VIEW_CONTROL_VOLUME			IMG_PLAYER_VIEW_ICON_PATH"play_icon_vol.png"
+#define IMG_PLAYER_VIEW_CONTROL_VOLUME_OFF		IMG_PLAYER_VIEW_ICON_PATH"play_icon_vol_off.png"
+#define IMG_PLAYER_VIEW_CONTROL_QUEUE_ON		IMG_PLAYER_VIEW_ICON_PATH"play_icon_list.png"
+#define IMG_PLAYER_VIEW_CONTROL_PLUS "T02_icon_volume_control_plus.png"
+#define IMG_PLAYER_VIEW_CONTROL_PLUS_PRESS "T02_icon_volume_control_plus_press.png"
+#define IMG_PLAYER_VIEW_CONTROL_MINUS "T02_icon_volume_control_minus.png"
+#define IMG_PLAYER_VIEW_CONTROL_MINUS_PRESS "T02_icon_volume_control_minus_press.png"
+#define IMG_PLAYER_VIEW_CONTROL_MUTE "T02_icon_volume_control_mute.png"
+#define IMG_PLAYER_VIEW_CONTROL_MUTE_PRESS "T02_icon_volume_control_mute_press.png"
+
+#define BUTTON_STATE_ENABLED 0
+#define BUTTON_STATE_DISABLED 1
+
+images {
+	image: IMG_ARTIST_LIST_MORE_BTN_NORMAL COMP;
+	image: IMG_ARTIST_LIST_MORE_BTN_PRESSED COMP;
+	image: IMG_PLAYER_VIEW_OPTION_BTN COMP;
+	image: IMG_PLAYER_VIEW_OPTION_BTN_PRESS COMP;
+	image: IMG_PLAYER_VIEW_OPTION_VOLUME COMP;
+	image: IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON COMP;
+	image: IMG_PLAYER_VIEW_OPTION_SHUFFLE_OFF COMP;
+	image: IMG_PLAYER_VIEW_OPTION_REP_A COMP;
+	image: IMG_PLAYER_VIEW_OPTION_REP_1 COMP;
+	image: IMG_PLAYER_VIEW_OPTION_REP_ALL COMP;
+	image: IMG_PLAYER_VIEW_OPTION_INFO COMP;
+	image: IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON COMP;
+	image: IMG_PLAYER_VIEW_OPTION_FAVOURITE_OFF COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01 COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01_CIRCLE COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02 COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02_CIRCLE COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_PREVIOUS COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_PLAY COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_PAUSE COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_NEXT COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_VOLUME COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_VOLUME_OFF COMP;
+	image: IMG_PLAYER_VIEW_CONTROL_QUEUE_ON COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_PLUS COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_PLUS_PRESS COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_MINUS COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_MINUS_PRESS COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_MUTE COMP;
+        image: IMG_PLAYER_VIEW_CONTROL_MUTE_PRESS COMP;
+
+	image: IMG_PLAYER_VIEW_OPTION_LIKE_ON COMP;
+	image: IMG_PLAYER_VIEW_OPTION_LIKE_OFF COMP;
+	image: IMG_PLAYER_VIEW_OPTION_LIKE_ON_PRESS COMP;
+	image: IMG_PLAYER_VIEW_OPTION_BLOCK_ON COMP;
+	image: IMG_PLAYER_VIEW_OPTION_BLOCK_OFF COMP;
+	image: IMG_PLAYER_VIEW_OPTION_BLOCK_ON_PRESS COMP;
+
+	image: IMG_PLAYER_VIEW_TITLE_FAVORITE_RADIO_ON COMP;
+	image: IMG_PLAYER_VIEW_TITLE_FAVORITE_RADIO_OFF COMP;
+}
+
+#define MP_PLAYER_BUTTON_NOSOUND_STYLE(__name,__bg_normal,__bg_circle,__normal) \
+group { name: "elm/button/base/music/"__name; \
+	parts { \
+		  part { \
+			  name: __name; \
+			  mouse_events: 0; \
+			  type: RECT; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 0; \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+				  } \
+				  color: 255 255 255 255; \
+			  } \
+			  description { state: "invisible" 0.0; \
+				  inherit: "default" 0.0; \
+				  visible: 0; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_bg"; \
+			  mouse_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __bg_normal; } \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+				  color: 255 255 255 255; \
+			  } \
+			  description { state: "press" 0.0; \
+				  inherit: "default" 0.0; \
+				  color: 66 162 207 255; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_bg_circle"; \
+			  mouse_events: 1; \
+			  repeat_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __bg_circle; } \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+				  color: 255 255 255 255; \
+			  } \
+			  description { state: "press" 0.0; \
+				  inherit: "default" 0.0; \
+				  color: 66 162 207 255; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_normal"; \
+			  mouse_events: 1; \
+			  repeat_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __normal; } \
+				  color: 8 8 8 255; \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+			  } \
+		  } \
+	  } \
+	  programs{ \
+		  program{\
+			  name: __name"_after_down"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,down,1"; \
+			  action: STATE_SET "press" 0.0; \
+			  target: __name"_bg"; \
+			  target: __name"_bg_circle"; \
+			  transition: ACCELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_down"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,down,1"; \
+			  after:  __name"_after_down"; \
+			  transition: ACCELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_up"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,up,1"; \
+			  action: STATE_SET "default" 0.0; \
+			  target: __name"_bg"; \
+			  target: __name"_bg_circle"; \
+			  transition: DECELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_clicked"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,clicked,1"; \
+			  action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		  } \
+	  } \
+}
+
+#define MP_PLAYER_BUTTON_STYLE_PREV_NEXT(__name,__normal) \
+group { name: "elm/button/base/music/"__name; \
+      parts { \
+      		part { \
+			name: __name; \
+			mouse_events: 0; \
+			type: RECT; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 0; \
+				rel1 { \
+					relative: 0.0 0.0; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+				} \
+				color: 0 0 0 0; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part { \
+			name: __name"_normal"; \
+			mouse_events: 1; \
+			repeat_events: 1; \
+			type: IMAGE; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 1; \
+				image { normal: __normal; } \
+				color: 255 255 255 255; \
+				rel1 { \
+					relative: 0.0 0.0; \
+					to: __name; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+					to: __name; \
+				} \
+			} \
+			description { \
+				state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				color: 66 162 207 255; \
+			} \
+		} \
+	} \
+	programs{ \
+		program{\
+			name: __name"_after_down"; \
+			source: __name"_normal"; \
+			signal: "mouse,down,1"; \
+			action: STATE_SET "press" 0.0; \
+			target: __name"_normal"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_down"; \
+			source: __name"_normal"; \
+			signal: "mouse,down,1"; \
+			after:  __name"_after_down"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_after_up"; \
+			action: PLAY_SAMPLE "button-pressed" 1.0; \
+		} \
+		program { \
+			name: __name"_up"; \
+			source: __name"_normal"; \
+			signal: "mouse,up,1"; \
+			action: STATE_SET "default" 0.0; \
+			target: __name"_normal"; \
+			after: __name"_after_up"; \
+			transition: DECELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_clicked"; \
+			source: __name"_normal"; \
+			signal: "mouse,clicked,1"; \
+			action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		} \
+	} \
+}
+
+
+
+#define MP_PLAYER_BUTTON_STYLE(__name,__bg_normal,__bg_circle,__normal) \
+group { name: "elm/button/base/music/"__name; \
+      parts { \
+		part { \
+			name: __name; \
+			mouse_events: 0; \
+			type: RECT; \
+			scale: 0; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 0; \
+				rel1 { \
+					relative: 0.0 0.0; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+				} \
+				color: 0 0 0 0; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part { \
+			name: __name"_bg"; \
+			mouse_events: 1; \
+			type: IMAGE; \
+			scale: 0; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 1; \
+				image { normal: __bg_normal; } \
+				rel1 { \
+					relative: 0.0 0.0; \
+					to: __name; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+					to: __name; \
+				} \
+				color: 0 0 0 153; \
+			} \
+			description { state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				color: 66 162 207 255; \
+			} \
+		} \
+		part { \
+			name: __name"_bg_circle"; \
+			mouse_events: 1; \
+			repeat_events: 1; \
+			type: IMAGE; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 1; \
+				image { normal: __bg_circle; } \
+				rel1 { \
+					relative: 0.0 0.0; \
+					to: __name; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+					to: __name; \
+				} \
+				color: 255 255 255 128; \
+			} \
+			description { state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				color: 66 162 207 255; \
+			} \
+		} \
+		part { \
+			name: __name"_normal"; \
+			mouse_events: 1; \
+			repeat_events: 1; \
+			type: IMAGE; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 1; \
+				image { normal: __normal; } \
+				color: 255 255 255 255; \
+				rel1 { \
+					relative: 0.0 0.0; \
+					to: __name; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+					to: __name; \
+				} \
+			} \
+		} \
+	} \
+	programs{ \
+		program{\
+			name: __name"_after_down"; \
+			source: __name"_bg"; \
+			signal: "mouse,down,1"; \
+			action: STATE_SET "press" 0.0; \
+			target: __name"_bg"; \
+			target: __name"_bg_circle"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_down"; \
+			source: __name"_bg"; \
+			signal: "mouse,down,1"; \
+			after:  __name"_after_down"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_after_up"; \
+			action: PLAY_SAMPLE "button-pressed" 1.0; \
+		} \
+		program { \
+			name: __name"_up"; \
+			source: __name"_bg"; \
+			signal: "mouse,up,1"; \
+			action: STATE_SET "default" 0.0; \
+			target: __name"_bg"; \
+			target: __name"_bg_circle"; \
+			after: __name"_after_up"; \
+			transition: DECELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_clicked"; \
+			source: __name"_bg"; \
+			signal: "mouse,clicked,1"; \
+			action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		} \
+	} \
+}
+
+#define MP_PLAYER_BUTTON_PLAY_STYLE(__name,__bg_normal,__bg_circle,__normal) \
+group { name: "elm/button/base/music/"__name; \
+	parts { \
+		  part { \
+			  name: __name; \
+			  mouse_events: 0; \
+			  type: RECT; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 0; \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+				  } \
+				  color: 0 0 0 0; \
+			  } \
+			  description { state: "invisible" 0.0; \
+				  inherit: "default" 0.0; \
+				  visible: 0; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_bg"; \
+			  mouse_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __bg_normal; } \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+				  color: 255 255 255 255; \
+			  } \
+			  description { state: "press" 0.0; \
+				  inherit: "default" 0.0; \
+				  color: 66 162 207 255; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_bg_circle"; \
+			  mouse_events: 1; \
+			  repeat_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __bg_circle; } \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+				  color: 255 255 255 255; \
+			  } \
+			  description { state: "press" 0.0; \
+				  inherit: "default" 0.0; \
+				  color: 66 162 207 255; \
+			  } \
+		  } \
+		  part { \
+			  name: __name"_normal"; \
+			  mouse_events: 1; \
+			  repeat_events: 1; \
+			  type: IMAGE; \
+			  scale: 1; \
+			  description { \
+				  state: "default" 0.0; \
+				  align: 0.0 0.0; \
+				  visible: 1; \
+				  image { normal: __normal; } \
+				  color: 8 8 8 255; \
+				  rel1 { \
+					  relative: 0.0 0.0; \
+					  to: __name; \
+				  } \
+				  rel2 { \
+					  relative: 1.0 1.0; \
+					  to: __name; \
+				  } \
+			  } \
+		  } \
+	  } \
+	  programs{ \
+		  program{\
+			  name: __name"_after_down"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,down,1"; \
+			  action: STATE_SET "press" 0.0; \
+			  target: __name"_bg"; \
+			  target: __name"_bg_circle"; \
+			  transition: ACCELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_down"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,down,1"; \
+			  after:  __name"_after_down"; \
+			  transition: ACCELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_after_up"; \
+			  action: PLAY_SAMPLE "button-pressed" 1.0; \
+		  } \
+		  program { \
+			  name: __name"_up"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,up,1"; \
+			  action: STATE_SET "default" 0.0; \
+			  target: __name"_bg"; \
+			  target: __name"_bg_circle"; \
+			  after: __name"_after_up"; \
+			  transition: DECELERATE 0.02;\
+		  } \
+		  program { \
+			  name: __name"_clicked"; \
+			  source: __name"_bg"; \
+			  signal: "mouse,clicked,1"; \
+			  action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		  } \
+	  } \
+}
+
+#define MP_PLAYER_BUTTON_NO_BG_STYLE(__name,__normal,__press_color_red_component,__press_color_green_component,__press_color_blue_component,__press_color_alpha_component) \
+group { name: "elm/button/base/music/"__name; \
+      parts { \
+		part { \
+			name: __name"_bg"; \
+			mouse_events: 0; \
+			type: RECT; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 0; \
+				rel1 { \
+					relative: 0.0 0.0; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+				} \
+				color: 0 0 0 0; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part { \
+			name: __name; \
+			type: IMAGE; \
+			mouse_events: 1; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0 0; \
+				visible:1; \
+				image { normal: __normal; } \
+				rel1 { \
+					relative: 0 0; \
+					to: __name"_bg"; \
+				} \
+				rel2 { \
+					relative: 1 1; \
+					to: __name"_bg"; \
+				} \
+			} \
+			description { \
+				state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				color: __press_color_red_component __press_color_green_component __press_color_blue_component __press_color_alpha_component; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+	} \
+	programs{ \
+		program{\
+			name: __name"_after_down"; \
+			source: __name; \
+			signal: "mouse,down,1"; \
+			action: STATE_SET "press" 0.0; \
+			target: __name"_bg"; \
+			target: __name; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_down"; \
+			source: __name; \
+			signal: "mouse,down,1"; \
+			after:  __name"_after_down"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_after_up"; \
+			action: PLAY_SAMPLE "button-pressed" 1.0; \
+		} \
+		program { \
+			name: __name"_up"; \
+			source: __name; \
+			signal: "mouse,up,1"; \
+			action: STATE_SET "default" 0.0; \
+			target: __name"_bg"; \
+			target: __name; \
+			after: __name"_after_up"; \
+			transition: DECELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_clicked"; \
+			source: __name; \
+			signal: "mouse,clicked,1"; \
+			action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		} \
+	} \
+}
+#define MP_PLAYER_BUTTON_NO_BG_STYLE_FAVOUR(__name,__normal,__press,__press_color_red_component,__press_color_green_component,__press_color_blue_component,__press_color_alpha_component) \
+group { name: "elm/button/base/music/"__name; \
+      parts { \
+		part { \
+			name: __name"_bg"; \
+			mouse_events: 0; \
+			type: RECT; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 0; \
+				rel1 { \
+					relative: 0.0 0.0; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+				} \
+				color: 0 0 0 0; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part { \
+			name: __name; \
+			type: IMAGE; \
+			mouse_events: 1; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0 0; \
+				visible:1; \
+				image { normal: __normal; } \
+				rel1 { \
+					relative: 0 0; \
+					to: __name"_bg"; \
+				} \
+				rel2 { \
+					relative: 1 1; \
+					to: __name"_bg"; \
+				} \
+			} \
+			description { \
+				state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				image { normal: __press; }\
+				color: __press_color_red_component __press_color_green_component __press_color_blue_component __press_color_alpha_component; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+	} \
+	programs{ \
+		program{\
+			name: __name"_after_down"; \
+			source: __name; \
+			signal: "mouse,down,1"; \
+			action: STATE_SET "press" 0.0; \
+			target: __name"_bg"; \
+			target: __name; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_down"; \
+			source: __name; \
+			signal: "mouse,down,1"; \
+			after:  __name"_after_down"; \
+			transition: ACCELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_after_up"; \
+			action: PLAY_SAMPLE "button-pressed" 1.0; \
+		} \
+		program { \
+			name: __name"_up"; \
+			source: __name; \
+			signal: "mouse,up,1"; \
+			action: STATE_SET "default" 0.0; \
+			target: __name"_bg"; \
+			target: __name; \
+			after: __name"_after_up"; \
+			transition: DECELERATE 0.02;\
+		} \
+		program { \
+			name: __name"_clicked"; \
+			source: __name; \
+			signal: "mouse,clicked,1"; \
+			action: SIGNAL_EMIT __name"_clicked" 0.0; \
+		} \
+	} \
+}
+
+/*
+MP_PLAYER_BUTTON_STYLE("volume", IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_VOLUME, IMG_PLAYER_VIEW_OPTION_VOLUME_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("shuffle_on", IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON, IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("shuffle_off", IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_SHUFFLE_OFF, IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("rep_A",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_REP_A, IMG_PLAYER_VIEW_OPTION_REP_A_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("rep_1",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_REP_1, IMG_PLAYER_VIEW_OPTION_REP_1_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("rep_all",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_REP_ALL, IMG_PLAYER_VIEW_OPTION_REP_ALL_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("info",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_INFO, IMG_PLAYER_VIEW_OPTION_INFO_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("favourite_on",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON, IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON_PRESS, 90)
+MP_PLAYER_BUTTON_STYLE("favourite_off",  IMG_PLAYER_VIEW_OPTION_BTN, IMG_PLAYER_VIEW_OPTION_BTN_PRESS, IMG_PLAYER_VIEW_OPTION_FAVOURITE_OFF, IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON_PRESS, 90)
+*/
+
+MP_PLAYER_BUTTON_NO_BG_STYLE("shuffle_on", IMG_PLAYER_VIEW_OPTION_SHUFFLE_ON, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("shuffle_off", IMG_PLAYER_VIEW_OPTION_SHUFFLE_OFF, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("rep_A", IMG_PLAYER_VIEW_OPTION_REP_A, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("rep_1", IMG_PLAYER_VIEW_OPTION_REP_1, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("rep_all", IMG_PLAYER_VIEW_OPTION_REP_ALL, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE_FAVOUR("favourite_on", IMG_PLAYER_VIEW_OPTION_FAVOURITE_ON,IMG_PLAYER_VIEW_OPTION_FAVOURITE_OFF, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("favourite_off", IMG_PLAYER_VIEW_OPTION_FAVOURITE_OFF, 0, 151, 232, 255)
+
+MP_PLAYER_BUTTON_NO_BG_STYLE("like_on", IMG_PLAYER_VIEW_OPTION_LIKE_ON, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("like_off", IMG_PLAYER_VIEW_OPTION_LIKE_OFF, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("block_on", IMG_PLAYER_VIEW_OPTION_BLOCK_ON, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("block_off", IMG_PLAYER_VIEW_OPTION_BLOCK_OFF, 0, 151, 232, 255)
+
+MP_PLAYER_BUTTON_NO_BG_STYLE("control_volume", IMG_PLAYER_VIEW_CONTROL_VOLUME, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("control_volume_mute", IMG_PLAYER_VIEW_CONTROL_VOLUME_OFF, 0, 151, 232, 255)
+
+MP_PLAYER_BUTTON_NO_BG_STYLE("control_playlist_queue", IMG_PLAYER_VIEW_CONTROL_QUEUE_ON, 0, 151, 232, 255)
+
+MP_PLAYER_BUTTON_NO_BG_STYLE("nearby_plus", IMG_PLAYER_VIEW_CONTROL_PLUS, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("nearby_minus", IMG_PLAYER_VIEW_CONTROL_MINUS, 0, 151, 232, 255)
+MP_PLAYER_BUTTON_NO_BG_STYLE("nearby_mute", IMG_PLAYER_VIEW_CONTROL_MUTE, 0, 151, 232, 255)
+
+MP_PLAYER_BUTTON_STYLE_PREV_NEXT("control_previous",IMG_PLAYER_VIEW_CONTROL_PREVIOUS)
+MP_PLAYER_BUTTON_STYLE_PREV_NEXT("control_next",IMG_PLAYER_VIEW_CONTROL_NEXT)
+MP_PLAYER_BUTTON_PLAY_STYLE("control_play", IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02, IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02_CIRCLE,
+			IMG_PLAYER_VIEW_CONTROL_PAUSE)
+MP_PLAYER_BUTTON_NOSOUND_STYLE("control_pause", IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02, IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02_CIRCLE,
+			IMG_PLAYER_VIEW_CONTROL_PLAY)
+
+MP_PLAYER_BUTTON_STYLE("ug_control_play", IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01, IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_01_CIRCLE,
+			IMG_PLAYER_VIEW_CONTROL_PAUSE) //MP_PLAYER_BUTTON_PLAY_STYLE
+MP_PLAYER_BUTTON_NOSOUND_STYLE("ug_control_pause", IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02, IMG_PLAYER_VIEW_CONTROL_CIRCLE_BT_02_CIRCLE,
+			IMG_PLAYER_VIEW_CONTROL_PLAY) //MP_PLAYER_BUTTON_NOSOUND_STYLE
+
+
+group { name: "elm/button/base/music/control_queue";
+	  parts {
+		 part {
+			name: "bg";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				visible: 0;
+				rel1 {
+					relative: 0.0 0.0;
+				}
+				rel2 {
+					relative: 1.0 1.0;
+				}
+				color: 0 0 0 0;
+			}
+			description { state: "invisible" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+                 /*
+		 part {name : "bg_image";
+			type: IMAGE;
+			mouse_events:1;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible:1;
+				image { normal: IMG_PLAYER_VIEW_OPTION_BTN; }
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+			}
+			description {
+				state: "clicked" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_PLAYER_VIEW_OPTION_BTN_PRESS; }
+			}
+			description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+			   image { normal: IMG_PLAYER_VIEW_OPTION_BTN; }
+            }
+			description { state: "invisible" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+		*/
+		 part { name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "elm.icon.clipper";
+			description { state: "default" 0.0;
+			   visible: 0;
+			   fixed: 1 1;
+			   align: 0.5 0.5;
+			   rel1 { relative: 0.0 0.0; to: "bg"; }
+			   rel2 { relative: 1.0 1.0; to: "bg"; }
+			}
+			description { state: "visible" 0.0;
+			   inherit: "default" 0.0;
+			   visible: 1;
+			}
+		 }
+		 part { name: "elm.swallow.icon.proxy";
+			type: PROXY;
+			scale: 1;
+			clip_to: "elm.icon.proxy.clipper";
+			description { state: "default" 0.0;
+				source: "elm.swallow.content";
+				rel1.to: "elm.swallow.content";
+				//rel1.offset: 0 -2;
+				rel2.to: "elm.swallow.content";
+				//rel2.offset: -1 -3;
+			}
+		 }
+		 part { name: "elm.icon.proxy.clipper";
+			type: RECT;
+			description { state: "default" 0.0;
+			}
+			description { state: "clicked" 0.0;
+				color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_PRESSED_COLOR_INC;
+			}
+			description { state: "disabled" 0.0;
+				color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+			}
+		 }
+		 part { name: "elm.icon.clipper";
+			type: RECT;
+			description { state: "default" 0.0;
+			}
+			description { state: "clicked" 0.0;
+			}
+			description { state: "disabled" 0.0;
+			}
+		 }
+		 part { name: "over2";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			}
+		 }
+		 part { name: "over3";
+			type: RECT;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			}
+		 }
+		 part { name: "disabler";
+			type: RECT;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			   visible: 0;
+			}
+			description { state: "disabled" 0.0;
+			   inherit: "default" 0.0;
+			   visible: 1;
+			}
+		 }
+	  }
+	  programs {
+		 program { name: "button_click";
+			signal: "mouse,down,1";
+			source: "over2";
+			action: SIGNAL_EMIT "elm,action,press" "";
+			after: "button_click_anim";
+		 }
+		 program { name: "button_click_anim";
+			action: STATE_SET "clicked" 0.0;
+			//target: "bg_image";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+		 }
+		 program { name: "button_unpress";
+			action: SIGNAL_EMIT "elm,action,unpress" "";
+		 }
+		 program { name: "button_mouseout_clicked";
+			signal: "mouse,up,1";
+			source: "over3";
+			action: STATE_SET "default" 0.0;
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+			//target: "bg_image";
+			after: "button_unpress";
+		 }
+		 program { name: "touch_snd";
+			signal: "mouse,clicked,1";
+			source: "over2";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after: "button_unclick3";
+		 }
+		 program { name: "button_unclick3";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		 }
+		 program { name: "icon_show";
+			signal: "elm,state,icon,visible";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			target: "elm.swallow.content";
+		 }
+		 program { name: "icon_hide";
+			signal: "elm,state,icon,hidden";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "elm.swallow.content";
+		 }
+		 program { name: "disable";
+			signal: "elm,state,disabled";
+			source: "elm";
+			action: STATE_SET "disabled" 0.0;
+			//target: "bg_image";
+			target: "disabler";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+		 }
+		 program { name: "enable";
+			signal: "elm,state,enabled";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			//target: "bg_image";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+			target: "disabler";
+		 }
+	  }
+}
+
+group { name: "elm/button/base/music/control_queue_thumbnail";
+	  parts {
+		 part {
+			name: "bg";
+			mouse_events: 1;
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				visible: 0;
+				rel1 {
+					relative: 0.0 0.0;
+				}
+				rel2 {
+					relative: 1.0 1.0;
+				}
+				color: 0 0 0 0;
+			}
+			description { state: "invisible" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+                 /*
+		 part {name : "bg_image";
+			type: IMAGE;
+			mouse_events:1;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				visible:1;
+				image { normal: IMG_PLAYER_VIEW_OPTION_BTN; }
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+			}
+			description {
+				state: "clicked" 0.0;
+				inherit: "default" 0.0;
+				image { normal: IMG_PLAYER_VIEW_OPTION_BTN_PRESS; }
+			}
+			description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+			   image { normal: IMG_PLAYER_VIEW_OPTION_BTN; }
+            }
+			description { state: "invisible" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+		*/
+		 part { name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "elm.icon.clipper";
+			description { state: "default" 0.0;
+			   visible: 0;
+			   align: 0.5 0.5;
+			   rel1 { relative: 0.0 0.0; to: "bg";}
+			   rel2 { relative: 1.0 1.0; to: "bg";}
+			}
+			description { state: "visible" 0.0;
+			   inherit: "default" 0.0;
+			   visible: 1;
+			}
+		 }
+		 part { name: "elm.swallow.icon.proxy";
+			type: PROXY;
+			scale: 1;
+			clip_to: "elm.icon.proxy.clipper";
+			description { state: "default" 0.0;
+				source: "elm.swallow.content";
+				rel1.to: "elm.swallow.content";
+				//rel1.offset: 0 -2;
+				rel2.to: "elm.swallow.content";
+				//rel2.offset: -1 -3;
+			}
+		 }
+		 part { name: "elm.icon.proxy.clipper";
+			type: RECT;
+			description { state: "default" 0.0;
+			}
+			description { state: "clicked" 0.0;
+				color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_PRESSED_COLOR_INC;
+			}
+			description { state: "disabled" 0.0;
+				color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+			}
+		 }
+		 part { name: "elm.icon.clipper";
+			type: RECT;
+			description { state: "default" 0.0;
+			}
+			description { state: "clicked" 0.0;
+			}
+			description { state: "disabled" 0.0;
+			}
+		 }
+		 part { name: "over2";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			}
+		 }
+		 part { name: "over3";
+			type: RECT;
+			repeat_events: 1;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			}
+		 }
+		 part { name: "disabler";
+			type: RECT;
+			description { state: "default" 0.0;
+			   color: 0 0 0 0;
+			   visible: 0;
+			}
+			description { state: "disabled" 0.0;
+			   inherit: "default" 0.0;
+			   visible: 1;
+			}
+		 }
+	  }
+	  programs {
+		 program { name: "button_click";
+			signal: "mouse,down,1";
+			source: "over2";
+			action: SIGNAL_EMIT "elm,action,press" "";
+			after: "button_click_anim";
+		 }
+		 program { name: "button_click_anim";
+			action: STATE_SET "clicked" 0.0;
+			//target: "bg_image";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+		 }
+		 program { name: "button_unpress";
+			action: SIGNAL_EMIT "elm,action,unpress" "";
+		 }
+		 program { name: "button_mouseout_clicked";
+			signal: "mouse,up,1";
+			source: "over3";
+			action: STATE_SET "default" 0.0;
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+			//target: "bg_image";
+			after: "button_unpress";
+		 }
+		 program { name: "touch_snd";
+			signal: "mouse,clicked,1";
+			source: "over2";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after: "button_unclick3";
+		 }
+		 program { name: "button_unclick3";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		 }
+		 program { name: "icon_show";
+			signal: "elm,state,icon,visible";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			target: "elm.swallow.content";
+		 }
+		 program { name: "icon_hide";
+			signal: "elm,state,icon,hidden";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "elm.swallow.content";
+		 }
+		 program { name: "disable";
+			signal: "elm,state,disabled";
+			source: "elm";
+			action: STATE_SET "disabled" 0.0;
+			//target: "bg_image";
+			target: "disabler";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+		 }
+		 program { name: "enable";
+			signal: "elm,state,enabled";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			//target: "bg_image";
+			target: "elm.icon.clipper";
+			target: "elm.icon.proxy.clipper";
+			target: "disabler";
+		 }
+	  }
+}
+
+group { name: "elm/button/base/music/artist/more";
+      script {
+        public button_state = BUTTON_STATE_ENABLED;
+      }
+      parts {
+		part { name: "base";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0 0;
+				min: 34 36;
+				fixed: 1 1;
+				color: 0 0 0 0;
+			}
+		}
+		 part { name: "padding_right";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.0; to: "base";}
+				rel2 { relative: 1.0 1.0; to: "base";}
+				min: 16 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				visible: 0;
+			}
+		 }
+		 part { name: "padding_top";
+			type: RECT;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1.to: "base";
+				rel2 { relative: 1.0 0.0; to: "base";}
+				min: 0 4;
+				fixed: 0 1;
+				align: 0.0 0.0;
+				visible: 0;
+			}
+		 }
+
+         part { name: "button_image";
+            scale: 1;
+            description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_x: "padding_right"; to_y: "padding_top"; }
+				rel2 { relative: 0.0 1.0; to_x: "padding_right"; to_y: "padding_top"; }
+               min: 18 32;
+			   max: 18 32;
+			   fixed: 1 1;
+			   align: 1.0 0.0;
+			   image { normal: IMG_ARTIST_LIST_MORE_BTN_NORMAL;}
+            }
+            description { state: "clicked" 0.0;
+               inherit: "default" 0.0;
+               image { normal: IMG_ARTIST_LIST_MORE_BTN_PRESSED; }
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+               //image.normal: "00_button_01_normal_dim.png";
+            }
+            description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               //image.normal: "00_button_01_normal_press.png";
+            }
+         }
+         part { name: "padding_left_top";
+            type: RECT;
+            scale: 1;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               align: 0.0 0.0;
+               rel2.relative: 0.0 0.0;
+               min: BUTTON_DEFAULT_STYLE_PADDING_MIN_INC;
+               fixed: 1 1;
+               visible: 0;
+            }
+         }
+         part { name: "padding_right_bottom";
+            type: RECT;
+            scale: 1;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               align: 1.0 1.0;
+               rel1.relative: 1.0 1.0;
+               min: BUTTON_DEFAULT_STYLE_PADDING_MIN_INC;
+               fixed: 1 1;
+               visible: 0;
+            }
+         }
+         part { name: "padding_icon_text";
+            type: RECT;
+            scale: 1;
+            mouse_events: 0;
+            description { state: "default" 0.0; //when only icon or no icon is there
+               align: 0.0 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 0.0;
+                  to: "elm.swallow.content";
+               }
+               rel2.to: "elm.swallow.content";
+               fixed: 1 0;
+               min: 0 0;
+            }
+            description { state: "icononly" 0.0;
+               inherit: "default" 0.0;
+            }
+            description { state: "visible" 0.0; //when icon is visible
+               inherit: "default" 0.0;
+               min: BUTTON_DEFAULT_STYLE_PADDING_ICON_TEXT_VISIBLE_MIN_INC;
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               visible: 0;
+               align: 0.0 0.5;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "padding_left_top";
+               }
+               rel2 {
+                  relative: 1.0 0.0;
+                  to_x: "padding_left_top";
+                  to_y: "padding_right_bottom";
+               }
+               fixed: 1 0;
+            }
+            description { state: "visible" 0.0;
+               fixed: 1 0;
+               align: 0.0 0.5;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "padding_left_top";
+               }
+               rel2 {
+                  relative: 1.0 0.0;
+                  to_x: "padding_left_top";
+                  to_y: "padding_right_bottom";
+               }
+               aspect: 1.0 1.0;
+               aspect_preference: VERTICAL;
+            }
+            description { state: "icononly" 0.0;
+               min: BUTTON_DEFAULT_STYLE_ICONONLY_ICON_MIN_INC;
+               rel1 {
+                  relative: 1.0 0.0;
+                  to_x: "padding_left_top";
+               }
+               rel2 {
+                  relative: 0.0 1.0;
+                  to_x: "padding_right_bottom";
+               }
+               aspect: 1.0 1.0;
+               aspect_preference: VERTICAL;
+            }
+         }
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               visible: 0;
+               align: 0.0 0.5;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to_x: "padding_icon_text";
+                  to_y: "padding_left_top";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "padding_right_bottom";
+               }
+               color: BUTTON_DEFAULT_STYLE_BUTTON_TEXT_NORMAL_COLOR_INC;
+               text {
+                  font: "Tizen:style=Medium";
+                  size: BUTTON_DEFAULT_STYLE_FONT_SIZE_INC;
+                  min: 0 0;
+               }
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               min: BUTTON_DEFAULT_STYLE_TEXT_MIN_INC;
+            }
+            description { state: "clicked" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               min: BUTTON_DEFAULT_STYLE_TEXT_MIN_INC;
+               color: BUTTON_DEFAULT_STYLE_BUTTON_TEXT_PRESSED_COLOR_INC;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+            }
+            description { state: "disabled_visible" 0.0;
+               inherit: "default" 0.0;
+               color: BUTTON_DEFAULT_STYLE_BUTTON_TEXT_DISABLED_COLOR_INC;
+               visible: 1;
+               min: BUTTON_DEFAULT_STYLE_TEXT_MIN_INC;
+            }
+            description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               min: 0 0;
+               color: BUTTON_DEFAULT_STYLE_BUTTON_TEXT_FOCUSED_COLOR_INC;
+            }
+         }
+         part { name: "over2";
+            type: RECT;
+            repeat_events: 1;
+            ignore_flags: ON_HOLD;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "over3";
+            type: RECT;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "clipper";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "disabler";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               visible: 0;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "button_click";
+            signal: "mouse,down,1";
+            source: "over2";
+            action: SIGNAL_EMIT "elm,action,press" "";
+            after: "button_click_anim";
+         }
+         program { name: "button_click_anim";
+            action: STATE_SET "clicked" 0.0;
+            target: "button_image";
+            after: "text_clicked";
+         }
+         program { name: "text_clicked";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.text", st, 30, vl);
+               if (!strcmp(st, "visible"))
+                 set_state(PART:"elm.text", "clicked", 0.0);
+            }
+         }
+         program { name: "button_unpress";
+            action: SIGNAL_EMIT "elm,action,unpress" "";
+         }
+         program { name: "button_mouseout_clicked";
+            signal: "mouse,up,1";
+            source: "over3";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+               if (strcmp(st, "icononly"))
+                 {
+                    emit("elm,action,default,text,set", "");
+                    set_state(PART:"elm.text", "visible", 0.0);
+                 }
+               if (get_int(button_state) != BUTTON_STATE_DISABLED)
+                 set_state(PART:"button_image", "default", 0.0);
+            }
+            after: button_unpress;
+         }
+         program { name: "touch_snd";
+            signal: "mouse,clicked,1";
+            source: "over2";
+            action: PLAY_SAMPLE "button-pressed" 1.0;
+            after: button_unclick3;
+         }
+         program { name: "button_unclick3";
+            action: SIGNAL_EMIT "elm,action,click" "";
+         }
+         program { name: "text_show";
+            signal: "elm,state,text,visible";
+            source: "elm";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+               if (!strcmp(st, "icononly"))
+                 {
+                    set_state(PART:"elm.swallow.content", "visible", 0.0);
+                    set_state(PART:"padding_icon_text", "visible", 0.0);
+                 }
+               if (get_int(button_state) != BUTTON_STATE_DISABLED)
+                 set_state(PART:"elm.text", "visible", 0.0);
+               else
+                 set_state(PART:"elm.text", "disabled_visible", 0.0);
+            }
+         }
+         program { name: "text_hide";
+            signal: "elm,state,text,hidden";
+            source: "elm";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+               if (!strcmp(st, "visible"))
+                 {
+                    set_state(PART:"elm.swallow.content", "icononly", 0.0);
+                    set_state(PART:"padding_icon_text", "icononly", 0.0);
+                 }
+               set_state(PART:"elm.text", "default", 0.0);
+            }
+         }
+         program { name: "icon_show";
+            signal: "elm,state,icon,visible";
+            source: "elm";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.text", st, 30, vl);
+               if (!strcmp(st, "visible"))
+                 {
+                    set_state(PART:"elm.swallow.content", "visible", 0.0);
+                    set_state(PART:"padding_icon_text", "visible", 0.0);
+                 }
+               else
+                 {
+                    set_state(PART:"elm.swallow.content", "icononly", 0.0);
+                    set_state(PART:"padding_icon_text", "icononly", 0.0);
+                 }
+            }
+         }
+         program { name: "icon_hide";
+            signal: "elm,state,icon,hidden";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.swallow.content";
+            target: "padding_icon_text";
+         }
+         program { name: "disable";
+            signal: "elm,state,disabled";
+            source: "elm";
+            action: STATE_SET "disabled" 0.0;
+            target: "button_image";
+            target: "disabler";
+            after: "disable_text";
+         }
+         program { name: "disable_text";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.text", st, 30, vl);
+               if (!strcmp(st, "visible"))
+                 set_state(PART:"elm.text", "disabled_visible", 0.0);
+               else
+                 set_state(PART:"elm.text", "disabled", 0.0);
+               set_int(button_state, BUTTON_STATE_DISABLED);
+            }
+         }
+         program { name: "enable";
+            signal: "elm,state,enabled";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "button_image";
+            target: "disabler";
+            after: "enable_text";
+         }
+         program { name: "enable_text";
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"elm.text", st, 30, vl);
+               if (!strcmp(st, "disabled_visible"))
+                 set_state(PART:"elm.text", "visible", 0.0);
+               else
+                 set_state(PART:"elm.text", "default", 0.0);
+               set_int(button_state, BUTTON_STATE_ENABLED);
+            }
+         }
+         program { name: "focused";
+            //signal: "elm,action,focus";
+            //source: "elm";
+            action: STATE_SET "focused" 0.0;
+            target: "button_image";
+            target: "elm.text";
+         }
+         program { name: "unfocused";
+            //signal: "elm,action,unfocus";
+            //source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "button_image";
+            after: "unfocus_text";
+         }
+         program { name: "unfocus_text";
+            action: STATE_SET "visible" 0.0;
+            target: "elm.text";
+         }
+	 }
+   }
+
+   ////////////////////////////////////////////////////////////////////
+   group { name: "elm/button/base/music/naviframe/title_icon";
+      parts {
+         part { name: "button_image";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               min: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+               max: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+            }
+            description { state: "clicked" 0.0;
+               inherit: "default" 0.0;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+            }
+         }
+         part { name: "top_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               min: BUTTON_NAVIFRAME_TITLE_ICON_TOP_PADDING_INC_SECOND;
+               fixed: 0 1;
+               align: 0 0;
+               rel1 { relative: 0.0 0.0; to: "button_image"; }
+               rel2 { relative: 1.0 0.0; to: "button_image"; }
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            clip_to: "elm.icon.clipper";
+            description { state: "default" 0.0;
+               visible: 0;
+               max: BUTTON_NAVIFRAME_TITLE_ICON_IMAGE_MIN_MAX_INC;
+               fixed: 1 1;
+               align: 0.5 0.0;
+               rel1 { relative: 0.0 1.0; to: "top_padding"; }
+               rel2 { relative: 1.0 1.0; to: "button_image"; }
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+         part { name: "elm.swallow.icon.proxy";
+            type: PROXY;
+            scale: 1;
+            clip_to: "elm.icon.proxy.clipper";
+            description { state: "default" 0.0;
+                source: "elm.swallow.content";
+                rel1.to: "elm.swallow.content";
+                rel1.offset: 0 -2;
+                rel2.to: "elm.swallow.content";
+                rel2.offset: -1 -3;
+            }
+         }
+         part { name: "elm.icon.proxy.clipper";
+            type: RECT;
+            description { state: "default" 0.0;
+            }
+            description { state: "clicked" 0.0;
+            }
+            description { state: "disabled" 0.0;
+            }
+         }
+         part { name: "elm.icon.clipper";
+            type: RECT;
+            description { state: "default" 0.0;
+           }
+            description { state: "clicked" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_NORMAL_COLOR_INC;
+            }
+            description { state: "disabled" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+            }
+         }
+         part { name: "over2";
+            type: RECT;
+            ignore_flags: ON_HOLD;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "over3";
+            type: RECT;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "disabler";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               visible: 0;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "button_click";
+            signal: "mouse,down,1";
+            source: "over2";
+            action: SIGNAL_EMIT "elm,action,press" "";
+            after: "button_click_anim";
+         }
+         program { name: "button_click_anim";
+            action: STATE_SET "clicked" 0.0;
+            target: "button_image";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+         }
+         program { name: "button_unpress";
+            action: SIGNAL_EMIT "elm,action,unpress" "";
+         }
+         program { name: "button_mouseout_clicked";
+            signal: "mouse,up,1";
+            source: "over3";
+            action: STATE_SET "default" 0.0;
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+            after: button_unpress;
+         }
+         program { name: "touch_snd";
+            signal: "mouse,clicked,1";
+            source: "over2";
+            action: PLAY_SAMPLE "button-pressed" 1.0;
+            after: button_unclick3;
+         }
+         program { name: "button_unclick3";
+            action: SIGNAL_EMIT "elm,action,click" "";
+         }
+         program { name: "icon_show";
+            signal: "elm,state,icon,visible";
+            source: "elm";
+            action: STATE_SET "visible" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "icon_hide";
+            signal: "elm,state,icon,hidden";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "disable";
+            signal: "elm,state,disabled";
+            source: "elm";
+            action: STATE_SET "disabled" 0.0;
+            target: "button_image";
+            target: "disabler";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+         }
+         program { name: "enable";
+            signal: "elm,state,enabled";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "button_image";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+            target: "disabler";
+         }
+      }
+   }
+
+
+
+
+
+   group { name: "elm/button/base/music/naviframe/title_icon_second";
+      parts {
+         part { name: "button_image";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               min: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+               max: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+            }
+            description { state: "clicked" 0.0;
+               inherit: "default" 0.0;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+            }
+         }
+         part { name: "top_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               min: BUTTON_NAVIFRAME_TITLE_ICON_TOP_PADDING_INC_SECOND;
+               fixed: 0 1;
+               align: 0 0;
+               rel1 { relative: 0.0 0.0; to: "button_image"; }
+               rel2 { relative: 1.0 0.0; to: "button_image"; }
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            clip_to: "elm.icon.clipper";
+            description { state: "default" 0.0;
+               visible: 0;
+               max: BUTTON_NAVIFRAME_TITLE_ICON_IMAGE_MIN_MAX_INC;
+               fixed: 1 1;
+               align: 0.5 0.0;
+               rel1 { relative: 0.0 1.0; to: "top_padding"; }
+               rel2 { relative: 1.0 1.0; to: "button_image"; }
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+         part { name: "elm.swallow.icon.proxy";
+            type: PROXY;
+            scale: 1;
+            clip_to: "elm.icon.proxy.clipper";
+            description { state: "default" 0.0;
+                source: "elm.swallow.content";
+                rel1.to: "elm.swallow.content";
+                rel1.offset: 0 -2;
+                rel2.to: "elm.swallow.content";
+                rel2.offset: -1 -3;
+            }
+         }
+         part { name: "elm.icon.proxy.clipper";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DEFAULT_BLACK_COLOR_INC;
+            }
+            description { state: "clicked" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_PRESSED_COLOR_INC;
+            }
+            description { state: "disabled" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+            }
+         }
+         part { name: "elm.icon.clipper";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_NORMAL_COLOR_INC;
+            }
+            description { state: "clicked" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_NORMAL_COLOR_INC;
+            }
+            description { state: "disabled" 0.0;
+               color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+            }
+         }
+         part { name: "over2";
+            type: RECT;
+            ignore_flags: ON_HOLD;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "over3";
+            type: RECT;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "disabler";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               visible: 0;
+            }
+            description { state: "disabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "button_click";
+            signal: "mouse,down,1";
+            source: "over2";
+            action: SIGNAL_EMIT "elm,action,press" "";
+            after: "button_click_anim";
+         }
+         program { name: "button_click_anim";
+            action: STATE_SET "clicked" 0.0;
+            target: "button_image";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+         }
+         program { name: "button_unpress";
+            action: SIGNAL_EMIT "elm,action,unpress" "";
+         }
+         program { name: "button_mouseout_clicked";
+            signal: "mouse,up,1";
+            source: "over3";
+            action: STATE_SET "default" 0.0;
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+            after: button_unpress;
+         }
+         program { name: "touch_snd";
+            signal: "mouse,clicked,1";
+            source: "over2";
+            action: PLAY_SAMPLE "button-pressed" 1.0;
+            after: button_unclick3;
+         }
+         program { name: "button_unclick3";
+            action: SIGNAL_EMIT "elm,action,click" "";
+         }
+         program { name: "icon_show";
+            signal: "elm,state,icon,visible";
+            source: "elm";
+            action: STATE_SET "visible" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "icon_hide";
+            signal: "elm,state,icon,hidden";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "disable";
+            signal: "elm,state,disabled";
+            source: "elm";
+            action: STATE_SET "disabled" 0.0;
+            target: "button_image";
+            target: "disabler";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+         }
+         program { name: "enable";
+            signal: "elm,state,enabled";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "button_image";
+            target: "elm.icon.clipper";
+            target: "elm.icon.proxy.clipper";
+            target: "disabler";
+         }
+      }
+   }
+
+   group { name: "elm/button/base/music/naviframe/title_icon_black";
+	 parts {
+	    part { name: "button_image";
+	       type: RECT;
+	       scale: 1;
+	       description { state: "default" 0.0;
+		  visible: 0;
+		  min: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+		  max: BUTTON_NAVIFRAME_TITLE_ICON_BG_MIN_MAX_INC;
+	       }
+	       description { state: "clicked" 0.0;
+		  inherit: "default" 0.0;
+	       }
+	       description { state: "disabled" 0.0;
+		  inherit: "default" 0.0;
+	       }
+	    }
+	    part { name: "top_padding";
+	       type: RECT;
+	       scale: 1;
+	       description { state: "default" 0.0;
+		  visible: 0;
+		  min: BUTTON_NAVIFRAME_TITLE_ICON_TOP_PADDING_INC_SECOND;
+		  fixed: 0 1;
+		  align: 0 0;
+		  rel1 { relative: 0.0 0.0; to: "button_image"; }
+		  rel2 { relative: 1.0 0.0; to: "button_image"; }
+	       }
+	    }
+	    part { name: "elm.swallow.content";
+	       type: SWALLOW;
+	       scale: 1;
+	       clip_to: "elm.icon.clipper";
+	       description { state: "default" 0.0;
+		  visible: 0;
+		  max: BUTTON_NAVIFRAME_TITLE_ICON_IMAGE_MIN_MAX_INC;
+		  fixed: 1 1;
+		  align: 0.5 0.0;
+		  rel1 { relative: 0.0 1.0; to: "top_padding"; }
+		  rel2 { relative: 1.0 1.0; to: "button_image"; }
+	       }
+	       description { state: "visible" 0.0;
+		  inherit: "default" 0.0;
+		  visible: 1;
+	       }
+	    }
+	    part { name: "elm.swallow.icon.proxy";
+	       type: PROXY;
+	       scale: 1;
+	       clip_to: "elm.icon.proxy.clipper";
+	       description { state: "default" 0.0;
+		   source: "elm.swallow.content";
+		   rel1.to: "elm.swallow.content";
+		   rel1.offset: 0 -2;
+		   rel2.to: "elm.swallow.content";
+		   rel2.offset: -1 -3;
+	       }
+	    }
+	    part { name: "elm.icon.proxy.clipper";
+	       type: RECT;
+	       description { state: "default" 0.0;
+		  color: MP_COLOR_BG_BLACK;
+	       }
+	       description { state: "clicked" 0.0;
+		  color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_PRESSED_COLOR_INC;
+	       }
+	       description { state: "disabled" 0.0;
+		  color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+	       }
+	    }
+	    part { name: "elm.icon.clipper";
+	       type: RECT;
+	       description { state: "default" 0.0;
+		  color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_NORMAL_COLOR_INC;
+	       }
+	       description { state: "clicked" 0.0;
+		  color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_NORMAL_COLOR_INC;
+	       }
+	       description { state: "disabled" 0.0;
+		  color: BUTTON_NAVIFRAME_TITLE_ICON_CLIPPER_DISABLED_COLOR_INC;
+	       }
+	    }
+	    part { name: "over2";
+	       type: RECT;
+	       ignore_flags: ON_HOLD;
+	       description { state: "default" 0.0;
+		  color: 0 0 0 0;
+	       }
+	    }
+	    part { name: "over3";
+	       type: RECT;
+	       repeat_events: 1;
+	       description { state: "default" 0.0;
+		  color: 0 0 0 0;
+	       }
+	    }
+	    part { name: "disabler";
+	       type: RECT;
+	       description { state: "default" 0.0;
+		  color: 0 0 0 0;
+		  visible: 0;
+	       }
+	       description { state: "disabled" 0.0;
+		  inherit: "default" 0.0;
+		  visible: 1;
+	       }
+	    }
+	 }
+	 programs {
+	    program { name: "button_click";
+	       signal: "mouse,down,1";
+	       source: "over2";
+	       action: SIGNAL_EMIT "elm,action,press" "";
+	       after: "button_click_anim";
+	    }
+	    program { name: "button_click_anim";
+	       action: STATE_SET "clicked" 0.0;
+	       target: "button_image";
+	       target: "elm.icon.clipper";
+	       target: "elm.icon.proxy.clipper";
+	    }
+	    program { name: "button_unpress";
+	       action: SIGNAL_EMIT "elm,action,unpress" "";
+	    }
+	    program { name: "button_mouseout_clicked";
+	       signal: "mouse,up,1";
+	       source: "over3";
+	       action: STATE_SET "default" 0.0;
+	       target: "elm.icon.clipper";
+	       target: "elm.icon.proxy.clipper";
+	       after: button_unpress;
+	    }
+	    program { name: "touch_snd";
+	       signal: "mouse,clicked,1";
+	       source: "over2";
+	       action: PLAY_SAMPLE "button-pressed" 1.0;
+	       after: button_unclick3;
+	    }
+	    program { name: "button_unclick3";
+	       action: SIGNAL_EMIT "elm,action,click" "";
+	    }
+	    program { name: "icon_show";
+	       signal: "elm,state,icon,visible";
+	       source: "elm";
+	       action: STATE_SET "visible" 0.0;
+	       target: "elm.swallow.content";
+	    }
+	    program { name: "icon_hide";
+	       signal: "elm,state,icon,hidden";
+	       source: "elm";
+	       action: STATE_SET "default" 0.0;
+	       target: "elm.swallow.content";
+	    }
+	    program { name: "disable";
+	       signal: "elm,state,disabled";
+	       source: "elm";
+	       action: STATE_SET "disabled" 0.0;
+	       target: "button_image";
+	       target: "disabler";
+	       target: "elm.icon.clipper";
+	       target: "elm.icon.proxy.clipper";
+	    }
+	    program { name: "enable";
+	       signal: "elm,state,enabled";
+	       source: "elm";
+	       action: STATE_SET "default" 0.0;
+	       target: "button_image";
+	       target: "elm.icon.clipper";
+	       target: "elm.icon.proxy.clipper";
+	       target: "disabler";
+	    }
+	 }
+      }
+
+
+

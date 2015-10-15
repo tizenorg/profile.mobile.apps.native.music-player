@@ -1,0 +1,2073 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define GENGRID_PART_BG_COLOR_INC 0 0 0 0
+#define GENGRID_PART_STYLE_REORDER_BG_COLOR_INC 0 0 0 128
+
+#define VIDEO_W 184
+#define VIDEO_H  213
+
+#define ICON_W 162
+#define ICON_H 129
+
+#define VIDEO_TXT_COLOR 166 166 166 255
+#define VIDEO_TXT_SIZE 24
+#define VIDEO_TXT_FONT "Tizen:style=Roman"
+#define FOCUS_BORDER		8 8 8 8
+#define GENGRID_ALBUM_THUMNAIL_BG "player-view/T02_player_album_bg_02.png"
+
+styles {
+        style {
+                name: "textblock_style_default";
+                base: "font=Tizen:style=Roman font_size=30 color=#ffff align=left wrap=mixed ellipsis=1.0";
+                tag:  "br" "\n";
+                tag:  "ps" "ps";
+                tag:  "hilight" "+ font=Tizen:style=Roman";
+                tag:  "b" "+ font=Tizen:style=Roman";
+                tag:  "tab" "\t";
+        }
+}
+
+
+group { name: "elm/gengrid/item/grid_video/default";
+      data.item: "texts" "elm.text.1 elm.text.2";
+      data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+      images {
+         image : "00_winset_thumbs_bg.png" COMP;
+         image : "00_winset_thumbs_focus_bg.png" COMP;
+      }
+      parts {
+         part { name: "bg";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: GENGRID_PART_BG_COLOR_INC;
+            }
+         }
+         part { name: "left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 8 18;
+               align: 0.0 0.0;
+               visible: 0;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "right_bottom_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 8 72;
+               align: 1.0 1.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+		 part { name: "elm.text.2";
+            type: TEXT;
+            mouse_events: 1;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 0.0;
+                  to_x: "left_top_padding";
+                  to_y: "right_bottom_padding";
+               }
+               rel2 {
+                  relative: 0.0 1.0;
+                  to: "right_bottom_padding";
+               }
+			   min: 0 28;
+			   max: 9999 28;
+			   fixed: 0 1;
+			   align: 0.0 1.0;
+               text {
+					font: VIDEO_TXT_FONT;
+					size: VIDEO_TXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: VIDEO_TXT_COLOR;
+            }
+         }
+         part { name: "elm.text.1";
+			type : TEXT;
+            mouse_events: 1;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0.0 0.0;
+                  to: "elm.text.2";
+               }
+               rel2 {
+                  relative: 1.0 0.0;
+                  to: "elm.text.2";
+               }
+			   min: 0 28;
+			   max: 9999 28;
+			   fixed: 0 1;
+			   align: 0.5 1.0;
+               text {
+					font: VIDEO_TXT_FONT;
+					size: VIDEO_TXT_SIZE;
+					align: 0.5 0.5;
+				}
+				color: VIDEO_TXT_COLOR;
+            }
+         }
+         part { name: "elm.swallow.block";
+            type: SWALLOW;
+            mouse_events: 1;
+            description { state: "default" 0.0;
+               rel1.to : "elm.text.1";
+               rel2.to : "elm.text.2";
+            }
+         }
+         part { name: "item_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "right_bottom_padding";
+               }
+               image.normal: "00_winset_thumbs_bg.png";
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 2 0;
+               align: 0.0 0.0;
+               visible: 0;
+               rel1.to: "item_bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_bg";
+               }
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 2 6;
+               align: 1.0 1.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_bg";
+               }
+               rel2.to: "item_bg";
+            }
+         }
+         part { name: "item_real_bg";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 190 189 189 255;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_bg_right_bottom_padding";
+               }
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 2 2;
+               align: 0.0 0.0;
+               visible: 0;
+               rel1.to: "item_real_bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_real_bg";
+               }
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 2 2;
+               align: 1.0 1.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_real_bg";
+               }
+               rel2.to: "item_real_bg";
+            }
+         }
+         part { name: "elm.swallow.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_real_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_real_bg_right_bottom_padding";
+               }
+            }
+         }
+         part { name: "elm.swallow.end";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1.to: "elm.swallow.icon";
+               rel2.to: "elm.swallow.icon";
+            }
+         }
+         part { name: "reorder_bg";
+            type: RECT;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               color: GENGRID_PART_BG_COLOR_INC;
+               rel1.to: "item_bg";
+               rel2.to: "item_bg";
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               color: GENGRID_PART_STYLE_REORDER_BG_COLOR_INC;
+            }
+         }
+         part { name: "focus_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: 8 16;
+               align: 0.0 0.0;
+               visible: 0;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "focus_bg_right_bottom_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 8 76;
+               align: 1.0 1.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "focus_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "focus_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "focus_bg_right_bottom_padding";
+               }
+               image.normal: "00_winset_thumbs_focus_bg.png";
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "go_mouse_down";
+            signal: "mouse,down,1";
+            source: "reorder_bg";
+            action: STATE_SET "enabled" 0.0;
+            target: "focus_bg";
+            transition: ACCELERATE 0.2;
+         }
+         program { name: "go_mouse_up";
+            signal: "mouse,up,1";
+            source: "reorder_bg";
+            action: STATE_SET "default" 0.0;
+            target: "focus_bg";
+            transition: DECELERATE 0.2;
+         }
+         program { name: "go_reorder_disabled";
+            signal: "elm,state,reorder,disabled";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "reorder_bg";
+            target: "focus_bg";
+            transition: ACCELERATE 0.3;
+         }
+         program { name: "go_reorder_enabled";
+            signal: "elm,state,reorder,enabled";
+            source: "elm";
+            action: STATE_SET "enabled" 0.0;
+            target: "reorder_bg";
+            target: "focus_bg";
+            transition: DECELERATE 0.3;
+         }
+      }
+   }
+
+group { name: "elm/gengrid/item/music/grid_square/default";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
+      parts {
+         part { name: "bg";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+
+         part { name: "elm.swallow.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+            }
+         }
+      }
+   }
+
+styles {
+  style { name: "gengrid_textblock_style";
+	 base: "font=Tizen:style=Bold font_size="GENGRID_FONT_STYLE_18_INC" color="GENGRID_PART_TEXTBLOCK_STYLE_COLOR_INC" align=center wrap=mixed ellipsis=1.0 text_class=tizen";
+	 tag: "br" "\n";
+	 tag: "ps" "ps";
+	 tag: "tab" "\t";
+	 tag: "b" "+ font=Tizen:style=Bold";
+  }
+}
+
+group { name: "elm/gengrid/item/music/default_grid/default";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
+      images {
+         image : "00_thumbs_line_bg.png" COMP;
+         image : "00_thumbs_bg_focus.png" COMP;
+         image : "00_thumbs_loading_bg.png" COMP;
+      }
+      parts {
+         part { name: "bg";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: GENGRID_PART_BACKGROUND_COLOR_INC;
+            }
+         }
+         part { name: "left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_LEFT_TOP_PADDING_INC;
+               align: 0.0 0.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "right_bottom_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_RIGHT_BOTTOM_PADDING_INC;
+               align: 1.0 1.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "item_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "right_bottom_padding";
+               }
+               image.normal: "00_thumbs_line_bg.png";
+               image.border: 1 1 1 1;
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_ITEM_BG_LEFT_TOP_PADDING_INC;
+               align: 0.0 0.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1.to: "item_bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_bg";
+               }
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_ITEM_BG_RIGHT_BOTTOM_PADDING_INC;
+               align: 1.0 1.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_bg";
+               }
+               rel2.to: "item_bg";
+            }
+         }
+         part { name: "item_real_bg";
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_bg_right_bottom_padding";
+               }
+               image.normal: "00_thumbs_loading_bg.png";
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_ITEM_REAL_BG_RIGHT_PADDING_INC;
+               align: 0.0 0.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1.to: "item_real_bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_real_bg";
+               }
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_ITEM_REAL_BG_RIGHT_PADDING_INC;
+               align: 1.0 1.0;
+               fixed: 1 1;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_real_bg";
+               }
+               rel2.to: "item_real_bg";
+            }
+         }
+         part { name: "elm.swallow.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_real_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_real_bg_right_bottom_padding";
+               }
+            }
+         }
+         part { name: "elm.swallow.end";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+                rel1 {
+                  relative: 1.0 0.0;
+                  to: "elm.swallow.icon";
+                  offset: -75 0;
+               }
+                rel2 {
+                  relative: 1.0 1.0;
+                  to: "elm.swallow.icon";
+               }
+            }
+         }
+         part { name: "reorder_bg";
+            type: RECT;
+            repeat_events: 0;
+            description { state: "default" 0.0;
+               color: GENGRID_PART_BG_COLOR_INC;
+               rel1.to: "item_bg";
+               rel2.to: "item_bg";
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               color: GENGRID_PART_REORDER_DEFAULT_BG_COLOR_INC;
+            }
+         }
+         part { name: "focus_bg_left_top_padding";
+            type: RECT;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_LEFT_TOP_FOCUS_PADDING_INC;
+               align: 0.0 0.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "focus_bg_right_bottom_padding";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_RIGHT_BOTTOM_FOCUS_PADDING_INC;
+               align: 1.0 1.0;
+               visible: 0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "focus_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "focus_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "focus_bg_right_bottom_padding";
+               }
+               image.normal: "00_thumbs_bg_focus.png";
+               image.border: 6 6 6 6;
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "go_mouse_down";
+            signal: "mouse,down,1";
+            source: "reorder_bg";
+            action: PLAY_SAMPLE "button-pressed" 1.0;
+            after:"go_down";
+            transition: ACCELERATE 0.2;
+         }
+         program { name: "go_mouse_up";
+            signal: "mouse,up,1";
+            source: "reorder_bg";
+            action: STATE_SET "default" 0.0;
+            target: "focus_bg";
+            transition: DECELERATE 0.2;
+         }
+         program { name: "go_reorder_disabled";
+            signal: "elm,state,reorder,disabled";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "reorder_bg";
+            target: "focus_bg";
+            transition: ACCELERATE 0.3;
+         }
+         program { name: "go_reorder_enabled";
+            signal: "elm,state,reorder,enabled";
+            source: "elm";
+            action: STATE_SET "enabled" 0.0;
+            target: "reorder_bg";
+            target: "focus_bg";
+            transition: DECELERATE 0.3;
+         }
+         program { name:"go_down";
+	    signal: "mouse,down,1";
+            source: "reorder_bg";
+            action: STATE_SET "enabled" 0.0;
+            target: "focus_bg";
+            transition: ACCELERATE 0.2;
+         }
+      }
+   }
+
+group { name: "elm/gengrid/item/music/album_grid/default";
+      inherit: "elm/gengrid/item/music/default_grid/default";
+      data.item: "texts" "elm.text elm.text.2";
+      data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+      parts {
+         part { name: "left_top_padding";
+            description { state: "default" 0.0;
+			   min: 16 0;
+            }
+         }
+         part { name: "right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 97;
+            }
+         }
+
+		 part { name: "padding_center";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+				rel2 { relative: 1.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+		 part { name: "main_text_area";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "padding_center"; }
+				rel2 { relative: 1.0 1.0; to: "padding_center"; }
+				min: 0 34;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+		 part { name: "sub_text_area";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "main_text_area"; }
+				rel2 { relative: 1.0 1.0; to: "main_text_area"; }
+				min: 0 28;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "main_text_area";
+               rel2.to: "main_text_area";
+               text {
+                  font: "Tizen:style=Regular";
+				  size: 28;
+                  align: 0.0 0.5;
+               }
+			   color: 48 48 48 255;
+            }
+         }
+		 part { name: "elm.text.2";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "sub_text_area";
+               rel2.to: "sub_text_area";
+               text {
+                  font: "Tizen:style=Bold";
+				  size: 25;
+                  align: 0.0 0.5;
+               }
+			   color: 100 100 100 255;
+            }
+         }
+         part { name: "elm.swallow.block";
+            type: SWALLOW;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               rel1.to : "elm.text";
+               rel2.to : "elm.text.2";
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "focus_bg";
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "elm.swallow.icon"; }
+				rel2 { relative: 1.0 1.0; to: "elm.swallow.icon"; }
+			}
+			description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+		 }
+      }
+   }
+
+group { name: "elm/gengrid/item/music/album_grid2/default";
+      inherit: "elm/gengrid/item/music/default_grid/default";
+      data.item: "texts" "elm.text elm.text.2";
+      data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+
+      images {
+         image : "00_focus_01.png" COMP;
+      }
+
+      parts {
+         part { name: "left_top_padding";
+            description { state: "default" 0.0;
+			   min: 5 12;
+            }
+         }
+         part { name: "right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 6 85;
+            }
+         }
+
+		 part { name: "padding_center";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "elm.swallow.icon";}
+				rel2 { relative: 1.0 1.0; to: "elm.swallow.icon";}
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+		 part { name: "main_text_area";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "padding_center"; }
+				rel2 { relative: 1.0 1.0; to: "padding_center"; }
+				min: 0 34;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+		 part { name: "sub_text_area";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "main_text_area"; }
+				rel2 { relative: 1.0 1.0; to: "main_text_area"; }
+				min: 0 28;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "main_text_area";
+               rel2.to: "main_text_area";
+               text {
+		        size: 24;
+                        align: 0.0 0.5;
+               }
+			   color: 21 108 148 255;
+            }
+         }
+		 part { name: "elm.text.2";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "sub_text_area";
+               rel2.to: "sub_text_area";
+               text {
+			  size: 28;
+	                  align: 0.0 0.5;
+               }
+			   color: 0 0 0 255;
+            }
+         }
+         part { name: "elm.swallow.block";
+            type: SWALLOW;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               rel1.to : "elm.text";
+               rel2.to : "elm.text.2";
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+
+	 part { name: "focus_bg_left_top_padding";
+            type: SPACER;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_LEFT_TOP_FOCUS_PADDING_INC;
+               align: 0.0 0.0;
+               fixed: 1 1;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "focus_bg_right_bottom_padding";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_RIGHT_BOTTOM_FOCUS_PADDING_INC;
+               align: 1.0 1.0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "focus_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "focus_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "focus_bg_right_bottom_padding";
+               }
+               image.normal: "00_focus_01.png";
+               image.border: FOCUS_BORDER;
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "focus_in";
+         signal: "elm,action,focus_highlight,show";
+            source: "elm";
+            action: STATE_SET "enabled" 0.0;
+            target: "focus_bg";
+         }
+         program { name: "focus_out";
+         signal: "elm,action,focus_highlight,hide";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "focus_bg";
+         }
+      }
+   }
+
+group { name: "elm/gengrid/item/music/artist_grid/default";
+      inherit: "elm/gengrid/item/music/default_grid/default";
+      data.item: "texts" "elm.text elm.text.2";
+      data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+
+      images {
+         image : "00_focus_01.png" COMP;
+      }
+
+      parts {
+         part { name: "left_top_padding";
+            description { state: "default" 0.0;
+			   min: 7 10;
+            }
+         }
+         part { name: "right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 6 54;
+            }
+         }
+
+		 part { name: "padding_center";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+				rel2 { relative: 1.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+				min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+		 part { name: "main_text_area";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "padding_center"; }
+				rel2 { relative: 1.0 1.0; to: "padding_center"; }
+				min: 0 30;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		 }
+
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "main_text_area";
+               rel2.to: "main_text_area";
+               text {
+			  size: 25;
+	                  align: 0.0 0.5;
+               }
+			  color: 120 120 120 255;
+            }
+         }
+         part { name: "elm.swallow.block";
+            type: SWALLOW;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               rel1.to : "elm.text";
+               rel2.to : "elm.text";
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "focus_bg_left_top_padding";
+            type: SPACER;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_LEFT_TOP_FOCUS_PADDING_INC;
+               align: 0.0 0.0;
+               fixed: 1 1;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "focus_bg_right_bottom_padding";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_RIGHT_BOTTOM_FOCUS_PADDING_INC;
+               align: 1.0 1.0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "focus_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "focus_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "focus_bg_right_bottom_padding";
+               }
+               image.normal: "00_focus_01.png";
+               image.border: FOCUS_BORDER;
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "focus_in";
+         signal: "elm,action,focus_highlight,show";
+            source: "elm";
+            action: STATE_SET "enabled" 0.0;
+            target: "focus_bg";
+         }
+         program { name: "focus_out";
+         signal: "elm,action,focus_highlight,hide";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "focus_bg";
+         }
+      }
+   }
+
+group { name: "elm/gengrid/item/music/landscape/album_grid/default";
+      inherit: "elm/gengrid/item/music/default_grid/default";
+      data.item: "texts" "elm.text elm.text.2";
+      data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+      images {
+         image : "00_focus_01.png" COMP;
+      }
+      parts {
+         part { name: "left_top_padding";
+            description { state: "default" 0.0;
+			   min: 11 20;
+            }
+         }
+         part { name: "right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 11 70;
+            }
+         }
+
+	 part { name: "main_text_area";
+		type: SPACER;
+		mouse_events: 0;
+		scale: 1;
+		description { state: "default" 0.0;
+			rel1 { relative: 0.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+			rel2 { relative: 1.0 0.0; to_x: "elm.swallow.icon"; to_y: "right_bottom_padding"; }
+			min: 0 34;
+			fixed: 0 1;
+			align: 0.0 0.0;
+		}
+	 }
+	 part { name: "sub_text_area";
+		type: SPACER;
+		mouse_events: 0;
+		scale: 1;
+		description { state: "default" 0.0;
+			rel1 { relative: 0.0 1.0; to: "main_text_area"; }
+			rel2 { relative: 1.0 1.0; to: "main_text_area"; }
+			min: 0 30;
+			fixed: 0 1;
+			align: 0.0 0.0;
+		}
+	 }
+
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "main_text_area";
+               rel2.to: "main_text_area";
+               text {
+			  size: 24;
+	                  align: 0.0 0.5;
+               }
+			   color: 21 108 148 255;
+            }
+         }
+		 part { name: "elm.text.2";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to: "sub_text_area";
+               rel2.to: "sub_text_area";
+               text {
+			  size: 28;
+	                  align: 0.0 0.5;
+               }
+			   color: 0 0 0 255;
+            }
+         }
+         part { name: "elm.swallow.block";
+            type: SWALLOW;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               rel1.to : "elm.text";
+               rel2.to : "elm.text.2";
+            }
+         }
+         part { name: "item_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_left_top_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+         part { name: "item_real_bg_right_bottom_padding";
+            description { state: "default" 0.0;
+			   min: 0 0;
+            }
+         }
+	 part { name: "focus_bg_left_top_padding";
+            type: SPACER;
+            scale : 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_LEFT_TOP_FOCUS_PADDING_INC;
+               align: 0.0 0.0;
+               fixed: 1 1;
+               rel1.to: "bg";
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "bg";
+               }
+            }
+         }
+         part { name: "focus_bg_right_bottom_padding";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: GENGRID_DEFAULT_RIGHT_BOTTOM_FOCUS_PADDING_INC;
+               align: 1.0 1.0;
+               fixed: 1 1;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "bg";
+               }
+               rel2.to: "bg";
+            }
+         }
+         part { name: "focus_bg";
+            type: IMAGE;
+            description { state: "default" 0.0;
+               visible: 0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "focus_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "focus_bg_right_bottom_padding";
+               }
+               image.normal: "00_focus_01.png";
+               image.border: FOCUS_BORDER;
+            }
+            description { state: "enabled" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+         program { name: "focus_in";
+         signal: "elm,action,focus_highlight,show";
+            source: "elm";
+            action: STATE_SET "enabled" 0.0;
+            target: "focus_bg";
+         }
+         program { name: "focus_out";
+         signal: "elm,action,focus_highlight,hide";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "focus_bg";
+         }
+      }
+   }
+
+
+   #define GENGRID_ITEM_SELECT_VI_EFFECT \
+      } \
+      description { state: "pressed" 0.0; \
+         inherit: "default" 0.0; \
+         map { \
+            on: 1; \
+            perspective: "persp1"; \
+            smooth: 0; \
+         } \
+      } \
+      description { state: "selected" 0.0; \
+         inherit: "default" 0.0; \
+         map { \
+            on: 1; \
+            perspective: "persp"; \
+            smooth: 1; \
+         }
+
+   #define GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT( TARGET ) \
+            program { name: "vi_pressed"; \
+               action: STATE_SET "pressed" 0.0; \
+               TARGET \
+               after: "vi_zoom_in"; \
+            } \
+            program { name: "vi_zoom_in"; \
+               action: STATE_SET "selected" 0.0; \
+               TARGET \
+               transition: SIN_FAC 0.167 1.1; \
+            } \
+            program { name: "vi_zoom_out"; \
+               action: STATE_SET "pressed" 0.0; \
+               TARGET \
+               transition: SIN_FAC 0.167 1.1; \
+               after: "vi_default"; \
+            } \
+            program { name: "vi_default"; \
+               action: STATE_SET "default" 0.0; \
+               TARGET \
+            }
+
+#define GENGRID_PROGRAM_DEFAULT( TARGET ) \
+            program { name: "default"; \
+               signal: "elm,state,default"; \
+               source: "elm"; \
+               action: STATE_SET "default" 0.0; \
+               target: "focus_bg"; \
+               TARGET \
+            } \
+
+
+group { name: "elm/gengrid/item/music/setting_effect/default";
+         data.item: "contents" "elm.swallow.icon elm.swallow.icon1 elm.swallow.end elm.swallow.video";
+         data.item: "focus_highlight" "on";
+            images {
+                image : "00_focus_01.png" COMP;
+                image : "00_sub_depth_thumbs_bg.png" COMP;
+            }
+            script {
+                public selected = 0;
+            }
+            parts {
+               part { name: "select_clip";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     visible: 0;
+                  }
+                  description { state: "selected" 0.0;
+                     visible: 0;
+                  }
+               }
+               part { name: "persp";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     min: 32 32;
+                     max: 32 32;
+                     fixed: 1 1;
+                     align: 0.5 0.5;
+                     color: 0 0 0 0;
+                     visible: 1;
+                     perspective {
+                        zplane: -70;
+                        focal: 1000;
+                     }
+                  }
+               }
+               part { name: "persp1";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     min: 32 32;
+                     max: 32 32;
+                     fixed: 1 1;
+                     align: 0.5 0.5;
+                     color: 0 0 0 0;
+                     visible: 1;
+                     perspective {
+                        zplane: 0;
+                        focal: 1000;
+                     }
+                  }
+               }
+               part { name: "bg";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     color: GENGRID_PART_BACKGROUND_COLOR_INC;
+                  }
+               }
+               part { name: "left_top_padding";
+                  type: SPACER;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: 5 5;
+                     align: 0.0 0.0;
+                     fixed: 1 1;
+                     rel1.to: "bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "bg";
+                     }
+                  }
+               }
+               part { name: "right_bottom_padding";
+                  type: SPACER;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: 5 5;
+                     align: 1.0 1.0;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "bg";
+                     }
+                     rel2.to: "bg";
+                  }
+               }
+               part { name: "item_bg";
+                  type: IMAGE;
+                  description { state: "default" 0.0;
+                     visible: 0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "right_bottom_padding";
+                     }
+                     image.normal: "00_sub_depth_thumbs_bg.png";
+                     image.border: 13 12 12 13;
+                  }
+               }
+               part { name: "item_bg_left_top_padding";
+                  type: SPACER;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: 0 0;
+                     align: 0.0 0.0;
+                     fixed: 1 0;
+                     rel1.to: "item_bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_bg";
+                     }
+                  }
+               }
+               part { name: "item_bg_right_bottom_padding";
+                  type: SPACER;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: 0 0;
+                     align: 1.0 1.0;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_bg";
+                     }
+                     rel2.to: "item_bg";
+                  }
+               }
+               part { name: "item_real_bg";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     visible: 0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_bg_right_bottom_padding";
+                     }
+                  }
+               }
+               part { name: "item_real_bg_left_top_padding";
+                  type: SPACER;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: GENGRID_DEFAULT_ITEM_REAL_BG_RIGHT_PADDING_INC;
+                     align: 0.0 0.0;
+                     fixed: 1 1;
+                     rel1.to: "item_real_bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_real_bg";
+                     }
+                  }
+               }
+               part { name: "item_real_bg_right_bottom_padding";
+                  type: SPACER;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: 0 0;
+                     align: 1.0 1.0;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_real_bg";
+                     }
+                     rel2.to: "item_real_bg";
+                  }
+               }	       
+               part { name: "elm.swallow.icon";
+                  type: SWALLOW;
+                  description { state: "default" 0.0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_real_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_real_bg_right_bottom_padding";
+                     }
+                  }
+               }
+               part { name: "video_text_bg";
+                  type: SPACER;
+                  description { state: "default" 0.0;
+                     rel1 {
+                        relative: 0.0 1.0;
+                        to: "item_real_bg";
+                     }
+                     rel2 {
+                        relative: 1.0 1.0;
+                        to: "item_real_bg";
+                     }
+                  }
+               }
+               part { name: "elm.video_text.padding.left";
+                  scale: 1;
+                  type: SPACER;
+                  description { state: "default" 0.0;
+                     rel1 {
+                        relative: 0 0;
+                        to: "video_text_bg";
+                     }
+                     rel2 {
+                        relative: 0 1;
+                        to: "video_text_bg";
+                     }
+                  }
+               }
+               part { name: "elm.swallow.video";
+                  type: SWALLOW;
+                  description { state: "default" 0.0;
+                     rel1.to: "elm.swallow.icon";
+                     rel2.to: "elm.swallow.icon";
+                  }
+               }
+               part { name: "elm.swallow.end";
+                  type: SWALLOW;
+                  description { state: "default" 0.0;
+                     rel1.to: "elm.swallow.icon";
+                     rel2.to: "elm.swallow.icon";
+                  }
+               }
+               part { name: "reorder_bg";
+                  type: RECT;
+                  repeat_events: 1;
+                  mouse_events: 0;
+                  description { state: "default" 0.0;
+                     rel1.to: "item_bg";
+                     rel2.to: "item_bg";
+                     color: 0 0 0 0;
+                  }
+               }
+               part { name: "focus_bg";
+                  type: IMAGE;
+                  mouse_events: 0;
+                  description { state: "default" 0.0;
+                     visible: 0;
+                     rel1 {
+                        relative: 0.0 0.0;
+                        to: "elm.swallow.icon";
+                     }
+                     rel2 {
+                        relative: 1.0 1.0;
+                        to: "elm.swallow.icon";
+                     }
+                     image.normal: "00_focus_01.png";
+                     image.border: 8 8 8 8;
+                  }
+                  description { state: "enabled" 0.0;
+                     inherit: "default" 0.0;
+                     visible: 1;
+                  }
+               }
+            }
+            programs {
+               program { name: "selected";
+                  signal: "elm,state,selected";
+                  source: "elm";
+                  script {
+                     if (!get_int(selected)) {
+                        set_int(selected, 1);
+                     }
+                  }
+               }
+               program { name: "unselected";
+                  signal: "elm,state,unselected";
+                  source: "elm";
+                  script {
+                     if (get_int(selected)) {
+                        set_int(selected, 0);
+                     }
+                  }
+               }
+               GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
+                  target: "item_bg";
+                  target: "item_real_bg";
+                  target: "elm.swallow.icon";
+                  target: "elm.swallow.end";
+               )
+               program { name: "touch_snd";
+                  signal: "mouse,clicked,1";
+                  source: "item_bg";
+                  script {
+                     new st[31];
+                     new Float:vl;
+                     get_state(PART:"item_bg", st, 30, vl);
+                     if (!strcmp(st, "selected") ||
+                         !strcmp(st, "pressed"))
+                        play_sample("touch_sound", 1.0);
+                  }
+               }
+               program { name: "action_focus";
+                  signal: "elm,action,focus_highlight,show";
+                  source: "elm";
+                  action: STATE_SET "enabled" 0.0;
+                  target: "focus_bg";
+               }
+               program { name: "action_unfocus";
+                  signal: "elm,action,focus_highlight,hide";
+                  source: "elm";
+                  action: STATE_SET "default" 0.0;
+                  target: "focus_bg";
+               }
+               GENGRID_PROGRAM_DEFAULT(
+                  target: "item_bg";
+                  target: "item_real_bg";
+                  target: "elm.swallow.icon";
+                  target: "elm.swallow.end";
+               )
+            }
+}
+
+#define MS_SOUNDALIVE_GENGRID_FOUCS             "soundalive/T02_soundalive_square_focus.png"
+#define MS_SOUNDALIVE_GENGRID_BG                "soundalive/T02_soundalive_square.png"
+#define MS_SOUNDALIVE_GENGRID_BG_PRESSED        "soundalive/T02_soundalive_square_press.png"
+
+#define MS_GENGRID_DEFAULT_PADDING       1 1
+
+      group { name: "elm/gengrid/item/soundalive/gengrid/default";
+            data.item: "texts" "elm.text";
+            data.item: "contents" "elm.swallow.icon elm.swallow.block elm.swallow.end";
+            script {
+               public selected = 0;
+            }
+            images {
+               image : MS_SOUNDALIVE_GENGRID_FOUCS COMP;
+               image : MS_SOUNDALIVE_GENGRID_BG COMP;
+               image : MS_SOUNDALIVE_GENGRID_BG_PRESSED COMP;
+            }
+            parts {
+               part { name: "bg";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     color: GENGRID_PART_BACKGROUND_COLOR_INC;
+                  }
+               }
+               part { name: "item_bg";
+                  type: RECT;
+                  description { state: "default" 0.0;
+                     rel1 {
+                        relative: 0.0 0.0;
+                        to: "bg";
+                     }
+                     rel2 {
+                        relative: 1.0 1.0;
+                        to: "bg";
+                     }
+                     visible: 0;
+                  }
+               }
+               part { name: "item_bg_left_top_padding";
+                  type: RECT;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: GENGRID_DEFAULT_ITEM_BG_LEFT_TOP_PADDING_INC;
+                     align: 0.0 0.0;
+                     visible: 0;
+                     fixed: 1 1;
+                     rel1.to: "item_bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_bg";
+                     }
+                  }
+               }
+               part { name: "item_bg_right_bottom_padding";
+                  type: RECT;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: GENGRID_DEFAULT_ITEM_BG_RIGHT_BOTTOM_PADDING_INC;
+                     align: 1.0 1.0;
+                     visible: 0;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_bg";
+                     }
+                     rel2.to: "item_bg";
+                  }
+               }
+               part { name: "item_real_bg";
+                  description { state: "default" 0.0;
+                     visible: 0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_bg_right_bottom_padding";
+                     }
+                  }
+               }
+               part { name: "item_real_bg_left_top_padding";
+                  type: RECT;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: GENGRID_DEFAULT_ITEM_REAL_BG_RIGHT_PADDING_INC;
+                     align: 0.0 0.0;
+                     visible: 0;
+                     fixed: 1 1;
+                     rel1.to: "item_real_bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_real_bg";
+                     }
+                  }
+               }
+               part { name: "item_real_bg_right_bottom_padding";
+                  type: RECT;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: GENGRID_DEFAULT_ITEM_REAL_BG_RIGHT_PADDING_INC;
+                     align: 1.0 1.0;
+                     fixed: 1 1;
+                     visible: 0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_real_bg";
+                     }
+                     rel2.to: "item_real_bg";
+                  }
+               }
+               part { name: "elm.swallow.icon";
+                  type: SWALLOW;
+                  description { state: "default" 0.0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "item_real_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "item_real_bg_right_bottom_padding";
+                     }
+                  }
+               }
+               part { name: "elm.swallow.end";
+                  type: SWALLOW;
+                  description { state: "default" 0.0;
+                      rel1 {
+                        relative: 1.0 0.0;
+                        to: "elm.swallow.icon";
+                        offset: -75 0;
+                     }
+                      rel2 {
+                        relative: 1.0 1.0;
+                        to: "elm.swallow.icon";
+                     }
+                  }
+               }
+               part { name: "elm.item.bg";
+                  type: IMAGE;
+                  mouse_events: 1;
+                  description { state: "default" 0.0;
+                     visible: 1;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "focus_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "focus_bg_right_bottom_padding";
+                     }
+                     image.normal: MS_SOUNDALIVE_GENGRID_BG;
+                  }
+                  description { state: "pressed" 0.0;
+                     inherit: "default" 0.0;
+                     image.normal: MS_SOUNDALIVE_GENGRID_BG_PRESSED;
+                  }
+               }
+                part { name: "elm.text";
+                       type: TEXT;
+                       repeat_events: 1;
+                       mouse_events: 1;
+                       description { state: "default" 0.0;
+                          min: 0 40;
+                          fixed: 0 1;
+                          color: 255 255 255 255;
+	                  text {
+					size: 26;
+					min:      0 1;
+					align:    0.5 0.5;
+					text:     "";
+				}
+                          rel1 { relative: 0.0 0.0; to: "elm.swallow.icon"; }
+                          rel2 { relative: 1.0 1.0; to: "elm.swallow.icon"; }
+                       }
+               }
+               part { name: "reorder_bg";
+                  type: RECT;
+                  repeat_events: 1;
+                  description { state: "default" 0.0;
+                     color: GENGRID_PART_BG_COLOR_INC;
+                     rel1.to: "item_bg";
+                     rel2.to: "item_bg";
+                  }
+                  description { state: "enabled" 0.0;
+                     inherit: "default" 0.0;
+                     color: GENGRID_PART_REORDER_DEFAULT_BG_COLOR_INC;
+                  }
+               }
+               part { name: "focus_bg_left_top_padding";
+                  type: RECT;
+                  scale : 1;
+                  description { state: "default" 0.0;
+                     min: 1 1;
+                     align: 0.0 0.0;
+                     visible: 0;
+                     fixed: 1 1;
+                     rel1.to: "bg";
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "bg";
+                     }
+                  }
+               }
+               part { name: "focus_bg_right_bottom_padding";
+                  type: RECT;
+                  scale: 1;
+                  description { state: "default" 0.0;
+                     min: 1 1;
+                     align: 1.0 1.0;
+                     visible: 0;
+                     fixed: 1 1;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "bg";
+                     }
+                     rel2.to: "bg";
+                  }
+               }
+               part { name: "focus_bg";
+                  type: IMAGE;
+                  description { state: "default" 0.0;
+                     visible: 0;
+                     rel1 {
+                        relative: 1.0 1.0;
+                        to: "focus_bg_left_top_padding";
+                     }
+                     rel2 {
+                        relative: 0.0 0.0;
+                        to: "focus_bg_right_bottom_padding";
+                     }
+                     image.normal: MS_SOUNDALIVE_GENGRID_FOUCS;
+                     image.border: 6 6 6 6;
+                  }
+                  description { state: "enabled" 0.0;
+                     inherit: "default" 0.0;
+                     visible: 0;
+                  }
+               }
+            }
+            programs {
+                program { name: "selected";
+                        signal: "elm,state,selected";
+                        source: "elm";
+                        script {
+                                if (!get_int(selected)) {
+                                        set_int(selected, 1);
+                                        //set_state(PART:"elm.item.bg", "pressed", 0.0);
+                                }
+                        }
+                }
+                program { name: "unselected";
+                        signal: "elm,state,unselected";
+                        source: "elm";
+                        script {
+                                if (get_int(selected)) {
+                                        set_int(selected, 0);
+                                        //set_state(PART:"elm.item.bg", "default", 0.0);
+                                }
+                        }
+                }
+               program { name: "item_selected";
+                  signal: "item_selected";
+                  source: "elm.item.bg";
+                  action: STATE_SET "pressed" 0.0;
+                  target: "elm.item.bg";
+                  transition: ACCELERATE 0.2;
+               }
+               program { name: "item_unselected";
+                  signal: "item_unselected";
+                  source: "elm.item.bg";
+                  action: STATE_SET "default" 0.0;
+                  target: "elm.item.bg";
+                  transition: ACCELERATE 0.2;
+               }
+               program { name: "go_mouse_down";
+                  signal: "mouse,down,1";
+                  source: "reorder_bg";
+                  action: PLAY_SAMPLE "button-pressed" 1.0;
+                  after:"go_down";
+                  transition: ACCELERATE 0.2;
+               }
+               program { name: "go_mouse_up";
+                  signal: "mouse,up,1";
+                  source: "reorder_bg";
+                  action: STATE_SET "default" 0.0;
+                  target: "focus_bg";
+                  transition: DECELERATE 0.2;
+               }
+               program { name: "go_reorder_disabled";
+                  signal: "elm,state,reorder,disabled";
+                  source: "elm";
+                  action: STATE_SET "default" 0.0;
+                  target: "reorder_bg";
+                  target: "focus_bg";
+                  transition: ACCELERATE 0.3;
+               }
+               program { name: "go_reorder_enabled";
+                  signal: "elm,state,reorder,enabled";
+                  source: "elm";
+                  action: STATE_SET "enabled" 0.0;
+                  target: "reorder_bg";
+                  target: "focus_bg";
+                  transition: DECELERATE 0.3;
+               }
+               program { name:"go_down";
+                  signal: "mouse,down,1";
+                  source: "reorder_bg";
+                  action: STATE_SET "enabled" 0.0;
+                  target: "focus_bg";
+                  transition: ACCELERATE 0.2;
+                }
+       }
+}
+
+
+
+group { name: "elm/gengrid/item/music/cast_side/default";
+	     data.item:  "contents" "albumart";
+	     data.item: "texts" "elm.text.1 elm.text.2 elm.text.3";
+	     images {
+		     image : GENGRID_ALBUM_THUMNAIL_BG COMP;
+	     }
+	     parts{
+		     part{
+			     name: "bg";
+			     type: RECT;
+			     scale: 1;
+			     mouse_events: 1;
+			     repeat_events: 1;
+			     description { state: "default" 0.0;
+				     fixed: 1 1;
+				     color: 0 0 0 0;
+				     visible: 0;
+			     }
+		     }
+		     /* album bg */
+		     part {
+			  name: "player_bg";
+			  type: IMAGE;
+			  mouse_events: 1;
+			  scale: 1;
+			  description {
+				  state: "default" 0.0;
+				  align: 0.5 0.0;
+				  visible:0;
+				  min: 298 352;
+				  max: 298 352;
+				  image { normal: GENGRID_ALBUM_THUMNAIL_BG; }
+				  fixed: 1 1;
+				  rel1 {
+					  relative:0.0 0.0;
+				  }
+				  rel2 {
+					  relative: 1.0 0.0;
+				  }
+			  }
+		     }
+		     part{
+			     name: "albumart";
+			     type: SWALLOW;
+			     scale: 1;
+			     mouse_events: 1;
+			     repeat_events: 1;
+			     description { state: "default" 0.0;
+				     min: 275 275;
+				     max: 275 275;
+				     fixed: 1 1;
+				     rel1 { relative: 0.0 0.0; }
+				     rel2 { relative: 1.0 0.0; }
+				     align: 0.5 0.0;
+			     }
+		     }
+		     part { name: "elm.text.1";
+			     type: TEXT;
+			     scale: 1;
+			     mouse_events: 1;
+			     repeat_events: 1;
+			     description { state: "default" 0.0;
+				     rel1 { relative: 0.0 1.0; to: "albumart";offset:0 20;}
+				     rel2 { relative: 1.0 1.0; to: "albumart";offset:0 20;}
+				     fixed: 1 1;
+				     min: 270 32;
+				     align: 0.5 0.0;
+				     color: 255 255 255 255;
+				     text {
+					     align: 0.5 0.5;
+					     min: 0 0;
+					     font: "Tizen:style=Regular";
+					     size: 26;
+				     }
+			     }
+		     }
+		     part { name: "elm.text.2";
+			     type: TEXT;
+			     scale: 1;
+			     mouse_events: 1;
+			     repeat_events: 1;
+			     description { state: "default" 0.0;
+				     rel1 { relative: 0.0 1.0; to: "elm.text.1";}
+				     rel2 { relative: 1.0 1.0; to: "elm.text.1";}
+				     fixed: 1 1;
+				     min: 270 24;
+				     align: 0.5 0.0;
+				     color: 255 255 255 255;
+				     text {
+					     align: 0.5 0.5;
+					     font: "Tizen:style=Bold";
+					     size: 18;
+					     text:"";
+				     }
+			     }
+		     }
+		     part { name: "elm.text.3";
+			       type: TEXT;
+			       scale: 1;
+			       mouse_events: 1;
+			       repeat_events: 1;
+			       description { state: "default" 0.0;
+				       rel1 { relative: 0.0 1.0; to: "elm.text.2";}
+				       rel2 { relative: 1.0 1.0; to: "elm.text.2";}
+				       fixed: 1 1;
+				       min: 270 24;
+				       align: 0.5 0.0;
+				       color: 255 255 255 255;
+				       text {
+					       align: 0.5 0.5;
+					       font: "Tizen:style=Bold";
+					       size: 18;
+					       text:"";
+				       }
+			       }
+		       }
+	     }
+     }
+

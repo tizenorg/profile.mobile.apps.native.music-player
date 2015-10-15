@@ -1,0 +1,1680 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Načítava sa..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Súkromné"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Čas"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Súbor neexistuje."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Zvonenie telefónu"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Trvanie"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Umiestnenie"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Nastaviť ako"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Pridať na osobnú stránku"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Odstr. z osobnej stránky"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Premiestniť do normálneho úložného priestoru"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Premiestniť do osobného úložného priestoru"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Vybraté položky sa premiestnia do priečinka %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Vybratá položka sa premiestni do priečinka %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "V režime veľkokapacitného pamäťového zariadenia sa nedá použiť."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Vyzváňací tón pridaný."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Tlačidlo"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Vybrať položky"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Pokročilé"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Predch."
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Zavrieť"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Pridané."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Nepodarilo sa."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Žiadne výsledky vyhľadávania"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Hotovo"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Žiadne položky"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Pridať na domovskú stránku"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Ďalej"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Sťahovanie..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Obľúbené"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Pridať do osobného úložného priestoru"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Odpojené od %s. Skontrolujte stav siete a pripojené zariadenie."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Cez Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Cez domovskú sieť"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Prázdna položka."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Počas hovoru nie je k dispozícii."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Bol dosiahnutý maximálny počet znakov."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Súbor DRM sa nedá zdieľať."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Odstraňovanie..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "Počet zariadení: %d"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Povoliť pohyb"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Už sa nepýtať"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Nenašli sa žiadne výsledky."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Prevrátením telefónu stlmíte prichádzajúce hovory, upozornenia na správy a budíky."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Žiadny"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galéria"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Dvojitým ťuknutím môžete prejsť na obsah."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Priestorový zvuk"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Texty piesní"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po pridaní skladieb do aplikácie Hudba v mobilnom zariadení sa zobrazia tu."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Vzorkovacia frekvencia"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Označené ako obľúbené."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Hudba"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Neoznačené ako obľúbené."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Hľadať hudbu"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automatické odporúčanie nepodporuje tento zvukový súbor."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Ľutujeme, prehrávač nepodporuje tento typ zvukového súboru."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Obľúbené"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Najčastejšie prehrávané"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Posledne pridané"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Vytvoriť zoznam skladieb"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Odstrániť"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Zvonenie volajúceho"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Interpreti"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Nedá sa pridať."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Zoznam skladieb sa nedá vytvoriť."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Nedá sa získať značka."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Nemôžete pridať viac hudobných súborov ako %d."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Album"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autor"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Autorské práva"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Vytvoriť zoznam skladieb"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Popis"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Formát"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Nemožné"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Žiadne zoznamy skladieb"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Číslo skladby"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Odstrániť?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Odstrániť?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Zoznam skladieb sa nedá premenovať."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumy"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Pridávanie..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Vykonať odstránenie %d albumov?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Zoznamy skladieb"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Pridať"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Životopis"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Poďakovanie"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Informácie o médiách"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Diskografia"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Text"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Možné"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Prezrieť"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Zoznam skladieb"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Pridať do zoznamu skladieb"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Interpret"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Preposlanie"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Zoznamy skladieb"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Posledne prehrávané"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Dĺžka skladby"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Žiadne skladby"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Táto skladba sa odstráni."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Vybraté skladby sa odstránia."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Tento interpret sa odstráni."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Vybratí interpreti sa odstránia."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Všetci interpreti sa odstránia."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Tento priečinok sa odstráni."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Vybraté priečinky sa odstránia."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Všetky priečinky sa odstránia."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Tento album sa odstráni."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Vybraté albumy sa odstránia."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Všetky albumy sa odstránia."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Tento zoznam skladieb sa vymaže."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Vybraté prehrávacie zoznamy sa odstránia."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Všetky zoznamy skladieb sa odstránia."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Piesne"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Zmeniť poradie"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Uložiť ako zoznam skladieb"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Tón budíka"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Nič nie je vybrané."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nedá sa prehrať. Vyskytla sa chyba."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Nedá sa prehrať. Nepodporovaný typ súboru."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Zdieľať"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dirigen."
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Vyberte zariadenie"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Zobr. ako"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normálny"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Používateľ"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Reč"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Zvýraznenie basov"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Zvýraznenie výšok"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kaviareň"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtuálny 7.1-kanálový zvuk"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Po 15 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Po 30 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Po 1 hodine"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Po 1 hodine a 30 minútach"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Po 2 hodinách"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Automatické vypnutie hudby"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Tento zvukový efekt funguje iba v režime slúchadiel a v režime náhlavnej súpravy Bluetooth."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Hudobný blok"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Nedostatok hudobných súborov na prehrávanie v Hudobnom bloku. Vyžadujú sa hudobné súbory v počte aspoň %d."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Vášeň"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Pokojná"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Radosť"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Aktualizácia knižnice"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Aktualizovať knižnicu?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Zmeniť os"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Žánre"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 album/1 skladba"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 album/skladby: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "Albumy: %d/skladby: %d"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Pomocou hlasových príkazov %1$s, %2$s, %3$s, %4$s, %5$s a %6$s môžete ovládať Prehrávač hudby."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Náhodné prehrávanie %d skladieb"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Ďalšie informácie"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Moja hudba"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Zobrazenie zoznamu"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Prehrať cez Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Skladba bola pridaná medzi obľúbené."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Odstrániť z obľúbených položiek"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Nová"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Skladby"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Miniatúra"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Zoznam"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Otvoriť zoznam skladieb"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Prehrať všetko"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Vybraný zoznam je prázdny."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Nálady"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Roky"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Stará"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Funkcia Hudobný blok analyzuje charakteristiky hudobných súborov uložených v zariadení a automaticky vytvorí zoznamy na prehrávanie."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Prehrávanie zoznamu hudby s podobnými charakteristikami výberom bloku na obrazovke."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Zobrazenie podrobností zoznamu na prehrávanie ťuknutím na aktuálne prehrávaný blok a jeho podržaním."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Blízke zariadenia"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Ak boli pridané nové piesne, budete musieť aktualizovať knižnicu."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Žiadne albumy"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Žiadni interpreti"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Rýchlosť prehrávania"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Koncertná sieň"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Pridať do"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Zobraziť"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Posledne pridané"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Nepoužité"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Sprístupniť v režime offline"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Po %1$d hodinách %2$d minútach"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Po %d hod."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Po %d min."
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Žiadne priečinky"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Žiadne skladby"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "Albumy: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "Interpreti: %d"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "Žánre: %d"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "Zoznamy na prehrávanie: %d"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "Skladby: %d"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Zoznam skladieb"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Podobné albumy"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Skladba"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Zobrazenie miniatúr"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Tento zvukový efekt funguje iba v režime slúchadla."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Všetok obsah"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Na prehratie tohto súboru sa vyžaduje sieťové pripojenie. Skontrolujte sieťové pripojenie a skúste to znova."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Typ súboru nie je podporovaný."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Aktualizácia..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Hľadať"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Hľadať podľa"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Príbuzné videá"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Inteligentná hlasitosť"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Hlasitosť všetkých skladieb sa upraví na úroveň %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Inteligentná hlasitosť je zapnutá"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Inform. o pripojení"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Po 1 hod. %d min."
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Moje zariadenie"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Dlhodobé počúvanie pri vysokej hlasitosti môže spôsobiť poškodenie sluchu. Zvýšiť hlasitosť nad bezpečné úrovne?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Už existuje."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Hľadať blízke zariadenia"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Po 1 hod."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Po 1 hod. 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Po %d hod. 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Po 1 min."
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Prejsť do obchodu"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Pridať\nskladby"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po stiahnutí skladieb z aplikácie Hudba sa zobrazia tu."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po pridaní skladieb medzi obľúbené sa tieto zobrazia tu."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po prehraní skladieb sa tieto zobrazia tu."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po pridaní skladieb do aplikácie %s sa zobrazia tu."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Žiadny zakúpený obsah"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Uložiť ako"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Aktualizácia sa nepodarila."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Vzrušujúca"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Hľadať v mojej hudbe"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Pripojené zariadenia"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Môj prehrávací zoznam %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Žiadne zariadenia"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostupné zariadenia"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Nastaviť"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Odstránenie sa nepodarilo."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Keď sú povolené blízke zariadenia, nemožno použiť prevíjanie dopredu a dozadu."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Nastaviť ako"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slúchadlá"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Reproduktor"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 skladba"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "Skladby: %d"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 stopa"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Náhodne 1 skladba"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Pre vybratú bunku sa nenašla žiadna hudba"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Už nezobrazovať"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Rôzni interpreti"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Pridať na domovskú obrazovku"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Pridať do obľúbených"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Upraviť názov"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Odstrániť z osobného úložného priestoru"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Po stiahnutí skladieb sa zobrazia priečinky"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Hlasitosť"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Vypnúť opakovanie"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Opakovať všetky"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Vypnúť náhodné poradie"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Zapnúť náhodné poradie"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Môj zoznam skladieb"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Predvol. prehráv. zoznamy"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Dátum záznamu"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Obal alb."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 žáner"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "Počet priečinkov: %d"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 priečinok"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 interpret"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 album"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 zoznam na prehrávanie"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Prehrávač hudby"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Premiestniť"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automatické odporúčania"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Od začiatku"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Návrhy pre vás"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Uložiť"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Základné"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Inštrumentálna"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Výšky"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Basy"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "V tomto režime sa nepoužijú žiadne efekty."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simuluje zvuk elektrónkového zosilňovača."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Efekt elektrónkového zosilňovača"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simuluje efekt virtuálneho 7.1-kanálového priestorov. zvuku."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Malá miestnosť"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Veľká miestnosť"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simuluje dozvuk veľkej miestnosti, napríklad divadla."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simuluje dozvuk koncertnej sály."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simuluje dozvuk malého priestoru, napríklad štúdia."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Čistota"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Vynulovať"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Roky"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Žánre"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Skladat."
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Všetky stopy"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Prejsť do rých. zoz."
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Nájsť"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Pridať do rých. zoz."
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Neoprávnený videosúbor pre televízny výstup."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Nedá sa vytvoriť. Dosiahol sa maximálny počet zoznamov skladieb."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Počas pripojenia náhlavnej súpravy Bluetooth sa nedá upraviť hlasitosť."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Počas pripojenia náhlavnej súpravy Bluetooth sa nedá upraviť hlasitosť."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Zastaviť Prehrávač hudby?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Ukončite tichý režim."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Zlyhanie siete."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Pamäťová karta načítaná."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Chyba nastavení zariadenia."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Nie je možné nájsť zhodu pre skladbu."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Načítanie do pamäte"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "Náhlavná súprava BT podporuje iba nastavenie normálnych efektov."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Aplikácia sa ukončí."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Pridané. Prejsť na zoznam prianí?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Prístup k službe môže byť spoplatnený. Pokračovať?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Prístup k obchodu môže byť spoplatnený. Pokračovať?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1-kanálový zvukový efekt funguje iba v režime slúchadiel a v režime náhlavnej súpravy Bluetooth."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5,1-kanálový zvukový efekt funguje iba v režime slúchadiel."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Reproduktor nepodporuje 5.1-kanálové zvukové efekty."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Zobraziť podľa obalu"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Odoslať skladbu"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Ohodnotiť skladbu"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Presunúť v zozname skladieb"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Aktuálny"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Vymazať zoznam skladieb"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Prehrávanie na pozadí"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efekty"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Kúp teraz"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Zoznam prianí"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Široký"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Vibračný reproduktor"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Ťuknutím 2x prehráte/pozastavíte hudbu."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Zdieľať stopu cez Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Vítame vás v sprievodcovi nastavením hudby.\nNasledujúce obrazovky vám pomôžu nakonfigurovať telefón. Chcete pokračovať?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Rýchly zoznam"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Zvukové efekty"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Všetky"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Hlasitosť"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "Vybraté skladby: %d."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Žiadne podcasty"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Nájsť podobné"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Prehrávať na pozadí"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanálový zvuk môžete aktivovať po vypnutí zvukových efektov."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcasty"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Upraviť obrázok"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Prehrávanie ľubovoľných zvukov zastaví a uloží vašu hlasovú nahrávku. Prehrať?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Vybrali ste maximálny počet položiek (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth je odpojený."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanálový zvuk môžete aktivovať iba po vypnutí zvukových efektov."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Fotografovať"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Zobr. hudobné zobrazenie"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauza"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Prehrať album"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Zoradiť podľa"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "História"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Skryť hudobné zobrazenie"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Hľadať značku"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Obsah sl. Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Obsah v telefóne"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Zmeniť obrázok"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Odstrániť údaje Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Použitím funkcie AllShare môžete prenášať hudbu cez streaming do zariadení."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Platnosť"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Typ"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Týmto sa odstráni súbor zo servera aj zo všetkých pripojených zariadení."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Interpreti"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Obal albumu"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Iný obsah"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Názov je príliš dlhý."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Čistota hudby"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Vysoká hlasitosť môže pri dlhodobom počúvaní poškodiť sluch."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Počet použití k dispozícii"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Zvukové efekty sú k dispozícii iba počas pripojenia slúchadiel."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Pridať do osobného úložného priestoru"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Odstrániť z osobného úložného priestoru"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Kontextové okno"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Je kontextové okno. Dvojitým ťuknutím ho zavrite."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Opakovať jednu"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Presúva sa..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Vyberte najviac %d položiek"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Karta"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Zmeniť prehrávač"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Karty"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Automatické odporúčania môžu extrahovať najlepšie pasáže zo zvukových súborov."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Rodičovské hodnotenie"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Súbor nenájdený."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Tón zvonenia volajúceho bol uložený."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bitová hĺbka"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Veľkosť"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "Vybraté: %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po pridaní skladieb do tohto zariadenia sa zobrazia tu."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Dĺžka"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Odstráni sa 1 priečinok."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Žiadny obsah"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Priečinky"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Moje prehráv. zoznamy"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Prehrávač zvuku"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Nastavenia"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Odstraňovanie..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 skladba sa odstráni."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Všetky skladby sa odstránia"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "Vykoná sa odstránenie %d skladieb."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 prehrávací zoznam sa odstráni."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Zoznamy na prehrávanie %d sa odstránia."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albumy sa odstránia."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d interpreti sa odstránia."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d priečinky sa odstránia."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Pripojenie sa nepodarilo."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klasika"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Rozhranie HDMI nepodporuje aktuálny zvukový efekt."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Bluetooth nepodporuje zvukové efekty."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Linkový výstup nepodporuje zvukové efekty."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI nepodporuje zvukové efekty."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Elektrónkový zosilňovač"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Vlastné"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Elektrónk. zos."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "Počet skladieb pridaných do prehrávacieho zoznamu: %d."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "Do prehrávacieho zoznamu bola pridaná 1 skladba."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Prid. skladby do prehr. zozn."
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s sa už používa. Zadajte iný názov."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Dátum nahrávky"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Skladba sa nastavila ako tón budíka."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Nenašli sa žiadne výsledky."
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Predvolený vyzváňací tón"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Skladba sa nastavila ako vyzváňací tón volajúceho."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Skladba sa nastavila ako vyzváňací tón."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Pridať do aktuálneho zoznamu prehrávaných"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Nastavenia ekvalizéra sa použijú pri prehrávaní hudby."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Upozornenie"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album sa odstráni."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "Karta SD"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Úložisko zariadenia"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Názov prehrávacieho zoznamu sa už používa."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Prehrávací zoznam %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Vytvoriť"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Predvoľba ekvalizéra"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automaticky"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klasický"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Efekt prostredia"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Tento typ súboru nie je podporovaný."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po vytvorení prehrávacích zoznamov sa zobrazia tu."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Vyberte zvukové zariadenie"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Názov prehrávacieho zoznamu sa už používa. Zadajte iný názov."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Zoznam prehrávaných položiek"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Zobraziť text piesní"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Skryť text piesne"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Počas hovorov sa nedá prehrávať hudba."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Odstrániť"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Vyberte"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Skladba sa nedá prehrať"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "HOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ZRUŠIŤ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ODSTRÁNIŤ"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Premenovať"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Správa"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Zrušiť"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Obnoviť"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Vybrať všetky"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Odstránené."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Zastaviť"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Neznáma"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Názov"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-mail"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Stiahnuť"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Batéria vybitá."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Zvukové zariadenie"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Koniec"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Upraviť"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Aktualizované."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Odstránené."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Vybrané"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Vyhľadať"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Chyba."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Pamäť plná."
+
+
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Pridať skladbu do zoznamu"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Hlasitosť"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Náhodné poradie"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Opakovať"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Prekročila sa maximálna veľkosť súborov."
+

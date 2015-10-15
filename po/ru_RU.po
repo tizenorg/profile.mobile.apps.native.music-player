@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Загрузка..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Личное"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Время"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Файл не существует."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Мелодия звонка"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Продолжительность"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Расположение"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Установить как"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Добавить на личную страницу"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Удалить с личной страницы"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Переместить в обычное хранилище"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Переместить в личное хранилище"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Выбранные элементы будут перемещены в %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Выбранный элемент будет перемещен в %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Нельзя использовать в режиме съемного носителя."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Добавлена мелодия звонка."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Кнопка"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Выберите элементы"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Дополнительно"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Назад"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Закрыть"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Добавлено."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Сбой."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Нет результатов поиска"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Готово"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Нет элементов"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Добавить на главный экран"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Далее"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Загрузка..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Избранное"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Добавить в личное хранилище"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Отключено от %s. Проверьте состояние сети и подключенного устройства"
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Через Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Через домашнюю сеть"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Пустая запись."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Недоступно во время разговора."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Достигнуто максимальное число символов."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Невозможно предоставить общий доступ к файлу DRM."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Удаление..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "Устройств: %d"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Вкл. движение"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Больше не спрашивать"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Ничего не найдено."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Чтобы отключить сигнал входящего вызова, сообщения или будильника, переверните телефон."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Нет"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Интернет"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Галерея"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Дважды нажмите, чтобы перейти к содержимому."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Объемный звук"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Текст песни"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся композиции, добавленные в папку “Музыка” на мобильном устройстве."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Частота дискретизации"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Добавлено в избранное."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Музыка"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Не добавлено в избранное."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Поиск музыки"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Авторекомендация не поддерживает этот звуковой файл."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Проигрыватель не поддерживает этот тип аудиофайлов."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Избранное"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Популярные файлы"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Недавно добавленные"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Создать список"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Удалить"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Мелодия контакта"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Артисты"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Не удалось добавить."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Невозможно создать список воспроизведения."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Не удается получить тег."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Невозможно добавить больше %d музыкальных файлов."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Альбом"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Автор"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Авторские права"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Создать список"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Описание"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Формат"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Невозможно"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Нет плейлистов"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Номер композиции"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Удалить?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Удалить?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Невозможно переименовать список воспроизведения."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Альбомы"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Добавление..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Удалить альбомы (%d)?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Списки воспроизведения"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Добавить"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Биография"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Исполнители"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Информация"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Дискография"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Слова"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Возможно"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Просмотр"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Список файлов"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Добавить в список"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Исполнитель"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Пересылка"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Плейлисты"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Последние файлы"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Длительность"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Нет композиций"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Эта композиция будет удалена."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Выбранные композиции будут удалены."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Исполнитель будет удален."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Выбранные исполнители будут удалены."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Все исполнители будут удалены."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Эта папка будет удалена."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Выбранные папки будут удалены."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Все папки будут удалены."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Альбом будет удален."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Выбранные альбомы будут удалены."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Все альбомы будут удалены."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Этот список воспроизведения будет удален."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Выбранные списки воспроизведения будут удалены."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Все списки воспроизведения будут удалены."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Песни"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Изменить порядок"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Сохранить как плейлист"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Мелодия сигнала"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Ничего не выбрано."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Сбой воспроизведения. Произошла ошибка."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Невозможно воспроизвести. Неподдерживаемый тип файла."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Отправить"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Дирижеры"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Выберите устройство"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Вид"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Обычный"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Пользователь"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Вокал"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Усиление низких частот"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Усиление высоких частот"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Кафе"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Эмуляция 7.1"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Через 15 мин"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Через 30 мин"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Через 1 час"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Через 1 час 30 мин"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Через 2 часа"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Автоотключение музыки"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Этот звуковой эффект доступен только в режимах наушников и гарнитуры Bluetooth."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Музык. квадрат"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Недостаточно файлов для музыкального квадрата. Требуется не менее %d аудиофайлов."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Страстная"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Спокойная"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Радостная"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Обновление библиотеки"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Обновить библиотеку?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Сменить ось"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Жанры"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "Альбомов: 1/композиций: 1"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "Альбомов: 1/композиций: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "Альбомов: %d/композиций: %d"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Для управления музыкальным проигрывателем используйте голосовые команды %1$s, %2$s, %3$s, %4$s, %5$s и %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Перемешать композиции (%d)"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Дополнительные сведения"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Моя музыка"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Список"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Воспроизвести через Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Композиция добавлена в избранное."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Удалить из избранного"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Новая"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Треки"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Эскиз"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Список"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Открыть список"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Воспроизвести все"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Выбранный список пуст."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Настроение"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Годы"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Старая"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Музыкальный квадрат анализирует характеристики музыкальных файлов, хранящихся на устройстве, и автоматически создает списки воспроизведения."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "При выборе какого-либо квадрата воспроизводятся дорожки соответствующего типа."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Чтобы просмотреть сведения о списке воспроизведения, нажмите и удерживайте квадрат, который проигрывается в данный момент."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Устройства поблизости"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "При добавлении новых песен потребуется обновить библиотеку."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Нет альбомов"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Нет исполнителей"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Скорость воспр."
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Концертный зал"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Добавить"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Просмотр"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Недавно добавленные"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Не используется"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Для автономного просмотра"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Через %1$d ч. %2$d мин."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Через %d ч."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Через %d мин."
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Нет папок"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Нет композиций"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "Альбомов: %d"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "Исполнителей: %d"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "Жанров: %d"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "Плейлистов: %d"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "Композиций: %d"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Список воспроизведения"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Похожие альбомы"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Дорожки"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Эскизы"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Этот звуковой эффект доступен только в режиме наушников."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Все содержимое"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Для воспроизведения этого файла требуется подключение к сети. Проверьте подключение к сети и повторите попытку."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Тип файла не поддерживается."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Обновление..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Поиск"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Поиск по"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Связанные видео"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Смарт-громкость"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Для всех композиций будет настроен уровень громкости %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Включена интеллектуальная громкость"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Сведения о подключ."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Через 1 час %d мин."
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Оптимизация звука"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Мое устройство"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Длительное прослушивание музыки на высокой громкости может вызвать нарушение слуха. Превысить безопасный уровень громкости?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Уже существует."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Поиск устройств поблизости"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Через 1 час"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Через 1 час 1 минуту"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Через %d ч. 1 минуту"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Через 1 минуту"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Перейти в магазин"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Добавить композ."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся загруженные композиции из папки “Музыка”."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся композиции, добавленные в избранное."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся воспроизводимые композиции."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся композиции, добавленные в %s."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Нет приобретенного содержимого"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Сохранить как"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Сбой обновления."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Волнующая"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Поиск в папке “Моя музыка”"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Подключенные устройства"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Мой список воспроизведения %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Нет устройств"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Доступные устройства"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Установлено"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Удаление невозможно."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Если включена функция устройств поблизости, использовать перемотку вперед и назад невозможно."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Установить как"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Наушники"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Громкая связь"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 композиция"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "Композиций: %d"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 композиция"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Случайный порядок: 1 композиция"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Музыка для выбранной ячейки не найдена"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Не показывать снова"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Различные исполнители"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "На главный экран"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Добавить в Избранное"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Изменить заголовок"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Удалить из личного хранилища"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Папки выводятся после загрузки композиций."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Громкость"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Повтор отключен"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Все файлы"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Обычный порядок"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Случайный порядок"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Мой плейлист"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Плейлисты по умолчанию"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Дата записи"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Обложка"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 жанр"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "Папки: %d"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 папка"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 исполнитель"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 альбом"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 плейлист"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Музыка"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Переместить"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Авторекомендации"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Сначала"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Предложения для вас"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Соxранить"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Основные"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Инструментальная"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Высокие частоты"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Басы"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "В этом режиме не применяются эффекты."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Эмулирует тембр лампового усилителя."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Эффект лампового усилителя"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Эмулирует эффект 7.1-канальной аудиосистемы."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Студия"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Большой зал"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Эмулирует звучание в большом помещении."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Эмулирует реверберацию концертного зала."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Эмулирует звучание в небольшом помещении."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Четкость"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Сброс"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Годы"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Жанры"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Композиторы"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Все композиции"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Быстрый список"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Найти"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "В быстрый список"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Недопустимый видеофайл для ТВ-выхода."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Невозможно создать. Достигнуто максимальное число списков воспроизведения."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Невозможно настроить громкость при подключении гарнитуры Bluetooth."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Невозможно настроить громкость при подключении гарнитуры Bluetooth."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Остановить воспроизведение?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Выключите профиль “Без звука”."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Сбой сети."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Карта памяти загружена."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Ошибка параметров устройства."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Невозможно найти совпадение для данной композиции."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Буферизация"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "Гарнитура Bluetooth поддерживает только обычные эффекты."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Приложение будет закрыто."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Добавлено. Перейти к списку желаний?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "За доступ к службе может взиматься плата. Продолжить?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "За доступ к магазину может взиматься плата. Продолжить?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1-канальный звуковой эффект доступен только в режиме наушников и гарнитуры Bluetooth."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1-канальный звуковой эффект доступен только в режиме наушников."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "5.1-канальные звуковые эффекты не поддерживаются динамиком."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Просмотр по обложкам"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Отправить файл"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Оценить файл"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Изменить порядок файлов"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Текущий"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Удалить список воспроизведения"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Фоновое воспроизведение"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Эффекты"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Купить"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Список желаний"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Широкий диапазон"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Вау-вау"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Сабвуфер"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Тремоло"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Постучите дважды для воспроизведения/паузы."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Отправить по Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Добро пожаловать в мастер настройки музыки, с помощью которого можно настроить телефон. Продолжить?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Быстрый список"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Звуковые эффекты"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Все"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "Один файл"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Громкость"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "Выбрано композиций: %d."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Нет подкастов"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Найти похожее"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Фоновое воспроизведение"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-канальный звук можно использовать только тогда, когда звуковые эффекты отключены."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Подкасты"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Изменить изображение"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "При воспроизведении звуков голосовая запись будет остановлена и сохранена. Воспроизвести?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Выбрано максимальное количество элементов (%d)."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Устройство Bluetooth отключено."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-канальный звук можно использовать только тогда, когда звуковые эффекты отключены."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Сделать снимок"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Показать предст. музыки"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Пауза"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Воспроизвести по альбому"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Сортировка по"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Журнал"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Скрыть предст. музыки"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Поиск тегов"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Содерж. Dropbox"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Сод. на устр-ве"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Изменить картинку"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Удалить данные Dropbox"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Можно передавать музыку на устройства с помощью AllShare."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Период действия"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Тип"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Файл будет удален с сервера и со всех подключенных устройств."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Исполнители"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Обложка альбома"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Другие данные"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Слишком длинное имя."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Четкость музыки"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Прослушивание громкой музыки в течение продолжительного времени может привести к ухудшению слуха."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Доступно"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Звуковые эффекты можно использовать, только если подключены наушники."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Добавить в личное хранилище"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Удалить из личного хранилища"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Контекстное всплывающее окно"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Открыто контекстное всплывающее окно. Дважды нажмите, чтобы закрыть его"
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Повторять один раз"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Перемещение..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Выберите до %d элементов."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Вкладка"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Изменить проигрыватель"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Вкладки"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "В авторекомендациях можно использовать выдержки из звуковых файлов."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Родительский контроль"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Файл не найден."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Мелодия контакта сохранена."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Битовая глубина"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Размер"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "Выбрано: %d"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся треки, добавленные на устройство."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Длина"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 папка будет удалена."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Нет содержимого"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Папки"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Мои плейлисты"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Аудиоплеер"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Удаление..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 композиция будет удалена."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Все композиции будут удалены."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "Композиции (%d) будут удалены."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 список воспроизведения будет удален."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Списки воспроизведения (%d) будут удалены."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "Альбомы (%d) будут удалены."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "Исполнители (%d) будут удалены."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Папки (%d) будут удалены."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Сбой при подключении."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Классика"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Рок"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Джаз"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Поп"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Авто"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Данный звуковой эффект не поддерживается HDMI."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Звуковые эффекты не поддерживаются Bluetooth."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Звуковые эффекты не поддерживаются линейным выходом."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Звуковые эффекты не поддерживаются HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Ламп. усилитель"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Создать"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Ламп. усилитель"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "Композиций добавлено в список воспроизведения: %d."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 композиция добавлена в список воспроизведения"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Добав. композ. в список воспр."
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s уже используется. Введите другое имя."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Дата записи"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Трек будет использоваться в качестве сигнала будильника."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Ничего не найдено"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Мелодия по умолчанию"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Композиция установлен в качестве мелодии контакта."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Трек установлен в качестве мелодии контакта."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Добавить в текущий список воспроизведения"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Параметры эквалайзера будут применены при воспроизведении музыки."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Сигнал"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "Будет удален 1 альбом."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "Карта памяти"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Память устройства"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Имя списка воспр. уже используется."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Список воспроизведения %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Создать"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Готовые настройки эквалайзера"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Автоматический"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Классика"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Эффект окружающей среды"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Тип файла не поддерживается."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь выводятся созданные списки воспроизведения."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Выберите звуковое устройство"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Имя списка воспроизведения уже используется. Введите другое имя."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Текущий список воспроизведения"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Показать текст песни"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Скрыть текст песни"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Прослушивать музыку во время вызова невозможно."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Выбрать"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Не удается воспроизвести трек"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТМЕНА"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "УДАЛИТЬ"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Переименовать"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Сообщение"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Отмена"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Обновить"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Выделить все"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Удалено."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Остановить"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Неизвестно"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Название"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-mail"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Загрузить"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Аккумулятор разряжен"
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Звуковое устройство"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Свойства"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Завершить"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Изменить"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Обновлено."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Удалено."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Выбрано"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Поиск"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Ошибка"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Память заполнена."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Очередь"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Громкость"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Случайный порядок"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Повторить"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Превышен максимальный размер файлов."
+

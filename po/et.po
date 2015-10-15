@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Laadimine..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privaatne"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Kellaaeg"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Seda faili pole olemas."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Telefoni helin"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Kestvus"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Asukoht"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Määra"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Lisa isiklikule lehele"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Eemalda isiklikult lehelt"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Teisalda tavamällu"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Teisalda isiklikku mällu"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Valitud uksused teisaldatakse asukohta %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Valitud uksus teisaldatakse asukohta %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Massmälu režiimis ei saa kasutada."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Helin on lisatud."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Nupp"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Vali üksused"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Täpsemalt"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Eelmine"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Sulge"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Lisatud."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Nurjus."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Otsingutulemeid pole"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Valmis"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Üksusi ei ole"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Lisa avaekraanile"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Järgmine"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Allalaadimine..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Lemmik"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Lisa isiklikku mällu"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Ühendus seadmega %s on katkestatud. Kontrollige võrguolekut ja ühendatud seadet."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Rak. Screen Mirroring kaudu"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Koduvõrgu kaudu"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Kirje on tuhi."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Pole kõne ajal saadaval."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Lubatud arv märke on täis."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM-faili ei saa jagada."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Eemaldamine..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d seadet"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Luba liik."
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Ära küsi enam"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Tulemusi ei leitud."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Saabuvate konede, sonumi marguannete ja teiste marguannete vaigistamiseks keerake telefon umber."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Puudub"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galerii"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Toksake kaks korda, et avada sisu."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Ruumiline"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Sõnad"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin pärast nende lisamist mobiilsideseadmes kausta Muusika."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Diskreetimissagedus"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Märgitud lemmikuna."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Muusika"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Pole märgitud lemmikuna."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Otsi muusikat"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automaatne soovitamine ei toeta seda helifaili."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Kahjuks ei toeta mangija seda helifaili tuupi."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Lemmikud"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Enim esitatud"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Hiljuti lisatud"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Loo esitusloend"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Eemalda"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Helistaja helin"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Esitajad"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Ei saa lisada."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Esitusloendit ei ole võimalik luua."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Silti ei saa hankida."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Üle %d muusikafaili ei saa lisada."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Album"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autor"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Autoriõigus"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Loo esitusloend"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Kirjeldus"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Vorming"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Võimatu"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Sünkroonimine..."
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Muusikapala number"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Kustutada?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Eemaldada?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Esitusloendit ei ole võimalik ümber nimetada."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumid"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Lisamine..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Kas kustutada %d albumit?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Esitusloendid"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Lisa"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Elulugu"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Tiitrid"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Meediumiteave"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Diskograafia"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Laulusõnad"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Võimalik"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Eelvaade"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Lugude loend"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Lisa esitusloendisse"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Esitaja"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Edastamine"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Esitusloendid"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Hiljuti esitatud"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Muusikapala pikkus"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Laule pole"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "See lugu kustutatakse."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Valitud lood kustutatakse."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "See esitaja kustutatakse."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Valitud esitajad kustutatakse."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Koik esitajad kustutatakse."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "See kaust kustutatakse."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Valitud kaustad kustutatakse."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Koik kaustad kustutatakse."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "See album kustutatakse."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Valitud albumid kustutatakse."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Koik albumid kustutatakse."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "See esitusloend kustutatakse."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Valitud esitusloendid kustutatakse."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Koik esitusloendid kustutatakse."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Laulud"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Järjesta ümber"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Salvesta esitusloendina"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Alarmi toon"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Valik tegemata."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ei saa esitada. Ilmnes tõrge."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Ei saa esitada. Toetuseta failituup."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Jaga"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dirigen-did"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Vali seade"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Kuva:"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Tavaline"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Kasutaja"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Vokaal"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Bassi võimendamine"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Kõrg. helide võimendamine"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kohvik"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtuaal. kanal 7.1"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 minuti järel"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "30 minuti pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "1 tunni pärast"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 tunni ja 30 minuti pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 tunni pärast"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Muusika automaatselt välja"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "See heliefekt töötab ainult kõrvaklappide ja Bluetooth-peakomplekti režiimides."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Muusikaruut"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Pole piisavalt muusikafaile, mida esitada Muusikaruudus. Nõutav on vähemalt %d muusikafaili."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Kirg"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Rahulik"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Rõõm"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Teegi värskendamine"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Kas värskendada teeki?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Vaheta telge"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Žanrid"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 album / 1 lugu"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 album / %d lugu"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d albumit / %d lugu"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Saate juhtida MP3-mangijat haalkasklustega %1$s, %2$s, %3$s, %4$s, %5$s ja %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Juhuesita %d lugu"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Lisateave"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Minu muusika"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Loendivaade"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Esita Group Play kaudu"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Lugu on lisatud lemmikutesse."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Eemalda lemmikutest"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Uus"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Lood"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Pisipilt"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Loend"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Ava esitusloend"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Esita kõiki"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Valitud loend on tühi."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Meeleolud"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Aastad"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Vana"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Muusikaruut analuusib seadmesse salvestatud muusikafailide naitajaid ja loob automaatselt esitusloendid."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Ekraanil oleva ruudu valimisel saate esitada sarnaste naitajatega muusikaloendit."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Esitusloendi uksikasjade kuvamiseks toksake ja hoidke sorme praegu esitataval ruudul."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Läh. asuvad sead."
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Kui lisate uusi laule, peate teeki varskendama."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Albumid puuduvad"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Esitajaid ei ole"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Esituskiirus"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Kontserdisaal"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Lisa"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Kuva"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Hiljuti lisatud"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Pole kasutusel"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Tee saadaolevaks üh.-ta olekus"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d h %2$d min pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d tunni pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d minuti pärast"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Kaustasid pole"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Lugusid pole"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albumit"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d esitajat"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d žanrit"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d esitusloendit"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d pala"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Esitusloend"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Sarnased albumid"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Pala"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Pisipildivaade"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "See heliefekt töötab ainult kõrvaklappide režiimis."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Kogu sisu"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Selle faili esitamiseks nõutakse võrguühendust. Kontrollige oma võrguühendust ja proovige uuesti."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Failitüüpi ei toetata."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Värskendamine..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Otsi"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Otsimisalus"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Seotud videod"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Nutikas helitugevus"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Koigi palade helitugevus kohandatakse tasemele %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Nutikas helitugevus on aktiveeritud"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Ühenduse teave"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 tunni ja %d minuti pärast"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Minu seade"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Kõrgel helitugevusel kuulamine pika aja jooksul võib kahjustada teie kuulmist. Kas suurendada helitugevust üle ohutu taseme?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Juba olemas."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Otsi lähedalolevaid seadmeid"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 tunni pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 tunni ja 1 minuti pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d tunni ja 1 minuti pärast"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 minuti pärast"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Mine poodi"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Lisa palasid"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin parast nende allalaadimist uksusest Muusika."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin parast nende lisamist lemmikutesse."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin parast nende esitamist."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin parast nende lisamist esitusloendisse %s."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Ostetud sisu pole"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Salvesta nimega"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Kustutamine nurjus."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Põnev"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Otsi minu muusikast"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Ühendatud seadmed"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Minu esitusloend %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Seadmeid pole"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Saadaolevad seadmed"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Määra"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Eemaldamine ebaõnnestus."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Kui lähedalolevad seadmed aktiveeritakse, ei saa te kasutada edasi- ja tagasikerimist."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Määra"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kõrvaklapid"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Kõlar"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 laul"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d laulu"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 pala"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Juhuesita 1 lugu"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Valitud kohale ei leitud muusikat"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ära näita uuesti"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Erinevad artistid"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Lisa avaekraanile"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Lisa Lemmikutesse"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Muuda pealkirja"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Eemalda isiklikust mälust"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Kaustad kuvatakse pärast lugude allalaadimist"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Helitugevus"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Kordus väljas"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Korda kõiki"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Segamine välja"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Segamine sisse"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Minu esitusloend"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Vaikimisi esitusloendid"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Salvestamise kuupäev"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Alb. kuj."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 žanr"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d kaustad"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 kaust"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 esitaja"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 album"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 esitusloend"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "MP3-mängija"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Teisalda"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automaatsed soovitused"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Alates algusest"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Soovitused teile"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Salvesta"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Põhiline"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrumentaalne"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Kõrged helid"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Bass"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Selles režiimis pole rakendatud ühtegi efekti."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simuleerib elektronlamp-võimendi tämbrit."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Elektronlampvõimendi efekt"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simul. 7.1-kanalilise ruumilise virtuaalheli kaja."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Väike ruum"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Suur ruum"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simuleerib suure ruumi (nt teatrisaali) kaja."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simuleerib kontserdisaali kaja."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simuleerib väikese ruumi (nt stuudio) kaja."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Selgus"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Lähtesta"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Aastad"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Žanrid"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Heli-loojad"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Kõik lood"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Mine kiirl.-e"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Otsi"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Lisa kiirl.-e"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Volitamata videofail TV-väljundi jaoks."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Ei saa luua. Maksimaalne arv esitusloendeid on saavutatud."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Bluetooth-peakomplekti ühendamise ajal ei saa helitugevust reguleerida."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Helitugevust ei saa reguleerida, kui Bluetooth-peakomplekt on ühendatud."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Sulgeda MP3-mängija?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Palun väljuge vaiksest režiimist."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Võrgutõrge."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Mälukaart on laaditud."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Seadme seadete tõrge."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Ei leidnud laulule vastet."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Puhverdamine"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT-peakomplekt toetab ainult tavalist efektide seadistust."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Rakendus suletakse."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Lisatud. Kas minna soovinimekirja?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Teenuse kasutamine võib olla tasuline. Kas jätkata?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Poe kasutamine võib olla tasuline. Kas jätkata?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "5.1-kanaline heliefekt töötab ainult kõrvaklappide ja Bluetooth-peakomplekti režiimis."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1-kanaline heliefekt töötab ainult kõrvaklappide režiimis."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Kõlar ei toeta 5.1-kanalilist heli."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Kuva katteviisi järgi"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Saada lugu"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Hinda lugu"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Teisalda esitusloendisse"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Praegune"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Kustuta esitusloend"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Taustamuusika esitamine"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efektid"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Osta kohe"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Soovinimekiri"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Laialdane"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Bassikõlar"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Väriheli"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Muusika esitamiseks/peatamiseks toksake kaks korda."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Jaga lugu Bluetoothi kaudu"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Tere tulemast muusika häälestusviisardisse.\nJärgnevad kuvad aitavad teil oma telefoni seadistada. Kas jätkata?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Kiirloend"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Heliefektid"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Kõik"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Helitugevus"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d lugu on valitud."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Podcaste ei ole"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Otsi sarnaseid"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Taustaesitus"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalit saab aktiveerida ainult siis, kui heliefektid on valjas."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Pod-castid"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Redigeeri pilti"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Helide esitamine lõpetab ja salvestab teie häälsalvestuse. Kas esitada?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Maksimaalne arv üksusi (%d) on valitud."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetoothi ühendus katkestatud."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 kanalit saab aktiveerida ainult siis, kui heliefektid on valjas."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Pildista"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Kuva muusikavaade"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Paus"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Esita albumit"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Loendi järgi"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Ajalugu"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Peida muusikavaade"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Otsi silti"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropboxi sisu"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Telefoni sisu"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Muuda pilti"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Kustuta Dropboxi andmed"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Muusikat saate seadmetes voogesitada AllShare'i abil."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Kehtivus"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Tüüp"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Sellega kustutatakse fail serverist ja ka mis tahes uhendatud seadmest."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Esitajad"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Albumi kujundus"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Muu sisu"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Nimi on liiga pikk."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Muusika selgus"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Valju heli kuulamine pika aja valtel voib pohjustada kuulmiskahjustusi."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Võimalikud kasutusviisid"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Heliefektid on saadaval ainult siis, kui kõrvaklapid on ühendatud."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Lisage oma isiklikku mällu"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Eemaldage oma isiklikust mälust"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Kontekstiline hüpik"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Kontekstiline hüpik on avatud. Toksake kaks korda, et seda sulgeda."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Korda ühte"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Teisaldamine..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Saate valida kuni %d üksust"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Vahekaart"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Vaheta mängijat"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Vahekaardid"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Automaatsed soovitused voivad ekstraktida esiletostud helifailidest."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Vanemate hinnang"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Faili ei leitud."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Helistaja helin on salvestatud."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bitisügavus"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Suurus"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d valitud"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Lood kuvatakse siin pärast nende lisamist siia seadmesse."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Pikkus"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 kaust kustutatakse."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Sisusid ei ole"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Kaustad"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Minu esitusloendid"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "Helimängija"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Seaded"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Kustutamine..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 lugu kustutatakse."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Kõik lood kustutatakse"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "%d lugu kustutatakse."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 esitusloend kustutatakse."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d esitusloendit kustutatakse."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albumit kustutatakse."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d esitajat kustutatakse."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d kausta kustutatakse."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Ühendamine nurjus."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klassi-\nkaline"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Džäss"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Popmuusika"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto."
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI ei toeta praegust heliefekti."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Bluetooth-ühendus ei toeta heliefekte."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Liiniväljund ei toeta heliefekte."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI-ühendus ei toeta heliefekte."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Elektronlampvõimendi"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Kohandus"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Elektr.võimendi"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d lugu on lisatud esitusloendisse."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 lugu on lisatud esitusloendisse"
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Lugude lisamine esit.loendisse"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s on juba kasutusel. Sisestage teine nimi."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Salvestamise kuupäev"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Lugu on määratud märguande tooniks."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Tulemusi ei leitud"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Vaikehelin"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Lugu on määratud helistaja helinaks."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Lugu on määratud helinaks."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Lisa praegu esitatavasse loendisse"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Ekvalaiseri seaded rakendatakse muusika esitamisel."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Märguanne"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album kustutatakse."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Seadme mälu"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Esitusloendi nimi on juba kasutusel."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Esitusloend %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Loomine"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Ekvalaiseri eelseadistus"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automaatne"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klassika"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Keskkonna efekt"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Failitüüpi ei toetata."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Esitusloendid kuvatakse siin parast nende loomist."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Valige heliseade"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Esitusloendi nimi on juba kasutusel. Sisestage teine nimi."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Praegu esitatav loend"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Näita laulusõnu"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Peida laulusõnad"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Muusikat ei saa kõnede ajal esitada."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Vali"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Lugu ei saa esitada"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "TÜHISTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "KUSTUTA"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Sõnum"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Tühista"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Värskenda"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Vali kõik"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Kustutatud."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Peata"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Tundmatu"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Pealkiri"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-post"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Lae alla"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Aku on peaaegu tühi."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Heliseade"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Lõpeta"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Muuda"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Värskendatud."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Eemaldatud."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Valitud"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Otsi"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Tõrge"
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Mälu on täis."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Järjekord"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Helitugevus"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Juhuesitus"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Korda"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maksimaalne failide suurus on ületatud."
+

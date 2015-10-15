@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Laden..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privé"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Tijd"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Dit bestand bestaat niet."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Beltoon"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Duur"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Locatie"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Instellen als"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Toevoegen aan persoonlijke pagina"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Wis van persoonl. pagina"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Verplaats naar normale opslag"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Verplaats naar persoonlijke opslag"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "De geselecteerde items worden verplaatst naar %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Het geselecteerde item wordt verplaatst naar %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Kan niet worden gebruikt tijdens Massaopslag-modus."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Beltoon toegevoegd."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Knop"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Items selecteren"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Geavanceerd"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Vorige"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Sluiten"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Toegevoegd."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Mislukt."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Geen zoekresultaten"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "Gereed"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Geen items"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Toevoegen aan startpagina"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Volgende"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Downloaden..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favoriet"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Toevoegen aan persoonlijke opslag"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Verbinding verbroken met %s. Controleer de netwerkstatus en het aangesloten apparaat."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Via Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Via thuisnetwerk"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Geen gegevens."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Niet beschikbaar tijdens gesprek."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximumaantal tekens bereikt."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Kan DRM-bestand niet delen."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Verwijderen..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d apparaten"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Beweging aan"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Niet meer vragen"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Geen resultaten gevonden."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Keer telefoon om voor dempen van inkomende oproepen, berichtwaarschuwingen en alarmen."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Geen"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galerij"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Tik tweemaal om de inhoud te verplaatsen."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Surround"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Songteksten"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers aan Muziek hebt toegevoegd op uw mobiele apparaat, worden ze hier weergegeven."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Samplesnelheid"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Gemarkeerd als een favoriet."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Muziek"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Niet gemarkeerd als een favoriet."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Muziek zoeken"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Dit audiobestand wordt niet ondersteund voor automatisch aanbevelen."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "MP3-speler ondersteunt dit type audiobestand helaas niet."
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Favorieten"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Meest afgespeeld"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Onlangs toegevoegd"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Afspeellijst maken"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Wissen"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Beltoon beller"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Artiest"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Kan niet toevoegen."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Kan de afspeellijst niet maken."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Kan tag niet ophalen."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Kan niet meer dan %d muziekbestanden toevoegen."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Album"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Auteur"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Copyright"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Afspeellijst maken"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Omschrijving"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Formaat"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Niet mogelijk"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Geen afspeellijsten"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Tracknummer"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Verwijderen?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Verwijderen?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Kan de naam van de afspeellijst niet wijzigen."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albums"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Toevoegen..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "%d albums verwijderen?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Afspl. lijsten"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Toevoegen"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografie"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Credits"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Media-info"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Discografie"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Songtekst"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Mogelijk"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Overzicht"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Afspeellijst"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Naar afspeellijst"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Artiest"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Doorsturen"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Afspeellijsten"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Onlangs afgespeeld"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Lengte track"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Geen nummers"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Dit nummer wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "De geselecteerde nummers worden verwijderd."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Deze artiest wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "De geselecteerde artiesten worden verwijderd."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Alle artiesten worden verwijderd."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Deze map wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "De geselecteerde mappen worden verwijderd."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Alle mappen worden verwijderd."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Dit album wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "De geselecteerde albums worden verwijderd."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Alle albums worden verwijderd."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Deze afspeellijst wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "De geselecteerde afspeellijsten worden verwijderd."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Alle afspeellijsten worden verwijderd."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Nummers"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Indeling wijzigen"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Opslaan als afspeellijst"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Alarmtoon"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Niets geselecteerd."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Kan niet afspelen. Fout opgetreden."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Kan niet afspelen. Niet-ondersteund bestandstype."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Delen"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dirigent"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Apparaat selecteren"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Weergeven als"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normaal"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Gebruiker"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Zang"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Basboost"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Hoge-tonenboost"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Café"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtueel 7.1-kanaals"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Na 15 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Na 30 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Na 1 uur"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Na 1 uur en 30 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Na 2 uur"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Muziek automatisch uit"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Dit geluidseffect werkt alleen in de oortelefoon- en Bluetooth-headsetstand."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Music square"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Onvoldoende muziekbestanden om af te spelen in Music square. Ten minste %d bestanden vereist."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Passion"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Rustig"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Joy"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Bibliotheek bijwerken"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Bibliotheek bijwerken?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "As wijzigen"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Genres"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 album/1 nummer"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 album/%d nummers"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d albums/%d nummers"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "U kunt de Muziekspeler bedienen met de spraakopdrachten %1$s, %2$s, %3$s, %4$s, %5$s en %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "%d nummers in willekeurige volgorde"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Meer info"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Mijn muziek"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Lijstweergave"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Afspelen via Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Nummer toegevoegd aan favorieten."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Verwijderen uit favorieten"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Nieuw"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Nummers"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Miniatuurweergave"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Lijst"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Afspeellijst openen"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Alles afspelen"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Geselecteerde lijst is leeg."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Stemmingen"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Jaren"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Oud"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Music square analyseert kenmerken van muziekbestanden die in uw apparaat zijn opgeslagen en maakt automatisch afspeellijsten."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Afspeellijst met muziek met vergelijkbare kenmerken afspelen door een vierkantje op het scherm te selecteren."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Afspeellijstdetails weergeven door te tikken op het vierkantje dat momenteel wordt afgespeeld en dat vast te houden."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Apparaten in de buurt"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "U moet de bibliotheek bijwerken als nieuwe nummers zijn toegevoegd."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Geen albums"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Geen artiesten"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Afspeelsnelheid"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Concertzaal"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Toevoegen aan"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Weergeven"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Onlangs toegevoegd"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Niet gebruikt"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Offline beschikbaar maken"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Na %1$d uur %2$d min"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Na %d uur"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Na %d min."
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Geen mappen"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Geen nummers"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albums"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d artiesten"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d genres"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d afspeellijsten"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d nummers"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Afspeellijst"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Vergelijkbare albums"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Nummer"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Miniatuurweergave"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Dit geluidseffect werkt alleen in oortelefoonstand."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Alle inhoud"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Er is een netwerkverbinding vereist om dit bestand af te spelen. Controleer de netwerkverbinding en probeer het opnieuw."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Niet-ondersteund bestandstype."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Bijwerken..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Zoek"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Zoeken op"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Samenhangende video's"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Slim volume"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Het volume van alle nummers wordt aangepast aan niveau %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Slim volume wordt ingeschakeld"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Verbindingsgegevens"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Na 1 uur %d min."
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Mijn apparaat"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Als u lange tijd luistert bij een hoog volume kan uw gehoor beschadigd raken. Wilt u het volume verhogen tot boven een veilig niveau?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Bestaat al."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Zoeken naar apparaten in de buurt"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Na 1 uur"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Na 1 uur 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Na %d uur 1 min."
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Na 1 min."
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Ga naar winkel"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Nummers\ntoev."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers hebt gedownload van Muziek, worden ze hier weergegeven."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers aan uw favorieten hebt toegevoegd, worden ze hier weergegeven."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers hebt afgespeeld, worden ze hier weergegeven."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers aan %s hebt toegevoegd, worden ze hier weergegeven."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Geen gekochte inhoud"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Opslaan als"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Bijwerken mislukt."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Spannend"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Zoeken in mijn muziek"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Aangesloten apparaten"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Mijn afspeellijst %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Geen apparaten"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Beschikb. apparaten"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Ingesteld"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Verwijderen mislukt."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Kan niet snel vooruit of terug spoelen wanneer apparaten in de buurt zijn ingeschakeld."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Instellen als"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Koptelefoons"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Luidspreker"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 nummer"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d nummers"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 nummer"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "1 nummer in willekeurige volgorde"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Geen muziek gevonden voor geselecteerde cel"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Niet meer tonen"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Diverse artiesten"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Toevoegen aan startscherm"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Toevoegen aan favorieten"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Titel bewerken"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Verwijderen uit persoonlijke opslag"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Nadat u nummers hebt gedownload, worden mappen weergegeven"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Volume"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Herhalen uit"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Alles herhalen"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Willekeurig uit"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Willekeurig aan"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Mijn afspeellijst"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Standaardafspeellijsten"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Opnamedatum"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Albumill."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 genre"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d mappen"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 map"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 artiest"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 album"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 afspeellijst"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "MP3-speler"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Verplaatsen"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automatische aanbevelingen"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Vanaf het begin"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Suggesties voor u"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Opslaan"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Basis"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrument"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Hoge tonen"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Lage tonen"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Er worden geen effecten toegepast in deze stand."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simuleert het tube amp-timbre."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Tube amp effect"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simuleert surroundgeluidseffect van virtueel 7.1 kanaal."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Kleine ruimte"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Grote kamer"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simuleert weerkaatsing van grote ruimte, bijv. theater."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simuleert de weerkaatsing van een concertzaal."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simuleert weerkaatsing van kleine ruimte, bijv. studio."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Helderheid"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Resetten"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Jaren"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Genres"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Componisten"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Alle nummers"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Naar Quick list"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Zoeken"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Toev. Quick list"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Videobestand niet toegestaan voor TV-uit."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Niet mogelijk. Maximumaantal afspeellijsten bereikt."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Kan volume niet aanpassen bij het verbinden van Bluetooth-headset."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Kan volume niet aanpassen bij verbinding met Bluetooth-headset."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Muziekspeler stoppen?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Stille stand afsluiten aub"
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Netwerkfout."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Geheugenkaart geladen."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Fout in apparaatinstellingen."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Kan geen overeenkomstig nummer vinden."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Bufferen..."
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT-headset ondersteunt alleen instelling voor normale effecten."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Applicatie wordt gesloten."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Toegevoegd. Naar voorkeurslijst gaan?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Er kunnen kosten gemoeid zijn met de toegang tot de service. Doorgaan?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Er kunnen kosten gemoeid zijn met de toegang tot de winkel. Doorgaan?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "Geluidseffect van 5.1 kanaals werkt alleen in de oortelefoon- en Bluetooth-headsetstand."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1-kanaals geluidseffect werkt alleen met oortelefoonstand."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Geluidseffecten 5.1-kanaal niet ondersteund door luidspreker."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Albumillustratie weergeven"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Track verzenden"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Track beoordelen"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Verplaatsen in afspeellijst"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Huidig"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Afspeellijst verwijderen"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Afspelen op achtergrond"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Effecten"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Nu kopen"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Voorkeurslijst"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Ruimtelijk"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Vibrafoonwoofer"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Vibrato"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Tik tweemaal voor muziek afspelen/onderbreken."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Nummer delen via Bluetooth"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Welkom bij de wizard Muziek instellen.\nIn de volgende schermen kunt u uw telefoon configureren. Doorgaan?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Quick list"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Geluidseffecten"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Alles"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Volume"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d nummers geselecteerd."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Geen podcasts"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Vergelijkbare zoeken"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Afspelen op achtergrond"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanaals kan alleen worden geactiveerd wanneer geluidseffecten zijn uitgeschakeld."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcasts"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Afbeelding bewerken"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Als u geluiden afspeelt, wordt de spraakopname gestopt en opgeslagen. Afspelen?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Maximumaantal items (%d) geselecteerd."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Verbinding met Bluetooth verbroken."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1-kanaal kan alleen worden geactiveerd wanneer geluidseffecten zijn uitgeschakeld."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Foto maken"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Muziekweergave tonen"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauze"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Album afspelen"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Sorteren op"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Geschiedenis"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Muziekweergave verbergen"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Tag zoeken"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox-inhoud"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Inhoud telefoon"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Afbeelding wijzigen"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Verwijder Dropbox-geg."
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Gebruik AllShare voor streaming van muziek naar apparaten."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Geldigheid"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Type"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Hiermee wordt het bestand verwijderd van de server en andere aangesloten apparaten."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Artiesten"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Album art"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Overige inhoud"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Naam te lang."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Helderheid muziek"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Hoog volume kan uw gehoor beschadigen wanneer u er lang naar luistert."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Aantal keer dat het gebruikt mag worden"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Geluidseffecten zijn alleen beschikbaar wanneer koptelefoon is aangesloten."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Toevoegen aan uw persoonlijke opslag"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Verwijderen uit uw persoonlijke opslag"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Contextpop-up"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Er is een contextpop-up open. Tik tweemaal om deze te sluiten."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Eén keer herhalen"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Verplaatsen..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Selecteer maximaal %d items"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Tabblad"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Andere speler"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Tabbladen"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Met automatische aanbevelingen haalt u de hoogtepunten uit geluidsbestanden."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Leeftijdsclassificatie"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Bestand niet gevonden."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Beltoon beller opgeslagen."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Bitdiepte"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Grootte"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d geselecteerd"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u nummers aan dit apparaat hebt toegevoegd, worden ze hier getoond."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Lengte"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 map wordt verwijderd."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Geen inhoud"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Mappen"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Mijn afspeellijsten"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "MP3-speler"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Instellingen"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Verwijderen..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "1 nummer wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Alle nummers worden verwijderd"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "%d nummers worden verwijderd."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 afspeellijst wordt verwijderd."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d afspeellijsten worden verwijderd."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albums worden verwijderd."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d artiesten worden verwijderd."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d mappen worden verwijderd."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Verbinding mislukt."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klassiek"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Automatisch"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "Huidig geluidseffect niet ondersteund door HDMI."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Geluidseffecten worden niet ondersteund door Bluetooth."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Geluidseffecten worden niet ondersteund door buitenlijn."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "Geluidseffecten worden niet ondersteund door HDMI."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Tube amp"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Aangepast"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Tube amp"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d nummers toegevoegd aan afspeellijst."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 nummer toegevoegd aan afspeellijst."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Voeg nrs toe aan afspeellijst"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s al in gebruik. Voer andere naam in."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Opnamedatum"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Nummer ingesteld als alarmtoon."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Geen resultaten gevonden"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Standaardbeltoon"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Nummer ingesteld als beltoon beller."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Nummer ingesteld als beltoon."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Nu toevoegen aan afspeellijst"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Equalizerinstellingen worden toegepast tijdens afspelen van muziek."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Waarschuwing"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album wordt verwijderd."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Apparaatopslag"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Afspeellijstnaam al in gebruik."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Afspeellijst %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Maken"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Voorinstelling equalizer"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automatisch"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klassiek"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Omgevingseffect"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Het bestandstype wordt niet ondersteund."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nadat u afspeellijsten hebt gemaakt, worden ze hier weergegeven."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Audioapparaat selecteren"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Naam afspeellijst is al in gebruik. Voer een andere naam in."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Lijst wordt nu afgespeeld"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Songteksten weergeven"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Songteksten verbergen"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Kan geen muziek afspelen tijdens oproepen."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Wissen"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Selecteren"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Kan nummer niet afspelen"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GEREED"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULEREN"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "VERWIJDEREN"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Naam wijzigen"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Bericht"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Annuleren"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Vernieuwen"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Alles selecteren"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Verwijderd."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Stoppen"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Onbekend"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Titel"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "E-mail"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Downloaden"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Batterij bijna leeg."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Audioapparaat"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Gegevens"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Stoppen"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Bewerken"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Bijgewerkt."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Verwijderd."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Geselecteerd"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Scannen"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Fout."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Geheugen vol."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Wachtrij"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Volume"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Willekeurig"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Herhalen"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maximumgrootte van bestanden overschreden."
+

@@ -1,0 +1,503 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define IMG_VOLUME_WIDGET_BG				"lite/play_volume_bg.#.png"
+#define IMG_VOLUME_WIDGET_BG_H				"player-view/T02_volume_popup_bg.png"
+#define IMG_VOLUME_WIDGET_PROGRESS_IMG			"lite/core_progress_bar.#.png"
+//#define IMG_VOLUME_WIDGET_PROGRESS_BAR_BG		"player-view/T02_volume_popup_progress_bg.png"
+#define IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE	 	"lite/core_progress_handle_normal.png"
+#define IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE_PRESS	"lite/core_progress_handle_press.png"
+#define IMG_VOLUME_WIDGET_SOUNDALIVE                     "player-view/T02_volum_icon_SA.png"
+#define IMG_VOLUME_WIDGET_SOUNDALIVE_PRESS                     "player-view/T02_volum_icon_SA_press.png"
+
+ //#define VOL_W 	40
+ //#define VOL_H	228
+
+group { name: "mp-volume-widget";
+	images {
+		image: IMG_VOLUME_WIDGET_BG COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_IMG COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE_PRESS COMP;
+		//image: IMG_VOLUME_WIDGET_SOUNDALIVE COMP;
+		//image: IMG_VOLUME_WIDGET_SOUNDALIVE_PRESS COMP;
+	}
+	 parts {
+		part {
+                        name: "bg";
+		        type: IMAGE;
+		        //scale: 1;
+		        mouse_events: 0;
+		        repeat_events: 0;
+		        description {
+                                state: "default" 0.0;
+		                rel1 { relative: 0.0 0.08;}
+			        rel2 { relative: 1.0 1.0;}
+			        //color: 41 41 41 255;
+			        image {
+					normal: IMG_VOLUME_WIDGET_BG;
+				}
+			        color: 200 180 200 160;
+		        }
+		}
+	        part {
+                        name: "padding_top";
+			type: SPACER;
+		        //scale: 1;
+			description { 
+                                state: "default" 0.0;
+				rel1.to: "bg";
+				rel2 { relative: 1.0 0.05; to: "bg"; }
+				//min: 0 10;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+		part {
+                        name: "padding_bottom";
+			type: SPACER;
+			//scale: 1;
+			description {
+                                state: "default" 0.0;
+				rel1 { relative: 0.0 0.95; to: "bg"; }
+				rel2.to: "bg";
+				//min: 0 10;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+		part {
+                        name: "padding_above_indicator";
+			type: SPACER;
+			//scale: 1;
+			description { 
+                                state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "volume_text_area"; }
+				rel2 { relative: 1.0 0.0; to: "volume_text_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+		part {
+                        name: "volume_text_area";
+			type: SPACER;
+			//scale: 1;
+			mouse_events: 0;
+			description { 
+                                state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to_y: "padding_bottom"; }
+				rel2 { relative: 1.0 0.0; to_y: "padding_bottom"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+		part {
+                        name: "volume_widget_indicator";
+			type: TEXT;
+			//scale: 1;
+			mouse_events: 0;
+			effect: FAR_SHADOW BOTTOM;
+			description { 
+                                state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to_y: "volume_text_area"; }
+				rel2 { relative: 1.0 1.0; to_y: "volume_text_area"; }
+				min: 0 20;
+				fixed: 0 1;
+				align: 0.0 0;
+				text {
+					size: 28;
+					align: 0.5 0.5;
+					min: 1 1;
+				}
+				color: 0 0 0 255;
+				//color3: 51 57 52 255;
+			}
+		}
+		part {
+                        name: "touch_area";
+			type: IMAGE;
+			//scale: 1;
+			mouse_events: 1;
+			description {
+                                state: "default" 0.0;
+				rel1 { to: "slider_area"; offset: -15 0; }
+				rel2 { to: "slider_area"; offset:  15 0; }
+				//image.normal: IMG_VOLUME_WIDGET_BG;
+				color: 150 150 150 255;
+			}
+		}
+		part {
+                        name: "slider_area";
+			type: IMAGE;
+			//scale: 1;
+			mouse_events: 0;
+			description {
+                                state: "default" 0.0;
+				rel1 { relative: 0.5 1.0; to: "padding_top"; }
+				rel2 { relative: 0.5 0.0; to: "padding_above_indicator"; }
+				min: 6 0;
+				fixed: 1 1;
+				align: 0.5 0.0;
+				image {
+					normal: IMG_VOLUME_WIDGET_PROGRESS_IMG;
+				}
+				color: 179 179 179 255;
+			}
+		}
+		part {
+                        name: "slider_bar";
+			type: IMAGE;
+			//scale: 1;
+			mouse_events: 0;
+			description { 
+                                state: "default" 0.0;
+				rel1 { relative: 0.0 0.5; to_x: "slider_area"; to_y: "volume_widget_slider_handle"; }
+				rel2.to: "slider_area";
+                                min: 6 0;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				image {
+					normal: IMG_VOLUME_WIDGET_PROGRESS_IMG;
+				}
+				color: 179 179 179 255;
+			}
+		}
+		part {
+                        name: "dragable_confine";
+			type: RECT;
+			//scale: 1;
+			mouse_events: 0;
+			description{ 
+                                state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "slider_area"; }
+				rel2 { relative: 0.5 1.0; to: "slider_area"; }
+				min: 100 0;
+				fixed: 1 0;
+				align: 0.5 0.0;
+				visible: 0;
+			}
+		}
+		part {
+                        name: "volume_widget_slider_control_area";
+			type: RECT;
+			//scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description {
+				state: "default" 0.0;
+				min:  100 10;
+				fixed: 1 1;
+				align: 0 0;
+			        color: 0 0 0 0;
+			}
+			dragable {
+				x: 0 0 0;
+				y: -1 1 0;
+				confine: "dragable_confine";
+			}
+		}
+		part {
+                        name: "volume_widget_slider_handle";
+			type: IMAGE;
+			//scale: 1;
+			mouse_events:0;
+			description { 
+                                state: "default" 0.0;
+				rel1 { relative: 0.5 0.5; to: "volume_widget_slider_control_area"; }
+				rel2 { relative: 0.5 0.5; to: "volume_widget_slider_control_area"; }
+				image.normal: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE;
+				color: 0 112 204 255;
+				min: 45 45;
+				fixed: 1 1;
+				align: 0.5 0.5;
+			}
+			description { state: "press" 0.0;
+				inherit: "default";
+				image.normal: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE_PRESS;
+				color: 0 112 204 255;
+				min: 30 30;
+			}
+		}
+
+		part {
+			name: "volume_widget_slider_bar";
+			type: RECT;
+			//scale: 1;
+			mouse_events:1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.45 0.55; to: "volume_widget_slider_handle"; }
+				rel2.to: "slider_area";
+				min: 6 0;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				color: 0 112 204 255;
+			}
+			description { state: "press" 0.0;
+			inherit: "default";
+			color: 0 112 204 255;
+			}
+		}
+	}
+
+	  programs
+	  {
+
+		program {
+			name: "clicked";
+			action: SIGNAL_EMIT "clicked" "*";
+		}
+		program{
+			name: "volume_bar_down";
+			source: "volume_widget_slider_control_area";
+			signal: "mouse,down,1";
+			action: STATE_SET "press" 0.0;
+			target: "volume_widget_slider_handle";
+			target: "volume_widget_slider_bar";
+		}
+		program{
+			name: "volume_bar_up";
+			source: "volume_widget_slider_control_area";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "volume_widget_slider_handle";
+			target: "volume_widget_slider_bar";
+		}
+	}
+}
+
+#define VOL_LD_W 	116
+#define VOL_LD_H		438
+#define REL_LD_X(x)	((x)/VOL_W)
+#define REL_LD_Y(y)	((y)/VOL_H)
+
+group { name: "mp-volume-widget-ld";
+	images {
+		image: IMG_VOLUME_WIDGET_BG_H COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_IMG COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE COMP;
+		image: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE_PRESS COMP;
+	}
+
+	parts {
+		part {
+                        name: "bg";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			repeat_events: 0;
+			description { state: "default" 0.0;
+				min: VOL_LD_W VOL_LD_H;
+				max: VOL_LD_W VOL_LD_H;
+				image {
+					normal: IMG_VOLUME_WIDGET_BG_H;
+					border: 0 0 29 29;
+				}
+			}
+		}
+		part {
+                        name: "padding_top";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "bg";
+				rel2 { relative: 1.0 0.0; to: "bg"; }
+				min: 0 28;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+		part {
+                        name: "padding_bottom";
+			type: SPACER;
+			scale: 0;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "bg"; }
+				rel2.to: "bg";
+				min: 0 24;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+		part {
+                        name: "volume_widget_indicator";
+			type: TEXT;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_y: "padding_top";}
+				rel2 { relative: 1.0 1.0; to_y: "padding_top";}
+				min: 0 36;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				text {
+					size: 38;
+					align: 0.5 0.5;
+					min: 1 1;
+				}
+				color: 255 255 255 255;
+			}
+		}
+		part {
+                        name: "padding_under_indicator";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to: "volume_widget_indicator"; }
+				rel2.to: "volume_widget_indicator";
+				min: 0 24;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+		part {
+                        name: "padding_center";
+			type: SPACER;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "padding_under_indicator"; }
+				rel2 { relative: 1.0 0.0; to: "padding_under_indicator"; }
+				min: 0 27;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+		part {
+                        name: "touch_area";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1 { to: "slider_area"; offset: -20 0; }
+				rel2 { to: "slider_area"; offset: 20 0; }
+				color: 0 0 0 0;
+			}
+		}
+		part {
+                        name: "slider_area";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 1.0; to: "padding_under_indicator"; }
+				rel2 { relative: 0.5 0.0; to: "padding_center"; }
+				min: 19 0;
+				fixed: 1 1;
+				align: 0.5 0.0;
+				image {
+					normal: IMG_VOLUME_WIDGET_PROGRESS_IMG;
+				}
+			}
+		}
+		part {
+                        name: "slider_bar";
+			type: IMAGE;
+			scale: 1;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.5; to_x: "slider_area"; to_y: "volume_widget_slider_handle"; }
+				rel2.to: "slider_area";
+				min: 19 0;
+				fixed: 1 1;
+				align: 0.0 0.0;
+				image {
+					normal: IMG_VOLUME_WIDGET_PROGRESS_IMG;
+				}
+			}
+		}
+		part {
+                        name: "dragable_confine";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description{ state: "default" 0.0;
+				rel1 { relative: 0.5 0.0; to: "slider_area"; offset: 0 -45; }
+				rel2 { relative: 0.5 1.0; to: "slider_area"; offset: -2 45; }
+				min: 100 0;
+				fixed: 1 0;
+				align: 0.5 0.0;
+				visible: 0;
+			}
+		}
+		part {
+                        name: "volume_widget_slider_control_area";
+			type: RECT;
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 100 100;
+				fixed: 1 1;
+				align: 0 0;
+				color: 0 0 0 0;
+			}
+
+			dragable {
+				x: 0 0 0;
+				y: -1 1 0;
+				confine: "dragable_confine";
+			}
+		}
+		part {
+                        name: "volume_widget_slider_handle";
+			type: IMAGE;
+			scale: 1;
+			mouse_events:0;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.5 0.5; to: "volume_widget_slider_control_area"; }
+				rel2 { relative: 0.5 0.5; to: "volume_widget_slider_control_area"; }
+				image.normal: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE;
+				min: 49 49;
+				fixed: 1 1;
+				align: 0.5 0.5;
+			}
+			description { state: "press" 0.0;
+				inherit: "default";
+				image.normal: IMG_VOLUME_WIDGET_PROGRESS_BAR_HANDLE_PRESS;
+			}
+		}
+	}
+	  programs
+	  {
+
+		program {
+			name: "clicked";
+			action: SIGNAL_EMIT "clicked" "*";
+		}
+                program{
+			name: "volume_bar_down";
+			source: "volume_widget_slider_control_area";
+			signal: "mouse,down,1";
+			action: STATE_SET "press" 0.0;
+			target: "volume_widget_slider_handle";
+		}
+		program{
+			name: "volume_bar_up";
+			source: "volume_widget_slider_control_area";
+			signal: "mouse,up,1";
+			action: STATE_SET "default" 0.0;
+			target: "volume_widget_slider_handle";
+		}
+	  }
+}
+

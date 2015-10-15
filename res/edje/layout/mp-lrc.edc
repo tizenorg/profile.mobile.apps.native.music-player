@@ -1,0 +1,149 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+
+#define MP_LRC_BG_W 720
+#define MP_LRC_BG_H 720 /*624*/
+#define MP_LRC_BOX_PAD_TOP 0/*42*/
+#define MP_LRC_BOX_PAD_LEFT 56
+#define MP_LRC_BOX_PAD_RIGHT 56
+#define MP_LRC_BOX_W (MP_LRC_BG_W-MP_LRC_BOX_PAD_LEFT-MP_LRC_BOX_PAD_RIGHT-60)*0.95
+#define MP_LRC_BOX_H (MP_LRC_BG_H-MP_LRC_BOX_PAD_TOP)
+
+#define MP_LRC_LINE_W MP_LRC_BOX_W
+#define MP_LRC_LINE_H 48
+
+#define MP_LRC_BG_W_LANDSCAPE 720
+#define MP_LRC_BG_H_LANDSCAPE 150
+#define MP_LRC_BOX_PAD_TOP_LANDSCAPE 12
+#define MP_LRC_BOX_PAD_BOTTOM_LANDSCAPE 12
+#define MP_LRC_BOX_PAD_LEFT_LANDSCAPE 64
+#define MP_LRC_BOX_PAD_RIGHT_LANDSCAPE 64
+#define MP_LRC_BOX_W_LANDSCAPE (MP_LRC_BG_W_LANDSCAPE-MP_LRC_BOX_PAD_LEFT_LANDSCAPE-MP_LRC_BOX_PAD_RIGHT_LANDSCAPE)
+#define MP_LRC_BOX_H_LANDSCAPE (MP_LRC_BG_H_LANDSCAPE-MP_LRC_BOX_PAD_TOP_LANDSCAPE-MP_LRC_BOX_PAD_BOTTOM_LANDSCAPE)
+
+#define MP_LRC_HEAD_LINE_W MP_LRC_BOX_W
+#define MP_LRC_HEAD_LINE_W_LANDSCAPE MP_LRC_BOX_W
+#define MP_LRC_HEAD_LINE_H 18 /*48*/
+#define MP_LRC_HEAD_LINE_H_LANDSCAPE 10
+
+#define MP_LRC_TEXT_SIZE 20
+#define MP_LRC_TEXT_COLOR 62 62 62 255
+//#define MP_LRC_TEXT_STYLE "Light"
+#define MP_LRC_HIGHLIGHTED_TEXT_SIZE 20
+#define MP_LRC_HIGHLIGHTED_TEXT_COLOR 0 0 0 255
+#define MP_LRC_TEXT_STYLE "Bold"
+
+group{
+        name: "mp_lrc_layout";
+
+        parts {
+                part {
+                        name: "bg";
+                        type: RECT;
+                        mouse_events: 1;
+                        repeat_events: 1;
+                        description {
+                        	color: 0 0 0 0;
+                                state: "default" 0.0;
+                                rel1 { relative: 0.0 0.0;}
+                                rel2 { relative: 1.0 1.0;}
+                        }
+                }
+
+                part {
+                        name: "lyric";
+                        type: SWALLOW;
+                        mouse_events: 1;
+                        repeat_events: 1;
+                        description {
+                                state: "default" 0.0;
+                                visible: 1;
+                                rel1 { relative: 0.0 MP_LRC_BOX_PAD_TOP/MP_LRC_BG_H; to: "bg";}
+                                rel2 { relative: 1.0 1.0; to: "bg";}
+                        }
+                }
+        }
+}
+
+group {
+	name, "mp_lrc_line";
+
+	styles
+	{
+		style {
+			name: "lyricstyle";
+			base: "font=Tizen:style=Regular font_size=30 align=center color=#FFFFFF wrap=char";
+			tag:  "br" "\n";
+			tag:  "tab" "\t";
+			tag:  "em" "+ font=Tizen:style=Oblique";
+			tag:  "b" "+ font=Tizen:style=Bold";
+			tag:  "link" "+ color=#800 underline=on underline_color=#8008";
+			tag:  "hilight" "+ font=Tizen:style=Bold color=#277EE6";
+		}
+	}
+
+	parts {
+		part { name, "background";
+                        type: RECT;
+                        scale: 1;
+			description {
+				state, "default" 0.0;
+				color: 0 0 0 0;
+				min: MP_LRC_LINE_W MP_LRC_LINE_H;
+			}
+		}
+
+		part {
+			name: "txt";
+			scale: 1;
+			type: TEXTBLOCK;
+			mouse_events: 1;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1.to: "background";
+				rel2.to: "background";
+				text {
+				        style: "lyricstyle";
+				        min: 0 1;
+				}
+			}
+		}
+
+	}
+}
+
+group {
+	name: "mp_lrc_head";
+	min:  MP_LRC_HEAD_LINE_W MP_LRC_HEAD_LINE_H;
+
+	parts {
+
+		part { name: "start";
+			mouse_events: 0;
+                        type: SPACER;
+			description { state: "default" 0.0;
+				min:  0 MP_LRC_HEAD_LINE_H;
+				rel1 { relative: 0.0 0.0;
+						offset : 0 0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+	}
+}
+

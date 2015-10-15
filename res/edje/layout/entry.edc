@@ -1,0 +1,278 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#define SEARCHBAR_BASE_HEIGHT_INC   58
+#define SEARCHBAR_TOP_PADDING_INC   55
+#define SEARCHBAR_LEFT_PADDING_INC   2
+#define SEARCHBAR_RIGHT_PADDING_INC  3
+#define SEARCHBAR_HEIGHT_INC         30
+#define SEARCHBAR_CANCEL_BUTTON_W_INC  15
+#define SEARCHBAR_BACKGROUND_COLOR 34 44 71 255
+#define SEARCHBAR_BG_COLOR 5 90 118 255
+#define SEARCHBAR_CANCEL_BUTTON_LEFT_PADDING_INC 10
+#define SEARCHBAR_WIDTH_INC 110
+#define SEARCHBAR_BOTTOM_PADDING_INC 35;
+
+
+group { name: "elm/layout/searchbar/cancel_button_case";
+images {
+			image : "T02_mw_icon_close_press.png" COMP;
+			image : "btn_controller_close.png" COMP;
+	     }
+   parts {
+      part { name: "bg";
+         type: RECT;
+         //scale: 1;
+         description { state: "default" 0.0;
+         color: 60 181 199 255;
+         }
+      }
+      part { name: "inputfield_base";
+         type: SPACER;
+        // scale: 1;
+         description { state: "default" 0.0;
+       //     min: 0 SEARCHBAR_BASE_HEIGHT_INC;
+              rel1 {
+                   relative: 0.0 0.0;
+                   to: "bg";
+               }
+              rel2 {
+                    relative: 1.0 1.0;
+                    to: "bg";
+               }
+         }
+      }
+     part { name: "top_padding_rect";
+         type: SPACER;
+         //scale: 1;
+         description { state: "default" 0.0;
+            //min: 0 SEARCHBAR_TOP_PADDING_INC;
+            // fixed: 0 1;
+            //align: 0 0;
+            rel1{
+                 relative: 0.0 0.0;
+                 to: "inputfield_base";
+               }
+            rel2{
+                  relative: 1.0 0.02;
+                   to: "inputfield_base";
+               }
+         }
+      }
+      part { name: "bottom_padding_rect";
+         type: SPACER;
+        // scale: 1;
+         description { state: "default" 0.0;
+          //  min: 0 SEARCHBAR_BOTTOM_PADDING_INC;
+            fixed: 0 1;
+           // align: 0 1;
+            rel1{
+                relative: 0.0 0.98;
+                to: "inputfield_base";
+              }
+           rel2{
+                relative: 1.0 1.0;
+                to: "inputfield_base";
+               }
+         }
+      }
+      part { name: "base_bg";
+         type: SPACER;
+        // scale: 1;
+         description { state: "default" 0.0;
+       //     min: 0 SEARCHBAR_HEIGHT_INC;
+            align: 0 0.5;
+          //  fixed: 0 1;
+            rel1 {
+               relative: 0.0 1.0;
+               to: "top_padding_rect";
+            }
+            rel2 {
+               relative: 1.0 0.0;
+               to: "bottom_padding_rect";
+            }
+         }
+      }
+      part { name: "left_padding_rect";
+         type: SPACER;
+         //scale: 1;
+         description { state: "default" 0.0;
+            //min: SEARCHBAR_LEFT_PADDING_INC 0;
+          //  fixed: 1 0;
+            align: 0 0;
+            rel1{
+                 relative: 0.0 0.0;
+                 to: "inputfield_base";
+             }
+            rel2{
+                 relative: 0.04 1.0;
+                 to: "inputfield_base";
+               }
+         }
+      }
+      part { name: "right_padding_rect";
+         type: SPACER;
+         //scale: 1;
+         description { state: "default" 0.0;
+          //  min: SEARCHBAR_RIGHT_PADDING_INC 0;
+            //fixed: 1 0;
+            align: 1.0 0.0;
+            rel1{
+                relative: 0.98 0.0;
+                to: "inputfield_base";
+                  }
+             rel2{
+                 relative: 1.0 1.0;
+                 to: "inputfield_base";
+                }
+         }
+      }
+      part { name: "inputfield_rect";
+         type: RECT;
+         //scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.5;
+          //  min: SEARCHBAR_WIDTH_INC SEARCHBAR_HEIGHT_INC;
+            rel1 {
+               relative: 0.0 0.0;
+               to: "base_bg";
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               to: "base_bg";
+            }
+            color: 255 255 255 255;
+         }
+      }
+      part { name: "right_btn_padding_rect";
+         type: SPACER;
+         //scale: 1;
+         description { state: "default" 0.0;
+            min: 0 0;
+            //fixed: 1 0;
+            align: 1.0 0.0;
+            rel1.relative: 0.0 0.0;
+            rel1.to: "right_padding_rect";
+            rel2.relative: 0.0 1.0;
+            rel2.to: "right_padding_rect";
+         }
+         description { state: "in" 0.0;
+            inherit: "default" 0.0;
+            min: SEARCHBAR_CANCEL_BUTTON_LEFT_PADDING_INC 0;
+            rel1.to: "button_cancel";
+            rel2.to: "button_cancel";
+         }
+      }
+      part { name: "button_cancel";
+         type: RECT;
+         mouse_events: 1;
+         //scale: 1;
+         description { state: "default" 0.0;
+           // fixed: 1 1;
+               //min: 100 100;
+              visible:0;
+            // color: 255 0 0 255;
+           // align: 1.0 0.5;
+            state: "default" 0.0;
+            rel1 {
+               relative: 0.89 .3;
+               to: "inputfield_rect";
+            }
+            rel2 {
+               relative: 0.99 0.7;
+               to: "inputfield_rect";
+            }
+            //image.normal: "00_winset_Back.png";
+         }
+      }
+      part { name: "button_cancel_image";
+              type: IMAGE;
+              mouse_events: 1;
+              //scale: 1;
+              description { state: "default" 0.0;
+                // fixed: 1 1;
+               //   min: 40 40;
+               		visible:0;
+               		color: 60 181 199 255;
+                // align: 1.0 0.5;
+                 //state: "default" 0.0;
+                 rel1 {
+                    relative: 0.0 0.0;
+                    to: "button_cancel";
+                 }
+                 rel2 {
+                    relative: 0.6 1.0;
+                    to: "button_cancel";
+                 }
+              }
+              description { state: "visible1" 0.0;
+                // fixed: 1 1;
+               //   min: 40 40;
+                    color: 60 181 199 255;
+                // align: 1.0 0.5;
+                	visible:1;
+                 //state: "default" 0.0;
+                 rel1 {
+                    relative: 0.0 0.0;
+                    to: "button_cancel";
+                 }
+                 rel2 {
+                    relative: 0.6 1.0;
+                    to: "button_cancel";
+                 }
+                 image.normal: "btn_controller_close.png";
+              }
+           }
+      part {
+         name: "elm.swallow.content";
+         type: SWALLOW;
+         //scale: 1;
+        // ignore_flags: ON_HOLD;
+         description { state: "default" 0.0;
+          //  min: SEARCHBAR_WIDTH_INC SEARCHBAR_HEIGHT_INC;
+            rel1 {
+               relative : 0.0 0.0;
+               to: "inputfield_rect";
+            }
+            rel2 {
+               relative : 0.85 1.0;
+               to: "inputfield_rect";
+            }
+            //align: 0.0 0.5;
+         }
+      }
+   }
+   programs {
+      program { name: "cancel_back_clicked";
+      signal: "mouse,clicked,1";
+      source: "button_cancel_image";
+      action: SIGNAL_EMIT "elm,action,click" "button_cancel_image";
+      }
+      program { name: "enable_image";
+      signal: "image,enable,1";
+      source: "*";
+      action: STATE_SET "visible1" 0.0;
+      target : "button_cancel_image";
+      }
+      program { name: "disable_image";
+      signal: "image,disable,1";
+      source: "*";
+      action: STATE_SET "default" 0.0;
+      target : "button_cancel_image";
+      }
+   }
+}

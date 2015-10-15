@@ -1,0 +1,1678 @@
+msgid "IDS_ST_BODY_LOADING_ING"
+msgstr "Učitavanje..."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privatno"
+
+msgid "IDS_MF_BODY_TIME"
+msgstr "Vrijeme"
+
+msgid "IDS_MF_POP_THIS_FILE_DOES_NOT_EXIST"
+msgstr "Datoteka ne postoji."
+
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "Ton zvona telefona"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "Trajanje"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "Postavi za"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "Dodaj na osobnu stranicu"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "Ukloni s osobne stranice"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "Premjesti u normalnu memoriju"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Premjesti u osobnu memoriju"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Odabrane stavke bit će premještene u %s."
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Odabrana stavka bit će premještena u %s."
+
+msgid "IDS_VR_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Nemoguće koristiti u načinu spremanja podataka."
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "Ton zvona dodan."
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "Tipka"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "Odaberite stavke"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Napredno"
+
+msgid "IDS_ST_SK_PREVIOUS"
+msgstr "Nazad"
+
+msgid "IDS_CAM_SK_CLOSE"
+msgstr "Zatvori"
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "Dodano."
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "Neuspješno."
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "Nema traženih rezultata"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "OK"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "Nema stavki"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "Dodaj na početnu"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Dalje"
+
+msgid "IDS_BR_BODY_DOWNLOADING_ING"
+msgstr "Skidanje..."
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "Favorit"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "Dodajte na osobnu memoriju"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "Odspojeno od %s. Provjerite mrežni status i spojeni uređaj."
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Preko Screen Mirroring"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "Preko matične mreže"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Unos prazan."
+
+msgid "IDS_FM_POP_UNAVAILABLE_DURING_CALL"
+msgstr "Nedostupno tijekom poziva."
+
+msgid "IDS_MF_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maks. broj znakova."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "Nemoguće dijeliti zaštićenu datoteku."
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "Uklanjanje..."
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d uređaji"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Uklj. pokret"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "Ne pitaj više"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "Nema rezultata."
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Preokrenite telefon za utišavanje dolaznih poziva, obavijesti i alarma."
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "Ništa"
+
+msgid "IDS_ST_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_ST_BODY_GALLERY"
+msgstr "Galerija"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "Dvaput dodirnite za pomicanje na sadržaj."
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "Surround"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "Tekstovi"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što dodate pjesme u Glazbu na svojem mobilnom uređaju, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "Frekvencija uzorkovanja"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "Označeno kao favorit."
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "Glazba"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "Nije označeno kao favorit."
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "Traži glazbu"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "Automatska preporuka ne podržava ovu audiodatoteku."
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "Datoteka nepodržana"
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "Favoriti"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "Najslušanije"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "Nedavno dodano"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "Novi popis pjesama"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "Ukloni"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "Ton pozivatelja"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "Izvođači"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "Nije moguće dodati."
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "Nije moguće napraviti popis pjesama."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "Oznaka nedostupna."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "Moguće dodati najviše %d pjesama."
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "Album"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "Autor"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "Autorsko pravo"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "Novi popis pjesama"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "Opis"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "Format"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "Nemoguće"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "Nema popisa pjesama"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "Broj pjesme"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "Obrisati?"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "Ukloniti?"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "Nije moguće preimenovati popis pjesama."
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "Albumi"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "Dodavanje..."
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "Izbrisati %d albuma?"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "Popisi pjesama"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "Dodaj"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "Biografija"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "Zasluge"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "Podaci o mediju"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "Diskografija"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "Tekst"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "Moguće"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "Pregled"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "Popis pjesama"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "Dodaj na popis za reprodukciju"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "Izvođač"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "Prosljeđivanje"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Žanr"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "Popisi pjesama"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "Posljednje"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "Trajanje zapisa"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "Nema pjesama"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "Zapis će biti obrisan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "Odabrane pjesme bit će obrisane."
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "Autor će biti obrisan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "Odabrani izvođači bit će izbrisani."
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "Svi izvođači biti će izbrisani."
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ova će mapa biti obrisana."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "Odabrane mape bit će izbrisane."
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Sve mape će se obrisati."
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "Ovaj album biti će obrisan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "Odabrani albumi bit će izbrisani."
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "Svi albumi biti će obrisani."
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "Ovaj će popis pjesama biti obrisan."
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Odabrani popisi pjesama bit će obrisani."
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "Svi popisi pjesama biti će obrisani."
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "Pjesme"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "Poredaj"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "Spremi kao popis pjesama"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "Ton alarma"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "Ništa odabrano."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Greška reprodukcije."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "Ne može se reproducirati. Nepodržana vrsta datoteke."
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "Dijeli"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "Dirigenti"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "Odaberite uređaj"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "Prikaži kao"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "Normalno"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "Korisnik"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "Vokal"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "Pojačanje basa"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "Pojačanje visokih tonova"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "Kafić"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "Virtualni 7.1 kanal"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "Nakon 15 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "Nakon 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "Nakon 1 sat"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "Nakon 1 sata i 30 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "Nakon 2 sata"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "Auto. isključivanje glazbe"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "Ovaj zvučni efekt radi samo u načinu slušalice i Bluetooth slušalice."
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "Glazbeni kutak"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "Nedovoljno glazbenih datoteka za reprodukciju u Glazbenom kutku. Potrebno je min. %d glazbenih datoteka."
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "Strastveno"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "Mirno"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "Veselo"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "Aktualizacija biblioteke"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "Aktualiziraj biblioteku?"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "Promijeni os"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "Žanrovi"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 album/1 pjesma"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 album/%d pjesama"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "%d albuma i /%d pjesama"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "Možete upravljati Music Playerom glasovnim naredbama %1$s, %2$s, %3$s, %4$s, %5$s i %6$s."
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "Nasumična reprodukcija %d pjesama"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "Više informacija"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "Moja glazba"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "Prikaz liste"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "Reproduciraj preko Group Play"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "Pjesma dodana u favorite."
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "Ukloni iz favorita"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "Novo"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "Pjesme"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "Sličica"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "Popis"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "Otvori popis pjesama"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "Reproduciraj sve"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "Odabrani popis prazan."
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "Raspoloženja"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "Godine"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "Stari"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "Glazbeni kvadrat analizira karakteristike glazbe na uređaju i automatski kreira popise pjesama."
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "Reproduciraj popis srodne glazbe odabirom kvadrata na zaslonu."
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "Pregled detalja popisa pjesama dodirom i držanjem trenutnog kvadrata."
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "Uređaji u blizini"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "Ako ste dodali nove pjesme, morat ćete aktualizirati biblioteku."
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "Nema albuma"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "Nema izvođača"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "Brzina reprodukcije"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "Koncertna dvorana"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "Dodaj u"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "Prikaz"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "Nedavno dodano"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "Ne koristi se"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "Učini dostupnim izvan mreže"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "Nakon %1$d h i %2$d min."
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "Za %d sati"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "Za %d min"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "Nema mapa"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "Nema pjesama"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d albuma"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d izvođača"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d žanrova"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d popisa pjesama"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d pjesama"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "Popis pjesama"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "Slični albumi"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "Pjesma"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "Sličice"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Zvučni efekt funkcionira samo u načinu slušalice."
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "Sav sadržaj"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Za reprodukciju datoteke potrebna je mrežna veza. Provjerite svoju mrežnu vezu i pokušajte ponovno."
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "Datoteka nepodržana."
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "Aktualiziranje..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "Traži"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "Traži prema"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "Povezani video"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "Pametna glasnoća"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "Glasnoća svih pjesma bit će podešena na razinu %d."
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "Uključena je pametna glasnoća"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "Informacije o vezi"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "Za 1 h i %d min"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "Moj uređaj"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "Dugo slušanje na glasnoj jačini može oštetiti sluh. Povećati glasnoću iznad sigurne razine?"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "Već postoji."
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "Traži uređaje u blizini"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "Za 1 sat"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "Za 1 h i 1 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "Za %d sati i 1 min"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "Za 1 min"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "Idi u trgovinu"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "Dodaj pjesme"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon skidanja pjesama iz Glazbe, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što dodate pjesme u favorite, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što reproducirate pjesme, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što dodate pjesme u %s, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "Nema kupljenog sadržaja"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "Spremi kao"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "Aktualizacija neuspješna."
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "Uzbudljivo"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "Pretraži moju glazbu"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "Spojeni uređaji"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "Moj popis pjesama %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "Nema uređaja"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostupni uređaji"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "Postavi"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "Uklanjanje nije uspjelo."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Nemoguće koristiti premotavanje unaprijed i unatrag kada su uključeni uređaji u blizini."
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "Postavi za"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slušalice"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Zvučnik"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 pjesma"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d pjesama"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 pjesma"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "Nasumično 1 pjesma"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "Nije pronađena glazba za odabranu ćeliju"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "Ne prikazuj više"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "Razni izvođači"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Dodaj na početni zaslon"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "Spremi u Favorite"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "Uredi naslov"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "Uklonite iz osobne memorije"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "Nakon što skinete pjesme, prikazat će se mape."
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "Glasnoća"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "Ponavljanje isključeno"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "Ponovi sve"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "Isključi nasumično"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "Uključi nasumično"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "Moj popis pjesama"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "Zadani popisi pjesama"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "Datum snimanja"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "Slika alb."
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 žanr"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d mapa"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 mapa"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 izvođač"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 album"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 popis pjesama"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "Music Player"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "Premjesti"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "Automatske preporuke"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "Od početka"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "Prijedlozi za vas"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "Spremi"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "Osnovno"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "Instrument"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "Visoki"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "Bas"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "Nijedan efekt nije primijenjen u ovom načinu."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "Simulira boju zvuka cijevnog pojačala."
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "Efekt lampaškog pojačala"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "Simulira učinak virtualnog 7.1 kanalnog surround zvuka."
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "Mala soba"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "Velika soba"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "Simulira jeku velike sobe, npr. kazališta."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "Simulira jeku koncertne dvorane."
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "Simulira jeku malog prostora, npr. studija."
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "Jasnoća"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "Poništi"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "Godine"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "Žanrovi"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "Skladatelji"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "Sve pjesme"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "Idi na brzi popis"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "Traži"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "Dodaj na brzi popis"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "Neodobrena video datoteka za TV izlaz."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "Nemoguće dodati. Maks. broj popisa pjesama dostignut."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Nemoguće prilagoditi glasnoću pri spajanju Bluetooth slušalica."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "Nemoguće postaviti glasnoću Bluetooth slušalice."
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "Zaustaviti Music Player?"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "Isključite Bešumno."
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "Greška mreže."
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "Memorijska kartica učitana."
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "Greška postavki uređaja."
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "Nema rezultata."
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "Učitavanje"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT slušalica podržava samo normalnu postavku efekata."
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "Aplikacija će se isključiti."
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "Dodano. Prijeći na popis želja?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Pristup usluzi možda se naplaćuje. Nastaviti?"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "Pristup trgovini možda se naplaćuje. Nastaviti?"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "Zvučni efekt 5.1 kanala radi samo u načinu slušalice i Bluetooth slušalice."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "Zvučni efekt 5.1 kanala radi samo u načinu slušalice."
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Zvučnik ne podržava 5.1 kanalne zvučne efekte."
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "Prikaz po omotu albuma"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "Pošalji zapis"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "Ocijeni pjesmu"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "Uredi redoslijed pjesama"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "Trenutni"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "Obriši popis pjesama"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "Reprodukcija u pozadini"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "Efekti"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Kupi sad"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "Popis želja"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "Široko"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "Wha-wha"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "Vibracijski woofer"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "Tremolo"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "Dotaknite dvaput za reprodukciju/pauziranje glazbe."
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "Dijeli pjesme putem Bluetootha"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "Dobrodošli u čarobnjaka za postavljanje glazbe.\nSljedeće upute pomoći će vam da postavite telefon. Nastaviti?"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "Brzi popis"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "Zvučni efekti"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "Sve"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "Glasnoća"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d pjesama odabrano."
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "Nema podcasta"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "Traži slično"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "Reprodukcija u pozadini"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5,1-kanalni zvuk radi samo kada su zvučni efekti isključeni."
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "Podcast"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "Uredi sliku"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "Reprodukcija zvukova zaustavit će i spremiti snimanje glasa. Reproducirati?"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "Maks. broj (%d) odabranih stavki."
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth isključen."
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5,1-kanalni zvuk radi samo kada su zvučni efekti isključeni."
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "Fotografiranje"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "Otvori prikaz glazbe"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauza"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "Reproduciraj album"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "Sortiraj po"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "Povijest"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "Sakrij prikaz glazbe"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "Info pjesme"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox sadržaj"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "Sadržaj na tel."
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "Promijeni sliku"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Obriši Dropbox podatke"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "Možete puštati svoju glazbu na uređajima pomoću AllSharea."
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "Valjanost"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "Vrsta"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "Ovo će izbrisati datoteku s poslužitelja i svih drugih spojenih uređaja."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "Izvođači"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "Omot albuma"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "Ostalo"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "Predugačko ime."
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "Čistoća glazbe"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "Velika glasnoća može oštetiti sluh pri dugom slušanju."
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "Preostalo upotreba"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "Zvučni efekti dostupni su samo kad su spojene slušalice."
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "Dodajte na osobnu memoriju"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "Uklonite iz osobne memorije"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "Kontekstualni skočni prozor"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "Kontekstualni skočni prozor je otvoren. Dvostrukim dodirom ga zatvorite."
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "Ponovi jednu"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "Premještanje..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "Odaberite do %d stavki."
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "Kartica"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "Promijeni player"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "Kartice"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "Automatskim preporukama mogu se izvući označeni dijelovi iz zvukovnih datoteka."
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "Roditeljska zaštita"
+
+msgid "IDS_VR_POP_FILE_NOT_FOUND"
+msgstr "Nema datoteke."
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "Ton pozivatelja spremljen."
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "Dubina u bitovima"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "Veličina"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d odabrano"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što dodate pjesme na ovaj uređaj, prikazat će se ovdje."
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "Duljina"
+
+msgid "IDS_MUSIC_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 će se mapa izbrisati."
+
+msgid "IDS_ST_BODY_NO_CONTENT"
+msgstr "Nema sadržaja"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "Mape"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "Moji popisi pjesama"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "MP3 player"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "Postavke"
+
+msgid "IDS_MUSIC_POP_DELETING"
+msgstr "Brisanje..."
+
+msgid "IDS_MUSIC_POP_1_TRACK_WILL_BE_DELETED"
+msgstr "Obrisat će se 1 pjesma."
+
+msgid "IDS_MUSIC_POP_ALL_TRACKS_WILL_BE_DELETED"
+msgstr "Svi će se zapisi obrisati."
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_WILL_BE_DELETED"
+msgstr "Obrisat će se %d pjesama."
+
+msgid "IDS_MUSIC_POP_1_PLAYLIST_WILL_BE_DELETED"
+msgstr "1 popis pjesama bit će izbrisan."
+
+msgid "IDS_MUSIC_POP_PD_PLAYLISTS_WILL_BE_DELETED"
+msgstr "%d popisa pjesama biti će obrisano."
+
+msgid "IDS_MUSIC_POP_PD_ALBUMS_WILL_BE_DELETED"
+msgstr "%d albuma biti će obrisano."
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS_WILL_BE_DELETED"
+msgstr "%d izvođača biti će obrisano."
+
+msgid "IDS_MUSIC_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d će se mapa obrisati."
+
+msgid "IDS_ST_POP_CONNECTION_FAILED"
+msgstr "Spajanje neuspješno."
+
+msgid "IDS_MUSIC_BODY_CLASSIC"
+msgstr "Klasično"
+
+msgid "IDS_MUSIC_BODY_ROCK"
+msgstr "Rock"
+
+msgid "IDS_MUSIC_BODY_JAZZ"
+msgstr "Jazz"
+
+msgid "IDS_MUSIC_BODY_POP"
+msgstr "Pop"
+
+msgid "IDS_MUSIC_BODY_AUTO"
+msgstr "Auto"
+
+msgid "IDS_MUSIC_POP_CURRENT_SOUND_EFFECT_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI ne podržava trenutni zvučni efekt."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_BLUETOOTH"
+msgstr "Bluetooth ne podržava zvučne efekte."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_LINE_OUT"
+msgstr "Zvučni izlaz ne potržava zvučne efekte."
+
+msgid "IDS_MUSIC_POP_SOUND_EFFECTS_NOT_SUPPORTED_BY_HDMI"
+msgstr "HDMI ne podržava zvučne efekte."
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EFFECT"
+msgstr "Cijevno pojačalo"
+
+msgid "IDS_MUSIC_BODY_CUSTOM"
+msgstr "Prilagođeno"
+
+msgid "IDS_MUSIC_HEADER_TUBE_AMP_M_EQUALISER_ABB"
+msgstr "Cijevno pojačalo"
+
+msgid "IDS_MUSIC_POP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d pjesama dodano na popis."
+
+msgid "IDS_MUSIC_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 pjesma dodana na popis pjesama."
+
+msgid "IDS_MUSIC_HEADER_ADD_TRACKS_TO_PLAYLIST_ABB"
+msgstr "Dodavanje na popis pjesama"
+
+msgid "IDS_MUSIC_POP_PS_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "%s se već koristi. Unesite drugi naziv."
+
+msgid "IDS_MUSIC_TMBODY_DATE_OF_RECORDING"
+msgstr "Datum snimanja"
+
+msgid "IDS_MBP_TPOP_TRACK_SET_AS_ALARM_TONE"
+msgstr "Pjesma je postavljena za ton alarma."
+
+msgid "IDS_MUSIC_NPBODY_NO_RESULTS_FOUND_ABB"
+msgstr "Nema rezultata"
+
+msgid "IDS_MUSIC_OPT_DEFAULT_RINGTONE_ABB"
+msgstr "Zadana melodija zvona"
+
+msgid "IDS_MUSIC_TPOP_TRACK_SET_AS_CALLER_RINGTONE"
+msgstr "Pjesma je postavljena za ton zvona."
+
+msgid "IDS_MP_TPOP_TRACK_SET_AS_RINGTONE"
+msgstr "Pjesma je postavljena za melodiju zvona."
+
+msgid "IDS_DLNA_BODY_ADD_TO_NOW_PLAYING_LIST"
+msgstr "Dodaj na popis pjesama koji se reproducira"
+
+msgid "IDS_MUSIC_TPOP_EQUALISER_SETTINGS_WILL_BE_APPLIED_WHILE_PLAYING_MUSIC"
+msgstr "Postavke ekvalizatora bit će primijenjene pri reproduciranju glazbe."
+
+msgid "IDS_ST_BODY_ALERT"
+msgstr "Obavijest"
+
+msgid "IDS_IV_POP_1_ALBUM_WILL_BE_DELETED"
+msgstr "1 album bit će obrisan."
+
+msgid "IDS_MUSIC_OPT_SD_CARD"
+msgstr "SD kartica"
+
+msgid "IDS_MUSIC_SBODY_DEVICE_STORAGE"
+msgstr "Memorija uređaja"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE"
+msgstr "Naziv popisa pjesama već se upotrebljava."
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_PD"
+msgstr "Popis pjesama %d"
+
+msgid "IDS_MUSIC_HEADER_CREATE"
+msgstr "Nova"
+
+msgid "IDS_MUSIC_HEADER_EQUALISER_PRESET_ABB"
+msgstr "Postavljeni ekvalizator"
+
+msgid "IDS_MUSIC_OPT_AUTOMATIC_M_EQUALIZER_EFFECT"
+msgstr "Automatsko"
+
+msgid "IDS_MUSIC_OPT_CLASSICAL_M_EQUALIZER_EFFECT"
+msgstr "Klasično"
+
+msgid "IDS_MUSIC_HEADER_ENVIRONMENT_EFFECT_ABB"
+msgstr "Efekt okruženja"
+
+msgid "IDS_VIDEO_POP_THE_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Vrsta datoteke nije podržana."
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_CREATE_PLAYLISTS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon što kreirate popis pjesama, prikazat će se ovdje."
+
+msgid "IDS_ST_HEADER_SELECT_AUDIO_DEVICE_ABB"
+msgstr "Odabir audio uređaja"
+
+msgid "IDS_MUSIC_TPOP_PLAYLIST_NAME_ALREADY_IN_USE_ENTER_ANOTHER_NAME"
+msgstr "Naziv popisa pjesama već se koristi. Unesite drugi naziv."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MUSIC_OPT_NOW_PLAYING_LIST"
+msgstr "Trenutno"
+
+msgid "IDS_MUSIC_OPT_SHOW_LYRICS"
+msgstr "Prikaži tekstove pjesama"
+
+msgid "IDS_MUSIC_OPT_HIDE_LYRICS"
+msgstr "Sakrij tekstove pjesama"
+
+msgid "IDS_MUSIC_TPOP_UNABLE_TO_PLAY_MUSIC_DURING_CALLS"
+msgstr "Nije moguće reproducirati glazbu tijekom poziva."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Obriši"
+
+msgid "IDS_MUSIC_HEADER_SELECT"
+msgstr "Odaberi"
+
+msgid "IDS_TPLATFORM_OPT_NFC"
+msgstr "NFC"
+
+msgid "IDS_MUSIC_HEADER_UNABLE_TO_PLAY_TRACK"
+msgstr "Nemoguće reproducirati pjesmu"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ODUSTANI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "IZBRIŠI"
+
+msgid "IDS_MUSIC_POP_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_MUSIC_OPT_MESSAGE"
+msgstr "Poruka"
+
+msgid "IDS_MUSIC_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MUSIC_SK_CANCEL"
+msgstr "Prekid"
+
+msgid "IDS_MUSIC_BUTTON_REFRESH"
+msgstr "Aktualiziraj"
+
+msgid "IDS_MUSIC_BODY_SELECT_ALL"
+msgstr "Odaberi sve"
+
+msgid "IDS_MUSIC_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_MUSIC_POP_DELETED"
+msgstr "Obrisano."
+
+msgid "IDS_MUSIC_OPT_STOP"
+msgstr "Zaustavi"
+
+msgid "IDS_MUSIC_BODY_UNKNOWN"
+msgstr "Nepoznato"
+
+msgid "IDS_MUSIC_BODY_TITLE"
+msgstr "Naslov"
+
+msgid "IDS_MUSIC_OPT_SENDVIA_EMAIL"
+msgstr "Email"
+
+msgid "IDS_MUSIC_OPT_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_MUSIC_HEADER_DOWNLOAD"
+msgstr "Skini"
+
+msgid "IDS_MUSIC_POP_LOW_BATTERY"
+msgstr "Baterija skoro prazna."
+
+msgid "IDS_MUSIC_HEADER_AUDIO_DEVICE"
+msgstr "Audio uređaj"
+
+msgid "IDS_MUSIC_HEADER_DETAILS"
+msgstr "Detalji"
+
+msgid "IDS_MUSIC_OPT_END"
+msgstr "Kraj"
+
+msgid "IDS_MUSIC_OPT_EDIT"
+msgstr "Uredi"
+
+msgid "IDS_CAM_HEADER_UPDATED"
+msgstr "Aktualizirano."
+
+msgid "IDS_MUSIC_POP_REMOVED"
+msgstr "Uklonjeno."
+
+msgid "IDS_MUSIC_OPT_SELECTED"
+msgstr "Odabrano"
+
+msgid "IDS_ST_BUTTON_SCAN"
+msgstr "Skeniraj"
+
+msgid "IDS_MF_POP_ERROR"
+msgstr "Greška."
+
+msgid "IDS_MF_POP_MEMORY_FULL"
+msgstr "Memorija puna."
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "Slijed"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "Glasnoća"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "Nasumično"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "Ponavljanje"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "Details"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "Title"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "Edit"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "Email"
+
+msgid "IDS_COM_BODY_END"
+msgstr "End"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "Folders"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "Gallery"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "Internet"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "Loading..."
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Low battery."
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "Message"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "Music"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "No content"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected."
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "Previous"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "Reset"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "Selected"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "Time"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Unable to add."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "Share"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio device"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Added."
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Deleted."
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "Downloading..."
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error."
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "File not found."
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "Memory full."
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "Removed."
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "Unable to use during Mass storage mode."
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "Updated."
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "New"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "Next"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Refresh"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "Remove"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Save"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "Select"
+
+msgid "IDS_COM_SK_SET"
+msgstr "Set"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "The playlist name %s is already in use."
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "Total"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "Recently added"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "More info"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "Alarm tone set."
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "1 track added to playlist."
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "%d tracks added to playlist."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maks. veličina datoteke."
+

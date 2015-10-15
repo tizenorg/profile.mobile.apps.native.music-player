@@ -1,0 +1,577 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+collections {
+
+base_scale: 2.4;
+styles {
+	style { name: "text_unread_wrap";
+		base: "font=Tizen:style=Regular font_size=32 color=#000000FF wrap=mixed";
+		tag:  "br" "\n";
+		tag:  "ps" "ps";
+		tag:  "tab" "\t";
+	   }
+}
+
+#include "mc-tabbar.edc"
+#include "mc-naviframe.edc"
+
+group {
+	name: "list_layout";
+	parts{
+		part {
+			name : "list_content";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+			description {
+				state: "fastscroll.visible" 0.0;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 0.0 1.0; to_x:"right_pad";}
+			}
+		}
+
+		part{
+			name: "right_pad";
+			type: SPACER;
+			scale: 1;
+			description{
+				state: "default" 0.0;
+				fixed: 1 1;
+				min: 33 0;
+				align: 1 0;
+				rel1 { relative: 1.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+
+		part {
+			name: "elm.swallow.content.index";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+			description {
+				state: "fastscroll.visible" 0.0;
+				inherit: "default";
+				visible: 1;
+			}
+		}
+	}
+
+	programs {
+		program {
+			signal : "show.fastscroll";
+			source : "*";
+			action : STATE_SET "fastscroll.visible" 0.0;
+			target : "elm.swallow.content.index";
+			target : "list_content";
+		}
+		program {
+			signal : "hide.fastscroll";
+			source : "*";
+			action : STATE_SET "default" 0.0;
+			target : "elm.swallow.content.index";
+			target : "list_content";
+		}
+	}
+}
+
+group { name: "view_layout_tabbar";
+      parts {
+         part { name: "bg";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+            }
+         }
+         part { name: "tabbar";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               fixed: 0 1;
+               rel1 { relative: 0.0 0.0; }
+               rel2 { relative: 1.0 0.078125; }
+               align: 0.5 0.0;
+            }
+         }
+         part { name: "list-content";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to_y: "tabbar";
+               rel1.relative: 0.0 1.0;
+            }
+	    description { 
+	    	state: "recommended.visible" 0.0;
+		rel1 { relative: 0.0 1.0; to: "tabbar";}
+		rel2 { relative: 1.0 0.0; to:"recommended";}
+            }
+         }
+	 part {
+		name: "recommended";
+		type: SWALLOW;
+		scale: 1;
+		description { 
+			state: "default" 0.0;
+			visible: 0;
+			rel1 { relative: 0.0 1.0; }
+			rel2 { relative: 1.0 1.0; }
+			min: 0 0;
+			fixed: 0 0;
+			align: 0.0 0.0;
+		}
+		description {
+			state: "recommended.visible" 0.0;
+			visible: 1;
+			rel1 { relative: 0.0 1.0; }
+			rel2 { relative: 1.0 1.0; }
+			min: 0 150;
+			fixed: 0 1;
+			align: 0.0 1.0;
+		}
+	}
+      }
+
+	programs {
+		program {
+			signal : "show.recommended";
+			source : "*";
+			action : STATE_SET "recommended.visible" 0.0;
+			target : "recommended";
+			target : "list-content";
+		}
+		program {
+			signal : "hide.recommended";
+			source : "*";
+			action : STATE_SET "default" 0.0;
+			target : "recommended";
+			target : "list-content";
+		}
+	}
+   }
+
+group { name: "view_layout";
+      parts {
+         part { name: "bg";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+            }
+         }
+         part { name: "list-content";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.to_y: "bg";
+               rel1.relative: 0.0 0.0;
+            }
+	    description { 
+	    	state: "recommended.visible" 0.0;
+		rel1 { relative: 0.0 0.0; to: "bg";}
+		rel2 { relative: 1.0 0.0; to:"recommended";}
+            }
+         }
+	 part {
+		name: "recommended";
+		type: SWALLOW;
+		scale: 1;
+		description { 
+			state: "default" 0.0;
+			visible: 0;
+			rel1 { relative: 0.0 1.0; }
+			rel2 { relative: 1.0 1.0; }
+			min: 0 0;
+			fixed: 0 0;
+			align: 0.0 0.0;
+		}
+		description {
+			state: "recommended.visible" 0.0;
+			visible: 1;
+			rel1 { relative: 0.0 1.0; }
+			rel2 { relative: 1.0 1.0; }
+			min: 0 150;
+			fixed: 0 1;
+			align: 0.0 1.0;
+		}
+	}
+      }
+
+	programs {
+		program {
+			signal : "show.recommended";
+			source : "*";
+			action : STATE_SET "recommended.visible" 0.0;
+			target : "recommended";
+			target : "list-content";
+		}
+		program {
+			signal : "hide.recommended";
+			source : "*";
+			action : STATE_SET "default" 0.0;
+			target : "recommended";
+			target : "list-content";
+		}
+	}
+   }
+
+#define FONT_NO_CONTENT		"Tizen:style=Roman"
+#define FONT_NO_CONTENT_SIZE	42
+#define FONT_NO_CONTENT_COLOR	121 121 121 255
+#define TEXT_NO_CONTENT_H 54
+
+group {
+		name: "no_result";
+		parts {
+			part { name: "bg";
+				mouse_events: 0;
+				type: SPACER;
+				scale: 1;
+				description { state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+			part {
+				name: "elm.text";
+				type: TEXT;
+				scale: 1;
+				description { state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to:bg;}
+					rel2 { relative: 1.0 1.0; to:bg;}
+                                        align: 0.5 0.5;
+					color: FONT_NO_CONTENT_COLOR;
+					min: 0 46;
+					text {
+						font: FONT_NO_CONTENT;
+						size: FONT_NO_CONTENT_SIZE;
+						align: 0.5 0.5;
+					}
+				}
+
+			}
+		}
+}
+	
+group { name: "recommended_area";
+	parts {
+		part { name: "bg";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				color: 0 0 0 0;
+			}
+		}
+
+		part { name: "padding_top";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to_y: "bg"; }
+				rel2 { relative: 1.0 0.0; to_y: "bg"; }
+				min: 0 2;
+				fixed: 0 1;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_left";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_x: "bg"; to_y: "padding_top";}
+				rel2 { relative: 0.0 0.0; to_x: "bg"; to_y: "padding_bottom";}
+				min: 2 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+			}
+		}
+
+		part { name: "padding_right";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 1.0; to_x: "bg"; to_y: "padding_top";}
+				rel2 { relative: 1.0 0.0; to_x: "bg"; to_y: "padding_bottom";}
+				min: 2 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+			}
+		}
+
+		part { name: "padding_bottom";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.0 1.0; to_y: "bg"; }
+				rel2 { relative: 1.0 1.0; to_y: "bg"; }
+				min: 0 2;
+				fixed: 0 1;
+				align: 0.0 1.0;
+			}
+		}
+
+		part { name: "padding_center_v";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 0.9 1.0; to_x: "bg"; to_y: "padding_top";}
+				rel2 { relative: 0.9 0.0; to_x: "bg"; to_y: "padding_bottom";}
+				min: 2 0;
+				fixed: 1 0;
+				align: 0.5 0.5;
+			}
+		}
+
+		part { name: "padding_center_h";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+				rel1 { relative: 1.0 0.35; to_x: "padding_left"; to_y: "bg";}
+				rel2 { relative: 0.0 0.35; to_x: "padding_center_v"; to_y: "bg";}
+				min: 0 2;
+				fixed: 0 1;
+				align: 0.5 0.5;
+			}
+		}
+		
+		part { name: "title_text";
+			type: TEXT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_left"; to_y: "padding_top";}
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_v"; to_y: "padding_center_h";}
+				color: 59 115 182 255;
+				text {
+					font: "TIZEN:style=Roman";
+					size: 30;
+					min: 0 0;
+					align: 0.0 0.5;
+				}
+			}
+		}
+
+		part { name: "description_text";
+			type: TEXTBLOCK;
+			scale: 1;
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				visible: 1;
+				align: 0.0 0.5;
+				min: 0 100;
+				fixed: 0 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_left"; to_y: "padding_center_h";}
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_v"; to_y: "padding_bottom";}
+				text { style: "text_unread_wrap"; }
+			}
+		}
+
+		part { name: "check_box";
+			type: SWALLOW;
+			scale: 1;
+			description { 
+				state: "default" 0.0;
+				visible: 1;
+				rel1 { relative: 1.0 0.0; to: "padding_center_v";}
+				rel2 { relative: 0.0 1.0; to: "padding_right";}
+				align: 0.5 0.5;
+			}
+		}
+
+	}
+}
+
+group { name: "popup_processingview_1button";
+#define DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN 568 132
+   parts {
+	part {
+			name: "base";
+			type: SPACER;
+			scale: 1;
+			description { state: "default" 0.0;
+			min: DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN;
+			fixed: 1 0;
+			}
+	}
+	part { name: "pad_t";
+		type: SPACER;
+		scale: 1;
+		description { state: "default" 0.0;
+		align: 0.5 0.0;
+		min: 0 32;
+		fixed: 0 1;
+		rel1 {
+			relative: 1.0 0.0;to_x: "pad_l";
+			}
+		rel2 {
+			relative: 0.0 0.0;to_x: "pad_r";
+			}
+		}
+	}
+	part { name: "pad_l";
+		type: SPACER;
+		scale: 1;
+		description { state: "default" 0.0;
+		min: 26 0;
+		max: 26 0;
+		fixed: 1 0;
+		rel1 {
+			relative: 0.0 0.0;
+			to: "base";
+			}
+		rel2 {
+			relative: 0.0 1.0;
+			to: "base";
+			}
+		align: 0.0 0.0;
+		}
+	}
+	part { name: "pad_r";
+		type: SPACER;
+		scale: 1;
+		description { state: "default" 0.0;
+		min: 26 0;
+		max: 26 0;
+		fixed: 1 0;
+		rel1 {
+			relative: 1.0 0.0;
+			to: "base";
+			}
+		rel2 {
+			relative: 1.0 1.0;
+			to: "base";
+			}
+		align: 1.0 0.0;
+		}
+	}
+	part { name: "pad_b";
+		type: SPACER;
+		scale: 1;
+		description { state: "default" 0.0;
+		align: 0.0 1.0;
+		min: 0 32;
+		fixed: 0 1;
+		rel1 {
+			relative: 1.0 1.0;
+			to_x: "pad_l";
+			}
+		rel2 {
+			relative: 0.0 1.0;
+			to_x: "pad_r";
+			}
+		}
+	}
+	part {
+		name: "after.space";
+		scale: 1;
+		type: SPACER;
+		description { state: "default" 0.0;
+		align: 0.0 0.5;
+		min: 80 80;
+		max: 80 80;
+		fixed: 1 1;
+		rel1 {
+			relative: 0.0 1.0;
+			to: "pad_t";
+			}
+		rel2 {
+			relative: 1.0 0.0;
+			to: "pad_b";
+			}
+		}
+	}
+	part { name: "elm.text";
+		type: TEXT;
+		scale : 1;
+		description { state: "default" 0.0;
+		align: 0.5 0.5;
+		color: 0 0 0 255;
+		fixed: 1 1;
+		text {
+			font: "Tizen:style=Medium";
+			size: 38;
+			align: 0.0 0.5;
+			min: 0 1;
+			max: 1 1;
+		}
+		rel1 {
+			relative: 1.0 1.0;
+			to_x: "after.space";
+			to_y: "pad_t";
+			}
+		rel2 {
+			relative: 0.0 0.0;
+			to_x: "pad_r";
+			to_y: "pad_b";
+			}
+		}
+	}
+	part { name:"pad_before_text";
+		type: SPACER;
+		scale: 1;
+		description { state: "default" 0.0;
+		min: 16 132;
+		max: 16 132;
+		fixed: 1 1;
+		align: 1.0 0.0;
+		rel1 {
+			relative: 0.0 0.0;
+			to: "elm.text";
+			}
+		rel2 {
+			relative: 0.0 0.0;
+			to: "elm.text";
+			}
+		}
+	}
+	part { name:"elm.swallow.content";
+		type: SWALLOW;
+		scale: 1;
+		description { state: "default" 0.0;
+		min: 63 63;
+		max: 63 63;
+		fixed: 1 1;
+		align: 1.0 0.0;
+		rel1 {
+			relative: 0.0 0.0;
+			to: "pad_before_text";
+			}
+		rel2 {
+			relative: 0.0 0.0;
+			to: "pad_before_text";
+			}
+		}
+	}
+	}#undef DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN
+}
+
+}

@@ -1,0 +1,1381 @@
+msgid "IDS_MUSIC_POP_PHONE_RINGTONE"
+msgstr "فون گھنٹی ٹون"
+
+msgid "IDS_MUSIC_BODY_DURATION"
+msgstr "دورانیہ"
+
+msgid "IDS_MUSIC_BODY_MUSIC_LOCATION"
+msgstr "لوکیشن"
+
+msgid "IDS_MUSIC_BODY_SET_AS_M_RINGTONE"
+msgstr "بطور"
+
+msgid "IDS_ST_OPT_ADD_TO_PERSONAL_PAGE"
+msgstr "ذاتی صفحہ پراضافہ کریں"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_PERSONAL_PAGE_ABB"
+msgstr "ذاتی صفحہ سے ہٹائیں"
+
+msgid "IDS_ST_POP_MOVE_TO_NORMAL_STORAGE"
+msgstr "نارمل اسٹوریج پر منتقل کریں"
+
+msgid "IDS_ST_POP_MOVE_TO_PERSONAL_STORAGE"
+msgstr "ذاتی اسٹوریج پر منتقل کریں"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "منتخب شدہ اشیا %s پر منتقل کردی جائیں گی"
+
+msgid "IDS_ST_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "منتخب شدہ شے %s پر منتقل کردی جائے گی"
+
+msgid "IDS_MUSIC_POP_RINGTONE_ADDED"
+msgstr "گھنٹی ٹون کا اضافہ ہوگیا۔"
+
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "بند کرنا"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "کریکٹر کی حد ہو گئی۔"
+
+msgid "IDS_CAM_BODY_BUTTON_T_TTS"
+msgstr "بٹن"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "رکیں"
+
+msgid "IDS_COM_BODY_MESSAGE"
+msgstr "پیغام"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ٹھیک ہے"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "منسوخ"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "ریفریش کریں"
+
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "تمام منتخب کریں"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "سیٹنگز"
+
+msgid "IDS_COM_BODY_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "IDS_COM_BUTTON_SHARE"
+msgstr "شراکت"
+
+msgid "IDS_COM_SK_REMOVE"
+msgstr "ہٹانا"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d منتخب ہوگیا"
+
+msgid "IDS_MUSIC_HEADER_SELECT_ITEMS"
+msgstr "اشیا منتخب کریں"
+
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "ایڈوانس"
+
+msgid "IDS_COM_SK_DELETE"
+msgstr "مٹانا"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "مٹ گیا۔"
+
+msgid "IDS_COM_POP_FAILED"
+msgstr "ناکام ہوا۔"
+
+msgid "IDS_COM_BODY_LOADING"
+msgstr "لوڈنگ..."
+
+msgid "IDS_MUSIC_POP_ADDED"
+msgstr "اضافہ ہو گیا۔"
+
+msgid "IDS_MUSIC_POP_FAILED"
+msgstr "ناکام ہوا۔"
+
+msgid "IDS_MUSIC_BODY_NO_SEARCH_RESULTS"
+msgstr "کوئی تلاش کے نتائج نہیں"
+
+msgid "IDS_MUSIC_SK_DONE"
+msgstr "ٹھیک ہے"
+
+msgid "IDS_MUSIC_BODY_NO_ITEMS"
+msgstr "ائیٹمز نہیں ہے"
+
+msgid "IDS_BR_OPT_ADD_TO_HOME"
+msgstr "گھر پر اضافہ کریں"
+
+msgid "IDS_IV_BODY_FAVOURITE"
+msgstr "پسندیدہ"
+
+msgid "IDS_MH_OPT_MORE_INFO_ABB"
+msgstr "مزید معلومات"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_PERSONAL_STORAGE"
+msgstr "ذاتی ذخیرہ میں اضافہ کریں"
+
+msgid "IDS_DLNA_POP_DISCONNECTED_FROM_PS_CHECK_THE_NETWORK_STATUS_AND_THE_CONNECTED_DEVICE"
+msgstr "%s سے منقطع ہوگیا۔ نیٹ ورک حالت اور جڑے ہوئے آلہ کی پڑتال کریں۔"
+
+msgid "IDS_DLNA_OPT_VIA_SCREEN_MIRRORING_ABB"
+msgstr "Screen Mirroring کے ذریعہ"
+
+msgid "IDS_DLNA_OPT_VIA_HOME_NETWORK_ABB"
+msgstr "ہوم نیٹ ورک کے ذریعہ"
+
+msgid "IDS_COM_SK_SET"
+msgstr "سیٹ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_SHARE_DRM_FILE"
+msgstr "DRM فائل شراکت کرنے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_REMOVING"
+msgstr "ہٹا رہا ہے۔۔"
+
+msgid "IDS_MUSIC_HEADER_PD_DEVICES"
+msgstr "%d آلہ"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "حرکات اہل کریں"
+
+msgid "IDS_MUSIC_BUTTON_DONT_ASK_AGAIN"
+msgstr "دوبارہ مت پوچھیں"
+
+msgid "IDS_MUSIC_BODY_NO_RESULTS_FOUND"
+msgstr "کوئی نتائج نہیں ملے۔"
+
+msgid "IDS_VPL_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "فون کو پلٹ کر آنیوالی کالز، پیغام تنبیہات، اور الارمز خاموش کریں"
+
+msgid "IDS_COM_SK_NEXT"
+msgstr "اگلا"
+
+msgid "IDS_COM_BODY_GALLERY"
+msgstr "گیلری"
+
+msgid "IDS_ST_BODY_NONE"
+msgstr "نہیں"
+
+msgid "IDS_ST_BODY_DOUBLE_TAP_TO_MOVE_TO_CONTENT_T_TTS"
+msgstr "مشمول پر حرکت کرنے کے لئے دو بار تھپتھپائیں۔"
+
+msgid "IDS_MUSIC_BODY_SURROUND"
+msgstr "سراونڈ"
+
+msgid "IDS_MUSIC_OPT_LYRICS_ABB"
+msgstr "گیتوں کے بول"
+
+msgid "IDS_MUSIC_POP_AFTER_YOU_ADD_TRACKS_TO_MUSIC_ON_YOUR_MOBILE_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "آپ کے اپنے موبائل ڈیوائس پر میوزک میں ٹریکس کو شامل کر لینے کے بعد، انھیں یہاں دکھایا جائے گا۔"
+
+msgid "IDS_MUSIC_BODY_SAMPLING_RATE"
+msgstr "‏‫شرح سیمپلنگ"
+
+msgid "IDS_MUSIC_BODY_MARKED_AS_A_FAVOURITE"
+msgstr "بطور پسندیدہ نشان زد۔"
+
+msgid "IDS_MUSIC_BODY_MUSIC"
+msgstr "میوزک"
+
+msgid "IDS_MUSIC_BODY_NOT_MARKED_AS_A_FAVOURITE"
+msgstr "بطور پسندیدہ نشان زد نہیں۔"
+
+msgid "IDS_MUSIC_HEADER_SEARCH_MUSIC_ABB"
+msgstr "میوزک تلاش کریں"
+
+msgid "IDS_MUSIC_POP_AUTO_RECOMMENDATION_DOES_NOT_SUPPORT_THIS_AUDIO_FILE"
+msgstr "خودکار تجویز اس آڈیو فائل کی تائید نہيں کرتی"
+
+msgid "IDS_MUSIC_POP_SORRY_THE_PLAYER_DOES_NOT_SUPPORT_THIS_TYPE_OF_AUDIO_FILE"
+msgstr "معذرت، پلیئر اس قسم کی آڈیو فائل کی معاونت نہیں کرتا"
+
+msgid "IDS_MUSIC_BODY_FAVOURITES"
+msgstr "پسند کردہ"
+
+msgid "IDS_MUSIC_BODY_MOST_PLAYED"
+msgstr "سب سے زیادہ چلایا گیا"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_ADDED"
+msgstr "حالیہ اضافہ"
+
+msgid "IDS_MUSIC_OPT_CREATE_PLAYLIST"
+msgstr "چلانے کی فہرست بنائیں"
+
+msgid "IDS_MUSIC_OPT_REMOVE"
+msgstr "ہٹانا"
+
+msgid "IDS_MUSIC_OPT_SETAS_CALLER_RINGTONE"
+msgstr "کالر رنگ ٹون"
+
+msgid "IDS_MUSIC_TAB4_ARTISTS"
+msgstr "فنکار"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD"
+msgstr "اضافہ کرنے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"
+msgstr "پلے لسٹ بنانے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_GET_TAG"
+msgstr "ٹیگ حاصل کرنے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE"
+msgstr "اضافہ نہیں کر سکا%d میوزک فائیل۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "کال کے دوران چلانے سے قاصر۔"
+
+msgid "IDS_MUSIC_BODY_ALBUM"
+msgstr "البم"
+
+msgid "IDS_MUSIC_BODY_AUTHOR"
+msgstr "لکھنے والا"
+
+msgid "IDS_MUSIC_BODY_COPYRIGHT"
+msgstr "کاپی رائیٹ"
+
+msgid "IDS_MUSIC_BODY_CREATE_PLAYLIST"
+msgstr "چلانے کی فہرست بنائیں"
+
+msgid "IDS_MUSIC_BODY_DESCRIPTION"
+msgstr "تفصیل"
+
+msgid "IDS_MUSIC_BODY_FORMAT"
+msgstr "فارمیٹ"
+
+msgid "IDS_MUSIC_BODY_IMPOSSIBLE"
+msgstr "ناممکن"
+
+msgid "IDS_MUSIC_BODY_NO_PLAYLISTS"
+msgstr "چلانے کی فہرست نہیں"
+
+msgid "IDS_MUSIC_BODY_TRACK_NUMBER"
+msgstr "ٹریک نمبر"
+
+msgid "IDS_MUSIC_POP_DELETE_Q"
+msgstr "مٹانا؟"
+
+msgid "IDS_MUSIC_POP_REMOVE_Q"
+msgstr "مٹائیں؟"
+
+msgid "IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"
+msgstr "پلے لسٹ کو نیا نام دینے سے قاصر۔"
+
+msgid "IDS_MUSIC_TAB4_ALBUMS"
+msgstr "البمز"
+
+msgid "IDS_MUSIC_POP_ADDING"
+msgstr "اضافہ کر رہا ہے۔۔۔"
+
+msgid "IDS_MUSIC_POP_DELETE_PD_ALBUMS_Q"
+msgstr "%d البمز کو حذف کریں؟"
+
+msgid "IDS_MUSIC_TAB4_PLAYLISTS"
+msgstr "پلے فہرستیں"
+
+msgid "IDS_MUSIC_OPT_ADD"
+msgstr "اضافہ کریں"
+
+msgid "IDS_MUSIC_BODY_BIOGRAPHY"
+msgstr "سوانح عمری"
+
+msgid "IDS_MUSIC_BODY_CREDITS"
+msgstr "کریڈٹس"
+
+msgid "IDS_MUSIC_BODY_DETAILS_MEADIA_INFO"
+msgstr "میڈيا معلومات"
+
+msgid "IDS_MUSIC_BODY_DISCOGRAPHY"
+msgstr "ڈسکو گرافی"
+
+msgid "IDS_MUSIC_BODY_LYRIC"
+msgstr "گیت کے بول"
+
+msgid "IDS_MUSIC_BODY_POSSIBLE"
+msgstr "ممکن"
+
+msgid "IDS_MUSIC_BODY_REVIEW"
+msgstr "دوبارہ دیکھیں"
+
+msgid "IDS_MUSIC_HEADER_TRACK_LIST"
+msgstr "ٹریک لسٹ"
+
+msgid "IDS_MUSIC_BODY_ADD_TO_PLAYLIST"
+msgstr "پلے لسٹ میں اضافہ کریں"
+
+msgid "IDS_MUSIC_BODY_ARTIST"
+msgstr "فنکار"
+
+msgid "IDS_MUSIC_BODY_FORWARDING"
+msgstr "آگے بھیجنا"
+
+msgid "IDS_MUSIC_BODY_RECORDED_DATE"
+msgstr "Date of recording"
+
+msgid "IDS_MUSIC_BODY_PLAYLISTS"
+msgstr "چلانے کی فہرست"
+
+msgid "IDS_MUSIC_BODY_RECENTLY_PLAYED"
+msgstr "حالیہ چلایا گیا"
+
+msgid "IDS_MUSIC_BODY_TRACK_LENGTH"
+msgstr "ٹریک کی لمبائی"
+
+msgid "IDS_MUSIC_HEADER_NO_SONGS"
+msgstr "کوئی گانے نہیں"
+
+msgid "IDS_MUSIC_POP_THIS_TRACK_WILL_BE_DELETED"
+msgstr "اس ٹریک کو حذف کر دیا جائے گا"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_TRACKS_WILL_BE_DELETED"
+msgstr "منتخب شدہ ٹریکس حذف کر دئے جائیں گے"
+
+msgid "IDS_MUSIC_POP_THIS_ARTIST_WILL_BE_DELETED"
+msgstr "یہ فنکار حذف کردیا جائے گا"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ARTISTS_WILL_BE_DELETED"
+msgstr "منتخب فنکار حذف کردئیے جائیں گے۔"
+
+msgid "IDS_MUSIC_POP_ALL_ARTISTS_WILL_BE_DELETED"
+msgstr "سب فنکار حذف کردئے جائیں گے"
+
+msgid "IDS_MUSIC_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "یہ فولڈر حذف کردیا جائے گا"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_FOLDERS_WILL_BE_DELETED"
+msgstr "منتخب فولڈر حذف کردئیے جائیں گے۔"
+
+msgid "IDS_MUSIC_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "سب فولڈر حذف کردئے جائیں گے"
+
+msgid "IDS_MUSIC_POP_THIS_ALBUM_WILL_BE_DELETED"
+msgstr "یہ البم حذف کردیا جائے گا"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_ALBUMS_WILL_BE_DELETED"
+msgstr "منتخب البم حذف کردئیے جائیں گے۔"
+
+msgid "IDS_MUSIC_POP_ALL_ALBUMS_WILL_BE_DELETED"
+msgstr "سب البم حذف کردئے جائیں گے"
+
+msgid "IDS_MUSIC_POP_THIS_PLAYLIST_WILL_BE_DELETED"
+msgstr "یہ پلے فہرست حذف کردی جائے گی"
+
+msgid "IDS_MUSIC_POP_THE_SELECTED_PLAYLISTS_WILL_BE_DELETED"
+msgstr "منتخب شدہ پلے فہرستیں حذف کر دی جائیں گی"
+
+msgid "IDS_MUSIC_POP_ALL_PLAYLISTS_WILL_BE_DELETED"
+msgstr "سب پلے فہرستیں حذف کردی جائیں گی"
+
+msgid "IDS_MUSIC_HEADER_SONGS"
+msgstr "گانے"
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "نیا نام دیں"
+
+msgid "IDS_MUSIC_OPT_REORDER"
+msgstr "پھر سے ترتیب دیں"
+
+msgid "IDS_MUSIC_OPT_SAVE_AS_PLAYLIST"
+msgstr "بطور پلے لسٹ محفوظ کریں"
+
+msgid "IDS_MUSIC_OPT_SETAS_ALARM_TONE"
+msgstr "الارم کی ٹون"
+
+msgid "IDS_MUSIC_POP_NOTHING_SELECTED"
+msgstr "کچھ پسند نہیں کیا۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "پلے کرنے سے قاصر۔ غلطی واقع ہوگئی۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_UNSUPPORTED_FILETYPE"
+msgstr "پلے کرنے سے قاصر۔ غیرسہولت یافتہ فائل کی قسم۔"
+
+msgid "IDS_MUSIC_SK_SHARE"
+msgstr "حصہ داری"
+
+msgid "IDS_MUSIC_TAB4_CONDUCTORS"
+msgstr "ہدایت کار"
+
+msgid "IDS_MUSIC_HEADER_SELECT_DEVICE"
+msgstr "آلہ منتخب کریں"
+
+msgid "IDS_MUSIC_SK_VIEW_AS"
+msgstr "منظر بطور"
+
+msgid "IDS_MUSIC_BODY_SOUNDEFFECTS_NORMAL"
+msgstr "معمولی"
+
+msgid "IDS_MUSIC_BODY_USER"
+msgstr "استمعال کرنے والا"
+
+msgid "IDS_MUSIC_BODY_VOCAL_M_SOUNDEFFECT"
+msgstr "آواز کے متعلق"
+
+msgid "IDS_MUSIC_MBODY_BASS_BOOST"
+msgstr "باس بڑھانا"
+
+msgid "IDS_MUSIC_MBODY_TREBLE_BOOST"
+msgstr "ٹریبل بڑھانا"
+
+msgid "IDS_MUSIC_BODY_CAFE_M_SOUNDEFFECT"
+msgstr "کیفے"
+
+msgid "IDS_MUSIC_OPT_VIRTUAL_71_CH"
+msgstr "مجازی 7.1 چینل"
+
+msgid "IDS_MUSIC_OPT_AFTER_15_MIN_ABB"
+msgstr "15 منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_30_MIN"
+msgstr "بعد 30 منٹ"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HOUR"
+msgstr "بعد 1 گھنٹہ"
+
+msgid "IDS_MUSIC_POP_AFTER_1_HOUR_30_MIN"
+msgstr "1 گھنٹہ 30 منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_2_HOURS"
+msgstr "2 گھنٹوں بعد"
+
+msgid "IDS_MUSIC_BODY_MUSIC_AUTO_OFF"
+msgstr "میوزک آٹو آف"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES_ONLY"
+msgstr "صوتی تاثرات صرف ایئر فون اور بلیو ٹوتھ ھیڈسیٹ موڈز میں کام کرتا ہے"
+
+msgid "IDS_MUSIC_TAB4_MUSIC_SQUARE"
+msgstr "میوزک اسکوائر"
+
+msgid "IDS_MUSIC_POP_NOT_ENOUGH_MUSIC_FILES_TO_PLAY_IN_MUSIC_SQUARE_AT_LEAST_PD_MUSIC_FILES_REQUIRED"
+msgstr "میوزک اسکوائر میں پلے کرنے کے لئے کافی فائلیں نہیں ہیں۔ کم از کم %d میوزک فائلیں درکار ہیں۔"
+
+msgid "IDS_MUSIC_BODY_PASSION_M_MOOD"
+msgstr "جذبہ"
+
+msgid "IDS_MUSIC_BODY_CALM_M_ADJECTIVE"
+msgstr "پرسکون"
+
+msgid "IDS_MUSIC_BODY_JOY_M_MOOD"
+msgstr "مسرت"
+
+msgid "IDS_MUSIC_BODY_LIBRARY_UPDATE"
+msgstr "لائبریری تازہ کاری"
+
+msgid "IDS_MUSIC_POP_UPDATE_LIBRARY_Q"
+msgstr "لائبریری تازہ کاری کریں؟"
+
+msgid "IDS_MUSIC_BODY_CHANGE_AXIS"
+msgstr "محور تبدیل کریں"
+
+msgid "IDS_MUSIC_ITAB4_GENRES"
+msgstr "جنریز"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_1_TRACK"
+msgstr "1 البم/1 ٹریک"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_PD_TRACKS"
+msgstr "1 البم/‎%d ٹریکس"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS_PD_TRACKS"
+msgstr "‎%d البمز/‎%d ٹریکس"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_CONTROL_MUSIC_PLAYER_WITH_THE_VOICE_COMMANDS_P1SS_P2SS_P3SS_P4SS_P5SS_AND_P6SS"
+msgstr "آپ میوزک پلیئر کو ان صوتی احکام سے کنٹرول کرسکتے ہیں %1$s, %2$s, %3$s, %4$s, %5$s, اور %6$s"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_PD_TRACKS"
+msgstr "%d ٹریکس شفل کریں"
+
+msgid "IDS_MUSIC_BODY_MORE_INFO"
+msgstr "مزید معلومات"
+
+msgid "IDS_MUSIC_HEADER_MY_MUSIC_M_APPLICATION_NAME"
+msgstr "میری میوزک"
+
+msgid "IDS_MUSIC_OPT_LIST_VIEW"
+msgstr "لسٹ کا ویو"
+
+msgid "IDS_MUSIC_OPT_PLAY_VIA_GROUP_PLAY"
+msgstr "پلے کریں براستہ گروپ پلے"
+
+msgid "IDS_MUSIC_POP_TRACK_ADDED_TO_FAVOURITES"
+msgstr "ٹریک کا پسندیدہ پر اضافہ ہوگیا۔"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_FAVOURITES"
+msgstr "پسندیدگان سے ہٹائيں"
+
+msgid "IDS_MUSIC_BODY_NEW_M_LATEST"
+msgstr "نیا"
+
+msgid "IDS_MUSIC_OPT_TRACKS"
+msgstr "ٹریکس"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL"
+msgstr "تھمب نیل"
+
+msgid "IDS_MUSIC_SK_LIST"
+msgstr "لسٹ"
+
+msgid "IDS_MUSIC_SK_OPEN_PLAYLIST"
+msgstr "پلے لیسٹ کھولیں"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALL"
+msgstr "چلایں تمام"
+
+msgid "IDS_MUSIC_POP_SELECTED_LIST_EMPTY"
+msgstr "منتخب کردہ فہرست خالی۔"
+
+msgid "IDS_MUSIC_BODY_MOODS"
+msgstr "مزاج"
+
+msgid "IDS_MUSIC_BUTTON_YEARS"
+msgstr "سال"
+
+msgid "IDS_MUSIC_BODY_OLD"
+msgstr "پرانا"
+
+msgid "IDS_MUSIC_BODY_MUSIC_SQUARE_ANALYSES_THE_CHARACTERISTICS_OF_MUSIC_FILES_STORED_ON_YOUR_DEVICE_AND_AUTOMATICALLY_CREATES_PLAYLISTS_MSG"
+msgstr "میوزک مربع آپ کے آلہ میں ذخیرہ کردہ میوزک فائلوں کی خصوصیات کا تجزیہ کرتا ہے اور خودکار طور پر پلے فہرستیں تخلیق کرتا ہے"
+
+msgid "IDS_MUSIC_BODY_PLAY_TRACKS_WITH_SIMILAR_CHARACTERISTICS_BY_SELECTING_A_SQUARE_ON_THE_SCREEN"
+msgstr "اسکرین پر کوئی مربع منتخب کر کے ملتی جلتی خصوصیات کی میوزک کی پلے فہرست پلے کریں"
+
+msgid "IDS_MUSIC_BODY_VIEW_PLAYLIST_DETAILS_BY_TAPPING_AND_HOLDING_THE_SQUARE_CURRENTLY_BEING_PLAYED"
+msgstr "موجودہ پلے ہونے والے مربع کو تھپتھپا کر اور تھام کر رکھنے سے پلے فہرست تفصیلات منظر کریں"
+
+msgid "IDS_MUSIC_BODY_NEARBY_DEVICES"
+msgstr "قریب میں واقع آلات"
+
+msgid "IDS_MUSIC_POP_YOU_WILL_NEED_TO_UPDATE_THE_LIBRARY_IF_NEW_SONGS_HAVE_BEEN_ADDED"
+msgstr "اگر نئے گانوں کا اضافہ ہو چکا ہے تو آپ کو لائبریری تازہ کاری کرنے کی ضرورت ہو گی"
+
+msgid "IDS_MUSIC_BODY_NO_ALBUMS"
+msgstr "کوئی البم نہیں"
+
+msgid "IDS_MUSIC_BODY_NO_ARTISTS"
+msgstr "کوئی فنکار نہیں ہیں"
+
+msgid "IDS_MUSIC_OPT_PLAY_SPEED_ABB"
+msgstr "پلے کرنے کی رفتار"
+
+msgid "IDS_MUSIC_BODY_CONCERT_HALL_M_SOUNDEFFECT"
+msgstr "کنسرٹ ھال"
+
+msgid "IDS_MUSIC_OPT_ADD_TO"
+msgstr "میں اضافہ"
+
+msgid "IDS_MUSIC_SK_VIEW"
+msgstr "نظارہ"
+
+msgid "IDS_MUSIC_OPT_LISTBY_RECENTLY_ADDED"
+msgstr "حالیہ اضافہ"
+
+msgid "IDS_MUSIC_BODY_NOT_USED"
+msgstr "استعمال میں نہیں"
+
+msgid "IDS_MUSIC_BODY_MAKE_AVAILABLE_OFFLINE"
+msgstr "موجود کو آف لائن بنائیں"
+
+msgid "IDS_MUSIC_OPT_AFTER_P1SD_HRS_P2SD_MINS"
+msgstr "%1$d گھنٹے %2$d منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS"
+msgstr "%d گھنٹے کے بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_MINS"
+msgstr "%d منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_NO_FOLDERS"
+msgstr "کوئی فولڈرز نہیں"
+
+msgid "IDS_MUSIC_BODY_NO_TRACKS"
+msgstr "کوئی ٹریکس نہیں"
+
+msgid "IDS_MUSIC_BODY_PD_ALBUMS"
+msgstr "%d البمز"
+
+msgid "IDS_MUSIC_BODY_PD_ARTISTS"
+msgstr "%d فنکاران"
+
+msgid "IDS_MUSIC_BODY_PD_GENRES"
+msgstr "%d جنریز"
+
+msgid "IDS_MUSIC_BODY_PD_PLAYLISTS"
+msgstr "%d پلے فہرستیں"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_ABB"
+msgstr "%d ٹریکس"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST"
+msgstr "چلانے کی فہرست"
+
+msgid "IDS_MUSIC_HEADER_SIMILAR_ALBUMS"
+msgstr "مماثل البمز"
+
+msgid "IDS_MUSIC_HEADER_TRACK"
+msgstr "ٹریک"
+
+msgid "IDS_MUSIC_OPT_THUMBNAIL_VIEW"
+msgstr "تھمب نیل کا نظارہ"
+
+msgid "IDS_MUSIC_POP_THIS_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "صوتی اثرات صرف ایئر فون موڈ پر کام کرتا ہے"
+
+msgid "IDS_MUSIC_OPT_ALL_CONTENT_ABB2"
+msgstr "تمام مشمول"
+
+msgid "IDS_MUSIC_BODY_A_NETWORK_CONNECTION_IS_REQUIRED_TO_PLAY_THIS_FILE_CHECK_YOUR_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "یہ فائل پلے کرنے کے لئے ایک نیٹ ورک کنکشن درکار ہے۔ اپنے نیٹ ورک کنکشن کی پڑتال اور دوبارہ کوشش کریں۔"
+
+msgid "IDS_MUSIC_POP_FILE_TYPE_NOT_SUPPORTED"
+msgstr "فائیل کی قسم کی سپورٹ نہیں۔"
+
+msgid "IDS_MUSIC_POP_UPDATING_ING"
+msgstr "اپ ڈیٹ کر رہا ہے..."
+
+msgid "IDS_MUSIC_OPT_SEARCH_ABB"
+msgstr "تلاش"
+
+msgid "IDS_MUSIC_OPT_SEARCH_BY"
+msgstr "تلاش بلحاظ"
+
+msgid "IDS_MUSIC_BODY_RELATED_VIDEOS"
+msgstr "متعلقہ ویڈیو"
+
+msgid "IDS_MUSIC_BODY_SMART_VOLUME_ABB"
+msgstr "اسمارٹ والیوم"
+
+msgid "IDS_MUSIC_BODY_THE_VOLUME_OF_ALL_TRACKS_WILL_BE_ADJUSTED_TO_LEVEL_PD"
+msgstr "سب ٹریکس کا والیوم لیول %d پر مطابق بنادیا جائے گا"
+
+msgid "IDS_MUSIC_HEADER_SMART_VOLUME_IS_ENABLED"
+msgstr "اسمارٹ والیوم اہل بنادیا گیا ہے"
+
+msgid "IDS_MUSIC_OPT_CONNECTION_INFO_ABB"
+msgstr "کنکشن معلومات"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_PD_MINS"
+msgstr "1 گھنٹہ %d منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_ADAPT_SOUND_ABB"
+msgstr "Adapt Sound"
+
+msgid "IDS_MUSIC_BODY_MY_DEVICE"
+msgstr "میرا آلہ"
+
+msgid "IDS_MUSIC_POP_LISTENING_AT_A_HIGH_VOLUME_FOR_A_LONG_TIME_MAY_DAMAGE_YOUR_HEARING_RAISE_THE_VOLUME_ABOVE_SAFE_LEVELS_Q"
+msgstr "زیادہ عرصہ تک بلند آواز سے سننا آپ کی سماعت کو نقصان پہنچا سکتا ہے۔ والیوم کو محفوظ سطحوں سے اوپر بڑہائیں؟"
+
+msgid "IDS_MUSIC_POP_ALREADY_EXISTS"
+msgstr "پہلے سے موجود۔"
+
+msgid "IDS_MUSIC_OPT_SCAN_FOR_NEARBY_DEVICES"
+msgstr "قرب و جوار کے آلات اسکین کریں"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR"
+msgstr "1 گھنٹے کے بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_HR_1_MIN"
+msgstr "1 گھنٹہ 1 منٹ کے بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_PD_HRS_1_MIN"
+msgstr "%d گھنٹے 1 منٹ بعد"
+
+msgid "IDS_MUSIC_BODY_AFTER_1_MIN"
+msgstr "1 منٹ بعد"
+
+msgid "IDS_MUSIC_OPT_GO_TO_STORE"
+msgstr "اسٹور پر جائیں"
+
+msgid "IDS_MUSIC_SK3_ADD_TRACKS"
+msgstr "ٹریک شامل"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FROM_MUSIC_THEY_WILL_BE_SHOWN_HERE"
+msgstr "آپ کے میوزک سے ٹریکس ڈاؤن لوڈ کرنے کے بعد، وہ یہاں دکھائے جائیں گے"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_YOUR_FAVOURITES_THEY_WILL_BE_SHOWN_HERE"
+msgstr "آپ کے اپنے پسندیدہ پر ٹریکس اضافہ کرنے کے بعد، ان کو یہاں دکھایا جائے گا"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "آپ کے ٹریکس پلے کرنے کے بعد، ان کو یہاں دکھایا جائے گا"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_PS_THEY_WILL_BE_SHOWN_HERE"
+msgstr "آپ کے %s پر ٹریکس اضافہ کرنے کے بعد، ان کو یہاں دکھایا جائے گا"
+
+msgid "IDS_MUSIC_BODY_NO_PURCHASED_CONTENT"
+msgstr "کوئی خریدا ہوا مشمول نہیں"
+
+msgid "IDS_MUSIC_SK_SAVE_AS"
+msgstr "محفوظ کریں بطور"
+
+msgid "IDS_MUSIC_POP_MUSICPLAYER_UPDATING_FAILED"
+msgstr "اپ ڈیٹ فیل۔"
+
+msgid "IDS_MUSIC_BODY_EXCITING_M_ADJECTIVE"
+msgstr "ولولہ انگیز"
+
+msgid "IDS_MUSIC_BODY_SEARCH_MY_MUSIC"
+msgstr "میری موسیقی تلاش کریں"
+
+msgid "IDS_MUSIC_HEADER_CONNECTED_DEVICES"
+msgstr "جڑے ہوئے آلہ جات"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST_PS"
+msgstr "میری پلے فہرست %s"
+
+msgid "IDS_MUSIC_BODY_NO_DEVICES"
+msgstr "کوئی آلہ نہیں"
+
+msgid "IDS_MUSIC_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "دستیاب آلہ جات"
+
+msgid "IDS_MUSIC_POP_SET"
+msgstr "سیٹ"
+
+msgid "IDS_MUSIC_POP_REMOVE_FAILED"
+msgstr "ہٹانا ناکام ہوگیا۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "جب قریبی آلات اہل بنا دئے ہوں تو فاسٹ فارورڈ اور ریوائنڈ استعمال کرنے سے قاصر۔"
+
+msgid "IDS_MUSIC_OPT_SET_AS"
+msgstr "بطور"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "ھیڈفونز"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "اسپیکر"
+
+msgid "IDS_MUSIC_BODY_1_SONG"
+msgstr "1 گانا"
+
+msgid "IDS_MUSIC_BODY_PD_SONGS"
+msgstr "%d گانے"
+
+msgid "IDS_MUSIC_BODY_1_TRACK"
+msgstr "1 ٹریک"
+
+msgid "IDS_MUSIC_HEADER_SHUFFLE_1_TRACK"
+msgstr "شفل کریں1 ٹریک"
+
+msgid "IDS_MUSIC_POP_NO_MUSIC_FOUND_FOR_SELECTED_CELL"
+msgstr "منتخب کردہ سیل کے لئے کوئی میوزک نہیں ملا"
+
+msgid "IDS_MUSIC_BODY_DO_NOT_SHOW_AGAIN"
+msgstr "دوبارہ نہیں دکھا‏‏ئيں"
+
+msgid "IDS_MUSIC_BODY_VARIOUS_ARTISTS"
+msgstr "مختلف فنکاران"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "ہوم اسکرین پر اضافہ کریں"
+
+msgid "IDS_MUSIC_OPT_ADD_TO_FAVOURITES"
+msgstr "پسندیدہ میں اضافہ کریں"
+
+msgid "IDS_MUSIC_OPT_EDIT_TITLE"
+msgstr "ٹائیٹل تبدیل کریں"
+
+msgid "IDS_MUSIC_OPT_REMOVE_FROM_PERSONAL_STORAGE"
+msgstr "ذاتی اسٹوریج سے ہٹائیں"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_DOWNLOAD_TRACKS_FOLDERS_WILL_BE_SHOWN"
+msgstr "آپ کے ٹریکس ڈاؤن لوڈ کرنے کے بعد فولڈرز ظاہر ہوں گے"
+
+msgid "IDS_MUSIC_BODY_SETTINGS_VOLUME"
+msgstr "والیوم"
+
+msgid "IDS_MUSIC_BODY_REPEAT_OFF"
+msgstr "دھرانا آف"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_REPEAT_ALL"
+msgstr "تمام دہرائیں"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_OFF"
+msgstr "شفل آف"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE_ON"
+msgstr "شفل آن"
+
+msgid "IDS_MUSIC_BODY_MY_PLAYLIST"
+msgstr "میری پلے لیسٹ"
+
+msgid "IDS_MUSIC_MBODY_DEFAULT_PLAYLISTS"
+msgstr "ڈیفالٹ پلے لسٹ"
+
+msgid "IDS_MUSIC_BODY_DETAILS_RECORDING_DATE"
+msgstr "ریکارڈنگ کی تاریخ"
+
+msgid "IDS_MUSIC_OPT_ALBUM_ART_ABB"
+msgstr "البم آرٹ"
+
+msgid "IDS_MUSIC_BODY_1_GENRE"
+msgstr "1 جنرے"
+
+msgid "IDS_MUSIC_BODY_PD_FOLDERS"
+msgstr "%d فولڈر"
+
+msgid "IDS_MUSIC_BODY_1_FOLDER"
+msgstr "1 فولڈر"
+
+msgid "IDS_MUSIC_BODY_1_ARTIST"
+msgstr "1 فنکار"
+
+msgid "IDS_MUSIC_BODY_1_ALBUM_M_MUSIC"
+msgstr "1 البم"
+
+msgid "IDS_MUSIC_BODY_1_PLAYLIST"
+msgstr "1 پلے فہرست"
+
+msgid "IDS_MUSIC_BODY_MUSIC_PLAYER"
+msgstr "میوزک پلیر"
+
+msgid "IDS_MUSIC_BUTTON_MOVE"
+msgstr "منتقل کریں"
+
+msgid "IDS_MUSIC_BUTTON_AUTO_RECOMMENDATIONS"
+msgstr "خودکار تجاویز"
+
+msgid "IDS_MUSIC_BUTTON_FROM_THE_BEGINNING"
+msgstr "شروع سے"
+
+msgid "IDS_MUSIC_HEADER_SUGGESTIONS_FOR_YOU"
+msgstr "آپ کے لیے مشورہ جات"
+
+msgid "IDS_MUSIC_OPT_SAVE"
+msgstr "محفوظ"
+
+msgid "IDS_MUSIC_TAB4_BASIC_M_EQUALIZING"
+msgstr "بنیادی"
+
+msgid "IDS_MUSIC_BODY_INSTRUMENT"
+msgstr "ساز"
+
+msgid "IDS_MUSIC_BODY_TREBLE_M_EQUALISER"
+msgstr "ٹریبل"
+
+msgid "IDS_MUSIC_BODY_BASS_M_EQUALISER"
+msgstr "بیس"
+
+msgid "IDS_MUSIC_BODY_NO_EFFECTS_ARE_APPLIED_IN_THIS_MODE_ABB"
+msgstr "اس موڈ میں کوئی تاثرات نہیں لگائے جاتے"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_TIMBRE_OF_A_TUBE_AMP_ABB"
+msgstr "ایک ٹیوب ایمپلی فائر کی بناوٹی طنین پیدا کرتا ہے۔"
+
+msgid "IDS_MUSIC_OPT_TUBE_AMP_EFFECT"
+msgstr "ٹیوب ایمپلی فائر تاثر"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_EFFECT_OF_VIRTUAL_71_CHANNEL_SURROUND_SOUND_ABB"
+msgstr "بناوٹی مجازی 7.1 چینل سراؤنڈ ساؤنڈ تاثر پیدا کرتا ہے۔"
+
+msgid "IDS_MUSIC_HEADER_SMALL_ROOM_M_REVERB_ABB"
+msgstr "چھوٹا کمرہ"
+
+msgid "IDS_MUSIC_HEADER_LARGE_ROOM_M_REVERB_ABB"
+msgstr "بڑا کمرہ"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_LARGE_ROOM_EG_A_THEATRE_ABB"
+msgstr "ایک بڑے کمرہ کی بناوٹی گونچ پیدا کرتا ہے، مثال ایک تھیٹر۔"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_CONCERT_HALL_ABB"
+msgstr "ایک کنسرٹ ہال کی بناوٹی گونچ پیدا کرتا ہے۔"
+
+msgid "IDS_MUSIC_BODY_SIMULATES_THE_REVERB_OF_A_SMALL_SPACE_EG_A_STUDIO_ABB"
+msgstr "ایک چھوٹی جگہ کی بناوٹی گونچ پیدا کرتا ہے، مثال ایک اسٹوڈیو۔"
+
+msgid "IDS_MUSIC_BUTTON_3D_CHN"
+msgstr "3D"
+
+msgid "IDS_MUSIC_BODY_CLARITY_M_SOUNDEFFECT"
+msgstr "صفائی"
+
+msgid "IDS_MUSIC_BUTTON_RESET"
+msgstr "پھر سیٹ"
+
+msgid "IDS_MUSIC_TAB_YEARS"
+msgstr "سالہا سال"
+
+msgid "IDS_MUSIC_TAB_GENRES"
+msgstr "موسیقی قسم"
+
+msgid "IDS_MUSIC_TAB_COMPOSERS"
+msgstr "کمپوزر"
+
+msgid "IDS_MUSIC_TAB_ALL_TRACKS"
+msgstr "سب ٹریکس"
+
+msgid "IDS_MUSIC_SK3_GO_TO_QUICK_LIST"
+msgstr "فوری فہرست جائیں"
+
+msgid "IDS_MUSIC_SK3_FIND"
+msgstr "ڈھونڈیں"
+
+msgid "IDS_MUSIC_SK3_ADD_TO_QUICK_LIST"
+msgstr "فوری فہرست اضافہ"
+
+msgid "IDS_MUSIC_POP_UNAUTHORISED_VIDEO_FILE_FOR_TV_OUT"
+msgstr "‏TV-آؤٹ کے لئے غیر مجاز فائل۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_CREATE_MAXIMUM_NUMBER_OF_PLAYLISTS_REACHED"
+msgstr "بنانے سے قاصر۔ پلے فہرست کی تعداد کی حد پہنچ گئی۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTING_BLUETOOTH_HEADSET"
+msgstr "Bluetooth ہیڈ سیٹ کا کنکشن کرنے کے دوران والیوم مطابق کرنے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADJUST_VOLUME_WHILE_CONNECTED_TO_BLUETOOTH_HEADSET"
+msgstr "جب بلیو ٹوٹھ ہیڈسیٹ جڑا ہو تو والیوم مطابق بنانے سے قاصر۔"
+
+msgid "IDS_MUSIC_POP_STOP_MUSIC_PLAYER_Q"
+msgstr "میوزک پلیر روکیں"
+
+msgid "IDS_MUSIC_POP_PLEASE_EXIT_SILENT_MODE"
+msgstr "خاموش موڈ سے نکلیں"
+
+msgid "IDS_MUSIC_POP_NETWORK_FAILURE"
+msgstr "نیٹ ورک ناکام۔"
+
+msgid "IDS_MUSIC_POP_MEMORY_CARD_LOADED"
+msgstr "میموری کارڈ لوڈ ہوگیا۔"
+
+msgid "IDS_MUSIC_POP_DEVICE_SETTINGS_ERROR"
+msgstr "آلے کی سیٹنگز کی غلطی۔"
+
+msgid "IDS_MUSIC_POP_COULD_NOT_FIND_A_MATCH_FOR_THE_SONG"
+msgstr "گانے کا میل نہیں ملا۔"
+
+msgid "IDS_MUSIC_POP_BUFFERING_MSTATUS"
+msgstr "بفر کر رہا ہے"
+
+msgid "IDS_MUSIC_POP_BT_HEADSET_ONLY_SUPPORTS_NORMAL_EFFECTS_SETTING"
+msgstr "BT ھیڈسیٹ صرف غمومی تاثرات سیٹنگ کی تائید کرتا ہے"
+
+msgid "IDS_MUSIC_POP_APPLICATION_WILL_BE_CLOSED"
+msgstr "ایپلی کیشن بند کردی جائے گی"
+
+msgid "IDS_MUSIC_POP_ADDED_GO_TO_WISH_LIST_Q"
+msgstr "اضافہ ہوگیا۔ خواھش فہرست پر جائیں؟"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_THE_SERVICE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "ہو سکتا ہے خدمت پر رسائی کی قیمت طلب کی جائے۔ جاری رکھیں؟"
+
+msgid "IDS_MUSIC_POP_ACCESS_TO_STORE_MAY_BE_CHARGED_CONTINUE_Q"
+msgstr "ممکن ہے کہ خدمت پر رسائی کی قیمت طلب کی جائے۔ جاری رکھیں؟"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_ONLY_IN_EARPHONE_AND_BLUETOOTH_HEADSET_MODES"
+msgstr "صرف ایئر فون اور بلیو ٹوتھ ھیڈسیٹ موڈز میں 5.1 چینل صوتی تاثر کام کرتا ہے"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECT_WORKS_IN_EARPHONE_MODE_ONLY"
+msgstr "5.1 چینل کی آواز کا اثر صرف ائیرفون وضع میں کام کرتا ہے"
+
+msgid "IDS_MUSIC_POP_51_CHANNEL_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "اسپیکر 5.1 چینل صوتی اثرات کی تائید نہیں کرتا۔"
+
+msgid "IDS_MUSIC_OPT_VIEW_BY_COVER_ART"
+msgstr "بزریعہ کوور آرٹ نظارہ کریں"
+
+msgid "IDS_MUSIC_OPT_SEND_TRACK"
+msgstr "ٹریک بھیجیں"
+
+msgid "IDS_MUSIC_OPT_RATE_TRACK"
+msgstr "ریٹ ٹریک"
+
+msgid "IDS_MUSIC_OPT_PLAYLIST_MOVE_TRACK_IN_PLAYLIST"
+msgstr "ٹریک کو ہلائیں"
+
+msgid "IDS_MUSIC_OPT_OPENPLAYLIST_CURRENT"
+msgstr "جدید"
+
+msgid "IDS_MUSIC_OPT_DELETE_PLAYLIST"
+msgstr "پلے لسٹ مٹائيں"
+
+msgid "IDS_MUSIC_OPT_BACKGROUND_PLAYING"
+msgstr "پیچھے میوزک چلائیں"
+
+msgid "IDS_MUSIC_HEADER_EFFECTS"
+msgstr "اثرات"
+
+msgid "IDS_MUSIC_BUTTON_BUY_NOW"
+msgstr "Buy now"
+
+msgid "IDS_MUSIC_BODY_WOW_HD"
+msgstr "Wow HD"
+
+msgid "IDS_MUSIC_BODY_WISHLIST"
+msgstr "خواہشوں کی فہرست"
+
+msgid "IDS_MUSIC_BODY_WIDE"
+msgstr "چوڑا"
+
+msgid "IDS_MUSIC_BODY_WHA_WHA"
+msgstr "واہ واہ"
+
+msgid "IDS_MUSIC_BODY_VIBE_WOOFER"
+msgstr "تھرتھراہٹ ووفر"
+
+msgid "IDS_MUSIC_BODY_TREMOLO"
+msgstr "ٹریمولو"
+
+msgid "IDS_MUSIC_BODY_TAP_TWICE_TO_PLAY_PAUSE_MUSIC"
+msgstr "دو بار تھپکیں پلے کرنے کے لئے/موسیقی میں وقفے کے لئے"
+
+msgid "IDS_MUSIC_BODY_SHARE_TRACK_VIA_BLUETOOTH"
+msgstr "بذریعہ Bluetooth ٹریک شراکت کریں"
+
+msgid "IDS_MUSIC_BODY_SETUPWIZARD_WELCOME_TO_THE_MUSIC_SETUP_WIZARD_CONTINUE_Q"
+msgstr "موسیقی کے سیٹ اپ وزرڈ میں خوشامدید۔\n آنے والی سکریں آپکو فون کنفگر کرنے میں مدد کریگی جاری؟"
+
+msgid "IDS_MUSIC_BODY_QUICK_LIST"
+msgstr "فوری فہرست"
+
+msgid "IDS_MUSIC_BODY_PLAYINGSETTINGS_SOUND_EFFECTS"
+msgstr "آواز کے اثرات"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_ALL"
+msgstr "تمام"
+
+msgid "IDS_MUSIC_BODY_PLAYINGREPEAT_1"
+msgstr "1"
+
+msgid "IDS_MUSIC_BODY_PLAYERSETTINGS_VOLUME"
+msgstr "والیوم"
+
+msgid "IDS_MUSIC_BODY_PD_TRACKS_SELECTED"
+msgstr "%d ٹریکس منتخب ہوگئے۔"
+
+msgid "IDS_MUSIC_BODY_NO_PODCASTS"
+msgstr "کوئی پوڈ کاسٹس نہیں ہیں"
+
+msgid "IDS_MUSIC_BODY_FIND_SIMILAR"
+msgstr "اس جیسے تلاش کریں"
+
+msgid "IDS_MUSIC_BODY_BACKGROUND_PLAY"
+msgstr "پیچھے چلانا"
+
+msgid "IDS_MUSIC_BODY_51_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 چینل صرف اس وقت زیر عمل ہوسکتے ہیں جب صوتی تاثرات آف ہوں"
+
+msgid "IDS_MUSIC_TAB4_PODCASTS"
+msgstr "پوڈ کاسٹس"
+
+msgid "IDS_MUSIC_SK2_EDIT_IMAGE"
+msgstr "تصویر تدوین کریں"
+
+msgid "IDS_MUSIC_POP_PLAYING_ANY_SOUNDS_WILL_STOP_AND_SAVE_YOUR_VOICE_RECORDING_PLAY_Q"
+msgstr "کوئی آوازیں پلے کرنے سے آپ کی آواز کی ریکارڈنگ ختم اور محفوظ ہوجائے گی۔ پلے کریں؟"
+
+msgid "IDS_MUSIC_POP_MAXIMUM_NUMBER_OF_ITEMS_HPD_SELECTED"
+msgstr "اشیا کی انتہائی تعداد (%d) منتخب ہوگئی۔"
+
+msgid "IDS_MUSIC_POP_BLUETOOTH_DISCONNECTED"
+msgstr "Bluetooth غیر متصل کردیا گیا۔"
+
+msgid "IDS_MUSIC_POP_5_1_CHANNEL_CAN_ONLY_BE_ACTIVATED_WHEN_SOUND_EFFECTS_ARE_OFF"
+msgstr "5.1 چینل صرف اس وقت زیر عمل ہوسکتے ہیں جب صوتی اثرات آف ہوں"
+
+msgid "IDS_MUSIC_OPT_TAKE_PICTURE"
+msgstr "تصویر لیں"
+
+msgid "IDS_MUSIC_OPT_SHOW_MUSIC_VIEW_ABB"
+msgstr "میوزک منظر دکھائیں"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "روکنا"
+
+msgid "IDS_MUSIC_OPT_MOREMENU_PLAY_ALBUM"
+msgstr "البم چلائيں"
+
+msgid "IDS_MUSIC_OPT_LIST_BY"
+msgstr "فہرست بنائیں"
+
+msgid "IDS_MUSIC_OPT_HISTORY"
+msgstr "تاریخ نامہ"
+
+msgid "IDS_MUSIC_OPT_HIDE_MUSIC_VIEW_ABB"
+msgstr "میوزک منظر چھپائیں"
+
+msgid "IDS_MUSIC_OPT_FIND_TAG"
+msgstr "ٹیگ ڈھونڈیے"
+
+msgid "IDS_MUSIC_OPT_DROPBOX_CONTENT_ABB"
+msgstr "Dropbox مشمول"
+
+msgid "IDS_MUSIC_OPT_CONTENT_ON_PHONE_ABB"
+msgstr "فون پر مشمول"
+
+msgid "IDS_MUSIC_OPT_CHANGE_IMAGE"
+msgstr "تصویر تبدیل"
+
+msgid "IDS_MUSIC_HEADER_DELETE_DROPBOX_DATA_ABB"
+msgstr "Dropbox کوائف حذف کریں"
+
+msgid "IDS_MUSIC_BODY_YOU_CAN_STREAM_YOUR_MUSIC_TO_DEVICES_USING_ALLSHARE"
+msgstr "آپ AllShare استعمال کرتے ہوئے اپنی موسیقی آلے کو سٹریم کرسکتے ہیں"
+
+msgid "IDS_MUSIC_BODY_VALIDITY"
+msgstr "معیادی"
+
+msgid "IDS_MUSIC_BODY_TYPE_CNOUN"
+msgstr "قسم"
+
+msgid "IDS_MUSIC_BODY_THIS_WILL_DELETE_THE_FILE_FROM_THE_SERVER_AND_ANY_CONNECTED_DEVICES_AS_WELL"
+msgstr "یہ سرور سے اور ایسے ہی کسی جڑے ہوئے آلہ جات سے فائل حذف کردے گا"
+
+msgid "IDS_MUSIC_BODY_PLAYLIST_ARTISTS"
+msgstr "فنکار"
+
+msgid "IDS_MUSIC_BODY_PLAYINGDETAILS_ALBUM_ART"
+msgstr "البم آدٹ"
+
+msgid "IDS_MUSIC_BODY_OTHER_CONTENTS"
+msgstr "دیگر مشمولات"
+
+msgid "IDS_MUSIC_BODY_NAME_TOO_LONG"
+msgstr "نام لمبا ہے۔"
+
+msgid "IDS_MUSIC_BODY_MUSIC_CLARITY"
+msgstr "میوزک کی وضاحت"
+
+msgid "IDS_MUSIC_BODY_HIGH_VOLUMES_MAY_HARM_YOUR_HEARING_IF_YOU_LISTEN_FOR_A_LONG_TIME"
+msgstr "اگر آپ لمبے عرصے تک سنیں تو اونچا لیول آپ کی سماعت کو نقصان پہنچا سکتا ہے"
+
+msgid "IDS_MUSIC_BODY_AVAILABLE_USES"
+msgstr "استعمال کرنے کی سہولیات"
+
+msgid "IDS_MUSIC_TPOP_SOUND_EFFECTS_ONLY_AVAILABLE_WHILE_HEADPHONES_CONNECTED"
+msgstr "ساؤنڈ ایفیکٹس صرف ہیڈفونس کے کنیکٹ ہونے کے دوران ہی دستیاب ہیں۔"
+
+msgid "IDS_ST_OPT_ADD_TO_YOUR_PERSONAL_STORAGE"
+msgstr "اپنے ذاتی ذخیرہ پر اضافہ کریں"
+
+msgid "IDS_ST_OPT_REMOVE_FROM_YOUR_PERSONAL_STORAGE"
+msgstr "اپنے ذاتی ذخیرہ سے ہٹائیں"
+
+msgid "IDS_ST_BODY_CONTEXTUAL_POP_UP_T_TALKBACK"
+msgstr "سیاق و سباق پاپ-اپ"
+
+msgid "IDS_ST_BODY_A_CONTEXTUAL_POP_UP_IS_OPEN_DOUBLE_TAP_TO_CLOSE_IT_T_TALKBACK"
+msgstr "ایک سیاق و سباق پاپ-اپ کھلا ہوا ہے۔ اس کو بند کرنے کے لئے دو بار تھپتھپائیں۔"
+
+msgid "IDS_ST_BODY_REPEAT_ONE"
+msgstr "ایک دھرائیں"
+
+msgid "IDS_ST_BUTTON_MOVING_ING"
+msgstr "منتقل کررہاہے..."
+
+msgid "IDS_HS_BODY_SELECT_UP_TO_PD_ITEMS"
+msgstr "‎%d تک اشیاء منتخب کریں"
+
+msgid "IDS_CAM_BODY_TAB_T_TTS"
+msgstr "ٹیب"
+
+msgid "IDS_MH_BODY_THE_PLAYLIST_NAME_PS_IS_ALREADY_IN_USE"
+msgstr "پلے فہرست نام %s پہلے سے استعمال میں ہے"
+
+msgid "IDS_MH_TPOP_PD_TRACKS_ADDED_TO_PLAYLIST"
+msgstr "پلے فہرست میں %d ٹریکس اضافہ کئے گئے۔"
+
+msgid "IDS_MH_MBODY_RECENTLY_ADDED_M_SONG"
+msgstr "حالیہ طور پر شامل کیا گيا"
+
+msgid "IDS_MH_TPOP_1_TRACK_ADDED_TO_PLAYLIST"
+msgstr "پلے فہرست پر 1 ٹریک اضافہ کیا گیا"
+
+msgid "IDS_MH_BODY_TOTAL"
+msgstr "تمام"
+
+msgid "IDS_DLNA_OPT2_CHANGE_PLAYER"
+msgstr "پلیئر تبدیل کریں"
+
+msgid "IDS_BR_SK_TABS"
+msgstr "ٹیبز"
+
+msgid "IDS_MF_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_PB_BODY_AUTO_RECOMMENDATIONS_CAN_EXTRACT_THE_HIGHLIGHTS_FROM_SOUND_FILES"
+msgstr "خودکار تجاویز ساؤنڈ فائلوں سے نمایاں کردہ کو نچوڑ سکتے ہیں"
+
+msgid "IDS_MF_BODY_PARENT_RATING"
+msgstr "ماں باپ کیلیے ریٹینگ"
+
+msgid "IDS_COM_BODY_MUSIC"
+msgstr "میوزک"
+
+msgid "IDS_COM_BODY_NO_CONTENTS"
+msgstr "کوئی اجزا نہيں"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "نامعلوم"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "غلطی"
+
+msgid "IDS_COM_SK_DOWNLOAD"
+msgstr "ڈاؤن لوڈ"
+
+msgid "IDS_COM_OPT_DELETE"
+msgstr "مٹانا"
+
+msgid "IDS_COM_BODY_DETAILS_TITLE"
+msgstr "موضوع"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "محفوظ"
+
+msgid "IDS_COM_BODY_EMAIL"
+msgstr "ای میل"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "بلیو ٹوتھ"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_POP_DELETE_Q"
+msgstr "مٹانا؟"
+
+msgid "IDS_COM_SK_SELECT"
+msgstr "انتخاب"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "بیٹری لو۔"
+
+msgid "IDS_COM_POP_UNABLE_TO_USE_DURING_MASS_STORAGE_MODE"
+msgstr "انبار ذخیرہ کرنے کے موڈ میں استعمال کرنے سے قاصر۔"
+
+msgid "IDS_COM_BODY_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_COM_POP_FILE_NOT_FOUND"
+msgstr "فائل نہیں ملی۔"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "کنکشن ناکام۔"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "فائیل موجود نہیں"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "آڈیو آلہ"
+
+msgid "IDS_COM_POP_CANCEL"
+msgstr "منسوخ"
+
+msgid "IDS_COM_BODY_FOLDERS"
+msgstr "فولڈر"
+
+msgid "IDS_COM_BODY_DETAILS"
+msgstr "تفصیل"
+
+msgid "IDS_COM_BODY_END"
+msgstr "ختم"
+
+msgid "IDS_COM_BODY_EDIT"
+msgstr "تبدیلی"
+
+msgid "IDS_COM_POP_UPDATED"
+msgstr "اپڈیٹیڈ۔"
+
+msgid "IDS_COM_POP_DOWNLOADING"
+msgstr "ڈاونلوڈ کر رہا ہے۔۔۔"
+
+msgid "IDS_COM_POP_DONE"
+msgstr "ٹھیک ہے"
+
+msgid "IDS_COM_POP_REMOVED"
+msgstr "ہٹا دیا۔"
+
+msgid "IDS_COM_BODY_CREATE"
+msgstr "تخلیق"
+
+msgid "IDS_COM_BODY_INTERNET"
+msgstr "انٹرنیٹ"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "اضافہ ہو گیا۔"
+
+msgid "IDS_COM_BODY_TIME"
+msgstr "وقت"
+
+msgid "IDS_COM_SK_NEW"
+msgstr "نیا"
+
+msgid "IDS_COM_BODY_RESET_A"
+msgstr "دوبارہ سیٹ"
+
+msgid "IDS_COM_POP_MEMORY_FULL"
+msgstr "میموری فل۔"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "اسکین کریں"
+
+msgid "IDS_COM_BODY_SELECTED"
+msgstr "انتخاب ہوگیا"
+
+msgid "IDS_COM_BODY_PREVIOUS"
+msgstr "پچھلا"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "اضافہ کرنے سے قاصر۔"
+
+msgid "IDS_COM_BODY_PAUSE"
+msgstr "روکنا"
+
+msgid "IDS_PB_POP_CALLER_RINGTONE_SAVED"
+msgstr "کالر رنگ ٹون محفوظ۔۔"
+
+msgid "IDS_MUSIC_BODY_BIT_DEPTH"
+msgstr "بٹ گہرائی"
+
+msgid "IDS_MUSIC_BODY_SIZE"
+msgstr "سائز"
+
+msgid "IDS_MF_HEADER_PD_SELECTED"
+msgstr "%d منتخب ہوگیا"
+
+msgid "IDS_MUSIC_BODY_AFTER_YOU_ADD_TRACKS_TO_THIS_DEVICE_THEY_WILL_BE_SHOWN_HERE"
+msgstr "اس آلے میں آپ کے ٹریکس شامل کرنے کے بعد، انہیں یہاں دکھایا جائے گا۔"
+
+msgid "IDS_MH_POP_ALARM_TONE_SET"
+msgstr "الارم ٹون سیٹ۔"
+
+msgid "IDS_MUSIC_TMBODY_LENGTH"
+msgstr "لمبائی"
+
+msgid "IDS_MUSIC_ITAB4_FOLDERS"
+msgstr "فولڈرز"
+
+msgid "IDS_MUSIC_HEADER_MY_PLAYLISTS_ABB"
+msgstr "My playlists"
+
+msgid "IDS_MP_BODY_SOUND_PLAYER"
+msgstr "ساؤنڈ پلیئر"
+
+msgid "IDS_MUSIC_OPT_SETTINGS"
+msgstr "سیٹنگز"
+
+msgid "IDS_MUSIC_MBODY_QUEUE"
+msgstr "قطار"
+
+msgid "IDS_MUSIC_OPT_VOLUME"
+msgstr "وآلیوم"
+
+msgid "IDS_MUSIC_BODY_SHUFFLE"
+msgstr "شفل"
+
+msgid "IDS_MUSIC_OPT_REPEAT"
+msgstr "دوہرائیں"
+
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "فائلوں کا سائز انتہا سے زیادہ ہوگیا۔"
+

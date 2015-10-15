@@ -1,0 +1,850 @@
+/* 
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+* http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+* 
+*/
+
+#define MP_NOW_PLAYING_W 720
+#define MP_NOW_PLAYING_H 100
+#define MP_NOW_PLAYING_LEFT_W 10
+#define MP_NOW_PLAYING_RIGHT_W 18
+#define MP_NOW_PLAYING_TOP_H 20
+#define MP_NOW_PLAYING_BG "lite/mini_player_bg.#.png"
+#define LANDSCAPE_MP_NOW_PLAYING_BG "mini_player/T02_mini_player_bg_h.png"
+#define LANDSCAPE_MP_NOW_PLAYING_W 1280
+#define LANDSCAPE_MP_NOW_PLAYING_H 124
+
+#define MP_NOW_PROGRESS_TEXT_FONT			"Tizen:style=Regular"
+#define MP_NOW_PROGRESS_TEXT_SIZE			23
+#define MP_NOW_PROGRESS_TEXT_COLOR			248 246 240 255
+
+/* thumb image */
+#define MP_NOW_PLAYING_THUMB_TOP_H 10
+#define MP_NOW_PLAYING_THUMB_LEFT_W 7
+#define MP_NOW_PLAYING_THUMB_SIZE 80
+#define MP_NOW_PLAYING_THUMB_SX		(9/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_THUMB_SY		(0.06)
+#define MP_NOW_PLAYING_THUMB_EX		(0.31)
+#define MP_NOW_PLAYING_THUMB_EY		(0.94)
+
+
+#define PV_OPTION_SHUFFLE_ON_SX (0.05)
+#define PV_OPTION_SHUFFLE_ON_EX (0.15)
+
+
+#define PV_OPTION_REP_SX (0.85)
+#define PV_OPTION_REP_EX (0.95)
+
+#define MP_NOW_PLAYING_TO_THUMB_LEFT_W 150
+/* label */
+#define MP_NOW_PLAYING_LABEL_AREAR_W 148
+#define MP_NOW_PLAYING_LABEL_AREAR_H (MP_NOW_PLAYING_LABEL_H+MP_NOW_PLAYING_LABEL_ARTIST_H)
+#define MP_NOW_PLAYING_LABEL_W /*312*/250
+#define MP_NOW_PLAYING_LABEL_H /*26*/18
+#define MP_NOW_PLAYING_LABEL_LEFT_W 14
+#define MP_NOW_PLAYING_LABEL_ARTIST_H 32
+
+#define MP_NOW_PLAYING_LABEL_SX (196/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_LABEL_SY (2/MP_NOW_PLAYING_H)
+#define MP_NOW_PLAYING_LABEL_EX (MP_NOW_PLAYING_LABEL_SX+MP_NOW_PLAYING_LABEL_W/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_LABEL_EY (32/MP_NOW_PLAYING_H)
+
+#define MP_NOW_PLAYING_LABEL_PADDING_H 0
+
+/* label artist */
+#define MP_NOW_PLAYING_LABEL_ARTIST_SY (MP_NOW_PLAYING_LABEL_EY+MP_NOW_PLAYING_LABEL_PADDING_H/MP_NOW_PLAYING_H)
+#define MP_NOW_PLAYING_LABEL_ARTIST_EY (MP_NOW_PLAYING_LABEL_ARTIST_SY+MP_NOW_PLAYING_LABEL_ARTIST_H/MP_NOW_PLAYING_H)
+
+#define MP_NOW_PLAYING_PROGRESS_AREA_EY (52/MP_NOW_PLAYING_H)
+/* progress */
+#define MP_NOW_PLAYING_PROGRESS_H 6
+#define MP_NOW_PLAYING_PROGRESS_TOP_H 6
+#define MP_NOW_PLAYING_PROGRESS_SX (100/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_PROGRESS_SY (35/MP_NOW_PLAYING_H)
+/*#define MP_NOW_PLAYING_PROGRESS_EX ((MP_NOW_PLAYING_W-MP_NOW_PLAYING_RIGHT_W)/MP_NOW_PLAYING_W)*/
+#define MP_NOW_PLAYING_PROGRESS_EX (0.54)
+#define MP_NOW_PLAYING_PROGRESS_EY (MP_NOW_PLAYING_PROGRESS_SY+MP_NOW_PLAYING_PROGRESS_H/MP_NOW_PLAYING_H)
+
+/* mini icon */
+#define MP_NOW_PLAYING_MINI_LEFT_W 26
+#define MP_NOW_PLAYING_MINI_SIZE 38
+#define MP_NOW_PLAYING_MINI_W 33
+
+#define MP_NOW_PLAYING_MINI_SX (MP_NOW_PLAYING_LABEL_EX+MP_NOW_PLAYING_MINI_LEFT_W/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_MINI_SY MP_NOW_PLAYING_LABEL_SY
+#define MP_NOW_PLAYING_MINI_EX (MP_NOW_PLAYING_MINI_SX+MP_NOW_PLAYING_MINI_SIZE/MP_NOW_PLAYING_W)
+#define MP_NOW_PLAYING_MINI_EY MP_NOW_PLAYING_LABEL_EY
+//#define MP_NOW_PLAYING_MINI_BG "mini_player/T02_mini_icon_now_playing.png"
+
+/* click bg */
+#define MP_NOW_PLAYING_CLICK_BG_SX 0
+#define MP_NOW_PLAYING_CLICK_BG_SY 0
+#define MP_NOW_PLAYING_CLICK_BG_EX 1
+#define MP_NOW_PLAYING_CLICK_BG_EY MP_NOW_PLAYING_PROGRESS_EY
+
+/* control */
+#define MP_NOW_PLAYING_CONTROL_H 121
+#define MP_NOW_PLAYING_CONTROL_LEFT_W 290
+#define MNP_CONTROL_PREVIOUS_SZIE 40
+#define MNP_CONTROL_PLAY_SZIE 100
+#define MNP_CONTROL_INTERVAL 16
+#define MNP_CONTROL_CENTER_LINE_H 135
+#define MNP_CONTROL_PREVIOUS_SX 0
+#define MNP_CONTROL_PREVIOUS_SY 0
+#define MNP_CONTROL_PREVIOUS_EX 1
+#define MNP_CONTROL_PREVIOUS_EY 1
+
+#define MNP_CONTROL_PLAY_SX 0
+#define MNP_CONTROL_PLAY_SY 0
+
+#define MNP_CONTROL_PLAY_EX 1
+#define MNP_CONTROL_PLAY_EY 1
+
+#define MNP_CONTROL_NEXT_SX 0
+#define MNP_CONTROL_NEXT_SY 0
+#define MNP_CONTROL_NEXT_EX 1
+#define MNP_CONTROL_NEXT_EY 1
+
+#define IMG_PLAYER_VIEW_BUTTON_PATH		"lite/Button/"
+#define IMG_MINI_PLAYER_BUTTON_PATH		"mini_player_button/"
+#define MNP_CONTROL_CIRCLE_BT_01		IMG_PLAYER_VIEW_BUTTON_PATH"player_button_01.png"
+#define MNP_CONTROL_CIRCLE_BT_01_CIRCLE		IMG_PLAYER_VIEW_BUTTON_PATH"player_button_01_ef.png"
+#define MNP_CONTROL_CIRCLE_BT_02		IMG_PLAYER_VIEW_BUTTON_PATH"player_button_02.png"
+#define MNP_CONTROL_CIRCLE_BT_02_CIRCLE		IMG_PLAYER_VIEW_BUTTON_PATH"player_button_02_ef.png"
+#define MNP_CONTROL_PREVIOUS			IMG_MINI_PLAYER_BUTTON_PATH"player_button_prev.png"
+#define MNP_CONTROL_PLAY				IMG_MINI_PLAYER_BUTTON_PATH"player_button_play.png"
+#define MNP_CONTROL_PAUSE				IMG_MINI_PLAYER_BUTTON_PATH"player_button_pause.png"
+#define MNP_CONTROL_NEXT				IMG_MINI_PLAYER_BUTTON_PATH"player_button_next.png"
+#define PV_OPTION_SHUFFLE_ON "lite/player_icon_Shuffle.png"
+#define PV_OPTION_SHUFFLE_OFF "lite/player_icon_shuffle_off_normal.png"
+#define PV_OPTION_SHUFFLE_ON_PRESS "lite/player_icon_shuffle_on_pressed.png"
+#define PV_OPTION_SHUFFLE_OFF_PRESS "lite/player_icon_shuffle_off_pressed.png"
+#define PV_OPTION_REP_A "lite/player_icon_rep_A_normal.png"
+#define PV_OPTION_REP_A_PRESS "lite/player_icon_rep_A_pressed.png"
+#define PV_OPTION_REP_1 "lite/player_icon_rep_1_normal.png"
+#define PV_OPTION_REP_1_PRESS "lite/player_icon_rep_1_pressed.png"
+#define PV_OPTION_REP_ALL "lite/player_icon_rep_all_normal.png"
+#define PV_OPTION_REP_ALL_PRESS "lite/player_icon_rep_all_pressed.png"
+
+#define PV_PART_HIDE_SWALLOW_OPTION_1(__name, __sx, __sy, __ex, __ey) \
+part { \
+	name: __name; \
+	mouse_events: 1; \
+	type: SWALLOW; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 1; \
+		rel1 { \
+			relative: __sx __sy; \
+		} \
+		rel2 { \
+			relative: __ex __ey; \
+		} \
+	} \
+	description { \
+		state: "visible" 0.0; \
+		inherit: "default"; \
+		visible: 1; \
+	} \
+}
+
+#define MP_FOCUSED_COVER(__name, __over_part_bg) \
+part { \
+	name: __name"_focus"; \
+	type: SWALLOW; \
+	mouse_events: 1; \
+	repeat_events: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		rel1 { \
+			relative: 0 0; \
+			to: __over_part_bg; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __over_part_bg; \
+		} \
+	} \
+}
+
+
+#define MP_PART_PREV_NEXT(__name, __to, __sx, __sy, __ex, __ey, __normal, __min_max) \
+part { \
+	name: __name"_spacer"; \
+	type: SPACER; \
+	scale: 1; \
+	description { state: "default" 0.0; \
+		rel1 { relative: __sx __sy; to: __to; } \
+		rel2 { relative: __ex __ey; to: __to; } \
+	} \
+} \
+part { \
+	name: __name"_bg"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.0 0.0; \
+		visible: 0; \
+		rel1 { \
+			relative: 0.0 0.0; \
+			to: __name"_spacer"; \
+		} \
+		rel2 { \
+			relative: 1.0 1.0; \
+			to: __name"_spacer"; \
+		} \
+		fixed: 1 1; \
+		color: 0 0 0 0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name; \
+	type: IMAGE; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.5 0.5; \
+		visible:1; \
+		image { normal: __normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+		color: 76 103 212 255; \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		color: 58 78 161 255; \
+	} \
+	description { \
+		state: "dim" 0.0; \
+		inherit: "default" 0.0; \
+		color: 134 155 240 255; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+}
+
+
+#define MP_PART_BUTTON(__name, __to, __sx, __sy, __ex, __ey, __bg_normal, __bg_circle, __normal, __min_max) \
+part { \
+	name: __name"_spacer"; \
+	type: SPACER; \
+	scale: 1; \
+	description { state: "default" 0.0; \
+		rel1 { relative: __sx __sy; to: __to; } \
+		rel2 { relative: __ex __ey; to: __to; } \
+	} \
+} \
+part { \
+	name: __name"_bg"; \
+	mouse_events: 0; \
+	type: RECT; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0.0 0.0; \
+		visible: 0; \
+		rel1 { \
+			relative: 0.0 0.0; \
+			to: __name"_spacer"; \
+		} \
+		rel2 { \
+			relative: 1.0 1.0; \
+			to: __name"_spacer"; \
+		} \
+		fixed: 1 1; \
+		color: 0 0 0 0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_bg_normal"; \
+	type: IMAGE; \
+	mouse_events:1; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __bg_normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+		color: 76 103 212 255; \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		color: 58 78 161 255; \
+	} \
+	description { \
+		state: "dim" 0.0; \
+		inherit: "default" 0.0; \
+		color: 134 155 240 255; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name"_bg_circle"; \
+	type: IMAGE; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __bg_circle; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+		color: 66 162 207 255; \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+		color: 66 162 207 255; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+} \
+part{ \
+	name : __name; \
+	type: IMAGE; \
+	scale: 1; \
+	description { \
+		state: "default" 0.0; \
+		align: 0 0; \
+		visible:1; \
+		image { normal: __normal; } \
+		rel1 { \
+			relative: 0 0; \
+			to: __name"_bg"; \
+		} \
+		rel2 { \
+			relative: 1 1; \
+			to: __name"_bg"; \
+		} \
+	} \
+	description { \
+		state: "press" 0.0; \
+		inherit: "default" 0.0; \
+	} \
+	description { state: "invisible" 0.0; \
+		inherit: "default" 0.0; \
+		visible: 0; \
+	} \
+}
+
+#define NP_BUTTON_VISIVBLE_PROGRAM(__name) \
+program { \
+	name: __name"_visible" ; \
+	signal: __name"_visible"; \
+	source: __name; \
+	action:   STATE_SET "default" 0.0; \
+	target: __name"_bg"; \
+	target: __name; \
+} \
+program { \
+	name: __name"_invisible" ; \
+	signal: __name"_invisible"; \
+	source: __name; \
+	action:   STATE_SET "invisible" 0.0; \
+	target: __name"_bg"; \
+	target: __name; \
+}
+
+#define PV_BUTTON_PROGRAM_NEXT_PREV(__name) \
+program{\
+	name: __name"_after_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: STATE_SET "press" 0.0; \
+	target: __name"_bg"; \
+	target: __name; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_down"; \
+	source: __name; \
+	signal: "mouse,down,1"; \
+	action: PLAY_SAMPLE "button-pressed" 1.0; \
+	after:  __name"_after_down"; \
+	transition: ACCELERATE 0.02;\
+} \
+program { \
+	name: __name"_up"; \
+	source: __name; \
+	signal: "mouse,up,1"; \
+	action: STATE_SET "default" 0.0; \
+	target: __name; \
+	transition: DECELERATE 0.02;\
+} \
+program { \
+	name: __name"_clicked"; \
+	source: __name; \
+	signal: "mouse,clicked,1"; \
+	action: SIGNAL_EMIT __name"_clicked" 0.0; \
+}
+
+group {
+	name: "mp_now_playing";
+
+	images {
+		image: MP_NOW_PLAYING_BG COMP;
+		image: MNP_CONTROL_CIRCLE_BT_01 COMP;
+		image: MNP_CONTROL_CIRCLE_BT_01_CIRCLE COMP;
+		image: MNP_CONTROL_CIRCLE_BT_02 COMP;
+		image: MNP_CONTROL_CIRCLE_BT_02_CIRCLE COMP;
+		image: MNP_CONTROL_PREVIOUS COMP;
+		image: MNP_CONTROL_PLAY COMP;
+		image: MNP_CONTROL_PAUSE COMP;
+		image: MNP_CONTROL_NEXT COMP;
+		image: PV_OPTION_SHUFFLE_ON COMP;	 
+		image: PV_OPTION_SHUFFLE_OFF COMP;
+		image: PV_OPTION_SHUFFLE_ON_PRESS COMP;
+		image: PV_OPTION_SHUFFLE_OFF_PRESS COMP;
+		image: PV_OPTION_REP_A COMP;
+		image: PV_OPTION_REP_A_PRESS COMP;
+		image: PV_OPTION_REP_1 COMP;
+		image: PV_OPTION_REP_1_PRESS COMP;
+		image: PV_OPTION_REP_ALL COMP;
+		image: PV_OPTION_REP_ALL_PRESS COMP;
+		
+	}
+	
+	parts {
+		part {
+			name: "now_playing_bg";
+			scale: 1;
+			type : IMAGE;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				image { normal: MP_NOW_PLAYING_BG; }
+			}
+		}
+		part {
+			name: "now_playing_label";
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			type: SWALLOW;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				rel1 {
+					relative: 0.02 0.175;
+				}
+				rel2 {
+					relative: 0.454 0.516;
+				}
+			}
+		}
+		part {
+			name: "now_playing_artist";
+			scale: 1;
+			mouse_events: 1;
+			repeat_events: 1;
+			type: SWALLOW;
+			description {
+				state: "default" 0.0;
+				align: 0 0;
+				rel1 {
+					relative: 0.02 0.516;
+				}
+				rel2 {
+					relative: 0.454 0.7916;
+				}
+			}
+		}
+		part {
+			name: "prev_box";
+			scale: 1;
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				align:0 0;
+				rel1 { relative: 0.4708 0.208; }
+				rel2 { relative: 0.608 0.7583; }
+			}
+		}
+		part {
+			name: "play_box";
+			scale: 1;
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				align:0 0;
+				rel1 { relative: 0.6583 0.208; }
+				rel2 { relative: 0.7958 0.7583; }
+			}
+		}
+		part {
+			name: "next_box";
+			scale: 1;
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+				align:0 0;
+				rel1 { relative: 0.8458 0.208; }
+				rel2 { relative: 0.9833 0.7583; }
+			}
+		}
+
+		/* control */
+		MP_PART_PREV_NEXT("control_previous", "prev_box", MNP_CONTROL_PREVIOUS_SX, MNP_CONTROL_PREVIOUS_SY,
+				MNP_CONTROL_PREVIOUS_EX, MNP_CONTROL_PREVIOUS_EY, MNP_CONTROL_PREVIOUS, 64 64)
+
+		MP_FOCUSED_COVER("previous", "control_previous_bg");
+
+		MP_PART_PREV_NEXT("control_play", "play_box", MNP_CONTROL_PLAY_SX, MNP_CONTROL_PLAY_SY,
+				MNP_CONTROL_PLAY_EX, MNP_CONTROL_PLAY_EY, MNP_CONTROL_PAUSE, 90 90)
+
+		MP_PART_PREV_NEXT("control_pause", "play_box", MNP_CONTROL_PLAY_SX, MNP_CONTROL_PLAY_SY,
+				MNP_CONTROL_PLAY_EX, MNP_CONTROL_PLAY_EY, MNP_CONTROL_PLAY, 90 90)
+
+		MP_FOCUSED_COVER("play_pause", "control_play_bg");
+
+		MP_PART_PREV_NEXT("control_next", "next_box", MNP_CONTROL_NEXT_SX, MNP_CONTROL_NEXT_SY,
+				MNP_CONTROL_NEXT_EX, MNP_CONTROL_NEXT_EY, MNP_CONTROL_NEXT, 64 64)
+		MP_FOCUSED_COVER("next", "control_next_bg");
+
+	}
+
+	programs {
+		program {
+			name: "now_playing_clicked";
+			source: "now_playing_label";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "now_playing_clicked" 0.0;
+		}
+		program {
+			name: "now_playing_clicked1";
+			source: "now_playing_artist";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "now_playing_clicked" 0.0;
+		}
+
+		/* control */
+		PV_BUTTON_PROGRAM_NEXT_PREV("control_previous")
+		PV_BUTTON_PROGRAM_NEXT_PREV("control_play")
+		NP_BUTTON_VISIVBLE_PROGRAM("control_play")
+		PV_BUTTON_PROGRAM_NEXT_PREV("control_pause")
+		NP_BUTTON_VISIVBLE_PROGRAM("control_pause")
+		PV_BUTTON_PROGRAM_NEXT_PREV("control_next")
+	}
+
+}
+
+#define MP_NOW_LD_H 124
+
+#define MP_NOW_LD_ALBUM_LEFT            28
+#define MP_NOW_LD_ALBUM_W               104
+#define MP_NOW_LD_ALBUM_H               104
+
+#define MP_NOW_LD_LABEL_LEFT            23
+#define MP_NOW_LD_LABEL_W               732
+#define MP_NOW_LD_LABEL_H               38
+#define MP_NOW_LD_LABEL_T               18
+
+#define MP_NOW_LD_PRGORESS_W            732
+#define MP_NOW_LD_PRGORESS_H            11
+
+#define MP_NOW_LD_PLAYING_TEXT_W        112
+#define MP_NOW_LD_PLAYING_TEXT_H        25
+#define MP_NOW_LD_PLAYING_PROGRESS_TEXT_TOP_H   57
+
+#define MP_NOW_LD_ALBUM_SX        (MP_NOW_LD_ALBUM_LEFT/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_ALBUM_SY        (10/LANDSCAPE_MP_NOW_PLAYING_H)
+#define MP_NOW_LD_ALBUM_EX        (MP_NOW_LD_ALBUM_SX+MP_NOW_LD_ALBUM_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_ALBUM_EY        (MP_NOW_LD_ALBUM_SY+MP_NOW_LD_ALBUM_H/LANDSCAPE_MP_NOW_PLAYING_H)
+
+#define MP_NOW_LD_LABEL_SX        ((MP_NOW_LD_ALBUM_LEFT+MP_NOW_LD_ALBUM_W+MP_NOW_LD_LABEL_LEFT)/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_LABEL_SY        (MP_NOW_LD_LABEL_T/LANDSCAPE_MP_NOW_PLAYING_H)
+#define MP_NOW_LD_LABEL_EX        (MP_NOW_LD_LABEL_SX+MP_NOW_LD_LABEL_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_LABEL_EY        (MP_NOW_LD_LABEL_SY+MP_NOW_LD_LABEL_H/LANDSCAPE_MP_NOW_PLAYING_H)
+
+#define MP_NOW_LD_PROGRESS_SX      MP_NOW_LD_LABEL_SX
+#define MP_NOW_LD_PROGRESS_SY      (65/LANDSCAPE_MP_NOW_PLAYING_H)
+#define MP_NOW_LD_PROGRESS_EX      (MP_NOW_LD_PROGRESS_SX+MP_NOW_LD_PRGORESS_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_PROGRESS_EY      (MP_NOW_LD_PROGRESS_SY+MP_NOW_LD_PRGORESS_H/LANDSCAPE_MP_NOW_PLAYING_H)
+
+#define MP_NOW_LD_PROGRESS_TEXT_LEFT_SX      MP_NOW_LD_LABEL_SX
+#define MP_NOW_LD_PROGRESS_TEXT_LEFT_SY      (79/LANDSCAPE_MP_NOW_PLAYING_H)
+#define MP_NOW_LD_PROGRESS_TEXT_LEFT_EX      (MP_NOW_LD_PROGRESS_TEXT_LEFT_SX+MP_NOW_LD_PLAYING_TEXT_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_PROGRESS_TEXT_LEFT_EY      (MP_NOW_LD_PROGRESS_TEXT_LEFT_SY+MP_NOW_LD_PLAYING_TEXT_H/LANDSCAPE_MP_NOW_PLAYING_H)
+
+#define MP_NOW_LD_PROGRESS_TEXT_RIGHT_SX     (MP_NOW_LD_LABEL_EX-MP_NOW_LD_PLAYING_TEXT_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_PROGRESS_TEXT_RIGHT_SY     (79/LANDSCAPE_MP_NOW_PLAYING_H)
+#define MP_NOW_LD_PROGRESS_TEXT_RIGHT_EX     (MP_NOW_LD_PROGRESS_TEXT_RIGHT_SX+MP_NOW_LD_PLAYING_TEXT_W/LANDSCAPE_MP_NOW_PLAYING_W)
+#define MP_NOW_LD_PROGRESS_TEXT_RIGHT_EY     (MP_NOW_LD_PROGRESS_TEXT_RIGHT_SY+MP_NOW_LD_PLAYING_TEXT_H/LANDSCAPE_MP_NOW_PLAYING_H)
+
+#define MP_NOW_LD_CONTROL_W 538
+#define MP_NOW_LD_CONTROL_H 104
+#define MP_NOW_LD_CENTER_MIN_W 200
+
+#define MP_NOW_LD_W 1280
+
+group {
+	name: "landscape_mp_now_playing";
+
+	images {
+		image: LANDSCAPE_MP_NOW_PLAYING_BG COMP;
+		image: MNP_CONTROL_CIRCLE_BT_01 COMP;
+		image: MNP_CONTROL_CIRCLE_BT_01_CIRCLE COMP;
+		image: MNP_CONTROL_CIRCLE_BT_02 COMP;
+		image: MNP_CONTROL_CIRCLE_BT_02_CIRCLE COMP;
+		image: MNP_CONTROL_PREVIOUS COMP;
+		image: MNP_CONTROL_PLAY COMP;
+                //image: MNP_CONTROL_FOCUS COMP;
+		image: MNP_CONTROL_PAUSE COMP;
+		image: MNP_CONTROL_NEXT COMP;
+	}
+
+	parts {
+		part {
+			name: "clipper";
+			type: RECT;
+			description {
+				state: "default" 0.0;
+			}
+		}
+
+		/*base 3 parts - thumbnail_bg, center_bg, control_bg */
+		part{
+			name: "thumbnail_bg";
+			type: RECT;
+			scale: 1;
+			clip_to: "clipper";
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				min: 120 0;
+				align: 0 0;
+				rel2 { relative: 0.0 0.0; }
+				rel2 { relative: 0.0 1.0; }
+				//color: 0 0 255 100;
+			}
+			description {
+				state: "hide_center" 0.0;
+				inherit: "default" 0.0;
+			}
+			description {
+				state: "center_min" 0.0;
+				inherit: "default" 0.0;
+			}
+			description {
+				state: "control_only" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				visible: 0;
+			}
+		}
+
+		part{
+			name: "center_bg";
+			type: RECT;
+			scale: 1;
+			clip_to: "clipper";
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				min: 0 0;
+				align: 0 0;
+				rel1 { relative: 1.0 0.0; to_x:"thumbnail_bg";}
+				rel2 { relative: 0.0 1.0; to_x:"control_bg";}
+				//color: 0 255 0 100;
+			}
+			description {
+				state: "center_min" 0.0;
+				inherit: "default" 0.0;
+				min: MP_NOW_LD_CENTER_MIN_W 0;
+				rel2 { relative: 1.0 1.0; to_x:"thumbnail_bg";}
+			}
+			description {
+				state: "control_only" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				visible: 0;
+			}
+			description {
+				state: "hide_center" 0.0;
+				inherit: "control_only" 0.0;
+			}
+		}
+		part{
+			name: "control_bg";
+			type: RECT;
+			scale: 1;
+			clip_to: "clipper";
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				min: MP_NOW_LD_CONTROL_W 0;
+				max: MP_NOW_LD_CONTROL_W -1;
+				rel1 { relative: 1.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+				align: 1 0.5;
+				//color: 255 0 0 100;
+			}
+			description {
+				state: "center_min" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				rel1 { relative: 1.0 0.0; to_x:"center_bg";}
+			}
+			description {
+				state: "hide_center" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				rel1 { relative: 1.0 0.0;to_x:"thumbnail_bg";}
+			}
+			description {
+				state: "control_only" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				rel1 { relative: 0.0 0.0;}
+			}
+		}
+
+		part {
+			name: "bg_image";
+			type : IMAGE;
+			scale: 1;
+			mouse_events: 1;
+			clip_to: "clipper";
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				image { normal: LANDSCAPE_MP_NOW_PLAYING_BG; }
+			}
+		}
+
+		PV_PART_RECT("now_playing_clicked_bg", "bg_image",
+			     0, 0, 1, 1);
+
+
+		/*center parts*/
+		PV_PART_SWALLOW_CLIP("now_playing_label1", "center_bg", 0,
+				18/MP_NOW_LD_H, 1,56/MP_NOW_LD_H)
+
+		PV_PART_SWALLOW("progress_bar", "center_bg", 0,
+				65/MP_NOW_LD_H, 1, 76/MP_NOW_LD_H)
+	}
+
+	programs {
+		program {
+			name: "now_playing_clicked";
+			//source: "now_playing_clicked_bg";
+			source: "thumb_image";
+			signal: "mouse,clicked,1";
+			action: SIGNAL_EMIT "now_playing_clicked" 0.0;
+		}
+		program{
+					name: "now_playing_after_down";
+					source: "now_playing_clicked_bg";
+					signal: "mouse,down,1";
+					transition: ACCELERATE 0.02;
+		}
+		program {
+			name: "now_playing_down";
+			source: "now_playing_clicked_bg";
+			signal: "mouse,down,1";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+			after:	"now_playing_after_down";
+			transition: ACCELERATE 0.02;
+		}
+		program {
+			name: "center_min";
+                        source: "*";
+			signal: "center_min";
+			action:   STATE_SET "center_min" 0.0;
+			target: "center_bg";
+			target: "thumbnail_bg";
+			target: "control_bg";
+		}
+		program {
+			name: "set_default";
+                        source: "*";
+			signal: "set_default";
+			action:   STATE_SET "default" 0.0;
+			target: "center_bg";
+			target: "thumbnail_bg";
+			target: "control_bg";
+		}
+		program {
+			name: "control_only";
+                        source: "*";
+			signal: "control_only";
+			action:   STATE_SET "control_only" 0.0;
+			target: "center_bg";
+			target: "thumbnail_bg";
+			target: "control_bg";
+		}
+		program {
+			name: "hide_center";
+                        source: "*";
+			signal: "hide_center";
+			action:   STATE_SET "hide_center" 0.0;
+			target: "center_bg";
+			target: "thumbnail_bg";
+			target: "control_bg";
+		}
+	}
+}
+

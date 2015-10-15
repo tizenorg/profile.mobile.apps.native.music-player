@@ -1,0 +1,66 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(setting-music-player C)
+
+SET(PREFIX ${CMAKE_INSTALL_PREFIX})
+SET(LIBDIR "\${prefix}/lib")
+
+SET(SRCS
+	src/ms-key-ctrl.c
+	src/ms-util.c
+	src/ms-playlist.c
+	src/ms-play-speed.c
+	src/ms-auto-off.c
+)
+
+INCLUDE_DIRECTORIES(
+	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR}/src/include
+)
+
+INCLUDE(FindPkgConfig)
+pkg_check_modules(pkgs REQUIRED
+	elementary
+	dlog
+	vconf
+	capi-media-sound-manager
+	storage
+)
+
+FOREACH(flag ${pkgs_CFLAGS})
+	SET(EXTRA_CXXFLAGS "${EXTRA_CXXFLAGS} ${flag}")
+ENDFOREACH(flag)
+
+SET(EXTRA_CXXFLAGS "${EXTRA_CXXFLAGS} -fvisibility=hidden -Wall")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_CXXFLAGS}")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CMAKE_CXX_FLAGS}")
+SET(CMAKE_LDFLAGS "-Wl,-zdefs" )
+ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
+
+ADD_LIBRARY(${PROJECT_NAME} SHARED ${SRCS})
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES SOVERSION 0.1.0)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${pkgs_LDFLAGS})
+
+
+# set extra defines
+SET(IMAGES_DIR "${CMAKE_INSTALL_PREFIX}/res/images/${PROJECT_NAME}")
+SET(EDJ_DIR "${CMAKE_INSTALL_PREFIX}/res/edje")
+ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
+ADD_DEFINITIONS("-DIMAGES_DIR=\"${IMAGES_DIR}\"")
+ADD_DEFINITIONS("-DEDJ_DIR=\"${EDJ_DIR}\"")
+ADD_CUSTOM_TARGET(ms-sound-alive.edj
+		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
+		${CMAKE_CURRENT_SOURCE_DIR}/layout/ms-sound-alive.edc ${CMAKE_BINARY_DIR}/res/edje/layout/ms-sound-alive.edj
+		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/layout/ms-sound-alive.edc
+)
+
+ADD_DEPENDENCIES(${PROJECT_NAME} ms-sound-alive.edj)
+
+INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/ms-sound-alive.edj DESTINATION ${EDJ_DIR})
+
+#INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/images/ DESTINATION ${IMAGES_DIR}
+#                FILES_MATCHING
+#                PATTERN "*.png"
+#)
+#ADD_SUBDIRECTORY(po)

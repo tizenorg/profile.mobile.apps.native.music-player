@@ -458,7 +458,6 @@ static void _mp_playlist_list_set_edit(void *thiz, bool edit)
 
 		if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 			elm_genlist_clear(list->genlist);
-			elm_genlist_decorate_mode_set(list->genlist, EINA_TRUE);
 		}
 		else
 		{

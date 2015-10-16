@@ -1047,10 +1047,6 @@ int mc_track_list_update(Evas_Object *list, Elm_Object_Item *navi_it, Evas_Objec
 		content = mc_widget_no_content_add(list, NO_CONTENT_SONG);
 	}
 
-	if (ld->multiple || ld->single) {
-		elm_genlist_decorate_mode_set(content, true);
-	}
-
 	elm_layout_content_set(list, "list_content", content);
 	/*add index*/
 

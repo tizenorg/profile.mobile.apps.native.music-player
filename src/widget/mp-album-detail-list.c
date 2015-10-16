@@ -122,7 +122,7 @@ _mp_album_detail_list_label_get(void *data, Evas_Object * obj, const char *part)
 		}
 		return markup;
 	}
-	if (elm_genlist_decorate_mode_get(obj) == false) {
+	if (!list->edit_mode) {
 		if (!strcmp(part, "elm.text.sub.right")) {
 			int duration;
 			char time[16] = "";
@@ -167,25 +167,25 @@ _mp_album_detail_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MpAlbumDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	if (elm_genlist_decorate_mode_get(obj) )
-	{			// if edit mode
-                if (!strcmp(part, "elm.icon.2"))
-                {		// swallow checkbox or radio button
-                        Evas_Object *content = NULL;
-                        Evas_Object *icon = NULL;
-                        content = elm_layout_add(obj);
+	if (list->edit_mode) {
+		// if edit mode
+		if (!strcmp(part, "elm.icon.2")) {
+			// swallow checkbox or radio button
+			Evas_Object *content = NULL;
+			Evas_Object *icon = NULL;
+			content = elm_layout_add(obj);
 
-                        icon = elm_check_add(obj);
-                        elm_object_style_set(icon, "default");
+			icon = elm_check_add(obj);
+			elm_object_style_set(icon, "default");
 			evas_object_propagate_events_set(icon, EINA_FALSE);
 			evas_object_smart_callback_add(icon, "changed", mp_common_view_check_changed_cb, NULL);
-                        elm_check_state_pointer_set(icon, &item->checked);
+			elm_check_state_pointer_set(icon, &item->checked);
 
-                        elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-                        elm_layout_content_set(content, "elm.swallow.content", icon);
+			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
+			elm_layout_content_set(content, "elm.swallow.content", icon);
 
-                        return content;
-                }
+			return content;
+		}
 	}
 
 	return NULL;

@@ -65,8 +65,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 
 	mp_media_info_h media = it_data->media;
 
-	if (!strcmp(part, "elm.icon"))
-	{
+	if (!strcmp(part, "elm.icon")) {
 		content = elm_bg_add(obj);
 		elm_bg_load_size_set(content, ICON_SIZE, ICON_SIZE);
 
@@ -78,18 +77,18 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 			elm_bg_file_set(content, DEFAULT_THUMBNAIL, NULL);
 	}
 
-	if (elm_genlist_decorate_mode_get(obj) )
-	{			// if edit mode
-		if (!strcmp(part, "elm.edit.icon.1"))
-		{		// swallow checkbox or radio button
-			content = elm_check_add(obj);
-			elm_check_state_pointer_set(content, &it_data->checked);
-			elm_object_style_set(content, "default/genlist");
-			evas_object_repeat_events_set(content, EINA_TRUE);
-			evas_object_propagate_events_set(content, FALSE);
- 			return content;
-		}
+#if 0
+	// if edit mode
+	if (!strcmp(part, "elm.edit.icon.1")) {
+		// swallow checkbox or radio button
+		content = elm_check_add(obj);
+		elm_check_state_pointer_set(content, &it_data->checked);
+		elm_object_style_set(content, "default/genlist");
+		evas_object_repeat_events_set(content, EINA_TRUE);
+		evas_object_propagate_events_set(content, FALSE);
+		return content;
 	}
+#endif
 
 	return content;
 }
@@ -171,21 +170,19 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 	list_item_data_t *it_data = elm_object_item_data_get(event_info);
 	MP_CHECK(it_data);
 
-	if (elm_genlist_decorate_mode_get(obj) )
-	{
-		it_data->checked = !it_data->checked;
- 		elm_genlist_item_fields_update(event_info, "elm.edit.icon.1", ELM_GENLIST_ITEM_FIELD_CONTENT);
+#if 0
+	it_data->checked = !it_data->checked;
+	elm_genlist_item_fields_update(event_info, "elm.edit.icon.1", ELM_GENLIST_ITEM_FIELD_CONTENT);
 
-		if (ld->btn_done)
-		{
-			if (_get_select_count(ld))
-				elm_object_item_disabled_set(ld->btn_done, false);
-			else
-				elm_object_item_disabled_set(ld->btn_done, true);
-		}
-		DEBUG_TRACE("_get_select_count = %d", _get_select_count(ld));
- 		return;
+	if (ld->btn_done) {
+		if (_get_select_count(ld))
+			elm_object_item_disabled_set(ld->btn_done, false);
+		else
+			elm_object_item_disabled_set(ld->btn_done, true);
 	}
+	DEBUG_TRACE("_get_select_count = %d", _get_select_count(ld));
+	return;
+#endif
 
 	mp_media_info_h media = it_data->media;
 	MP_CHECK(media);
@@ -395,8 +392,6 @@ int mc_group_play_list_update(Evas_Object *list, Elm_Object_Item *navi_it)
 				elm_genlist_item_append(content, &ld->itc, data, NULL, ELM_GENLIST_ITEM_NONE, _gl_sel_cb, ld);
 			}
 		}
-
-		elm_genlist_decorate_mode_set(content, true);
 	}
 	else
 		content = mc_widget_no_content_add(list, NO_CONTENT_SONG);

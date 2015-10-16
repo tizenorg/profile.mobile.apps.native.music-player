@@ -124,8 +124,11 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
 	mp_retv_if (svc_item == NULL, NULL);
-        Evas_Object *content = NULL;
-        Evas_Object *icon = NULL;
+	Evas_Object *content = NULL;
+	Evas_Object *icon = NULL;
+
+	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
+	MP_CHECK_NULL(list);
 
 	if (!strcmp(part, "elm.icon.1"))
 	{
@@ -140,7 +143,7 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 
 		return content;
 	}
-        if (elm_genlist_decorate_mode_get(obj) ) {
+        if (list->edit_mode) {
         	if (!strcmp(part, "elm.icon.2")) {
         		content = elm_layout_add(obj);
 
@@ -221,7 +224,7 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 
 		return markup;
 	}
-	if (elm_genlist_decorate_mode_get(obj) == false) {
+	if (!list->edit_mode) {
 		if (!strcmp(part, "elm.text.sub.right")) {
 			int duration;
 			char time[16] = "";
@@ -255,6 +258,9 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 	MP_CHECK_NULL(item);
 	mp_media_info_h track = item->handle;
 	mp_retvm_if (!track, NULL, "data is null");
+
+	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
+	MP_CHECK_NULL(list);
 /*
 	if (!strcmp(part, "elm.icon"))
 	{
@@ -310,8 +316,8 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 		return button;
 	}
 
-	if (elm_genlist_decorate_mode_get(obj) )
-	{			// if edit mode
+	if (list->edit_mode) {
+		// if edit mode
 		DEBUG_TRACE("edit mode starts");
 		if (!strcmp(part, "elm.icon.2")) {		// swallow checkbox or radio button
 			Evas_Object *content = NULL;
@@ -887,11 +893,9 @@ static void _mp_artist_detail_list_set_edit(void *thiz, bool edit)
 		}
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
-		elm_genlist_decorate_mode_set(list->genlist, EINA_TRUE);
 	}
 	else
 	{
-		elm_genlist_decorate_mode_set(list->genlist, EINA_FALSE);
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 
 		Elm_Object_Item *item = mp_list_first_item_get(list->genlist);

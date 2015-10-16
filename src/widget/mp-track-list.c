@@ -207,7 +207,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	Evas_Object *check = NULL;
 
-	if (elm_genlist_decorate_mode_get(obj)) {
+	if (list->edit_mode) {
 		// if edit mode
 		if (!strcmp(part, "elm.icon.2")) {
 			// swallow checkbox or radio button

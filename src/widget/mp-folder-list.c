@@ -154,6 +154,9 @@ _mp_folder_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *content = NULL;
 	content = elm_layout_add(obj);
 
+	MpFolderList_t *list = evas_object_data_get(obj, "list_data");
+	MP_CHECK_NULL(list);
+
 	const char *slide_part_play_all = "";
 	if (item->group_type == MP_GROUP_BY_FOLDER)
 		slide_part_play_all = "elm.slide.swallow.2";
@@ -244,7 +247,7 @@ _mp_folder_list_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	Evas_Object *check = NULL;
 
-	if (elm_genlist_decorate_mode_get(obj)) {			// if edit mode
+	if (list->edit_mode) {			// if edit mode
 		if (!strcmp(part, "elm.icon.2")) {		// swallow checkbox or radio button
 			check = elm_check_add(obj);
 			elm_object_style_set(check, "genlist");
@@ -475,7 +478,6 @@ append_folder_items:
 				elm_check_state_set(layout_data->select_all_checkbox, false);
 		}
 
-		elm_genlist_decorate_mode_set(layout_data->genlist, EINA_TRUE);
 		elm_genlist_select_mode_set(layout_data->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
 	}
 	else
@@ -485,7 +487,6 @@ append_folder_items:
 			evas_object_del(layout_data->select_all_layout);
 			layout_data->select_all_layout = NULL;
 		}
-		elm_genlist_decorate_mode_set(layout_data->genlist, EINA_FALSE);
 		elm_genlist_select_mode_set(layout_data->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 	}
 

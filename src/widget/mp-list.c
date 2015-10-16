@@ -58,7 +58,6 @@ _mp_list_gl_mode_left(void *data, Evas_Object * obj, void *event_info)
 	MP_CHECK(elm_genlist_item_select_mode_get(event_info) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 	//MP_CHECK(elm_genlist_item_select_mode_get(event_info) != ELM_OBJECT_SELECT_MODE_NONE);
 	// disable sweep if edit mode.
-	MP_CHECK(elm_genlist_decorate_mode_get(obj) == EINA_FALSE);
 	MP_CHECK(elm_genlist_item_flip_get(event_info) == EINA_FALSE);
 	// Finish genlist sweep
 	elm_genlist_item_decorate_mode_set(event_info, "slide", EINA_FALSE);
@@ -83,7 +82,6 @@ _mp_list_gl_mode_right(void *data, Evas_Object * obj, void *event_info)
 	}
 
 	// disable sweep if edit mode.
-	MP_CHECK(elm_genlist_decorate_mode_get(obj) == EINA_FALSE);
 	MP_CHECK(elm_genlist_item_flip_get(event_info) == EINA_FALSE);
 	// Start genlist sweep
 	elm_genlist_item_decorate_mode_set(event_info, "slide", EINA_TRUE);
@@ -305,7 +303,6 @@ static void _mp_list_set_edit(void *thiz, bool edit)
 				elm_genlist_item_update(sweeped_item);
 			}
 
-			elm_genlist_decorate_mode_set(list->genlist, EINA_TRUE);
 		}
 
 		if (list->reorderable)
@@ -316,7 +313,6 @@ static void _mp_list_set_edit(void *thiz, bool edit)
 	else
 	{
 		if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
-			elm_genlist_decorate_mode_set(list->genlist, EINA_FALSE);
 		}
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 		mp_list_reorder_mode_set(list->genlist, EINA_FALSE);

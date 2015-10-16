@@ -169,10 +169,10 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *check = NULL;
 	DEBUG_TRACE("list->edit_mode = %d", list->edit_mode);
 
-	if (list->edit_mode)//(elm_genlist_decorate_mode_get(obj))
-	{			// if edit mode
-		if (!strcmp(part, "elm.icon.2"))
-		{		// swallow checkbox or radio button
+	if (list->edit_mode) {
+		// if edit mode
+		if (!strcmp(part, "elm.icon.2")) {
+			// swallow checkbox or radio button
 			check = elm_check_add(obj);
 			elm_object_style_set(check, "default");
 			evas_object_propagate_events_set(check, EINA_FALSE);

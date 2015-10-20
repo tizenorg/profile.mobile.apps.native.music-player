@@ -179,13 +179,14 @@
                   style: "naviframe_title_style";
                   size: NAVIFRAME_TITLE_TEXT_FONT_SIZE_INC;
                   size_range: NAVIFRAME_TITLE_TEXT_FONT_RANGE_MIN NAVIFRAME_TITLE_TEXT_FONT_RANGE_MAX;
+                  elipsis: 1.0;
                }
                fixed: 1 1;
                rel1 { to_x: "title_text_left_padding"; to_y: "title_bg"; relative: 1.0 0.0; }
                rel2 { to_x: "title_text_right_padding"; to_y: "title_bg"; relative: 0.0 1.0; }
             }
             description { state: "subtitle_visible" 0.0;
-               text { style: "naviframe_subtitle_visible_style";}
+               text { style: "naviframe_subtitle_visible_style"; elipsis: 1.0;}
                fixed: 1 1;
                rel1 { to_x: "title_text_left_padding"; to_y: "title_top_padding"; relative: 1.0 1.0; }
                rel2 { to_x: "title_text_right_padding"; to_y: "elm.text.subtitle"; relative: 0.0 0.0; }
@@ -241,7 +242,7 @@
             mouse_events: 0;
             clip_to: "subtitle_text_clipper";
             description { state: "default" 0.0;
-               text { style: "naviframe_subtitle_style";}
+               text { style: "naviframe_subtitle_style"; elipsis: 1.0;}
                min: 0 NAVIFRAME_SUBTITLE_HEIGHT_INC;
                max: -1 NAVIFRAME_SUBTITLE_HEIGHT_INC;
                fixed: 0 1;
@@ -435,6 +436,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 1.0 0.5;
+                  elipsis: 1.0;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;
@@ -456,6 +458,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 0.0 0.5;
+                  elipsis: 1.0;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;
@@ -1933,13 +1936,13 @@
             mouse_events: 0;
             clip_to: "title_text_clipper";
             description { state: "default" 0.0;
-               text { style: "naviframe_title_style";}
+               text { style: "naviframe_title_style"; elipsis: 1.0;}
                fixed: 1 1;
                rel1 { to_x: "title_text_left_padding"; to_y: "title_bg"; relative: 1.0 0.0; }
                rel2 { to_x: "title_text_right_padding"; to_y: "title_bg"; relative: 0.0 1.0; }
             }
             description { state: "subtitle_visible" 0.0;
-               text { style: "naviframe_subtitle_visible_style";}
+               text { style: "naviframe_subtitle_visible_style"; elipsis: 1.0;}
                fixed: 1 1;
                rel1 { to_x: "title_text_left_padding"; to_y: "title_top_padding"; relative: 1.0 1.0; }
                rel2 { to_x: "title_text_right_padding"; to_y: "elm.text.subtitle"; relative: 0.0 0.0; }
@@ -1971,7 +1974,7 @@
             mouse_events: 0;
             clip_to: "subtitle_text_clipper";
             description { state: "default" 0.0;
-               text { style: "naviframe_subtitle_style";}
+               text { style: "naviframe_subtitle_style"; elipsis: 1.0;}
                min: 0 NAVIFRAME_SUBTITLE_HEIGHT_INC;
                max: -1 NAVIFRAME_SUBTITLE_HEIGHT_INC;
                fixed: 0 1;
@@ -2137,6 +2140,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 1.0 0.5;
+                  elipsis: 1.0;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;
@@ -2158,6 +2162,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 0.0 0.5;
+                  elipsis: 1.0;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;

@@ -84,7 +84,6 @@ _parse_service(struct app_data *ad, app_control_h service)
 	startfunc;
 	char *operation = NULL;
 	char *value = NULL;
-	int ret = 0;
 
 	app_control_get_operation(service, &operation);
 	DEBUG_TRACE("operation: %s", operation);
@@ -93,7 +92,7 @@ _parse_service(struct app_data *ad, app_control_h service)
 	{
 		ad->max_count = 0;
 #if 0
-		ret = app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &value);
+		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &value);
 		if (value) {
 			ad->max_count = atoi(value);
 			DEBUG_TRACE("Maximum Count is: %d", ad->max_count);
@@ -102,14 +101,14 @@ _parse_service(struct app_data *ad, app_control_h service)
 #endif
 		ad->limitsize = -1;
 #if 0
-		ret = app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_SIZE, &value);
+		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_SIZE, &value);
 		if (value) {
 			ad->limitsize = atoi(value);
 			DEBUG_TRACE("Maximum Size is: %lld", ad->limitsize);
 			IF_FREE(value);
 		}
 #endif
-		ret = app_control_get_extra_data(service, MC_SELECT_MODE_KEY, &value);
+		app_control_get_extra_data(service, MC_SELECT_MODE_KEY, &value);
 		DEBUG_TRACE("Operation: %s", value);
 
 		if (!g_strcmp0(value, MC_SELECT_MULTIPLE)) {
@@ -276,6 +275,7 @@ mc_resume(void *data)
 	return;
 }
 
+#if 0
 static void
 mc_device_orientation(app_event_info_h event_info, void *data)
 {
@@ -310,6 +310,7 @@ mc_device_orientation(app_event_info_h event_info, void *data)
 
 	DEBUG_TRACE("window angle: %d", ad->win_angle);
 }
+#endif
 
 static void
 mc_destroy(void *data)
@@ -344,7 +345,6 @@ __mc_language_changed_cb(app_event_info_h event_info, void *user_data)
 {
 	eventfunc;
 	DEBUG_TRACE("Language changed triggered");
-	struct appdata *ad = user_data;
 
 	char *lang = NULL;
 	app_event_get_language(event_info, &lang);

@@ -963,7 +963,7 @@ int mp_media_info_create_by_path(mp_media_info_h *media_info, const char *file_p
 
 	list->list = g_list_nth(list->list, 0);
 	if (list->list == NULL) {
-		mp_media_info_destroy(list);
+		mp_media_info_list_destroy(list);
 		return res;
 	}
 	*media_info = list->list->data;

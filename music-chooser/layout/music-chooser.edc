@@ -271,6 +271,7 @@ group {
 						font: FONT_NO_CONTENT;
 						size: FONT_NO_CONTENT_SIZE;
 						align: 0.5 0.5;
+						elipsis: 1.0;
 					}
 				}
 
@@ -376,6 +377,7 @@ group { name: "recommended_area";
 					size: 30;
 					min: 0 0;
 					align: 0.0 0.5;
+					elipsis: 1.0;
 				}
 			}
 		}
@@ -391,7 +393,7 @@ group { name: "recommended_area";
 				fixed: 0 1;
 				rel1 { relative: 1.0 1.0; to_x: "padding_left"; to_y: "padding_center_h";}
 				rel2 { relative: 0.0 0.0; to_x: "padding_center_v"; to_y: "padding_bottom";}
-				text { style: "text_unread_wrap"; }
+				text { style: "text_unread_wrap"; elipsis: 1.0;}
 			}
 		}
 
@@ -522,6 +524,7 @@ group { name: "popup_processingview_1button";
 			align: 0.0 0.5;
 			min: 0 1;
 			max: 1 1;
+			elipsis: 1.0;
 		}
 		rel1 {
 			relative: 1.0 1.0;

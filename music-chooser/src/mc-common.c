@@ -18,9 +18,9 @@
 #include "mc-common.h"
 #include "mc-library-view.h"
 #include "mp-media-info.h"
-#include "mc-index.h"
 #include "mc-track-list.h"
 #include "mc-list-play.h"
+#include "mc-index.h"
 #include <telephony.h>
 #include <notification.h>
 #include <efl_extension.h>
@@ -33,7 +33,7 @@ static int externalStorageId = -1;
 bool detail_view = false;
 
 static Eina_Bool
-_back_cb(void *data, Evas_Object *obj, void *event_info)
+_back_cb(void *data, Elm_Object_Item *it)
 {
 	startfunc;
 	struct app_data *ad = data;
@@ -426,9 +426,13 @@ Evas_Object * mc_group_content_get(void *data, Evas_Object *obj, const char *par
 	return content;
 }
 
-Eina_Bool
-mc_quit_cb(void *data, Elm_Object_Item *it)
-{
+void
+mc_eext_quit_cb(void *data, Evas_Object *obj, void *event_info) {
+	DEBUG_TRACE("");
+	elm_exit();
+}
+
+Eina_Bool mc_quit_cb(void *data, Elm_Object_Item *it) {
 	DEBUG_TRACE("");
 	elm_exit();
 

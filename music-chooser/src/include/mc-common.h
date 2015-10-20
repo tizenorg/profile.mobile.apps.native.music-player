@@ -38,6 +38,7 @@ char *mc_album_text_get(void *data, Evas_Object *obj, const char *part);
 char * mc_playlist_text_get(void *data, Evas_Object *obj, const char *part);
 char *mc_folder_list_label_get(void *data, Evas_Object * obj, const char *part);
 Evas_Object * mc_group_content_get(void *data, Evas_Object *obj, const char *part);
+void mc_eext_quit_cb(void *data, Evas_Object *obj, void *event_info);
 Eina_Bool mc_quit_cb(void *data, Elm_Object_Item *it);
 void mc_auto_recommended_check_cb(void *data, Evas_Object *obj, void *event_info);
 void mc_quit_select_cb(void *data, Evas_Object *obj, void *event_info);

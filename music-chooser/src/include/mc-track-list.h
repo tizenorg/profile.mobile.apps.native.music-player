@@ -44,11 +44,11 @@ void mc_track_list_set_uri_selected(void *thiz, const char *uri);
 int mc_track_list_update(Evas_Object *list, Elm_Object_Item *navi_it, Evas_Object *sub_view);
 int mc_track_list_get_radio();
 bool mc_widget_create_select_all_layout(Evas_Object *pParent, Evas_Smart_Cb pChangeFunc,Evas_Object_Event_Cb pMouseDownFunc, void *pUserData, Evas_Object **pCheckBox, Evas_Object **pSelectLayout);
-static void _mc_popup_view(void *data);
-static void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info);
-static void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *obj, void *event_info);
+void _mc_popup_view(void *data);
+void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info);
+void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *obj, void *event_info);
 char *mc_create_selectioninfo_text_with_count(int count);
-static unsigned int _get_select_count(void *data);
+unsigned int _get_select_count(void *data);
 
 #endif
 

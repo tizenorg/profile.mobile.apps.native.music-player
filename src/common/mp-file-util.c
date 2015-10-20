@@ -236,7 +236,7 @@ int mp_file_recursive_rm(const char *dir)
 	DIR *dirp = NULL;
 
 	if (!dir)
-		return NULL;
+		return 0;
 
 	if (readlink(dir, buf, sizeof(buf)) > 0) {
 		return mp_file_unlink(dir);

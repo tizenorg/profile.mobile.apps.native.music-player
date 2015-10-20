@@ -67,7 +67,7 @@ static void _all_cb(void *data, Evas_Object *obj, void *event_info)
 	sub_view = elm_object_part_content_unset(g_ly, "list-content");
 	evas_object_del(sub_view);
 
-	MP_CHECK_NULL(g_ly);
+	MP_CHECK(g_ly);
 
 	sub_view = mc_track_list_create(g_ly, ad);
 	mc_track_list_set_data(sub_view, MP_TRACK_ALL, NULL, 0);
@@ -75,7 +75,7 @@ static void _all_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_object_part_content_set(g_ly, "list-content", sub_view);
 	evas_object_show(sub_view);
-	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_quit_cb, ad);
+	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_eext_quit_cb, ad);
 	endfunc;
 }
 #ifdef MC_ENABLE_PLAYLIST
@@ -103,7 +103,7 @@ static void _playlist_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_object_part_content_set(g_ly, "list-content", sub_view);
 	evas_object_show(sub_view);
-	eext_object_event_callback_add(ad->navi_bar, EEXT_CALLBACK_BACK, mc_quit_cb, ad);
+	eext_object_event_callback_add(ad->navi_bar, EEXT_CALLBACK_BACK, mc_eext_quit_cb, ad);
 	endfunc;
 }
 #endif
@@ -132,7 +132,7 @@ static void _artist_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_object_part_content_set(g_ly, "list-content", sub_view);
 	evas_object_show(sub_view);
-	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_quit_cb, ad);
+	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_eext_quit_cb, ad);
 	endfunc;
 }
 #endif
@@ -160,7 +160,7 @@ static void _album_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_object_part_content_set(g_ly, "list-content", sub_view);
 	evas_object_show(sub_view);
-	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_quit_cb, ad);
+	eext_object_event_callback_add(sub_view, EEXT_CALLBACK_BACK, mc_eext_quit_cb, ad);
 	endfunc;
 }
 
@@ -180,8 +180,6 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 	elm_toolbar_transverse_expanded_set(obj, EINA_TRUE);
 	elm_toolbar_select_mode_set(obj, ELM_OBJECT_SELECT_MODE_ALWAYS);
 
-	Elm_Theme* th = NULL;
-	th = elm_theme_new();
 	elm_theme_extension_add(NULL, MC_EDJ_FILE);
 	elm_object_style_set(obj, "scroll/tabbar");
 //	elm_object_style_set(obj, "tabbar/item_with_title");

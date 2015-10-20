@@ -19,7 +19,6 @@
 #include "mp-media-info.h"
 #include "mc-common.h"
 #include "mc-list-play.h"
-#include "mc-index.h"
 
 static int state_index = -1; //selected radio index
 static Evas_Object* g_radio_main = NULL;
@@ -93,7 +92,7 @@ _mc_track_play_btn_cb(void *data, Evas_Object * obj, const char *emission, const
 static void _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	list_item_data_t *it_data = data;
-	MP_CHECK_NULL(it_data);
+	MP_CHECK(it_data);
 
 	it_data->checked = !it_data->checked;
 	it_data->checkbox_cb = EINA_TRUE;
@@ -176,7 +175,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 	}
 
 	if ((!strcmp(part, "elm.icon.2") && (it_data->ad->select_type == MC_SELECT_SINGLE_RINGTONE || it_data->ad->select_type == MC_SELECT_SINGLE))) {	// swallow checkbox or radio button
-		if (it_data->ad->select_uri && it_data->ad->select_uri == MC_SELECT_SINGLE_RINGTONE) {
+		if (it_data->ad->select_uri && it_data->ad->select_type == MC_SELECT_SINGLE_RINGTONE) {
 			char *filepath = NULL;
 			mp_media_info_get_file_path(media, &filepath);
 			if (mc_check_file_exist(filepath) && !strcmp(it_data->ad->select_uri, filepath)) {
@@ -233,7 +232,7 @@ char *mc_create_selectioninfo_text_with_count(int count)
 	startfunc;
 	char *name = NULL;
     if (count > 0) {
-    	name =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS),count);
+    	name =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS), count);
     } else {
     	name = GET_STR(MC_TEXT_SELECT);
     }
@@ -253,11 +252,8 @@ static char *_gl_select_all_text_get(void *data, Evas_Object *obj, const char *p
 static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	char *title = NULL;
-	char *prev_uri = NULL;
 	char *cur_uri = NULL;
 	char *uri = NULL;
-	Evas_Object *prev_part_content;
-	Evas_Object *part_content;
 	bool match = false;
 
 	list_item_data_t *it_data = data;
@@ -386,7 +382,7 @@ _get_media_list_count(void *data)
 	endfunc;
 }
 
-static unsigned int
+unsigned int
 _get_select_count(void *data)//(Evas_Object *genlist)
 {
 	startfunc;
@@ -705,7 +701,7 @@ _set_cb(void *data, Evas_Object *obj, void *event_info)
 
 }
 
-
+#if 0
 static Eina_Bool
 _back_cb(void *data, Elm_Object_Item *it)
 {
@@ -728,8 +724,9 @@ _back_cb(void *data, Elm_Object_Item *it)
 
 	return EINA_FALSE;
 }
+#endif
 
-static void _mc_popup_view(void *data)
+void _mc_popup_view(void *data)
 {
 	startfunc;
 	track_list_data_t *ld  = data;
@@ -810,7 +807,7 @@ _done_cb(void *data, Evas_Object *obj, void *event_info)
 	g_string_free(path, TRUE);
 }
 
-static void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *obj, void *event_info)
+void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *obj, void *event_info)
 {
 	track_list_data_t *ld  = data;
 	Elm_Object_Item *item = NULL;
@@ -862,7 +859,7 @@ static void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Ob
 	}
 }
 
-static void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
+void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	startfunc;
 

@@ -590,6 +590,7 @@ group { name: "elm/progressbar/horizontal/wave/list_progres";
                   size: 10;
                   min: 0 0;
                   align: 0.0 0.5;
+                  elipsis: 1.0;
                }
             }
             description { state: "visible" 0.0;
@@ -643,6 +644,7 @@ group { name: "elm/progressbar/horizontal/wave/list_progres";
                   size: 10;
                   min: 0 0;
                   align: 0.5 0.0;
+                  elipsis: 1.0;
                }
                color: 0 0 0 255;
             }

@@ -484,5 +484,6 @@
    text { \
       min: 0 1; \
       style: STYLE; \
+      elipsis: 1.0; \
    }
 

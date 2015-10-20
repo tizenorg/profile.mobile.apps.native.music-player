@@ -22,42 +22,6 @@
 
 typedef void (*UgMpIndexCb)(void *data);
 
-static char *non_latin_lan[] = {
-     "ar_AE.UTF-8",
-     "as_IN.UTF-8",
-     "bg_BG.UTF-8",
-     "bn_IN.UTF-8",
-     "el_GR.UTF-8",
-     "fa_IR.UTF-8",
-     "gu_IN.UTF-8",
-     "he_IL.UTF-8",
-     "hi_IN.UTF-8",
-     "hy_AM.UTF-8",
-     "ja_JP.UTF-8",
-     "ka_GE.UTF-8",
-     "kk_KZ.UTF-8",
-     "km_KH.UTF-8",
-     "kn_IN.UTF-8",
-     "ko_KR.UTF-8",
-     "lo_LA.UTF-8",
-     "mk_MK.UTF-8",
-     "ml_IN.UTF-8",
-     "mn_MN.UTF-8",
-     "mr_IN.UTF-8",
-     "ne_NP.UTF-8",
-     "or_IN.UTF-8",
-     "pa_IN.UTF-8",
-     "ru_RU.UTF-8",
-     "si_LK.UTF-8",
-     "ta_IN.UTF-8",
-     "te_IN.UTF-8",
-     "th_TH.UTF-8",
-     "uk_UA.UTF-8",
-     "ur_PK.UTF-8",
-     "zh_TW.UTF-8",
-     NULL
-};
-
 Evas_Object *mc_index_create(Evas_Object *parent, int group_type, void *data);
 void mc_index_append_item(Evas_Object *index, Evas_Object *list);
 

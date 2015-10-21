@@ -142,6 +142,7 @@ group { name: "popup_checkview";
                font: "Tizen:style=Medium";
                size: 42;
                min: 1 0;
+               elipsis: 1.0;
                align: 0.0 0.5;
             }
             max: 552 60;
@@ -524,6 +525,7 @@ group { name: "popup_checkview_ld";
                size: 42;
                min: 1 0;
                align: 0.0 0.5;
+               elipsis: 1.0;
             }
             max: 720 60;
             fixed: 1 1;
@@ -1148,7 +1150,7 @@ group { name: "popup_checkview_personal";
    }
 }
 group { name: "popup_processingview_string";
-#define DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN 400 200
+#define DEMO_POPUP_PROCESSINGVIEW1_BUTTON_CONTENT_MIN 400 200
    styles {
       style { name: "popup_processing_text_style";
          base: "font=Tizen:style=Bold font_size=36 align=left color=#000000 wrap=none ellipsis=1.0";
@@ -1161,7 +1163,7 @@ group { name: "popup_processingview_string";
          type: RECT;
          scale: 1;
          description { state: "default" 0.0;
-            min: DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN;
+            min: DEMO_POPUP_PROCESSINGVIEW1_BUTTON_CONTENT_MIN;
             fixed: 1 0;
             color:255 255 255 255;
          }
@@ -1315,7 +1317,7 @@ group { name: "popup_processingview_string";
          }
       }
    }
-#undef DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN
+#undef DEMO_POPUP_PROCESSINGVIEW1_BUTTON_CONTENT_MIN
 }
 
 

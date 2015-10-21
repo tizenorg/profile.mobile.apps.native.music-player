@@ -248,6 +248,7 @@ group{
 					size: PV_PROGRESS_TEXT_SIZE;
 					align: 0.0 0.5;
 					min: 1 1;
+					elipsis: 1.0;
 				}
 				color: 0 159 255 255;
                                 color2: 0 0 0 128;
@@ -277,6 +278,7 @@ group{
 					size: PV_PROGRESS_TEXT_SIZE;
 					align: 1.0 0.5;
 					min: 1 1;
+					elipsis: 1.0;
 				}
 				color: 0 159 255 255;
                                 color2: 0 0 0 128;
@@ -464,6 +466,7 @@ group{
 					size: PV_PROGRESS_TEXT_SIZE;
 					align: 0.0 0.5;
 					min: 1 1;
+					elipsis: 1.0;
 				}
 				color: 0 159 255 255;
                                 color2: 0 0 0 128;
@@ -493,6 +496,7 @@ group{
 					size: PV_PROGRESS_TEXT_SIZE;
 					align: 1.0 0.5;
 					min: 1 1;
+					elipsis: 1.0;
 				}
 				color: 0 159 255 255;
                                 color2: 0 0 0 128;

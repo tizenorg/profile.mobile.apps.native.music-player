@@ -247,47 +247,6 @@ _mp_popup_create_min_style_popup(Evas_Object * parent, char *title, int cnt,
 }
 
 static Evas_Object *
-_mp_popup_pv_share_create(Evas_Object * parent, void *user_data, struct appdata *ad)
-{
-	DEBUG_TRACE("");
-	MP_CHECK_NULL(ad);
-	Evas_Object *popup = NULL;
-	Evas_Object *genlist;
-	int option_count = 3;
-#ifdef MP_FEATURE_WIFI_SHARE
-	++option_count;
-#endif
-
-	popup = _mp_popup_create_min_style_popup(parent, GET_SYS_STR("IDS_COM_BUTTON_SHARE"), option_count, NULL, _mp_popup_cancel_button_cb, ad);
-
-	MP_CHECK_NULL(popup);
-
-	itc.item_style = "1text";
-	itc.func.text_get = _mp_popup_gl_label_get;
-	itc.func.content_get = NULL;
-	itc.func.state_get = NULL;
-	itc.func.del = NULL;
-	genlist = evas_object_data_get(popup, "genlist");
-	MP_CHECK_NULL(genlist);
-
-	elm_genlist_item_append(genlist, &itc, BLUETOOTH_SYS, NULL,
-				       ELM_GENLIST_ITEM_NONE, mp_menu_genlist_popup_share_select_cb, user_data);
-
-	elm_genlist_item_append(genlist, &itc, EMAIL_SYS, NULL,
-				       ELM_GENLIST_ITEM_NONE, mp_menu_genlist_popup_share_select_cb, user_data);
-#ifndef MP_FEATURE_DISABLE_MMS
-	elm_genlist_item_append(genlist, &itc, MESSAGE_SYS, NULL,
-				       ELM_GENLIST_ITEM_NONE, mp_menu_genlist_popup_share_select_cb, user_data);
-#endif
-#ifdef MP_FEATURE_WIFI_SHARE
-	elm_genlist_item_append(genlist, &itc, WIFI_SYS, NULL,
-				       ELM_GENLIST_ITEM_NONE, mp_menu_genlist_popup_share_select_cb, user_data);
-#endif
-
-	return popup;
-}
-
-static Evas_Object *
 _mp_popup_list_share_create(Evas_Object * parent, void *user_data, struct appdata *ad)
 {
 	DEBUG_TRACE("");

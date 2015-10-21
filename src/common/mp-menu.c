@@ -230,33 +230,6 @@ mp_menu_genlist_popup_list_share_select_cb(void *data, Evas_Object * obj, void *
 	g_list_free(list);
 }
 
-
-static int
-_mp_menu_set_caller_rington(char *path)
-{
-	int ret = -1;
-
-	ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_INCOMING_CALL_RINGTONE, path);
-	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {
-		mp_error("system_settings_set_value_string()... [0x%x]", ret);
-		return -1;
-	}
-	return ret;
-
-}
-
-static char *
-_mp_menu_get_path_by_handle(void *record)
-{
-	MP_CHECK_NULL(record);
-
-	char *path = NULL;
-
-	mp_media_info_get_file_path(record, &path);
-
-	return path;
-}
-
 #ifdef MP_FEATURE_ADD_TO_HOME
 static int
 _mp_menu_shortcut_res_cb(int ret, int pid, void *data)

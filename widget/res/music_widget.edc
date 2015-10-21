@@ -311,6 +311,7 @@ collections {
 					text {
 						font:"Tizen";
 						size:43;
+						elipsis: -1;
 						min:1 1;
 						align:0.0 0.5;
 					}
@@ -343,6 +344,7 @@ collections {
 					text {
 						font:"Tizen";
 						size:38;
+						elipsis: -1;
 						min:1 1;
 						align:0.0 0.5;
 					}

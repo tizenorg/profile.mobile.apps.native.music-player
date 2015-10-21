@@ -45,12 +45,11 @@ base_scale: 2.4;
 	/* legacy style */
 	#include "entry.edc"
 	#include "mp-button.edc"
-    #include "mp-check.edc"
+	#include "mp-check.edc"
 	#include "mp-genlist-theme.edc"
 	#include "mp-progressbar.edc"
 	#include "mp-gengrid-style.edc"
 	#include "mp-naviframe.edc"
-	#include "mp-slider.edc"
 	#include "mp-label.edc"
 	#include "mp-nocontents.edc"
 	#include "search_bar.edc"

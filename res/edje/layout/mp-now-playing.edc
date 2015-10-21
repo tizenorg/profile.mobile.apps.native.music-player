@@ -38,14 +38,6 @@
 #define MP_NOW_PLAYING_THUMB_EX		(0.31)
 #define MP_NOW_PLAYING_THUMB_EY		(0.94)
 
-
-#define PV_OPTION_SHUFFLE_ON_SX (0.05)
-#define PV_OPTION_SHUFFLE_ON_EX (0.15)
-
-
-#define PV_OPTION_REP_SX (0.85)
-#define PV_OPTION_REP_EX (0.95)
-
 #define MP_NOW_PLAYING_TO_THUMB_LEFT_W 150
 /* label */
 #define MP_NOW_PLAYING_LABEL_AREAR_W 148
@@ -132,7 +124,7 @@
 #define PV_OPTION_SHUFFLE_OFF_PRESS "lite/player_icon_shuffle_off_pressed.png"
 #define PV_OPTION_REP_A "lite/player_icon_rep_A_normal.png"
 #define PV_OPTION_REP_A_PRESS "lite/player_icon_rep_A_pressed.png"
-#define PV_OPTION_REP_1 "lite/player_icon_rep_1_normal.png"
+#define PV_OPTION_REPEAT_1 "lite/player_icon_rep_1_normal.png"
 #define PV_OPTION_REP_1_PRESS "lite/player_icon_rep_1_pressed.png"
 #define PV_OPTION_REP_ALL "lite/player_icon_rep_all_normal.png"
 #define PV_OPTION_REP_ALL_PRESS "lite/player_icon_rep_all_pressed.png"
@@ -160,7 +152,7 @@ part { \
 	} \
 }
 
-#define MP_FOCUSED_COVER(__name, __over_part_bg) \
+#define MP_FOCUS_COVER(__name, __over_part_bg) \
 part { \
 	name: __name"_focus"; \
 	type: SWALLOW; \
@@ -444,19 +436,17 @@ group {
 		image: MNP_CONTROL_PLAY COMP;
 		image: MNP_CONTROL_PAUSE COMP;
 		image: MNP_CONTROL_NEXT COMP;
-		image: PV_OPTION_SHUFFLE_ON COMP;	 
+		image: PV_OPTION_SHUFFLE_ON COMP; 
 		image: PV_OPTION_SHUFFLE_OFF COMP;
 		image: PV_OPTION_SHUFFLE_ON_PRESS COMP;
 		image: PV_OPTION_SHUFFLE_OFF_PRESS COMP;
 		image: PV_OPTION_REP_A COMP;
 		image: PV_OPTION_REP_A_PRESS COMP;
-		image: PV_OPTION_REP_1 COMP;
+		image: PV_OPTION_REPEAT_1 COMP;
 		image: PV_OPTION_REP_1_PRESS COMP;
 		image: PV_OPTION_REP_ALL COMP;
 		image: PV_OPTION_REP_ALL_PRESS COMP;
-		
 	}
-	
 	parts {
 		part {
 			name: "now_playing_bg";
@@ -548,7 +538,7 @@ group {
 		MP_PART_PREV_NEXT("control_previous", "prev_box", MNP_CONTROL_PREVIOUS_SX, MNP_CONTROL_PREVIOUS_SY,
 				MNP_CONTROL_PREVIOUS_EX, MNP_CONTROL_PREVIOUS_EY, MNP_CONTROL_PREVIOUS, 64 64)
 
-		MP_FOCUSED_COVER("previous", "control_previous_bg");
+		MP_FOCUS_COVER("previous", "control_previous_bg");
 
 		MP_PART_PREV_NEXT("control_play", "play_box", MNP_CONTROL_PLAY_SX, MNP_CONTROL_PLAY_SY,
 				MNP_CONTROL_PLAY_EX, MNP_CONTROL_PLAY_EY, MNP_CONTROL_PAUSE, 90 90)
@@ -556,11 +546,11 @@ group {
 		MP_PART_PREV_NEXT("control_pause", "play_box", MNP_CONTROL_PLAY_SX, MNP_CONTROL_PLAY_SY,
 				MNP_CONTROL_PLAY_EX, MNP_CONTROL_PLAY_EY, MNP_CONTROL_PLAY, 90 90)
 
-		MP_FOCUSED_COVER("play_pause", "control_play_bg");
+		MP_FOCUS_COVER("play_pause", "control_play_bg");
 
 		MP_PART_PREV_NEXT("control_next", "next_box", MNP_CONTROL_NEXT_SX, MNP_CONTROL_NEXT_SY,
 				MNP_CONTROL_NEXT_EX, MNP_CONTROL_NEXT_EY, MNP_CONTROL_NEXT, 64 64)
-		MP_FOCUSED_COVER("next", "control_next_bg");
+		MP_FOCUS_COVER("next", "control_next_bg");
 
 	}
 

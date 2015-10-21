@@ -818,12 +818,13 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 	return ret;
 }
 
+/*
 #ifdef MP_FEATURE_EXIT_ON_BACK
 static Eina_Bool
 _mp_main_caller_win_destroy_cb(void *data, int type, void *event)
 {
 	startfunc;
-	/*Ecore_X_Event_Window_Hide *ev;
+	Ecore_X_Event_Window_Hide *ev;
 	struct appdata *ad = data;
 	MP_CHECK_VAL(ad, ECORE_CALLBACK_RENEW);
 
@@ -835,11 +836,12 @@ _mp_main_caller_win_destroy_cb(void *data, int type, void *event)
 	 DEBUG_TRACE("win: %d, caller_win: %d", ev->win ,ad->caller_win_id);
 	if (ev->win == ad->caller_win_id) {
 		elm_exit();
-	}*/
+	}
 
 	return ECORE_CALLBACK_RENEW;
 }
 #endif
+*/
 
 #ifdef MP_SOUND_PLAYER
 static void

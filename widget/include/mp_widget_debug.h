@@ -23,7 +23,6 @@
 #include "assert.h"
 #include <linux/unistd.h>
 
-#define LOG_TAG "MUSIC_PLAYER"
 
 #define gettid() syscall(__NR_gettid)
 

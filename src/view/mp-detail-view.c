@@ -722,35 +722,6 @@ _mp_detail_view_rotate(void *thiz, int init_rotate)
 }
 #endif
 
-static int _mp_detail_view_set_title(void *thiz, char *title)
-{
-	startfunc;
-	MP_CHECK_VAL(thiz, -1);
-	MpDetailView_t *view = (MpDetailView_t *)thiz;
-
-	/* set title */
-	if (view->inner_navi_it != NULL)
-		elm_object_item_part_text_set(view->inner_navi_it, NULL, title);
-	else
-		elm_object_item_part_text_set(view->navi_it, "elm.text.title", title);
-	return 0;
-}
-
-static int _mp_detail_view_set_sub_title(void *thiz, char *subtitle)
-{
-	startfunc;
-	MP_CHECK_VAL(thiz, -1);
-	MpDetailView_t *view = (MpDetailView_t *)thiz;
-
-	/* set sub title */
-	if (view->inner_navi_it != NULL)
-		elm_object_item_part_text_set(view->inner_navi_it, "subtitle", subtitle);
-	else
-		elm_object_item_part_text_set(view->navi_it, "subtitle", subtitle);
-	return 0;
-}
-
-
 static int
 _mp_detail_view_init(Evas_Object *parent, MpDetailView_t *view, const char *uri)
 {

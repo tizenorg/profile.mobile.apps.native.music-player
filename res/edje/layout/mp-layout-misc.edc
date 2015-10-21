@@ -373,6 +373,7 @@ group { name: "artist_list_default";
 					min: 1 0;
 					font: "Tizen:style=Bold";
 					size: 28;
+					ellipsis: -1;
 				}
 			}
 			description { state: "pressed" 0.0;
@@ -407,6 +408,7 @@ group { name: "artist_list_default";
 					min: 0 1;
 					font: "Tizen:style=Regular";
 					size: 35;
+					ellipsis: -1;
 				}
 				fixed: 1 1;
 			}
@@ -676,6 +678,7 @@ group { name: "landscape_artist_list_default";
 					min: 1 0;
 					font: "Tizen:style=Medium";
 					size: 28;
+					ellipsis: -1;
 				}
 			}
 			description { state: "pressed" 0.0;
@@ -710,6 +713,7 @@ group { name: "landscape_artist_list_default";
 					min: 0 1;
 					font: "Tizen:style=Regular";
 					size: 35;
+					ellipsis: -1;
 				}
 			}
 			description { state: "pressed" 0.0;

@@ -144,6 +144,7 @@ group { name: "elm/progressbar/horizontal/music/list_progress";
                   font: "TIZEN:style=Medium";
                   size: 10;
                   min: 0 0;
+                  ellipsis: -1;
                   align: 0.0 0.5;
                }
             }
@@ -193,6 +194,7 @@ group { name: "elm/progressbar/horizontal/music/list_progress";
                   size: 10;
                   min: 0 0;
                   align: 0.5 0.0;
+                  ellipsis: -1;
                }
                color: 0 0 0 255;
             }
@@ -280,6 +282,7 @@ group { name: "elm/progressbar/horizontal/music/list_progress";
                   font: "TIZEN:style=Medium";
                   size: 10;
                   min: 0 0;
+                  ellipsis: -1;
                   align: 0.0 0.0;
                }
                color: 224 224 224 255;
@@ -590,7 +593,7 @@ group { name: "elm/progressbar/horizontal/wave/list_progres";
                   size: 10;
                   min: 0 0;
                   align: 0.0 0.5;
-                  elipsis: 1.0;
+                  ellipsis: -1;
                }
             }
             description { state: "visible" 0.0;
@@ -644,7 +647,7 @@ group { name: "elm/progressbar/horizontal/wave/list_progres";
                   size: 10;
                   min: 0 0;
                   align: 0.5 0.0;
-                  elipsis: 1.0;
+                  ellipsis: -1;
                }
                color: 0 0 0 255;
             }
@@ -734,6 +737,7 @@ group { name: "elm/progressbar/horizontal/wave/list_progres";
                   size: 10;
                   min: 0 0;
                   align: 0.0 0.0;
+                  ellipsis: -1;
                }
                color: 224 224 224 255;
                color3: 0 0 0 64;

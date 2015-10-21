@@ -2140,7 +2140,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 1.0 0.5;
-                  elipsis: 1.0;
+                  ellipsis: -1;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;
@@ -2162,7 +2162,7 @@
                   min: 1 0;
                   max: 1 0;
                   align: 0.0 0.5;
-                  elipsis: 1.0;
+                  ellipsis: -1;
                }
                color_class: "T1121";
                min: 0 NAVIFRAME_BADGE_HEIGHT_INC;

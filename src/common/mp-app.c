@@ -1067,7 +1067,7 @@ mp_app_grab_mm_keys(struct appdata *ad)
 {
 	WARN_TRACE("");
 
-	Eina_Bool ret = eext_win_keygrab_set(ad->xwin, "XF86AudioMedia");
+	eext_win_keygrab_set(ad->xwin, "XF86AudioMedia");
 	int err = media_key_reserve(_mp_app_media_key_event_cb, ad);
 	if (err != MEDIA_KEY_ERROR_NONE) {
 		mp_error("media_key_reserve().. [0x%x]", err);
@@ -1082,7 +1082,7 @@ mp_app_ungrab_mm_keys(struct appdata *ad)
 {
 	WARN_TRACE("");
 	media_key_release();
-	Eina_Bool ret = eext_win_keygrab_unset(ad->xwin, "XF86AudioMedia");
+	eext_win_keygrab_unset(ad->xwin, "XF86AudioMedia");
 
 	mp_ecore_timer_del(ad->ear_key_timer);
 }

@@ -28,7 +28,7 @@ static void _mp_artist_detail_view_content_load(void *thiz);
 
 static void _mp_artist_detail_view_cb(void *data, Evas_Object *obj, void *event_info)
 {
-	Evas_Object *ev_obj = elm_naviframe_item_pop(GET_NAVIFRAME);
+ elm_naviframe_item_pop(GET_NAVIFRAME);
 }
 
 static void

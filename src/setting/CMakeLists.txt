@@ -8,7 +8,6 @@ SET(SRCS
 	src/ms-key-ctrl.c
 	src/ms-util.c
 	src/ms-playlist.c
-	src/ms-play-speed.c
 	src/ms-auto-off.c
 )
 

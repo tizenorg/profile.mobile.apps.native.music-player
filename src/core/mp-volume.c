@@ -54,6 +54,7 @@ void _mp_volume_changed_cb(sound_type_e type, unsigned int volume, void *user_da
 void
 mp_volume_init(Ecore_X_Window xwin, Elm_Win *win)
 #else
+void
 mp_volume_init(void *xwin, Elm_Win *win)
 #endif
 {

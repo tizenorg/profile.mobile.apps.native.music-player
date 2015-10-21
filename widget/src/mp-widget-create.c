@@ -534,7 +534,6 @@ static void mp_widget_click_on_track_image_cb(void *data, Evas_Object *obj,
 static bool telephony_is_call_connected(void)
 {
 	DEBUG_TRACE("start");
-	telephony_call_status_e state = 0;
 	telephony_call_h *call_list_sim1, *call_list_sim2;
 	unsigned int count_sim1, count_sim2;
 	telephony_handle_list_s tel_list;
@@ -791,8 +790,6 @@ int mp_widget_create(WidgetData* data, int w, int h)
 		return -1;
 	}
 	char edj_path[PATH_MAX] = {0,};
-	int fd, wd, dir_size, i = 0;
-	char buffer[EVENT_BUF_LEN] = {0,};
 	Evas_Object *layout = NULL;
 
 	layout = elm_layout_add(data->win);

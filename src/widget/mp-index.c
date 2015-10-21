@@ -130,7 +130,6 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 	char *str = NULL;
 	char buf[PATH_MAX] = {0, };
 	Eina_Unicode uni;
-	Elm_Object_Item *it = NULL;
 	char *locale = NULL;
 	MpList_t *list = (MpList_t *)data;
 	MP_CHECK(obj);
@@ -157,7 +156,7 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 		snprintf(buf, i - j + 1, "%s", str + j);
 		buf[i - j + 1] = 0;
 
-		it = elm_index_item_append(obj, buf, _mp_index_item_selected_cb, list);
+		elm_index_item_append(obj, buf, _mp_index_item_selected_cb, list);
 		//elm_index_item_priority_set(it, 0);
 	}
 
@@ -182,7 +181,7 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 			snprintf(buf, i - j + 1, "%s", str + j);
 			buf[i - j + 1] = 0;
 
-			it = elm_index_item_append(obj, buf, _mp_index_item_selected_cb, list);
+			elm_index_item_append(obj, buf, _mp_index_item_selected_cb, list);
 			//elm_index_item_priority_set(it, 1);
 		}
 

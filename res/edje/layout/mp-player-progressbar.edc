@@ -24,7 +24,7 @@
 #define IMG_PLAYER_PROGRESSBAR_BG "lite/core_progress_bar.#.png"
 //#define IMG_PLAYER_PROGRESSBAR "lite/mini_player_bar.#.png"
 #define IMG_PLAYER_PROGRESSBAR_HANDLE "lite/mini_player_button_01.png"
-#define IMG_PLAYER_PROGRESSBAR_HANDLE_PRESS"lite/player_icon_progress_button.png"
+#define IMG_PLAYER_PROGRESSBAR_HANDLE_PRESS "lite/player_icon_progress_button.png"
 
 group { name: "player_progressbar";
 

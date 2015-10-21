@@ -196,7 +196,6 @@ _mp_play_control_long_press_timer_cb(void *data)
 	int error = 0;
 
 	mp_retvm_if (ad == NULL, ECORE_CALLBACK_CANCEL, "appdata is NULL");
-	int res = true;
 	if (ad->player_state != PLAY_STATE_PAUSED && ad->player_state != PLAY_STATE_PLAYING && ad->player_state != PLAY_STATE_READY) {
 		return ECORE_CALLBACK_RENEW;
 	}
@@ -539,14 +538,12 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 /* int ret = 0; */
 
 	_mp_play_control_del_longpressed_timer(ad);
-	int status = 0;
 
 	if (play) {
 		ad->paused_by_user = FALSE;
 
 		if (ad->player_state == PLAY_STATE_PAUSED) {
 			int error = mp_player_mgr_resume(ad);
-			status = error;
 			if (!error) {
 				mp_setting_set_nowplaying_id(getpid());
 				if (ad->player_state == PLAY_STATE_PAUSED)

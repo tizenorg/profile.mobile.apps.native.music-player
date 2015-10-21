@@ -145,9 +145,7 @@ _mp_artist_list_album_icon_get(Evas_Object *obj, mp_list_item_data_t *item)
 	for (i = 0; i < album_count ; i++) {
 		path = album_thumbs[i];
 	}
-	Evas_Object *content = NULL;
-	content = elm_layout_add(obj);
-			Evas_Object *icon = mp_util_create_lazy_update_thumb_icon(obj, path, image_size, image_size);
+	Evas_Object *icon = mp_util_create_lazy_update_thumb_icon(obj, path, image_size, image_size);
 	return icon;
 }
 

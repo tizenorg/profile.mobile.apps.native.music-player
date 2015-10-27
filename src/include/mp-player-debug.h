@@ -58,6 +58,22 @@
 #define LOG_COLOR_BLUE		"\033[36m"
 #define LOG_COLOR_PURPLE   "\033[35m"
 
+#ifndef LOGD_IF
+#define LOGD_IF printf
+#endif
+#ifndef LOGI_IF
+#define LOGI_IF printf
+#endif
+#ifndef LOGW_IF
+#define LOGW_IF printf
+#endif
+#ifndef SECURE_LOGD
+#define SECURE_LOGD printf
+#endif
+#ifndef SECURE_LOGI
+#define SECURE_LOGI printf
+#endif
+
 #ifndef TRUE
 #define TRUE 1
 #endif

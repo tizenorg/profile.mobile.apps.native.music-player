@@ -56,6 +56,16 @@
 #define LOG_COLOR_GREEN  	"\033[32m"
 #define LOG_COLOR_BLUE		"\033[36m"
 
+#ifndef LOGD_IF
+#define LOGD_IF printf
+#endif
+#ifndef LOGI_IF
+#define LOGI_IF printf
+#endif
+#ifndef LOGW_IF
+#define LOGW_IF printf
+#endif
+
 #define DEBUG_TRACE(fmt, arg...)	LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define INFO_TRACE(fmt, arg...) 	LOGI_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]    "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define WARN_TRACE(fmt, arg...) 	LOGW_IF(TRUE,  LOG_COLOR_YELLOW"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)

@@ -58,6 +58,22 @@
 #define LOG_COLOR_BLUE		"\033[36m"
 #define LOG_COLOR_PURPLE   "\033[35m"
 
+#ifndef LOGD_IF
+#define LOGD_IF(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+#ifndef LOGI_IF
+#define LOGI_IF(fmt, arg...) dlog_print(DLOG_INFO, LOG_TAG, ##arg)
+#endif
+#ifndef LOGW_IF
+#define LOGW_IF(fmt, arg...) dlog_print(DLOG_ERROR, LOG_TAG, ##arg)
+#endif
+#ifndef SECURE_LOGD
+#define SECURE_LOGD(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+#ifndef SECURE_LOGI
+#define SECURE_LOGI(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+
 #ifndef TRUE
 #define TRUE 1
 #endif

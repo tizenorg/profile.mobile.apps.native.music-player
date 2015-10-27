@@ -259,7 +259,6 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 	char *str = NULL;
 	char buf[PATH_MAX] = {0, };
 	Eina_Unicode uni;
-	Elm_Object_Item *it = NULL;
 	char *locale = NULL;
 	Evas_Object *list = (Evas_Object *)data;
 	MP_CHECK(obj);
@@ -286,7 +285,7 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 		snprintf(buf, i - j + 1, "%s", str + j);
 		buf[i - j + 1] = 0;
 
-		it = elm_index_item_append(obj, buf, _mc_index_item_selected_cb, list);
+		elm_index_item_append(obj, buf, _mc_index_item_selected_cb, list);
 		//elm_index_item_priority_set(it, 0);
 	}
 
@@ -296,22 +295,20 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 	if (retcode != SYSTEM_SETTINGS_ERROR_NONE) {
 		ERROR_TRACE("Unable to fetch the current language setting with return value %d", retcode);
 	}
-	if (!ea_locale_latin_get(locale))
-	{
+	if (!ea_locale_latin_get(locale)) {
 		str = dgettext("efl-extension", "IDS_EA_BODY_ABCDEFGHIJKLMNOPQRSTUVWXYZ_SECOND");
 		MP_CHECK(str);
 		len = strlen(str);
 
 		i = 0;
-		while (i < len)
-		{
+		while (i < len) {
 			j = i;
 			uni = eina_unicode_utf8_next_get(str, &i);
 			MP_CHECK(uni);
 			snprintf(buf, i - j + 1, "%s", str + j);
 			buf[i - j + 1] = 0;
 
-			it = elm_index_item_append(obj, buf, _mc_index_item_selected_cb, list);
+			elm_index_item_append(obj, buf, _mc_index_item_selected_cb, list);
 			//elm_index_item_priority_set(it, 1);
 		}
 

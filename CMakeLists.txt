@@ -109,7 +109,7 @@ SET(COMMON_SRCS
 	src/common/mp-ta.c
 #	src/common/mp-recommend.c
 #	src/common/mp-albumart.c
-	src/common/mp-db-client.c
+#	src/common/mp-db-client.c
 	src/common/mp-file-util.c
 #	src/view/mp-lyric-view.c
 #	src/view/mp-mw-lyric-view.c

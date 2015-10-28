@@ -23,34 +23,6 @@
 #include <dlfcn.h>
 #include "mp-file-util.h"
 
-#define MP_SQUARE_ARM_LIB_PATH 
-	"/usr/apps/org.tizen.music-player/lib/lib_MusicSquare_TIZEN.so"
-#define MP_SQUARE_I386_LIB_PATH 
-	"/usr/apps/org.tizen.music-player/lib/libMusicSquare_Tizen_SL.so"
-
-#define MP_SQUARE_DB_NAME DATA_DIR"/.music_square.db"
-#define MP_SQUARE_DB_TABLE_NAME "music_square"
-
-/* query string */
-#define MP_SQUARE_DB_TABLE_EXIST_QUERY_STRING  
-	"select name from sqlite_master WHERE name='%q';"
-#define MP_SQUARE_DB_DELETE_TABLE_QUERY_STRING  "DELETE FROM %q ;"
-#define MP_SQUARE_DB_DROP_TABLE_QUERY_STRING  "DROP TABLE %q ;"
-
-#define MP_SQUARE_DB_TABLE_RECORD_INSERT "INSERT INTO music_square (path, \
-	"score_excite, score_cheerful, score_violent, year, title) VALUES \
-	"('%q', %f, %f, %f, %d, '%q');"
-
-#define MP_SQUARE_DB_TABLE_RECORD_COUNT_ALL 
-	"select count(*) FROM music_square;"
-
-#define MP_SQUARE_DB_RAND_MAX 5
-#define MP_SQUARE_DB_QUERY_STR_LEN_MAX 512
-#define MP_SQUARE_DB_FILE_PATH_LEN_MAX 512
-
-#define SQL_SAFE_FREE(sql_string)
-		if (sql_string) sqlite3_free(sql_string)
-
 typedef struct {
 	int id;
 	char path[MP_SQUARE_MUSIC_FILE_PATH_LEN_MAX+1]; /* music path */

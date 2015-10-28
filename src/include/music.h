@@ -51,7 +51,6 @@
 
 #include "mp-lyric.h"
 #include "mp-widget.h"
-#include "mp-db-client.h"
 
 #include "mp-view-mgr.h"
 #include "mp-popup.h"

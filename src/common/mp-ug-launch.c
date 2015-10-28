@@ -214,9 +214,9 @@ mp_ug_gallery_get_picture(void *data)
 		ERROR_TRACE("app_control_create() is failed !!");
 		return -1;
 	}
-
+/*
 	app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
-
+*/
 	int a, b;
 
 	evas_object_geometry_get(ad->win_main, NULL, NULL, &a, &b);
@@ -284,9 +284,9 @@ mp_ug_camera_take_picture(void *data)
 		ERROR_TRACE("app_control_create() is failed !!");
 		return -1;
 	}
-
+/*
 	app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
-
+*/
 	int a, b;
 
 	evas_object_geometry_get(ad->win_main, NULL, NULL, &a, &b);
@@ -332,12 +332,12 @@ int
 mp_ug_contact_user_sel(const char *filepath, void *user_data)
 {
 	startfunc;
-	struct appdata *ad = NULL;
+	//struct appdata *ad = NULL;
 	app_control_h service = NULL;
         int err = 0;
 
 	mp_retvm_if (filepath == NULL, -1, "file path is NULL");
-	ad = mp_util_get_appdata();
+	//ad = mp_util_get_appdata();
 
 	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE)
 	{
@@ -373,7 +373,7 @@ mp_ug_contact_user_sel(const char *filepath, void *user_data)
 		app_control_destroy(service);
 		return -1;
 	}
-
+/*
         err = app_control_set_window(service, ad->xwin);
         if (err != APP_CONTROL_ERROR_NONE)
 	{
@@ -381,7 +381,7 @@ mp_ug_contact_user_sel(const char *filepath, void *user_data)
 		app_control_destroy(service);
 		return -1;
 	}
-
+*/
         err = app_control_send_launch_request(service, _mp_ug_contact_reply_cb, NULL);
         if (err != APP_CONTROL_ERROR_NONE)
 	{
@@ -403,13 +403,13 @@ int
 mp_ug_set_as_alarm_tone(const char *filepath, int position)
 {
 	startfunc;
-	struct appdata *ad = NULL;
+	//struct appdata *ad = NULL;
 	app_control_h service = NULL;
         int err = 0;
         char *pos = NULL;
 
 	mp_retvm_if (filepath == NULL, -1, "file path is NULL");
-	ad = mp_util_get_appdata();
+	//ad = mp_util_get_appdata();
 
 	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE)
 	{
@@ -462,7 +462,7 @@ mp_ug_set_as_alarm_tone(const char *filepath, int position)
 		app_control_destroy(service);
 		return -1;
 	}
-
+/*
         err = app_control_set_window(service, ad->xwin);
         if (err != APP_CONTROL_ERROR_NONE)
 	{
@@ -470,7 +470,7 @@ mp_ug_set_as_alarm_tone(const char *filepath, int position)
 		app_control_destroy(service);
 		return -1;
 	}
-
+*/
         err = app_control_send_launch_request(service, NULL, NULL);
         if (err != APP_CONTROL_ERROR_NONE)
 	{
@@ -539,12 +539,13 @@ mp_send_via_appcontrol(struct appdata *ad, mp_send_type_e send_type, const char 
 	}
 
 	/* set window */
+/*
 	ret = app_control_set_window(service, ad->xwin);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_set_window()... [0x%x]", ret);
 		goto END;
 	}
-
+*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);
@@ -567,7 +568,7 @@ mp_setting_privacy_launch(void)
 {
 	startfunc;
 
-	struct appdata *ad = mp_util_get_appdata();
+	//struct appdata *ad = mp_util_get_appdata();
 
 	bool result = false;
 
@@ -585,12 +586,13 @@ mp_setting_privacy_launch(void)
 	}
 
 	/* set window */
+/*
 	ret = app_control_set_window(service, ad->xwin);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_set_window()... [0x%x]", ret);
 		goto END;
 	}
-
+*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);
@@ -610,8 +612,8 @@ _mp_ug_launch_as_appcontrol(const char *ug_name)
 {
 	MP_CHECK_FALSE(ug_name);
 
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK_FALSE(ad);
+	//struct appdata *ad = mp_util_get_appdata();
+	//MP_CHECK_FALSE(ad);
 
 	bool result = false;
 
@@ -629,12 +631,13 @@ _mp_ug_launch_as_appcontrol(const char *ug_name)
 	}
 
 	/* set window */
+/*
 	ret = app_control_set_window(service, ad->xwin);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_set_window()... [0x%x]", ret);
 		goto END;
 	}
-
+*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);

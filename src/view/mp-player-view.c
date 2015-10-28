@@ -1789,6 +1789,7 @@ _mp_player_view_volume_hw_key_cb(void *user_data, mp_volume_key_e key, bool rele
 	}
 }
 
+#ifndef MP_SOUND_PLAYER
 static void _mp_player_view_set_shuffle_image(void *data, int shuffle_state)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
@@ -1804,6 +1805,8 @@ static void _mp_player_view_set_shuffle_image(void *data, int shuffle_state)
 	}
 	mp_util_domain_translatable_part_text_set(view->player_view_control_layout, "shuffle_text", STR_PLAYER_VIEW_SHUFFLE);
 }
+#endif
+
 /*add favourite begin*/
 static void _mp_player_view_set_favourite_image(void *data, int favourite_state)
 {
@@ -1831,7 +1834,7 @@ static void _mp_player_view_set_favourite_image(void *data, int favourite_state)
 }
 /*add favourite end*/
 
-
+#ifndef MP_SOUND_PLAYER
 static void _mp_player_view_set_rep_image(void *data, int repeat_state)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
@@ -1865,6 +1868,7 @@ static void _mp_player_view_set_rep_image(void *data, int repeat_state)
 	}
 	mp_util_domain_translatable_part_text_set(view->player_view_control_layout, "repeat_text", STR_PLAYER_VIEW_REPEAT);
 }
+#endif
 
 void mp_player_view_set_play_image(void *data, bool playing)
 {
@@ -2616,6 +2620,43 @@ _mp_player_view_ff_rew_btn_del_cb(void *data, Evas *e, Evas_Object *obj, void *e
 	mp_play_control_reset_ff_rew();
 }
 
+static void _mp_player_view_volume_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	DEBUG_TRACE("volume button clicked");
+	MpPlayerView_t *view = (MpPlayerView_t *)data;
+	MP_CHECK(view);
+	mp_player_view_volume_popup_control(view, false);
+}
+
+static void _mp_player_view_play_pause_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	DEBUG_TRACE("play_pause button clicked");
+	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
+
+	MpPlayerView_t *view = (MpPlayerView_t *)data;
+	MP_CHECK(view);
+
+	if (ad->player_state == PLAY_STATE_NONE && ad->music_pos > 0) {
+		DEBUG_TRACE("ad->music_pos = %f", ad->music_pos);
+		ad->start_pos = ad->music_pos * 1000;
+		mp_play_control_play_pause(ad, true);
+		mp_player_view_set_play_image(view, true);
+	} else if (ad->player_state == PLAY_STATE_PLAYING) {
+		mp_play_control_play_pause(ad, false);
+		mp_player_view_set_play_image(view, false);
+	} else {
+		mp_play_control_play_pause(ad, true);
+		/*when player mgr resume failed*/
+		if (ad->player_state != PLAY_STATE_PLAYING) {
+			mp_player_view_set_play_image(view, false);
+		} else {
+			mp_player_view_set_play_image(view, true);
+		}
+	}
+}
+
+#ifndef MP_SOUND_PLAYER
 static void _mp_player_view_shuffle_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("shuffle button clicked");
@@ -2679,42 +2720,6 @@ static void _mp_player_view_repeat_btn_clicked_cb(void *data, Evas_Object *obj, 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_NOW_PLAYING);
 }
 
-static void _mp_player_view_volume_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	DEBUG_TRACE("volume button clicked");
-	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view);
-	mp_player_view_volume_popup_control(view, false);
-}
-
-static void _mp_player_view_play_pause_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	DEBUG_TRACE("play_pause button clicked");
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK(ad);
-
-	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view);
-
-	if (ad->player_state == PLAY_STATE_NONE && ad->music_pos > 0) {
-		DEBUG_TRACE("ad->music_pos = %f", ad->music_pos);
-		ad->start_pos = ad->music_pos * 1000;
-		mp_play_control_play_pause(ad, true);
-		mp_player_view_set_play_image(view, true);
-	} else if (ad->player_state == PLAY_STATE_PLAYING) {
-		mp_play_control_play_pause(ad, false);
-		mp_player_view_set_play_image(view, false);
-	} else {
-		mp_play_control_play_pause(ad, true);
-		/*when player mgr resume failed*/
-		if (ad->player_state != PLAY_STATE_PLAYING) {
-			mp_player_view_set_play_image(view, false);
-		} else {
-			mp_player_view_set_play_image(view, true);
-		}
-	}
-}
-
 static void _mp_player_view_prev_btn_pressed_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("prev button pressed");
@@ -2754,8 +2759,6 @@ static void _mp_player_view_next_btn_clicked_cb(void *data, Evas_Object *obj, vo
 		mp_play_control_ff(false, false, true);
 }
 
-
-#ifndef MP_SOUND_PLAYER
 static void _mp_player_view_queue_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("queue button clicked");

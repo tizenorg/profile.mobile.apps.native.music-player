@@ -51,7 +51,6 @@
 
 #include "mp-lyric.h"
 #include "mp-widget.h"
-#include "mp-db-client.h"
 
 #include "mp-view-mgr.h"
 #include "mp-popup.h"
@@ -444,7 +443,6 @@ struct appdata
 	bool desktop_mode;
 #endif
 
-        mp_dbc_mgr_t *dbc_mgr;
 
 	Evas_Object *more_btn_popup;
 	mp_more_button_type_e more_btn_type;

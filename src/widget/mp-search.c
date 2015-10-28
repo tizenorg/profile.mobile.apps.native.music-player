@@ -39,23 +39,6 @@ _mp_search_view_clicked_cb(void *data, Evas_Object * obj, void *event_info)
 }
 
 static void
-_mp_search_entry_changed_cb(void *data, Evas_Object * obj, void *event_info)
-{
-	Evas_Object *searchbar = data;
-	MP_CHECK(searchbar);
-	Evas_Object *entry = obj;
-	MP_CHECK(entry);
-
-	const char *signal = NULL;
-	if (elm_entry_is_empty(entry))
-		signal = "elm,state,eraser,hide";
-	else
-		signal = "elm,state,eraser,show";
-
-	elm_object_signal_emit(searchbar, signal, "elm");
-}
-
-static void
 _mp_search_eraser_clicked_cb(void *data, Evas_Object *obj, const char *emission, const char *source)
 {
 	startfunc;
@@ -64,23 +47,6 @@ _mp_search_eraser_clicked_cb(void *data, Evas_Object *obj, const char *emission,
 
 	elm_entry_entry_set(entry, "");
 	elm_object_focus_set(entry, TRUE);
-}
-
-static void _entry_text_changed_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	startfunc;
-	Evas_Object *searchbar = data;
-	MP_CHECK(searchbar);
-	Evas_Object *entry = obj;
-	MP_CHECK(entry);
-
-	const char *signal = NULL;
-	if (elm_entry_is_empty(entry))
-		signal = "elm,state,eraser,hide";
-	else
-		signal = "elm,state,eraser,show";
-
-	elm_object_signal_emit(searchbar, signal, "elm");
 }
 
 static void
@@ -98,14 +64,6 @@ _mp_searchfield_changed_cb(void *data, Evas_Object *obj, void *event_info)
 		elm_object_signal_emit(editfield, "elm,action,show,button", "");
 	else
 		elm_object_signal_emit(editfield, "elm,action,hide,button", "");
-}
-
-static void
-_mp_searchfield_clear_button_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	Evas_Object *entry = (Evas_Object *)data;
-
-	elm_entry_entry_set(entry, "");
 }
 
 static void
@@ -138,7 +96,6 @@ mp_search_create_new(Evas_Object * parent, Evas_Smart_Cb change_cb, void *change
 {
 	startfunc;
 
-	Evas_Object *button = NULL;
 	Evas_Object *en = NULL;
 	Evas_Object *searchfield = NULL;
 

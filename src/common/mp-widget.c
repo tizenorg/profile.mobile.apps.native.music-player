@@ -65,19 +65,6 @@ mp_widget_genlist_create(Evas_Object * parent)
 }
 
 static void
-_mp_widget_lowbattery_del_cb(void *data, Evas * e, Evas_Object * eo, void *event_info)
-{
-	struct appdata *ad = (struct appdata *)data;
-	ad->popup[MP_POPUP_NORMAL] = NULL;
-}
-
-static void
-_mp_widget_lowbattery_res_cb(void *data, Evas_Object * obj, void *event_info)
-{
-	mp_evas_object_del(obj);
-}
-
-static void
 _mp_widget_text_popup_timeout_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	startfunc;

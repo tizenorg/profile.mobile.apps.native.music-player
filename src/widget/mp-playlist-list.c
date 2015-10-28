@@ -773,23 +773,6 @@ _mp_playlist_append_user_playlists(void *thiz, Elm_Object_Item *parent_item)
 	endfunc;
 }
 
-static void
-_mp_playlist_add_playlist_select_cb(void *data, Evas_Object * obj, void *event_info)
-{
-	MpPlaylistList_t *list = (MpPlaylistList_t *)data;
-	MP_CHECK(list);
-
-	Elm_Object_Item *gli = (Elm_Object_Item *) event_info;
-
-	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
-		elm_gengrid_item_selected_set(gli, EINA_FALSE);
-	else
-		elm_genlist_item_selected_set(gli, EINA_FALSE);
-
-	Mp_Playlist_Data *mp_playlist_data = mp_edit_playlist_create(MP_PLST_CREATE_TO_ADD_TRACK);
-        mp_edit_playlist_content_create(mp_playlist_data);
-}
-
 static Elm_Object_Item *
 _mp_playlist_append_group_index(void *thiz, int index)
 {

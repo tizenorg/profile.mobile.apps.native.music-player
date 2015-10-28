@@ -176,22 +176,6 @@ static char *_mp_lockscreenmini_shuffle_access_info_cb(void *data, Evas_Object *
 	return g_strdup(operation_txt);
 }
 #endif
-static char *_mp_lockscreenmini_play_pause_access_info_cb(void *data, Evas_Object *obj)
-{
-	startfunc;
-	DEBUG_TRACE("play/pause button clicked");
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK_NULL(ad);
-
-	char *operation_txt = NULL;
-
-	if (ad->player_state == PLAY_STATE_PLAYING) {
-		operation_txt = GET_SYS_STR(MP_TTS_PAUSE_BUTTON);
-	} else if (ad->player_state == PLAY_STATE_PAUSED) {
-		operation_txt = GET_SYS_STR(MP_TTS_PLAY_BUTTON);
-	}
-	return g_strdup(operation_txt);
-}
 
 #ifdef LOCKSCREEN_ENABLE_SHUFFLE_REPEAT
 static char *_mp_lockscreenmini_repeat_access_info_cb(void *data, Evas_Object *obj)
@@ -215,23 +199,6 @@ static char *_mp_lockscreenmini_repeat_access_info_cb(void *data, Evas_Object *o
 	return g_strdup(operation_txt);
 }
 #endif
-static char *_mp_lockscreenmini_ff_rew_access_info_cb(void *data, Evas_Object *obj)
-{
-	startfunc;
-	DEBUG_TRACE("ff/rew button clicked");
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK_NULL(ad);
-
-	char *operation_txt = NULL;
-
-	char *source = (char *)data;
-	if (!g_strcmp0(source, CONTROLLER_FF_SOURCE)) {
-		operation_txt = GET_SYS_STR(MP_TTS_NEXT_BUTTON);
-	} else {
-		operation_txt = GET_SYS_STR(MP_TTS_PREVIOUS_BUTTON);
-	}
-	return g_strdup(operation_txt);
-}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 static void _mp_lockscreenmini_set_shuffle_image(void *data, int shuffle_state)
@@ -649,20 +616,6 @@ mp_lockscreenmini_update_shuffle_and_repeat_btn(struct appdata *ad)
 
 }
 
-/*focused UI callbacks*/
-static void _mp_lockscreenmini_shuffle_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
-{
-	DEBUG_TRACE("shuffle button clicked");
-
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK(ad);
-
-	int shuffle_state = 0;
-	mp_setting_get_shuffle_state(&shuffle_state);
-	shuffle_state = !shuffle_state;
-	mp_play_control_shuffle_set(ad, shuffle_state);
-	_mp_lockscreenmini_set_shuffle_image(ad, shuffle_state);
-}
 #endif
 static void _mp_lockscreenmini_play_pause_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
@@ -772,7 +725,6 @@ _mp_lockscreenmini_update_layout(struct appdata *ad, bool landscape)
 	elm_object_style_set(shuffle_focus_btn, "focus");
 	elm_object_part_content_set(ad->lockmini_layout, "shuffle_focus", shuffle_focus_btn);
 	elm_object_focus_custom_chain_append(ad->lockmini_layout, shuffle_focus_btn, NULL);
-	evas_object_smart_callback_add(shuffle_focus_btn, "clicked", _mp_lockscreenmini_shuffle_btn_clicked_cb, NULL);
 #endif
 	/*-------> REW button ------->*/
 	Evas_Object *rew_focus_btn = elm_button_add(ad->lockmini_layout);

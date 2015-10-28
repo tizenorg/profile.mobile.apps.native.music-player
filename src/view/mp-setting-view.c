@@ -41,7 +41,7 @@
 #define GL_POPUP_GENLIST_WIDTH_QHD 450
 #define GL_POPUP_GENLIST_HEIGHT_WVGA 202
 #define GL_POPUP_GENLIST_WIDTH_WVGA 480
-#define ELM_SCALE_SIZE(x) (int)(((double)(x) * elm_config_scale_get()) / elm_app_base_scale_get())
+#define ELMEMTARY_SCALE_SIZE(x) (int)(((double)(x) * elm_config_scale_get()) / elm_app_base_scale_get())
 #define MP_POPUP_MENUSTYLE_HEIGHT(x) (50*x)
 
 #define GL_STR_SCREEN_WIDTH_HD 720
@@ -1010,7 +1010,6 @@ void mp_music_viewas_pop_cb(void)
 {
 	startfunc;
 
-	int index = 0;
 	Evas_Object *box = NULL;
 	Evas_Object *popup = elm_popup_add(GET_WINDOW());
 	struct appdata *ad = mp_util_get_appdata();
@@ -1035,7 +1034,7 @@ void mp_music_viewas_pop_cb(void)
 	box = elm_box_add(popup);
 	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_min_set(box, -1,
-						ELM_SCALE_SIZE(MP_POPUP_MENUSTYLE_HEIGHT(2)));
+			ELMEMTARY_SCALE_SIZE(MP_POPUP_MENUSTYLE_HEIGHT(2)));
 	elm_box_pack_end(box, genlist);
 	evas_object_show(popup);
 	evas_object_show(genlist);

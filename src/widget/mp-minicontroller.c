@@ -193,16 +193,6 @@ _mp_minicontroller_landscape_is(struct appdata *ad, int angle)
 	return landscape;
 }
 
-static char * _mp_minicontroller_close_access_info_cb(void *data, Evas_Object *obj)
-{
-	startfunc;
-	DEBUG_TRACE("close button clicked");
-
-	char *operation_txt = GET_SYS_STR(MP_TTS_CLOSE_BUTTON);
-
-	return g_strconcat(GET_SYS_STR(MP_SCREEN_BUTTON), operation_txt, NULL);
-}
-
 #ifdef MINICONTROLLER_ENABLE_SHUFFLLE_REPEAT
 static char * _mp_minicontroller_shuffle_access_info_cb(void *data, Evas_Object *obj)
 {
@@ -227,25 +217,6 @@ static char * _mp_minicontroller_shuffle_access_info_cb(void *data, Evas_Object 
 	return g_strdup(operation_txt);
 }
 #endif
-static char * _mp_minicontroller_play_pause_access_info_cb(void *data, Evas_Object *obj)
-{
-	startfunc;
-	DEBUG_TRACE("play/pause button clicked");
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK_NULL(ad);
-
-	char *operation_txt = NULL;
-
-	if (ad->player_state == PLAY_STATE_PLAYING)
-	{
-		operation_txt = GET_SYS_STR(MP_TTS_PAUSE_BUTTON);
-	}
-	else if (ad->player_state == PLAY_STATE_PAUSED)
-	{
-		operation_txt = GET_SYS_STR(MP_TTS_PLAY_BUTTON);
-	}
-	return g_strdup(operation_txt);
-}
 
 #ifdef MINICONTROLLER_ENABLE_SHUFFLLE_REPEAT
 static char * _mp_minicontroller_repeat_access_info_cb(void *data, Evas_Object *obj)
@@ -269,55 +240,6 @@ static char * _mp_minicontroller_repeat_access_info_cb(void *data, Evas_Object *
 	return g_strdup(operation_txt);
 }
 #endif
-static char * _mp_minicontroller_ff_rew_access_info_cb(void *data, Evas_Object *obj)
-{
-	startfunc;
-	DEBUG_TRACE("ff/rew button clicked");
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK_NULL(ad);
-
-	char *operation_txt = NULL;
-
-	char *source = (char *)data;
-	if (!g_strcmp0(source, CONTROLLER_FF_SOURCE))
-	{
-		operation_txt = GET_SYS_STR(MP_TTS_NEXT_BUTTON);
-	}
-	else
-	{
-		operation_txt = GET_SYS_STR(MP_TTS_PREVIOUS_BUTTON);
-	}
-	return g_strdup(operation_txt);
-}
-
-static const char *g__minicontroller_btn_part[]= {"close_btn", NULL};
-
-static const char *
-_minicontroller_screen_reader_find_button_part(const Evas_Object *edje_obj, const Evas_Object *part_obj)
-{
-	startfunc;
-
-	MP_CHECK_NULL(edje_obj);
-	MP_CHECK_NULL(part_obj);
-
-	WARN_TRACE("edje_obj:%p",edje_obj);
-	WARN_TRACE("part_obj:%p",part_obj);
-
-	const Evas_Object *obj = NULL;
-	int index = 0;
-
-	while (g__minicontroller_btn_part[index]) {
-		WARN_TRACE("g__minicontroller_btn_part[index]:%s",g__minicontroller_btn_part[index]);
-		obj = (Evas_Object *)edje_object_part_object_get(edje_obj, g__minicontroller_btn_part[index]);
-		WARN_TRACE("obj:%p",obj);
-		if (obj == part_obj) return g__minicontroller_btn_part[index];
-		++index;
-	}
-
-	return NULL;
-	endfunc;
-}
-
 
 static void
 _mp_minicontroller_action_show_player_view(struct appdata *ad)
@@ -348,31 +270,6 @@ _mp_minicontroller_action_show_player_view(struct appdata *ad)
 				mp_util_app_resume();
 		}
 	}
-}
-
-static void
-_minicontroller_action_double_cb(void *data, Evas_Object *obj, Elm_Object_Item *item)
-{
-	startfunc;
-
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK(ad);
-
-	const char *part = _minicontroller_screen_reader_find_button_part(_EDJ(ad->minicontroller_layout), obj);
-	MP_CHECK(part);
-
-	WARN_TRACE("part is:%s",part);
-
-	if (!g_strcmp0(part, "close_btn")) {
-		if (!mp_util_is_other_player_playing()) {
-			int ret_set = 0;
-			ret_set = preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_OFF);
-			if (ret_set)
-				ERROR_TRACE("set preference failed");
-		}
-		elm_exit();
-	}
-
 }
 
 #ifdef MINICONTROLLER_ENABLE_SHUFFLLE_REPEAT
@@ -531,16 +428,6 @@ _load_minicontroller(struct appdata *ad)
 	//evas_object_show(eo);
 
 	return;
-}
-
-static void
-_mp_minicontroller_album_action_double_cb(void *data, Evas_Object *obj, Elm_Object_Item *item)
-{
-	struct appdata *ad = data;
-	MP_CHECK(ad);
-
-        EVENT_TRACE("albumart");
-        _mp_minicontroller_action_show_player_view(ad);
 }
 
 static void
@@ -845,11 +732,6 @@ _mp_minicontroller_ff_rew_btn_del_cb(void *data, Evas *e, Evas_Object *obj, void
 {
 	startfunc;
 	mp_play_control_reset_ff_rew();
-}
-
-static void
-_mp_minicontroller_click_cb(void *data) {
-	/*To handle events*/
 }
 
 static void

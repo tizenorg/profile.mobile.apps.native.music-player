@@ -15,19 +15,6 @@
 *
 */
 
-#define SEARCHBAR_BASE_HEIGHT_INC   58
-#define SEARCHBAR_TOP_PADDING_INC   55
-#define SEARCHBAR_LEFT_PADDING_INC   2
-#define SEARCHBAR_RIGHT_PADDING_INC  3
-#define SEARCHBAR_HEIGHT_INC         30
-#define SEARCHBAR_CANCEL_BUTTON_W_INC  15
-#define SEARCHBAR_BACKGROUND_COLOR 34 44 71 255
-#define SEARCHBAR_BG_COLOR 5 90 118 255
-#define SEARCHBAR_CANCEL_BUTTON_LEFT_PADDING_INC 10
-#define SEARCHBAR_WIDTH_INC 110
-#define SEARCHBAR_BOTTOM_PADDING_INC 35;
-
-
 group { name: "elm/layout/searchbar/cancel_button_case";
 images {
 			image : "T02_mw_icon_close_press.png" COMP;

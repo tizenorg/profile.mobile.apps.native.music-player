@@ -93,7 +93,6 @@ SET(COMMON_SRCS
 	src/core/mp-language-mgr.c
 	src/core/mp-playlist-mgr.c
 	src/core/mp-view-mgr.c
-#	src/core/mp-cloud.c
 	src/core/mp-floating-widget-mgr.c
 	src/core/mp-watch-dog.c
 	src/common/mp-common.c
@@ -107,12 +106,7 @@ SET(COMMON_SRCS
 	src/common/mp-app.c
 	src/common/mp-media-info.c
 	src/common/mp-ta.c
-#	src/common/mp-recommend.c
-#	src/common/mp-albumart.c
-	src/common/mp-db-client.c
 	src/common/mp-file-util.c
-#	src/view/mp-lyric-view.c
-#	src/view/mp-mw-lyric-view.c
 	src/widget/mp-lyric.c
 	src/widget/mp-search.c
 	src/widget/mp-smart-event-box.c
@@ -139,12 +133,10 @@ SET(COMMON_SRCS
 	src/view/mp-search-view.c
 	src/view/mp-set-as-view.c
 	src/view/mp-now-playing-list-view.c
-#	src/view/mp-square-playlist-view.c
 	src/view/mp-list-view.c
 	src/view/mp-view.c
 	src/view/mp-edit-view.c
 	src/view/mp-genre-detail-view.c
-#	src/view/mp-square-layout.c
 
 	src/widget/mp-list.c
 	src/widget/mp-track-list.c
@@ -157,26 +149,15 @@ SET(COMMON_SRCS
 	src/widget/mp-artist-detail-list.c
 	src/widget/mp-folder-list.c
 	src/widget/mp-now-playing-list.c
-#	src/widget/mp-square-list.c
 
 
 #START_PUBLIC_REMOVED_STRING
-#	src/core/mp-wifidirect-mgr.c
-#	src/core/mp-music-view-mgr.c
-#	src/core/mp-s-beam.c
-#	src/core/mp-context.c
-#	src/core/mp-voice-control-mgr.c
-#	src/core/mp-crypto.c
 	src/core/mp-collect-color-sort.c
 	src/core/mp-collect-color.c
 	src/view/mp-setting-view.c
 	src/view/mp-detail-view.c
-#	src/view/mp-album-booklet-view.c
-#	src/view/mp-artist-booklet-view.c
 	src/widget/mp-mini-player.c
 	src/widget/mp-notification.c
-#	src/view/mp-square-view-new.c
-#	src/view/mp-make-offline-view.c
 	src/widget/mp-notification.c
 #END_START_PUBLIC_REMOVED_STRING
 )
@@ -191,11 +172,8 @@ SET(COMMON_INCLUDE
 	src/view/include
 	src/widget/include
 #START_PUBLIC_REMOVED_STRING
-#	src/dali/include
 	src/dmc-player/include
 	src/setting/src/include
-	#src/rich_info/src/include
-	#src/rich_info/src/core/include
 	src/lib/include
 #END_START_PUBLIC_REMOVED_STRING
 )

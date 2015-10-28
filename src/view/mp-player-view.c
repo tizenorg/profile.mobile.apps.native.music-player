@@ -39,7 +39,6 @@
 #include "mp-edit-callback.h"
 #include "mp-setting-ctrl.h"
 #include "mp-edit-view.h"
-#include "mp-db-client.h"
 #include "mp-playlist-detail-view.h"
 #include <runtime_info.h>
 #ifndef MP_SOUND_PLAYER

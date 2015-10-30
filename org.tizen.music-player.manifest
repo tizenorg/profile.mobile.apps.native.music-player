@@ -15,8 +15,6 @@
 		<filesystem path="/usr/share/icons/default/small/org.tizen.sound-player.png" label="_" />
 		<filesystem path="/usr/apps/org.tizen.music-player/res/*" label="_" />
 		<filesystem path="/opt/etc/dump.d/module.d/dump_org.tizen.music-player.sh" label="_" />
-		<filesystem path="/usr/apps/org.tizen.music-player/author-signature.xml" label="_" />
-		<filesystem path="/usr/apps/org.tizen.music-player/signature1.xml" label="_" />
 		<filesystem path="/usr/apps/org.tizen.music-player/res/locale/*" label="_" />
 	</assign>
 </manifest>

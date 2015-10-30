@@ -161,7 +161,7 @@ cp LICENSE %{buildroot}/usr/share/license/%{name}
 %define tizen_author_sign 1
 %define tizen_dist_sign 1
 
-execstack -c %{buildroot}%{PREFIX}/bin/music-player
+#execstack -c %{buildroot}%{PREFIX}/bin/music-player
 
 %pre
 if [ -n "`env|grep SBOX`" ]; then

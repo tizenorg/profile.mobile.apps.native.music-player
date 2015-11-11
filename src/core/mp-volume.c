@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <Ecore.h>
@@ -75,10 +75,11 @@ mp_volume_init(void *xwin, Elm_Win *win)
 void mp_volume_finalize(void)
 {
 	startfunc;
-	if (!g_volume_key_mgr.xwin)
+	if (!g_volume_key_mgr.xwin) {
 		return;
+	}
 
-/* 	sound_manager_unset_volume_changed_cb(); */
+	/* 	sound_manager_unset_volume_changed_cb(); */
 	endfunc;
 }
 
@@ -97,10 +98,11 @@ _mp_volume_key_grab_check_condition()
 	}
 
 	/* start key grab */
-	if (start)
+	if (start) {
 		mp_volume_key_grab_start();
-	else
+	} else {
 		mp_volume_key_grab_end();
+	}
 }
 
 void
@@ -191,8 +193,9 @@ void _mp_volume_changed_cb(sound_type_e type, unsigned int volume, void *user_da
 {
 	EVENT_TRACE("type: %d, volume changed: %d", type, volume);
 	if (type == SOUND_TYPE_MEDIA) {
-		if (g_volume_key_mgr.volume_change_cb)
+		if (g_volume_key_mgr.volume_change_cb) {
 			g_volume_key_mgr.volume_change_cb(volume, g_volume_key_mgr.user_data);
+		}
 	}
 }
 #endif
@@ -227,8 +230,9 @@ mp_volume_key_event_send(mp_volume_key_e type, bool released)
 		g_volume_key_mgr.key_event_cb(g_volume_key_mgr.key_event_user_data, type, released);
 	}
 
-	if (!released)
+	if (!released) {
 		g_volume_key_mgr.pressed_timer = ecore_timer_add(MP_VOLUME_KEY_LONG_PRESS_TRIGGER_TIME, _mp_volume_key_pressed_timer, (void *)type);
+	}
 }
 
 void
@@ -258,10 +262,11 @@ mp_volume_add_change_cb(Mp_Volume_Change_Cb cb, void *user_data)
 {
 	/* if (g_volume_key_mgr.volume_change_cb) return; */
 
-	if (cb)
+	if (cb) {
 		EVENT_TRACE("Add volume change callback");
-	else
+	} else {
 		EVENT_TRACE("Del volume change callback");
+	}
 	/* int res = SOUND_MANAGER_ERROR_NONE; */
 	g_volume_key_mgr.volume_change_cb = cb;
 	g_volume_key_mgr.user_data = user_data;

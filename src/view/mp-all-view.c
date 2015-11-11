@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-all-view.h"
@@ -51,8 +51,9 @@ static int _mp_all_view_tab_index_get(MpAllView_t *view)
 {
 	MP_CHECK_VAL(view, 0);
 	int index = 0;
-	if (view->tab_status < TAB_COUNT)
+	if (view->tab_status < TAB_COUNT) {
 		index = tab_index_exist[view->tab_status];
+	}
 
 	return index;
 
@@ -81,11 +82,13 @@ int _mp_all_view_update(void *thiz)
 	MpAllView_t *view = thiz;
 
 	mp_list_update(view->content_to_show);
-	if (_mp_all_view_tab_index_get(view) == MP_TAB_SONGS && mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show)))
+	if (_mp_all_view_tab_index_get(view) == MP_TAB_SONGS && mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show))) {
 		mp_list_show_fast_scroll(view->content_to_show);
+	}
 
-	if (_mp_all_view_tab_index_get(view) == MP_TAB_SONGS && mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show)) == 0)
+	if (_mp_all_view_tab_index_get(view) == MP_TAB_SONGS && mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show)) == 0) {
 		mp_list_hide_fast_scroll(view->content_to_show);
+	}
 	return 0;
 }
 
@@ -97,51 +100,52 @@ static void _mp_all_view_view_as_select_cb(void *data, Evas_Object *obj, void *e
 	MP_CHECK(all_view);
 	mp_evas_object_del(all_view->more_btn_ctxpopup);
 
-/*   remove popup   */
-/*
+	/*   remove popup   */
+	/*
 
-	struct appdata *ad = mp_util_get_appdata();
-	MP_CHECK(ad);
+		struct appdata *ad = mp_util_get_appdata();
+		MP_CHECK(ad);
 
-	if (mp_list_is_display_mode_changable(all_view->content_to_show)) {
-		Evas_Object *popup = mp_genlist_popup_create(ad->win_main, MP_POPUP_CHANGE_LIST_DISPLAY_MODE, all_view, ad);
-		MP_CHECK(popup);
+		if (mp_list_is_display_mode_changable(all_view->content_to_show)) {
+			Evas_Object *popup = mp_genlist_popup_create(ad->win_main, MP_POPUP_CHANGE_LIST_DISPLAY_MODE, all_view, ad);
+			MP_CHECK(popup);
 
-		mp_evas_object_del(all_view->radio_main);
-		all_view->radio_main = elm_radio_add(popup);
-		elm_radio_state_value_set(all_view->radio_main, -1);
-		evas_object_smart_callback_add(all_view->radio_main, "changed", _mp_all_view_view_as_popup_radio_changed_cb, all_view);
-		evas_object_event_callback_add(all_view->radio_main, EVAS_CALLBACK_DEL, _mp_all_view_radio_main_del_cb, all_view);
-		evas_object_hide(all_view->radio_main);
+			mp_evas_object_del(all_view->radio_main);
+			all_view->radio_main = elm_radio_add(popup);
+			elm_radio_state_value_set(all_view->radio_main, -1);
+			evas_object_smart_callback_add(all_view->radio_main, "changed", _mp_all_view_view_as_popup_radio_changed_cb, all_view);
+			evas_object_event_callback_add(all_view->radio_main, EVAS_CALLBACK_DEL, _mp_all_view_radio_main_del_cb, all_view);
+			evas_object_hide(all_view->radio_main);
 
-		Evas_Object *genlist = evas_object_data_get(popup, "genlist");
-		MP_CHECK(genlist);
+			Evas_Object *genlist = evas_object_data_get(popup, "genlist");
+			MP_CHECK(genlist);
 
-		evas_object_data_set(genlist, "all_view", (void *)all_view);
+			evas_object_data_set(genlist, "all_view", (void *)all_view);
 
-		static Elm_Genlist_Item_Class itc;
-		itc.item_style = "1text.1icon.3";
-		itc.func.text_get = _mp_all_view_view_as_popup_label_get;
-		itc.func.content_get = _mp_all_view_view_as_popup_content_get;
-		itc.func.state_get = NULL;
-		itc.func.del = NULL;
+			static Elm_Genlist_Item_Class itc;
+			itc.item_style = "1text.1icon.3";
+			itc.func.text_get = _mp_all_view_view_as_popup_label_get;
+			itc.func.content_get = _mp_all_view_view_as_popup_content_get;
+			itc.func.state_get = NULL;
+			itc.func.del = NULL;
 
-		int i = 0;
-		while (i < MP_LIST_DISPLAY_MODE_MAX) {
-			elm_genlist_item_append(genlist, &itc, (void *)i, NULL, ELM_GENLIST_ITEM_NONE,
-					_mp_all_view_view_as_popup_item_sel, all_view);
+			int i = 0;
+			while (i < MP_LIST_DISPLAY_MODE_MAX) {
+				elm_genlist_item_append(genlist, &itc, (void *)i, NULL, ELM_GENLIST_ITEM_NONE,
+						_mp_all_view_view_as_popup_item_sel, all_view);
 
-			++i;
+				++i;
+			}
 		}
-	}
-		*/
+			*/
 	MpListDisplayMode_e current = mp_list_get_display_mode(all_view->content_to_show);
 	mp_debug("List display change request [%d => %d]", current);
 
-	if (MP_LIST_DISPLAY_MODE_NORMAL == current)
+	if (MP_LIST_DISPLAY_MODE_NORMAL == current) {
 		current = MP_LIST_DISPLAY_MODE_THUMBNAIL;
-	else if (MP_LIST_DISPLAY_MODE_THUMBNAIL == current)
+	} else if (MP_LIST_DISPLAY_MODE_THUMBNAIL == current) {
 		current = MP_LIST_DISPLAY_MODE_NORMAL;
+	}
 
 	all_view->display_mode[all_view->tab_status] = current;
 
@@ -182,8 +186,8 @@ static void _mp_all_view_normal_more_btn_cb(void *data, Evas_Object *obj, void *
 	if (index == MP_TAB_PLAYLISTS) {
 		if (playlistcount < 100) {
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_CREATE_PLAYLIST, MP_PLAYER_MORE_BTN_CREATE_PLAYLIST_IMAGE,
-					_mp_all_view_playlist_list_create_playlist_cb, view);
+			                             STR_MP_CREATE_PLAYLIST, MP_PLAYER_MORE_BTN_CREATE_PLAYLIST_IMAGE,
+			                             _mp_all_view_playlist_list_create_playlist_cb, view);
 			mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 			evas_object_show(view->more_btn_ctxpopup);
 		}
@@ -194,7 +198,7 @@ static void _mp_all_view_normal_more_btn_cb(void *data, Evas_Object *obj, void *
 	if (index == MP_TAB_SONGS) {
 		if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_SHARE))
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
+			                             STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
 	}
 #endif
 
@@ -202,55 +206,55 @@ static void _mp_all_view_normal_more_btn_cb(void *data, Evas_Object *obj, void *
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL)) {
 		if (index != MP_TAB_PLAYLISTS) {
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_all_view_add_to_playlist_cb, view);
+			                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_all_view_add_to_playlist_cb, view);
 		}
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, _mp_all_view_edit_cb, view);
-	/*search*/
+		                             STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, _mp_all_view_edit_cb, view);
+		/*search*/
 		if (count > 0) {
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
+			                             STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
 		}
 
-	/*view as*/
+		/*view as*/
 #ifdef MP_LIST_THUMBNAIL
-	if (mp_list_is_display_mode_changable(view->content_to_show)) {
-		MpListDisplayMode_e current = mp_list_get_display_mode(view->content_to_show);
-	if (MP_LIST_DISPLAY_MODE_NORMAL == current)
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_ALL_THUMBNAIL_VIEW, MP_PLAYER_MORE_BTN_MORE_THUMBNAIL_VIEW_IMAGE, _mp_all_view_view_as_select_cb, view);
-	else if (MP_LIST_DISPLAY_MODE_THUMBNAIL == current)
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_ALL_LIST_VIEW, MP_PLAYER_MORE_BTN_MORE_LIST_VIEW_IMAGE, _mp_all_view_view_as_select_cb, view);
+		if (mp_list_is_display_mode_changable(view->content_to_show)) {
+			MpListDisplayMode_e current = mp_list_get_display_mode(view->content_to_show);
+			if (MP_LIST_DISPLAY_MODE_NORMAL == current)
+				mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+				                             STR_MP_ALL_THUMBNAIL_VIEW, MP_PLAYER_MORE_BTN_MORE_THUMBNAIL_VIEW_IMAGE, _mp_all_view_view_as_select_cb, view);
+			else if (MP_LIST_DISPLAY_MODE_THUMBNAIL == current)
+				mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+				                             STR_MP_ALL_LIST_VIEW, MP_PLAYER_MORE_BTN_MORE_LIST_VIEW_IMAGE, _mp_all_view_view_as_select_cb, view);
 
-	}
+		}
 #endif
 
 #ifdef MP_FEATURE_PERSONAL_PAGE
-	if (index == MP_TAB_SONGS) {
-		if (mp_util_is_personal_page_on()) {
-			all_in_personal_e status = mp_common_is_all_in_personal_page(((MpList_t *)view->content_to_show)->genlist);
-			/*add*/
-			if (status != MP_COMMON_ALL_IN && status != MP_COMMON_ALL_ERROR)
-				mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-							STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
+		if (index == MP_TAB_SONGS) {
+			if (mp_util_is_personal_page_on()) {
+				all_in_personal_e status = mp_common_is_all_in_personal_page(((MpList_t *)view->content_to_show)->genlist);
+				/*add*/
+				if (status != MP_COMMON_ALL_IN && status != MP_COMMON_ALL_ERROR)
+					mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					                             STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
 
-			/*remove*/
-			if (status != MP_COMMON_ALL_OUT && status != MP_COMMON_ALL_ERROR)
-			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-						STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
+				/*remove*/
+				if (status != MP_COMMON_ALL_OUT && status != MP_COMMON_ALL_ERROR)
+					mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					                             STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
+			}
 		}
-	}
 #endif
 
 
-	/*settings*/
-	/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);*/
+		/*settings*/
+		/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);*/
 #ifndef MP_FEATURE_NO_END
-	/*End*/
-	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+		/*End*/
+		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+		                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 		mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 		evas_object_show(view->more_btn_ctxpopup);
@@ -360,22 +364,24 @@ static void _all_view_tab_change_cb(void *data, Evas_Object * obj, void *event_i
 		Elm_Object_Item *it2 = NULL;
 
 		it = elm_toolbar_selected_item_get(obj);
-		mp_retm_if (it == NULL, "tab item is NULL");
+		mp_retm_if(it == NULL, "tab item is NULL");
 
 		it2 = elm_toolbar_first_item_get(obj);
 
 		int i = 0;
 		for (i = 0; i < MP_TAB_MAX; i++) {
-			if (it == it2)
+			if (it == it2) {
 				break;
+			}
 			it2 = elm_toolbar_item_next_get(it2);
 			if (!it2) {
 				break;
 			}
 		}
 
-		if (view->tab_status == i)
+		if (view->tab_status == i) {
 			return;
+		}
 
 		view->tab_status = i;
 	}
@@ -393,31 +399,34 @@ static void _all_view_tab_change_cb(void *data, Evas_Object * obj, void *event_i
 	switch (index) {
 	case MP_TAB_PLAYLISTS:
 		list = (void *)mp_playlist_list_create(view->all_view_layout);
-		if (view->tab_status < MP_TAB_MAX)
-		 mp_playlist_list_set_data((MpPlaylistList_t *)list, MP_PLAYLIST_LIST_DISPLAY_MODE, view->display_mode[view->tab_status], -1);
+		if (view->tab_status < MP_TAB_MAX) {
+			mp_playlist_list_set_data((MpPlaylistList_t *)list, MP_PLAYLIST_LIST_DISPLAY_MODE, view->display_mode[view->tab_status], -1);
+		}
 		mp_list_update(list);
 		break;
 	case MP_TAB_ALBUMS:
 		list = (void *)mp_album_list_create(view->all_view_layout);
 		mp_album_list_set_data((MpAlbumList_t *)list, MP_ALBUM_LIST_DISPLAY_MODE, view->display_mode[view->tab_status], -1);
 		mp_list_update(list);
-		if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL)
+		if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL) {
 			mp_list_show_fast_scroll(list);
+		}
 		break;
 	case MP_TAB_ARTISTS:
 		list = (void *)mp_artist_list_create(view->all_view_layout);
 		mp_artist_list_set_data((MpArtistList_t *)list, MP_ARTIST_LIST_DISPLAY_MODE, view->display_mode[view->tab_status], -1);
 		mp_list_update(list);
-		if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL)
+		if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL) {
 			mp_list_show_fast_scroll(list);
+		}
 		break;
-	/*case MP_TAB_FOLDERS:
-		list = (void *)mp_folder_list_create(view->all_view_layout);
-		mp_folder_list_set_data((MpFolderList_t *)list, MP_FOLDER_LIST_TYPE, MP_GROUP_BY_FOLDER, -1);
-		mp_list_update(list);
-		if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL)
-			mp_list_show_fast_scroll(list);
-		break;*/
+		/*case MP_TAB_FOLDERS:
+			list = (void *)mp_folder_list_create(view->all_view_layout);
+			mp_folder_list_set_data((MpFolderList_t *)list, MP_FOLDER_LIST_TYPE, MP_GROUP_BY_FOLDER, -1);
+			mp_list_update(list);
+			if (view->display_mode[view->tab_status] == MP_LIST_DISPLAY_MODE_NORMAL)
+				mp_list_show_fast_scroll(list);
+			break;*/
 	case MP_TAB_SONGS:
 	default:
 		PROFILE_IN("mp_track_list_create");
@@ -477,8 +486,8 @@ static void _mp_all_view_tabs_sequence_get()
 	ms_key_get_tabs_str(&get_str);
 	int value = atoi(get_str);
 	int j = 0;
-	for (j = TAB_COUNT-1; j >= 0 ; j--) {
-		tab_index[j] = value%10;
+	for (j = TAB_COUNT - 1; j >= 0 ; j--) {
+		tab_index[j] = value % 10;
 		value = value / 10;
 	}
 
@@ -588,29 +597,32 @@ _mp_all_view_on_event(void *thiz, MpViewEvent_e event)
 
 	switch (event) {
 	case MP_SETTING_PLAYLIST_CHANGED:
-		if (index == MP_TAB_PLAYLISTS)
+		if (index == MP_TAB_PLAYLISTS) {
 			mp_view_update(thiz);
+		}
 		break;
-	/*case MP_PLAY_TIME_COUNT_UPDATED:*/
+		/*case MP_PLAY_TIME_COUNT_UPDATED:*/
 	case MP_ADD_TO_PLAYLIST_DONE:
 #ifdef MP_FEATURE_SHORTCUT
 		/*_mp_all_view_update_shortcut(view);*/
 #endif
-		if (index == MP_TAB_PLAYLISTS)
+		if (index == MP_TAB_PLAYLISTS) {
 			mp_view_update(thiz);
+		}
 		break;
-		case MP_LANG_CHANGED:
-		{
-			MpListDisplayMode_e current = mp_list_get_display_mode(list);
-			if (index == MP_TAB_ARTISTS && MP_LIST_DISPLAY_MODE_NORMAL == current)
-				mp_list_realized_item_part_update(list, "elm.icon", ELM_GENLIST_ITEM_FIELD_CONTENT);
-			}
-		break;
-		case MP_POPUP_DELETE_DONE:
-		if (index == MP_TAB_PLAYLISTS)
+	case MP_LANG_CHANGED: {
+		MpListDisplayMode_e current = mp_list_get_display_mode(list);
+		if (index == MP_TAB_ARTISTS && MP_LIST_DISPLAY_MODE_NORMAL == current) {
+			mp_list_realized_item_part_update(list, "elm.icon", ELM_GENLIST_ITEM_FIELD_CONTENT);
+		}
+	}
+	break;
+	case MP_POPUP_DELETE_DONE:
+		if (index == MP_TAB_PLAYLISTS) {
 			mp_view_update(thiz);
-		else
-		_mp_all_view_popup_delete_update_genlist(list);
+		} else {
+			_mp_all_view_popup_delete_update_genlist(list);
+		}
 		break;
 	case MP_DELETE_DONE:
 		mp_list_update(list);
@@ -618,8 +630,9 @@ _mp_all_view_on_event(void *thiz, MpViewEvent_e event)
 			if (list->genlist) {
 				int count = 0;
 				count = elm_genlist_items_count(list->genlist);
-				if (count <= 0)
+				if (count <= 0) {
 					mp_list_hide_fast_scroll((MpList_t *)list);
+				}
 			} else {
 				mp_list_hide_fast_scroll((MpList_t *)list);
 			}
@@ -635,15 +648,15 @@ _mp_all_view_on_event(void *thiz, MpViewEvent_e event)
 		_mp_all_view_playlist_update(view);
 		break;
 	case MP_SIP_STATE_CHANGED:
-	/*
-		if (view->navi_it) {
-			const char *signal = mp_util_get_sip_state() ? "elm,state,toolbar,instant_close" : "elm,state,toolbar,instant_open";
-			elm_object_item_signal_emit(view->navi_it, signal, "");
+		/*
+			if (view->navi_it) {
+				const char *signal = mp_util_get_sip_state() ? "elm,state,toolbar,instant_close" : "elm,state,toolbar,instant_open";
+				elm_object_item_signal_emit(view->navi_it, signal, "");
 
-			bool title_visible = (mp_util_get_sip_state() && mp_util_is_landscape()) ? false : true;
-			mp_view_set_title_visible(thiz, title_visible);
-		}
-		*/
+				bool title_visible = (mp_util_get_sip_state() && mp_util_is_landscape()) ? false : true;
+				mp_view_set_title_visible(thiz, title_visible);
+			}
+			*/
 		break;
 #ifndef MP_SOUND_PLAYER
 	case MP_UPDATE_PLAYING_LIST:
@@ -670,36 +683,35 @@ _mp_all_view_on_event(void *thiz, MpViewEvent_e event)
 		break;
 #endif
 	case MP_VIEW_EVENT_ALBUMART_CHANGED:
-		if (index == MP_TAB_SONGS)
+		if (index == MP_TAB_SONGS) {
 			mp_list_realized_item_part_update(list, "elm.icon", ELM_GENLIST_ITEM_FIELD_CONTENT);
-		else
+		} else {
 			mp_list_update(list);
+		}
 		break;
-	case MP_UPDATE_FAVORITE_LIST:
-	{
-		if (index == MP_TAB_PLAYLISTS)
+	case MP_UPDATE_FAVORITE_LIST: {
+		if (index == MP_TAB_PLAYLISTS) {
 			mp_list_update(list);
+		}
 		break;
 	}
 	case MP_TABS_ITEM_CHANGED:
-	case MP_TABS_REORDER_DONE:
-	{
+	case MP_TABS_REORDER_DONE: {
 		_mp_all_view_tabs_refresh(view);
 		break;
 	}
-	case MP_PLAYLISTS_REORDER_DONE:
-	{
+	case MP_PLAYLISTS_REORDER_DONE: {
 		_mp_all_view_tabs_sequence_get();
-		if (tab_index[view->tab_status]-1 == MP_TAB_PLAYLISTS)
+		if (tab_index[view->tab_status] - 1 == MP_TAB_PLAYLISTS) {
 			mp_view_update(thiz);
+		}
 		break;
 	}
 	case MP_START_PLAYBACK:
 	case MP_RESUME_PLAYBACK:
 	case MP_PAUSE_PLAYBACK:
 	case MP_PLAYING_TRACK_CHANGED:
-	case MP_STOP_PLAYBACK:
-	{
+	case MP_STOP_PLAYBACK: {
 		if (index == MP_TAB_SONGS) {
 			mp_list_realized_item_part_update(list, "elm.icon.left", ELM_GENLIST_ITEM_FIELD_CONTENT);
 		}
@@ -720,8 +732,9 @@ _mp_all_view_rotate_cb(void *thiz, int randscape)
 
 	MpView_t *top_view = mp_view_mgr_get_top_view(GET_VIEW_MGR);
 
-	if (mp_util_get_sip_state() && (int)top_view == (int)view)
+	if (mp_util_get_sip_state() && (int)top_view == (int)view) {
 		_mp_all_view_on_event(view, MP_SIP_STATE_CHANGED);
+	}
 
 	_mp_all_view_on_event(view, MP_VIEW_ROTATE);
 }
@@ -790,7 +803,9 @@ MpAllView_t *mp_all_view_create(Evas_Object *parent, MpTab_e init_tab)
 	PROFILE_IN("_mp_all_view_init");
 	ret = _mp_all_view_init(parent, view);
 	PROFILE_OUT("_mp_all_view_init");
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 #ifdef MP_FEATURE_PERSONAL_PAGE
 	view->personal_page_status = mp_util_is_personal_page_on();

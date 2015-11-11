@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-edit-callback.h"
@@ -78,18 +78,17 @@ _mp_edit_cb_create_playlist_cb(void *data, Evas_Object * obj, void *event_info)
 	startfunc;
 	evas_object_del(obj);
 	int response = (int)event_info;
-	if (response == MP_POPUP_NO)
-	{
+	if (response == MP_POPUP_NO) {
 		DEBUG_TRACE("cancel btn click");
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_POPUP_CANCEL);
 		return;
 	}
 	MP_CHECK(response);
 
-        Mp_Playlist_Data *mp_playlist_data = mp_edit_playlist_create(MP_PLST_CREATE);
-        MP_CHECK(mp_playlist_data);
-        mp_edit_playlist_set_edit_list(mp_playlist_data, data);
-        mp_edit_playlist_content_create(mp_playlist_data);
+	Mp_Playlist_Data *mp_playlist_data = mp_edit_playlist_create(MP_PLST_CREATE);
+	MP_CHECK(mp_playlist_data);
+	mp_edit_playlist_set_edit_list(mp_playlist_data, data);
+	mp_edit_playlist_content_create(mp_playlist_data);
 
 	endfunc;
 }
@@ -106,8 +105,7 @@ _mp_edit_delete_track_popup_response_cb(void *data, Evas_Object * obj, void *eve
 	ad->popup_delete = NULL;
 
 	int response = (int)event_info;
-	if (response == MP_POPUP_NO)
-	{
+	if (response == MP_POPUP_NO) {
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_POPUP_CANCEL);
 		return;
 	}
@@ -123,7 +121,7 @@ void mp_edit_create_track_delete_popup(void *data)
 	DEBUG_TRACE("");
 	struct appdata *ad = mp_util_get_appdata();
 	char *title_txt = NULL;
-        char *title = NULL;
+	char *title = NULL;
 	char *help_txt = NULL;
 	title = STR_MP_DELETE;
 
@@ -181,14 +179,13 @@ mp_edit_create_add_to_playlist_popup(void *data)
 	MP_CHECK(list);
 
 	Evas_Object *popup = NULL;
-	if (mp_list_get_checked_count(list)<= 0)
-	{
+	if (mp_list_get_checked_count(list) <= 0) {
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_NOTHING_SELECTED"));
 		return;
 	}
 
 	popup = mp_genlist_popup_create(ad->win_main, MP_POPUP_ADD_TO_PLST, data, ad);
-	mp_retm_if (!popup, "popup is NULL !!!");
+	mp_retm_if(!popup, "popup is NULL !!!");
 
 	//mp_genlist_popup_item_append(popup, GET_STR("IDS_MUSIC_OPT_CREATE_PLAYLIST"), NULL, NULL, NULL, _mp_edit_cb_create_playlist_cb, data);
 	mp_popup_response_callback_set(popup, _mp_edit_cb_create_playlist_cb, data);
@@ -196,37 +193,31 @@ mp_edit_create_add_to_playlist_popup(void *data)
 	int i = 0, count = -1, ret = -1;
 
 	ret = mp_media_info_group_list_count(MP_GROUP_BY_PLAYLIST, NULL, NULL, &count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		ERROR_TRACE("Error in mp_media_info_group_list_count (%d)", ret);
 		return;
 	}
 
-	if (count)
-	{
+	if (count) {
 		mp_media_list_h media_list = NULL;
 
 		ret = mp_media_info_group_list_create(&media_list, MP_GROUP_BY_PLAYLIST, NULL, NULL, 0, count);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			WARN_TRACE("Fail to get playlist");
 			return;
 		}
-		for (i = 0; i < count; i++)
-		{
+		for (i = 0; i < count; i++) {
 			char *name = NULL;
 			mp_media_info_h item = NULL;
 			item = mp_media_info_group_list_nth_item(media_list, i);
 
 			ret = mp_media_info_group_get_main_info(item, &name);
-			mp_retm_if (ret != 0, "Fail to get value");
+			mp_retm_if(ret != 0, "Fail to get value");
 			mp_genlist_popup_item_append(popup, name, NULL, NULL, (void *)list, _mp_edit_cb_add_to_playlist_cb, (void *)item);
 		}
 
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_DEL, _mp_edit_cb_popup_del_cb, media_list);
-	}
-	else
-	{
+	} else {
 		Elm_Object_Item *it = mp_genlist_popup_item_append(popup, GET_STR(STR_MP_NO_PLAYLISTS), NULL, NULL, NULL, NULL, ad);
 		elm_genlist_item_select_mode_set(it, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 	}
@@ -243,8 +234,7 @@ _mp_edit_progress_popup_response_cb(void *data, Evas_Object * obj, void *event_i
 	MP_CHECK(obj);
 	mp_evas_object_del(obj);
 
-	if (g_edit_thread)
-	{
+	if (g_edit_thread) {
 		ecore_thread_cancel(g_edit_thread);
 		g_edit_thread = NULL;
 	}
@@ -252,18 +242,16 @@ _mp_edit_progress_popup_response_cb(void *data, Evas_Object * obj, void *event_i
 	WARN_TRACE("EDIT progress has been completed. Now update views..");
 	DEBUG_TRACE("selected_count, %d, error_count: %d", g_selected_count, g_error_count);
 
-	if (g_edit_operation == MP_EDIT_ADD_TO_PLAYLIST)
-	{
+	if (g_edit_operation == MP_EDIT_ADD_TO_PLAYLIST) {
 		/*mp_util_post_add_to_playlist_popup_message(g_selected_tracklist_count);*/
 
 		mp_view_update(mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_PLAYLIST_DETAIL));
 
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_ADD_TO_PLAYLIST_DONE);
-	}
-	else if (g_edit_operation == MP_EDIT_DELETE)
-	{
-		if ((g_selected_count == 1) && g_error_count)
+	} else if (g_edit_operation == MP_EDIT_DELETE) {
+		if ((g_selected_count == 1) && g_error_count) {
 			mp_util_post_status_message(ad, GET_SYS_STR("IDS_COM_POP_FAILED"));
+		}
 		/* notification was removed from UX
 		else
 		{
@@ -273,8 +261,7 @@ _mp_edit_progress_popup_response_cb(void *data, Evas_Object * obj, void *event_i
 				mp_util_post_status_message(ad, GET_SYS_STR(STR_MP_DELETED));
 		}
 		*/
-		if (g_group_type == MP_GROUP_BY_FOLDER)
-		{
+		if (g_group_type == MP_GROUP_BY_FOLDER) {
 			DEBUG_TRACE("update all view");
 			mp_view_update(mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_ALL));
 		}
@@ -283,21 +270,20 @@ _mp_edit_progress_popup_response_cb(void *data, Evas_Object * obj, void *event_i
 		MpListView_t *view = (MpListView_t *)mp_view_mgr_get_top_view(GET_VIEW_MGR);
 		bool list_view = false;
 		mp_list_view_is_list_view(view, &list_view);
-		if (list_view && mp_list_get_edit(view->content_to_show))
-		{
+		if (list_view && mp_list_get_edit(view->content_to_show)) {
 			mp_view_update_options_edit((MpView_t *)view);
 			view->selection_info = mp_util_create_selectioninfo_with_count(view, mp_list_get_checked_count(view->content_to_show));
 		}
 
-                //if (mp_list_get_edit(view->content_to_show))
-                {
-		        mp_view_mgr_post_event(GET_VIEW_MGR, MP_DELETE_DONE);
-                }
-                /*
-                else
-                {
-                        mp_view_mgr_post_event(GET_VIEW_MGR, MP_POPUP_DELETE_DONE);
-                }*/
+		//if (mp_list_get_edit(view->content_to_show))
+		{
+			mp_view_mgr_post_event(GET_VIEW_MGR, MP_DELETE_DONE);
+		}
+		/*
+		else
+		{
+		        mp_view_mgr_post_event(GET_VIEW_MGR, MP_POPUP_DELETE_DONE);
+		}*/
 	}
 
 	ad->edit_in_progress = false;
@@ -326,8 +312,7 @@ _mp_edit_cb_add_to_plst_thread(void *data, Ecore_Thread *thread)
 	mp_media_info_playlist_handle_create(&playlist_h, g_playlist_id);
 
 	char *title = NULL;
-	while (node)
-	{
+	while (node) {
 		if (ecore_thread_check(thread)) {	// pending cancellation
 			WARN_TRACE("popup cancel clicked");
 			goto mp_exception;
@@ -338,51 +323,47 @@ _mp_edit_cb_add_to_plst_thread(void *data, Ecore_Thread *thread)
 
 		item = node->data;
 		node = g_list_previous(node);
-		if (!item)
-		{
+		if (!item) {
 			WARN_TRACE("CHECK here...");
 			ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 			goto mp_exception;
 		}
-		item_handle =  (item->handle);
-		if (!item_handle)
+		item_handle = (item->handle);
+		if (!item_handle) {
 			continue;
+		}
 
 		switch (g_list_type) {
 		case MP_LIST_TYPE_TRACK:
 		case MP_LIST_TYPE_ARTIST_DETAIL:
 		case MP_LIST_TYPE_ALBUM_DETAIL:
-		case MP_LIST_TYPE_ALL:
-		{
+		case MP_LIST_TYPE_ALL: {
 			ret = mp_media_info_get_media_id(item_handle,  &fid);
-			if (ret != 0)
-			{
+			if (ret != 0) {
 				ERROR_TRACE("CRITICAL ERROR ## CHECK BELOW ITEM");
 
 				goto mp_exception;
 			}
 
 			int res = 0;
-			if(g_playlist_id == -1) { /*favoriate playlist*/
+			if (g_playlist_id == -1) { /*favoriate playlist*/
 				res = mp_media_info_set_favorite(item_handle, true);
 
 			} else {
 				mp_media_info_get_thumbnail_path(item_handle, &thumbnail_path);
 				res = mp_media_info_playlist_add_item(playlist_h, fid, thumbnail_path);
 			}
-			if (res)
-			{
+			if (res) {
 				WARN_TRACE("");
 				ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_UNABLE_TO_ADD_PLST);
 				ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 				goto mp_exception;
-			}
-			else
+			} else {
 				g_playlist_track_count++;
+			}
 
 #ifdef MP_PLAYLIST_MAX_ITEM_COUNT
-			if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT)
-			{
+			if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT) {
 				DEBUG_TRACE("unable to add more tracks...");
 				//ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 				goto mp_exception;
@@ -392,16 +373,16 @@ _mp_edit_cb_add_to_plst_thread(void *data, Ecore_Thread *thread)
 
 			break;
 		}
-		case MP_LIST_TYPE_GROUP:
-		{
+		case MP_LIST_TYPE_GROUP: {
 			mp_track_type_e item_type = MP_TRACK_ALL;
 			int count = 0, i;
 			mp_media_info_h item = NULL;
 
-			if (g_group_type == MP_GROUP_BY_FOLDER)
+			if (g_group_type == MP_GROUP_BY_FOLDER) {
 				ret = mp_media_info_group_get_folder_id(item_handle, &title);
-			else
+			} else {
 				ret = mp_media_info_group_get_main_info(item_handle, &title);
+			}
 			MP_CHECK_EXCEP(ret == 0);
 
 			item_type = mp_menu_get_track_type_by_group(g_group_type);
@@ -414,8 +395,7 @@ _mp_edit_cb_add_to_plst_thread(void *data, Ecore_Thread *thread)
 			ret = mp_media_info_list_create(&group_track_handle, item_type, title, NULL, NULL, 0, 0, count);
 			MP_CHECK_EXCEP(ret == 0);
 
-			for (i = 0; i<count; i++)
-			{
+			for (i = 0; i < count; i++) {
 				char *fid = NULL;
 				char *thumbnail_path = NULL;
 				item = mp_media_info_list_nth_item(group_track_handle, i);
@@ -423,26 +403,23 @@ _mp_edit_cb_add_to_plst_thread(void *data, Ecore_Thread *thread)
 				MP_CHECK_EXCEP(ret == 0);
 
 				int res = 0;
-				if(g_playlist_id == -1) /*favoriate playlist*/
-						res = mp_media_info_set_favorite(item, true);
-				else
-				{
-						mp_media_info_get_thumbnail_path(item, &thumbnail_path);
-						res = mp_media_info_playlist_add_item(playlist_h, fid, thumbnail_path);
+				if (g_playlist_id == -1) { /*favoriate playlist*/
+					res = mp_media_info_set_favorite(item, true);
+				} else {
+					mp_media_info_get_thumbnail_path(item, &thumbnail_path);
+					res = mp_media_info_playlist_add_item(playlist_h, fid, thumbnail_path);
 				}
-				if (res)
-				{
+				if (res) {
 					WARN_TRACE("");
 					ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_UNABLE_TO_ADD_PLST);
 					ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 					goto mp_exception;
-				}
-				else
+				} else {
 					g_playlist_track_count++;
+				}
 
 #ifdef MP_PLAYLIST_MAX_ITEM_COUNT
-				if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT)
-				{
+				if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT) {
 					DEBUG_TRACE("unable to add more tracks...");
 					ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 					goto mp_exception;
@@ -481,61 +458,50 @@ _delete_track(mp_media_info_h item_handle)
 
 	MP_CHECK_VAL(item_handle, -1);
 
-	switch (g_track_type)
-	{
-	case MP_TRACK_BY_PLAYLIST:
-	{
+	switch (g_track_type) {
+	case MP_TRACK_BY_PLAYLIST: {
 		int member_id = 0;
 		ret = mp_media_info_get_playlist_member_id(item_handle, &member_id);
 		MP_CHECK_VAL(ret == 0, -1);
 		ret = mp_media_info_playlist_remove_media(g_playlist_handle, member_id);
 		MP_CHECK_VAL(ret == 0, -1);
 
-                mp_common_playlist_album_update(g_playlist_handle);
+		mp_common_playlist_album_update(g_playlist_handle);
 
 		break;
 	}
-	case MP_TRACK_BY_ADDED_TIME:
-	{
+	case MP_TRACK_BY_ADDED_TIME: {
 		ret = mp_media_info_set_added_time(item_handle, 0);
 		MP_CHECK_VAL(ret == 0, -1);
 		break;
 	}
-	case MP_TRACK_BY_PLAYED_TIME:
-	{
+	case MP_TRACK_BY_PLAYED_TIME: {
 		ret = mp_media_info_set_played_time(item_handle, 0);
 		MP_CHECK_VAL(ret == 0, -1);
 		break;
 	}
-	case MP_TRACK_BY_FAVORITE:
-	{
+	case MP_TRACK_BY_FAVORITE: {
 		ret = mp_media_info_set_favorite(item_handle, 0);
 		MP_CHECK_VAL(ret == 0, -1);
 		break;
 	}
-	case MP_TRACK_BY_PLAYED_COUNT:
-	{
+	case MP_TRACK_BY_PLAYED_COUNT: {
 		ret = mp_media_info_set_played_count(item_handle, 0);
 		MP_CHECK_VAL(ret == 0, -1);
 		break;
 	}
-	default:
-	{
+	default: {
 #ifdef MP_FEATURE_CLOUD
 		mp_storage_type_e storage;
 		ret = mp_media_info_get_media_id(item_handle,  &fid);
 		ret = mp_media_info_get_storage_type(item_handle, &storage);
-		if (storage == MP_STORAGE_CLOUD)
-		{
+		if (storage == MP_STORAGE_CLOUD) {
 			return mp_cloud_delete_content(fid, true);
-		}
-		else
-		{
+		} else {
 			ret = mp_media_info_get_file_path(item_handle, &uri);
 			MP_CHECK_VAL(ret == 0, -1);
 
-			if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE)
-			{
+			if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE) {
 				DEBUG_TRACE("Fail to delete item, fid: %d, path: %s", fid, uri);
 				return -1;
 			}
@@ -545,8 +511,7 @@ _delete_track(mp_media_info_h item_handle)
 		ret = mp_media_info_get_file_path(item_handle, &uri);
 		MP_CHECK_VAL(ret == 0, -1);
 
-		if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE)
-		{
+		if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE) {
 			DEBUG_TRACE("Fail to delete item, fid: %d, path: %s", fid, uri);
 			return -1;
 		}
@@ -604,13 +569,11 @@ _delete_group(mp_media_info_h item_handle)
 		return -1;
 	}
 
-	for (i = 0; i<count; i++)
-	{
+	for (i = 0; i < count; i++) {
 		item = mp_media_info_list_nth_item(group_track_handle, i);
 		mp_media_info_get_media_id(item, &fid);
 		mp_media_info_get_file_path(item, &uri);
-		if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE)
-		{
+		if (mp_util_delete_track(NULL, fid, uri) != MP_FILE_DELETE_ERR_NONE) {
 			WARN_TRACE("Fail to delete group");
 			ret = -1;
 		}
@@ -640,8 +603,7 @@ _mp_edit_cb_delete_thread(void *data, Ecore_Thread *thread)
 
 	GList *node = g_list_last(g_selected_list);
 	MP_CHECK_EXCEP(node);
-	while (node)
-	{
+	while (node) {
 		if (ecore_thread_check(thread)) {	// pending cancellation
 			WARN_TRACE("popup cancel clicked");
 			goto mp_exception;
@@ -649,38 +611,38 @@ _mp_edit_cb_delete_thread(void *data, Ecore_Thread *thread)
 
 		item = node->data;
 		node = g_list_previous(node);
-		if (!item)
-		{
+		if (!item) {
 			WARN_TRACE("CHECK here...");
 			ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 			goto mp_exception;
 		}
-		item_handle =  (item->handle);
-		if (!item_handle)
+		item_handle = (item->handle);
+		if (!item_handle) {
 			continue;
+		}
 
 		switch (g_list_type) {
 		case MP_LIST_TYPE_TRACK:
 		case MP_LIST_TYPE_ALBUM_DETAIL:
 		case MP_LIST_TYPE_ARTIST_DETAIL:
-		case MP_LIST_TYPE_ALL:
-		{
-			if (_delete_track(item_handle))
+		case MP_LIST_TYPE_ALL: {
+			if (_delete_track(item_handle)) {
 				g_error_count++;
-			else
+			} else {
 				ecore_thread_feedback(thread, item->it);
+			}
 			break;
 		}
-		case MP_LIST_TYPE_PLAYLIST:
-		{
-			if (!_delete_playlist(item_handle))
+		case MP_LIST_TYPE_PLAYLIST: {
+			if (!_delete_playlist(item_handle)) {
 				ecore_thread_feedback(thread, item->it);
+			}
 			break;
 		}
-		case MP_LIST_TYPE_GROUP:
-		{
-			if (!_delete_group(item_handle))
+		case MP_LIST_TYPE_GROUP: {
+			if (!_delete_group(item_handle)) {
 				ecore_thread_feedback(thread, item->it);
+			}
 			break;
 		}
 		default:
@@ -704,25 +666,24 @@ static void _mp_edit_cb_check_playlist()
 	bool current_removed = false;
 	bool next_play = false;
 
-	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING)
-	        next_play = true;
+	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING) {
+		next_play = true;
+	}
 
 	mp_playlist_mgr_check_existance_and_refresh(ad->playlist_mgr, &current_removed);
-	if (current_removed)
-	{
+	if (current_removed) {
 		mp_play_destory(ad);
-		if (mp_playlist_mgr_count(ad->playlist_mgr) == 0)
-		{
+		if (mp_playlist_mgr_count(ad->playlist_mgr) == 0) {
 			if (ad->current_track_info) {
 				mp_util_free_track_info(ad->current_track_info);
 				ad->current_track_info = NULL;
 			}
 			mp_view_mgr_post_event(GET_VIEW_MGR, MP_UNSET_NOW_PLAYING);
-			if (ad->b_minicontroller_show)
-			        mp_minicontroller_hide(ad);
+			if (ad->b_minicontroller_show) {
+				mp_minicontroller_hide(ad);
+			}
 #ifdef MP_FEATURE_LOCKSCREEN
-			if (ad->b_lockmini_show)
-			{
+			if (ad->b_lockmini_show) {
 				mp_lockscreenmini_hide(ad);
 			}
 #endif
@@ -735,9 +696,7 @@ static void _mp_edit_cb_check_playlist()
 #else
 			mp_file_remove(MP_PLAYING_INI_FILE_NAME_SOUND);
 #endif
-		}
-		else if (next_play)
-		{
+		} else if (next_play) {
 			mp_play_new_file(ad, true);
 		}
 	}
@@ -760,11 +719,10 @@ _mp_edit_cb_edit_thread_notify_cb(void *data, Ecore_Thread *thread, void *msg_da
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_NO);
 		break;
 
-	case MP_EDIT_THREAD_FEEDBACK_TRACK_DELETED:
-	{
+	case MP_EDIT_THREAD_FEEDBACK_TRACK_DELETED: {
 		_mp_edit_cb_check_playlist();
 	}
-		break;
+	break;
 
 	default:
 		DEBUG_TRACE("delete genlist item");
@@ -784,8 +742,7 @@ _mp_edit_cb_edit_thread_notify_cb(void *data, Ecore_Thread *thread, void *msg_da
 							mp_play_destory(ad);
 							mp_playlist_mgr_item_remove_item(ad->playlist_mgr, plst_item);
 							mp_play_new_file(ad, true);
-						}
-						else {
+						} else {
 							mp_playlist_mgr_item_remove_item(ad->playlist_mgr, plst_item);
 						}
 					}
@@ -806,8 +763,7 @@ static Eina_Bool _del_old_playlist_detail_view_cb(void *data)
 {
 	startfunc;
 	MpView_t *view = (MpView_t *)data;
-	if (view)
-	{
+	if (view) {
 		elm_object_item_del(view->navi_it); //elm_naviframe_item_pop does not work
 		//mp_view_mgr_pop_a_view(GET_VIEW_MGR, view);
 	}
@@ -832,20 +788,16 @@ _mp_edit_cb_edit_thread_end_cb(void *data, Ecore_Thread *thread)
 
 	_mp_edit_cb_check_playlist();
 
-	if (g_edit_operation == MP_EDIT_ADD_TO_PLAYLIST && g_playlist_name)
-	{
+	if (g_edit_operation == MP_EDIT_ADD_TO_PLAYLIST && g_playlist_name) {
 		/*keep previous playlist detail view, which to be popped after new view pushed*/
 		MpView_t *previous_view = mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_PLAYLIST_DETAIL);
 		MpView_t *view = NULL;
-		if (playlist_id == -1)  /*favoriate playlist*/
-		{
+		if (playlist_id == -1) { /*favoriate playlist*/
 			view = (MpView_t *)mp_playlist_detail_view_create(GET_NAVIFRAME,
-					MP_TRACK_BY_FAVORITE, g_playlist_name, playlist_id);
-		}
-		else
-		{
+			        MP_TRACK_BY_FAVORITE, g_playlist_name, playlist_id);
+		} else {
 			view = (MpView_t *)mp_playlist_detail_view_create(GET_NAVIFRAME,
-					MP_TRACK_BY_PLAYLIST, g_playlist_name, playlist_id);
+			        MP_TRACK_BY_PLAYLIST, g_playlist_name, playlist_id);
 		}
 		mp_view_mgr_push_view(GET_VIEW_MGR, view, NULL);
 		mp_view_update_options(view);
@@ -859,9 +811,9 @@ _mp_edit_cb_edit_thread_end_cb(void *data, Ecore_Thread *thread)
 		mp_evas_object_del(ad->popup[MP_POPUP_PROGRESS]);
 		/*idler is used to delete old playlist detail view to avoid blink*/
 		ecore_idler_add(_del_old_playlist_detail_view_cb, previous_view);
-	}
-	else
+	} else {
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_YES);
+	}
 }
 
 static void
@@ -885,11 +837,11 @@ _mp_edit_cb_edit_thread_cancel_cb(void *data, Ecore_Thread *thread)
 	MP_CHECK(top_view);
 	mp_view_update(top_view);
 
-	if (top_view->view_type != MP_VIEW_ALL)
+	if (top_view->view_type != MP_VIEW_ALL) {
 		mp_view_update(GET_ALL_VIEW);
+	}
 
-	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL)
-	{
+	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL) {
 		//update folder view
 		MpView_t *folder_view = mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_FOLDER);
 		MP_CHECK(folder_view);
@@ -908,12 +860,9 @@ mp_edit_cb_excute_add_to_playlist(void *data, int playlist_id, char *playlist_na
 	MpList_t *list = data;
 	MP_CHECK(list);
 
-	if (selected)
-	{
+	if (selected) {
 		mp_list_selected_item_data_get(list, &g_selected_list);
-	}
-	else
-	{
+	} else {
 		mp_list_all_item_data_get(list, &g_selected_list);
 	}
 	MP_CHECK(g_selected_list);
@@ -930,8 +879,7 @@ mp_edit_cb_excute_add_to_playlist(void *data, int playlist_id, char *playlist_na
 #ifdef MP_PLAYLIST_MAX_ITEM_COUNT
 	mp_media_info_list_count(MP_TRACK_BY_PLAYLIST, NULL, NULL, NULL, g_playlist_id, &g_playlist_track_count);
 	DEBUG_TRACE("number of tracks in playlist: %d", g_playlist_track_count);
-	if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT)
-	{
+	if (g_playlist_track_count >= MP_PLAYLIST_MAX_ITEM_COUNT) {
 		char *fmt_str = GET_STR("IDS_MUSIC_POP_UNABLE_TO_ADD_MORE_THAN_PD_MUSIC_FILE");
 		char *noti_str = g_strdup_printf(fmt_str, MP_PLAYLIST_MAX_ITEM_COUNT);
 		mp_util_post_status_message(ad, noti_str);
@@ -941,16 +889,16 @@ mp_edit_cb_excute_add_to_playlist(void *data, int playlist_id, char *playlist_na
 #endif
 
 	Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_PROGRESS, GET_STR("IDS_MUSIC_BODY_ADD_TO_PLAYLIST"), list,
-			_mp_edit_progress_popup_response_cb, ad);
+	                                     _mp_edit_progress_popup_response_cb, ad);
 	evas_object_show(popup);
 
 	g_edit_thread = ecore_thread_feedback_run(
-					_mp_edit_cb_add_to_plst_thread,
-					_mp_edit_cb_edit_thread_notify_cb,
-					_mp_edit_cb_edit_thread_end_cb,
-					_mp_edit_cb_edit_thread_cancel_cb,
-					(const void *)g_selected_list,
-					EINA_TRUE);
+	                    _mp_edit_cb_add_to_plst_thread,
+	                    _mp_edit_cb_edit_thread_notify_cb,
+	                    _mp_edit_cb_edit_thread_end_cb,
+	                    _mp_edit_cb_edit_thread_cancel_cb,
+	                    (const void *)g_selected_list,
+	                    EINA_TRUE);
 
 	if (!g_edit_thread) {
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_NO);
@@ -983,8 +931,7 @@ _mp_edit_cb_offline_thread(void *data, Ecore_Thread *thread)
 
 	GList *node = g_list_last(g_selected_list);
 	MP_CHECK_EXCEP(node);
-	while (node)
-	{
+	while (node) {
 		if (ecore_thread_check(thread)) {	// pending cancellation
 			WARN_TRACE("popup cancel clicked");
 			goto mp_exception;
@@ -992,21 +939,20 @@ _mp_edit_cb_offline_thread(void *data, Ecore_Thread *thread)
 
 		item = node->data;
 		node = g_list_previous(node);
-		if (!item)
-		{
+		if (!item) {
 			WARN_TRACE("CHECK here...");
 			ecore_thread_feedback(thread, (void *)MP_EDIT_THREAD_FEEDBACK_CANCEL_BY_EXCEPTION);
 			goto mp_exception;
 		}
-		item_handle =  (item->handle);
-		if (!item_handle)
+		item_handle = (item->handle);
+		if (!item_handle) {
 			continue;
+		}
 
 		switch (g_list_type) {
 		case MP_LIST_TYPE_TRACK:
 		case MP_LIST_TYPE_ALBUM_DETAIL:
-		case MP_LIST_TYPE_ARTIST_DETAIL:
-		{
+		case MP_LIST_TYPE_ARTIST_DETAIL: {
 			ret = mp_media_info_get_media_id(item_handle,  &fid);
 			MP_CHECK_EXCEP(ret == 0);
 
@@ -1044,16 +990,16 @@ mp_edit_cb_excute_make_offline_available(void *data)
 	g_edit_operation = MP_EDIT_ADD_TO_PLAYLIST;
 
 	Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_PROGRESS, GET_STR("IDS_MUSIC_BODY_ADD_TO_PLAYLIST"), list,
-			_mp_edit_progress_popup_response_cb, ad);
+	                                     _mp_edit_progress_popup_response_cb, ad);
 	evas_object_show(popup);
 
 	g_edit_thread = ecore_thread_feedback_run(
-					_mp_edit_cb_offline_thread,
-					_mp_edit_cb_edit_thread_notify_cb,
-					_mp_edit_cb_edit_thread_end_cb,
-					_mp_edit_cb_edit_thread_cancel_cb,
-					(const void *)g_selected_list,
-					EINA_TRUE);
+	                    _mp_edit_cb_offline_thread,
+	                    _mp_edit_cb_edit_thread_notify_cb,
+	                    _mp_edit_cb_edit_thread_end_cb,
+	                    _mp_edit_cb_edit_thread_cancel_cb,
+	                    (const void *)g_selected_list,
+	                    EINA_TRUE);
 
 	if (!g_edit_thread) {
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_NO);
@@ -1086,22 +1032,23 @@ mp_edit_cb_excute_delete(void *data)
 
 	char *title = NULL;
 	mp_track_type_e type = mp_list_get_track_type(list);
-	if (type > MP_TRACK_TYPE_PLAYLIST_MIN && type < MP_TRACK_TYPE_PLAYLIST_MAX)
+	if (type > MP_TRACK_TYPE_PLAYLIST_MIN && type < MP_TRACK_TYPE_PLAYLIST_MAX) {
 		title = STR_MP_REMOVING;
-	else
+	} else {
 		title = MP_POPUP_DELETING;
+	}
 
-	Evas_Object *popup = mp_popup_message_create(ad->win_main, MP_POPUP_PROGRESS,NULL, title, list,
-			_mp_edit_progress_popup_response_cb, ad);
+	Evas_Object *popup = mp_popup_message_create(ad->win_main, MP_POPUP_PROGRESS, NULL, title, list,
+	                     _mp_edit_progress_popup_response_cb, ad);
 	evas_object_show(popup);
 
 	g_edit_thread = ecore_thread_feedback_run(
-					_mp_edit_cb_delete_thread,
-					_mp_edit_cb_edit_thread_notify_cb,
-					_mp_edit_cb_edit_thread_end_cb,
-					_mp_edit_cb_edit_thread_cancel_cb,
-					(const void *)g_selected_list,
-					EINA_TRUE);
+	                    _mp_edit_cb_delete_thread,
+	                    _mp_edit_cb_edit_thread_notify_cb,
+	                    _mp_edit_cb_edit_thread_end_cb,
+	                    _mp_edit_cb_edit_thread_cancel_cb,
+	                    (const void *)g_selected_list,
+	                    EINA_TRUE);
 
 	if (!g_edit_thread) {
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_NO);
@@ -1121,8 +1068,7 @@ _mp_edit_cb_delete_track_thread(void *data, Ecore_Thread *thread)
 	MP_CHECK(item);
 
 	mp_media_info_connect();
-	if (mp_util_delete_track(NULL, item->uid, item->uri) != MP_FILE_DELETE_ERR_NONE)
-	{
+	if (mp_util_delete_track(NULL, item->uid, item->uri) != MP_FILE_DELETE_ERR_NONE) {
 		DEBUG_TRACE("Fail to delete item, fid: %d, path: %s", item->uid, item->uri);
 	}
 
@@ -1154,23 +1100,23 @@ _mp_edit_cb_delete_track_thread_notify_cb(void *data, Ecore_Thread *thread, void
 
 	switch (feedback) {
 
-		case MP_EDIT_THREAD_FEEDBACK_TRACK_DELETED:
-			DEBUG_TRACE("delete track in notify");
-			mp_plst_item *item = mp_playlist_mgr_get_current(ad->playlist_mgr);
-			MP_CHECK(item);
+	case MP_EDIT_THREAD_FEEDBACK_TRACK_DELETED:
+		DEBUG_TRACE("delete track in notify");
+		mp_plst_item *item = mp_playlist_mgr_get_current(ad->playlist_mgr);
+		MP_CHECK(item);
 
-			mp_playlist_mgr_item_remove_item(ad->playlist_mgr, item);
-			/*
-			when the playlist has same track,then delete the track,
-			the playlist should remove the deleted track
-			*/
-			mp_playlist_mgr_item_remove_deleted_item(ad->playlist_mgr);
-			mp_play_destory(ad);
+		mp_playlist_mgr_item_remove_item(ad->playlist_mgr, item);
+		/*
+		when the playlist has same track,then delete the track,
+		the playlist should remove the deleted track
+		*/
+		mp_playlist_mgr_item_remove_deleted_item(ad->playlist_mgr);
+		mp_play_destory(ad);
 
-			//mp_play_new_file(ad, true);
-			break;
-		default:
-			break;
+		//mp_play_new_file(ad, true);
+		break;
+	default:
+		break;
 	}
 }
 
@@ -1219,18 +1165,18 @@ mp_edit_cb_excute_track_delete(void *data)
 	char *title = NULL;
 	title = MP_POPUP_DELETING;
 
-	Evas_Object *popup = mp_popup_message_create(ad->win_main, MP_POPUP_PROGRESS,NULL, title, NULL,
-			_mp_edit_message_popup_response_cb, ad);
+	Evas_Object *popup = mp_popup_message_create(ad->win_main, MP_POPUP_PROGRESS, NULL, title, NULL,
+	                     _mp_edit_message_popup_response_cb, ad);
 	elm_popup_align_set(popup, 0.5, 0.99);
 	evas_object_show(popup);
 
 	g_delete_thread = ecore_thread_feedback_run(
-			_mp_edit_cb_delete_track_thread,
-			_mp_edit_cb_delete_track_thread_notify_cb,
-			_mp_edit_cb_delete_track_thread_end_cb,
-			_mp_edit_cb_delete_track_thread_cancel_cb,
-			NULL,
-			EINA_TRUE);
+	                      _mp_edit_cb_delete_track_thread,
+	                      _mp_edit_cb_delete_track_thread_notify_cb,
+	                      _mp_edit_cb_delete_track_thread_end_cb,
+	                      _mp_edit_cb_delete_track_thread_cancel_cb,
+	                      NULL,
+	                      EINA_TRUE);
 
 	if (!g_delete_thread) {
 		mp_popup_response(ad->popup[MP_POPUP_PROGRESS], MP_POPUP_NO);
@@ -1373,20 +1319,17 @@ static void _mp_edit_cb_delete_empty_dir(const char *full_path, const char *root
 {
 	MP_CHECK(full_path);
 	char* path = NULL;
-	while (full_path && g_strcmp0(full_path, root))
-	{
-		if (mp_file_dir_is_empty(full_path))
-		{
+	while (full_path && g_strcmp0(full_path, root)) {
+		if (mp_file_dir_is_empty(full_path)) {
 			/*if not, delete the folder*/
 			mp_file_recursive_rm(full_path);
 			path = g_strrstr(full_path, "/");
-			if (path != NULL)
-			{
+			if (path != NULL) {
 				*path = '\0';
 			}
-		}
-		else
+		} else {
 			break;
+		}
 	}
 	return;
 }
@@ -1403,19 +1346,19 @@ _move_track_spec_path(mp_media_info_h item_handle, char *dest_path)
 	filename = g_strdup((char *)mp_file_file_get(path));
 	char *dest = NULL;
 	char *dest_root_path = dest_path;
-	if (mp_util_is_in_personal_page((const char *)path))
-	{
-		if (dest_root_path == NULL)
+	if (mp_util_is_in_personal_page((const char *)path)) {
+		if (dest_root_path == NULL) {
 			dest_root_path = MP_MUSIC_DIR;
+		}
 
 		/*if dest_root_path does not exist, create it*/
 		bool mkdir_ret = mp_file_mkpath(dest_root_path);
-		if (mkdir_ret == false)
+		if (mkdir_ret == false) {
 			DEBUG_TRACE("failed to make new directory");
+		}
 
 		char *unique_filename = NULL;
-		while (mp_util_is_duplicated_name(dest_root_path, (const char *)filename))
-		{
+		while (mp_util_is_duplicated_name(dest_root_path, (const char *)filename)) {
 			IF_FREE(unique_filename);
 			mp_util_get_unique_name((char *)filename, &unique_filename);
 			IF_FREE(filename);
@@ -1424,27 +1367,26 @@ _move_track_spec_path(mp_media_info_h item_handle, char *dest_path)
 		/*remove from personal page*/
 		dest = g_strconcat(dest_root_path, "/", filename, NULL);
 		if (dest == NULL) {
-		IF_FREE(unique_filename);
-		IF_FREE(filename);
-		  return -1;
+			IF_FREE(unique_filename);
+			IF_FREE(filename);
+			return -1;
 		}
 		mp_file_mv(path, dest);
 		IF_FREE(unique_filename);
 		IF_FREE(filename);
-	}
-	else
-	{
-		if (dest_root_path == NULL)
+	} else {
+		if (dest_root_path == NULL) {
 			dest_root_path = MP_PERSONAL_PAGE_DIR;
+		}
 
 		/*if dest_root_path does not exist, create it*/
 		bool mkdir_ret = mp_file_mkpath(dest_root_path);
-		if (mkdir_ret == false)
+		if (mkdir_ret == false) {
 			DEBUG_TRACE("failed to make new directory");
+		}
 
 		char *unique_filename = NULL;
-		while (mp_util_is_duplicated_name(dest_root_path, (const char *)filename))
-		{
+		while (mp_util_is_duplicated_name(dest_root_path, (const char *)filename)) {
 			IF_FREE(unique_filename);
 			mp_util_get_unique_name((char *)filename, &unique_filename);
 			IF_FREE(filename);
@@ -1453,9 +1395,9 @@ _move_track_spec_path(mp_media_info_h item_handle, char *dest_path)
 		dest = g_strconcat(dest_root_path, "/", filename, NULL);
 		/*add to personal page*/
 		if (dest == NULL) {
-		IF_FREE(unique_filename);
-		IF_FREE(filename);
-		  return -1;
+			IF_FREE(unique_filename);
+			IF_FREE(filename);
+			return -1;
 		}
 		mp_file_mv(path, dest);
 		IF_FREE(unique_filename);
@@ -1484,22 +1426,20 @@ _move_folder(mp_media_info_h item_handle)
 	//DEBUG_TRACE("------------>root_path is %s", root_path);
 
 	char *dest = NULL;
-	if (mp_util_is_in_personal_page((const char *)path))
-	{
+	if (mp_util_is_in_personal_page((const char *)path)) {
 		/*remove from personal page*/
 		/*1. check if the selected item is root path(/opt/storaget/PersonalStorage)*/
-		if (!g_strcmp0(path, MP_PERSONAL_PAGE_DIR))
-		{
+		if (!g_strcmp0(path, MP_PERSONAL_PAGE_DIR)) {
 			/*move music related item to sounds*/
 			int ret = 0;
 			int count = 0;
 			/*1. get track count*/
 			ret = mp_media_info_list_count(MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, &count);
-			if (ret)
+			if (ret) {
 				DEBUG_TRACE("get track in folder failed");
+			}
 
-			if (count == 0)
-			{
+			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
 				return -1;
@@ -1510,34 +1450,31 @@ _move_folder(mp_media_info_h item_handle)
 			mp_media_info_list_create(&svc_handle, MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, 0, count);
 
 			/*3. move item one by one*/
-			int index =0;
-			for (index = 0; index < count; index++)
-			{
+			int index = 0;
+			for (index = 0; index < count; index++) {
 				mp_media_info_h item = NULL;
 				item = mp_media_info_list_nth_item(svc_handle, index);
-				if (item == NULL)
+				if (item == NULL) {
 					continue;
+				}
 
 				_move_track_spec_path(item, NULL);
 			}
-		}
-		else/*2. other folder*/
-		{
+		} else { /*2. other folder*/
 			char *related_path = NULL;
 			_mp_edit_cb_get_logical_path_by_full(path, &related_path);
 			//DEBUG_TRACE("------------>related_path is %s", related_path);
 
-			char **dir_levels = g_strsplit(related_path+1, "/", 0);
+			char **dir_levels = g_strsplit(related_path + 1, "/", 0);
 			char *dir_name = g_strdup(dir_levels[0]);
 			//DEBUG_TRACE("------------>dir_name is %s", dir_name);
 			char *semi_path = NULL;
-			semi_path = g_strjoinv ("/", dir_levels+1);
+			semi_path = g_strjoinv("/", dir_levels + 1);
 			//DEBUG_TRACE("------------>semi_path is %s", semi_path);
 			/*create folder in destination*/
 			/*1. check if duplicated Directory exists*/
 			char *unique_filename = NULL;
-			while (mp_util_is_duplicated_name(MP_MUSIC_DIR, (const char *)dir_name))
-			{
+			while (mp_util_is_duplicated_name(MP_MUSIC_DIR, (const char *)dir_name)) {
 				IF_FREE(unique_filename);
 				mp_util_get_unique_name(dir_name, &unique_filename);
 				IF_FREE(dir_name);
@@ -1548,18 +1485,19 @@ _move_folder(mp_media_info_h item_handle)
 			IF_FREE(dir_name);
 			/*2. create new directory*/
 			bool mkdir_ret = mp_file_mkpath(dest);
-			if (mkdir_ret == false)
+			if (mkdir_ret == false) {
 				DEBUG_TRACE("failed to make new directory");
+			}
 			/*move music related item to new folder*/
 			int ret = 0;
 			int count = 0;
 			/*1. get track count*/
 			ret = mp_media_info_list_count(MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, &count);
-			if (ret)
+			if (ret) {
 				DEBUG_TRACE("get track in folder failed");
+			}
 
-			if (count == 0)
-			{
+			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
 				return -1;
@@ -1570,36 +1508,33 @@ _move_folder(mp_media_info_h item_handle)
 			mp_media_info_list_create(&svc_handle, MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, 0, count);
 
 			/*3. move item one by one*/
-			int index =0;
-			for (index = 0; index < count; index++)
-			{
+			int index = 0;
+			for (index = 0; index < count; index++) {
 				mp_media_info_h item = NULL;
 				item = mp_media_info_list_nth_item(svc_handle, index);
-				if (item == NULL)
+				if (item == NULL) {
 					continue;
+				}
 
 				_move_track_spec_path(item, dest);
 			}
 			/*check if there is other item in the folder*/
 			_mp_edit_cb_delete_empty_dir(path, root_path);
 		}
-	}
-	else
-	{
+	} else {
 		/*add to personal page*/
 		/*1. check if the selected item is root path(/opt/storaget/PersonalStorage)*/
-		if (!g_strcmp0(path, MP_MUSIC_DIR))
-		{
+		if (!g_strcmp0(path, MP_MUSIC_DIR)) {
 			/*move music related item to sounds*/
 			int ret = 0;
 			int count = 0;
 			/*1. get track count*/
 			ret = mp_media_info_list_count(MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, &count);
-			if (ret)
+			if (ret) {
 				DEBUG_TRACE("get track in folder failed");
+			}
 
-			if (count == 0)
-			{
+			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
 				return -1;
@@ -1610,34 +1545,31 @@ _move_folder(mp_media_info_h item_handle)
 			mp_media_info_list_create(&svc_handle, MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, 0, count);
 
 			/*3. move item one by one*/
-			int index =0;
-			for (index = 0; index < count; index++)
-			{
+			int index = 0;
+			for (index = 0; index < count; index++) {
 				mp_media_info_h item = NULL;
 				item = mp_media_info_list_nth_item(svc_handle, index);
-				if (item == NULL)
+				if (item == NULL) {
 					continue;
+				}
 
 				_move_track_spec_path(item, NULL);
 			}
-		}
-		else/*2. other folder*/
-		{
+		} else { /*2. other folder*/
 			char *related_path = NULL;
 			_mp_edit_cb_get_logical_path_by_full(path, &related_path);
 			//DEBUG_TRACE("------------>related_path is %s", related_path);
 
-			char **dir_levels = g_strsplit(related_path+1, "/", 0);
+			char **dir_levels = g_strsplit(related_path + 1, "/", 0);
 			char *dir_name = g_strdup(dir_levels[0]);
 			//DEBUG_TRACE("------------>dir_name is %s", dir_name);
 			char *semi_path = NULL;
-			semi_path = g_strjoinv ("/", dir_levels+1);
+			semi_path = g_strjoinv("/", dir_levels + 1);
 			//DEBUG_TRACE("------------>semi_path is %s", semi_path);
 			/*create folder in destination*/
 			/*1. check if duplicated Directory exists*/
 			char *unique_filename = NULL;
-			while (mp_util_is_duplicated_name(MP_PERSONAL_PAGE_DIR, (const char *)dir_name))
-			{
+			while (mp_util_is_duplicated_name(MP_PERSONAL_PAGE_DIR, (const char *)dir_name)) {
 				IF_FREE(unique_filename);
 				mp_util_get_unique_name(dir_name, &unique_filename);
 				IF_FREE(dir_name);
@@ -1648,18 +1580,19 @@ _move_folder(mp_media_info_h item_handle)
 			IF_FREE(dir_name);
 			/*2. create new directory*/
 			bool mkdir_ret = mp_file_mkpath(dest);
-			if (mkdir_ret == false)
+			if (mkdir_ret == false) {
 				DEBUG_TRACE("failed to make new directory");
+			}
 			/*move music related item to new folder*/
 			int ret = 0;
 			int count = 0;
 			/*1. get track count*/
 			ret = mp_media_info_list_count(MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, &count);
-			if (ret)
+			if (ret) {
 				DEBUG_TRACE("get track in folder failed");
+			}
 
-			if (count == 0)
-			{
+			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
 				return -1;
@@ -1670,13 +1603,13 @@ _move_folder(mp_media_info_h item_handle)
 			mp_media_info_list_create(&svc_handle, MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, 0, count);
 
 			/*3. move item one by one*/
-			int index =0;
-			for (index = 0; index < count; index++)
-			{
+			int index = 0;
+			for (index = 0; index < count; index++) {
 				mp_media_info_h item = NULL;
 				item = mp_media_info_list_nth_item(svc_handle, index);
-				if (item == NULL)
+				if (item == NULL) {
 					continue;
+				}
 
 				_move_track_spec_path(item, dest);
 			}
@@ -1717,8 +1650,7 @@ _mp_edit_cb_get_popup_layout()
 static void
 _mp_edit_move_popup_response_cb(void *data, Evas_Object * obj, void *event_info)
 {
-	if (g_personal_storage_thread)
-	{
+	if (g_personal_storage_thread) {
 		ecore_thread_cancel(g_personal_storage_thread);
 		g_personal_storage_thread = NULL;
 	}
@@ -1742,8 +1674,7 @@ _mp_edit_cb_move_thread(void *data, Ecore_Thread *thread)
 	MP_CHECK_EXCEP(node);
 	g_total_count = g_list_length(g_selected_list);
 	int moved_count = 0;
-	while (node)
-	{
+	while (node) {
 		if (ecore_thread_check(thread)) {	// pending cancellation
 			WARN_TRACE("popup cancel clicked");
 			goto mp_exception;
@@ -1751,52 +1682,42 @@ _mp_edit_cb_move_thread(void *data, Ecore_Thread *thread)
 
 		item = node->data;
 		node = g_list_previous(node);
-		if (!item)
-		{
+		if (!item) {
 			WARN_TRACE("CHECK here...");
-			ecore_thread_feedback(thread, (void *)-1);
+			ecore_thread_feedback(thread, (void *) - 1);
 			goto mp_exception;
 		}
-		item_handle =  (item->handle);
-		if (!item_handle)
+		item_handle = (item->handle);
+		if (!item_handle) {
 			continue;
+		}
 
 		char *path = NULL;
-		if (g_list_type == MP_LIST_TYPE_TRACK)
-		{
+		if (g_list_type == MP_LIST_TYPE_TRACK) {
 			mp_media_info_get_file_path(item_handle, &path);
-		}
-		else if (g_list_type == MP_LIST_TYPE_GROUP)
-		{
+		} else if (g_list_type == MP_LIST_TYPE_GROUP) {
 			mp_media_info_group_get_sub_info(item_handle, &path);
-		}
-		else if (g_list_type == MP_LIST_TYPE_ALBUM_DETAIL || g_list_type == MP_LIST_TYPE_ARTIST_DETAIL)
-		{
+		} else if (g_list_type == MP_LIST_TYPE_ALBUM_DETAIL || g_list_type == MP_LIST_TYPE_ARTIST_DETAIL) {
 
 			mp_media_info_get_file_path(item_handle, &path);
-		}
-		else
+		} else {
 			ERROR_TRACE("Wrong Type");
+		}
 
 		Eina_Bool folder = EINA_FALSE;
-		if (path)
+		if (path) {
 			folder = mp_file_is_dir(path);
-		if (folder)
-		{
+		}
+		if (folder) {
 			DEBUG_TRACE("folder");
-			if (_move_folder(item_handle))
-			{
+			if (_move_folder(item_handle)) {
 				g_error_count++;
-				ecore_thread_feedback(thread, (void *)-1);
-			}
-			else
-			{
+				ecore_thread_feedback(thread, (void *) - 1);
+			} else {
 				moved_count++;
 				ecore_thread_feedback(thread, (void *)moved_count);
 			}
-		}
-		else/*track*/
-		{
+		} else { /*track*/
 			DEBUG_TRACE("track --> path is %s", path);
 			/*get related path information*/
 			char *related_path = NULL;
@@ -1804,14 +1725,11 @@ _mp_edit_cb_move_thread(void *data, Ecore_Thread *thread)
 
 			/*generate dest path*/
 			char *dest_path = NULL;
-			if (mp_util_is_in_personal_page((const char *)path))
-			{
+			if (mp_util_is_in_personal_page((const char *)path)) {
 				/*remove from personal page*/
 				dest_path = g_strconcat(MP_MUSIC_DIR, related_path, NULL);
 				MP_CHECK(dest_path);
-			}
-			else
-			{
+			} else {
 				/*remove from personal page*/
 				dest_path = g_strconcat(MP_PERSONAL_PAGE_DIR, related_path, NULL);
 				MP_CHECK(dest_path);
@@ -1821,13 +1739,10 @@ _mp_edit_cb_move_thread(void *data, Ecore_Thread *thread)
 			//DEBUG_TRACE("dest dir is %s", dest_dir);
 
 			/*for exception handle, if dest_dir is NULL, in _move_track_spec_path, it will use root path as dest*/
-			if (_move_track_spec_path(item_handle, dest_dir))
-			{
+			if (_move_track_spec_path(item_handle, dest_dir)) {
 				g_error_count++;
-				ecore_thread_feedback(thread, (void *)-1);
-			}
-			else
-			{
+				ecore_thread_feedback(thread, (void *) - 1);
+			} else {
 				moved_count++;
 				ecore_thread_feedback(thread, (void *)moved_count);
 			}
@@ -1848,12 +1763,9 @@ _mp_edit_cb_move_notify_cb(void *data, Ecore_Thread *thread, void *msg_data)
 {
 	startfunc;
 	int feedback = (int)msg_data;
-	if (feedback == -1)
-	{
+	if (feedback == -1) {
 		DEBUG_TRACE("----------->error happened in main thread");
-	}
-	else
-	{
+	} else {
 		/*1. set progress bar value*/
 		Evas_Object *progressbar = _mp_edit_cb_get_progressbar();
 		double progress_value = (double)feedback / (double)g_total_count;
@@ -1865,7 +1777,7 @@ _mp_edit_cb_move_notify_cb(void *data, Ecore_Thread *thread, void *msg_data)
 		elm_object_part_text_set(layout, "elm.text.right", popup_information);
 		IF_FREE(popup_information);
 
-		char *progress_text = g_strdup_printf("%d%%", (int)(progress_value*100));
+		char *progress_text = g_strdup_printf("%d%%", (int)(progress_value * 100));
 		elm_object_part_text_set(layout, "elm.text.left", progress_text);
 		IF_FREE(progress_text);
 	}
@@ -1883,7 +1795,7 @@ _mp_edit_cb_move_thread_end_cb(void *data, Ecore_Thread *thread)
 	g_playlist_track_count = 0;
 	g_list_free(g_selected_list);
 
-        _mp_edit_cb_check_playlist();
+	_mp_edit_cb_check_playlist();
 
 	mp_evas_object_del(ad->popup[MP_POPUP_OPERATION_PROGRESS]);
 
@@ -1895,11 +1807,11 @@ _mp_edit_cb_move_thread_end_cb(void *data, Ecore_Thread *thread)
 	MP_CHECK(top_view);
 	mp_view_update(top_view);
 
-	if (top_view->view_type != MP_VIEW_ALL)
+	if (top_view->view_type != MP_VIEW_ALL) {
 		mp_view_update(GET_ALL_VIEW);
+	}
 
-	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL)
-	{
+	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL) {
 		//update folder view
 		MpView_t *folder_view = mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_FOLDER);
 		MP_CHECK(folder_view);
@@ -1917,7 +1829,7 @@ _mp_edit_cb_move_cancel_cb(void *data, Ecore_Thread *thread)
 	g_personal_storage_thread = NULL;
 	g_list_free(g_selected_list);
 
-        _mp_edit_cb_check_playlist();
+	_mp_edit_cb_check_playlist();
 
 	mp_evas_object_del(ad->popup[MP_POPUP_OPERATION_PROGRESS]);
 
@@ -1929,11 +1841,11 @@ _mp_edit_cb_move_cancel_cb(void *data, Ecore_Thread *thread)
 	MP_CHECK(top_view);
 	mp_view_update(top_view);
 
-	if (top_view->view_type != MP_VIEW_ALL)
+	if (top_view->view_type != MP_VIEW_ALL) {
 		mp_view_update(GET_ALL_VIEW);
+	}
 
-	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL)
-	{
+	if (top_view->view_type == MP_VIEW_FOLDER_DETAIL) {
 		//update folder view
 		MpView_t *folder_view = mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_FOLDER);
 		MP_CHECK(folder_view);
@@ -1965,13 +1877,10 @@ mp_edit_cb_excute_move(void *data)
 	DEBUG_TRACE("g_list_type is %d", g_list_type);
 	char *title = NULL;
 	unsigned long long remained_size = 0;
-	if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD  || list->personal_page_storage == MP_LIST_PERSONAL_PAGE_NORMAL)
-	{
+	if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD  || list->personal_page_storage == MP_LIST_PERSONAL_PAGE_NORMAL) {
 		title = STR_MP_ADDIND;
 		_mp_edit_cb_get_remain_space(MP_PERSONAL_PAGE_DIR, &remained_size);
-	}
-	else if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE || list->personal_page_storage == MP_LIST_PERSONAL_PAGE_PRIVATE)
-	{
+	} else if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE || list->personal_page_storage == MP_LIST_PERSONAL_PAGE_PRIVATE) {
 
 		title = STR_MP_REMOVING;
 		_mp_edit_cb_get_remain_space(MP_MUSIC_DIR, &remained_size);
@@ -1988,41 +1897,36 @@ mp_edit_cb_excute_move(void *data)
 
 	unsigned long long selected_size = 0;
 	unsigned long long file_size = 0;
-	if (g_list_type == MP_LIST_TYPE_TRACK)
-	{
-		while (node)
-		{
+	if (g_list_type == MP_LIST_TYPE_TRACK) {
+		while (node) {
 			item = node->data;
 			node = g_list_previous(node);
-			if (!item)
-			{
+			if (!item) {
 				WARN_TRACE("CHECK here...");
 				continue;
 			}
-			item_handle =  (item->handle);
-			if (!item_handle)
+			item_handle = (item->handle);
+			if (!item_handle) {
 				continue;
+			}
 
 			char *path = NULL;
 			mp_media_info_get_file_path(item_handle, &path);
 			_mp_edit_cb_get_item_size(path, &file_size);
 			selected_size += file_size;
 		}
-	}
-	else if (g_list_type == MP_LIST_TYPE_GROUP)
-	{
-		while (node)
-		{
+	} else if (g_list_type == MP_LIST_TYPE_GROUP) {
+		while (node) {
 			item = node->data;
 			node = g_list_previous(node);
-			if (!item)
-			{
+			if (!item) {
 				WARN_TRACE("CHECK here...");
 				continue;
 			}
-			item_handle =  (item->handle);
-			if (!item_handle)
+			item_handle = (item->handle);
+			if (!item_handle) {
 				continue;
+			}
 
 			char *path = NULL;
 			mp_media_info_group_get_sub_info(item_handle, &path);
@@ -2034,11 +1938,11 @@ mp_edit_cb_excute_move(void *data)
 			int count = 0;
 			/*1. get track count*/
 			ret = mp_media_info_list_count(MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, &count);
-			if (ret)
+			if (ret) {
 				DEBUG_TRACE("get track in folder failed");
+			}
 
-			if (count == 0)
-			{
+			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
 				continue;
@@ -2049,13 +1953,13 @@ mp_edit_cb_excute_move(void *data)
 			mp_media_info_list_create(&svc_handle, MP_TRACK_BY_FOLDER, folder_id, NULL, NULL, 0, 0, count);
 
 			/*3. move item one by one*/
-			int index =0;
-			for (index = 0; index < count; index++)
-			{
+			int index = 0;
+			for (index = 0; index < count; index++) {
 				mp_media_info_h item = NULL;
 				item = mp_media_info_list_nth_item(svc_handle, index);
-				if (item == NULL)
+				if (item == NULL) {
 					continue;
+				}
 
 				char *file_path = NULL;
 				mp_media_info_get_file_path(item, &file_path);
@@ -2070,8 +1974,7 @@ mp_edit_cb_excute_move(void *data)
 	DEBUG_TRACE("selected size is %f", selected_size);
 	DEBUG_TRACE("remained size is %f", remained_size);
 
-	if (selected_size > remained_size)
-	{
+	if (selected_size > remained_size) {
 		Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_NORMAL, NULL, NULL, NULL, ad);
 		MP_CHECK(popup);
 
@@ -2086,7 +1989,7 @@ mp_edit_cb_excute_move(void *data)
 	}
 
 	Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_OPERATION_PROGRESS, NULL, list,
-			_mp_edit_move_popup_response_cb, ad);
+	                                     _mp_edit_move_popup_response_cb, ad);
 	evas_object_show(popup);
 	Evas_Object *layout = _mp_edit_cb_get_popup_layout();
 	mp_util_domain_translatable_part_text_set(layout, "elm.title", title);
@@ -2100,12 +2003,12 @@ mp_edit_cb_excute_move(void *data)
 	IF_FREE(progress_text);
 
 	g_personal_storage_thread = ecore_thread_feedback_run(
-					_mp_edit_cb_move_thread,
-					_mp_edit_cb_move_notify_cb,
-					_mp_edit_cb_move_thread_end_cb,
-					_mp_edit_cb_move_cancel_cb,
-					(const void *)g_selected_list,
-					EINA_TRUE);
+	                                _mp_edit_cb_move_thread,
+	                                _mp_edit_cb_move_notify_cb,
+	                                _mp_edit_cb_move_thread_end_cb,
+	                                _mp_edit_cb_move_cancel_cb,
+	                                (const void *)g_selected_list,
+	                                EINA_TRUE);
 
 	if (!g_personal_storage_thread) {
 		mp_popup_response(ad->popup[MP_POPUP_OPERATION_PROGRESS], MP_POPUP_NO);
@@ -2129,8 +2032,7 @@ _mp_edit_delete_cloud_popup_response_cb(void *data, Evas_Object * obj, void *eve
 	mp_evas_object_del(obj);
 
 	int response = (int)event_info;
-	if (response == MP_POPUP_NO)
-	{
+	if (response == MP_POPUP_NO) {
 		return;
 	}
 
@@ -2176,8 +2078,7 @@ _mp_edit_delete_popup_response_cb(void *data, Evas_Object * obj, void *event_inf
 	mp_evas_object_del(obj);
 
 	int response = (int)event_info;
-	if (response == MP_POPUP_NO)
-	{
+	if (response == MP_POPUP_NO) {
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_POPUP_CANCEL);
 		return;
 	}
@@ -2188,25 +2089,21 @@ _mp_edit_delete_popup_response_cb(void *data, Evas_Object * obj, void *event_inf
 	GList *node = NULL;
 	bool cloud_data = 0;
 
-	if (list->list_type == MP_LIST_TYPE_TRACK || list->list_type == MP_LIST_TYPE_ARTIST_DETAIL || list->list_type == MP_LIST_TYPE_ALBUM_DETAIL)
-	{
+	if (list->list_type == MP_LIST_TYPE_TRACK || list->list_type == MP_LIST_TYPE_ARTIST_DETAIL || list->list_type == MP_LIST_TYPE_ALBUM_DETAIL) {
 		int track_type = mp_list_get_track_type(list);
 		if (track_type != MP_TRACK_BY_PLAYLIST && track_type != MP_TRACK_BY_ADDED_TIME &&
-			track_type != MP_TRACK_BY_PLAYED_TIME && track_type != MP_TRACK_BY_FAVORITE &&
-			track_type != MP_TRACK_BY_PLAYED_COUNT)
-		{
+		        track_type != MP_TRACK_BY_PLAYED_TIME && track_type != MP_TRACK_BY_FAVORITE &&
+		        track_type != MP_TRACK_BY_PLAYED_COUNT) {
 			mp_list_selected_item_data_get(list, &sel_list);
 			MP_CHECK(sel_list);
 
 			node = g_list_first(sel_list);
-			while (node)
-			{
+			while (node) {
 				mp_list_item_data_t *item = sel_list->data;
 				mp_media_info_h media = item->handle;
 				mp_storage_type_e storage_type;
 				mp_media_info_get_storage_type(media, &storage_type);
-				if (storage_type == MP_STORAGE_CLOUD)
-				{
+				if (storage_type == MP_STORAGE_CLOUD) {
 					cloud_data = 1;
 					break;
 				}
@@ -2215,8 +2112,7 @@ _mp_edit_delete_popup_response_cb(void *data, Evas_Object * obj, void *event_inf
 			}
 			g_list_free(sel_list);
 
-			if (cloud_data)
-			{
+			if (cloud_data) {
 				mp_edit_create_delete_cloud_confirm_popup(data);
 				return;
 			}
@@ -2238,8 +2134,7 @@ mp_edit_create_delete_popup(void *data)
 	MpList_t *list = data;
 	MP_CHECK(list);
 	int selected_count = mp_list_get_checked_count(list);
-	if (selected_count <= 0)
-	{
+	if (selected_count <= 0) {
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_NOTHING_SELECTED"));
 		return;
 	}
@@ -2251,14 +2146,11 @@ mp_edit_create_delete_popup(void *data)
 
 	mp_track_type_e type = mp_list_get_track_type(list);
 	WARN_TRACE("track_type is %d", type);
-	if (type > MP_TRACK_TYPE_PLAYLIST_MIN && type < MP_TRACK_TYPE_PLAYLIST_MAX)
-	{
+	if (type > MP_TRACK_TYPE_PLAYLIST_MIN && type < MP_TRACK_TYPE_PLAYLIST_MAX) {
 		//elm_object_text_set(popup, GET_STR("IDS_MUSIC_POP_REMOVE_Q"));
 		btn_txt = STR_MP_REMOVE;
 		title = STR_MP_REMOVE;
-	}
-	else
-	{
+	} else {
 		//elm_object_text_set(popup, GET_SYS_STR("IDS_COM_POP_DELETE_Q"));
 		btn_txt = STR_MP_DELETE;
 		title = STR_MP_DELETE;
@@ -2272,70 +2164,62 @@ mp_edit_create_delete_popup(void *data)
 	mp_group_type_e group_type = mp_list_get_group_type(list);
 	WARN_TRACE("group_type is %d", group_type);
 
-	switch (group_type)
-	{
-		case MP_GROUP_NONE:
-			DEBUG_TRACE("MP_GROUP_NONE");
-			if (selected_count == 1)
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_TRACK_DETELED), "</align>", NULL);
-			else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_TRACKS_DETELED), "</align>", NULL);
-			else
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_TRACKS_DETELED), "</align>", NULL);
-			}
-			break;
-		case MP_GROUP_BY_ALBUM:					/**< Group by album*/
-			DEBUG_TRACE("MP_GROUP_BY_ALBUM");
-			if (selected_count == 1)
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_ALBUM_DETELED), "</align>", NULL);
-			else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_ALBUMS_DETELED), "</align>", NULL);
-			else
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_ALBUMS_DETELED), "</align>", NULL);
-			}
-			break;
-		case MP_GROUP_BY_ARTIST:				/**< Group by artist*/
-			DEBUG_TRACE("MP_GROUP_BY_ARTIST");
-			if (selected_count == 1)
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_ARTIST_DETELED), "</align>", NULL);
-			else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_ARTISTS_DETELED), "</align>", NULL);
-			else
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_ARTISTS_DETELED), "</align>", NULL);
+	switch (group_type) {
+	case MP_GROUP_NONE:
+		DEBUG_TRACE("MP_GROUP_NONE");
+		if (selected_count == 1) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_TRACK_DETELED), "</align>", NULL);
+		} else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_TRACKS_DETELED), "</align>", NULL);
+		} else {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_TRACKS_DETELED), "</align>", NULL);
+		}
+		break;
+	case MP_GROUP_BY_ALBUM:					/**< Group by album*/
+		DEBUG_TRACE("MP_GROUP_BY_ALBUM");
+		if (selected_count == 1) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_ALBUM_DETELED), "</align>", NULL);
+		} else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_ALBUMS_DETELED), "</align>", NULL);
+		} else {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_ALBUMS_DETELED), "</align>", NULL);
+		}
+		break;
+	case MP_GROUP_BY_ARTIST:				/**< Group by artist*/
+		DEBUG_TRACE("MP_GROUP_BY_ARTIST");
+		if (selected_count == 1) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_ARTIST_DETELED), "</align>", NULL);
+		} else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_ARTISTS_DETELED), "</align>", NULL);
+		} else {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_ARTISTS_DETELED), "</align>", NULL);
 
-			}
-			break;
-		case MP_GROUP_BY_FOLDER:					/**< Group by folder*/
-			DEBUG_TRACE("MP_GROUP_BY_FOLDER");
-			if (selected_count == 1)
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_FOLDER_DETELED), "</align>", NULL);
-			else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_FOLDERS_DETELED), "</align>", NULL);
-			}
-			else
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_FOLDERS_DETELED), "</align>", NULL);
-			}
-			break;
-		case MP_GROUP_BY_PLAYLIST:
-			DEBUG_TRACE("MP_GROUP_BY_PLAYLIST");
-			if (selected_count == 1)
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_PLAYLIST_DETELED), "</align>", NULL);
-			else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_PLAYLISTS_DETELED), "</align>", NULL);
-			else
-			{
-				help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_PLAYLISTS_DETELED), "</align>", NULL);
-			}
-			break;
-		default:
-			DEBUG_TRACE("Other -1");
-			help_txt = g_strconcat("<align=left>",  GET_SYS_STR("IDS_COM_POP_DELETE_Q"), "</align>", NULL);
-			break;
+		}
+		break;
+	case MP_GROUP_BY_FOLDER:					/**< Group by folder*/
+		DEBUG_TRACE("MP_GROUP_BY_FOLDER");
+		if (selected_count == 1) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_FOLDER_DETELED), "</align>", NULL);
+		} else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_FOLDERS_DETELED), "</align>", NULL);
+		} else {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_FOLDERS_DETELED), "</align>", NULL);
+		}
+		break;
+	case MP_GROUP_BY_PLAYLIST:
+		DEBUG_TRACE("MP_GROUP_BY_PLAYLIST");
+		if (selected_count == 1) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ONE_PLAYLIST_DETELED), "</align>", NULL);
+		} else if (selected_count == mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_ALL_PLAYLISTS_DETELED), "</align>", NULL);
+		} else {
+			help_txt = g_strconcat("<align=left>", GET_STR(STR_MP_PLURAL_PLAYLISTS_DETELED), "</align>", NULL);
+		}
+		break;
+	default:
+		DEBUG_TRACE("Other -1");
+		help_txt = g_strconcat("<align=left>",  GET_SYS_STR("IDS_COM_POP_DELETE_Q"), "</align>", NULL);
+		break;
 	}
 
 	mp_util_domain_translatable_text_set(popup, help_txt);

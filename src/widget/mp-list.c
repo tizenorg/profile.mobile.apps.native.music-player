@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-list.h"
@@ -113,7 +113,7 @@ _mp_list_drag_start_cb(void *data, Evas_Object *obj, void *event_info)
 	MpList_t *list = (MpList_t*)data;
 	MP_CHECK(list);
 
-        list->scroll_drag_status = true;
+	list->scroll_drag_status = true;
 }
 
 static void
@@ -124,7 +124,7 @@ _mp_list_drag_stop_cb(void *data, Evas_Object *obj, void *event_info)
 	MpList_t *list = (MpList_t*)data;
 	MP_CHECK(list);
 
-        list->scroll_drag_status = false;
+	list->scroll_drag_status = false;
 }
 
 
@@ -136,8 +136,9 @@ _mp_list_get_count(void *thiz, MpListEditType_e type)
 
 	unsigned int count = MP_LIST_OBJ_IS_GENGRID(list->genlist) ? elm_gengrid_items_count(list->genlist) : elm_genlist_items_count(list->genlist);
 
-	if (list->bottom_counter_item)
+	if (list->bottom_counter_item) {
 		--count;
+	}
 
 	return count;
 }
@@ -152,12 +153,10 @@ _mp_list_get_select_count(void *thiz)
 	mp_list_item_data_t *data = NULL;
 
 	item = mp_list_first_item_get(list->genlist);
-	while (item)
-	{
+	while (item) {
 		data = elm_object_item_data_get(item);
 		item = mp_list_item_next_get(item);
-		if (data && data->item_type == MP_LIST_ITEM_TYPE_NORMAL && data->checked)
-		{
+		if (data && data->item_type == MP_LIST_ITEM_TYPE_NORMAL && data->checked) {
 			count++;
 		}
 	}
@@ -196,24 +195,24 @@ int _mp_list_set_fastscroll(void *thiz)
 {
 	startfunc;
 	MpList_t *list = thiz;
-	MP_CHECK_VAL(list,-1);
+	MP_CHECK_VAL(list, -1);
 
-	if (mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL))
-	{
-		if (!list->fast_scroll)
-		{
+	if (mp_list_get_editable_count(list, MP_LIST_EDIT_TYPE_NORMAL)) {
+		if (!list->fast_scroll) {
 			list->fast_scroll = mp_index_create(list->layout, 0, list);
-			if (list->fast_scroll == NULL)
+			if (list->fast_scroll == NULL) {
 				ERROR_TRACE("list->fast_scroll create failed");
+			}
 			elm_object_part_content_set(list->layout, "elm.swallow.content.index", list->fast_scroll);
 			mp_index_append_item(list->fast_scroll, list);
 		}
 		elm_object_signal_emit(list->layout, "show.fastscroll", "*");
-		if (list->genlist)
+		if (list->genlist) {
 			elm_scroller_policy_set(list->genlist, ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_OFF);
-	}
-	else
+		}
+	} else {
 		elm_object_signal_emit(list->layout, "hide.fastscroll", "*");
+	}
 
 	return 0;
 }
@@ -222,7 +221,7 @@ static int _mp_list_show_fastscroll(void *thiz)
 {
 	startfunc;
 	MpList_t *list = thiz;
-	MP_CHECK_VAL(list,-1);
+	MP_CHECK_VAL(list, -1);
 
 	_mp_list_set_fastscroll(list);
 	return 0;
@@ -232,7 +231,7 @@ static int _mp_list_hide_fastscroll(void *thiz)
 {
 	startfunc;
 	MpList_t *list = thiz;
-	MP_CHECK_VAL(list,-1);
+	MP_CHECK_VAL(list, -1);
 
 	elm_object_signal_emit(list->layout, "hide.fastscroll", "*");
 	return 0;
@@ -244,14 +243,11 @@ static void _mp_list_set_reorder(void *thiz, bool reorder)
 	MpList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (reorder)
-	{
+	if (reorder) {
 		mp_list_reorder_mode_set(list->genlist, EINA_TRUE);
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
-	}
-	else
-	{
+	} else {
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 		mp_list_reorder_mode_set(list->genlist, EINA_FALSE);
@@ -270,10 +266,10 @@ static void _mp_list_realized_item_update(void *thiz, const char *part, int fiel
 
 	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		it = elm_gengrid_first_item_get(list->genlist);
-				while (it) {
-					elm_gengrid_item_update(it);
-					it = elm_gengrid_item_next_get(it);
-				}
+		while (it) {
+			elm_gengrid_item_update(it);
+			it = elm_gengrid_item_next_get(it);
+		}
 	} else {
 		it = elm_genlist_first_item_get(list->genlist);
 		while (it) {
@@ -290,14 +286,14 @@ static void _mp_list_set_edit(void *thiz, bool edit)
 	MpList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (edit)
-	{
+	if (edit) {
 		if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 			Elm_Object_Item *sweeped_item = (Elm_Object_Item *)elm_genlist_decorated_item_get(list->genlist);
-			if (sweeped_item)
-			{
+			if (sweeped_item) {
 				mp_list_item_data_t *data = elm_object_item_data_get(sweeped_item);
-				if (data) data->checked = false;
+				if (data) {
+					data->checked = false;
+				}
 				elm_genlist_item_decorate_mode_set(sweeped_item, "slide", EINA_FALSE);
 				elm_genlist_item_select_mode_set(sweeped_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
 				elm_genlist_item_update(sweeped_item);
@@ -305,27 +301,23 @@ static void _mp_list_set_edit(void *thiz, bool edit)
 
 		}
 
-		if (list->reorderable)
+		if (list->reorderable) {
 			mp_list_reorder_mode_set(list->genlist, EINA_TRUE);
+		}
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
-	}
-	else
-	{
+	} else {
 		if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		}
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 		mp_list_reorder_mode_set(list->genlist, EINA_FALSE);
 
-		if (mp_list_get_checked_count(list))
-		{
+		if (mp_list_get_checked_count(list)) {
 			Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
-			while (item)
-			{
-				if (mp_list_item_select_mode_get(item) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY)
-				{
+			while (item) {
+				if (mp_list_item_select_mode_get(item) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY) {
 					mp_list_item_data_t *item_data =
-						(mp_list_item_data_t *) elm_object_item_data_get(item);
+					    (mp_list_item_data_t *) elm_object_item_data_get(item);
 					MP_CHECK(item_data);
 					item_data->checked = EINA_FALSE;
 				}
@@ -334,8 +326,9 @@ static void _mp_list_set_edit(void *thiz, bool edit)
 		}
 	}
 
-	if (MP_LIST_OBJ_IS_GENGRID(list->genlist))
+	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		elm_gengrid_realized_items_update(list->genlist);
+	}
 
 	//char *title = NULL;
 	//title = _mp_edit_view_get_view_title(list);
@@ -353,17 +346,18 @@ _mp_list_edit_mode_sel(void *thiz, void *data)
 	mp_list_item_selected_set(gli, EINA_FALSE);
 
 	if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
-		if (elm_genlist_item_flip_get(gli) || elm_genlist_item_select_mode_get(gli) == ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY)
+		if (elm_genlist_item_flip_get(gli) || elm_genlist_item_select_mode_get(gli) == ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY) {
 			return;
+		}
 	}
 
 	mp_list_item_check_set(gli, !it_data->checked);
 
 	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 	MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
-        MP_CHECK(view);
+	MP_CHECK(view);
 
-        mp_util_create_selectioninfo_with_count(view, mp_list_get_checked_count(list));
+	mp_util_create_selectioninfo_with_count(view, mp_list_get_checked_count(list));
 
 	//view->selection_info = mp_util_create_selectioninfo_with_count(view, mp_list_get_checked_count(list));
 }
@@ -376,15 +370,16 @@ _mp_list_change_display_mode(void *thiz, MpListDisplayMode_e mode)
 
 	list->display_mode = mode;
 
-	if (mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
+	if (mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		elm_object_signal_emit(list->layout, "hide.fastscroll", "*");
-	else
-	{
-		if (list->fast_scroll)
+	} else {
+		if (list->fast_scroll) {
 			elm_object_signal_emit(list->layout, "show.fastscroll", "*");
+		}
 	}
-	if (list->update)
+	if (list->update) {
 		list->update(list);
+	}
 }
 
 static void
@@ -394,28 +389,30 @@ _mp_list_selected_item_data_get(void *thiz, GList **selected)
 	MpList_t *list = (MpList_t *)thiz;
 	GList *sel_list = NULL;
 
-	if (!list->genlist)
+	if (!list->genlist) {
 		goto END;
+	}
 
 	Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
 	mp_list_item_data_t *gl_item = NULL;
 
-	if (!item)
+	if (!item) {
 		goto END;
+	}
 
-	while (item)
-	{
-		if (mp_list_item_select_mode_get(item) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY)
-		{
+	while (item) {
+		if (mp_list_item_select_mode_get(item) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY) {
 			gl_item = elm_object_item_data_get(item);
-			if (gl_item && gl_item->checked)
+			if (gl_item && gl_item->checked) {
 				sel_list = g_list_append(sel_list, gl_item);
+			}
 		}
 		item = mp_list_item_next_get(item);
 	}
-	END:
-	if (selected)
+END:
+	if (selected) {
 		*selected = sel_list;
+	}
 }
 
 static void
@@ -425,25 +422,28 @@ _mp_list_all_item_data_get(void *thiz, GList **selected)
 	MpList_t *list = (MpList_t *)thiz;
 	GList *sel_list = NULL;
 
-	if (!list->genlist)
+	if (!list->genlist) {
 		goto END;
+	}
 
 	Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
 	mp_list_item_data_t *gl_item = NULL;
 
-	if (!item)
+	if (!item) {
 		goto END;
+	}
 
-	while (item)
-	{
-                gl_item = elm_object_item_data_get(item);
-                if (gl_item)
-                        sel_list = g_list_append(sel_list, gl_item);
+	while (item) {
+		gl_item = elm_object_item_data_get(item);
+		if (gl_item) {
+			sel_list = g_list_append(sel_list, gl_item);
+		}
 		item = mp_list_item_next_get(item);
 	}
-	END:
-	if (selected)
+END:
+	if (selected) {
 		*selected = sel_list;
+	}
 }
 
 void mp_list_init(MpList_t *list, Evas_Object *parent, MpListType_e list_type)
@@ -489,7 +489,7 @@ void mp_list_init(MpList_t *list, Evas_Object *parent, MpListType_e list_type)
 	list->realized_item_update = _mp_list_realized_item_update;
 	//add free callback
 	evas_object_event_callback_add(list->layout, EVAS_CALLBACK_FREE, _mp_list_layout_del_cb,
-				       list);
+	                               list);
 }
 
 Evas_Object *mp_list_get_layout(MpList_t *list)
@@ -554,8 +554,7 @@ void mp_list_set_edit(MpList_t *list, bool edit)
 	list->edit_mode = edit;
 	MP_CHECK(list->set_edit);
 	list->set_edit(list, edit);
-	if (!edit)
-	{
+	if (!edit) {
 		MpView_t *view = mp_view_mgr_get_top_view(GET_VIEW_MGR);
 		MP_CHECK(view);
 		view->selection_info = mp_util_create_selectioninfo_with_count(view, 0);
@@ -675,10 +674,11 @@ mp_list_select_mode_set(Evas_Object *obj, Elm_Object_Select_Mode select_mode)
 {
 	MP_CHECK(obj);
 
-	if (MP_LIST_OBJ_IS_GENGRID(obj))
+	if (MP_LIST_OBJ_IS_GENGRID(obj)) {
 		elm_gengrid_select_mode_set(obj, select_mode);
-	else
+	} else {
 		elm_genlist_select_mode_set(obj, select_mode);
+	}
 }
 
 Elm_Object_Select_Mode
@@ -695,10 +695,11 @@ mp_list_item_select_mode_set(Elm_Object_Item *item, Elm_Object_Select_Mode selec
 	Evas_Object *obj = elm_object_item_widget_get(item);
 	MP_CHECK(obj);
 
-	if (MP_LIST_OBJ_IS_GENGRID(obj))
+	if (MP_LIST_OBJ_IS_GENGRID(obj)) {
 		elm_gengrid_item_select_mode_set(item, select_mode);
-	else
+	} else {
 		elm_genlist_item_select_mode_set(item, select_mode);
+	}
 }
 
 Elm_Object_Select_Mode
@@ -714,10 +715,11 @@ void
 mp_list_reorder_mode_set(Evas_Object *obj, Eina_Bool reorder_mode)
 {
 	MP_CHECK(obj);
-	if (MP_LIST_OBJ_IS_GENGRID(obj))
+	if (MP_LIST_OBJ_IS_GENGRID(obj)) {
 		elm_gengrid_reorder_mode_set(obj, reorder_mode);
-	else
+	} else {
 		elm_genlist_reorder_mode_set(obj, reorder_mode);
+	}
 }
 
 void
@@ -727,10 +729,11 @@ mp_list_item_selected_set(Elm_Object_Item *item, Eina_Bool selected)
 	Evas_Object *obj = elm_object_item_widget_get(item);
 	MP_CHECK(obj);
 
-	if (MP_LIST_OBJ_IS_GENGRID(obj))
+	if (MP_LIST_OBJ_IS_GENGRID(obj)) {
 		elm_gengrid_item_selected_set(item, selected);
-	else
+	} else {
 		elm_genlist_item_selected_set(item, selected);
+	}
 }
 
 Eina_Bool
@@ -747,8 +750,9 @@ void mp_list_selected_item_data_get(MpList_t *list, GList **selected)
 	startfunc;
 	MP_CHECK(list);
 
-	if (list->selected_item_data_get)
+	if (list->selected_item_data_get) {
 		list->selected_item_data_get(list, selected);
+	}
 
 	return;
 }
@@ -758,8 +762,9 @@ void mp_list_all_item_data_get(MpList_t *list, GList **selected)
 	startfunc;
 	MP_CHECK(list);
 
-	if (list->all_item_data_get)
+	if (list->all_item_data_get) {
 		list->all_item_data_get(list, selected);
+	}
 
 	return;
 }
@@ -769,8 +774,9 @@ void mp_list_all_item_data_get(MpList_t *list, GList **selected)
 const char * mp_list_get_list_item_label(MpList_t *list, Elm_Object_Item *item)
 {
 	MP_CHECK_NULL(list);
-	if (list->get_label)
+	if (list->get_label) {
 		return list->get_label(list, item);
+	}
 
 	return NULL;
 }
@@ -781,23 +787,23 @@ void mp_list_double_tap(MpList_t *list)
 	MP_CHECK(list);
 	MP_CHECK(list->genlist);
 	MP_LIST_OBJ_IS_GENGRID(list->genlist) ?
-		elm_gengrid_item_bring_in(elm_gengrid_first_item_get(list->genlist), ELM_GENGRID_ITEM_SCROLLTO_TOP):
-		elm_genlist_item_bring_in(elm_genlist_first_item_get(list->genlist), ELM_GENLIST_ITEM_SCROLLTO_TOP);
+	elm_gengrid_item_bring_in(elm_gengrid_first_item_get(list->genlist), ELM_GENGRID_ITEM_SCROLLTO_TOP) :
+	elm_genlist_item_bring_in(elm_genlist_first_item_get(list->genlist), ELM_GENLIST_ITEM_SCROLLTO_TOP);
 }
 
 void mp_list_rotate(MpList_t *list)
 {
 	startfunc;
 	MP_CHECK(list);
-	if (list->rotate)
+	if (list->rotate) {
 		list->rotate(list);
+	}
 }
 
 mp_list_item_data_t *mp_list_item_data_create(MpListItemType_e item_type)
 {
 	mp_list_item_data_t *item_data = calloc(1, sizeof(mp_list_item_data_t));
-	if (item_data)
-	{
+	if (item_data) {
 		item_data->item_type = item_type;
 	}
 
@@ -811,15 +817,15 @@ void mp_list_item_check_set(Elm_Object_Item *item, Eina_Bool checked)
 	MP_CHECK(item_data);
 
 	item_data->checked = checked;
-        Evas_Object *check_box_layout = elm_object_item_part_content_get(item, "elm.icon.2");
-        Evas_Object *chk = elm_object_part_content_get(check_box_layout, "elm.swallow.content");
-	if (chk)
+	Evas_Object *check_box_layout = elm_object_item_part_content_get(item, "elm.icon.2");
+	Evas_Object *chk = elm_object_part_content_get(check_box_layout, "elm.swallow.content");
+	if (chk) {
 		elm_check_state_set(chk, checked);
-	else
-	{
+	} else {
 		chk = elm_object_item_part_content_get(item, "elm.swallow.end");	// gengrid
-		if (chk)
+		if (chk) {
 			elm_check_state_set(chk, checked);
+		}
 	}
 }
 
@@ -831,10 +837,9 @@ static char *_mp_list_bottom_counter_item_text_get_cb(void *data, Evas_Object *o
 	MpList_t *list = (MpList_t *)evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(list->bottom_counter_text_get_cb);
-	if (!strcmp(part,"elm.text")) {
+	if (!strcmp(part, "elm.text")) {
 		return list->bottom_counter_text_get_cb(list);
-	}
-	else {
+	} else {
 		return NULL;
 	}
 }
@@ -878,91 +883,86 @@ Elm_Object_Item *mp_list_bottom_counter_item_append(MpList_t *list)
 
 GList * mp_list_get_checked_path_list(MpList_t *list)
 {
-        MP_CHECK_NULL(list);
-        GList *sel_list = NULL;
-        GList *path_list = NULL;
-        GList *node = NULL;
+	MP_CHECK_NULL(list);
+	GList *sel_list = NULL;
+	GList *path_list = NULL;
+	GList *node = NULL;
 
-        mp_list_selected_item_data_get(list, &sel_list);
-        MP_CHECK_NULL(sel_list);
+	mp_list_selected_item_data_get(list, &sel_list);
+	MP_CHECK_NULL(sel_list);
 
-        node = g_list_first(sel_list);
-        while (node)
-        {
-                mp_list_item_data_t *item = node->data;
-                if (item && item->handle)
-                {
-                        char *file_path = NULL;
-                        if (list->list_type == MP_LIST_TYPE_GROUP) {
-                                mp_media_info_group_get_main_info(item->handle,&file_path);
-                        } else {
-                                mp_media_info_get_file_path(item->handle,&file_path);
-                        }
-                        char *path = g_strdup(file_path);
-                        path_list = g_list_append(path_list, path);
-                }
+	node = g_list_first(sel_list);
+	while (node) {
+		mp_list_item_data_t *item = node->data;
+		if (item && item->handle) {
+			char *file_path = NULL;
+			if (list->list_type == MP_LIST_TYPE_GROUP) {
+				mp_media_info_group_get_main_info(item->handle, &file_path);
+			} else {
+				mp_media_info_get_file_path(item->handle, &file_path);
+			}
+			char *path = g_strdup(file_path);
+			path_list = g_list_append(path_list, path);
+		}
 
-                node = g_list_next(node);
-        }
-        g_list_free(sel_list);
-        return path_list;
+		node = g_list_next(node);
+	}
+	g_list_free(sel_list);
+	return path_list;
 }
 
 bool mp_list_is_in_checked_path_list(GList *path_list, char *file_path)
 {
-        MP_CHECK_FALSE(path_list);
-        MP_CHECK_FALSE(file_path);
-        GList *node = NULL;
+	MP_CHECK_FALSE(path_list);
+	MP_CHECK_FALSE(file_path);
+	GList *node = NULL;
 
-        node = g_list_first(path_list);
-        while (node)
-        {
-                char *path = node->data;
-                if (!g_strcmp0(path, file_path))
-                {
-                        return true;
-                }
-                node = g_list_next(node);
-        }
+	node = g_list_first(path_list);
+	while (node) {
+		char *path = node->data;
+		if (!g_strcmp0(path, file_path)) {
+			return true;
+		}
+		node = g_list_next(node);
+	}
 
-        return false;
+	return false;
 }
 
 void mp_list_free_checked_path_list(GList *path_list)
 {
-        MP_CHECK(path_list);
-        GList *node = NULL;
+	MP_CHECK(path_list);
+	GList *node = NULL;
 
-        node = g_list_first(path_list);
-        while (node)
-        {
-                char *path = node->data;
-                SAFE_FREE(path);
-                node = g_list_next(node);
-        }
-        g_list_free(path_list);
+	node = g_list_first(path_list);
+	while (node) {
+		char *path = node->data;
+		SAFE_FREE(path);
+		node = g_list_next(node);
+	}
+	g_list_free(path_list);
 }
 
 void mp_list_item_reorder_moved_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	startfunc;
 
-        MpList_t *list = data;
-        MP_CHECK(list);
-        MP_CHECK(list->genlist);
+	MpList_t *list = data;
+	MP_CHECK(list);
+	MP_CHECK(list->genlist);
 
-        int cur_sequence = 0;
-        Elm_Object_Item *temp = elm_genlist_first_item_get(list->genlist);
-        while (temp) {
-                mp_list_item_data_t *item_data = (mp_list_item_data_t *) elm_object_item_data_get(temp);
-                MP_CHECK(item_data);
-                if (cur_sequence != item_data->index) {
-                        mp_view_mgr_post_event(GET_VIEW_MGR, MP_REORDER_ENABLE);
-                        return;
-                }
-                temp = elm_genlist_item_next_get(temp);
-                cur_sequence++;
-        }
-        mp_view_mgr_post_event(GET_VIEW_MGR, MP_REORDER_DISABLE);
+	int cur_sequence = 0;
+	Elm_Object_Item *temp = elm_genlist_first_item_get(list->genlist);
+	while (temp) {
+		mp_list_item_data_t *item_data = (mp_list_item_data_t *) elm_object_item_data_get(temp);
+		MP_CHECK(item_data);
+		if (cur_sequence != item_data->index) {
+			mp_view_mgr_post_event(GET_VIEW_MGR, MP_REORDER_ENABLE);
+			return;
+		}
+		temp = elm_genlist_item_next_get(temp);
+		cur_sequence++;
+	}
+	mp_view_mgr_post_event(GET_VIEW_MGR, MP_REORDER_DISABLE);
 }
 

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-group-list.h"
@@ -20,7 +20,7 @@
 #include "mc-common.h"
 #include "mc-track-list.h"
 
-typedef struct{
+typedef struct {
 	struct app_data *ad;
 
 	Evas_Object *no_content;
@@ -35,7 +35,7 @@ typedef struct{
 	Elm_Object_Item *win_navi_it;
 	mp_media_list_h group_list;
 	mp_media_list_h playlists_auto;
-}group_list_data_t;
+} group_list_data_t;
 
 #define GET_LIST_DATA(obj)	evas_object_data_get(obj, "list_data")
 
@@ -71,37 +71,30 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 	MP_CHECK(media);
 	mp_media_info_group_get_main_info(media, &name);
 
-	if (ld->type == MP_GROUP_BY_PLAYLIST)
-	{
+	if (ld->type == MP_GROUP_BY_PLAYLIST) {
 		mp_media_info_group_get_playlist_id(media, &playlist_id);
-		if (playlist_id == MP_SYS_PLST_MOST_PLAYED)
+		if (playlist_id == MP_SYS_PLST_MOST_PLAYED) {
 			track_type = MP_TRACK_BY_PLAYED_COUNT;
-		else if (playlist_id == MP_SYS_PLST_RECENTELY_ADDED)
+		} else if (playlist_id == MP_SYS_PLST_RECENTELY_ADDED) {
 			track_type = MP_TRACK_BY_ADDED_TIME;
-		else if (playlist_id == MP_SYS_PLST_RECENTELY_PLAYED)
+		} else if (playlist_id == MP_SYS_PLST_RECENTELY_PLAYED) {
 			track_type = MP_TRACK_BY_PLAYED_TIME;
-		else if (playlist_id == MP_SYS_PLST_QUICK_LIST)
+		} else if (playlist_id == MP_SYS_PLST_QUICK_LIST) {
 			track_type = MP_TRACK_BY_FAVORITE;
-		else
+		} else {
 			track_type = MP_TRACK_BY_PLAYLIST;
-	}
-	else if (ld->type == MP_GROUP_BY_ARTIST)
-	{
+		}
+	} else if (ld->type == MP_GROUP_BY_ARTIST) {
 		track_type = MP_TRACK_BY_ARTIST;
-	}
-	else if (ld->type == MP_GROUP_BY_FOLDER)
-	{
+	} else if (ld->type == MP_GROUP_BY_FOLDER) {
 		track_type = MP_TRACK_BY_FOLDER;
 		mp_media_info_group_get_folder_id(media, &folder);
 		mp_media_info_group_get_main_info(media, &folder_name);
 	}
 
-	if (ld->type == MP_GROUP_BY_FOLDER)
-	{
+	if (ld->type == MP_GROUP_BY_FOLDER) {
 		mc_common_push_track_view_by_group_name(ld->ad, track_type, folder, playlist_id, folder_name);
-	}
-	else
-	{
+	} else {
 		mc_common_push_track_view_by_group_name(ld->ad, track_type, name, playlist_id, NULL);
 	}
 	free(folder);
@@ -114,13 +107,11 @@ _layout_del_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 	group_list_data_t *ld  = data;
 	MP_CHECK(ld);
 
-	if (ld->group_list)
-	{
+	if (ld->group_list) {
 		mp_media_info_group_list_destroy(ld->group_list);
 		ld->group_list = NULL;
 	}
-	if (ld->playlists_auto)
-	{
+	if (ld->playlists_auto) {
 		mp_media_info_group_list_destroy(ld->playlists_auto);
 		ld->playlists_auto = NULL;
 	}
@@ -144,8 +135,7 @@ _mc_itc_init(int type, group_list_data_t *ld)
 
 	ld->itc.func.content_get = mc_group_content_get;
 	ld->itc.func.del = _mc_group_list_gl_del;
-	switch (type)
-	{
+	switch (type) {
 	case MP_GROUP_BY_ALBUM:
 		ld->itc.item_style = "2line.top";
 		ld->itc.func.text_get = mc_album_text_get;
@@ -198,8 +188,9 @@ Evas_Object *mc_group_list_create(Evas_Object *parent, struct app_data *ad, Elm_
 	*/
 
 	Evas_Object *done_btn = elm_object_item_part_content_unset(ld->win_navi_it, "toolbar");
-	if (done_btn)
+	if (done_btn) {
 		evas_object_del(done_btn);
+	}
 
 	evas_object_data_set(layout, "list_data", ld);
 	evas_object_event_callback_add(layout, EVAS_CALLBACK_FREE, _layout_del_cb, ld);
@@ -217,14 +208,12 @@ int mc_group_list_update(Evas_Object *list)
 	group_list_data_t *ld  = GET_LIST_DATA(list);
 	MP_CHECK_VAL(ld, -1);
 
-	if (ld->group_list)
-	{
+	if (ld->group_list) {
 		mp_media_info_group_list_destroy(ld->group_list);
 		ld->group_list = NULL;
 	}
 
-	if (ld->playlists_auto)
-	{
+	if (ld->playlists_auto) {
 		mp_media_info_group_list_destroy(ld->playlists_auto);
 		ld->playlists_auto = NULL;
 	}
@@ -233,27 +222,25 @@ int mc_group_list_update(Evas_Object *list)
 	evas_object_del(content);
 
 	mp_media_info_group_list_count(ld->type, ld->type_str, NULL, &count);
-	if (count || ld->type == MP_GROUP_BY_PLAYLIST)
-	{
+	if (count || ld->type == MP_GROUP_BY_PLAYLIST) {
 		content = _mc_create_genlist(list);
 
 		/*if playlist, add auto playlist firstly*/
-		if (ld->type == MP_GROUP_BY_PLAYLIST)
-		{
+		if (ld->type == MP_GROUP_BY_PLAYLIST) {
 			mp_media_list_h playlists_auto = NULL;
 			mp_media_info_group_list_create(&playlists_auto, MP_GROUP_BY_SYS_PLAYLIST, NULL, NULL, 0, 0);
 			ld->playlists_auto = playlists_auto;
 			int i = 0;
-			for (i = 0; i < MP_SYS_PLST_COUNT; i++)
-			{
+			for (i = 0; i < MP_SYS_PLST_COUNT; i++) {
 				mp_media_info_h media = mp_media_info_group_list_nth_item(playlists_auto, i);
-				if (!media)
-				{
+				if (!media) {
 					continue;
 				}
 
 				list_item_data_t *item_data = calloc(1, sizeof(list_item_data_t));
-				if (!item_data) break;
+				if (!item_data) {
+					break;
+				}
 
 				item_data->media = media;
 				item_data->index = i;
@@ -266,11 +253,9 @@ int mc_group_list_update(Evas_Object *list)
 
 		mp_media_info_group_list_create(&ld->group_list, ld->type, ld->type_str, NULL, 0, count);
 		int i = 0;
-		for (i=0; i<count; i++)
-		{
+		for (i = 0; i < count; i++) {
 			mp_media_info_h media =  mp_media_info_group_list_nth_item(ld->group_list, i);
-			if (!media)
-			{
+			if (!media) {
 				continue;
 			}
 
@@ -278,16 +263,11 @@ int mc_group_list_update(Evas_Object *list)
 			MP_CHECK_VAL(item_data, -1);
 			item_data->media = media;
 			item_data->index = i;
-			if (ld->type == MP_GROUP_BY_ALBUM)
-			{
+			if (ld->type == MP_GROUP_BY_ALBUM) {
 				item_data->list_type = MC_ALBUM;
-			}
-			else if (ld->type == MP_GROUP_BY_ARTIST)
-			{
+			} else if (ld->type == MP_GROUP_BY_ARTIST) {
 				item_data->list_type = MC_ARTIST;
-			}
-			else if (ld->type == MP_GROUP_BY_FOLDER)
-			{
+			} else if (ld->type == MP_GROUP_BY_FOLDER) {
 				item_data->list_type = MC_FOLDER;
 			}
 
@@ -299,13 +279,13 @@ int mc_group_list_update(Evas_Object *list)
 			Evas_Object* left_button = elm_object_item_part_content_get(ld->win_navi_it, "title_left_btn");
 			mc_evas_object_del(left_button);
 		}
-	}
-	else {
+	} else {
 		NoContentType_e type = NO_CONTENT_SONG;
-		if (ld->type == MP_GROUP_BY_ARTIST)
+		if (ld->type == MP_GROUP_BY_ARTIST) {
 			type = NO_CONTENT_ARTIST;
-		else if (ld->type == MP_GROUP_BY_ALBUM)
+		} else if (ld->type == MP_GROUP_BY_ALBUM) {
 			type = NO_CONTENT_ALBUM;
+		}
 
 		content = mc_widget_no_content_add(list, type);
 	}
@@ -317,9 +297,7 @@ int mc_group_list_update(Evas_Object *list)
 		} else {
 			mc_common_create_fastscroller(list, EINA_FALSE, content);
 		}
-	}
-	else
-	{
+	} else {
 		/*hide fastscroller*/
 		elm_object_signal_emit(list, "hide.fastscroll", "*");
 	}

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -131,18 +131,20 @@ mp_file_tag_info_get_all_tag(const char *filename, mp_tag_info_t *tag_info)
 	SAFE_FREE(albumart);
 
 	DEBUG_TRACE
-		("file : %s\n duration: %d \n album: %s\n artist: %s\n title: %s\n genre: %s\n copyright:%s\n date: %s\n desc : %s\n author: %s\n albumart : %s",
-		filename, tag_info->duration, tag_info->album, tag_info->artist, tag_info->title, tag_info->genre,
-		tag_info->copyright, tag_info->date, tag_info->desc, tag_info->author, tag_info->albumart_path);
+	("file : %s\n duration: %d \n album: %s\n artist: %s\n title: %s\n genre: %s\n copyright:%s\n date: %s\n desc : %s\n author: %s\n albumart : %s",
+	 filename, tag_info->duration, tag_info->album, tag_info->artist, tag_info->title, tag_info->genre,
+	 tag_info->copyright, tag_info->date, tag_info->desc, tag_info->author, tag_info->albumart_path);
 
-	if (handle)
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	return 0;
 
-	CATCH_ERROR:
-	if (handle)
+CATCH_ERROR:
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	return -1;
 }
@@ -181,8 +183,9 @@ mp_file_tag_info_get_genre(const char *filename)
 	return genre;
 
 CATCH_ERROR:
-	if (handle)
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	return NULL;
 }
@@ -191,8 +194,9 @@ CATCH_ERROR:
 void
 mp_file_tag_free(mp_tag_info_t *tag_info)
 {
-	if (tag_info == NULL)
+	if (tag_info == NULL) {
 		return;
+	}
 
 	SAFE_FREE(tag_info->album);
 	SAFE_FREE(tag_info->genre);
@@ -264,8 +268,9 @@ mp_file_tag_info_get_albumart(const char *filename, char **albumart_path)
 	return 0;
 
 CATCH_ERROR:
-	if (handle)
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	*albumart_path = NULL;
 	return -1;

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -97,11 +97,11 @@ _mp_lryic_mgr_list_free(Eina_List **list)
 {
 	mp_lrc_node_t *node = NULL;
 	Eina_List *next = NULL;
-	EINA_LIST_FOREACH(*list, next, node)
-	{
+	EINA_LIST_FOREACH(*list, next, node) {
 		if (node) {
-			if (node->lyric != NULL)
+			if (node->lyric != NULL) {
 				free(node->lyric);
+			}
 			free(node);
 		}
 	}
@@ -118,20 +118,25 @@ _mp_lyric_mgr_data_free(mp_lyric_mgr_t **data)
 	MP_CHECK(data);
 	mp_lyric_mgr_t **lrc_data = data;
 	if (*lrc_data != NULL) {
-		if ((*lrc_data)->title != NULL)
+		if ((*lrc_data)->title != NULL) {
 			free((*lrc_data)->title);
+		}
 
-		if ((*lrc_data)->artist != NULL)
+		if ((*lrc_data)->artist != NULL) {
 			free((*lrc_data)->artist);
+		}
 
-		if ((*lrc_data)->album != NULL)
+		if ((*lrc_data)->album != NULL) {
 			free((*lrc_data)->album);
+		}
 
-		if ((*lrc_data)->synclrc_list != NULL)
+		if ((*lrc_data)->synclrc_list != NULL) {
 			_mp_lryic_mgr_list_free(&(*lrc_data)->synclrc_list);
+		}
 
-		if ((*lrc_data)->unsynclrc_list != NULL)
+		if ((*lrc_data)->unsynclrc_list != NULL) {
 			_mp_lryic_mgr_list_free(&(*lrc_data)->unsynclrc_list);
+		}
 
 		free(*lrc_data);
 		*lrc_data = NULL;
@@ -145,7 +150,7 @@ _mp_lyric_mgr_extract_lyric(const char *line)
 {
 	MP_CHECK_NULL(line);
 
-	char *lyric = (char *)malloc(sizeof(char)*strlen(line));
+	char *lyric = (char *)malloc(sizeof(char) * strlen(line));
 	MP_CHECK_NULL(line);
 	MP_CHECK_NULL(lyric);
 	memset(lyric, 0, sizeof(char)*strlen(line));
@@ -177,7 +182,7 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 {
 	MP_CHECK(data);
 	MP_CHECK(line);
-/* 	DEBUG_TRACE("line=%s\n", line); */
+	/* 	DEBUG_TRACE("line=%s\n", line); */
 
 	mp_lyric_mgr_t **lrc_data = data;
 	MP_CHECK(*lrc_data);
@@ -197,11 +202,11 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 	if (start != NULL) {
 		end = strstr(start, MP_LYRIC_PARSE_END_INDEX);
 		if (end != NULL) {
-			(*lrc_data)->title = malloc(sizeof(char)*(end-start-ti_len+1));
+			(*lrc_data)->title = malloc(sizeof(char) * (end - start - ti_len + 1));
 			MP_CHECK((*lrc_data)->title);
 			mp_assert((*lrc_data)->title);
-			strncpy((*lrc_data)->title, start+ti_len, end-start-ti_len);
-			(*lrc_data)->title[end-start-ti_len] = '\0';
+			strncpy((*lrc_data)->title, start + ti_len, end - start - ti_len);
+			(*lrc_data)->title[end - start - ti_len] = '\0';
 			/* DEBUG_TRACE("title: %s\n", (*lrc_data)->title); */
 		}
 	}
@@ -212,11 +217,11 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 	if (start != NULL) {
 		end = strstr(start, MP_LYRIC_PARSE_END_INDEX);
 		if (end != NULL) {
-			(*lrc_data)->artist = malloc(sizeof(char)*(end-start-ar_len+1));
+			(*lrc_data)->artist = malloc(sizeof(char) * (end - start - ar_len + 1));
 			MP_CHECK((*lrc_data)->artist);
 			mp_assert((*lrc_data)->artist);
-			strncpy((*lrc_data)->artist, start+ar_len, end-start-ar_len);
-			(*lrc_data)->artist[end-start-ar_len] = '\0';
+			strncpy((*lrc_data)->artist, start + ar_len, end - start - ar_len);
+			(*lrc_data)->artist[end - start - ar_len] = '\0';
 			/* DEBUG_TRACE("title: %s\n", (*lrc_data)->artist); */
 		}
 	}
@@ -227,11 +232,11 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 	if (start != NULL) {
 		end = strstr(start, MP_LYRIC_PARSE_END_INDEX);
 		if (end != NULL) {
-			(*lrc_data)->album = malloc(sizeof(char)*(end-start-al_len+1));
+			(*lrc_data)->album = malloc(sizeof(char) * (end - start - al_len + 1));
 			MP_CHECK((*lrc_data)->album);
 			mp_assert((*lrc_data)->album);
-			strncpy((*lrc_data)->album, start+al_len, end-start-al_len);
-			(*lrc_data)->album[end-start-al_len] = '\0';
+			strncpy((*lrc_data)->album, start + al_len, end - start - al_len);
+			(*lrc_data)->album[end - start - al_len] = '\0';
 			/* DEBUG_TRACE("title: %s\n", (*lrc_data)->album); */
 		}
 	}
@@ -243,8 +248,8 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 		end = strstr(start, MP_LYRIC_PARSE_END_INDEX);
 		if (end != NULL) {
 			char buf[MP_LRC_LINE_BUF_LEN] = {'0'};
-			memcpy(buf, start+offset_len, end-start-offset_len);
-			buf[end-start-offset_len] = '\0';
+			memcpy(buf, start + offset_len, end - start - offset_len);
+			buf[end - start - offset_len] = '\0';
 			(*lrc_data)->offset = atoi(buf);
 			/* DEBUG_TRACE("offset: %d\n", (*lrc_data)->offset); */
 		}
@@ -273,7 +278,7 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 		/* DEBUG_TRACE("begin: %d, len = %d ", subs[0].rm_so, len); */
 
 		char buf[MP_LRC_LINE_BUF_LEN] = {'0'};
-		memcpy(buf, head+subs[0].rm_so+1, len);
+		memcpy(buf, head + subs[0].rm_so + 1, len);
 		buf[len] = '\0';
 
 		long time = _mp_lyric_mgr_str2time(buf);
@@ -291,8 +296,9 @@ _mp_lyric_mgr_parse_line(mp_lyric_mgr_t **data, const char *line)
 
 			DEBUG_TRACE("time%d: %d\n", eina_list_count((*lrc_data)->synclrc_list), new_node->time);
 			DEBUG_TRACE("lyric%d: %s\n", eina_list_count((*lrc_data)->synclrc_list), new_node->lyric);
-		} else
+		} else {
 			goto FAIL_GET_PARSE_LINE;
+		}
 
 		head += subs[0].rm_eo;
 	}
@@ -329,10 +335,10 @@ _mp_lyric_mgr_get_line(const char *buffer, char **line)
 
 	i++;
 
-	*line = malloc(sizeof(char)*i);
+	*line = malloc(sizeof(char) * i);
 	MP_CHECK_VAL(line, -1);
 	memset(*line, 0, sizeof(char)*i);
-	strncpy(*line, buffer, i-1);
+	strncpy(*line, buffer, i - 1);
 
 	/* DEBUG_TRACE("line=%s\n",*line);
 	DEBUG_TRACE("i=%d\n",i); */
@@ -376,8 +382,9 @@ mp_lyric_mgr_parse_buffer(mp_lyric_mgr_t *lyric_mgr, const char *lrcBuffer)
 			return NULL;
 		}
 		new_node->time = 0;
-		if (new_node->lyric != NULL)
+		if (new_node->lyric != NULL) {
 			free(new_node->lyric);
+		}
 		new_node->lyric = strdup(line);
 
 		lrc_data->unsynclrc_list = eina_list_append(lrc_data->unsynclrc_list, (gpointer)new_node);
@@ -463,11 +470,11 @@ _mp_parse_lyric(mp_lyric_mgr_t *lyric_mgr, const char *musicPath)
 						sync = 0;
 						mp_lrc_node_t *node = NULL;
 						Eina_List *next = NULL;
-						EINA_LIST_FOREACH(synclrc_list, next, node)
-						{
+						EINA_LIST_FOREACH(synclrc_list, next, node) {
 							if (node) {
-								if (node->lyric != NULL)
+								if (node->lyric != NULL) {
 									free(node->lyric);
+								}
 								free(node);
 							}
 						}

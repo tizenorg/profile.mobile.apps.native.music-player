@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-album-detail-view.h"
@@ -26,9 +26,9 @@
 #define MP_ALBUM_INDEX_ICON_SIZE (202 * elm_config_scale_get())
 
 #define MP_ALBUM_TITLE_TEXT_STYLE \
-		"DEFAULT='font=tizen;style=Bold font_size=45 wrap=mixed '\
+	"DEFAULT='font=tizen;style=Bold font_size=45 wrap=mixed '\
 		newline='br' \
-		b='+ font=tizen style=Bold'"
+b='+ font=tizen style=Bold'"
 #define MP_ALBUM_TITLE_TEXT_WIDTH       446
 #define MP_ALBUM_TITLE_TEXT_WIDTH_LD    1006
 #define MP_ALBUM_TITLE_TEXT_HEIGHT      54
@@ -113,17 +113,17 @@ static void _mp_album_detail_view_normal_more_btn_cb(void *data, Evas_Object *ob
 #ifdef MP_FEATURE_SHARE
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_SHARE)) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
+		                             STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
 	}
 #endif
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL)) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_album_detail_view_add_to_playlist_cb, view);
+		                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_album_detail_view_add_to_playlist_cb, view);
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_DELETE,
-								MP_PLAYER_MORE_BTN_DELETE_IMAGE,
-								_mp_album_detail_view_tracklist_edit_cb,
-								view);
+		                             STR_MP_DELETE,
+		                             MP_PLAYER_MORE_BTN_DELETE_IMAGE,
+		                             _mp_album_detail_view_tracklist_edit_cb,
+		                             view);
 	}
 
 #ifdef MP_FEATURE_CLOUD
@@ -132,9 +132,9 @@ static void _mp_album_detail_view_normal_more_btn_cb(void *data, Evas_Object *ob
 	mp_cloud_is_on(&is_on);
 	if (is_on) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
+		                             STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
+		                             STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
 	}
 #endif
 
@@ -144,24 +144,24 @@ static void _mp_album_detail_view_normal_more_btn_cb(void *data, Evas_Object *ob
 		/*add*/
 		if (status != MP_COMMON_ALL_IN && status != MP_COMMON_ALL_ERROR)
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-						STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
+			                             STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
 
 		/*remove*/
 		if (status != MP_COMMON_ALL_OUT && status != MP_COMMON_ALL_ERROR)
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
 	}
 #endif
 	/*search*/
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
+	                             STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
 
 
 	/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
 				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);*/
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
@@ -304,7 +304,7 @@ _mp_album_detaill_view_on_event(void *thiz, MpViewEvent_e event)
 	case MP_DELETE_DONE:
 		mp_list_update(view->content_to_show);
 		if (!mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show))) {
-/*			mp_view_mgr_pop_to_view(GET_VIEW_MGR, MP_VIEW_ALL); */
+			/*			mp_view_mgr_pop_to_view(GET_VIEW_MGR, MP_VIEW_ALL); */
 			elm_object_item_del(view->navi_it);
 		}
 		break;
@@ -318,8 +318,7 @@ _mp_album_detaill_view_on_event(void *thiz, MpViewEvent_e event)
 		mp_list_realized_item_part_update(view->content_to_show, "elm.text.sub.right", ELM_GENLIST_ITEM_FIELD_TEXT);
 		break;
 #endif
-	case MP_VIEW_EVENT_ALBUMART_CHANGED:
-	{
+	case MP_VIEW_EVENT_ALBUMART_CHANGED: {
 		mp_media_list_h media_list = NULL;
 		mp_media_info_h media = NULL;
 		mp_media_info_list_create(&media_list, MP_TRACK_BY_ALBUM, view->name, NULL, NULL, 0, 0, 1);
@@ -334,18 +333,18 @@ _mp_album_detaill_view_on_event(void *thiz, MpViewEvent_e event)
 		MpAlbumDetailList_t *list = (MpAlbumDetailList_t *)view->content_to_show;
 		MP_CHECK(list);
 		mp_album_detail_list_set_data(list, MP_ALBUM_DETAIL_THUMBNAIL, view->thumbnail, -1);
-		if (list->shuffle_it)
+		if (list->shuffle_it) {
 			elm_genlist_item_fields_update(list->shuffle_it, "elm.icon.1", ELM_GENLIST_ITEM_FIELD_CONTENT);
+		}
 
 		mp_media_info_list_destroy(media_list);
 	}
-		break;
+	break;
 
-		case MP_UPDATE_FAVORITE_LIST:
-		{
-			mp_list_update(view->content_to_show);
-			break;
-		}
+	case MP_UPDATE_FAVORITE_LIST: {
+		mp_list_update(view->content_to_show);
+		break;
+	}
 	default:
 		break;
 	}
@@ -381,7 +380,9 @@ MpAlbumDetailView_t *mp_album_detail_view_create(Evas_Object *parent, char *albu
 	MP_CHECK_NULL(view);
 
 	ret = _mp_album_detail_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	IF_G_FREE(view->name);
 	IF_G_FREE(view->artist);

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <glib.h>
@@ -60,12 +60,12 @@
 #include "mp-collect-color.h"
 #endif
 #define CHECK_VIEW(view)	\
-do {\
-	MpPlayerView_t *player_view = view;\
-	if (player_view && player_view->player_view_magic != PLAYER_VIEW_MAGIC) {\
-		ERROR_TRACE("Error: param is not player_view object!!!magic: %d", player_view->player_view_magic);\
-		mp_assert(0); } \
-} while (0);
+	do {\
+		MpPlayerView_t *player_view = view;\
+		if (player_view && player_view->player_view_magic != PLAYER_VIEW_MAGIC) {\
+			ERROR_TRACE("Error: param is not player_view object!!!magic: %d", player_view->player_view_magic);\
+			mp_assert(0); } \
+	} while (0);
 
 #define NAVIFRAME_PLAYER_VIEW NULL /*"music/player_view"*/
 #define PLAYER_VIEW_REW_SOURCE "control_previous"
@@ -148,7 +148,8 @@ static void _mp_player_view_destroy_queue_list_transit_del_cb(void *data, Elm_Tr
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->queue_list);
 
 	view->queue_status = false;
@@ -172,7 +173,8 @@ static void _mp_player_view_destroy_queue_list(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->queue_list);
 
 	Evas_Object *queue_title_list = elm_object_part_content_get(view->player_view_layout, "queue_list_area");
@@ -219,7 +221,8 @@ static void _mp_player_view_create_queue_list_transit_del_cb(void *data, Elm_Tra
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	view->trans_queue_list = NULL;
 
@@ -299,7 +302,7 @@ static void _mp_player_view_refresh_current_count_info(Evas_Object *layout)
 		str_count = g_strdup_printf(GET_STR(STR_MP_PD_SONGS), track_count);
 	}
 
-	str_current = g_strdup_printf("%d / %d", (current_index+1), track_count);
+	str_current = g_strdup_printf("%d / %d", (current_index + 1), track_count);
 
 	elm_object_part_text_set(layout, "track_count", str_current);
 	elm_object_part_text_set(layout, "track_current", str_count);
@@ -313,7 +316,8 @@ static void _mp_player_view_refresh_queue_list(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 	Evas_Object *queue_title_list = NULL;
 	if (!view->queue_list) {
@@ -377,7 +381,8 @@ static void _mp_player_view_set_queue_list_btn_icon(void *data)
 	const char *path = NULL;
 	const char *group = NULL;
 
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->option_button[OPTION_QUEUE]);/*view->queue_button*/
 	MP_CHECK(view->queue_list);
 
@@ -391,16 +396,16 @@ static void _mp_player_view_set_queue_list_btn_icon(void *data)
 	elm_image_file_get(image, &path, &group);
 
 	if (ad->current_track_info && mp_util_is_image_valid(ad->evas,
-			ad->current_track_info->thumbnail_path) && strcmp(ad->current_track_info->thumbnail_path,
-					BROKEN_ALBUMART_IMAGE_PATH)) {
+	        ad->current_track_info->thumbnail_path) && strcmp(ad->current_track_info->thumbnail_path,
+	                BROKEN_ALBUMART_IMAGE_PATH)) {
 		if (!g_strcmp0(path, ad->current_track_info->thumbnail_path)) {
 			return;
 		}
 		elm_image_file_set(image, ad->current_track_info->thumbnail_path, NULL);
 	} else {
-	if (!g_strcmp0(path, PLAYER_VIEW_DETAULT_ALBUM_IMAGE)) {
-		return;
-	}
+		if (!g_strcmp0(path, PLAYER_VIEW_DETAULT_ALBUM_IMAGE)) {
+			return;
+		}
 		elm_image_file_set(image, PLAYER_VIEW_DETAULT_ALBUM_IMAGE, NULL);
 	}
 
@@ -410,7 +415,8 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->navi_it);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -420,8 +426,8 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 		DEBUG_TRACE("queue list create");
 		elm_object_style_set(view->option_button[OPTION_QUEUE], "music/control_queue_thumbnail");
 		if (ad->current_track_info && mp_util_is_image_valid(ad->evas,
-				ad->current_track_info->thumbnail_path) && strcmp(ad->current_track_info->thumbnail_path,
-						BROKEN_ALBUMART_IMAGE_PATH)) {
+		        ad->current_track_info->thumbnail_path) && strcmp(ad->current_track_info->thumbnail_path,
+		                BROKEN_ALBUMART_IMAGE_PATH)) {
 			elm_image_file_set(image, ad->current_track_info->thumbnail_path, NULL);
 		} else {
 			elm_image_file_set(image, PLAYER_VIEW_DETAULT_ALBUM_IMAGE, NULL);
@@ -439,13 +445,15 @@ static void _mp_player_view_control_queue_list_btn_clicked(void *data, Evas_Obje
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(!view->trans_queue_list);
 
-	if (!view->queue_list)
+	if (!view->queue_list) {
 		_mp_player_view_create_queue_list(view);
-	else
+	} else {
 		_mp_player_view_destroy_queue_list(view);
+	}
 	_mp_player_view_update_control_queue_list_btn(view);
 
 	endfunc;
@@ -455,7 +463,9 @@ Evas_Object *_mp_player_view_create_control_queue_icon_btn(Evas_Object *parent, 
 {
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "music/control_queue");
 
 	ic = elm_icon_add(parent);
@@ -477,10 +487,10 @@ static void _mp_player_view_create_control_queue_btn(void *data)
 	MP_CHECK(view);
 	MP_CHECK(view->layout);
 	view->option_button[OPTION_QUEUE] = _mp_player_view_create_control_queue_icon_btn(view->player_view_option_layout,
-			IMAGE_EDJ_NAME,
-			MP_ICON_PLAY_LIST_PATH,
-			_mp_player_view_control_queue_list_btn_clicked,
-			view);
+	                                    IMAGE_EDJ_NAME,
+	                                    MP_ICON_PLAY_LIST_PATH,
+	                                    _mp_player_view_control_queue_list_btn_clicked,
+	                                    view);
 	MP_CHECK(view->option_button[OPTION_QUEUE]);
 
 	evas_object_show(view->option_button[OPTION_QUEUE]);
@@ -497,7 +507,8 @@ static void _mp_player_view_minimize_cb(void *data, Evas_Object *obj, void *even
 {
 	startfunc
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 	struct appdata *ad = mp_util_get_appdata();
 	elm_win_lower(ad->win_main);
@@ -506,7 +517,7 @@ static void _mp_player_view_minimize_cb(void *data, Evas_Object *obj, void *even
 #ifdef MP_FEATURE_APP_IN_APP
 	DEBUG_TRACE("mp_mini_player_show");
 	mp_mini_player_show(ad, 0);
-	#endif
+#endif
 
 	endfunc
 }
@@ -516,7 +527,9 @@ static void _mp_player_view_minimize_cb(void *data, Evas_Object *obj, void *even
 static void _mp_player_view_update_snd_button_state(void *data)
 {
 	MpPlayerView_t *view = data;
-	if (!view) return;
+	if (!view) {
+		return;
+	}
 
 	MP_CHECK(view->snd_button);
 	if (mp_util_mirroring_is_connected()) {
@@ -531,7 +544,8 @@ void mp_player_view_set_snd_path_sensitivity(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	if (view->snd_button) {
 		elm_object_item_part_content_unset(view->inner_navi_it, "title_right_btn");
@@ -548,13 +562,15 @@ void mp_player_view_set_snd_path_sensitivity(void *data)
 	sound_device_mask_e g_device_mask = SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 	WARN_TRACE("Enter sound_manager_get_active_device");
 	int ret;
-	if ((ret = sound_manager_get_current_device_list(g_device_mask, &g_device_list)))
+	if ((ret = sound_manager_get_current_device_list(g_device_mask, &g_device_list))) {
 		ERROR_TRACE("sound_manager_get_active_device()... [0x%x]", ret);
+	}
 
 	while (!(ret = sound_manager_get_next_device(g_device_list, &device))) {
 		ERROR_TRACE("success to get next device\n");
-		if ((ret = sound_manager_get_device_type (device, &type)))
+		if ((ret = sound_manager_get_device_type(device, &type))) {
 			ERROR_TRACE("failed to get device type, ret[0x%x]\n", ret);
+		}
 		switch (type) {
 		case SOUND_DEVICE_BUILTIN_SPEAKER:
 			DEBUG_TRACE("SOUND_DEVICE_BUILTIN_SPEAKER");
@@ -590,27 +606,28 @@ void mp_player_view_set_snd_path_sensitivity(void *data)
 	}
 	WARN_TRACE("Leave sound_manager_foreach_available_route");
 
-	if (view->available_route_count < 2)
+	if (view->available_route_count < 2) {
 		return;
+	}
 
 	mp_snd_path snd_path;
 	mp_util_get_sound_path(&snd_path);
 	DEBUG_TRACE("snd_path=%d", snd_path);
-/*
-	const char *icon = NULL;
-	if (snd_path == MP_SND_PATH_BT)
-		icon = MP_ICON_BT_HEADSET_PATH;
-	else if (snd_path == MP_SND_PATH_EARPHONE)
-		icon = MP_ICON_HEADSET_PATH;
-	else if (snd_path == MP_SND_PATH_HDMI)
-		icon = MP_ICON_HDMI;
-	else if (snd_path == MP_SND_PATH_MIRRORING)
-		icon = MP_ICON_MIRRORING;
-	else if (snd_path == MP_SND_PATH_USB_AUDIO)
-		icon = MP_ICON_USB_AUDIOE;
-	else
-		icon = MP_ICON_SPEAKER_PATH;
-*/
+	/*
+		const char *icon = NULL;
+		if (snd_path == MP_SND_PATH_BT)
+			icon = MP_ICON_BT_HEADSET_PATH;
+		else if (snd_path == MP_SND_PATH_EARPHONE)
+			icon = MP_ICON_HEADSET_PATH;
+		else if (snd_path == MP_SND_PATH_HDMI)
+			icon = MP_ICON_HDMI;
+		else if (snd_path == MP_SND_PATH_MIRRORING)
+			icon = MP_ICON_MIRRORING;
+		else if (snd_path == MP_SND_PATH_USB_AUDIO)
+			icon = MP_ICON_USB_AUDIOE;
+		else
+			icon = MP_ICON_SPEAKER_PATH;
+	*/
 	MP_CHECK(view->snd_button);
 	evas_object_show(view->snd_button);
 	elm_object_item_part_content_set(view->inner_navi_it, "title_right_btn", view->snd_button);
@@ -629,7 +646,8 @@ static void _ctxpopup_share_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -661,7 +679,8 @@ _mp_player_view_add_playlist_create_select_cb(void *data, Evas_Object * obj, voi
 	startfunc;
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	evas_object_del(obj);
 	int response = (int)event_info;
@@ -708,7 +727,7 @@ _mp_player_view_add_playlist_select_cb(void *data, Evas_Object * obj, void *even
 	}
 #endif
 
-	mp_retm_if (ret != 0, "Fail to get value");
+	mp_retm_if(ret != 0, "Fail to get value");
 
 	bool result = false;
 
@@ -720,7 +739,7 @@ _mp_player_view_add_playlist_select_cb(void *data, Evas_Object * obj, void *even
 
 		MpView_t *view = NULL;
 		view = (MpView_t *)mp_playlist_detail_view_create(GET_NAVIFRAME,
-			MP_TRACK_BY_PLAYLIST, playlist_name, playlist_id);
+		        MP_TRACK_BY_PLAYLIST, playlist_name, playlist_id);
 		mp_view_mgr_push_view(GET_VIEW_MGR, view, NULL);
 		mp_view_update_options(view);
 		mp_view_set_title(view, playlist_name);
@@ -739,7 +758,7 @@ _mp_player_view_add_playlist_select_cb(void *data, Evas_Object * obj, void *even
 	}
 
 #ifdef MP_PLAYLIST_MAX_ITEM_COUNT
-      END:
+END:
 #endif
 
 	mp_popup_destroy(ad);
@@ -757,7 +776,8 @@ static void _ctxpopup_add_to_playlist_cb(void *data, Evas_Object *obj, void *eve
 	EVENT_TRACE();
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -797,7 +817,7 @@ static void _ctxpopup_add_to_playlist_cb(void *data, Evas_Object *obj, void *eve
 		mp_media_list_h playlists = NULL;	/*must be free*/
 
 		ret = mp_media_info_group_list_create(&playlists, MP_GROUP_BY_PLAYLIST, NULL, NULL, 0, count);
-		mp_retm_if (ret != 0, "Fail to get playlist");
+		mp_retm_if(ret != 0, "Fail to get playlist");
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_DEL, _mp_player_view_popup_del_cb, playlists);
 
 		for (i = 0; i < count; i++) {
@@ -805,14 +825,14 @@ static void _ctxpopup_add_to_playlist_cb(void *data, Evas_Object *obj, void *eve
 			mp_media_info_h plst = NULL;
 			char *name = NULL;
 			plst = mp_media_info_group_list_nth_item(playlists, i);
-			mp_retm_if (!plst, "Fail to get item");
+			mp_retm_if(!plst, "Fail to get item");
 
 			ret = mp_media_info_group_get_main_info(plst, &name);
-			mp_retm_if (ret != 0, "Fail to get value");
+			mp_retm_if(ret != 0, "Fail to get value");
 
 			mp_genlist_popup_item_append(popup, name, NULL, NULL, plst,
-						_mp_player_view_add_playlist_select_cb,
-						handle);
+			                             _mp_player_view_add_playlist_select_cb,
+			                             handle);
 		}
 
 	} else {
@@ -845,16 +865,17 @@ static void _ctxpopup_add_to_playlist_cb(void *data, Evas_Object *obj, void *eve
 	app_control_create (&service);
 	app_control_set_app_id(service, "com.samsung.group-cast");
 	app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, track_info->uri);*/
-	//app_control_set_mime(service, "audio/*");
-	/*app_control_send_launch_request(service, NULL, NULL);
-	app_control_destroy(service);
+//app_control_set_mime(service, "audio/*");
+/*app_control_send_launch_request(service, NULL, NULL);
+app_control_destroy(service);
 }*/
 
 #ifdef MP_FEATURE_ALBUMART_UPDATE
 static void _ctxpopup_update_albumart_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -872,7 +893,8 @@ static void _ctxpopup_detail_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	EVENT_TRACE();
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	_mp_player_view_volume_popup_hide(view);
@@ -885,11 +907,12 @@ static void _ctxpopup_setting_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	EVENT_TRACE();
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	_mp_player_view_volume_popup_hide(view);
-	 mp_music_viewas_pop_cb();
+	mp_music_viewas_pop_cb();
 }
 
 static void _mp_player_view_queue_add_to_playlist_cb(void *data, Evas_Object *obj, void *event_info)
@@ -903,9 +926,10 @@ static void _mp_player_view_queue_add_to_playlist_cb(void *data, Evas_Object *ob
 
 #ifdef MP_FEATURE_PERSONAL_PAGE
 	MpEditView_t *edit_view = mp_edit_view_create(GET_NAVIFRAME, (MpList_t *)(view->queue_list), false,
-			MP_EDIT_VIEW_PERSONAL_PAGE_NONE);
-	if (edit_view == NULL)
+	                          MP_EDIT_VIEW_PERSONAL_PAGE_NONE);
+	if (edit_view == NULL) {
 		return;
+	}
 #else
 	MpEditView_t *edit_view = mp_edit_view_create(GET_NAVIFRAME, (MpList_t *)(view->queue_list), false);
 #endif
@@ -962,27 +986,27 @@ _mp_player_view_add_cover_view_options(MpPlayerView_t *view, mp_track_info_t *tr
 	_append_group_play_option(view, track_info, playable);*/
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _ctxpopup_add_to_playlist_cb, view);
+	                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _ctxpopup_add_to_playlist_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, mp_common_track_delete_cb, view);
+	                             STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, mp_common_track_delete_cb, view);
 
 #ifdef MP_FEATURE_ALBUMART_UPDATE
 	if (mp_check_file_exist(track_info->uri) && mp_util_file_playable(track_info->uri))
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_UPDATE_ALBUM_ART, MP_PLAYER_MORE_BTN_UPDATE_ALBUMART, _ctxpopup_update_albumart_cb, view);
+		                             STR_MP_UPDATE_ALBUM_ART, MP_PLAYER_MORE_BTN_UPDATE_ALBUMART, _ctxpopup_update_albumart_cb, view);
 #endif
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_DETAILS, MP_PLAYER_MORE_BTN_DETAIL_IMAGE, _ctxpopup_detail_cb, view);
+	                             STR_MP_DETAILS, MP_PLAYER_MORE_BTN_DETAIL_IMAGE, _ctxpopup_detail_cb, view);
 
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SHOW_LYRICS, MP_PLAYER_MORE_BTN_SETTING, _ctxpopup_setting_cb, view);
+	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+	                             STR_MP_SHOW_LYRICS, MP_PLAYER_MORE_BTN_SETTING, _ctxpopup_setting_cb, view);
 
 #ifndef MP_FEATURE_NO_END
 	/*End*/
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 }
 
@@ -991,7 +1015,7 @@ _mp_player_view_add_radio_view_options(MpPlayerView_t *view)
 {
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
+	                             STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
 
 	/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
 		STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, _ctxpopup_setting_cb, view);*/
@@ -1015,22 +1039,22 @@ _mp_player_view_add_queue_list_options(MpPlayerView_t *view, bool playable)
 
 	if (mp_list_get_editable_count((MpList_t *)view->queue_list, MP_LIST_EDIT_TYPE_NORMAL)) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_player_view_queue_add_to_playlist_cb, view);
+		                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_player_view_queue_add_to_playlist_cb, view);
 	}
 
 	/*_append_group_play_option(view, track_info, playable);*/
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, mp_common_track_delete_cb, view);
+	                             STR_MP_DELETE, MP_PLAYER_MORE_BTN_DELETE_IMAGE, mp_common_track_delete_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
+	                             STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
 
 	/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
 		STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, _ctxpopup_setting_cb, view);*/
 
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 }
 #endif
@@ -1049,7 +1073,8 @@ static void _mp_player_view_more_button_clicked_cb(void *data, Evas_Object *obj,
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
@@ -1070,12 +1095,13 @@ static void _mp_player_view_more_button_clicked_cb(void *data, Evas_Object *obj,
 	if (view->queue_list) {
 		_mp_player_view_add_queue_list_options(view, playable);
 	} else {
-		if (view->launch_type == MP_PLAYER_NORMAL)
+		if (view->launch_type == MP_PLAYER_NORMAL) {
 			_mp_player_view_add_cover_view_options(view, track_info, playable);
-		else if (view->launch_type ==  MP_PLAYER_RADIO_PLAY)
+		} else if (view->launch_type ==  MP_PLAYER_RADIO_PLAY) {
 			_mp_player_view_add_radio_view_options(view);
-		else if (view->launch_type ==  MP_PLAYER_ARTIST_PLAY)
+		} else if (view->launch_type ==  MP_PLAYER_ARTIST_PLAY) {
 			_mp_player_view_add_artist_view_options(view);
+		}
 	}
 #else
 	/*sound player more option*/
@@ -1093,13 +1119,13 @@ static void _mp_player_view_more_button_clicked_cb(void *data, Evas_Object *obj,
 
 	if (!ad->samsung_link && (!mp_util_is_streaming(track_info->uri))) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
-				count++;
+		                             STR_MP_DETAILS, MP_PLAYER_MORE_BTN_CONN_INFO, _ctxpopup_detail_cb, view);
+		count++;
 	}
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, _mp_player_view_ctxpopup_end_cb, view);
-			count++;
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, _mp_player_view_ctxpopup_end_cb, view);
+	count++;
 #endif
 
 	if (count == 0) {
@@ -1116,7 +1142,9 @@ static void _mp_player_view_more_button_clicked_cb(void *data, Evas_Object *obj,
 static Evas_Object *_mp_player_view_create_toolbar_more_btn(Evas_Object *parent, Evas_Smart_Cb func, void *data)
 {
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "naviframe/more/default");
 	evas_object_smart_callback_add(btn, "clicked", func, data);
 	return btn;
@@ -1136,10 +1164,11 @@ static Eina_Bool _mp_player_view_back_button_clicked_cb(void *data, Elm_Object_I
 #ifdef MP_SOUND_PLAYER
 	MP_CHECK_FALSE(view);
 
-	if (ad->caller_win_id || ad->player_state == PLAY_STATE_NONE)
+	if (ad->caller_win_id || ad->player_state == PLAY_STATE_NONE) {
 		elm_exit();
-	else
+	} else {
 		elm_win_lower(ad->win_main);
+	}
 
 	endfunc;
 	return EINA_FALSE;
@@ -1156,7 +1185,8 @@ void mp_player_view_set_title(void *thiz)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->navi_it);
 	MP_CHECK(view->inner_navi_it);
 
@@ -1194,7 +1224,8 @@ static void mp_player_view_set_title_and_buttons(void *thiz)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	/* set title and sub title */
 	mp_player_view_set_title(view);
@@ -1208,9 +1239,9 @@ static void mp_player_view_set_title_and_buttons(void *thiz)
 		/*_mp_player_view_create_queue_list_btn(view);*/
 #endif
 
-	/*int i = 0;
-	for (i = 0; i < MP_OPTION_MORE; i++)
-		mp_evas_object_del(view->toolbar_options[i]);*/
+		/*int i = 0;
+		for (i = 0; i < MP_OPTION_MORE; i++)
+			mp_evas_object_del(view->toolbar_options[i]);*/
 		Evas_Object *btn = NULL;
 		btn = elm_object_item_part_content_unset(view->navi_it, "toolbar_button1");
 		mp_evas_object_del(btn);
@@ -1224,7 +1255,7 @@ static void mp_player_view_set_title_and_buttons(void *thiz)
 	if (playable) {
 		Evas_Object *btn = _mp_player_view_create_toolbar_more_btn(view->layout, _mp_player_view_more_button_clicked_cb, view);
 		elm_object_item_part_content_set(view->navi_it, "toolbar_more_btn", btn);
-	/*view->toolbar_options[MP_OPTION_MORE] = btn;*/
+		/*view->toolbar_options[MP_OPTION_MORE] = btn;*/
 	}
 
 	/* Add back button */
@@ -1241,7 +1272,8 @@ _mp_player_view_destory_cb(void *thiz)
 {
 	eventfunc;
 	MpPlayerView_t *view = thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	mp_evas_object_del(view->more_btn_ctxpopup);
 #ifdef MP_FEATURE_MUSIC_VIEW
@@ -1328,8 +1360,9 @@ static int _mp_player_view_update_options(void *thiz)
 		}
 		mp_view_mgr_pop_a_view(GET_VIEW_MGR, GET_PLAYER_VIEW);
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_UNSET_NOW_PLAYING);
-		if (ad->b_minicontroller_show)
+		if (ad->b_minicontroller_show) {
 			mp_minicontroller_hide(ad);
+		}
 #ifdef MP_FEATURE_LOCKSCREEN
 		if (ad->b_lockmini_show) {
 			mp_lockscreenmini_hide(ad);
@@ -1382,7 +1415,8 @@ static void _mp_player_view_set_bg_color(void *thiz, Evas_Object *album_image)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(album_image);
 
 	int *rgb = NULL;
@@ -1408,12 +1442,12 @@ static void _mp_player_view_set_bg_color(void *thiz, Evas_Object *album_image)
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifndef MP_SOUND_PLAYER
 	if (mp_util_is_landscape()) {
-			elm_object_part_content_set(view->player_view_layout, "base_bg", bg);
-		} else
-	#endif
-		{
-			elm_object_item_part_content_set(view->inner_navi_it, "base_bg", bg);
-		}
+		elm_object_part_content_set(view->player_view_layout, "base_bg", bg);
+	} else
+#endif
+	{
+		elm_object_item_part_content_set(view->inner_navi_it, "base_bg", bg);
+	}
 #else
 	elm_object_item_part_content_set(view->inner_navi_it, "base_bg", bg);
 #endif
@@ -1449,8 +1483,8 @@ static void _mp_player_view_set_album_image(void *thiz)
 		MP_CHECK(ad);
 		MP_CHECK(ad->current_track_info);
 		album_image =
-			_mp_player_view_create_album_image(playing_view->player_view_layout,
-				ad->current_track_info->thumbnail_path, h, w);
+		    _mp_player_view_create_album_image(playing_view->player_view_layout,
+		                                       ad->current_track_info->thumbnail_path, h, w);
 	}
 
 #ifdef MP_FEATURE_ALBUM_COVER_BG
@@ -1492,14 +1526,16 @@ static void
 _mp_player_view_volume_popup_hide(void *data)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	mp_ecore_timer_del(view->volume_popup_timer);
 	mp_evas_object_del(view->volume_popup);
 #ifdef MP_FEATURE_SPLIT_WINDOW
-	if (view->popup_win)
+	if (view->popup_win) {
 		elm_win_lower(view->popup_win);
-		mp_evas_object_del(view->popup_win);
+	}
+	mp_evas_object_del(view->popup_win);
 #endif
 }
 
@@ -1522,7 +1558,8 @@ static inline void
 _mp_player_view_volume_widget_hide_timer_start(MpPlayerView_t *view)
 {
 	startfunc;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_ecore_timer_del(view->volume_popup_timer);
 	view->volume_popup_timer = ecore_timer_add(PLAYER_VIEW_VOLUME_WIDGET_HIDE_TIME, _mp_player_view_volume_widget_timer_cb, view);
 }
@@ -1531,7 +1568,8 @@ static void
 __mp_player_view_volume_popup_del_cb(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	MpPlayerView_t *view = data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	view->volume_popup = NULL;
 	mp_ecore_timer_del(view->volume_popup_timer);
@@ -1542,7 +1580,8 @@ __mp_player_view_volume_popup_del_cb(void *data, Evas *e, Evas_Object *obj, void
 static void _mp_player_view_volume_update(void *data)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	int volume = mp_player_mgr_volume_get_current();
 	DEBUG_TRACE("volume:%d", volume);
 
@@ -1561,7 +1600,8 @@ __mp_player_view_volume_widget_event_cb(void *data, Evas_Object *obj, volume_wid
 {
 	startfunc;
 	MpPlayerView_t *view = data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	if (event == VOLUME_WIDGET_EVENT_DRAG_START) {
 		view->volume_popup_now_dragging = true;
@@ -1578,17 +1618,20 @@ static void
 _mp_player_view_volume_change_cb(int volume, void *user_data)
 {
 	MpPlayerView_t *view = user_data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
-	if (!view->volume_popup || view->volume_popup_now_dragging)
+	if (!view->volume_popup || view->volume_popup_now_dragging) {
 		return;
+	}
 
 	mp_debug("volume = %d", volume);
 	mp_player_volume_widget_set_val(view->volume_popup, volume);
 	_mp_player_view_volume_update(view);
 
-	if (volume != 0)
+	if (volume != 0) {
 		view->unmute_vol = 0;
+	}
 
 	if (view->volume_popup_timer) {
 		/* re-start timer for voice control */
@@ -1601,7 +1644,8 @@ static void
 _mp_player_view_volume_route_change(void *user_data)
 {
 	MpPlayerView_t *view = user_data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	int volume = mp_player_mgr_volume_get_current();
 
@@ -1637,15 +1681,15 @@ static int _mp_player_view_get_multi_move_pos_y(void *data)
 
 	int y = 0;
 	DEBUG_TRACE("nPosY=%d, nHeight=%d", view->nPosY, view->nHeight);
-	if (view->nPosY >= (MP_PORTRAIT_H-MP_MULTI_WIDGET_H)) {
+	if (view->nPosY >= (MP_PORTRAIT_H - MP_MULTI_WIDGET_H)) {
 		y = MP_MULTI_WIDGET_END_H;
-	} else if (view->nPosY > 0 && view->nPosY < (MP_PORTRAIT_H-MP_MULTI_WIDGET_H)) {
-		y = MP_MULTI_WIDGET_END_H-(view->nHeight-MP_MULTI_WIDGET_H)*MP_MULTI_WIDGET_SCALE;
+	} else if (view->nPosY > 0 && view->nPosY < (MP_PORTRAIT_H - MP_MULTI_WIDGET_H)) {
+		y = MP_MULTI_WIDGET_END_H - (view->nHeight - MP_MULTI_WIDGET_H) * MP_MULTI_WIDGET_SCALE;
 	} else {
 		if (view->nHeight <= MP_MULTI_WIDGET_H) {
 			y = MP_MULTI_WIDGET_START_H;
 		} else {
-			y = MP_MULTI_WIDGET_START_H+(view->nHeight-MP_MULTI_WIDGET_H)*MP_MULTI_WIDGET_SCALE;
+			y = MP_MULTI_WIDGET_START_H + (view->nHeight - MP_MULTI_WIDGET_H) * MP_MULTI_WIDGET_SCALE;
 		}
 	}
 	return y;
@@ -1666,9 +1710,10 @@ static Evas_Object *_mp_player_view_create_new_win(const char *winName, Evas_Obj
 
 	if (elm_win_wm_rotation_supported_get(pWin)) {
 		const int rots[4] = { APP_DEVICE_ORIENTATION_0,
-				APP_DEVICE_ORIENTATION_90,
-				APP_DEVICE_ORIENTATION_180,
-				APP_DEVICE_ORIENTATION_270 };
+		                      APP_DEVICE_ORIENTATION_90,
+		                      APP_DEVICE_ORIENTATION_180,
+		                      APP_DEVICE_ORIENTATION_270
+		                    };
 		elm_win_wm_rotation_available_rotations_set(pWin, rots, 4);
 	}
 	/* pass '-1' value to this API then it will unset preferred rotation angle */
@@ -1702,7 +1747,8 @@ _mp_player_view_volume_popup_show(MpPlayerView_t *view)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 
 	view->volume_popup_now_dragging = false;
@@ -1713,11 +1759,11 @@ _mp_player_view_volume_popup_show(MpPlayerView_t *view)
 		Evas_Object *pNewWin = NULL;
 		int pos_y = _mp_player_view_get_multi_move_pos_y(view);
 		pNewWin = _mp_player_view_create_new_win("MUSIC_MULTI_VIEW_VOLUME_POPUP", ad->win_main,
-			MP_MULTI_WIDGET_PADDING_W,
-			pos_y,
-			MP_MULTI_WIDGET_W,
-			MP_PORTRAIT_H);
-			view->popup_win = pNewWin;
+		          MP_MULTI_WIDGET_PADDING_W,
+		          pos_y,
+		          MP_MULTI_WIDGET_W,
+		          MP_PORTRAIT_H);
+		view->popup_win = pNewWin;
 		view->volume_popup = mp_player_volume_widget_add(pNewWin);
 		evas_event_callback_add(evas_object_evas_get(view->volume_popup), EVAS_CALLBACK_CANVAS_FOCUS_IN, _mp_player_view_volume_popup_focus_in_cb, NULL);
 		evas_event_callback_add(evas_object_evas_get(view->volume_popup), EVAS_CALLBACK_CANVAS_FOCUS_OUT, _mp_player_view_volume_popup_focus_out_cb, NULL);
@@ -1740,13 +1786,15 @@ void
 mp_player_view_volume_popup_control(void *data, bool force_show)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	if (view->volume_popup) {
-		if (force_show)
-			_mp_player_view_volume_widget_hide_timer_start(view);	/* restart timer */
-		else
+		if (force_show) {
+			_mp_player_view_volume_widget_hide_timer_start(view);    /* restart timer */
+		} else {
 			_mp_player_view_volume_popup_hide(view);
+		}
 	} else {
 		_mp_player_view_volume_popup_show(view);
 		_mp_player_view_volume_widget_hide_timer_start(view);
@@ -1757,7 +1805,8 @@ static void
 _mp_player_view_volume_hw_key_cb(void *user_data, mp_volume_key_e key, bool released)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)user_data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	mp_ecore_timer_del(view->volume_popup_timer);
 
@@ -1765,8 +1814,9 @@ _mp_player_view_volume_hw_key_cb(void *user_data, mp_volume_key_e key, bool rele
 		_mp_player_view_volume_widget_hide_timer_start(view);
 		return;
 	}
-	if (!view->volume_popup)
+	if (!view->volume_popup) {
 		_mp_player_view_volume_popup_show(view);
+	}
 
 	if (view->volume_popup && !released) {
 		if (key == MP_VOLUME_KEY_DOWN) {
@@ -1793,7 +1843,8 @@ _mp_player_view_volume_hw_key_cb(void *user_data, mp_volume_key_e key, bool rele
 static void _mp_player_view_set_shuffle_image(void *data, int shuffle_state)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	/*MP_CHECK(view->player_view_option_layout);*/
 	MP_CHECK(view->player_view_control_layout);
 	if (shuffle_state) {
@@ -1812,9 +1863,10 @@ static void _mp_player_view_set_favourite_image(void *data, int favourite_state)
 {
 	DEBUG_TRACE("favourite_state=%d", favourite_state);
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
-/*favourite button not exist in sound player*/
+	/*favourite button not exist in sound player*/
 	Evas_Object *layout = view->player_view_layout;
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 	bool landscape = mp_util_is_landscape();
@@ -1838,7 +1890,8 @@ static void _mp_player_view_set_favourite_image(void *data, int favourite_state)
 static void _mp_player_view_set_rep_image(void *data, int repeat_state)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_control_layout);
 
 	if (repeat_state == MP_PLST_REPEAT_NONE) {
@@ -1873,7 +1926,8 @@ static void _mp_player_view_set_rep_image(void *data, int repeat_state)
 void mp_player_view_set_play_image(void *data, bool playing)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_control_layout);
 
 	if (playing || view->start_on_transition_finish) {
@@ -1908,7 +1962,8 @@ static void
 _mp_player_view_progress_val_set(void *data, double position)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->progress_box);
 	MP_CHECK(view->progress_bar);
 	edje_object_part_drag_value_set(_EDJ(view->progress_bar), "progressbar_playing", position, 0.0);
@@ -1937,23 +1992,24 @@ void mp_player_view_update_progressbar(void *data)
 	if (duration > 0.) {
 		if (duration > 3600.) {
 			snprintf(total_time, sizeof(total_time), "%" MUSIC_TIME_FORMAT,
-				 MUSIC_TIME_ARGS(duration));
+			         MUSIC_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" MUSIC_TIME_FORMAT, MUSIC_TIME_ARGS(ad->music_pos));
 		} else {
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-				PLAY_TIME_ARGS(duration));
+			         PLAY_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(ad->music_pos));
 		}
 	} else {
 		if (ad->current_track_info)
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-					 PLAY_TIME_ARGS(ad->current_track_info->duration/1000.));
+			         PLAY_TIME_ARGS(ad->current_track_info->duration / 1000.));
 		snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(ad->music_pos));
 	}
 
 	double played_ratio = 0.;
-	if (duration > 0. && ad->music_pos > 0.)
+	if (duration > 0. && ad->music_pos > 0.) {
 		played_ratio = ad->music_pos / duration;
+	}
 	if (played_ratio == 0) {
 		DEBUG_TRACE("ad->music_pos=%f, duration=%f", ad->music_pos, duration);
 	}
@@ -1975,10 +2031,11 @@ mp_player_view_progress_timer_thaw(void *data)
 	CHECK_VIEW(playing_view);
 
 	if (ad->player_state == PLAY_STATE_PLAYING) {
-		if (playing_view->progressbar_timer)
+		if (playing_view->progressbar_timer) {
 			MP_TIMER_THAW(playing_view->progressbar_timer);
-		else
+		} else {
 			playing_view->progressbar_timer = ecore_timer_add(0.1, _mp_player_view_update_progressbar_cb, playing_view);
+		}
 
 	} else if (ad->player_state == PLAY_STATE_PAUSED) {
 		mp_player_view_update_progressbar(playing_view);
@@ -2000,8 +2057,9 @@ static void
 _mp_player_view_progressbar_down_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
 	startfunc;
-	if (data == NULL && obj == NULL && event_info == NULL)
+	if (data == NULL && obj == NULL && event_info == NULL) {
 		return;
+	}
 
 	evas_object_data_set(obj, "pressed", (void *)1);
 
@@ -2024,10 +2082,11 @@ _mp_player_view_progressbar_down_cb(void *data, Evas * e, Evas_Object * obj, voi
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
 
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 
@@ -2035,16 +2094,18 @@ _mp_player_view_progressbar_down_cb(void *data, Evas * e, Evas_Object * obj, voi
 
 	if (duration <= 0) {
 		mp_track_info_t *track_info = ad->current_track_info;
-		if (track_info)
+		if (track_info) {
 			duration = track_info->duration;
+		}
 	}
 	ad->music_length = duration / 1000.;
 
 
 	ad->music_pos = ratio * ad->music_length;
 
-	if (playing_view->update_flag == true)/* only collect position data when rotation does not start*/
+	if (playing_view->update_flag == true) { /* only collect position data when rotation does not start*/
 		playing_view->update_pos = ad->music_pos;
+	}
 
 	mp_player_view_update_progressbar(playing_view);
 	endfunc;
@@ -2060,8 +2121,9 @@ _mp_player_view_update_progressbar_cb(void *data)
 	MpPlayerView_t *playing_view = (MpPlayerView_t *)data;
 	MP_CHECK_FALSE(playing_view);
 
-	if (playing_view->progressbar_dragging)
+	if (playing_view->progressbar_dragging) {
 		return ECORE_CALLBACK_RENEW;
+	}
 
 	if (ad->is_lcd_off || mp_player_mgr_get_state() != PLAYER_STATE_PLAYING) {
 		playing_view->progressbar_timer = NULL;
@@ -2091,8 +2153,9 @@ _mp_player_view_update_progressbar_cb(void *data)
 		}
 	}
 
-	if (playing_view->progressbar_timer)
+	if (playing_view->progressbar_timer) {
 		ecore_timer_interval_set(playing_view->progressbar_timer, 0.5);
+	}
 
 	if (playing_view->lyric && ad->b_show_lyric) {
 		mp_lyric_sync_update(playing_view->lyric);
@@ -2133,8 +2196,9 @@ _mp_player_view_init_progress_bar(void *data)
 	duration = mp_player_mgr_get_duration();
 	if (duration <= 0) {
 		mp_track_info_t *track_info = ad->current_track_info;
-		if (track_info)
+		if (track_info) {
 			duration = track_info->duration;
+		}
 	}
 	ad->music_pos = pos / 1000.;
 	ad->music_length = duration / 1000.;
@@ -2154,10 +2218,12 @@ _mp_player_view_progressbar_seek_done_cb(void *data)
 	MP_CHECK((int)playing_view == (int)GET_PLAYER_VIEW);
 
 	int pressed = 0;
-	if (playing_view->progress_bar)
+	if (playing_view->progress_bar) {
 		pressed = (int)evas_object_data_get(playing_view->progress_bar, "pressed");
-	if (!pressed)
+	}
+	if (!pressed) {
 		mp_player_view_progress_timer_thaw(playing_view);
+	}
 
 	mp_player_view_update_buffering_progress(playing_view, 100);
 }
@@ -2167,8 +2233,9 @@ static void
 _mp_player_view_progressbar_up_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
 	startfunc;
-	if (data == NULL && obj == NULL && event_info == NULL)
+	if (data == NULL && obj == NULL && event_info == NULL) {
 		return;
+	}
 
 	evas_object_data_set(obj, "pressed", (void *)0);
 
@@ -2190,7 +2257,7 @@ _mp_player_view_progressbar_up_cb(void *data, Evas * e, Evas_Object * obj, void 
 	playing_view->update_pos = -1;
 
 	if (!(ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED
-		|| ad->player_state == PLAY_STATE_READY)) {
+	        || ad->player_state == PLAY_STATE_READY)) {
 		ERROR_TRACE("Invaild player_state : %d", ad->player_state);
 		return;
 	}
@@ -2199,10 +2266,11 @@ _mp_player_view_progressbar_up_cb(void *data, Evas * e, Evas_Object * obj, void 
 
 	current = ev->canvas.x - x;
 
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 
@@ -2226,8 +2294,9 @@ _mp_player_view_progressbar_up_cb(void *data, Evas * e, Evas_Object * obj, void 
 static void
 _mp_player_view_progressbar_move_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
-	if (data == NULL && obj == NULL && event_info == NULL)
+	if (data == NULL && obj == NULL && event_info == NULL) {
 		return;
+	}
 
 	int pressed = (int)evas_object_data_get(obj, "pressed");
 	if (!pressed) {
@@ -2253,17 +2322,19 @@ _mp_player_view_progressbar_move_cb(void *data, Evas * e, Evas_Object * obj, voi
 
 	current = ev->cur.canvas.x - x;
 
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 
 	new_pos = ratio * ad->music_length;
 	ad->music_pos = new_pos;
-	if (playing_view->update_flag == true) /* only collect position data when rotation does not start*/
+	if (playing_view->update_flag == true) { /* only collect position data when rotation does not start*/
 		playing_view->update_pos = new_pos;
+	}
 	mp_player_view_update_progressbar(playing_view);
 }
 
@@ -2283,13 +2354,15 @@ static void _mp_player_view_create_progress_layout(void *thiz)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 
 	view->progress_box = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_progress_box");
 	MP_CHECK(view->progress_box);
-	if (mp_util_is_landscape())
+	if (mp_util_is_landscape()) {
 		elm_object_signal_emit(view->progress_box, "elm,state,landscape", "");
+	}
 	evas_object_event_callback_add(view->progress_box, EVAS_CALLBACK_DEL, _mp_player_view_progess_box_del_cb, view);
 	elm_object_part_content_set(view->player_view_layout, "progress_box", view->progress_box);
 
@@ -2299,11 +2372,11 @@ static void _mp_player_view_create_progress_layout(void *thiz)
 	_mp_player_view_progress_val_set(view, 0.0);
 
 	evas_object_event_callback_add(view->progress_bar, EVAS_CALLBACK_MOUSE_DOWN,
-					_mp_player_view_progressbar_down_cb, view);
+	                               _mp_player_view_progressbar_down_cb, view);
 	evas_object_event_callback_add(view->progress_bar, EVAS_CALLBACK_MOUSE_UP,
-					_mp_player_view_progressbar_up_cb, view);
+	                               _mp_player_view_progressbar_up_cb, view);
 	evas_object_event_callback_add(view->progress_bar, EVAS_CALLBACK_MOUSE_MOVE,
-					_mp_player_view_progressbar_move_cb, view);
+	                               _mp_player_view_progressbar_move_cb, view);
 
 	endfunc;
 }
@@ -2342,7 +2415,7 @@ static bool _mp_player_view_show_lyric(void *data)
 		return false;
 	}
 
-/*lyric not exist in side cast*/
+	/*lyric not exist in side cast*/
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifndef MP_SOUND_PLAYER
 	if (mp_util_is_landscape()) {
@@ -2361,8 +2434,9 @@ static bool _mp_player_view_show_lyric(void *data)
 		edje_object_signal_emit(_EDJ(view->player_view_layout), "lrc_invisible", "lrc");
 	} else {
 		mp_debug("set show state");
-		if (g_strcmp0(mp_lyric_get_path(view->lyric), ad->current_track_info->uri))
+		if (g_strcmp0(mp_lyric_get_path(view->lyric), ad->current_track_info->uri)) {
 			evas_object_del(view->lyric);
+		}
 
 		if (!view->lyric) {
 			view->lyric = mp_lyric_create(view->layout, ad->current_track_info->uri);
@@ -2370,12 +2444,14 @@ static bool _mp_player_view_show_lyric(void *data)
 			if (view->lyric) {
 				elm_object_part_content_set(view->player_view_layout, "lrc", view->lyric);
 				evas_object_event_callback_add(view->lyric, EVAS_CALLBACK_FREE, _mp_player_view_lyric_del_cb,
-					view);
+				                               view);
 				edje_object_signal_emit(_EDJ(view->player_view_layout), "lrc_visible", "lrc");
-			} else
+			} else {
 				edje_object_signal_emit(_EDJ(view->player_view_layout), "lrc_invisible", "lrc");
-		} else
+			}
+		} else {
 			edje_object_signal_emit(_EDJ(view->player_view_layout), "lrc_visible", "lrc");
+		}
 	}
 
 	return true;
@@ -2385,7 +2461,8 @@ void
 mp_player_view_update_dmr_icon(MpPlayerView_t *view)
 {
 	startfunc;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->inner_navi_it);
 	MP_CHECK(view->dmr_button);
 	Evas_Object *ic = elm_object_part_content_get(view->dmr_button, "icon");
@@ -2394,8 +2471,9 @@ mp_player_view_update_dmr_icon(MpPlayerView_t *view)
 	MP_CHECK(ad);
 
 	bool button_disabled = elm_object_disabled_get(view->dmr_button);
-	if (button_disabled)
+	if (button_disabled) {
 		return;
+	}
 
 	if (mp_util_mirroring_is_connected()) {
 		elm_image_file_set(ic, IMAGE_EDJ_NAME, MP_ICON_NEARBY_DMR_PRESS);
@@ -2415,8 +2493,9 @@ _mp_player_view_update_wave_progressbar_cb(void *data)
 	MpPlayerView_t *playing_view = (MpPlayerView_t *)data;
 	MP_CHECK_FALSE(playing_view);
 
-	if (ad->music_length > 0.)
-		elm_progressbar_value_set(playing_view->wave_progress_bar, ad->music_pos/ad->music_length);
+	if (ad->music_length > 0.) {
+		elm_progressbar_value_set(playing_view->wave_progress_bar, ad->music_pos / ad->music_length);
+	}
 
 	return ECORE_CALLBACK_RENEW;
 
@@ -2426,7 +2505,8 @@ static void _mp_player_view_create_wave_progress(void *thiz)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 
 	view->wave_progress_bar = elm_progressbar_add(view->player_view_layout);
@@ -2449,11 +2529,11 @@ static void _mp_player_view_create_wave_progress(void *thiz)
 	view->wave_progress_bar_bg = (Evas_Object *)edje_object_part_object_get(_EDJ(view->player_view_layout), "wave_progress_bg");
 
 	evas_object_event_callback_add(view->wave_progress_bar_bg, EVAS_CALLBACK_MOUSE_DOWN,
-		_mp_player_view_progressbar_down_cb, view);
+	                               _mp_player_view_progressbar_down_cb, view);
 	evas_object_event_callback_add(view->wave_progress_bar_bg, EVAS_CALLBACK_MOUSE_UP,
-		_mp_player_view_progressbar_up_cb, view);
+	                               _mp_player_view_progressbar_up_cb, view);
 	evas_object_event_callback_add(view->wave_progress_bar_bg, EVAS_CALLBACK_MOUSE_MOVE,
-		_mp_player_view_progressbar_move_cb, view);
+	                               _mp_player_view_progressbar_move_cb, view);
 
 	endfunc;
 }
@@ -2463,7 +2543,8 @@ static void _draw_wave_view(void *data, int show_status)
 	/*startfunc;*/
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	MP_CHECK(view->wave_data);
@@ -2479,7 +2560,7 @@ static void _draw_wave_view(void *data, int show_status)
 	int index = 0;
 	int max_pos = w;
 	int hight = 0;
-	double step = view->wave_length/w;
+	double step = view->wave_length / w;
 
 	Evas_Object *image = evas_object_image_add(evas_object_evas_get(view->player_view_layout));
 	evas_object_smart_member_add(image , view->player_view_layout);
@@ -2508,12 +2589,12 @@ static void _draw_wave_view(void *data, int show_status)
 	cairo_set_operator(view->cr, CAIRO_OPERATOR_SOURCE);
 	cairo_paint(view->cr);
 	cairo_set_source_rgba(view->cr, 0.97, 0.96, 0.93, 1.0);
-	cairo_set_source_rgb (view->cr, 0.97, 0.96, 0.93);
-	cairo_move_to (view->cr, 1, 0);
+	cairo_set_source_rgb(view->cr, 0.97, 0.96, 0.93);
+	cairo_move_to(view->cr, 1, 0);
 
 	while (index < max_pos) {
-	/*DEBUG_TRACE("****data: %d", view->wave_data[hight]);*/
-		int drawpos = (h-1) - (view->wave_data[hight] * ((h-1)/100));
+		/*DEBUG_TRACE("****data: %d", view->wave_data[hight]);*/
+		int drawpos = (h - 1) - (view->wave_data[hight] * ((h - 1) / 100));
 		cairo_line_to(view->cr, index, drawpos);
 		index++;
 		hight = index * step;
@@ -2539,14 +2620,16 @@ static void _mp_player_wave_view_destory(void *data)
 	MpPlayerView_t *playing_view = (MpPlayerView_t *)data;
 	MP_CHECK(playing_view);
 	CHECK_VIEW(playing_view);
-		if (playing_view->player_view_layout)
-			elm_object_signal_emit(playing_view->player_view_layout, "wave_view_hide", "*");
+	if (playing_view->player_view_layout) {
+		elm_object_signal_emit(playing_view->player_view_layout, "wave_view_hide", "*");
+	}
 
 	IF_FREE(playing_view->wave_data);
 	mp_ecore_timer_del(playing_view->timer_wave);
 	mp_ecore_timer_del(playing_view->wave_progressbar_timer);
-		if (playing_view->progress_box)
-			elm_object_signal_emit(playing_view->progress_box, "set_show", "progress_bar");
+	if (playing_view->progress_box) {
+		elm_object_signal_emit(playing_view->progress_box, "set_show", "progress_bar");
+	}
 
 	playing_view->wave_view_status = FALSE;
 }
@@ -2567,7 +2650,8 @@ static void _mp_player_view_show_wave_view_set(void *data)
 	startfunc;
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -2577,11 +2661,11 @@ static void _mp_player_view_show_wave_view_set(void *data)
 	MP_CHECK(item);
 
 	view->wave_data = mp_music_view_mgr_exe(item->uri, &view->wave_length);
-		if (!view->wave_data) {
-			mp_error("fail to get music_view data[%s]", item->uri);
-			mp_widget_text_popup(ad, GET_STR(STR_MP_FILE_TYPE_NOT_SUPPORTED));
-			return;
-		}
+	if (!view->wave_data) {
+		mp_error("fail to get music_view data[%s]", item->uri);
+		mp_widget_text_popup(ad, GET_STR(STR_MP_FILE_TYPE_NOT_SUPPORTED));
+		return;
+	}
 
 	view->wave_view_status = TRUE;
 	_mp_player_view_create_wave_progress(view);
@@ -2590,7 +2674,7 @@ static void _mp_player_view_show_wave_view_set(void *data)
 	edje_object_signal_emit(_EDJ(view->player_view_layout), "wave_view_show", "*");
 
 	if (NULL == view->timer_wave) {
-	view->timer_wave = ecore_timer_add(20, _mp_player_view_timer_wave_update_cb, view);
+		view->timer_wave = ecore_timer_add(20, _mp_player_view_timer_wave_update_cb, view);
 	}
 
 }
@@ -2606,8 +2690,9 @@ static void _mp_player_view_hide_wave_view_set_cb(void *data, Evas_Object * obj,
 	startfunc;
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
-		mp_evas_object_del(view->more_btn_ctxpopup);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
+	mp_evas_object_del(view->more_btn_ctxpopup);
 
 	_mp_player_wave_view_destory(data);
 }
@@ -2671,8 +2756,9 @@ static void _mp_player_view_shuffle_btn_clicked_cb(void *data, Evas_Object *obj,
 	shuffle_state = !shuffle_state;
 	_mp_player_view_set_shuffle_image(data, shuffle_state);
 	mp_play_control_shuffle_set(ad, shuffle_state);
-	if (ad->win_minicon)
+	if (ad->win_minicon) {
 		mp_minicontroller_update_shuffle_and_repeat_btn(ad);
+	}
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_NOW_PLAYING);
 }
 
@@ -2715,8 +2801,9 @@ static void _mp_player_view_repeat_btn_clicked_cb(void *data, Evas_Object *obj, 
 #ifdef MP_FEATURE_AVRCP_13
 	mp_avrcp_noti_repeat_mode(repeat_state);
 #endif
-	if (ad->win_minicon)
+	if (ad->win_minicon) {
 		mp_minicontroller_update_shuffle_and_repeat_btn(ad);
+	}
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_NOW_PLAYING);
 }
 
@@ -2735,8 +2822,9 @@ static void _mp_player_view_prev_btn_unpressed_cb(void *data, Evas_Object *obj, 
 static void _mp_player_view_prev_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("prev button clicked");
-	if (elm_config_access_get())
+	if (elm_config_access_get()) {
 		mp_play_control_rew(false, false, true);
+	}
 }
 
 static void _mp_player_view_next_btn_pressed_cb(void *data, Evas_Object *obj, void *event_info)
@@ -2755,8 +2843,9 @@ static void _mp_player_view_next_btn_unpressed_cb(void *data, Evas_Object *obj, 
 static void _mp_player_view_next_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("next button clicked");
-	if (elm_config_access_get())
+	if (elm_config_access_get()) {
 		mp_play_control_ff(false, false, true);
+	}
 }
 
 static void _mp_player_view_queue_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
@@ -2766,10 +2855,11 @@ static void _mp_player_view_queue_btn_clicked_cb(void *data, Evas_Object *obj, v
 	MP_CHECK(view);
 	MP_CHECK(!view->trans_queue_list);
 
-	if (!view->queue_list)
+	if (!view->queue_list) {
 		_mp_player_view_create_queue_list(view);
-	else
+	} else {
 		_mp_player_view_destroy_queue_list(view);
+	}
 	_mp_player_view_update_control_queue_list_btn(view);
 
 	endfunc;
@@ -2837,15 +2927,15 @@ static void _mp_player_view_resize(void *data)
 	} else
 #endif
 	{
-	if (h < MP_MULTI_WINDOW_NO_PROGRESS_HEIGHT * scale) {
-		edje_object_signal_callback_add(_EDJ(view->player_view_layout), "set_hide_progress", "*", _mp_player_view_albumart_cb, view);
-		edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_progress", "*");
-	} else if (h < MP_MULTI_WINDOW_NO_OPTION_HEIGHT * scale) {
-		edje_object_signal_callback_add(_EDJ(view->player_view_layout), "set_hide_option", "*", _mp_player_view_albumart_cb, view);
-		edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_option", "*");
-	} else {
-		edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_default", "*");
-	}
+		if (h < MP_MULTI_WINDOW_NO_PROGRESS_HEIGHT * scale) {
+			edje_object_signal_callback_add(_EDJ(view->player_view_layout), "set_hide_progress", "*", _mp_player_view_albumart_cb, view);
+			edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_progress", "*");
+		} else if (h < MP_MULTI_WINDOW_NO_OPTION_HEIGHT * scale) {
+			edje_object_signal_callback_add(_EDJ(view->player_view_layout), "set_hide_option", "*", _mp_player_view_albumart_cb, view);
+			edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_option", "*");
+		} else {
+			edje_object_signal_emit(_EDJ(view->player_view_layout), "set_hide_default", "*");
+		}
 	}
 }
 #endif
@@ -2854,7 +2944,8 @@ static void _mp_player_view_add_callbacks(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	struct appdata *ad = mp_util_get_appdata();
 
 
@@ -2862,18 +2953,18 @@ static void _mp_player_view_add_callbacks(void *data)
 	bool landscape = mp_util_is_landscape();
 	if (landscape) {
 		/*side cast has no option area*/
-		#ifdef MP_FEATURE_SUGGEST_FOR_YOU
-			#ifdef MP_SOUND_PLAYER
-			view->player_view_option_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_option_area_ld");
-			evas_object_size_hint_align_set(view->player_view_option_layout, EVAS_HINT_FILL, EVAS_HINT_FILL);
-			evas_object_size_hint_weight_set(view->player_view_option_layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-			elm_object_part_content_set(view->player_view_layout, "options_area", view->player_view_option_layout);
-			evas_object_show(view->player_view_option_layout);
-			MP_CHECK(view->player_view_option_layout);
-			#else
-			view->player_view_option_layout = NULL;
-			#endif
-		#endif
+#ifdef MP_FEATURE_SUGGEST_FOR_YOU
+#ifdef MP_SOUND_PLAYER
+		view->player_view_option_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_option_area_ld");
+		evas_object_size_hint_align_set(view->player_view_option_layout, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(view->player_view_option_layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+		elm_object_part_content_set(view->player_view_layout, "options_area", view->player_view_option_layout);
+		evas_object_show(view->player_view_option_layout);
+		MP_CHECK(view->player_view_option_layout);
+#else
+		view->player_view_option_layout = NULL;
+#endif
+#endif
 	} else
 #endif
 	{
@@ -2887,15 +2978,15 @@ static void _mp_player_view_add_callbacks(void *data)
 
 #ifdef MP_FEATURE_LANDSCAPE
 	if (landscape) {
-		#ifdef MP_FEATURE_SUGGEST_FOR_YOU
-			#ifndef MP_SOUND_PLAYER
-			view->player_view_control_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_control_area_cast");
-			#else
-			view->player_view_control_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_control_area_ld");
-		#endif
-	#else
+#ifdef MP_FEATURE_SUGGEST_FOR_YOU
+#ifndef MP_SOUND_PLAYER
+		view->player_view_control_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_control_area_cast");
+#else
 		view->player_view_control_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_control_area_ld");
-	#endif
+#endif
+#else
+		view->player_view_control_layout = mp_common_load_edj(view->player_view_layout, PLAY_VIEW_EDJ_NAME, "player_view_control_area_ld");
+#endif
 	} else
 #endif
 	{
@@ -2911,74 +3002,74 @@ static void _mp_player_view_add_callbacks(void *data)
 #ifndef MP_SOUND_PLAYER
 	if (view->launch_type == MP_PLAYER_NORMAL) {
 		view->control_button[CONTROL_SHUFFLE_ON] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_SHUFFLE_ON], "music/shuffle_on",
-				"control_shuffle_on", _mp_player_view_option_btn_click_cb);
+		        "control_shuffle_on", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_SHUFFLE_OFF] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_SHUFFLE_OFF], "music/shuffle_off",
-				"control_shuffle_off", _mp_player_view_option_btn_click_cb);
+		        "control_shuffle_off", _mp_player_view_option_btn_click_cb);
 
 		view->control_button[CONTROL_REP_A] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_A], "music/rep_A",
-				"control_rep_A", _mp_player_view_option_btn_click_cb);
+		                                      "control_rep_A", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_REP_1] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_1], "music/rep_1",
-				"control_rep_1", _mp_player_view_option_btn_click_cb);
+		                                      "control_rep_1", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_REP_ALL] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_ALL], "music/rep_all",
-				"control_rep_all", _mp_player_view_option_btn_click_cb);
+		                                        "control_rep_all", _mp_player_view_option_btn_click_cb);
 	}
 
 #ifndef MP_FEATURE_SUGGEST_FOR_YOU
 
 	view->option_button[OPTION_FAVO_ON] = _mp_player_add_btn(data, view->player_view_layout, view->option_button[OPTION_FAVO_ON], "music/favourite_on",
-			"options_favourite_on", _mp_player_view_option_btn_click_cb);
+	                                      "options_favourite_on", _mp_player_view_option_btn_click_cb);
 	view->option_button[OPTION_FAVO_OFF] = _mp_player_add_btn(data, view->player_view_layout, view->option_button[OPTION_FAVO_OFF], "music/favourite_off",
-			"options_favourite_off", _mp_player_view_option_btn_click_cb);
+	                                       "options_favourite_off", _mp_player_view_option_btn_click_cb);
 #else
 	if (landscape) {
 		view->option_button[OPTION_FAVO_ON] = _mp_player_add_btn(data, view->player_view_option_layout, view->option_button[OPTION_FAVO_ON], "music/favourite_on",
-						"options_favourite_on", _mp_player_view_option_btn_click_cb);
+		                                      "options_favourite_on", _mp_player_view_option_btn_click_cb);
 		view->option_button[OPTION_FAVO_OFF] = _mp_player_add_btn(data, view->player_view_option_layout, view->option_button[OPTION_FAVO_OFF], "music/favourite_off",
-						"options_favourite_off", _mp_player_view_option_btn_click_cb);
+		                                       "options_favourite_off", _mp_player_view_option_btn_click_cb);
 	} else {
 		view->option_button[OPTION_FAVO_ON] = _mp_player_add_btn(data, view->player_view_layout, view->option_button[OPTION_FAVO_ON], "music/favourite_on",
-				"options_favourite_on", _mp_player_view_option_btn_click_cb);
+		                                      "options_favourite_on", _mp_player_view_option_btn_click_cb);
 		view->option_button[OPTION_FAVO_OFF] = _mp_player_add_btn(data, view->player_view_layout, view->option_button[OPTION_FAVO_OFF], "music/favourite_off",
-				"options_favourite_off", _mp_player_view_option_btn_click_cb);
+		                                       "options_favourite_off", _mp_player_view_option_btn_click_cb);
 	}
 #endif
 
 #else
 	if (ad->samsung_link) {
 		view->control_button[CONTROL_SHUFFLE_ON] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_SHUFFLE_ON], "music/shuffle_on",
-				"control_shuffle_on", _mp_player_view_option_btn_click_cb);
+		        "control_shuffle_on", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_SHUFFLE_OFF] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_SHUFFLE_OFF], "music/shuffle_off",
-				"control_shuffle_off", _mp_player_view_option_btn_click_cb);
+		        "control_shuffle_off", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_REP_A] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_A], "music/rep_A",
-				"control_rep_A", _mp_player_view_option_btn_click_cb);
+		                                      "control_rep_A", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_REP_1] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_1], "music/rep_1",
-				"control_rep_1", _mp_player_view_option_btn_click_cb);
+		                                      "control_rep_1", _mp_player_view_option_btn_click_cb);
 		view->control_button[CONTROL_REP_ALL] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_REP_ALL], "music/rep_all",
-				"control_rep_all", _mp_player_view_option_btn_click_cb);
+		                                        "control_rep_all", _mp_player_view_option_btn_click_cb);
 	}
 #endif
 
 	view->option_button[OPTION_VOLUME] = _mp_player_add_btn(data, view->player_view_option_layout, view->option_button[OPTION_VOLUME], "music/control_volume",
-			"options_volume", _mp_player_view_option_btn_click_cb);
+	                                     "options_volume", _mp_player_view_option_btn_click_cb);
 	view->option_button[OPTION_VOLUME_MUTE] = _mp_player_add_btn(data, view->player_view_option_layout, view->option_button[OPTION_VOLUME], "music/control_volume_mute",
-			"options_volume_mute", _mp_player_view_option_btn_click_cb);
+	        "options_volume_mute", _mp_player_view_option_btn_click_cb);
 
 #ifndef MP_SOUND_PLAYER
 	if (view->launch_type == MP_PLAYER_NORMAL) {
 		view->control_button[CONTROL_PREVIOUS] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_PREVIOUS], "music/control_previous",
-				"control_previous", NULL);
+		        "control_previous", NULL);
 	}
 #endif
 
 	view->control_button[CONTROL_PLAY] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_PLAY], "music/control_play",
-			"control_play", _mp_player_view_option_btn_click_cb);
+	                                     "control_play", _mp_player_view_option_btn_click_cb);
 	view->control_button[CONTROL_PAUSE] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_PAUSE], "music/control_pause",
-			"control_pause", _mp_player_view_option_btn_click_cb);
+	                                      "control_pause", _mp_player_view_option_btn_click_cb);
 
 #ifndef MP_SOUND_PLAYER
 	if (view->launch_type == MP_PLAYER_NORMAL || view->launch_type == MP_PLAYER_ARTIST_PLAY) {
 		view->control_button[CONTROL_NEXT] = _mp_player_add_btn(data, view->player_view_control_layout, view->control_button[CONTROL_NEXT], "music/control_next",
-			"control_next", NULL);
+		                                     "control_next", NULL);
 	}
 #endif
 
@@ -2995,10 +3086,11 @@ static void _mp_player_view_add_callbacks(void *data)
 
 	_mp_player_view_volume_update(view);
 
-	if (ad->player_state == PLAY_STATE_PLAYING)
+	if (ad->player_state == PLAY_STATE_PLAYING) {
 		mp_player_view_set_play_image(view, true);
-	else
+	} else {
 		mp_player_view_set_play_image(view, false);
+	}
 	endfunc;
 }
 
@@ -3012,17 +3104,18 @@ _mp_player_view_resume_view_status(void *data)
 	mp_player_view_update_progressbar(view);
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifndef MP_SOUND_PLAYER
-	if (mp_util_is_landscape() && mp_player_mgr_get_player_type() != MP_PLAYER_TYPE_ASF)
+	if (mp_util_is_landscape() && mp_player_mgr_get_player_type() != MP_PLAYER_TYPE_ASF) {
 		mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, false);
-	else
+	} else
 #endif
 #endif
 		mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, true);
 	mp_player_view_update_state(view);
 
 	int volume = mp_player_mgr_volume_get_current();
-	if (volume != 0)
+	if (volume != 0) {
 		view->unmute_vol = 0;
+	}
 }
 
 static void
@@ -3030,7 +3123,8 @@ _mp_player_view_start_request(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	if (view->start_on_transition_finish) {
 		struct appdata *ad = mp_util_get_appdata();
@@ -3063,15 +3157,17 @@ _mp_player_view_eventbox_clicked_cb(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
 	DEBUG_TRACE("[%d]", ad->b_show_lyric);
 
-	if (ad->b_show_lyric == 0)
+	if (ad->b_show_lyric == 0) {
 		return;
+	}
 	view->show_lyric = !view->show_lyric;
 	_mp_player_view_show_lyric(view);
 }
@@ -3081,7 +3177,8 @@ _mp_player_view_eventbox_flick_left_cb(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	_mp_player_view_transit_by_item(view, PLAYER_VIEW_MOVE_LEFT);
 }
@@ -3091,7 +3188,8 @@ _mp_player_view_eventbox_flick_right_cb(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	_mp_player_view_transit_by_item(view, PLAYER_VIEW_MOVE_RIGHT);
 }
@@ -3100,7 +3198,8 @@ static void _mp_player_view_add_event_box(void *data)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -3142,7 +3241,8 @@ static void _mp_player_view_content_layout_load(void *thiz)
 {
 	startfunc;
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
@@ -3157,15 +3257,15 @@ static void _mp_player_view_content_layout_load(void *thiz)
 
 	if (landscape) {
 		DEBUG_TRACE("mode orientation 270 or 90");
-/*
-	-naviframe
-	- layout
-	- player_view_ld
-	- albumart
-	- inner naviframe
-	- options
-	- controls
-*/
+		/*
+			-naviframe
+			- layout
+			- player_view_ld
+			- albumart
+			- inner naviframe
+			- options
+			- controls
+		*/
 
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifdef MP_SOUND_PLAYER
@@ -3179,13 +3279,13 @@ static void _mp_player_view_content_layout_load(void *thiz)
 		elm_object_focus_set(view->inner_naviframe, FALSE);
 		elm_object_focus_allow_set(view->inner_naviframe, FALSE);
 		view->inner_navi_it = elm_naviframe_item_push(view->inner_naviframe, NULL, NULL, NULL, NULL, NAVIFRAME_PLAYER_VIEW);
-	#else
-	/*CAST SIDE do not need inner_navi_it inner_naviframe*/
+#else
+		/*CAST SIDE do not need inner_navi_it inner_naviframe*/
 		view->player_view_layout = mp_common_load_edj(view->layout, PLAY_VIEW_EDJ_NAME, "player_view_side_cast");
 		view->inner_navi_it = NULL;
 		view->inner_naviframe = NULL;
 
-	#endif
+#endif
 #else
 		view->player_view_layout = mp_common_load_edj(view->layout, PLAY_VIEW_EDJ_NAME, "player_view_ld");
 		evas_object_event_callback_add(view->player_view_layout, EVAS_CALLBACK_RESIZE, _ld_layout_resize_cb, view);
@@ -3194,20 +3294,20 @@ static void _mp_player_view_content_layout_load(void *thiz)
 		MP_CHECK(view->inner_naviframe);
 		evas_object_size_hint_min_set(view->inner_naviframe, SCALED_SIZE(PLAYER_LD_RIGHT_W), 0);
 
-	elm_object_focus_set(view->inner_naviframe, FALSE);
-	elm_object_focus_allow_set(view->inner_naviframe, FALSE);
+		elm_object_focus_set(view->inner_naviframe, FALSE);
+		elm_object_focus_allow_set(view->inner_naviframe, FALSE);
 		view->inner_navi_it = elm_naviframe_item_push(view->inner_naviframe, NULL, NULL, NULL, NULL, NAVIFRAME_PLAYER_VIEW);
 #endif
 
 		MP_CHECK(view->player_view_layout);
 		elm_object_part_content_set(view->layout, "list_content", view->player_view_layout);
 
-/*cast side has not right title*/
+		/*cast side has not right title*/
 #ifndef MP_FEATURE_SUGGEST_FOR_YOU
 		elm_object_part_content_set(view->player_view_layout, "right_title", view->inner_naviframe);
 #else
 #ifdef MP_SOUND_PLAYER
-	elm_object_part_content_set(view->player_view_layout, "right_title", view->inner_naviframe);
+		elm_object_part_content_set(view->player_view_layout, "right_title", view->inner_naviframe);
 #endif
 #endif
 
@@ -3219,36 +3319,37 @@ static void _mp_player_view_content_layout_load(void *thiz)
 		elm_object_part_content_set(view->progress_box, "progress_bar", view->progress_bar);
 	} else {
 		DEBUG_TRACE("mode orientation 0");
-/*
-	-naviframe
-	- inner_naviframe
-	- player_view_portrait_base
-	- albumart
-	- options
-	- controls
-*/
+		/*
+			-naviframe
+			- inner_naviframe
+			- player_view_portrait_base
+			- albumart
+			- options
+			- controls
+		*/
 		view->inner_naviframe = mp_widget_navigation_new(view->layout);
 		MP_CHECK(view->inner_naviframe);
 
-	elm_object_focus_set(view->inner_naviframe, FALSE);
-	elm_object_focus_allow_set(view->inner_naviframe, FALSE);
+		elm_object_focus_set(view->inner_naviframe, FALSE);
+		elm_object_focus_allow_set(view->inner_naviframe, FALSE);
 
-	view->player_view_layout = mp_common_load_edj(view->inner_naviframe, PLAY_VIEW_EDJ_NAME, "player_view_portrait_base");
-	MP_CHECK(view->player_view_layout);
-	view->inner_navi_it = elm_naviframe_item_push(view->inner_naviframe, NULL, NULL, NULL, view->player_view_layout, NAVIFRAME_PLAYER_VIEW);
-	elm_naviframe_item_title_enabled_set(view->inner_navi_it, FALSE, FALSE);
+		view->player_view_layout = mp_common_load_edj(view->inner_naviframe, PLAY_VIEW_EDJ_NAME, "player_view_portrait_base");
+		MP_CHECK(view->player_view_layout);
+		view->inner_navi_it = elm_naviframe_item_push(view->inner_naviframe, NULL, NULL, NULL, view->player_view_layout, NAVIFRAME_PLAYER_VIEW);
+		elm_naviframe_item_title_enabled_set(view->inner_navi_it, FALSE, FALSE);
 
-	Evas_Object *content = elm_object_part_content_unset(view->layout, "list_content");
-	mp_evas_object_del(content);
+		Evas_Object *content = elm_object_part_content_unset(view->layout, "list_content");
+		mp_evas_object_del(content);
 
-	elm_object_part_content_set(view->layout, "list_content", view->inner_naviframe);
+		elm_object_part_content_set(view->layout, "list_content", view->inner_naviframe);
 	}
 
 	elm_object_focus_allow_set(view->inner_naviframe, TRUE);
 
 	/* reuse lyric*/
-	if (lyric)
+	if (lyric) {
 		elm_object_part_content_set(view->player_view_layout, "lrc", lyric);
+	}
 
 	/* album image */
 	_mp_player_view_set_album_image(view);
@@ -3332,8 +3433,9 @@ static void _mp_player_view_resume(void *thiz)
 
 	MpPlayerView_t *view = thiz;
 	int volume = mp_player_mgr_volume_get_current();
-	if (volume != 0)
+	if (volume != 0) {
 		view->unmute_vol = 0;
+	}
 
 	endfunc;
 }
@@ -3345,8 +3447,9 @@ static void _mp_player_view_pause(void *thiz)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	if (ad->is_lcd_off)
+	if (ad->is_lcd_off) {
 		mp_player_view_set_title(thiz);
+	}
 
 	mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, false);
 	mp_player_view_progress_timer_freeze(thiz);
@@ -3380,10 +3483,11 @@ _mp_player_view_transit_by_item_complete_cb(void *data, Elm_Transit *transit)
 
 	/* TODO: create image and set as default*/
 	Evas_Object *image = NULL;
-	if (view->move_direction == PLAYER_VIEW_MOVE_LEFT)
+	if (view->move_direction == PLAYER_VIEW_MOVE_LEFT) {
 		image = elm_object_part_content_unset(view->player_view_layout, "album_image_right");
-	else
+	} else {
 		image = elm_object_part_content_unset(view->player_view_layout, "album_image_left");
+	}
 
 	elm_object_part_content_set(view->player_view_layout, "album_image", image);
 
@@ -3403,10 +3507,11 @@ _mp_player_view_create_album_image(Evas_Object *obj, const char *path, int w, in
 	evas_object_size_hint_weight_set(thumbnail, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	evas_object_image_load_size_set(thumbnail, w, h);
-	if (path && strcmp(BROKEN_ALBUMART_IMAGE_PATH, path))
+	if (path && strcmp(BROKEN_ALBUMART_IMAGE_PATH, path)) {
 		evas_object_image_file_set(thumbnail, path, NULL);
-	else
+	} else {
 		evas_object_image_file_set(thumbnail, DEFAULT_PLAYER_THUMBNAIL, NULL);
+	}
 
 	evas_object_image_size_get(thumbnail, &width, &height);
 	evas_object_image_filled_set(thumbnail, true);
@@ -3429,15 +3534,16 @@ static Evas_Object *_get_image_by_playlist_item(Evas_Object *parent, mp_plst_ite
 	mp_track_info_t *track_info = NULL;
 
 	if (item == NULL) {
-		if (ad->current_track_info)
+		if (ad->current_track_info) {
 			path = ad->current_track_info->thumbnail_path;
+		}
 	} else {
 		mp_util_load_track_info(ad, item, &track_info);
 		path = track_info->thumbnail_path;
 	}
 
 	Evas_Object *image = _mp_player_view_create_album_image(parent,
-			path, PLAYER_VIEW_ALBUM_SIZE, PLAYER_VIEW_ALBUM_SIZE);
+	                     path, PLAYER_VIEW_ALBUM_SIZE, PLAYER_VIEW_ALBUM_SIZE);
 
 	mp_util_free_track_info(track_info);
 
@@ -3456,11 +3562,11 @@ static void _mp_player_view_create_next_album_image(void *thiz, int move_directi
 	MP_CHECK(ad);
 
 	Evas_Object *image = _get_image_by_playlist_item(playing_view->player_view_layout,
-			mp_playlist_mgr_get_next(ad->playlist_mgr, true, false));
+	                     mp_playlist_mgr_get_next(ad->playlist_mgr, true, false));
 	elm_object_part_content_set(playing_view->player_view_layout, "album_image_right", image);
 
 	image = _get_image_by_playlist_item(playing_view->player_view_layout,
-			mp_playlist_mgr_get_prev(ad->playlist_mgr));
+	                                    mp_playlist_mgr_get_prev(ad->playlist_mgr));
 	elm_object_part_content_set(playing_view->player_view_layout, "album_image_left", image);
 
 #ifdef MP_FEATURE_MUSIC_VIEW
@@ -3474,7 +3580,8 @@ static void
 _mp_player_view_transit_bg(void *data, Evas_Object *next)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(next);
 
 	const char *album_path = NULL;
@@ -3490,27 +3597,27 @@ _mp_player_view_transit_bg(void *data, Evas_Object *next)
 	Evas_Object *bg = NULL;
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifndef MP_SOUND_PLAYER
-		if (mp_util_is_landscape()) {
-			bg = elm_object_part_content_get(view->player_view_layout, "base_bg");
-		} else
-	#endif
-		{
-			bg = elm_object_item_part_content_get(view->inner_navi_it, "base_bg");
-		}
-#else
+	if (mp_util_is_landscape()) {
+		bg = elm_object_part_content_get(view->player_view_layout, "base_bg");
+	} else
+#endif
+	{
 		bg = elm_object_item_part_content_get(view->inner_navi_it, "base_bg");
+	}
+#else
+	bg = elm_object_item_part_content_get(view->inner_navi_it, "base_bg");
 #endif
 
-		Elm_Transit *transit1 = elm_transit_add();
-		elm_transit_object_add(transit1, bg);
-		elm_transit_effect_color_add(transit1, rgb1[0], rgb1[1], rgb1[2], 255, rgb2[0], rgb2[1], rgb2[2], 255);
-		DEBUG_TRACE("cur r=%d, g=%d, b=%d", rgb1[0], rgb1[1], rgb1[2]);
-		DEBUG_TRACE("next r=%d, g=%d, b=%d", rgb2[0], rgb2[1], rgb2[2]);
-		elm_transit_duration_set(transit1, PLAYER_VIEW_TRANSIT_INTERVAL);
-		elm_transit_go(transit1);
-		SAFE_FREE(rgb1);
-		SAFE_FREE(rgb2);
-	}
+	Elm_Transit *transit1 = elm_transit_add();
+	elm_transit_object_add(transit1, bg);
+	elm_transit_effect_color_add(transit1, rgb1[0], rgb1[1], rgb1[2], 255, rgb2[0], rgb2[1], rgb2[2], 255);
+	DEBUG_TRACE("cur r=%d, g=%d, b=%d", rgb1[0], rgb1[1], rgb1[2]);
+	DEBUG_TRACE("next r=%d, g=%d, b=%d", rgb2[0], rgb2[1], rgb2[2]);
+	elm_transit_duration_set(transit1, PLAYER_VIEW_TRANSIT_INTERVAL);
+	elm_transit_go(transit1);
+	SAFE_FREE(rgb1);
+	SAFE_FREE(rgb2);
+}
 #endif
 
 static void
@@ -3521,10 +3628,11 @@ _mp_player_view_transit_by_item(void *data, int move_direction)
 	MP_CHECK(ad);
 
 	MpPlayerView_t *view = (MpPlayerView_t *)data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	MP_CHECK(view->player_view_layout);
 
-	if (view->transition_state)	/* transiton(transition_state)  should be transiit callback */ {
+	if (view->transition_state) {	/* transiton(transition_state)  should be transiit callback */
 		mp_debug("skip_by transiton effect");
 		return;
 	}
@@ -3538,10 +3646,11 @@ _mp_player_view_transit_by_item(void *data, int move_direction)
 	/*mp_player_mgr_destroy(mp_util_get_appdata());*/
 
 	mp_plst_item *it = NULL;
-	if (view->move_direction == PLAYER_VIEW_MOVE_LEFT)
+	if (view->move_direction == PLAYER_VIEW_MOVE_LEFT) {
 		it = mp_playlist_mgr_get_next(ad->playlist_mgr, true, false);
-	else
+	} else {
 		it = mp_playlist_mgr_get_prev(ad->playlist_mgr);
+	}
 
 	mp_playlist_mgr_set_current(ad->playlist_mgr, it);
 
@@ -3623,7 +3732,8 @@ static void _mp_player_view_lcd_on(void *thiz)
 static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 {
 	MpPlayerView_t *view = (MpPlayerView_t *)thiz;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 	DEBUG_TRACE("event [%d]", event);
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -3644,27 +3754,26 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 		/*_mp_player_view_start_request(view);*/
 		_mp_player_view_show_lyric(view);
 		break;
-	case MP_ROUTE_CHANGED:
-		{
-			ERROR_TRACE("MP_ROUTE_CHANGED");
+	case MP_ROUTE_CHANGED: {
+		ERROR_TRACE("MP_ROUTE_CHANGED");
 
-			/*
-			** some popup of the view should be deleted only if the view is top view
-			** otherwise it will delete popup of setting view or detail view
-			*/
-			if (mp_view_mgr_get_top_view(GET_VIEW_MGR) == (MpView_t *)view)
-				mp_popup_destroy(ad);
-		#ifndef MP_SOUND_PLAYER
-			/*ms_effect_view_radio_val_set();*/
-		#endif
-
-			_mp_player_view_volume_route_change(view);
-
-			mp_player_view_set_snd_path_sensitivity(view);
-			break;
+		/*
+		** some popup of the view should be deleted only if the view is top view
+		** otherwise it will delete popup of setting view or detail view
+		*/
+		if (mp_view_mgr_get_top_view(GET_VIEW_MGR) == (MpView_t *)view) {
+			mp_popup_destroy(ad);
 		}
-	case MP_PLAYLIST_MGR_ITEM_CHANGED:
-	{
+#ifndef MP_SOUND_PLAYER
+		/*ms_effect_view_radio_val_set();*/
+#endif
+
+		_mp_player_view_volume_route_change(view);
+
+		mp_player_view_set_snd_path_sensitivity(view);
+		break;
+	}
+	case MP_PLAYLIST_MGR_ITEM_CHANGED: {
 #ifndef MP_SOUND_PLAYER
 		if (view->queue_list) {
 			mp_list_update((MpList_t *)view->queue_list);
@@ -3672,58 +3781,51 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 #endif
 		break;
 	}
-	case MP_QUICKPANNEL_SHOW:
-	{
+	case MP_QUICKPANNEL_SHOW: {
 		if (view == (MpPlayerView_t *)mp_view_mgr_get_top_view(GET_VIEW_MGR)) {
 			DEBUG_TRACE("MP_QUICKPANNEL_SHOW");
 			mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, false);
 		}
 		break;
 	}
-	case MP_QUICKPANNEL_HIDE:
-	{
+	case MP_QUICKPANNEL_HIDE: {
 		if (view == (MpPlayerView_t *)mp_view_mgr_get_top_view(GET_VIEW_MGR)) {
 			DEBUG_TRACE("MP_QUICKPANNEL_HIDE");
 			mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, true);
 		}
 		break;
 	}
-	case MP_SIDE_SYNC_STATUS_CHANGED:
-	{
+	case MP_SIDE_SYNC_STATUS_CHANGED: {
 		mp_player_view_set_snd_path_sensitivity(view);
 		break;
 	}
-	case MP_PLAYING_TRACK_CHANGED:
-	{
-		if (!view->transition_state)
+	case MP_PLAYING_TRACK_CHANGED: {
+		if (!view->transition_state) {
 			mp_player_view_refresh(view);
+		}
 
 		/* update dmr icon
 		if (ad->samsung_link)
 			_mp_player_view_update_dmr_icon_state(view);*/
 		break;
 	}
-	case MP_VIEW_EVENT_ALBUMART_CHANGED:
-	{
+	case MP_VIEW_EVENT_ALBUMART_CHANGED: {
 		mp_player_view_refresh(view);
 		break;
 	}
 #ifdef MP_FEATURE_SPLIT_WINDOW
-	case MP_WIN_RESIZED:
-	{
+	case MP_WIN_RESIZED: {
 		_mp_player_view_resize(view);
 		break;
 	}
 #endif
 #ifdef MP_FEATURE_LANDSCAPE
-	case MP_VIEW_ROTATE_START:
-	{
+	case MP_VIEW_ROTATE_START: {
 		view->update_flag = false;
 		break;
 	}
 #endif
-	case MP_UPDATE_PLAYING_LIST:
-	{
+	case MP_UPDATE_PLAYING_LIST: {
 
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 #ifndef MP_SOUND_PLAYER
@@ -3735,20 +3837,17 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 #endif
 	}
 
-	case MP_LYRIC_UPDATE:
-	{
+	case MP_LYRIC_UPDATE: {
 		_mp_player_view_show_lyric(view);
 		break;
 	}
-	case MP_UNSET_NOW_PLAYING:
-	{
+	case MP_UNSET_NOW_PLAYING: {
 		MpViewMgr_t *view_mgr = GET_VIEW_MGR;
 		MP_CHECK(view_mgr);
 		mp_view_mgr_pop_a_view(view_mgr, (MpView_t *)view);
 		break;
 	}
-	case MP_START_PLAYBACK:
-	{
+	case MP_START_PLAYBACK: {
 #ifndef MP_SOUND_PLAYER
 		mp_player_view_refresh(view);
 		if (view->queue_list) {
@@ -3760,8 +3859,7 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 	}
 	case MP_RESUME_PLAYBACK:
 	case MP_PAUSE_PLAYBACK:
-	case MP_STOP_PLAYBACK:
-	{
+	case MP_STOP_PLAYBACK: {
 #ifndef MP_SOUND_PLAYER
 		if (view->queue_list) {
 			mp_list_realized_item_part_update((MpList_t *)view->queue_list, "elm.icon.left", ELM_GENLIST_ITEM_FIELD_CONTENT);
@@ -3828,8 +3926,9 @@ _mp_player_view_rotate(void *thiz, int init_rotate)
 	_mp_player_view_update_layout(view);
 	mp_player_view_refresh(view);
 #ifdef MP_FEATURE_MUSIC_VIEW
-	if (view->wave_view_status)
+	if (view->wave_view_status) {
 		_mp_player_view_show_wave_view_set(view);
+	}
 #endif
 
 	if (view->transition_state) {
@@ -3984,7 +4083,9 @@ MpPlayerView_t *mp_player_view_create(Evas_Object *parent, int launch_type, bool
 	MP_CHECK_NULL(view);
 
 	ret = _mp_player_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	view->launch_type = launch_type;
 	view->start_new_file = start_new_file;
@@ -4020,20 +4121,22 @@ bool mp_player_view_refresh(void *data)
 #ifndef MP_SOUND_PLAYER
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
 	if (!mp_util_is_landscape()) {
-		if (playing_view->queue_list)
-			mp_now_playing_list_refresh((MpNowPlayingList_t *)playing_view->queue_list);
-		if (playing_view->queue_status)
-			_mp_player_view_refresh_queue_list(playing_view);
-	}
-		#else
 		if (playing_view->queue_list) {
 			mp_now_playing_list_refresh((MpNowPlayingList_t *)playing_view->queue_list);
 		}
 		if (playing_view->queue_status) {
 			_mp_player_view_refresh_queue_list(playing_view);
 		}
-			/*_mp_player_view_create_queue_list(playing_view);*/
-	#endif
+	}
+#else
+	if (playing_view->queue_list) {
+		mp_now_playing_list_refresh((MpNowPlayingList_t *)playing_view->queue_list);
+	}
+	if (playing_view->queue_status) {
+		_mp_player_view_refresh_queue_list(playing_view);
+	}
+	/*_mp_player_view_create_queue_list(playing_view);*/
+#endif
 #endif
 	_mp_player_view_set_album_image(playing_view);
 	_mp_player_view_set_content_info_icon(playing_view);
@@ -4041,8 +4144,9 @@ bool mp_player_view_refresh(void *data)
 
 	_mp_player_view_show_lyric(playing_view);
 
-	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED)
+	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED) {
 		mp_player_view_update_state(playing_view);
+	}
 
 	/*add favourite begin*/
 	bool favourite = FALSE;
@@ -4067,15 +4171,20 @@ void mp_player_view_update_state(void *data)
 	startfunc;
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
-	if (ad->is_lcd_off) return;
+	if (ad->is_lcd_off) {
+		return;
+	}
 
 	MpPlayerView_t *view = data;
-	if (!view) return;
+	if (!view) {
+		return;
+	}
 
 	CHECK_VIEW(view);
 
-	if (view->transition_state)
+	if (view->transition_state) {
 		return;
+	}
 
 	if ((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_PLAYING) {
 		mp_player_view_update_buffering_progress(view, 100);
@@ -4112,7 +4221,8 @@ mp_player_view_update_buffering_progress(void *data, int percent)
 	MP_CHECK(!ad->is_lcd_off);
 
 	MpPlayerView_t *view = data;
-	MP_CHECK(view); CHECK_VIEW(view);
+	MP_CHECK(view);
+	CHECK_VIEW(view);
 
 	if (percent < 0 || percent >= 100) {
 		mp_evas_object_del(view->buffering_progress);
@@ -4140,20 +4250,18 @@ void mp_player_view_set_data(MpPlayerView_t *view, ...)
 		field = va_arg(var_args, int);
 		switch (field) {
 
-		case MP_PLAYER_VIEW_LAUNCH_TYPE:
-			{
-				int val = va_arg((var_args), int);
+		case MP_PLAYER_VIEW_LAUNCH_TYPE: {
+			int val = va_arg((var_args), int);
 
-				view->launch_type = val;
-				DEBUG_TRACE("view->launch_type = %d", view->launch_type);
-				break;
-			}
+			view->launch_type = val;
+			DEBUG_TRACE("view->launch_type = %d", view->launch_type);
+			break;
+		}
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }
@@ -4170,7 +4278,7 @@ static Evas_Object *_mp_player_view_gengrid_content_get(void *data, Evas_Object 
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h track = item->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 	char *thumbpath = NULL;
 	if (!g_strcmp0(part, "albumart")) {
 		Evas_Object *icon = NULL;
@@ -4188,8 +4296,8 @@ static char *_mp_player_view_gengrid_text_get(void *data, Evas_Object *obj, cons
 	eventfunc;
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
-	mp_media_info_h track = (mp_media_info_h) (item->handle);
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_media_info_h track = (mp_media_info_h)(item->handle);
+	mp_retvm_if(!track, NULL, "data is null");
 
 	char *title = NULL;
 	char *artist = NULL;
@@ -4199,13 +4307,13 @@ static char *_mp_player_view_gengrid_text_get(void *data, Evas_Object *obj, cons
 	mp_media_info_get_album(track, &album);
 
 	if (!strcmp(part, "elm.text.1")) {
-		mp_retv_if (!title, NULL);
+		mp_retv_if(!title, NULL);
 		return g_strdup(title);
 	} else if (!strcmp(part, "elm.text.2")) {
-		mp_retv_if (!artist, NULL);
+		mp_retv_if(!artist, NULL);
 		return g_strdup(artist);
 	} else if (!strcmp(part, "elm.text.3")) {
-		mp_retv_if (!album, NULL);
+		mp_retv_if(!album, NULL);
 		return g_strdup(album);
 	}
 	return NULL;
@@ -4271,8 +4379,9 @@ static void _mp_player_view_gengrid_item_select_cb(void *data, Evas_Object * obj
 	Elm_Object_Item *gli2 = NULL;
 	int index = 0;
 
-	if (!ad->playlist_mgr)
+	if (!ad->playlist_mgr) {
 		mp_common_create_playlist_mgr();
+	}
 
 	mp_playlist_mgr_clear(ad->playlist_mgr);
 	/* creat new playlist */
@@ -4291,8 +4400,9 @@ static void _mp_player_view_gengrid_item_select_cb(void *data, Evas_Object * obj
 		mp_media_info_get_title(item_data->handle, &title);
 		mp_media_info_get_artist(item_data->handle, &artist);
 		plst_item = mp_playlist_mgr_item_append(ad->playlist_mgr, uri, uid, title, artist, track_type);
-		if (item->index == index)
+		if (item->index == index) {
 			to_play = plst_item;
+		}
 		index++;
 
 		gli2 = elm_gengrid_item_next_get(gli2);
@@ -4307,8 +4417,9 @@ static void _mp_player_view_gengrid_item_select_cb(void *data, Evas_Object * obj
 	if (ret) {
 		ERROR_TRACE("Error: mp_play_new_file..");
 #ifdef MP_FEATURE_CLOUD
-		if (ret == MP_PLAY_ERROR_NETWORK)
+		if (ret == MP_PLAY_ERROR_NETWORK) {
 			mp_widget_text_popup(NULL, GET_STR(STR_MP_THIS_FILE_IS_UNABAILABLE));
+		}
 #endif
 		return;
 	}
@@ -4341,7 +4452,7 @@ static void _mp_player_view_suggestion_album_load(void *thiz)
 	3. random track method
 	*/
 
-	 _mp_player_mood_method_get_data(playing_view, cur->uri);
+	_mp_player_mood_method_get_data(playing_view, cur->uri);
 	if (g_list_length(playing_view->suggest_list) < SUGGEST_TRACK_MIN_COUNT) {
 		DEBUG_TRACE("MOOD method is invalid");
 		g_list_free(playing_view->suggest_list);
@@ -4441,16 +4552,16 @@ static void _mp_player_genre_method_get_data(MpPlayerView_t *view, char *path)
 	mp_media_info_list_create(&svc_handle, MP_TRACK_BY_GENRE, view->genre_str, NULL, NULL, 0, 0, count);
 	MP_CHECK(svc_handle);
 
-	count = count > (SUGGEST_TRACK_MAX_COUNT+1) ? (SUGGEST_TRACK_MAX_COUNT+1) : count;
+	count = count > (SUGGEST_TRACK_MAX_COUNT + 1) ? (SUGGEST_TRACK_MAX_COUNT + 1) : count;
 	view->suggest_count = count;
 	int index = 0;
 	for (index = 0; index < view->suggest_count; index++) {
-			char *path = NULL;
-			mp_media_info_h item = NULL;
-			item = mp_media_info_list_nth_item(svc_handle, index);
-			MP_CHECK(item);
-			mp_media_info_get_file_path(item, &path);
-			sel_list = g_list_append(sel_list, path);
+		char *path = NULL;
+		mp_media_info_h item = NULL;
+		item = mp_media_info_list_nth_item(svc_handle, index);
+		MP_CHECK(item);
+		mp_media_info_get_file_path(item, &path);
+		sel_list = g_list_append(sel_list, path);
 
 	}
 	view->suggest_list  = sel_list;
@@ -4502,7 +4613,7 @@ static void _mp_player_view_suggestion_album_append(MpPlayerView_t *view, char *
 			item_data->handle = item;
 			item_data->index = index++;
 			item_data->it =  elm_gengrid_item_append(view->gengrid, view->gic, item_data,
-								_mp_player_view_gengrid_item_select_cb, item_data);
+			                 _mp_player_view_gengrid_item_select_cb, item_data);
 		}
 	}
 }
@@ -4527,10 +4638,11 @@ static void _mp_player_view_current_track_info_set(MpPlayerView_t *view)
 
 	if (view->label) {
 		elm_object_part_content_set(view->player_view_layout, "song_name", view->label);
-		if (ad->is_lcd_off)
+		if (ad->is_lcd_off) {
 			elm_label_slide_mode_set(view->label, ELM_LABEL_SLIDE_MODE_NONE);
-		else
+		} else {
 			elm_label_slide_mode_set(view->label, ELM_LABEL_SLIDE_MODE_AUTO);
+		}
 		elm_label_slide_go(view->label);
 	}
 

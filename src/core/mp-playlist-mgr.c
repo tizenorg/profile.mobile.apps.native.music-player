@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-playlist-mgr.h"
@@ -48,8 +48,9 @@ void __mp_playlist_mgr_item_free(void *data)
 
 #ifdef MP_FEATURE_CLOUD
 	IF_FREE(node->streaming_uri);
-	if (node->cancel_id)
+	if (node->cancel_id) {
 		mp_cloud_cancel_request(node->cancel_id);
+	}
 #endif
 	IF_FREE(node);
 }
@@ -60,7 +61,7 @@ mp_plst_mgr *mp_playlist_mgr_create(void)
 	mp_plst_mgr *playlist_mgr = calloc(1, sizeof(mp_plst_mgr));
 	srand((unsigned int)time(NULL));
 #ifndef MP_SOUND_PLAYER
-/* 	__mp_playlist_mgr_remove_list(); */
+	/* 	__mp_playlist_mgr_remove_list(); */
 #endif
 	endfunc;
 	return playlist_mgr;
@@ -85,7 +86,7 @@ static int __mp_playlist_mgr_rand_position(int length, int queue_lenth)
 
 	if (length > 0) {
 		rand = rand_r(&seed);
-		pos =  rand%(length-queue_lenth+1);
+		pos =  rand % (length - queue_lenth + 1);
 	}
 
 	return pos;
@@ -93,10 +94,11 @@ static int __mp_playlist_mgr_rand_position(int length, int queue_lenth)
 
 static void __mp_playlist_mgr_select_list(mp_plst_mgr *playlist_mgr)
 {
-	if (playlist_mgr->shuffle_state)
+	if (playlist_mgr->shuffle_state) {
 		playlist_mgr->list = playlist_mgr->shuffle_list;
-	else
+	} else {
 		playlist_mgr->list = playlist_mgr->normal_list;
+	}
 }
 
 #ifndef MP_SOUND_PLAYER
@@ -123,15 +125,17 @@ __save_playing_list(mp_plst_mgr *playlist_mgr)
 			fclose(fp);
 			return;
 		}
-		if (item->title)
+		if (item->title) {
 			fprintf(fp, "%s\n", item->title);
-		else
+		} else {
 			fprintf(fp, "%s\n", "");
+		}
 
-		if (item->artist)
+		if (item->artist) {
 			fprintf(fp, "%s\n", item->artist);
-		else
+		} else {
 			fprintf(fp, "%s\n", "");
+		}
 
 		fprintf(fp, "%s\n", item->uri);
 	}
@@ -161,8 +165,9 @@ _playlist_save_timer_cb(void *data)
 static void
 __mp_playlist_mgr_save_list(mp_plst_mgr *playlist_mgr)
 {
-	if (!playlist_mgr->save_timer)
+	if (!playlist_mgr->save_timer) {
 		playlist_mgr->save_timer = ecore_timer_add(0.1, _playlist_save_timer_cb, playlist_mgr);
+	}
 }
 #endif
 
@@ -174,13 +179,15 @@ static inline void _mp_playlist_mgr_item_append_common(mp_plst_mgr *playlist_mgr
 	int pos = 0;
 	mp_plst_item *cur = NULL;
 
-	if (position > g_list_length(playlist_mgr->normal_list))
+	if (position > g_list_length(playlist_mgr->normal_list)) {
 		position = -1;
+	}
 	/*insert to normal list*/
-	if (position < 0)
+	if (position < 0) {
 		playlist_mgr->normal_list = g_list_append(playlist_mgr->normal_list, node);
-	else
+	} else {
 		playlist_mgr->normal_list = g_list_insert(playlist_mgr->normal_list, node, position);
+	}
 
 	/*insert to shuffle list*/
 #ifdef MP_FEATURE_PLST_QUEUE
@@ -189,14 +196,16 @@ static inline void _mp_playlist_mgr_item_append_common(mp_plst_mgr *playlist_mgr
 	pos = __mp_playlist_mgr_rand_position(g_list_length(playlist_mgr->normal_list), queue_lenth);
 
 	int queue_start = g_list_index(playlist_mgr->shuffle_list, g_list_nth_data(playlist_mgr->queue_list, 0));
-	if (pos >= queue_start-1)
+	if (pos >= queue_start - 1) {
 		pos += queue_lenth;
+	}
 #else
 	pos = __mp_playlist_mgr_rand_position(g_list_length(playlist_mgr->normal_list), 0);
 #endif
 
-	if (playlist_mgr->shuffle_state)
+	if (playlist_mgr->shuffle_state) {
 		cur = mp_playlist_mgr_get_current(playlist_mgr);
+	}
 
 	playlist_mgr->shuffle_list = g_list_insert(playlist_mgr->shuffle_list, node, pos);
 
@@ -299,8 +308,9 @@ static GList *__mp_playlist_mgr_delete_queue_link(GList *list)
 			DEBUG_TRACE("delete : %s", item->uid);
 			new_list = g_list_remove_link(new_list, remove);
 			g_list_free(remove);
-		} else
+		} else {
 			idx++;
+		}
 
 		remove = g_list_nth(new_list, idx);
 	}
@@ -364,8 +374,9 @@ __mp_playlist_mgr_insert_queue_links(mp_plst_mgr *playlist_mgr)
 		list = g_list_previous(list);
 	} while (list);
 
-	if (playlist_mgr->queue_item_cb)
+	if (playlist_mgr->queue_item_cb) {
 		playlist_mgr->queue_item_cb(MP_PLSYLIST_QUEUE_MOVED, playlist_mgr->shuffle_state ? s_idx : idx, playlist_mgr->userdata);
+	}
 }
 
 mp_plst_item *mp_playlist_mgr_item_queue(mp_plst_mgr *playlist_mgr, const char *uri, const char *uid, mp_track_type type)
@@ -379,8 +390,9 @@ mp_plst_item *mp_playlist_mgr_item_queue(mp_plst_mgr *playlist_mgr, const char *
 
 	if (playlist_mgr->queue_list) {
 		last = g_list_last(playlist_mgr->queue_list);
-		if (last)
+		if (last) {
 			p_data = last->data;
+		}
 	}
 	/*create data*/
 	mp_plst_item *node = calloc(1, sizeof(mp_plst_item));
@@ -398,11 +410,12 @@ mp_plst_item *mp_playlist_mgr_item_queue(mp_plst_mgr *playlist_mgr, const char *
 
 	/*insert queue items to list*/
 	if (p_data) {
-		pos = g_list_index(playlist_mgr->normal_list, p_data)+1;
-		s_pos = g_list_index(playlist_mgr->shuffle_list, p_data)+1;
+		pos = g_list_index(playlist_mgr->normal_list, p_data) + 1;
+		s_pos = g_list_index(playlist_mgr->shuffle_list, p_data) + 1;
 	} else {
 		__mp_playlist_mgr_index(playlist_mgr, &pos, &s_pos);
-		pos++; s_pos++;
+		pos++;
+		s_pos++;
 	}
 	playlist_mgr->normal_list = g_list_insert(playlist_mgr->normal_list, node, pos);
 	playlist_mgr->shuffle_list = g_list_insert(playlist_mgr->shuffle_list, node, s_pos);
@@ -410,8 +423,9 @@ mp_plst_item *mp_playlist_mgr_item_queue(mp_plst_mgr *playlist_mgr, const char *
 	/*select list */
 	__mp_playlist_mgr_select_list(playlist_mgr);
 
-	if (playlist_mgr->queue_item_cb)
+	if (playlist_mgr->queue_item_cb) {
 		playlist_mgr->queue_item_cb(MP_PLAYLIST_QUEUE_ADDED, playlist_mgr->shuffle_state ? s_pos : pos, playlist_mgr->userdata);
+	}
 
 	return node;
 }
@@ -463,8 +477,9 @@ void mp_playlist_mgr_item_remove_item(mp_plst_mgr *playlist_mgr, mp_plst_item *i
 		playlist_mgr->current_index = g_list_index(playlist_mgr->list, cur);
 	}
 
-	if (playlist_mgr->current_index < 0 || playlist_mgr->current_index >= mp_playlist_mgr_count(playlist_mgr))
+	if (playlist_mgr->current_index < 0 || playlist_mgr->current_index >= mp_playlist_mgr_count(playlist_mgr)) {
 		playlist_mgr->current_index = 0;
+	}
 
 	if (cur == item) {
 		mp_playlist_mgr_set_current(playlist_mgr, mp_playlist_mgr_get_nth(playlist_mgr, playlist_mgr->current_index));
@@ -522,10 +537,12 @@ void mp_playlist_mgr_clear(mp_plst_mgr *playlist_mgr)
 
 	mp_playlist_mgr_set_playlist_id(playlist_mgr, 0);
 
-	if (playlist_mgr->normal_list)
+	if (playlist_mgr->normal_list) {
 		g_list_free_full(playlist_mgr->normal_list,  __mp_playlist_mgr_item_free);
-	if (playlist_mgr->shuffle_list)
+	}
+	if (playlist_mgr->shuffle_list) {
 		g_list_free(playlist_mgr->shuffle_list);
+	}
 
 #ifdef MP_FEATURE_PLST_QUEUE
 	if (playlist_mgr->queue_list) {
@@ -545,11 +562,13 @@ void mp_playlist_mgr_clear(mp_plst_mgr *playlist_mgr)
 
 	playlist_mgr->current_index = 0;
 
-	if (playlist_mgr->item_change_cb)
+	if (playlist_mgr->item_change_cb) {
 		playlist_mgr->item_change_cb(NULL, playlist_mgr->item_change_userdata);
+	}
 
-	if (playlist_mgr->lazy_appender)
+	if (playlist_mgr->lazy_appender) {
 		_mp_playlist_mgr_reset_lazy_appender(playlist_mgr);
+	}
 
 #ifndef MP_SOUND_PLAYER
 	/* __mp_playlist_mgr_remove_list(); */
@@ -570,8 +589,9 @@ mp_plst_item *mp_playlist_mgr_get_current(mp_plst_mgr *playlist_mgr)
 	MP_CHECK_VAL(playlist_mgr, 0);
 	mp_plst_item *cur = NULL;
 
-	if (playlist_mgr->list)
+	if (playlist_mgr->list) {
 		cur = g_list_nth_data(playlist_mgr->list, playlist_mgr->current_index);
+	}
 
 	if (!cur) {
 		WARN_TRACE("no current!!!");
@@ -616,18 +636,21 @@ mp_plst_item *mp_playlist_mgr_get_next(mp_plst_mgr *playlist_mgr, Eina_Bool forc
 
 	count = mp_playlist_mgr_count(playlist_mgr);
 
-	if (playlist_mgr->repeat_state == MP_PLST_REPEAT_ONE && !force)
+	if (playlist_mgr->repeat_state == MP_PLST_REPEAT_ONE && !force) {
 		index = playlist_mgr->current_index;
-	else
+	} else {
 		index = playlist_mgr->current_index + 1;
+	}
 
 	if (count <= index) {
 		if (playlist_mgr->repeat_state == MP_PLST_REPEAT_ALL || force) {
-			if (playlist_mgr->shuffle_state && refresh_shuffle)
+			if (playlist_mgr->shuffle_state && refresh_shuffle) {
 				__mp_playlist_mgr_refresh_shuffle(playlist_mgr);
+			}
 			index = 0;
-		} else
+		} else {
 			return NULL;
+		}
 	}
 
 	if (index >= count) {
@@ -779,16 +802,19 @@ void mp_playlist_mgr_set_current(mp_plst_mgr *playlist_mgr, mp_plst_item *cur)
 
 #ifdef MP_FEATURE_PLST_QUEUE
 	/*insert queue item after cur*/
-	if (insert_queue)
+	if (insert_queue) {
 		__mp_playlist_mgr_insert_queue_links(playlist_mgr);
+	}
 #endif
 finish:
 #ifdef MP_FEATURE_PLST_QUEUE
-	if (call_remove_item_callback && playlist_mgr->queue_item_cb)
+	if (call_remove_item_callback && playlist_mgr->queue_item_cb) {
 		playlist_mgr->queue_item_cb(MP_PLSYLIST_QUEUE_REMOVED, before_index, playlist_mgr->userdata);
+	}
 #endif
-	if (playlist_mgr->item_change_cb)
+	if (playlist_mgr->item_change_cb) {
 		playlist_mgr->item_change_cb(cur, playlist_mgr->item_change_userdata);
+	}
 
 	return;
 }
@@ -890,13 +916,15 @@ void mp_playlist_mgr_item_reorder(mp_plst_mgr *playlist_mgr, mp_plst_item *item,
 	playlist_mgr->list = g_list_delete_link(playlist_mgr->list, target);
 	playlist_mgr->list = g_list_insert(playlist_mgr->list, item, new_index);
 
-	if (current)
+	if (current) {
 		playlist_mgr->current_index = g_list_index(playlist_mgr->list, current);
+	}
 
-	if (playlist_mgr->shuffle_state)
+	if (playlist_mgr->shuffle_state) {
 		playlist_mgr->shuffle_list = playlist_mgr->list;
-	else
+	} else {
 		playlist_mgr->normal_list = playlist_mgr->list;
+	}
 }
 
 void mp_playlist_mgr_check_existance_and_refresh(mp_plst_mgr *playlist_mgr, bool *current_removed)
@@ -981,31 +1009,35 @@ static Eina_Bool _mp_playlist_mgr_lazy_appender_timer_cb(void *data)
 	}
 
 	int added = 0;
-	char line[MAX_NAM_LEN+1];
+	char line[MAX_NAM_LEN + 1];
 
-	START:
+START:
 	while (fgets(line, MAX_NAM_LEN, appender->fp)) {
 		/* artist */
-		if (!fgets(line, MAX_NAM_LEN, appender->fp))
+		if (!fgets(line, MAX_NAM_LEN, appender->fp)) {
 			break;
+		}
 
 		/* uri */
 		if (fgets(line, MAX_NAM_LEN, appender->fp)) {
 			line[MAX_NAM_LEN] = 0;
-			line[strlen(line)-1] = 0;
-		} else
+			line[strlen(line) - 1] = 0;
+		} else {
 			break;
+		}
 
 		if (mp_check_file_exist(line)) {
 			mp_plst_item *item = mp_playlist_mgr_item_append(playlist_mgr, line, NULL, NULL, NULL, MP_TRACK_URI);
-			if (item)
+			if (item) {
 				++added;
+			}
 		}
 
 		if (appender->add_remained) {
 			appender->skip_count--;
-			if (appender->skip_count == 0)
+			if (appender->skip_count == 0) {
 				break;
+			}
 		}
 
 		if (added >= MP_PLST_LAZY_APPENDER_MAX_COUNT) {
@@ -1037,8 +1069,9 @@ mp_plst_item *mp_playlist_mgr_lazy_append_with_file(mp_plst_mgr *playlist_mgr, c
 
 	mp_plst_item *cur_item = NULL;
 
-	if (!mp_check_file_exist(cur_file_path))
+	if (!mp_check_file_exist(cur_file_path)) {
 		cur_file_path = NULL;
+	}
 
 	_mp_playlist_mgr_reset_lazy_appender(playlist_mgr);
 
@@ -1046,7 +1079,7 @@ mp_plst_item *mp_playlist_mgr_lazy_append_with_file(mp_plst_mgr *playlist_mgr, c
 
 	FILE *fp = fopen(MP_PLST_LAZY_APPENDER_TEMP_FILE, "r");
 	if (fp) {
-		char line[MAX_NAM_LEN+1];
+		char line[MAX_NAM_LEN + 1];
 
 		int added = 0;
 		int index_of_first = -1;
@@ -1054,43 +1087,49 @@ mp_plst_item *mp_playlist_mgr_lazy_append_with_file(mp_plst_mgr *playlist_mgr, c
 		int skip_count = 0;
 		int add_remained = 0;
 
-		START:
-		while (fgets(line, MAX_NAM_LEN, fp))/*title */ {
+START:
+		while (fgets(line, MAX_NAM_LEN, fp)) { /*title */
 			/*artist */
-			if (!fgets(line, MAX_NAM_LEN, fp))
+			if (!fgets(line, MAX_NAM_LEN, fp)) {
 				break;
+			}
 
 			/* uri */
 			if (fgets(line, MAX_NAM_LEN, fp)) {
 				line[MAX_NAM_LEN] = 0;
-				line[strlen(line)-1] = 0;
-			} else
+				line[strlen(line) - 1] = 0;
+			} else {
 				break;
+			}
 
 			/* find first index */
 			if (index_of_first == -1 &&   /*first track not found */
-				(g_strcmp0(cur_file_path, line)) && start_index != index) {
+			        (g_strcmp0(cur_file_path, line)) && start_index != index) {
 				skip_count++;
 			} else if (index_of_first < 0) {
 				DEBUG_TRACE("Find first track: %d", index);
 				index_of_first = index; /*set first index if first index not found */
 			}
 			index++;
-			if (index_of_first < 0) continue; /* continue to find first */
+			if (index_of_first < 0) {
+				continue;    /* continue to find first */
+			}
 
 			/* append item */
 			if (mp_check_file_exist(line)) {
 				mp_plst_item *item = mp_playlist_mgr_item_append(playlist_mgr, line, NULL, NULL, NULL, MP_TRACK_URI);
 				++added;
-				if (!cur_item)
+				if (!cur_item) {
 					cur_item = item;
+				}
 			}
 
 			/* append remaining mode */
 			if (add_remained) {
 				skip_count--;
-				if (skip_count == 0)
+				if (skip_count == 0) {
 					break;
+				}
 			}
 
 			/* create lazy appender */
@@ -1124,7 +1163,7 @@ mp_plst_item *mp_playlist_mgr_lazy_append_with_file(mp_plst_mgr *playlist_mgr, c
 	mp_file_remove(MP_PLST_LAZY_APPENDER_TEMP_FILE);
 
 	endfunc;
-	END:
+END:
 	mp_playlist_mgr_set_current(playlist_mgr, cur_item);
 	return cur_item;
 }

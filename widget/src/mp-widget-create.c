@@ -54,27 +54,28 @@ static Eina_Bool is_play = EINA_FALSE;
 Eina_List *widget_list = NULL;
 
 void mp_widget_win_del_cb(void *data, Evas *evas, Evas_Object *obj,
-	void *event_info)
+                          void *event_info)
 {
 	ecore_timer_del(data);
 }
 
 void mp_widget_key_down_cb(void *data, Evas *evas, Evas_Object *obj,
-	void *event_info)
+                           void *event_info)
 {
 	elm_exit();
 }
 
 void mp_widget_app_get_resource(const char *edj_file_in, char *edj_path_out,
-	int edj_path_max)
+                                int edj_path_max)
 {
 	char *res_path = app_get_resource_path();
 	if (res_path) {
 		snprintf(edj_path_out, edj_path_max, "%s%s", res_path,
-			edj_file_in);
+		         edj_file_in);
 	}
-	if (res_path)
+	if (res_path) {
 		free(res_path);
+	}
 }
 
 static void mp_widget_read_ini_file_ecore(void *data, char *path)
@@ -156,7 +157,7 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 		}
 		if (!strcmp(key, "artist")) {
 			elm_object_part_text_set(layout, "track_artist_title",
-				value);
+			                         value);
 		}
 		if (!strcmp(key, "thumbnail")) {
 			if (value) {
@@ -299,7 +300,7 @@ static void mp_widget_read_ini_file(char *path, void *data)
 		}
 		if (!strcmp(key, "uri")) {
 			wgtdata->file_path = (char *)malloc((strlen(value) + 1) * sizeof(char));
-			
+
 			if (wgtdata->file_path) {
 				strncpy(wgtdata->file_path, value, strlen(value));
 				wgtdata->file_path[strlen(value)] = '\0';
@@ -310,7 +311,7 @@ static void mp_widget_read_ini_file(char *path, void *data)
 		}
 		if (!strcmp(key, "artist")) {
 			elm_object_part_text_set(layout, "track_artist_title",
-				value);
+			                         value);
 		}
 		if (!strcmp(key, "thumbnail")) {
 			if (value) {
@@ -318,7 +319,7 @@ static void mp_widget_read_ini_file(char *path, void *data)
 				if (image_path) {
 					strncpy(image_path, value, strlen(value));
 					image_path[strlen(value)] = '\0';
-				
+
 					if (!strcmp(BROKEN_ALBUMART_IMAGE_PATH, image_path)) {
 						free(image_path);
 						image_path = NULL;
@@ -361,31 +362,31 @@ static void mp_widget_music_player_result_callback(void *data)
 
 static int message_port_send_event_message(const char *event)
 {
-   int ret;
-   bundle *b = bundle_create();
-   if (b == NULL) {
-	   ERROR_TRACE("Unable to add data to bundle");
+	int ret;
+	bundle *b = bundle_create();
+	if (b == NULL) {
+		ERROR_TRACE("Unable to add data to bundle");
 		return -1;
-   }
-   bundle_add(b, MP_LB_EVENT_KEY, event);
-   ret = message_port_send_message(APP_ID, MP_MESSAGE_PORT_LIVEBOX, b);
-   if (ret != MESSAGE_PORT_ERROR_NONE) {
-	   ERROR_TRACE("Message remote port error: %d", ret);
-   }
-   bundle_free(b);
-   return ret;
+	}
+	bundle_add(b, MP_LB_EVENT_KEY, event);
+	ret = message_port_send_message(APP_ID, MP_MESSAGE_PORT_LIVEBOX, b);
+	if (ret != MESSAGE_PORT_ERROR_NONE) {
+		ERROR_TRACE("Message remote port error: %d", ret);
+	}
+	bundle_free(b);
+	return ret;
 }
 
 bool check_remote_message_port(void)
 {
-   int ret = -1;
-   bool found = false;
+	int ret = -1;
+	bool found = false;
 
-   ret = message_port_check_remote_port(APP_ID, MP_MESSAGE_PORT_LIVEBOX, &found);
-   if (ret != MESSAGE_PORT_ERROR_NONE) {
-	   ERROR_TRACE("message_port_check_remote_port error : %d", ret);
-   }
-   return found;
+	ret = message_port_check_remote_port(APP_ID, MP_MESSAGE_PORT_LIVEBOX, &found);
+	if (ret != MESSAGE_PORT_ERROR_NONE) {
+		ERROR_TRACE("message_port_check_remote_port error : %d", ret);
+	}
+	return found;
 }
 
 static int message_port_init(const char *event)
@@ -397,7 +398,7 @@ static int message_port_init(const char *event)
 }
 
 static int mp_widget_music_player_launch(void *data, char **extra_data_keys,
-		char **extra_data_values, int extra_data_length, Eina_Bool show_player, char *filepath)
+        char **extra_data_values, int extra_data_length, Eina_Bool show_player, char *filepath)
 {
 	Evas_Object *layout = (Evas_Object *)data;
 	if (layout == NULL) {
@@ -416,7 +417,7 @@ static int mp_widget_music_player_launch(void *data, char **extra_data_keys,
 
 		for (i = 0; i < extra_data_length; ++i) {
 			app_control_add_extra_data(service, extra_data_keys[i],
-				extra_data_values[i]);
+			                           extra_data_values[i]);
 		}
 
 		if (!show_player) {
@@ -427,7 +428,7 @@ static int mp_widget_music_player_launch(void *data, char **extra_data_keys,
 		app_control_add_extra_data(service, "uri", filepath);
 
 		ret = app_control_send_launch_request(service,
-			mp_widget_music_player_result_callback, layout);
+		                                      mp_widget_music_player_result_callback, layout);
 		if (ret != APP_CONTROL_ERROR_NONE) {
 			ERROR_TRACE("Failed to send launch request");
 		}
@@ -438,7 +439,7 @@ static int mp_widget_music_player_launch(void *data, char **extra_data_keys,
 }
 
 static void mp_widget_click_on_add_tracks_cb(void *data, Evas_Object *obj,
-	const char *emission, const char *source)
+        const char *emission, const char *source)
 {
 	if (!data) {
 		DEBUG_TRACE("Invalid data");
@@ -472,7 +473,7 @@ static void mp_widget_click_on_add_tracks_cb(void *data, Evas_Object *obj,
 	}
 
 	mp_widget_music_player_launch(layout, extra_data_keys,
-		extra_data_values, extra_data_len, EINA_TRUE, NULL);
+	                              extra_data_values, extra_data_len, EINA_TRUE, NULL);
 	mp_widget_music_player_result_callback(layout);
 
 	for (i = 0; i < extra_data_len; ++i) {
@@ -485,7 +486,7 @@ static void mp_widget_click_on_add_tracks_cb(void *data, Evas_Object *obj,
 }
 
 static void mp_widget_click_on_track_image_cb(void *data, Evas_Object *obj,
-	const char *emission, const char *source)
+        const char *emission, const char *source)
 {
 	if (!data) {
 		DEBUG_TRACE("Invalid data");
@@ -519,7 +520,7 @@ static void mp_widget_click_on_track_image_cb(void *data, Evas_Object *obj,
 	}
 
 	mp_widget_music_player_launch(layout, extra_data_keys,
-		extra_data_values, extra_data_len, EINA_TRUE, wgtdata->file_path);
+	                              extra_data_values, extra_data_len, EINA_TRUE, wgtdata->file_path);
 	mp_widget_music_player_result_callback(layout);
 
 	for (i = 0; i < extra_data_len; ++i) {
@@ -541,7 +542,7 @@ static bool telephony_is_call_connected(void)
 
 	int tel_valid = telephony_init(&tel_list);
 	if (tel_valid != 0) {
-		ERROR_TRACE("telephony is not initialized. ERROR Code is %d",tel_valid);
+		ERROR_TRACE("telephony is not initialized. ERROR Code is %d", tel_valid);
 		return false;
 	}
 
@@ -569,7 +570,7 @@ static bool telephony_is_call_connected(void)
 }
 
 static void mp_widget_click_on_play_cb(void *data, Evas_Object *obj,
-	const char *emission, const char *source)
+                                       const char *emission, const char *source)
 {
 	if (!data) {
 		DEBUG_TRACE("Invalid data");
@@ -583,10 +584,11 @@ static void mp_widget_click_on_play_cb(void *data, Evas_Object *obj,
 		WARN_TRACE("receive PLAYER_INTERRUPTED_BY_CALL");
 		if (message) {
 			int ret = notification_status_message_post(dgettext(domain_name, message));
-			if (ret != 0)
+			if (ret != 0) {
 				ERROR_TRACE("notification_status_message_post()... [0x%x]", ret);
-			else
+			} else {
 				DEBUG_TRACE("message: [%s]", message);
+			}
 		}
 		return;
 	}
@@ -632,7 +634,7 @@ static void mp_widget_click_on_play_cb(void *data, Evas_Object *obj,
 
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
-				extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
+		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
 		mp_widget_music_player_result_callback(layout);
 	}
 	for (i = 0; i < extra_data_len; ++i) {
@@ -645,7 +647,7 @@ static void mp_widget_click_on_play_cb(void *data, Evas_Object *obj,
 }
 
 static void mp_widget_click_on_previous_cb(void *data, Evas_Object *obj,
-	const char *emission, const char *source)
+        const char *emission, const char *source)
 {
 	if (!data) {
 		DEBUG_TRACE("Invalid data");
@@ -694,7 +696,7 @@ static void mp_widget_click_on_previous_cb(void *data, Evas_Object *obj,
 
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
-				extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
+		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
 		mp_widget_music_player_result_callback(layout);
 	}
 
@@ -708,7 +710,7 @@ static void mp_widget_click_on_previous_cb(void *data, Evas_Object *obj,
 }
 
 static void mp_widget_click_on_next_cb(void *data, Evas_Object *obj,
-	const char *emission, const char *source)
+                                       const char *emission, const char *source)
 {
 	if (!data) {
 		DEBUG_TRACE("Invalid data");
@@ -757,7 +759,7 @@ static void mp_widget_click_on_next_cb(void *data, Evas_Object *obj,
 
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
-				extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
+		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
 		mp_widget_music_player_result_callback(layout);
 	}
 
@@ -804,7 +806,7 @@ int mp_widget_create(WidgetData* data, int w, int h)
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	if ((elm_config_scale_get() - 1.7) < 0.0001) {
-		h= 304;
+		h = 304;
 	} else if ((elm_config_scale_get() - 1.8) < 0.0001) {
 		h = 253;
 	} else if ((elm_config_scale_get() - 2.4) < 0.0001) {
@@ -834,20 +836,20 @@ int mp_widget_create(WidgetData* data, int w, int h)
 	}
 
 	elm_object_signal_callback_add(layout, "mouse,down,1",
-			"noitems_subtitle", mp_widget_click_on_add_tracks_cb,
-			(void *)data);
+	                               "noitems_subtitle", mp_widget_click_on_add_tracks_cb,
+	                               (void *)data);
 	elm_object_signal_callback_add(layout, "mouse,down,1",
-			"track_image", mp_widget_click_on_track_image_cb,
-			(void *)data);
+	                               "track_image", mp_widget_click_on_track_image_cb,
+	                               (void *)data);
 	elm_object_signal_callback_add(layout, "mouse,down,1",
-			"track_play_image", mp_widget_click_on_play_cb,
-			(void *)data);
+	                               "track_play_image", mp_widget_click_on_play_cb,
+	                               (void *)data);
 	elm_object_signal_callback_add(layout, "mouse,down,1",
-			"track_prev_image", mp_widget_click_on_previous_cb,
-			(void *)data);
+	                               "track_prev_image", mp_widget_click_on_previous_cb,
+	                               (void *)data);
 	elm_object_signal_callback_add(layout, "mouse,down,1",
-			"track_next_image", mp_widget_click_on_next_cb,
-			(void *)data);
+	                               "track_next_image", mp_widget_click_on_next_cb,
+	                               (void *)data);
 
 	return 0;
 }

@@ -1,18 +1,18 @@
 /*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-now-playing-list.h"
@@ -37,8 +37,8 @@ _mp_now_playing_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MpNowPlayingList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	mp_media_info_h track = (mp_media_info_h) (item->handle);
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_media_info_h track = (mp_media_info_h)(item->handle);
+	mp_retvm_if(!track, NULL, "data is null");
 
 	struct appdata *ad = mp_util_get_appdata();
 	mp_plst_item * current = mp_playlist_mgr_get_current(ad->playlist_mgr);
@@ -50,7 +50,7 @@ _mp_now_playing_list_label_get(void *data, Evas_Object * obj, const char *part)
 		} else {
 			mp_media_info_get_artist(track, &title);
 		}
-		mp_retv_if (!title, NULL);
+		mp_retv_if(!title, NULL);
 
 		char *markup = NULL;
 		static char result[DEF_STR_LEN + 1] = { 0, };
@@ -63,9 +63,9 @@ _mp_now_playing_list_label_get(void *data, Evas_Object * obj, const char *part)
 			g = 108;
 			b = 148;
 			a = 255;
-			memset(result, 0x00, DEF_STR_LEN+1);
+			memset(result, 0x00, DEF_STR_LEN + 1);
 			snprintf(result, DEF_STR_LEN,
-					 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, info);
+			         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, info);
 			IF_FREE(info);
 
 			return g_strdup(result);
@@ -84,7 +84,7 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 	MP_CHECK_NULL(item);
 
 	mp_media_info_h track = item->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 
 	Evas_Object *content = NULL;
 	content = elm_layout_add(obj);
@@ -98,7 +98,7 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 	MP_CHECK_NULL(current);
 	char *uri = NULL;
 	mp_media_info_get_file_path(track, &uri);
-	mp_retv_if (!uri, NULL);
+	mp_retv_if(!uri, NULL);
 
 	Evas_Object *part_content = elm_object_item_part_content_get(item->it, "elm.icon.1");
 
@@ -113,9 +113,9 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 
 	if (match && part_content) {
 		ERROR_TRACE("set state: %d", (int)mp_player_mgr_get_state());
-		if ((int)mp_player_mgr_get_state()== (int)PLAYER_STATE_PLAYING) {
+		if ((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_PLAYING) {
 			elm_object_signal_emit(part_content, "show_play", "*");
-		} else if (((int)mp_player_mgr_get_state()== (int)PLAYER_STATE_PAUSED) || ((int)mp_player_mgr_get_state()== (int)PLAYER_STATE_READY)) {
+		} else if (((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_PAUSED) || ((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_READY)) {
 			elm_object_signal_emit(part_content, "show_pause", "*");
 		}
 	}
@@ -130,7 +130,7 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 		elm_layout_content_set(content, "elm.swallow.content", icon);
 
 		if (match && content) {
-			if ((int)mp_player_mgr_get_state()== (int)PLAYER_STATE_PLAYING) {
+			if ((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_PLAYING) {
 				elm_object_signal_emit(content, "show_play", "*");
 			} else {
 				elm_object_signal_emit(content, "show_pause", "*");
@@ -141,7 +141,7 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 		content = elm_check_add(obj);
 		elm_object_style_set(content, "default/genlist");
 		elm_check_state_pointer_set(content, &item->checked);
-		 //evas_object_smart_callback_add(content, "changed", mp_common_genlist_checkbox_sel_cb, item);
+		//evas_object_smart_callback_add(content, "changed", mp_common_genlist_checkbox_sel_cb, item);
 
 	}
 
@@ -166,18 +166,18 @@ _mp_now_playing_list_item_del_cb(void *data, Evas_Object *obj)
 static Eina_Bool
 _mp_now_playing_genlist_sel_timer_cb(void *data)
 {
-        MpNowPlayingList_t *list = data;
-        MP_CHECK_FALSE(list);
-        MP_CHECK_FALSE(list->genlist);
+	MpNowPlayingList_t *list = data;
+	MP_CHECK_FALSE(list);
+	MP_CHECK_FALSE(list->genlist);
 
-        list->sel_idler = NULL;
+	list->sel_idler = NULL;
 
-        Elm_Object_Item *gl_item = elm_genlist_first_item_get(list->genlist);
-        while (gl_item) {
-                elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
-                gl_item = elm_genlist_item_next_get(gl_item);
-        }
-        return ECORE_CALLBACK_DONE;
+	Elm_Object_Item *gl_item = elm_genlist_first_item_get(list->genlist);
+	while (gl_item) {
+		elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
+		gl_item = elm_genlist_item_next_get(gl_item);
+	}
+	return ECORE_CALLBACK_DONE;
 }
 
 
@@ -199,8 +199,7 @@ _mp_now_playing_genlist_sel_cb(void *data, Evas_Object * obj, void *event_info)
 
 	MpNowPlayingList_t *list = data;
 	MP_CHECK(list);
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		mp_list_edit_mode_sel((MpList_t *)list, item_data);
 		MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 		MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
@@ -216,30 +215,23 @@ _mp_now_playing_genlist_sel_cb(void *data, Evas_Object * obj, void *event_info)
 		mp_play_destory(ad);
 		ad->paused_by_user = FALSE;
 		int ret = mp_play_new_file(ad, TRUE);
-		if (ret)
-		{
+		if (ret) {
 			ERROR_TRACE("Error: mp_play_new_file..");
 #ifdef MP_FEATURE_CLOUD
-			if (ret == MP_PLAY_ERROR_NETWORK)
+			if (ret == MP_PLAY_ERROR_NETWORK) {
 				mp_widget_text_popup(NULL, GET_STR(STR_MP_THIS_FILE_IS_UNABAILABLE));
+			}
 #endif
 			return;
 		}
-	}
-	else
-	{
+	} else {
 		/*if click the current track, it should chang the playing status.
 		If at the beginning, should play the song*/
-		if (ad->player_state == PLAY_STATE_PLAYING)
-		{
+		if (ad->player_state == PLAY_STATE_PLAYING) {
 			mp_play_control_play_pause(ad, false);
-		}
-		else if (ad->player_state == PLAY_STATE_PAUSED)
-		{
+		} else if (ad->player_state == PLAY_STATE_PAUSED) {
 			mp_play_control_play_pause(ad, true);
-		}
-		else
-		{
+		} else {
 			ad->paused_by_user = FALSE;
 			mp_play_new_file(ad, TRUE);
 		}
@@ -250,13 +242,13 @@ _mp_now_playing_genlist_sel_cb(void *data, Evas_Object * obj, void *event_info)
 		mp_player_view_refresh(player_view);
 	}
 
-        Elm_Object_Item *gl_item = elm_genlist_first_item_get(list->genlist);
-        while (gl_item) {
-                elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-                gl_item = elm_genlist_item_next_get(gl_item);
-        }
-        mp_ecore_idler_del(list->sel_idler);
-        list->sel_idler = ecore_idler_add(_mp_now_playing_genlist_sel_timer_cb, list);
+	Elm_Object_Item *gl_item = elm_genlist_first_item_get(list->genlist);
+	while (gl_item) {
+		elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		gl_item = elm_genlist_item_next_get(gl_item);
+	}
+	mp_ecore_idler_del(list->sel_idler);
+	list->sel_idler = ecore_idler_add(_mp_now_playing_genlist_sel_timer_cb, list);
 
 	return;
 }
@@ -269,8 +261,7 @@ _mp_now_playing_list_load_list(void *thiz, int count)
 
 	/*clear genlist*/
 	Elm_Object_Item *item = elm_genlist_first_item_get(list->genlist);
-	if (item)
-	{
+	if (item) {
 		elm_genlist_item_bring_in(item, ELM_GENLIST_ITEM_SCROLLTO_IN);
 		elm_genlist_clear(list->genlist);
 	}
@@ -284,11 +275,12 @@ _mp_now_playing_list_load_list(void *thiz, int count)
 	mp_plst_item *plst_item = NULL;
 
 	int res = 0;
-	int index =0;
-	for (index = 0; index < count; index++)
-	{
+	int index = 0;
+	for (index = 0; index < count; index++) {
 		plst_item = mp_playlist_mgr_normal_list_get_nth(ad->playlist_mgr, index);
-		if (!plst_item) continue;
+		if (!plst_item) {
+			continue;
+		}
 
 		mp_list_item_data_t *item_data = calloc(1, sizeof(mp_list_item_data_t));
 		mp_assert(item_data);
@@ -307,7 +299,7 @@ _mp_now_playing_list_load_list(void *thiz, int count)
 		item_data->handle = handle;
 
 		item_data->it = elm_genlist_item_append(list->genlist, list->itc, item_data, NULL,
-									    ELM_GENLIST_ITEM_NONE, _mp_now_playing_genlist_sel_cb, list);
+		                                        ELM_GENLIST_ITEM_NONE, _mp_now_playing_genlist_sel_cb, list);
 	}
 
 	endfunc;
@@ -327,7 +319,9 @@ _mp_now_playing_list_item_moved_cb(void *data, Evas_Object *obj, void *event_inf
 	Elm_Object_Item *temp = elm_genlist_first_item_get(obj);
 	while (temp) {
 		++index;
-		if (temp == item) break;
+		if (temp == item) {
+			break;
+		}
 		temp = elm_genlist_item_next_get(temp);
 	}
 	mp_debug("reordered index = %d", index);
@@ -342,8 +336,9 @@ _mp_now_playing_list_item_moved_cb(void *data, Evas_Object *obj, void *event_inf
 
 	char *uid = NULL;
 	mp_media_info_h media = item_data->handle;
-	if (media)
+	if (media) {
 		mp_media_info_get_media_id(media, &uid);
+	}
 
 	mp_plst_item *plst_item = mp_playlist_mgr_get_item_by_uid(ad->playlist_mgr, uid);
 	if (plst_item) {
@@ -389,8 +384,7 @@ _mp_now_playing_list_update(void *thiz)
 	mp_evas_object_del(list->genlist);
 
 	int count = mp_playlist_mgr_count(ad->playlist_mgr);
-	if (count)
-	{
+	if (count) {
 		if (!list->genlist) {
 			/*create new genlist*/
 			list->genlist = mp_widget_genlist_create(list->box);
@@ -429,9 +423,7 @@ _mp_now_playing_list_update(void *thiz)
 		/* load list */
 		_mp_now_playing_list_load_list(thiz, count);
 
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("count is 0");
 		list->no_content = mp_widget_create_no_contents(list->box, MP_NOCONTENT_NORMAL, NULL, NULL);
 		elm_box_pack_end(list->box, list->no_content);
@@ -440,7 +432,7 @@ _mp_now_playing_list_update(void *thiz)
 }
 
 static Eina_Bool
-  _mp_now_playing_list_loading_timer_cb(void *data)
+_mp_now_playing_list_loading_timer_cb(void *data)
 {
 	MpNowPlayingList_t *list = data;
 	MP_CHECK_FALSE(list);
@@ -484,27 +476,23 @@ mp_now_playing_list_set_data(MpNowPlayingList_t *list, ...)
 	int field;
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
 		DEBUG_TRACE("field is %d", field);
 
-		switch (field)
-		{
-		case MP_NOW_PLAYING_LIST_ATTR_HIGHLIGHT_CURRENT:
-			{
-				int val = va_arg((var_args), int);
+		switch (field) {
+		case MP_NOW_PLAYING_LIST_ATTR_HIGHLIGHT_CURRENT: {
+			int val = va_arg((var_args), int);
 
-				list->highlight_current = val;
-				DEBUG_TRACE("list->highlight_current = %d", list->highlight_current);
-				break;
-			}
+			list->highlight_current = val;
+			DEBUG_TRACE("list->highlight_current = %d", list->highlight_current);
+			break;
+		}
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }
@@ -541,20 +529,20 @@ mp_now_playing_list_remove_selected_item(MpNowPlayingList_t *list)
 		}
 	}
 
-	 mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_MGR_ITEM_CHANGED);
+	mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_MGR_ITEM_CHANGED);
 
 	if (now_playing_changed) {
 		mp_play_destory(ad);
 		ad->paused_by_user = FALSE;
 		mp_playlist_mgr_set_current(ad->playlist_mgr, current_plst);
 		int ret = mp_play_new_file(ad, true);
-                if (ret)
-		{
+		if (ret) {
 			ERROR_TRACE("Fail to play new file");
 #ifdef MP_FEATURE_CLOUD
-			if (ret == MP_PLAY_ERROR_NETWORK)
+			if (ret == MP_PLAY_ERROR_NETWORK) {
 				mp_widget_text_popup(NULL, GET_STR(STR_MP_THIS_FILE_IS_UNABAILABLE));
-                        return;
+			}
+			return;
 #endif
 		}
 	}
@@ -599,8 +587,9 @@ mp_now_playing_list_refresh(MpNowPlayingList_t *list)
 	elm_genlist_item_fields_update(data_tmp, "elm.text.*", ELM_GENLIST_ITEM_FIELD_TEXT);
 	mp_now_playing_list_current_item_show(list);
 
-	if (realized_items)
+	if (realized_items) {
 		eina_list_free(realized_items);
+	}
 }
 
 void

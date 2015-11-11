@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-search-list.h"
@@ -43,8 +43,7 @@ _mc_search_list_no_content_add(void *data)
 
 	elm_layout_file_set(no_contents, MC_EDJ_FILE, "no_result");
 
-	if (list->genlist)
-	{
+	if (list->genlist) {
 		elm_box_unpack(list->box, list->genlist);
 		evas_object_hide(list->genlist);
 	}
@@ -60,16 +59,15 @@ _mc_search_list_set_sentinel(void *thiz, int count)
 {
 	UgMpSearchList_t *list = (UgMpSearchList_t *)thiz;
 	MP_CHECK_VAL(list, -1);
-	if (0 >= count && (list->filter_str && strlen(list->filter_str)))
-	{
+	if (0 >= count && (list->filter_str && strlen(list->filter_str))) {
 		ERROR_TRACE("no tracks");
-		if (!list->no_content)
+		if (!list->no_content) {
 			list->no_content = _mc_search_list_no_content_add(list);
+		}
 		return -1;
 	}
 
-	if (list->no_content)
-	{
+	if (list->no_content) {
 		elm_box_unpack(list->box, list->no_content);
 		evas_object_del(list->no_content);
 		list->no_content = NULL;
@@ -88,34 +86,30 @@ _mc_search_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h track = item_data->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 
 	UgMpSearchList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.text.1") || !strcmp(part, "elm.slide.text.1"))
-	{
+	if (!strcmp(part, "elm.text.1") || !strcmp(part, "elm.slide.text.1")) {
 		char *title = NULL;
 
 		mp_media_info_get_title(track,  &title);
 
-		mp_retv_if (!title, NULL);
-		if (!strcmp(part, "elm.text.1"))
-		{
+		mp_retv_if(!title, NULL);
+		if (!strcmp(part, "elm.text.1")) {
 			bool res = false;
 			char *markup_name = (char *)mc_common_search_markup_keyword(title, list->filter_str, &res);
 			return (res) ? g_strdup(markup_name) : elm_entry_utf8_to_markup(title);
-		}
-		else
+		} else {
 			return g_strdup(title);
-	}
-	else if (!strcmp(part, "elm.text.2"))
-	{
+		}
+	} else if (!strcmp(part, "elm.text.2")) {
 		char *artist = NULL;
 
 		mp_media_info_get_artist(track, &artist);
-		mp_retv_if (!artist, NULL);
+		mp_retv_if(!artist, NULL);
 		return g_strdup(artist);
 	}
 	return NULL;
@@ -129,10 +123,9 @@ _mc_search_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h track = item_data->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 
-	if (!strcmp(part, "elm.icon"))
-	{
+	if (!strcmp(part, "elm.icon")) {
 		char *thumbpath = NULL;
 		Evas_Object *icon;
 
@@ -179,34 +172,33 @@ _mc_search_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h svc_item = item_data->handle;
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
 	UgMpSearchList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.text.1") || !strcmp(part, "elm.slide.text.1"))
-	{
+	if (!strcmp(part, "elm.text.1") || !strcmp(part, "elm.slide.text.1")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 
 		if (!strcmp(part, "elm.text.1")) {
 			bool res = false;
 			char *markup_name = (char *)mc_common_search_markup_keyword(name, list->filter_str, &res);
 			return (res) ? g_strdup(markup_name) : elm_entry_utf8_to_markup(name);
-		}
-		else
+		} else {
 			return g_strdup(name);
+		}
 
-	}
-	else if (!strcmp(part, "elm.text.2"))
-	{
+	} else if (!strcmp(part, "elm.text.2")) {
 		ret = mp_media_info_group_get_sub_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 		return g_strdup(name);
 	}
 
@@ -224,11 +216,10 @@ _mc_search_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h svc_item = item_data->handle;
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.icon"))
-	{
+	if (!strcmp(part, "elm.icon")) {
 		char *thumb_name = NULL;
 		mp_media_info_group_get_thumbnail_path(svc_item, &thumb_name);
 		icon = mc_common_create_thumb_icon(obj, thumb_name, MC_LIST_ICON_SIZE, MC_LIST_ICON_SIZE);
@@ -261,12 +252,11 @@ _mc_search_album_select_cb(void *data, Evas_Object * obj, void *event_info)
 
 	_mc_search_list_popup_to_bottom(list->ad);
 
-	if (gli_data->handle)
-	{
+	if (gli_data->handle) {
 		ret = mp_media_info_group_get_main_info(gli_data->handle, &name);
 		DEBUG_TRACE("thumbnail=%s", thumbnail);
-		mp_retm_if (ret != 0, "Fail to get value");
-		mp_retm_if (name == NULL, "Fail to get value");
+		mp_retm_if(ret != 0, "Fail to get value");
+		mp_retm_if(name == NULL, "Fail to get value");
 
 		mc_common_push_track_view_by_group_name(list->ad, MP_TRACK_BY_ALBUM, name, playlist_id, NULL);
 	}
@@ -283,17 +273,17 @@ _mc_search_artist_list_label_get(void *data, Evas_Object * obj, const char *part
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h svc_item = item_data->handle;
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
 	UgMpSearchList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
 
-	if (!strcmp(part, "elm.text"))
-	{
+	if (!strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 
 		bool res = false;
 		char *markup_name = (char *)mc_common_search_markup_keyword(name, list->filter_str, &res);
@@ -312,10 +302,9 @@ _mc_search_artist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item_data);
 
 	mp_media_info_h svc_item = item_data->handle;
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!strcmp(part, "elm.icon"))
-	{
+	if (!strcmp(part, "elm.icon")) {
 		char *thumb_name = NULL;
 		mp_media_info_group_get_thumbnail_path(svc_item, &thumb_name);
 		icon = mc_common_create_thumb_icon(obj, thumb_name, MC_LIST_ICON_SIZE, MC_LIST_ICON_SIZE);
@@ -345,10 +334,9 @@ _mc_search_artist_select_cb(void *data, Evas_Object * obj, void *event_info)
 
 	_mc_search_list_popup_to_bottom(list->ad);
 
-	if (gli_data->handle)
-	{
+	if (gli_data->handle) {
 		mp_media_info_group_get_main_info(gli_data->handle, &name);
-		mp_retm_if (name == NULL, "Fail to get value");
+		mp_retm_if(name == NULL, "Fail to get value");
 
 		mc_common_push_track_view_by_group_name(list->ad, MP_TRACK_BY_ARTIST, name, playlist_id, NULL);
 	}
@@ -360,8 +348,7 @@ _mc_search_list_gl_label_get_title(void *data, Evas_Object * obj, const char *pa
 	//startfunc;
 	char *text = NULL;
 
-	if (!strcmp(part, "elm.text"))
-	{
+	if (!strcmp(part, "elm.text")) {
 		text = GET_STR(data);
 		return g_strdup(text);
 	}
@@ -382,8 +369,7 @@ static void _mc_search_list_set_itc(void *thiz)
 {
 	UgMpSearchList_t *list = thiz;
 	MP_CHECK(list);
-	if (!list->itc_track)
-	{
+	if (!list->itc_track) {
 		list->itc_track = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_track);
 		list->itc_track->item_style = "music/2text.1icon.tb";
@@ -391,8 +377,7 @@ static void _mc_search_list_set_itc(void *thiz)
 		list->itc_track->func.content_get = _mc_search_track_list_icon_get;
 		list->itc_track->func.del = _mc_search_list_item_del;
 	}
-	if (!list->itc_album)
-	{
+	if (!list->itc_album) {
 		list->itc_album = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_album);
 		list->itc_album->item_style = "music/2text.1icon.tb";
@@ -400,8 +385,7 @@ static void _mc_search_list_set_itc(void *thiz)
 		list->itc_album->func.content_get = _mc_search_album_list_icon_get;
 		list->itc_album->func.del = _mc_search_list_item_del;
 	}
-	if (!list->itc_artist)
-	{
+	if (!list->itc_artist) {
 		list->itc_artist = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_artist);
 		list->itc_artist->item_style = "music/1text.1icon.2.tb";
@@ -409,8 +393,7 @@ static void _mc_search_list_set_itc(void *thiz)
 		list->itc_artist->func.content_get = _mc_search_artist_list_icon_get;
 		list->itc_artist->func.del = _mc_search_list_item_del;
 	}
-	if (!list->itc_group_title)
-	{
+	if (!list->itc_group_title) {
 		list->itc_group_title = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_group_title);
 		list->itc_group_title->item_style = "music/groupindex";
@@ -425,7 +408,7 @@ _mc_search_list_append_group_title(void * data, char *text_ID)
 	UgMpSearchList_t *list = (UgMpSearchList_t *)data;
 	MP_CHECK(list);
 	list->search_group_git =
-		elm_genlist_item_append(list->genlist, list->itc_group_title, text_ID, NULL, ELM_GENLIST_ITEM_GROUP, NULL, NULL);
+	    elm_genlist_item_append(list->genlist, list->itc_group_title, text_ID, NULL, ELM_GENLIST_ITEM_GROUP, NULL, NULL);
 	elm_genlist_item_select_mode_set(list->search_group_git, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 }
 
@@ -445,20 +428,17 @@ static void _mc_search_list_load_list(void *thiz)
 	mp_media_list_h svc_handle = NULL;
 
 	ret = mp_media_info_group_list_count(MP_GROUP_BY_ARTIST, NULL, list->filter_str, &artist_count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to create structure");
 		goto END;
 	}
 	ret = mp_media_info_group_list_count(MP_GROUP_BY_ALBUM, NULL, list->filter_str, &album_count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to create structure");
 		goto END;
 	}
 	ret = mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, list->filter_str, 0, &track_count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to create structure");
 		goto END;
 	}
@@ -466,13 +446,13 @@ static void _mc_search_list_load_list(void *thiz)
 	count = artist_count + album_count + track_count;
 	list->track_count = track_count;
 
-	if (_mc_search_list_set_sentinel(list, count))
+	if (_mc_search_list_set_sentinel(list, count)) {
 		goto END;
+	}
 
 
 	/*create new genlist*/
-	if (list->genlist != NULL)
-	{
+	if (list->genlist != NULL) {
 		evas_object_del(list->genlist);
 		list->genlist = NULL;
 	}
@@ -488,30 +468,25 @@ static void _mc_search_list_load_list(void *thiz)
 	evas_object_data_set(list->genlist, "list_handle", (void *)list);
 
 	_mc_search_list_set_itc(list);
-	if (artist_count)
-	{
+	if (artist_count) {
 		DEBUG_TRACE("append artist list items");
 		_mc_search_list_append_group_title(list, ("IDS_MUSIC_TAB4_ARTISTS"));
 		ret = mp_media_info_group_list_create(&svc_handle, MP_GROUP_BY_ARTIST, NULL, list->filter_str, 0, artist_count);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			DEBUG_TRACE("Fail to get items");
-                        if (svc_handle)
-		        {
-			        mp_media_info_group_list_destroy(svc_handle);
-		        }
+			if (svc_handle) {
+				mp_media_info_group_list_destroy(svc_handle);
+			}
 			goto END;
 		}
 
-		for (index = 0; index < artist_count; index++)
-		{
+		for (index = 0; index < artist_count; index++) {
 			mp_media_info_h item = NULL;
 
 			item = mp_media_info_group_list_nth_item(svc_handle, index);
-			if (item == NULL)
-			{
+			if (item == NULL) {
 				DEBUG_TRACE("Fail to mp_media_info_group_list_nth_item, ret[%d], index[%d]", ret, index);
-                               continue;
+				continue;
 			}
 
 			mc_list_item_data_t *item_data = calloc(1, sizeof(mc_list_item_data_t));
@@ -520,12 +495,11 @@ static void _mc_search_list_load_list(void *thiz)
 			item_data->group_type = MP_GROUP_BY_ARTIST;
 
 			item_data->it = elm_genlist_item_append(list->genlist, list->itc_artist, (void *)item_data,
-						list->search_group_git, ELM_GENLIST_ITEM_NONE,
-						_mc_search_artist_select_cb, list);
+			                                        list->search_group_git, ELM_GENLIST_ITEM_NONE,
+			                                        _mc_search_artist_select_cb, list);
 		}
 
-		if (list->artist_handle)
-		{
+		if (list->artist_handle) {
 			mp_media_info_group_list_destroy(list->artist_handle);
 			list->artist_handle = NULL;
 		}
@@ -534,29 +508,24 @@ static void _mc_search_list_load_list(void *thiz)
 
 	}
 
-	if (album_count)
-	{
+	if (album_count) {
 		DEBUG_TRACE("append album_count list items");
 		_mc_search_list_append_group_title(list, ("IDS_MUSIC_TAB4_ALBUMS"));
 
 		ret = mp_media_info_group_list_create(&svc_handle, MP_GROUP_BY_ALBUM, NULL, list->filter_str, 0, album_count);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			DEBUG_TRACE("Fail to get items");
-                        if (svc_handle)
-		        {
-			        mp_media_info_group_list_destroy(svc_handle);
-		        }
+			if (svc_handle) {
+				mp_media_info_group_list_destroy(svc_handle);
+			}
 			goto END;
 		}
 
-		for (index = 0; index < album_count; index++)
-		{
+		for (index = 0; index < album_count; index++) {
 			mp_media_info_h item = NULL;
 			char *title = NULL;
 			item = mp_media_info_group_list_nth_item(svc_handle, index);
-			if (item == NULL)
-			{
+			if (item == NULL) {
 				DEBUG_TRACE("Fail to mp_media_info_group_list_nth_item, ret[%d], index[%d]", ret, index);
 				continue;
 			}
@@ -569,13 +538,12 @@ static void _mc_search_list_load_list(void *thiz)
 			item_data->group_type = MP_GROUP_BY_ALBUM;
 
 			item_data->it = elm_genlist_item_append(list->genlist, list->itc_album, (void *)item_data,
-						list->search_group_git, ELM_GENLIST_ITEM_NONE,
-						_mc_search_album_select_cb, list);
+			                                        list->search_group_git, ELM_GENLIST_ITEM_NONE,
+			                                        _mc_search_album_select_cb, list);
 
 		}
 
-		if (list->album_handle)
-		{
+		if (list->album_handle) {
 			mp_media_info_group_list_destroy(list->album_handle);
 			list->album_handle = NULL;
 		}
@@ -584,28 +552,25 @@ static void _mc_search_list_load_list(void *thiz)
 
 	}
 
-	if (track_count)
-	{
+	if (track_count) {
 		DEBUG_TRACE("append track_count list items");
 		_mc_search_list_append_group_title(list, (STR_MP_TRACKS));
 
 		ret = mp_media_info_list_create(&svc_handle, MP_TRACK_ALL, NULL, NULL, list->filter_str, 0, 0, track_count);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			DEBUG_TRACE("Fail to get items");
-			if (svc_handle)
-			{
+			if (svc_handle) {
 				mp_media_info_list_destroy(svc_handle);
 			}
 			goto END;
 		}
 
-		for (index = 0; index < track_count; index++)
-		{
+		for (index = 0; index < track_count; index++) {
 			mp_media_info_h item = NULL;
 			item = mp_media_info_list_nth_item(svc_handle, index);
-			if (!item)
+			if (!item) {
 				continue;
+			}
 
 			mc_list_item_data_t *item_data;
 			item_data = calloc(1, sizeof(mc_list_item_data_t));
@@ -614,12 +579,11 @@ static void _mc_search_list_load_list(void *thiz)
 			item_data->group_type = MP_GROUP_NONE;
 
 			item_data->it = elm_genlist_item_append(list->genlist, list->itc_track, (void *)item_data,
-						list->search_group_git, ELM_GENLIST_ITEM_NONE,
-						_mc_search_track_sel_cb, list);
+			                                        list->search_group_git, ELM_GENLIST_ITEM_NONE,
+			                                        _mc_search_track_sel_cb, list);
 		}
 
-		if (list->track_handle)
-		{
+		if (list->track_handle) {
 			mp_media_info_list_destroy(list->track_handle);
 			list->track_handle = NULL;
 		}
@@ -628,7 +592,7 @@ static void _mc_search_list_load_list(void *thiz)
 
 	}
 
-      END:
+END:
 	endfunc;
 }
 
@@ -713,29 +677,25 @@ void mc_search_list_set_data(UgMpSearchList_t *list, ...)
 	int field;
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
 		DEBUG_TRACE("field is %d", field);
 
-		switch (field)
-		{
-		case MC_SEARCH_LIST_FILTER_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->filter_str);
-				list->filter_str = g_strdup(val);
-				DEBUG_TRACE("list->filter_str = %s", list->filter_str);
+		switch (field) {
+		case MC_SEARCH_LIST_FILTER_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->filter_str);
+			list->filter_str = g_strdup(val);
+			DEBUG_TRACE("list->filter_str = %s", list->filter_str);
 
-				break;
-			}
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }

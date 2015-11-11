@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 /* #include "smat.h" */
@@ -48,20 +48,22 @@ pthread_cond_t  smat_cond;
 
 static char *_mp_set_as_view_time_to_string(int time)
 {
-	int minutes = (time/1000)/60;
-	int seconds = (time/1000)%60;
+	int minutes = (time / 1000) / 60;
+	int seconds = (time / 1000) % 60;
 	char *seconds_fmt = NULL;
 	char *minutes_fmt = NULL;
 	DEBUG_TRACE("minute is %d\tseconds is %d", minutes, seconds);
-	if (seconds < 10)
+	if (seconds < 10) {
 		seconds_fmt = "0%d";
-	else
+	} else {
 		seconds_fmt = "%d";
+	}
 
-	if (minutes < 10)
+	if (minutes < 10) {
 		minutes_fmt = "0%d";
-	else
+	} else {
 		minutes_fmt = "%d";
+	}
 	char *format = g_strconcat(minutes_fmt, ":", seconds_fmt, NULL);
 	char *total_txt = g_strdup_printf(format, minutes, seconds);
 	IF_FREE(format);
@@ -314,22 +316,23 @@ static void _mp_set_as_view_moved_recommended_time(void *data)
 	mp_util_domain_translatable_text_set(recommended_txt, recommended_time);
 	IF_FREE(recommended_time);
 
-	if (progressbar == NULL)
+	if (progressbar == NULL) {
 		DEBUG_TRACE("recommended_txt is NULL");
-	else {
+	} else {
 		evas_object_geometry_get(progressbar, &px, &py, &pw, &ph);
 	}
-	if ((double)view->duration != 0)
+	if ((double)view->duration != 0) {
 		ratio = (double)view->position / (double)view->duration;
+	}
 	int position = pw * ratio + px;
-	if (recommended_txt == NULL)
+	if (recommended_txt == NULL) {
 		DEBUG_TRACE("recommended_txt is NULL");
-	else {
+	} else {
 
 		evas_object_geometry_get(recommended_txt, &rx, &ry, &rw, &rh);
-		
+
 		if (pw != 0) {
-			edje_object_part_drag_value_set(elm_layout_edje_get(recommended_layout), "progressbar_playing", (double)(position-rw/2)/(double)pw, 0.0);
+			edje_object_part_drag_value_set(elm_layout_edje_get(recommended_layout), "progressbar_playing", (double)(position - rw / 2) / (double)pw, 0.0);
 		}
 	}
 	evas_object_show(recommended_txt);
@@ -364,65 +367,69 @@ _mp_set_as_view_gl_contents_get(void *data, Evas_Object * obj, const char *part)
 	/* if edit mode */
 	if (!strcmp(part, "elm.icon")) {
 		switch (index) {
-			case	MP_SET_AS_FROM_START:
-			case	MP_SET_AS_RECOMMEND:
-			case	MP_SET_AS_PHONE_RINGTONE:
-			case	MP_SET_AS_CALLER_RINGTONE:
-			case	MP_SET_AS_ALARM_TONE:
-				/* swallow checkbox or radio button */
-				content = elm_radio_add(obj);
-				elm_radio_state_value_set(content, index);
-				if (index == MP_SET_AS_FROM_START || index == MP_SET_AS_RECOMMEND)
-					elm_radio_group_add(content, g_radio_recommend);
-				else if (index >= MP_SET_AS_PHONE_RINGTONE && index <= MP_SET_AS_ALARM_TONE)
-					elm_radio_group_add(content, g_radio_set_as_type);
+		case	MP_SET_AS_FROM_START:
+		case	MP_SET_AS_RECOMMEND:
+		case	MP_SET_AS_PHONE_RINGTONE:
+		case	MP_SET_AS_CALLER_RINGTONE:
+		case	MP_SET_AS_ALARM_TONE:
+			/* swallow checkbox or radio button */
+			content = elm_radio_add(obj);
+			elm_radio_state_value_set(content, index);
+			if (index == MP_SET_AS_FROM_START || index == MP_SET_AS_RECOMMEND) {
+				elm_radio_group_add(content, g_radio_recommend);
+			} else if (index >= MP_SET_AS_PHONE_RINGTONE && index <= MP_SET_AS_ALARM_TONE) {
+				elm_radio_group_add(content, g_radio_set_as_type);
+			}
 
-				evas_object_size_hint_weight_set(content, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-				evas_object_size_hint_align_set(content, EVAS_HINT_FILL, EVAS_HINT_FILL);
-				evas_object_propagate_events_set(content, TRUE);
-				/* evas_object_smart_callback_add(content, "changed", _radio_cb, view); */
-				break;
-			case	MP_SET_AS_RECOMMEND_PRE_LISTEN:
-				item_class = elm_genlist_item_item_class_get(item_data->item);
-				if (!g_strcmp0(item_class->item_style, "music/1icon/set_as_full")) {
-					if (!mp_util_is_landscape())
-						content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten");
-					else
-						content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten_ld");
-					mp_util_domain_translatable_part_text_set(content, "recommended_text", STR_MP_SET_AS_RECOMMENDED_TXT);
-					Evas_Object *progressbar = elm_progressbar_add(content);
-					elm_object_style_set(progressbar, "list_progress");
-					elm_progressbar_inverted_set(progressbar, EINA_TRUE);
-					elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
-					evas_object_size_hint_align_set(progressbar, EVAS_HINT_FILL, EVAS_HINT_FILL);
-					evas_object_size_hint_weight_set(progressbar, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-					elm_progressbar_value_set(progressbar, (double)(1.0 - (double)view->position / (double)view->duration));
-					evas_object_show(progressbar);
-					elm_object_part_content_set(content, "progress_bar", progressbar);
-
-					Evas_Object *recommended_layout = mp_common_load_edj(content, MP_EDJ_NAME, "movable_text");
-					elm_object_part_content_set(content, "recommended_text_play", recommended_layout);
-					Evas_Object *recommended_txt = elm_label_add(recommended_layout);
-					elm_object_part_content_set(recommended_layout, "progressbar_playing", recommended_txt);
-					if (view->position != -1) {
-						char *recommended_time = _mp_set_as_view_time_to_string(view->position);
-						mp_util_domain_translatable_text_set(recommended_txt, recommended_time);
-						IF_FREE(recommended_time);
-
-						if (view->move_idler == NULL)
-							view->move_idler = ecore_idler_add(_move_idler, view);
-					} else
-						evas_object_hide(recommended_layout);
-
-					/*set duration*/
-					char *total_time = _mp_set_as_view_time_to_string(view->duration);
-					mp_util_domain_translatable_part_text_set(content, "progress_text_total", total_time);
-					IF_FREE(total_time);
-				} else if (!g_strcmp0(item_class->item_style, "music/1icon/set_as_text")) {
-					content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten_text");
-					mp_util_domain_translatable_part_text_set(content, "recommended_text", STR_MP_SET_AS_RECOMMENDED_TXT);
+			evas_object_size_hint_weight_set(content, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+			evas_object_size_hint_align_set(content, EVAS_HINT_FILL, EVAS_HINT_FILL);
+			evas_object_propagate_events_set(content, TRUE);
+			/* evas_object_smart_callback_add(content, "changed", _radio_cb, view); */
+			break;
+		case	MP_SET_AS_RECOMMEND_PRE_LISTEN:
+			item_class = elm_genlist_item_item_class_get(item_data->item);
+			if (!g_strcmp0(item_class->item_style, "music/1icon/set_as_full")) {
+				if (!mp_util_is_landscape()) {
+					content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten");
+				} else {
+					content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten_ld");
 				}
-				break;
+				mp_util_domain_translatable_part_text_set(content, "recommended_text", STR_MP_SET_AS_RECOMMENDED_TXT);
+				Evas_Object *progressbar = elm_progressbar_add(content);
+				elm_object_style_set(progressbar, "list_progress");
+				elm_progressbar_inverted_set(progressbar, EINA_TRUE);
+				elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
+				evas_object_size_hint_align_set(progressbar, EVAS_HINT_FILL, EVAS_HINT_FILL);
+				evas_object_size_hint_weight_set(progressbar, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+				elm_progressbar_value_set(progressbar, (double)(1.0 - (double)view->position / (double)view->duration));
+				evas_object_show(progressbar);
+				elm_object_part_content_set(content, "progress_bar", progressbar);
+
+				Evas_Object *recommended_layout = mp_common_load_edj(content, MP_EDJ_NAME, "movable_text");
+				elm_object_part_content_set(content, "recommended_text_play", recommended_layout);
+				Evas_Object *recommended_txt = elm_label_add(recommended_layout);
+				elm_object_part_content_set(recommended_layout, "progressbar_playing", recommended_txt);
+				if (view->position != -1) {
+					char *recommended_time = _mp_set_as_view_time_to_string(view->position);
+					mp_util_domain_translatable_text_set(recommended_txt, recommended_time);
+					IF_FREE(recommended_time);
+
+					if (view->move_idler == NULL) {
+						view->move_idler = ecore_idler_add(_move_idler, view);
+					}
+				} else {
+					evas_object_hide(recommended_layout);
+				}
+
+				/*set duration*/
+				char *total_time = _mp_set_as_view_time_to_string(view->duration);
+				mp_util_domain_translatable_part_text_set(content, "progress_text_total", total_time);
+				IF_FREE(total_time);
+			} else if (!g_strcmp0(item_class->item_style, "music/1icon/set_as_text")) {
+				content = mp_common_load_edj(obj, MP_EDJ_NAME, "music/set_as/prelisten_text");
+				mp_util_domain_translatable_part_text_set(content, "recommended_text", STR_MP_SET_AS_RECOMMENDED_TXT);
+			}
+			break;
 		}
 	}
 
@@ -441,29 +448,29 @@ _mp_set_as_view_gl_label_get(void *data, Evas_Object * obj, const char *part)
 
 	if (strcmp(part, "elm.text") == 0) {
 		switch (index) {
-			case MP_SET_AS_FROM_START:
-				txt = STR_MP_SET_AS_FROM_BEGIN;
-				break;
-			case MP_SET_AS_RECOMMEND:
-				txt = STR_MP_SET_AS_AUTO_RECOMMEND;
-				break;
-			case MP_SET_AS_RECOMMEND_PRE_LISTEN:
-				txt = STR_MP_SET_AS_RECOMMENDED_TXT;
-				break;
-			case MP_SET_AS_TITLE:
-				txt = STR_MP_SET_AS;
-				break;
-			case MP_SET_AS_PHONE_RINGTONE:
-				txt = STR_MP_SET_AS_PHONE_RINGTONG;
-				break;
-			case MP_SET_AS_CALLER_RINGTONE:
-				txt = STR_MP_SET_AS_CALLER_RINGTONG;
-				break;
-			case MP_SET_AS_ALARM_TONE:
-				txt = STR_MP_SET_AS_ALARM_TONE;
-				break;
-			default:
-				break;
+		case MP_SET_AS_FROM_START:
+			txt = STR_MP_SET_AS_FROM_BEGIN;
+			break;
+		case MP_SET_AS_RECOMMEND:
+			txt = STR_MP_SET_AS_AUTO_RECOMMEND;
+			break;
+		case MP_SET_AS_RECOMMEND_PRE_LISTEN:
+			txt = STR_MP_SET_AS_RECOMMENDED_TXT;
+			break;
+		case MP_SET_AS_TITLE:
+			txt = STR_MP_SET_AS;
+			break;
+		case MP_SET_AS_PHONE_RINGTONE:
+			txt = STR_MP_SET_AS_PHONE_RINGTONG;
+			break;
+		case MP_SET_AS_CALLER_RINGTONE:
+			txt = STR_MP_SET_AS_CALLER_RINGTONG;
+			break;
+		case MP_SET_AS_ALARM_TONE:
+			txt = STR_MP_SET_AS_ALARM_TONE;
+			break;
+		default:
+			break;
 		}
 	}
 	return g_strdup(GET_STR(txt));
@@ -509,7 +516,7 @@ static void _gl_sel(void *data, Evas_Object *obj, void *event_info)
 		view->set_as_type = index;
 	}
 
-	if (view->set_as_type != -1 && view->recommended != -1)/*enable left_button*/ {
+	if (view->set_as_type != -1 && view->recommended != -1) { /*enable left_button*/
 		_mp_set_as_view_enable_done_btn(view);
 		view->button_enable = TRUE;
 	}
@@ -518,13 +525,13 @@ static void _gl_sel(void *data, Evas_Object *obj, void *event_info)
 	evas_object_smart_callback_call(radio_group, "changed", NULL);
 
 	if (!mp_media_info_uri_is_exist_in_db(view->path)) {
-	/*the popup followed S5*/
+		/*the popup followed S5*/
 		if (index == MP_SET_AS_FROM_START) {
 			mp_widget_text_popup(NULL, GET_STR(STR_MP_PLAYER_UNSUPPORT));
 		} else if (index == MP_SET_AS_RECOMMEND) {
 			mp_widget_text_popup(NULL, GET_STR(STR_MP_RECOMMENDATION_UNSUPPORT));
 		}
-	return ;
+		return ;
 	}
 
 	player_state_e state = _mp_set_as_view_prelisten_get_state(view);
@@ -533,12 +540,15 @@ static void _gl_sel(void *data, Evas_Object *obj, void *event_info)
 		if (index == MP_SET_AS_FROM_START || index == MP_SET_AS_RECOMMEND) {
 			if (state == PLAYER_STATE_PLAYING) {
 				_mp_set_as_view_prelisten_pause(view);
-				if (index == MP_SET_AS_FROM_START)
+				if (index == MP_SET_AS_FROM_START) {
 					_mp_set_as_view_prelisten_set_position(view, NULL, NULL, false);
-				if (index == MP_SET_AS_RECOMMEND)
+				}
+				if (index == MP_SET_AS_RECOMMEND) {
 					_mp_set_as_view_prelisten_set_position(view, NULL, NULL, true);
-			} else if (state == PLAYER_STATE_PAUSED)
+				}
+			} else if (state == PLAYER_STATE_PAUSED) {
 				_mp_set_as_view_prelisten_start(view);
+			}
 		}
 	} else {
 		if (old_index == MP_SET_AS_RECOMMEND) {
@@ -590,7 +600,7 @@ static void
 _mp_set_as_view_load_genlist_itc(MpSetAsView_t *view)
 {
 	startfunc;
-	mp_retm_if (!view, "INVALID param");
+	mp_retm_if(!view, "INVALID param");
 
 	if (view->radio_itc == NULL) {
 		view->radio_itc = elm_genlist_item_class_new();
@@ -635,25 +645,25 @@ _mp_set_as_view_append_genlist_items(Evas_Object *genlist, MpSetAsView_t *view)
 	Elm_Genlist_Item_Class *itc = NULL;
 	/*Elm_Object_Item *item;*/
 	Elm_Genlist_Item_Type flag = ELM_GENLIST_ITEM_NONE;
-	mp_retm_if (!view, "INVALID param");
+	mp_retm_if(!view, "INVALID param");
 
 	_mp_set_as_view_load_genlist_itc(view);
 
 	for (i = MP_SET_AS_FROM_START; i < MP_SET_AS_MAX; i++) {
 		switch (i) {
-			case MP_SET_AS_FROM_START:
-			case MP_SET_AS_RECOMMEND:
-			case MP_SET_AS_PHONE_RINGTONE:
-			case MP_SET_AS_CALLER_RINGTONE:
-			case MP_SET_AS_ALARM_TONE:
-				itc = view->radio_itc;
-				break;
-			case MP_SET_AS_TITLE:
-				itc = view->title_itc;
-				break;
-			case MP_SET_AS_RECOMMEND_PRE_LISTEN:
-				itc = view->recommend_itc_text;
-				break;
+		case MP_SET_AS_FROM_START:
+		case MP_SET_AS_RECOMMEND:
+		case MP_SET_AS_PHONE_RINGTONE:
+		case MP_SET_AS_CALLER_RINGTONE:
+		case MP_SET_AS_ALARM_TONE:
+			itc = view->radio_itc;
+			break;
+		case MP_SET_AS_TITLE:
+			itc = view->title_itc;
+			break;
+		case MP_SET_AS_RECOMMEND_PRE_LISTEN:
+			itc = view->recommend_itc_text;
+			break;
 		}
 
 		item_data_s *item_data = calloc(1, sizeof(item_data_s));
@@ -661,8 +671,9 @@ _mp_set_as_view_append_genlist_items(Evas_Object *genlist, MpSetAsView_t *view)
 		item_data->index = i;
 
 		item_data->item = elm_genlist_item_append(genlist, itc, (void *)item_data, NULL, flag, _gl_sel, (void *)item_data);
-		if (i == MP_SET_AS_TITLE || i == MP_SET_AS_RECOMMEND_PRE_LISTEN)
+		if (i == MP_SET_AS_TITLE || i == MP_SET_AS_RECOMMEND_PRE_LISTEN) {
 			elm_genlist_item_select_mode_set(item_data->item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		}
 	}
 }
 
@@ -746,8 +757,9 @@ static void _done_button_clicked_cb(void *data, Evas_Object * obj, void *event_i
 	DEBUG_TRACE("Auto recommand %d, pos: %d", recommend, view->position);
 	DEBUG_TRACE("type %d", type);
 
-	if (recommend == 1)
+	if (recommend == 1) {
 		position = view->position;
+	}
 
 	int ret = 0;
 	char *path = NULL;	/* do not free */
@@ -756,7 +768,7 @@ static void _done_button_clicked_cb(void *data, Evas_Object * obj, void *event_i
 	path = view->path;
 	MP_CHECK(path);
 	if (!mp_media_info_uri_is_exist_in_db(view->path)) {
-	/*delete set as view*/
+		/*delete set as view*/
 		MpViewMgr_t *view_mgr = GET_VIEW_MGR;
 		mp_view_mgr_delete_view(view_mgr, MP_VIEW_SET_AS);
 		return ;
@@ -764,27 +776,27 @@ static void _done_button_clicked_cb(void *data, Evas_Object * obj, void *event_i
 
 
 	switch (type) {
-		case	MP_SET_AS_PHONE_RINGTONE:
-	{
-			char *popup_txt = NULL;
-			ret = _mp_set_as_view_set_caller_rington(path);
+	case	MP_SET_AS_PHONE_RINGTONE: {
+		char *popup_txt = NULL;
+		ret = _mp_set_as_view_set_caller_rington(path);
 
-			if (!ret)
-				popup_txt = GET_SYS_STR("IDS_COM_POP_SUCCESS");
-			else
-				popup_txt = GET_SYS_STR("IDS_COM_POP_FAILED");
-
-			mp_widget_text_popup(ad, popup_txt);
-			break;
+		if (!ret) {
+			popup_txt = GET_SYS_STR("IDS_COM_POP_SUCCESS");
+		} else {
+			popup_txt = GET_SYS_STR("IDS_COM_POP_FAILED");
 		}
-		case	MP_SET_AS_CALLER_RINGTONE:
-			mp_ug_contact_user_sel(path, ad);
-			break;
-		case	MP_SET_AS_ALARM_TONE:
-			mp_ug_set_as_alarm_tone(path, position);
-			break;
-		default:
-			break;
+
+		mp_widget_text_popup(ad, popup_txt);
+		break;
+	}
+	case	MP_SET_AS_CALLER_RINGTONE:
+		mp_ug_contact_user_sel(path, ad);
+		break;
+	case	MP_SET_AS_ALARM_TONE:
+		mp_ug_set_as_alarm_tone(path, position);
+		break;
+	default:
+		break;
 	}
 
 	/*delete set as view*/
@@ -851,7 +863,7 @@ _mp_set_as_view_on_event(void *thiz, MpViewEvent_e event)
 	MpSetAsView_t *view = thiz;
 	DEBUG_TRACE("event is %d", event);
 	switch (event) {
-	/* when the track rename/move/delete should destroy the player */
+		/* when the track rename/move/delete should destroy the player */
 	case MP_DB_UPDATED:
 		if (!mp_media_info_uri_is_exist_in_db(view->path)) {
 			player_state_e state = _mp_set_as_view_prelisten_get_state(view);
@@ -886,8 +898,9 @@ _mp_set_as_view_rotate_cb(void *thiz, int randscape)
 	elm_genlist_realized_items_update(view->content);
 	/*_mp_set_as_view_moved_recommended_time(view);
 	add idler to move text */
-	if (view->move_idler == NULL)
+	if (view->move_idler == NULL) {
 		view->move_idler = ecore_idler_add(_move_idler, view);
+	}
 }
 #endif
 
@@ -946,7 +959,9 @@ EXPORT_API MpSetAsView_t *mp_set_as_view_create(Evas_Object *parent, char* path)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_set_as_view_init(parent, view, (void *)path);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	return view;
 
@@ -961,18 +976,22 @@ int mp_set_as_view_destory(MpSetAsView_t *view)
 	startfunc;
 	MP_CHECK_VAL(view, -1);
 
-	if (view->radio_itc)
+	if (view->radio_itc) {
 		elm_genlist_item_class_free(view->radio_itc);
-	if (view->recommend_itc_full)
+	}
+	if (view->recommend_itc_full) {
 		elm_genlist_item_class_free(view->recommend_itc_full);
-	if (view->recommend_itc_text)
+	}
+	if (view->recommend_itc_text) {
 		elm_genlist_item_class_free(view->recommend_itc_text);
-	if (view->title_itc)
+	}
+	if (view->title_itc) {
 		elm_genlist_item_class_free(view->title_itc);
+	}
 
 
 	player_state_e state = _mp_set_as_view_prelisten_get_state(view);
-	if (state <= PLAYER_STATE_PAUSED && state >= PLAYER_STATE_READY)/*player is active */ {
+	if (state <= PLAYER_STATE_PAUSED && state >= PLAYER_STATE_READY) { /*player is active */
 		_mp_set_as_view_prelisten_stop(view);
 		_mp_set_as_view_destroy_player(view);
 	}

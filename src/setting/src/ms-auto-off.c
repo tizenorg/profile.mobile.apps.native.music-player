@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -49,20 +49,22 @@ static void
 _ms_auto_off_radio_change_cb(void *data, Evas_Object * obj, void *event_info)
 {
 	DEBUG_TRACE("");
-	mp_retm_if (!g_radio_grp, "radio group is null");
+	mp_retm_if(!g_radio_grp, "radio group is null");
 
 	int type = elm_radio_value_get(g_radio_grp);
 	DEBUG_TRACE("selected radio val : %d type, %d min", type, _g_auto_off_time[type]);
 
 	ms_key_set_auto_off_val(type);
 
-	if (type == KEY_MUSIC_AUTO_OFF_TIME_CUSTOM)
-		ms_key_set_auto_off_time( 60*g_hour + g_min);
-	else
+	if (type == KEY_MUSIC_AUTO_OFF_TIME_CUSTOM) {
+		ms_key_set_auto_off_time(60 * g_hour + g_min);
+	} else {
 		ms_key_set_auto_off_time(_g_auto_off_time[type]);
+	}
 
-	if (g_auto_off_gl_it)
+	if (g_auto_off_gl_it) {
 		elm_genlist_item_update(g_auto_off_gl_it);
+	}
 
 	elm_genlist_item_selected_set(g_auto_off_gl_it, EINA_FALSE);
 	bool status = !elm_genlist_item_expanded_get(g_auto_off_gl_it);
@@ -122,21 +124,19 @@ static void _set_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 	g_hour = time1.tm_hour;
 	g_min = time1.tm_min;
 
-	if (60*g_hour + g_min == 0)
-	{
+	if (60 * g_hour + g_min == 0) {
 		ms_key_set_auto_off_val(KEY_MUSIC_AUTO_OFF_TIME_OFF);
 		elm_radio_value_set(g_radio_grp, KEY_MUSIC_AUTO_OFF_TIME_OFF);
-	}
-	else
-	{
+	} else {
 		ms_key_set_auto_off_val(KEY_MUSIC_AUTO_OFF_TIME_CUSTOM);
 		elm_radio_value_set(g_radio_grp, KEY_MUSIC_AUTO_OFF_TIME_CUSTOM);
 	}
 
-	ms_key_set_auto_off_time( 60*g_hour + g_min);
+	ms_key_set_auto_off_time(60 * g_hour + g_min);
 
-	if (g_auto_off_gl_it)
+	if (g_auto_off_gl_it) {
 		elm_genlist_item_update(g_auto_off_gl_it);
+	}
 
 	elm_genlist_realized_items_update(genlist);
 }
@@ -146,10 +146,9 @@ _ms_auto_off_gl_content_get(void *data, Evas_Object * obj, const char *part)
 {
 	int param = (int)data;
 
-	mp_retvm_if (param >= KEY_MUSIC_AUTO_OFF_TIME_MAX, NULL, "invalid param: %d", param);
+	mp_retvm_if(param >= KEY_MUSIC_AUTO_OFF_TIME_MAX, NULL, "invalid param: %d", param);
 
-	if (!g_strcmp0(part, "elm.icon") || !g_strcmp0(part, "elm.icon.1"))
-	{
+	if (!g_strcmp0(part, "elm.icon") || !g_strcmp0(part, "elm.icon.1")) {
 		Evas_Object *radio_btn = elm_radio_add(obj);
 		evas_object_propagate_events_set(radio_btn, FALSE);
 
@@ -158,8 +157,7 @@ _ms_auto_off_gl_content_get(void *data, Evas_Object * obj, const char *part)
 		elm_radio_group_add(radio_btn, g_radio_grp);
 
 		int type = ms_key_get_auto_off_val();
-		if (g_radio_grp)
-		{
+		if (g_radio_grp) {
 			elm_radio_value_set(g_radio_grp, type);
 		}
 
@@ -180,15 +178,12 @@ _ms_auto_off_gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_genlist_item_selected_set(item, EINA_FALSE);
 
-	if (param != KEY_MUSIC_AUTO_OFF_TIME_CUSTOM)
-	{
+	if (param != KEY_MUSIC_AUTO_OFF_TIME_CUSTOM) {
 		elm_radio_value_set(g_radio_grp, param);
 		evas_object_smart_callback_call(g_radio_grp, "changed", NULL);
-	}
-	else
-	{	Evas_Object *datetime = elm_datetime_add(obj);
-		if (datetime != NULL)
-		{
+	} else {
+		Evas_Object *datetime = elm_datetime_add(obj);
+		if (datetime != NULL) {
 			elm_object_style_set(datetime, "pickerstyle");
 			elm_datetime_format_set(datetime, "%H:%M");
 
@@ -200,8 +195,8 @@ _ms_auto_off_gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 
 			int min = ms_key_get_auto_off_custom_time();
 			DEBUG_TRACE("min: %d", min);
-			time1.tm_hour = min/60;
-			time1.tm_min = min%60;
+			time1.tm_hour = min / 60;
+			time1.tm_min = min % 60;
 			elm_datetime_value_set(datetime, &time1);
 
 			//evas_object_smart_callback_add(datetime, "changed", _ms_auto_off_time_changed_cb, NULL);
@@ -217,7 +212,7 @@ _ms_auto_off_gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 EXPORT_API void
 ms_auto_off_list_create(Elm_Object_Item *parent_item)
 {
-	mp_retm_if (parent_item == NULL, "parent_item is null");
+	mp_retm_if(parent_item == NULL, "parent_item is null");
 
 	Evas_Object *genlist = elm_object_item_widget_get(parent_item);
 
@@ -248,16 +243,15 @@ ms_auto_off_list_create(Elm_Object_Item *parent_item)
 	custom_itc.delete_me = EINA_FALSE;
 
 	int type = KEY_MUSIC_AUTO_OFF_TIME_OFF;
-	while (type < KEY_MUSIC_AUTO_OFF_TIME_CUSTOM)
-	{
+	while (type < KEY_MUSIC_AUTO_OFF_TIME_CUSTOM) {
 		elm_genlist_item_append(genlist, &itc, (void *)type, parent_item,
-					ELM_GENLIST_ITEM_NONE, _ms_auto_off_gl_sel_cb, (void *)type);
+		                        ELM_GENLIST_ITEM_NONE, _ms_auto_off_gl_sel_cb, (void *)type);
 		type ++;
 	}
 
 	//custom
 	Elm_Object_Item *item = elm_genlist_item_append(genlist, &custom_itc, (void *)type, parent_item,
-					ELM_GENLIST_ITEM_NONE, _ms_auto_off_gl_sel_cb, (void *)type);
+	                        ELM_GENLIST_ITEM_NONE, _ms_auto_off_gl_sel_cb, (void *)type);
 	evas_object_data_set(genlist, "customized_item", (void *)item);
 }
 

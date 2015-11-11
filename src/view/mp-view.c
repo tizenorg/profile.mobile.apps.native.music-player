@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-view.h"
@@ -27,11 +27,11 @@
 #include "mp-list-view.h"
 
 #define CHECK_VIEW(view, val)	\
-do {\
-	MP_CHECK_VAL(view, val);\
-	mp_retvm_if (view->view_magic != VIEW_MAGIC, val,\
-	"Error: param is not view object!!!magic: %d", view->view_magic);\
-} while (0);
+	do {\
+		MP_CHECK_VAL(view, val);\
+		mp_retvm_if (view->view_magic != VIEW_MAGIC, val,\
+		             "Error: param is not view object!!!magic: %d", view->view_magic);\
+	} while (0);
 
 
 #ifndef MP_SOUND_PLAYER
@@ -78,12 +78,14 @@ static int _mp_view_title_slide_go(void *thiz)
 
 	Elm_Object_Item *nf_it = view->navi_it;
 	Evas_Object *label = elm_object_item_part_content_get(nf_it, "elm.swallow.title");
-	if (label)
+	if (label) {
 		elm_label_slide_go(label);
+	}
 
 	label = elm_object_item_part_content_get(nf_it, "elm.swallow.subtitle");
-	if (label)
+	if (label) {
 		elm_label_slide_go(label);
+	}
 
 	return 0;
 }
@@ -127,13 +129,15 @@ static int _mp_view_update_nowplaying(void *thiz, bool with_title)
 	mp_track_info_t *info = ad->current_track_info;
 	MP_CHECK_VAL(info, -1);
 
-	if (mp_util_is_image_valid(ad->evas, info->thumbnail_path))
+	if (mp_util_is_image_valid(ad->evas, info->thumbnail_path)) {
 		thumbpath = info->thumbnail_path;
-	else
+	} else {
 		thumbpath = DEFAULT_THUMBNAIL;
+	}
 
-	if (!view->nowplaying_bar)
+	if (!view->nowplaying_bar) {
 		mp_view_set_nowplaying(thiz);
+	}
 
 	mp_now_playing_update(view->nowplaying_bar, info->title, info->artist, thumbpath, with_title);
 
@@ -157,10 +161,11 @@ static int _mp_view_freeze_nowplaying(void *thiz, int freeze)
 	}
 
 	if (view->nowplaying_bar) {
-		if (freeze)
+		if (freeze) {
 			mp_now_playing_freeze_timer(view->nowplaying_bar);
-		else
+		} else {
 			mp_now_playing_thaw_timer(view->nowplaying_bar);
+		}
 	}
 
 	return 0;
@@ -173,12 +178,12 @@ static void _mp_view_show_now_playing(void *thiz, int show)
 	MP_CHECK(view->layout);
 	MP_CHECK(view->nowplaying_bar);
 	if (show) {
-		#ifdef MP_FEATURE_LANDSCAPE
+#ifdef MP_FEATURE_LANDSCAPE
 		bool landscape = mp_util_is_landscape();
 		if (landscape) {
 			edje_object_signal_emit(_EDJ(view->layout), "LANDSCAPE_SHOW_NOW_PLAING", "music_app");
 		} else
-		#endif
+#endif
 			edje_object_signal_emit(_EDJ(view->layout), "SHOW_NOW_PLAING", "music_app");
 	} else {
 		edje_object_signal_emit(_EDJ(view->layout), "HIDE_NOW_PLAING", "music_app");
@@ -195,12 +200,14 @@ static int _mp_view_set_nowplaying(void *thiz)
 	mp_list_view_is_list_view((MpListView_t *)view, &val);
 
 	MpList_t *list = ((MpListView_t *)view)->content_to_show;
-	if (val && mp_list_get_edit(list) && mp_list_get_reorder(list))
+	if (val && mp_list_get_edit(list) && mp_list_get_reorder(list)) {
 		return 0;
+	}
 
 	struct appdata *ad = mp_util_get_appdata();
-	if (!ad->current_track_info)
+	if (!ad->current_track_info) {
 		return 0;
+	}
 
 #endif
 #ifdef MP_FEATURE_LANDSCAPE
@@ -213,18 +220,19 @@ static int _mp_view_set_nowplaying(void *thiz)
 		mp_view_update_nowplaying(view, true);
 	} else
 #endif
-	if (!view->nowplaying_bar) {
-		view->rotate_flag = FALSE;
-		view->nowplaying_bar = mp_now_playing_create(view->layout, _mp_view_now_playing_play_pause_cb, _mp_view_now_playing_cb, view);
-		elm_object_part_content_set(view->layout, "now_playing", view->nowplaying_bar);
-		mp_view_update_nowplaying(view, true);
-	} else {
-		mp_view_update_nowplaying(view, true);
-	}
+		if (!view->nowplaying_bar) {
+			view->rotate_flag = FALSE;
+			view->nowplaying_bar = mp_now_playing_create(view->layout, _mp_view_now_playing_play_pause_cb, _mp_view_now_playing_cb, view);
+			elm_object_part_content_set(view->layout, "now_playing", view->nowplaying_bar);
+			mp_view_update_nowplaying(view, true);
+		} else {
+			mp_view_update_nowplaying(view, true);
+		}
 	_mp_view_show_now_playing(thiz, TRUE);
 
-	if (view == mp_view_mgr_get_top_view(GET_VIEW_MGR))
+	if (view == mp_view_mgr_get_top_view(GET_VIEW_MGR)) {
 		mp_view_freeze_nowplaying(view, 0);
+	}
 
 	return 0;
 }
@@ -245,8 +253,9 @@ static int _mp_view_start_playback(void *thiz)
 	startfunc;
 	MpView_t *view = thiz;
 
-	if (view == mp_view_mgr_get_top_view(GET_VIEW_MGR))
+	if (view == mp_view_mgr_get_top_view(GET_VIEW_MGR)) {
 		mp_view_freeze_nowplaying(view, 0);
+	}
 
 	return 0;
 }
@@ -324,8 +333,9 @@ static void _mp_view_view_lcd_on(void *thiz)
 
 #ifndef MP_SOUND_PLAYER
 	MpView_t *view = thiz;
-	if (mp_view_mgr_get_top_view(GET_VIEW_MGR) == view)
+	if (mp_view_mgr_get_top_view(GET_VIEW_MGR) == view) {
 		mp_view_freeze_nowplaying(view, 0);
+	}
 	mp_view_update_nowplaying(view, true);
 #endif
 
@@ -351,8 +361,9 @@ static void _mp_view_view_resume(void *thiz)
 	MpView_t *view = thiz;
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
-	if (mp_playlist_mgr_get_current(ad->playlist_mgr) != NULL)
+	if (mp_playlist_mgr_get_current(ad->playlist_mgr) != NULL) {
 		mp_view_set_nowplaying(view);
+	}
 
 	mp_view_freeze_nowplaying(view, 0);
 #endif
@@ -369,8 +380,9 @@ _mp_view_on_event(void *thiz, MpViewEvent_e event)
 	switch (event) {
 #ifdef MP_FEATURE_LANDSCAPE
 	case MP_VIEW_ROTATE:
-		if (view->view_type != MP_VIEW_EDIT)
+		if (view->view_type != MP_VIEW_EDIT) {
 			mp_view_update_options(thiz);
+		}
 		break;
 #endif
 	default:
@@ -446,14 +458,14 @@ int mp_view_init(Evas_Object *parent, MpView_t *view, MpViewType_e view_type, ..
 	evas_object_data_set(view->layout, "view_data", view);
 
 	evas_object_event_callback_add(view->layout, EVAS_CALLBACK_FREE, _mp_view_layout_del_cb,
-				view);
+	                               view);
 
 	if (view_type == MP_VIEW_PLAYER
-			|| view_type == MP_VIEW_SEARCH
-			|| view_type == MP_VIEW_EDIT
-			|| view_type == MP_VIEW_ADD_TRACK
-			|| view_type == MP_VIEW_SELECT_TRACK
-			|| view_type == MP_VIEW_MAKE_OFFLINE) {
+	        || view_type == MP_VIEW_SEARCH
+	        || view_type == MP_VIEW_EDIT
+	        || view_type == MP_VIEW_ADD_TRACK
+	        || view_type == MP_VIEW_SELECT_TRACK
+	        || view_type == MP_VIEW_MAKE_OFFLINE) {
 		view->disable_title_icon = true;
 	}
 
@@ -479,9 +491,9 @@ EXPORT_API int mp_view_update(MpView_t *view)
 	bool val = false;
 	mp_list_view_is_list_view((MpListView_t *)view, &val);
 
-	if (val && mp_list_get_edit(((MpListView_t *)view)->content_to_show))
+	if (val && mp_list_get_edit(((MpListView_t *)view)->content_to_show)) {
 		mp_view_update_options_edit(view);
-	else
+	} else
 #endif
 		mp_view_update_options(view);
 
@@ -525,10 +537,11 @@ Evas_Object *mp_view_get_base_obj(MpView_t *view)
 	startfunc;
 	CHECK_VIEW(view, NULL);
 
-	if (view->scroller)
+	if (view->scroller) {
 		return view->scroller;
-	else
+	} else {
 		return view->layout;
+	}
 
 }
 
@@ -570,8 +583,9 @@ int mp_view_set_nowplaying(MpView_t *view)
 {
 	startfunc;
 	CHECK_VIEW(view, -1);
-	if (view->set_nowplaying)
+	if (view->set_nowplaying) {
 		view->set_nowplaying(view);
+	}
 	return 0;
 }
 
@@ -579,8 +593,9 @@ int mp_view_unset_nowplaying(MpView_t *view)
 {
 	startfunc;
 	CHECK_VIEW(view, -1);
-	if (view->unset_nowplaying)
+	if (view->unset_nowplaying) {
 		view->unset_nowplaying(view);
+	}
 	return 0;
 }
 
@@ -588,8 +603,9 @@ int mp_view_update_nowplaying(MpView_t *view, bool with_title)
 {
 	startfunc;
 	CHECK_VIEW(view, -1);
-	if (view->update_nowplaying)
+	if (view->update_nowplaying) {
 		view->update_nowplaying(view, with_title);
+	}
 	return 0;
 }
 
@@ -597,8 +613,9 @@ int mp_view_freeze_nowplaying(MpView_t *view, int freeze)
 {
 	startfunc;
 	CHECK_VIEW(view, -1);
-	if (view->freeze_nowplaying)
+	if (view->freeze_nowplaying) {
 		view->freeze_nowplaying(view, freeze);
+	}
 	return 0;
 }
 
@@ -673,16 +690,18 @@ EXPORT_API int mp_view_on_event(MpView_t *view, MpViewEvent_e event)
 {
 	CHECK_VIEW(view, -1);
 
-	if (view->on_event)
+	if (view->on_event) {
 		view->on_event(view, event);
+	}
 	return 0;
 }
 #ifdef MP_FEATURE_LANDSCAPE
 int mp_view_is_rotate_available(MpView_t *view)
 {
 	CHECK_VIEW(view, 0);
-	if (view->is_rotate_available)
+	if (view->is_rotate_available) {
 		return view->is_rotate_available(view);
+	}
 
 	return 1;
 }

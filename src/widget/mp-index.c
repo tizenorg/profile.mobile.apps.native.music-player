@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-index.h"
@@ -20,10 +20,10 @@
 #include "mp-util.h"
 #include <system_settings.h>
 
-typedef struct{
+typedef struct {
 	char *first;
 
-}MpIndexData_t;
+} MpIndexData_t;
 
 #define GET_WIDGET_DATA(o) evas_object_data_get(o, "widget_d");
 
@@ -56,8 +56,7 @@ _mp_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 
 	Elm_Object_Item *gl_item = elm_genlist_first_item_get(genlist);
 
-	if (!g_strcmp0(index_letter, wd->first))
-	{
+	if (!g_strcmp0(index_letter, wd->first)) {
 		DEBUG_TRACE("%s selected", wd->first);	//"#" case
 		matched = gl_item;
 		goto END;
@@ -65,35 +64,29 @@ _mp_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 
 	gunichar uni_index = g_utf8_get_char_validated(index_letter, g_utf8_strlen(index_letter, -1));
 	if (uni_index == (gunichar) - 1 || uni_index == (gunichar) - 2) {
-		DEBUG_TRACE ("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
+		DEBUG_TRACE("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
 		return;
 	}
 
-	while (gl_item)
-	{
+	while (gl_item) {
 		gunichar uni = 0;
 		label = mp_list_get_list_item_label(list, gl_item);
 
-		if (label)
-		{
+		if (label) {
 			char *capital = g_utf8_strup(label, -1);
 			uni = mp_util_get_utf8_initial_value(capital);
 
-			if (uni == uni_index)
-			{
+			if (uni == uni_index) {
 				matched = gl_item;
 				break;
-			}
-			else if (closed == NULL && (g_unichar_isalpha(uni) || uni > 0x0400))
-			{
+			} else if (closed == NULL && (g_unichar_isalpha(uni) || uni > 0x0400)) {
 				/*
 				char first[10] = {0,}, index[10]= {0,};
 				g_unichar_to_utf8(uni, first);
 				g_unichar_to_utf8(uni, index);
 				DEBUG_TRACE("uni[0x%x, %s], uni_index[0x%x, %s]", uni, first, uni_index, index);
 				*/
-				if (capital && uni > uni_index)  //move to most close item
-				{
+				if (capital && uni > uni_index) { //move to most close item
 					closed = gl_item;
 				}
 				IF_FREE(capital);
@@ -102,25 +95,29 @@ _mp_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 		gl_item = elm_genlist_item_next_get(gl_item);
 	}
 
-	END:
-	if (matched)
+END:
+	if (matched) {
 		elm_genlist_item_show(matched, ELM_GENLIST_ITEM_SCROLLTO_TOP);
-	else if (closed)
+	} else if (closed) {
 		elm_genlist_item_show(closed, ELM_GENLIST_ITEM_SCROLLTO_TOP);
+	}
 }
 
 Eina_Bool ea_locale_latin_get(const char *locale)
 {
-   if (!locale) return EINA_FALSE;
+	if (!locale) {
+		return EINA_FALSE;
+	}
 
-   int i = 0;
+	int i = 0;
 
-   while(non_latin_lan[i])
-     {
-        if (!strcmp(non_latin_lan[i], locale)) return EINA_FALSE;
-        i++;
-     }
-   return EINA_TRUE;
+	while (non_latin_lan[i]) {
+		if (!strcmp(non_latin_lan[i], locale)) {
+			return EINA_FALSE;
+		}
+		i++;
+	}
+	return EINA_TRUE;
 }
 
 
@@ -139,17 +136,18 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 	MP_CHECK(wd);
 	//1. Special character & Numbers
 	elm_index_item_append(obj, "#", _mp_index_item_selected_cb, list);
-	if (!wd->first)
+	if (!wd->first) {
 		wd->first = g_strdup("#");
+	}
 
 	//2. Local language
 	str = dgettext("efl-extension", "IDS_EA_BODY_ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 	MP_CHECK(str);
 	len = strlen(str);
-	if (len == 0)
+	if (len == 0) {
 		return;
-	while (i < len)
-	{
+	}
+	while (i < len) {
 		j = i;
 		uni = eina_unicode_utf8_next_get(str, &i);
 		MP_CHECK(uni);
@@ -166,15 +164,13 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 		ERROR_TRACE("Unable to fetch the current language setting with return value %d", retcode);
 	}
 	MP_CHECK(locale);
-	if (!ea_locale_latin_get(locale))
-	{
+	if (!ea_locale_latin_get(locale)) {
 		str = dgettext("efl-extension", "IDS_EA_BODY_ABCDEFGHIJKLMNOPQRSTUVWXYZ_SECOND");
 		MP_CHECK(str);
 		len = strlen(str);
 
 		i = 0;
-		while (i < len)
-		{
+		while (i < len) {
 			j = i;
 			uni = eina_unicode_utf8_next_get(str, &i);
 			MP_CHECK(uni);
@@ -220,10 +216,10 @@ void _language_changed(void *data, Evas_Object *obj, void *event_info)
 {
 	MP_CHECK(data);
 	MP_CHECK(obj);
-	_mp_fastscoller_append_item(data,obj);
+	_mp_fastscoller_append_item(data, obj);
 	elm_index_level_go(obj, 0);
 	evas_object_smart_callback_add(obj, "changed", _mp_index_item_selected_cb, (MpList_t *)data);
-        evas_object_smart_callback_add(obj, "selected", _index_selected_cb, NULL);
+	evas_object_smart_callback_add(obj, "selected", _index_selected_cb, NULL);
 }
 
 Evas_Object *mp_index_create(Evas_Object *parent, int group_type, void *data)
@@ -237,8 +233,7 @@ Evas_Object *mp_index_create(Evas_Object *parent, int group_type, void *data)
 	elm_index_autohide_disabled_set(index, EINA_TRUE);
 
 	wd = calloc(1, sizeof(MpIndexData_t));
-	if (!wd)
-	{
+	if (!wd) {
 		ERROR_TRACE("Error: memory alloc failed");
 		evas_object_del(index);
 		return NULL;

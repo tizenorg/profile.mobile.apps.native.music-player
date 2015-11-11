@@ -41,21 +41,24 @@ int mp_file_exists(const char *path)
 {
 	struct stat info = {0,};
 
-	if (!path)
+	if (!path) {
 		return 0;
+	}
 
-	if (stat(path, &info) == 0)
+	if (stat(path, &info) == 0) {
 		return 1;
-	else
+	} else {
 		return 0;
+	}
 }
 
 int mp_file_is_dir(const char *path)
 {
 	struct stat info = {0,};
 
-	if (!path)
+	if (!path) {
 		return 0;
+	}
 
 	if (stat(path, &info) == 0) {
 		if (S_ISDIR(info.st_mode)) {
@@ -69,17 +72,18 @@ int mp_file_is_dir(const char *path)
 //TODO: Need to Verify the funcationality.
 int mp_file_path_dir_exists(const char *folderPath)
 {
-	if (!folderPath)
+	if (!folderPath) {
 		return 0;
+	}
 
 	if (mp_file_exists(folderPath) == 1) {
-	    if (mp_file_is_dir(folderPath) == 1) {
-		return 1;
-	    } else {
-		return 0;
-	    }
+		if (mp_file_is_dir(folderPath) == 1) {
+			return 1;
+		} else {
+			return 0;
+		}
 	} else {
-	   return 0;
+		return 0;
 	}
 }
 
@@ -90,16 +94,17 @@ int mp_file_dir_is_empty(const char *path)
 	struct dirent entry;
 	DIR *dirp = NULL;
 
-	if (!path)
+	if (!path) {
 		return -1;
+	}
 
 	dirp = opendir(path);
-	if (!dirp)
+	if (!dirp) {
 		return -1;
+	}
 
-	while ((readdir_r(dirp, &entry ,&dp) == 0) && dp != NULL) {
-		if (stat(dp->d_name, &info) == 0 && (strcmp(dp->d_name, ".")) && (strcmp(dp->d_name, "..")))
-		{
+	while ((readdir_r(dirp, &entry , &dp) == 0) && dp != NULL) {
+		if (stat(dp->d_name, &info) == 0 && (strcmp(dp->d_name, ".")) && (strcmp(dp->d_name, ".."))) {
 			closedir(dirp);
 			return 0;
 		}
@@ -110,13 +115,15 @@ int mp_file_dir_is_empty(const char *path)
 
 int mp_mkdir(const char *dir)
 {
-	if (!dir)
+	if (!dir) {
 		return 0;
+	}
 
-	if (mkdir(dir, default_mode) < 0)
+	if (mkdir(dir, default_mode) < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 static int
@@ -124,15 +131,17 @@ mp_mkpath_if_not_exists(const char *path)
 {
 	struct stat st = {0,};
 
-	if (!path)
+	if (!path) {
 		return 0;
+	}
 
-	if (stat(path, &st) < 0)
-        	return mp_mkdir(path);
-	else if (!S_ISDIR(st.st_mode))
+	if (stat(path, &st) < 0) {
+		return mp_mkdir(path);
+	} else if (!S_ISDIR(st.st_mode)) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 int mp_file_mkpath(char *path)
@@ -140,20 +149,24 @@ int mp_file_mkpath(char *path)
 	char ss[100] = {0,};
 	unsigned int i = 0;
 
-	if (!path)
+	if (!path) {
 		return 0;
+	}
 
-	if (mp_file_is_dir(path))
+	if (mp_file_is_dir(path)) {
 		return 1;
+	}
 
 	for (i = 0; path[i] != '\0'; ss[i] = path[i], i++) {
-		if (i == sizeof(ss) - 1)
+		if (i == sizeof(ss) - 1) {
 			return 0;
+		}
 
 		if ((path[i] == '/') && (i > 0)) {
 			ss[i] = '\0';
-			if (!mp_mkpath_if_not_exists(ss))
+			if (!mp_mkpath_if_not_exists(ss)) {
 				return 0;
+			}
 		}
 	}
 	ss[i] = '\0';
@@ -161,28 +174,32 @@ int mp_file_mkpath(char *path)
 	return mp_mkpath_if_not_exists(ss);
 }
 
-int mp_file_unlink (const char *filename)
+int mp_file_unlink(const char *filename)
 {
-	if (!filename)
+	if (!filename) {
 		return 0;
+	}
 
 	int status = unlink(filename);
-	if (status < 0)
+	if (status < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 int mp_file_size(const char *filename)
 {
 	struct stat info = {0,};
 
-	if (!filename)
+	if (!filename) {
 		return 0;
+	}
 
 	if (stat(filename, &info) == 0) {
-		if (!S_ISDIR(info.st_mode))
+		if (!S_ISDIR(info.st_mode)) {
 			return info.st_size;
+		}
 	}
 
 	return 0;
@@ -190,14 +207,16 @@ int mp_file_size(const char *filename)
 
 int mp_file_rmdir(const char *filename)
 {
-	if (!filename)
+	if (!filename) {
 		return 0;
+	}
 
 	int status = rmdir(filename);
-	if (status < 0)
+	if (status < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 Eina_List *mp_file_ls(const char *dir)
@@ -208,14 +227,16 @@ Eina_List *mp_file_ls(const char *dir)
 	struct dirent entry;
 	Eina_List *list = NULL;
 
-	if (!dir)
+	if (!dir) {
 		return NULL;
+	}
 
 	dirp = opendir(dir);
-	if (!dirp)
+	if (!dirp) {
 		return NULL;
+	}
 
-	while ((readdir_r(dirp, &entry ,&dp) == 0 ) &&  dp != NULL) {
+	while ((readdir_r(dirp, &entry , &dp) == 0) &&  dp != NULL) {
 		if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name , ".."))) {
 			f = strdup(dp->d_name);
 			list = eina_list_append(list , f);
@@ -235,8 +256,9 @@ int mp_file_recursive_rm(const char *dir)
 	struct dirent entry;
 	DIR *dirp = NULL;
 
-	if (!dir)
+	if (!dir) {
 		return 0;
+	}
 
 	if (readlink(dir, buf, sizeof(buf)) > 0) {
 		return mp_file_unlink(dir);
@@ -247,17 +269,19 @@ int mp_file_recursive_rm(const char *dir)
 		ret = 1;
 		dirp = opendir(dir);
 		if (dirp) {
-			while (((readdir_r(dirp, &entry, &dp)) == 0) && dp != NULL){
+			while (((readdir_r(dirp, &entry, &dp)) == 0) && dp != NULL) {
 				if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name, ".."))) {
-					if (!mp_file_recursive_rm(dp->d_name))
+					if (!mp_file_recursive_rm(dp->d_name)) {
 						ret = 0;
+					}
 				}
 			}
 			closedir(dirp);
 		}
 
-		if (!mp_file_rmdir(dir))
+		if (!mp_file_rmdir(dir)) {
 			ret = 0;
+		}
 
 		return ret;
 	} else {
@@ -268,8 +292,9 @@ int mp_file_recursive_rm(const char *dir)
 int mp_file_mv(const char *src, const char *dst)
 {
 	struct stat info = {0,};
-	if (stat(dst, &info) == 0)
+	if (stat(dst, &info) == 0) {
 		return 0;
+	}
 
 	if (rename(src, dst)) {
 		memset(&info, 0x00, sizeof(struct stat));
@@ -285,7 +310,7 @@ int mp_file_mv(const char *src, const char *dst)
 	return 1;
 }
 
-int mp_file_cp(const char *src,const char *dst)
+int mp_file_cp(const char *src, const char *dst)
 {
 	FILE *f1 = NULL;
 	FILE *f2 = NULL;
@@ -333,17 +358,21 @@ int mp_file_cp(const char *src,const char *dst)
 	return ret;
 }
 
-int mp_file_remove(const char *path) {
+int mp_file_remove(const char *path)
+{
 	struct stat info;
 
-	if (!path)
+	if (!path) {
 		return 0;
+	}
 
-	if (stat(path,&info) == 0) {
-		if (S_ISREG(info.st_mode))
+	if (stat(path, &info) == 0) {
+		if (S_ISREG(info.st_mode)) {
 			unlink(path);
-		if (S_ISDIR(info.st_mode))
+		}
+		if (S_ISDIR(info.st_mode)) {
 			rmdir(path);
+		}
 		return 1;
 	} else {
 		return 0;
@@ -355,8 +384,8 @@ char *mp_file_file_get(char path[])
 	char * file = NULL;
 	struct stat info = {0,};
 
-	if (stat(path,&info) == 0) {
-		file = strrchr(path,'/');
+	if (stat(path, &info) == 0) {
+		file = strrchr(path, '/');
 		MP_CHECK_NULL(file);
 		file++;
 	}
@@ -369,8 +398,9 @@ char *mp_file_strip_ext(const char *path)
 	char *p = NULL;
 	char *file = NULL;
 
-	if (!path)
+	if (!path) {
 		return NULL;
+	}
 
 	p = strrchr(path, '.');
 	if (!p) {

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-watch-dog.h"
@@ -45,8 +45,9 @@ __mp_watchdog_thread_function(void *data, Ecore_Thread *thread)
 			assert(0);
 		}
 
-		if (!g_write_lock)
+		if (!g_write_lock) {
 			g_MainThreadLockup = 1;
+		}
 		DEBUG_TRACE("Send Notify to Main thread");
 		ecore_thread_feedback(thread, NULL);
 
@@ -57,7 +58,7 @@ __mp_watchdog_thread_function(void *data, Ecore_Thread *thread)
 
 	}
 
-	END:
+END:
 	endfunc;
 }
 
@@ -88,29 +89,33 @@ void mp_watch_dog_init(void)
 	return;
 #endif
 
-	if (mp_file_exists("/tmp/mp_disable_watchdog"))
+	if (mp_file_exists("/tmp/mp_disable_watchdog")) {
 		return;
+	}
 
-	if (g_WathDogThread)
+	if (g_WathDogThread) {
 		return;
+	}
 
 	g_WathDogThread = ecore_thread_feedback_run(__mp_watchdog_thread_function,
-		_mp_watch_dog_thread_notify_cb,
-		_mp_watch_dog_thread_end_cb,
-		_mp_watch_dog_thread_cancel_cb,  NULL, EINA_TRUE);
+	                  _mp_watch_dog_thread_notify_cb,
+	                  _mp_watch_dog_thread_end_cb,
+	                  _mp_watch_dog_thread_cancel_cb,  NULL, EINA_TRUE);
 }
 
 void mp_watch_dog_finalize(void)
 {
-	if (g_WathDogThread)
+	if (g_WathDogThread) {
 		ecore_thread_cancel(g_WathDogThread);
+	}
 }
 
 void mp_watch_dog_reset(void)
 {
 	g_write_lock = 1;
-	if (g_MainThreadLockup)
+	if (g_MainThreadLockup) {
 		g_MainThreadLockup = EINA_TRUE;
+	}
 	g_write_lock = 0;
 }
 

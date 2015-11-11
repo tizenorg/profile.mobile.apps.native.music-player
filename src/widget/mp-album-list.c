@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <stdio.h>
@@ -45,17 +45,17 @@ _mp_album_list_group_index_text_get(void *data, Evas_Object * obj, const char *p
 	MP_CHECK_NULL(item_data);
 
 	char *text = NULL;
-	if (!strcmp(part, "elm.text.sub"))
-	{
-                MpAlbumList_t *list = evas_object_data_get(obj, "list_data");
-                MP_CHECK_NULL(list);
+	if (!strcmp(part, "elm.text.sub")) {
+		MpAlbumList_t *list = evas_object_data_get(obj, "list_data");
+		MP_CHECK_NULL(list);
 
-                unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
+		unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
 
-                if (count == 1)
-                        text = g_strdup(GET_STR(STR_MP_1_ALBUM));
-                else
-                        text = g_strdup_printf(GET_STR(STR_MP_PD_ALBUMS), count);
+		if (count == 1) {
+			text = g_strdup(GET_STR(STR_MP_1_ALBUM));
+		} else {
+			text = g_strdup_printf(GET_STR(STR_MP_PD_ALBUMS), count);
+		}
 	}
 
 	return text;
@@ -71,24 +71,23 @@ _mp_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
 
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!strcmp(part, "elm.text.main.left.top") )
-	{
+	if (!strcmp(part, "elm.text.main.left.top")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 
 		return elm_entry_utf8_to_markup(name);
 
-	}
-	else if (!strcmp(part, "elm.text.sub.left.bottom"))
-	{
+	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
 		ret = mp_media_info_group_get_sub_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 		return g_strdup(elm_entry_utf8_to_markup(name));
 	}
 
@@ -106,25 +105,24 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
 
 	Evas_Object *content = NULL;
 	content = elm_layout_add(obj);
 
-	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon"))
-	{
+	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon")) {
 		char *thumb_name = NULL;
 		mp_media_info_group_get_thumbnail_path(svc_item, &thumb_name);
 		int w, h;
 		if (item->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 			//if (landscape)
 			//{
-				w = ALBUM_ICON_SIZE * elm_config_scale_get();
+			w = ALBUM_ICON_SIZE * elm_config_scale_get();
 			//}
 			//else
 			//{
-				//w = ALBUM_ICON_SIZE * elm_config_scale_get();
+			//w = ALBUM_ICON_SIZE * elm_config_scale_get();
 			//}
 		} else {
 			w = ALBUM_ICON_SIZE;
@@ -140,7 +138,7 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MpAlbumList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
 
-        /*
+	/*
 	Evas_Object *button = NULL;
 	if (!strcmp(part, "elm.slide.swallow.1"))
 	{
@@ -152,7 +150,7 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		evas_object_smart_callback_add(button, "clicked", _mp_album_list_add_to_playlist_cb, list);
 		return button;
 	}
-#ifdef MP_FEATURE_ADD_TO_HOME
+	#ifdef MP_FEATURE_ADD_TO_HOME
 	else if (!strcmp(part, "elm.slide.swallow.2"))
 	{
 		button = elm_button_add(obj);
@@ -164,8 +162,8 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		//evas_object_data_set(button, "layout_data", layout_data);
 		return button;
 	}
-#endif
-        */
+	#endif
+	       */
 	Evas_Object *check = NULL;
 	DEBUG_TRACE("list->edit_mode = %d", list->edit_mode);
 
@@ -211,10 +209,11 @@ _mp_album_select_cb(void *data, Evas_Object * obj, void *event_info)
 
 	Elm_Object_Item *gli = (Elm_Object_Item *) event_info;
 	MP_CHECK(gli);
-	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
+	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		elm_gengrid_item_selected_set(gli, EINA_FALSE);
-	else
+	} else {
 		elm_genlist_item_selected_set(gli, EINA_FALSE);
+	}
 
 	mp_list_item_data_t *gli_data = elm_object_item_data_get(gli);
 	MP_CHECK(gli_data);
@@ -222,8 +221,7 @@ _mp_album_select_cb(void *data, Evas_Object * obj, void *event_info)
 	index = gli_data->index;
 
 	DEBUG_TRACE("index is %d", index);
-	if (index >=0)
-	{
+	if (index >= 0) {
 		//item_handle = mp_media_info_group_list_nth_item(gli_data->handle, index);
 		DEBUG_TRACE("");
 		ret = mp_media_info_group_get_main_info(gli_data->handle, &name);
@@ -232,15 +230,14 @@ _mp_album_select_cb(void *data, Evas_Object * obj, void *event_info)
 		DEBUG_TRACE("");
 		mp_media_info_group_get_thumbnail_path(gli_data->handle, &thumbnail);
 		DEBUG_TRACE("thumbnail=%s", thumbnail);
-		mp_retm_if (ret != 0, "Fail to get value");
-		mp_retm_if (name == NULL, "Fail to get value");
+		mp_retm_if(ret != 0, "Fail to get value");
+		mp_retm_if(name == NULL, "Fail to get value");
 
 		title = name;
 	}
 
 
-	if (list->function_type == MP_LIST_FUNC_ADD_TRACK)
-	{
+	if (list->function_type == MP_LIST_FUNC_ADD_TRACK) {
 		MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
 		MP_CHECK(view_manager);
 		MpSelectTrackView_t *view_select_track = mp_select_track_view_create(view_manager->navi);
@@ -253,13 +250,12 @@ _mp_album_select_cb(void *data, Evas_Object * obj, void *event_info)
 		mp_view_update_options((MpView_t *)view_select_track);
 		mp_list_set_edit(view_select_track->content_to_show, TRUE);
 		mp_list_view_set_cancel_btn((MpListView_t*)view_select_track, true);
-		mp_list_view_set_done_btn((MpListView_t*)view_select_track, true,MP_DONE_SELECT_ADD_TRACK_TYPE);
+		mp_list_view_set_done_btn((MpListView_t*)view_select_track, true, MP_DONE_SELECT_ADD_TRACK_TYPE);
 		mp_list_view_set_select_all((MpListView_t *)view_select_track, TRUE);
 		return;
 	}
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		//mp_edit_view_genlist_sel_cb(data, obj, event_info);
 		mp_list_edit_mode_sel((MpList_t *)list, gli_data);
 		MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
@@ -291,8 +287,7 @@ _mp_album_list_append_group_index_item(void *thiz)
 	MP_CHECK(list);
 	MP_CHECK(list->genlist);
 
-	if (!list->itc_group_index)
-	{
+	if (!list->itc_group_index) {
 		list->itc_group_index = elm_genlist_item_class_new();
 
 		if (list->itc_group_index == NULL) {
@@ -317,20 +312,17 @@ _mp_album_list_append_group_index_item(void *thiz)
 void mp_album_list_show_group_index(void *thiz, bool show)
 {
 	startfunc;
-        MP_CHECK(thiz);
-        MpAlbumList_t *list = thiz;
-        MP_CHECK(list->genlist);
+	MP_CHECK(thiz);
+	MpAlbumList_t *list = thiz;
+	MP_CHECK(list->genlist);
 
-        DEBUG_TRACE("show group index: %d   list->group_it: %0x", show, list->group_it);
-        if (show)
-        {
-                _mp_album_list_append_group_index_item(list);
-        }
-        else if (list->group_it)
-        {
-                elm_object_item_del(list->group_it);
-                list->group_it = NULL;
-        }
+	DEBUG_TRACE("show group index: %d   list->group_it: %0x", show, list->group_it);
+	if (show) {
+		_mp_album_list_append_group_index_item(list);
+	} else if (list->group_it) {
+		elm_object_item_del(list->group_it);
+		list->group_it = NULL;
+	}
 }
 
 static void _mp_album_list_load_list(void *thiz, int count)
@@ -345,36 +337,33 @@ static void _mp_album_list_load_list(void *thiz, int count)
 
 	DEBUG_TRACE("count: %d", count);
 
-	if (count < 0)
+	if (count < 0) {
 		goto END;
+	}
 
-	if (list->album_list)
-	{
+	if (list->album_list) {
 		mp_media_info_group_list_destroy(list->album_list);
 		list->album_list = NULL;
 	}
 
 	ret = mp_media_info_group_list_create(&list->album_list, MP_GROUP_BY_ALBUM, NULL, NULL, 0, count);
 
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to get items");
 		goto END;
 	}
 
 	svc_handle = list->album_list ;
 
-        mp_album_list_show_group_index(list, false);
+	mp_album_list_show_group_index(list, false);
 
-	for (index = 0; index < count; index++)
-	{
+	for (index = 0; index < count; index++) {
 		mp_media_info_h item = NULL;
 		Elm_Object_Item *list_item = NULL;
 		char *title = NULL;
 
 		item = mp_media_info_group_list_nth_item(svc_handle, index);
-		if (!item)
-		{
+		if (!item) {
 			DEBUG_TRACE("Fail to mp_media_info_group_list_nth_item, ret[%d], index[%d]", ret, index);
 			goto END;
 		}
@@ -385,16 +374,15 @@ static void _mp_album_list_load_list(void *thiz, int count)
 		MP_CHECK(item_data);
 		item_data->handle = item;
 		item_data->index = index;
-                item_data->checked = mp_list_is_in_checked_path_list(list->checked_path_list, title);
+		item_data->checked = mp_list_is_in_checked_path_list(list->checked_path_list, title);
 
 		if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 			list_item = elm_gengrid_item_append(list->genlist, list->gengrid_itc, item_data,
-							_mp_album_select_cb, (void *)list);
-		}
-		else {
+			                                    _mp_album_select_cb, (void *)list);
+		} else {
 			Elm_Object_Item *parent_group = NULL;
 			list_item = elm_genlist_item_append(list->genlist, list->itc, item_data, parent_group,
-									    ELM_GENLIST_ITEM_NONE, _mp_album_select_cb, (void *)list);
+			                                    ELM_GENLIST_ITEM_NONE, _mp_album_select_cb, (void *)list);
 		}
 		item_data->it = list_item;
 		elm_object_item_data_set(item_data->it, item_data);
@@ -410,8 +398,9 @@ void _mp_album_list_destory_cb(void *thiz)
 	MpAlbumList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (list->album_list)
+	if (list->album_list) {
 		mp_media_info_group_list_destroy(list->album_list);
+	}
 
 
 	if (list->itc) {
@@ -428,7 +417,7 @@ void _mp_album_list_destory_cb(void *thiz)
 		list->gengrid_itc = NULL;
 	}
 
-        mp_list_free_checked_path_list(list->checked_path_list);
+	mp_list_free_checked_path_list(list->checked_path_list);
 
 	free(list);
 }
@@ -539,7 +528,7 @@ _mp_album_list_genlist_create(MpAlbumList_t *list)
 	//evas_object_smart_callback_add(list->genlist, "longpressed", _mp_album_list_item_longpressed_cb, list);
 	elm_genlist_mode_set(list->genlist, ELM_LIST_COMPRESS);
 
-        evas_object_data_set(list->genlist, "list_data", list);
+	evas_object_data_set(list->genlist, "list_data", list);
 
 #ifdef MP_FEATURE_ADD_TO_HOME
 	const char *group_slide_style = "mode/slide2";
@@ -556,7 +545,7 @@ _mp_album_list_genlist_create(MpAlbumList_t *list)
 		list->itc->func.del = _mp_album_list_item_del_cb;
 	}
 
-        /*
+	/*
 	evas_object_smart_callback_add(list->genlist, "drag,start,left", list->flick_left_cb, NULL);
 	evas_object_smart_callback_add(list->genlist, "drag,start,right", list->flick_right_cb, NULL);
 	evas_object_smart_callback_add(list->genlist, "drag,stop", list->flick_stop_cb, NULL);
@@ -565,7 +554,7 @@ _mp_album_list_genlist_create(MpAlbumList_t *list)
 	evas_object_smart_callback_add(list->genlist, "drag,start,left", list->mode_left_cb, NULL);
 	evas_object_smart_callback_add(list->genlist, "drag,start,up", list->mode_cancel_cb, NULL);
 	evas_object_smart_callback_add(list->genlist, "drag,start,down", list->mode_cancel_cb, NULL);
-        */
+	       */
 	endfunc;
 }
 
@@ -576,21 +565,19 @@ _mp_album_list_set_grid_style(MpAlbumList_t *list)
 
 	MP_CHECK(list->gengrid_itc);
 
-	if (landscape)
+	if (landscape) {
 		list->gengrid_itc->item_style = "music/landscape/album_grid";
-	else
+	} else {
 		list->gengrid_itc->item_style = "music/album_grid2";
+	}
 
 	double scale = elm_config_scale_get();
 	int w;
 	int h;
-	if (landscape)
-	{
+	if (landscape) {
 		w = (int)(ALBUM_GRID_LAND_W * scale);
 		h = (int)(ALBUM_GRID_LAND_H * scale);
-	}
-	else
-	{
+	} else {
 		w = (int)(ALBUM_GRID_W * scale);
 		h = (int)(ALBUM_GRID_H * scale);
 	}
@@ -641,32 +628,29 @@ static void _mp_album_list_update(void *thiz)
 	res = mp_media_info_group_list_count(MP_GROUP_BY_ALBUM, NULL, NULL, &count);
 	MP_CHECK(res == 0);
 
-        mp_list_free_checked_path_list(list->checked_path_list);
-        list->checked_path_list = mp_list_get_checked_path_list((MpList_t *)list);
+	mp_list_free_checked_path_list(list->checked_path_list);
+	list->checked_path_list = mp_list_get_checked_path_list((MpList_t *)list);
 
 	mp_evas_object_del(list->genlist);
 	mp_evas_object_del(list->no_content);
 
-	if (count)
-	{
+	if (count) {
 		if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 			_mp_album_list_gengrid_create(list);
-		}
-		else {
+		} else {
 			_mp_album_list_genlist_create(list);
 		}
 
 		evas_object_data_set(list->genlist, "list_handle", list);
 
-		if (ad->del_cb_invoked == 0)
+		if (ad->del_cb_invoked == 0) {
 			mp_list_bottom_counter_item_append((MpList_t *)list);
+		}
 
 		/* load list */
 		_mp_album_list_load_list(thiz, count);
 		list->show_fastscroll(list);
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("count is 0");
 
 		list->no_content = mp_widget_create_no_contents(list->box, MP_NOCONTENT_ALBUMS, NULL, NULL);
@@ -679,8 +663,7 @@ static void _mp_album_list_update(void *thiz)
 void _mp_album_list_rotate(void *thiz)
 {
 	MpAlbumList_t * list = thiz;
-	if (mp_list_get_display_mode((MpList_t *)list) == MP_LIST_DISPLAY_MODE_THUMBNAIL)
-	{
+	if (mp_list_get_display_mode((MpList_t *)list) == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		_mp_album_list_set_grid_style(list);
 	}
 }
@@ -706,10 +689,11 @@ static char *_mp_album_list_bottom_counter_text_cb(void *thiz)
 	unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
 
 	char *text = NULL;
-	if (count == 1)
+	if (count == 1) {
 		text = g_strdup(GET_STR(STR_MP_1_ALBUM));
-	else
+	} else {
 		text = g_strdup_printf(GET_STR(STR_MP_PD_ALBUMS), count);
+	}
 
 	return text;
 }
@@ -720,10 +704,11 @@ static void _mp_album_list_set_edit(void *thiz, bool edit)
 	MpAlbumList_t *list = thiz;
 	MP_CHECK(list);
 
-        mp_album_list_show_group_index(list, false);
+	mp_album_list_show_group_index(list, false);
 
-	if (list->set_edit_default)
+	if (list->set_edit_default) {
 		list->set_edit_default(list, edit);
+	}
 }
 
 
@@ -735,11 +720,13 @@ _mp_album_list_get_count(void *thiz, MpListEditType_e type)
 
 	int count = MP_LIST_OBJ_IS_GENGRID(list->genlist) ? elm_gengrid_items_count(list->genlist) : elm_genlist_items_count(list->genlist);
 
-	if (list->group_it) //group index
+	if (list->group_it) { //group index
 		--count;
+	}
 
-	if (list->bottom_counter_item)
+	if (list->bottom_counter_item) {
 		--count;
+	}
 
 	return count;
 }
@@ -764,9 +751,9 @@ MpAlbumList_t * mp_album_list_create(Evas_Object *parent)
 
 	list->bottom_counter_text_get_cb = _mp_album_list_bottom_counter_text_cb;
 
-        list->set_edit_default = list->set_edit;
-        list->set_edit = _mp_album_list_set_edit;
-        list->get_count = _mp_album_list_get_count;
+	list->set_edit_default = list->set_edit;
+	list->set_edit = _mp_album_list_set_edit;
+	list->get_count = _mp_album_list_get_count;
 
 	return list;
 }
@@ -780,35 +767,30 @@ void mp_album_list_set_data(MpAlbumList_t *list, ...)
 	int field;
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
-		switch (field)
-		{
+		switch (field) {
 
-		case MP_ALBUM_LIST_FUNC:
-			{
-				int val = va_arg((var_args), int);
+		case MP_ALBUM_LIST_FUNC: {
+			int val = va_arg((var_args), int);
 
-				list->function_type = val;
-				DEBUG_TRACE("list->function_type = %d", list->function_type);
-				break;
-			}
-		case MP_ALBUM_LIST_DISPLAY_MODE:
-			{
-				int val = va_arg((var_args), int);
-				list->display_mode = val;
-				DEBUG_TRACE("list->display_mode = %d", list->display_mode);
+			list->function_type = val;
+			DEBUG_TRACE("list->function_type = %d", list->function_type);
+			break;
+		}
+		case MP_ALBUM_LIST_DISPLAY_MODE: {
+			int val = va_arg((var_args), int);
+			list->display_mode = val;
+			DEBUG_TRACE("list->display_mode = %d", list->display_mode);
 
-				break;
-			}
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }

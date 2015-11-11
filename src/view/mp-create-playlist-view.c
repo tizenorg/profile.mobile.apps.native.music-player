@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-create-playlist-view.h"
@@ -141,9 +141,13 @@ static void _mp_create_playlist_view_realized_cb(void *data, Evas_Object *obj, v
 		return;
 	} else {
 		/* if dialogue styles*/
-		if (id->dial == 1) elm_object_item_signal_emit(ei, "elm,state,top", "");
-		else if (id->dial == 2) elm_object_item_signal_emit(ei, "elm,state,center", "");
-		else if (id->dial == 3) elm_object_item_signal_emit(ei, "elm,state,bottom", "");
+		if (id->dial == 1) {
+			elm_object_item_signal_emit(ei, "elm,state,top", "");
+		} else if (id->dial == 2) {
+			elm_object_item_signal_emit(ei, "elm,state,center", "");
+		} else if (id->dial == 3) {
+			elm_object_item_signal_emit(ei, "elm,state,bottom", "");
+		}
 	}
 }
 
@@ -194,10 +198,11 @@ _mp_create_playlist_view_entry_changed_cb(void *data, Evas_Object *obj, void *ev
 	MP_CHECK(editfield);
 
 	if (elm_object_focus_get(obj)) {
-		if (elm_entry_is_empty(obj))
+		if (elm_entry_is_empty(obj)) {
 			elm_object_signal_emit(editfield, "elm,state,eraser,hide", "elm");
-		else
+		} else {
 			elm_object_signal_emit(editfield, "elm,state,eraser,show", "elm");
+		}
 	}
 }
 
@@ -247,8 +252,9 @@ static void _mp_create_playlist_view_entry_focused_cb(void *data, Evas_Object *o
 	Evas_Object *editfield = elm_object_item_part_content_get(id->item, "elm.icon.entry");
 	MP_CHECK(editfield);
 
-	if (!elm_entry_is_empty(obj))
+	if (!elm_entry_is_empty(obj)) {
 		elm_object_signal_emit(editfield, "elm,state,eraser,show", "elm");
+	}
 
 	elm_object_item_signal_emit(id->item, "elm,state,rename,hide", "");
 
@@ -334,9 +340,9 @@ _mp_create_plst_gl_icon_get(void *data, Evas_Object * obj, const char *part)
 		elm_entry_input_panel_return_key_type_set(entry, ELM_INPUT_PANEL_RETURN_KEY_TYPE_DONE);
 
 		if (view->new_playlist_name && (view->parent_view != MP_PLST_PARENT_DETAIL_VIEW)) {
-		/*elm_object_part_text_set(entry, "elm.guide", view->new_playlist_name);*/
-		elm_entry_entry_set(entry, view->new_playlist_name);
-		elm_entry_cursor_end_set(entry);
+			/*elm_object_part_text_set(entry, "elm.guide", view->new_playlist_name);*/
+			elm_entry_entry_set(entry, view->new_playlist_name);
+			elm_entry_cursor_end_set(entry);
 		}
 
 		view->editfiled_entry = entry;
@@ -446,9 +452,9 @@ mp_create_plst_view_rename_done_cb(void *data, Evas_Object * obj, void *event_in
 	struct appdata *ad = mp_util_get_appdata();
 	text = mp_util_isf_get_edited_str(editfiled_entry, TRUE);
 
-	if (!mp_util_is_playlist_name_valid((char *)text))
+	if (!mp_util_is_playlist_name_valid((char *)text)) {
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"));
-	else {
+	} else {
 		bool exist = false;
 		ret = mp_media_info_playlist_is_exist(text, &exist);
 		if (ret != 0) {
@@ -465,9 +471,9 @@ mp_create_plst_view_rename_done_cb(void *data, Evas_Object * obj, void *event_in
 				mp_view_set_title(create_playlist_detail_view, text);
 
 				mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_RENAMED);
-				}
 			}
 		}
+	}
 	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 	elm_naviframe_item_pop(view_mgr->navi);
 
@@ -492,9 +498,9 @@ static int _mp_create_plst_view_create_title_buttons(void *thiz)
 			elm_entry_cursor_end_set(view->editfiled_entry);
 		}
 		evas_object_smart_callback_add(save_btn, "clicked", mp_create_plst_view_rename_done_cb, view);
-		} else {
-			evas_object_smart_callback_add(save_btn, "clicked", _mp_create_playlist_view_create_new_done_cb, view);
-		}
+	} else {
+		evas_object_smart_callback_add(save_btn, "clicked", _mp_create_playlist_view_create_new_done_cb, view);
+	}
 
 	return 0;
 }
@@ -506,13 +512,13 @@ static int _mp_create_plst_view_update_options(void *thiz)
 
 	/*_mp_create_plst_view_update_option_clear(view);*/
 	/* add buttons */
-/*
-	Evas_Object *toolbar = mp_widget_create_naviframe_toolbar(view->navi_it);
-	Elm_Object_Item *toolbar_item = NULL;
+	/*
+		Evas_Object *toolbar = mp_widget_create_naviframe_toolbar(view->navi_it);
+		Elm_Object_Item *toolbar_item = NULL;
 
-	toolbar_item = mp_widget_create_toolbar_item_btn(toolbar, MP_TOOLBAR_BTN_DEFAULT, GET_SYS_STR("IDS_COM_SK_SAVE"), _mp_create_playlist_view_create_new_done_cb, view);
-	view->toolbar_options[MP_OPTION_LEFT] = toolbar_item;
-*/
+		toolbar_item = mp_widget_create_toolbar_item_btn(toolbar, MP_TOOLBAR_BTN_DEFAULT, GET_SYS_STR("IDS_COM_SK_SAVE"), _mp_create_playlist_view_create_new_done_cb, view);
+		view->toolbar_options[MP_OPTION_LEFT] = toolbar_item;
+	*/
 
 	_mp_create_plst_view_create_title_buttons(thiz);
 
@@ -562,8 +568,9 @@ _mp_create_plst_view_rotate_cb(void *thiz, int randscape)
 	if (view->editfiled_entry && !ad->popup[MP_POPUP_NOTIFY]) {
 		elm_object_focus_set(view->editfiled_entry, EINA_TRUE);
 	}
-	if (mp_util_get_sip_state() && (int)mp_view_mgr_get_top_view(GET_VIEW_MGR) == (int)view)
+	if (mp_util_get_sip_state() && (int)mp_view_mgr_get_top_view(GET_VIEW_MGR) == (int)view) {
 		_mp_create_plst_view_on_event(view, MP_SIP_STATE_CHANGED);
+	}
 }
 #endif
 
@@ -609,7 +616,9 @@ MpCreatePlstView_t *mp_create_plst_view_create(Evas_Object *parent)
 
 	ret = _mp_create_plst_view_init(parent, view);
 	elm_object_focus_set(view->editfiled_entry, EINA_TRUE);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	return view;
 

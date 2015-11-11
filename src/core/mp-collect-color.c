@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifdef MP_FEATURE_ALBUM_COVER_BG
@@ -53,7 +53,7 @@ static const int RGB_BPP = 3;
 
 int *mp_collect_color_get_RGB(int *color, int length)
 {
-	int* result = (int *)calloc(length*3, sizeof(int));
+	int* result = (int *)calloc(length * 3, sizeof(int));
 	mp_assert(result);
 
 	int index = 0;
@@ -83,32 +83,38 @@ static int _mp_collect_color_get_sim_average(int color)
 	int b = color & 0x000000FF;
 	int average = (r + g + b) / 3 / 2 / multi;
 
-	if (rand() % 2 == true)
+	if (rand() % 2 == true) {
 		r = r + (rand() % average) * multi;
-	else
+	} else {
 		r = r - (rand() % average) * multi;
-	if (r > 255)
+	}
+	if (r > 255) {
 		r = 255;
-	else if (r < 0)
+	} else if (r < 0) {
 		r = 0;
+	}
 
-	if (rand() % 2 == true)
+	if (rand() % 2 == true) {
 		g = g + (rand() % average) * multi;
-	else
+	} else {
 		g = g - (rand() % average) * multi;
-	if (g > 255)
+	}
+	if (g > 255) {
 		g = 255;
-	else if (g < 0)
+	} else if (g < 0) {
 		g = 0;
+	}
 
-	if (rand() % 2 == true)
+	if (rand() % 2 == true) {
 		b = b + (rand() % average) * multi;
-	else
+	} else {
 		b = b - (rand() % average) * multi;
-	if (b > 255)
+	}
+	if (b > 255) {
 		b = 255;
-	else if (b < 0)
+	} else if (b < 0) {
 		b = 0;
+	}
 	int result = _mp_collect_color_get_int(r, g, b);
 	return result;
 }
@@ -132,10 +138,10 @@ static int *_mp_collect_color_get_result(CollectColor_t *collect_color)
 			result[i] = _mp_collect_color_get_sim_average(result[0]);
 			continue;
 		}
-	CollectColorNode_t *node = g_list_nth_data(node_list, i);
-	result[i] = node->key;
-	DEBUG_TRACE("key=0x%x, val=%d", node->key, node->value);
-}
+		CollectColorNode_t *node = g_list_nth_data(node_list, i);
+		result[i] = node->key;
+		DEBUG_TRACE("key=0x%x, val=%d", node->key, node->value);
+	}
 	return result;
 }
 
@@ -165,8 +171,8 @@ static GList *_mp_collect_color_copy_to_array(CollectColor_t *collect_color)
 	GHashTableIter iter;
 	gpointer key, value;
 
-	g_hash_table_iter_init (&iter, collect_color->hash_table);
-	while (g_hash_table_iter_next (&iter, &key, &value)) {
+	g_hash_table_iter_init(&iter, collect_color->hash_table);
+	while (g_hash_table_iter_next(&iter, &key, &value)) {
 		temp_key = *((int *)key);
 		temp_val = *((int *)value);
 		if (nodesIsFull) {
@@ -200,7 +206,7 @@ static void _mp_collect_color_add_hash(GHashTable *hash_table, int pixel)
 	*key = pixel;
 	gint *value = g_new(gint, 1);
 	if (ret) {
-		*value = *ret+1;
+		*value = *ret + 1;
 		g_hash_table_replace(hash_table, key, value);
 	} else {
 		*value = 1;
@@ -221,16 +227,17 @@ static void _mp_collect_color_run_detail(CollectColor_t *collect_color)
 	unsigned char *src = (unsigned char *)collect_color->img_target;
 	for (i = 0; i < collect_color->height; i++) {
 		for (j = 0; j < collect_color->width; j++) {
-			src_idx = (i * collect_color->width+j) * 3;
-			key = _mp_collect_color_get_int(*(src+src_idx), *(src+src_idx+1), *(src+src_idx+2));
+			src_idx = (i * collect_color->width + j) * 3;
+			key = _mp_collect_color_get_int(*(src + src_idx), *(src + src_idx + 1), *(src + src_idx + 2));
 			_mp_collect_color_add_hash(collect_color->hash_table, key);
 		}
 	}
 }
 static int _mp_collect_color_image_util_resize(unsigned char *dest, int *dest_width , int *dest_height, const unsigned char *src, int src_width, int src_height, const image_util_colorspace_e colorspace)
 {
-	if (!dest || !dest_width || !dest_height || !src)
+	if (!dest || !dest_width || !dest_height || !src) {
 		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
+	}
 	int src_w = src_width;
 	int src_h = src_height;
 	int dest_w = *dest_width;
@@ -249,7 +256,7 @@ static int _mp_collect_color_image_util_resize(unsigned char *dest, int *dest_wi
 	red = green = blue = alpha = 0;
 	int i = 0, j = 0;
 	for (j = 0; j < dest_h; j++) {
-		coef = (float) (j) / (float) (dest_h - 1) * (src_h - 1);
+		coef = (float)(j) / (float)(dest_h - 1) * (src_h - 1);
 		h = (int) floor(coef);
 		if (h < 0) {
 			h = 0;
@@ -260,7 +267,7 @@ static int _mp_collect_color_image_util_resize(unsigned char *dest, int *dest_wi
 		}
 		u = coef - h;
 		for (i = 0; i < dest_w; i++) {
-			coef = (float) (i) / (float) (dest_w - 1) * (src_w - 1);
+			coef = (float)(i) / (float)(dest_w - 1) * (src_w - 1);
 			w = (int) floor(coef);
 			if (w < 0) {
 				w = 0;
@@ -275,10 +282,10 @@ static int _mp_collect_color_image_util_resize(unsigned char *dest, int *dest_wi
 			c3 = t * u;
 			c4 = (1 - t) * u;
 			if (IMAGE_UTIL_COLORSPACE_RGBA8888 == colorspace) {
-				rgba8888 pixel1 = *((rgba8888 *) (src + h * src_stride + bpp * w));
-				rgba8888 pixel2 = *((rgba8888 *) (src + h * src_stride + bpp * (w + 1)));
-				rgba8888 pixel3 = *((rgba8888 *) (src + (h + 1) * src_stride + bpp * (w + 1)));
-				rgba8888 pixel4 = *((rgba8888 *) (src + (h + 1) * src_stride + bpp * w));
+				rgba8888 pixel1 = *((rgba8888 *)(src + h * src_stride + bpp * w));
+				rgba8888 pixel2 = *((rgba8888 *)(src + h * src_stride + bpp * (w + 1)));
+				rgba8888 pixel3 = *((rgba8888 *)(src + (h + 1) * src_stride + bpp * (w + 1)));
+				rgba8888 pixel4 = *((rgba8888 *)(src + (h + 1) * src_stride + bpp * w));
 				red = pixel1.r * c1 + pixel2.r * c2 + pixel3.r * c3 + pixel4.r * c4;
 				green = pixel1.g * c1 + pixel2.g * c2 + pixel3.g * c3 + pixel4.g * c4;
 				blue =  pixel1.b * c1 + pixel2.b * c2 + pixel3.b * c3 + pixel4.b * c4;
@@ -288,11 +295,11 @@ static int _mp_collect_color_image_util_resize(unsigned char *dest, int *dest_wi
 				pixel_res->g = green;
 				pixel_res->b = blue;
 				pixel_res->a = alpha;
-			} else /* (IMAGE_UTIL_COLORSPACE_RGB888 == colorspace)  853 */{
-				rgb888 pixel1 = *((rgb888 *) (src + h * src_stride + bpp * w));
-				rgb888 pixel2 = *((rgb888 *) (src + h * src_stride + bpp * (w + 1)));
-				rgb888 pixel3 = *((rgb888 *) (src + (h + 1) * src_stride + bpp * (w + 1)));
-				rgb888 pixel4 = *((rgb888 *) (src + (h + 1) * src_stride + bpp * w));
+			} else { /* (IMAGE_UTIL_COLORSPACE_RGB888 == colorspace)  853 */
+				rgb888 pixel1 = *((rgb888 *)(src + h * src_stride + bpp * w));
+				rgb888 pixel2 = *((rgb888 *)(src + h * src_stride + bpp * (w + 1)));
+				rgb888 pixel3 = *((rgb888 *)(src + (h + 1) * src_stride + bpp * (w + 1)));
+				rgb888 pixel4 = *((rgb888 *)(src + (h + 1) * src_stride + bpp * w));
 				red = pixel1.r * c1 + pixel2.r * c2 + pixel3.r * c3 + pixel4.r * c4;
 				green = pixel1.g * c1 + pixel2.g * c2 + pixel3.g * c3 + pixel4.g * c4;
 				blue =  pixel1.b * c1 + pixel2.b * c2 + pixel3.b * c3 + pixel4.b * c4;
@@ -327,7 +334,7 @@ static void _mp_collect_color_decode_image(CollectColor_t *collect_color)
 	collect_color->img_target = malloc(size_decode);
 
 	int ret = _mp_collect_color_image_util_resize(collect_color->img_target, &resized_width, &resized_height,
-		img_source, width, height, colorspace);
+	          img_source, width, height, colorspace);
 	DEBUG_TRACE("_mp_collect_color_image_util_resize ret %d", ret);
 	SAFE_FREE(img_source);
 	collect_color->width = resized_width;
@@ -407,8 +414,9 @@ static int _mp_collect_color_get_time()
 int *mp_collect_color_set_image(const char *path, int resultCount)
 {
 	startfunc;
-	if (resultCount < 1)
+	if (resultCount < 1) {
 		return NULL;
+	}
 #ifdef MP_COLLECT_COLOR_TIME_DEBUG
 	int time_1 = _mp_collect_color_get_time();
 #endif
@@ -422,12 +430,12 @@ int *mp_collect_color_set_image(const char *path, int resultCount)
 	_mp_collect_color_decode_image(collect_color);
 #ifdef MP_COLLECT_COLOR_TIME_DEBUG
 	time_t time_2 = _mp_collect_color_get_time();
-	DEBUG_TRACE("time_2-time_1 %ld, time_2 %ld, time_1 %ld", time_2-time_1, time_2, time_1);
+	DEBUG_TRACE("time_2-time_1 %ld, time_2 %ld, time_1 %ld", time_2 - time_1, time_2, time_1);
 #endif
 	_mp_collect_color_run_detail(collect_color);
 #ifdef MP_COLLECT_COLOR_TIME_DEBUG
 	time_t time_3 = _mp_collect_color_get_time();
-	DEBUG_TRACE("time_3-time_1 %ld", time_3-time_1);
+	DEBUG_TRACE("time_3-time_1 %ld", time_3 - time_1);
 #endif
 	collect_color->node_list = _mp_collect_color_copy_to_array(collect_color);
 	mp_collect_color_sort(collect_color->node_list);
@@ -436,7 +444,7 @@ int *mp_collect_color_set_image(const char *path, int resultCount)
 	_mp_collect_color_destroy(collect_color);
 #ifdef MP_COLLECT_COLOR_TIME_DEBUG
 	time_t time_4 = _mp_collect_color_get_time();
-	DEBUG_TRACE("time_4-time_1 %ld", time_4-time_1);
+	DEBUG_TRACE("time_4-time_1 %ld", time_4 - time_1);
 #endif
 	return colors;
 }

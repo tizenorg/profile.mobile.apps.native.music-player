@@ -1,18 +1,18 @@
 /*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-artist-detail-list.h"
@@ -39,15 +39,15 @@ _mp_artist_detail_list_album_label_get(void *data, Evas_Object * obj, const char
 	list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!g_strcmp0(part, "elm.text.main.left"))
-	{
+	if (!g_strcmp0(part, "elm.text.main.left")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
-			return g_strdup(elm_entry_utf8_to_markup(name));
+		}
+		return g_strdup(elm_entry_utf8_to_markup(name));
 	}
 	DEBUG_TRACE("Unusing part: %s", part);
 	return NULL;
@@ -58,43 +58,35 @@ static void _mp_aritst_detail_list_update_check(mp_list_item_data_t *it_data)
 	MP_CHECK(it_data);
 	Elm_Object_Item *gli = (Elm_Object_Item *)it_data->it;
 
-	if (it_data->item_type == MP_LIST_ITEM_TYPE_SELECTABLE_GROUP_TITLE)
-	{
+	if (it_data->item_type == MP_LIST_ITEM_TYPE_SELECTABLE_GROUP_TITLE) {
 		Eina_Bool checked = it_data->checked;
 
 		Elm_Object_Item *item = elm_genlist_item_next_get(gli);
-		while (item)
-		{
+		while (item) {
 			mp_list_item_data_t *item_data = elm_object_item_data_get(item);
-			if (item_data && item_data->item_type == MP_LIST_ITEM_TYPE_NORMAL)
-			{
+			if (item_data && item_data->item_type == MP_LIST_ITEM_TYPE_NORMAL) {
 				mp_list_item_check_set(item, checked);
-			}
-			else
+			} else {
 				break;
+			}
 
 			item = elm_genlist_item_next_get(item);
 		}
-	}
-	else if (it_data->item_type == MP_LIST_ITEM_TYPE_NORMAL)
-	{
+	} else if (it_data->item_type == MP_LIST_ITEM_TYPE_NORMAL) {
 		Elm_Object_Item *parent_item = elm_genlist_item_parent_get(gli);
-		if (parent_item)
-		{
+		if (parent_item) {
 			Eina_Bool checked_all = EINA_TRUE;
 			Elm_Object_Item *item = elm_genlist_item_next_get(parent_item);
-			while (item)
-			{
+			while (item) {
 				mp_list_item_data_t *item_data = elm_object_item_data_get(item);
-				if (item_data && item_data->item_type == MP_LIST_ITEM_TYPE_NORMAL)
-				{
+				if (item_data && item_data->item_type == MP_LIST_ITEM_TYPE_NORMAL) {
 					if (!item_data->checked) {
 						checked_all = EINA_FALSE;
 						break;
 					}
-				}
-				else
+				} else {
 					break;
+				}
 
 				item = elm_genlist_item_next_get(item);
 			}
@@ -106,15 +98,15 @@ static void _mp_aritst_detail_list_update_check(mp_list_item_data_t *it_data)
 
 static void _mp_artist_detail_list_check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 {
-        mp_list_item_data_t *item = (mp_list_item_data_t *) data;
-        MP_CHECK(item);
-        _mp_aritst_detail_list_update_check(item);
+	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
+	MP_CHECK(item);
+	_mp_aritst_detail_list_update_check(item);
 
-        MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
-        MP_CHECK(view_mgr);
-        MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
-        MP_CHECK(view);
-        mp_view_update_options_edit(view);
+	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
+	MP_CHECK(view_mgr);
+	MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
+	MP_CHECK(view);
+	mp_view_update_options_edit(view);
 }
 
 Evas_Object *
@@ -123,18 +115,17 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 	Evas_Object *content = NULL;
 	Evas_Object *icon = NULL;
 
 	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	if (!strcmp(part, "elm.icon.1"))
-	{
-                content = elm_layout_add(obj);
+	if (!strcmp(part, "elm.icon.1")) {
+		content = elm_layout_add(obj);
 
-                char *thumb_name = NULL;
+		char *thumb_name = NULL;
 		mp_media_info_group_get_thumbnail_path(svc_item, &thumb_name);
 		icon = mp_util_create_lazy_update_thumb_icon(obj, thumb_name, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
 
@@ -143,22 +134,22 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 
 		return content;
 	}
-        if (list->edit_mode) {
-        	if (!strcmp(part, "elm.icon.2")) {
-        		content = elm_layout_add(obj);
+	if (list->edit_mode) {
+		if (!strcmp(part, "elm.icon.2")) {
+			content = elm_layout_add(obj);
 
-        		icon = elm_check_add(obj);
-        		elm_object_style_set(icon, "default");
-        		evas_object_propagate_events_set(icon, EINA_FALSE);
-        		elm_check_state_pointer_set(icon, &item->checked);
-        		evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
+			icon = elm_check_add(obj);
+			elm_object_style_set(icon, "default");
+			evas_object_propagate_events_set(icon, EINA_FALSE);
+			elm_check_state_pointer_set(icon, &item->checked);
+			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
 
-        		elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-        		elm_layout_content_set(content, "elm.swallow.content", icon);
+			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
+			elm_layout_content_set(content, "elm.swallow.content", icon);
 
-        		return content;
-                }
-        }
+			return content;
+		}
+	}
 	return NULL;
 }
 
@@ -168,8 +159,9 @@ _mp_artist_detail_list_set_cb(void *data, Evas_Object * obj, void *event_info)
 {
 	eventfunc;
 
-	if (data == NULL)
+	if (data == NULL) {
 		return;
+	}
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
@@ -185,8 +177,8 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 {
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
-	mp_media_info_h track = (mp_media_info_h) (item->handle);
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_media_info_h track = (mp_media_info_h)(item->handle);
+	mp_retvm_if(!track, NULL, "data is null");
 
 	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
@@ -196,12 +188,12 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 
 	if (!strcmp(part, "elm.text.main.left")) {
 
-		bool match = mp_common_track_is_current(track,(MpList_t *)list);
+		bool match = mp_common_track_is_current(track, (MpList_t *)list);
 		char *title = NULL;
 
 		mp_media_info_get_title(track,	&title);
 
-		mp_retv_if (!title, NULL);
+		mp_retv_if(!title, NULL);
 		char *markup = NULL;
 
 		if (match) {
@@ -212,9 +204,9 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 			int b = 148;
 			int a = 255 ;
 
-			memset(result, 0x00, DEF_STR_LEN+1);
+			memset(result, 0x00, DEF_STR_LEN + 1);
 			snprintf(result, DEF_STR_LEN,
-					 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, info);
+			         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, info);
 			IF_FREE(info);
 
 			return g_strdup(result);
@@ -228,7 +220,7 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 		if (!strcmp(part, "elm.text.sub.right")) {
 			int duration;
 			char time[16] = "";
-			bool match = mp_common_track_is_current(track,(MpList_t *)list);
+			bool match = mp_common_track_is_current(track, (MpList_t *)list);
 
 			mp_media_info_get_duration(track, &duration);
 			mp_util_format_duration(time, duration);
@@ -239,9 +231,9 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 				int b = 148;
 				int a = 255 ;
 
-				memset(result, 0x00, DEF_STR_LEN+1);
+				memset(result, 0x00, DEF_STR_LEN + 1);
 				snprintf(result, DEF_STR_LEN,
-						 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, time);
+				         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, time);
 
 				return g_strdup(result);
 			}
@@ -257,25 +249,24 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h track = item->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 
 	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
-/*
-	if (!strcmp(part, "elm.icon"))
-	{
-		char *thumbpath = NULL;
-		Evas_Object *icon;
+	/*
+		if (!strcmp(part, "elm.icon"))
+		{
+			char *thumbpath = NULL;
+			Evas_Object *icon;
 
-		mp_media_info_get_thumbnail_path(track, &thumbpath);
-		icon = mp_util_create_thumb_icon(obj, thumbpath, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
-		return icon;
-	}
-*/
+			mp_media_info_get_thumbnail_path(track, &thumbpath);
+			icon = mp_util_create_thumb_icon(obj, thumbpath, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
+			return icon;
+		}
+	*/
 	Evas_Object *button;
 
-	if (!strcmp(part, "elm.slide.swallow.3"))
-	{
+	if (!strcmp(part, "elm.slide.swallow.3")) {
 		button = elm_button_add(obj);
 		elm_object_style_set(button, "sweep");
 		//elm_object_text_set(button, GET_STR(STR_MP_ADD_TO));
@@ -283,9 +274,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 		mp_util_domain_translatable_text_set(button, STR_MP_ADD_TO);
 		evas_object_smart_callback_add(button, "clicked", mp_common_button_add_to_playlist_cb, evas_object_data_get(obj, "list_data"));
 		return button;
-	}
-	else if (!strcmp(part, "elm.slide.swallow.1"))
-	{
+	} else if (!strcmp(part, "elm.slide.swallow.1")) {
 		button = elm_button_add(obj);
 		elm_object_style_set(button, "sweep");
 		//elm_object_text_set(button, GET_SYS_STR("IDS_COM_BUTTON_SHARE"));
@@ -293,9 +282,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 		mp_util_domain_translatable_text_set(button, "IDS_COM_BUTTON_SHARE");
 		evas_object_smart_callback_add(button, "clicked", mp_common_sweep_share_cb, track);
 		return button;
-	}
-	else if (!strcmp(part, "elm.slide.swallow.2"))
-	{
+	} else if (!strcmp(part, "elm.slide.swallow.2")) {
 		button = elm_button_add(obj);
 		elm_object_style_set(button, "sweep");
 		//elm_object_text_set(button, GET_SYS_STR("IDS_COM_SK_SET"));
@@ -303,9 +290,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 		mp_util_domain_translatable_text_set(button, "IDS_COM_SK_SET");
 		evas_object_smart_callback_add(button, "clicked", _mp_artist_detail_list_set_cb, track);
 		return button;
-	}
-	else if (!strcmp(part, "elm.slide.swallow.4"))
-	{
+	} else if (!strcmp(part, "elm.slide.swallow.4")) {
 		button = elm_button_add(obj);
 		elm_object_style_set(button, "style1/delete");
 
@@ -359,8 +344,7 @@ _mp_artist_detail_list_select_cb(void *data, Evas_Object * obj, void *event_info
 
 	DEBUG_TRACE("item selected");
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		mp_list_edit_mode_sel((MpList_t *)list, item);
 
 		MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
@@ -389,8 +373,7 @@ static void _mp_artist_detail_list_album_title_select_cb(void *data, Evas_Object
 	mp_list_item_data_t *item = (mp_list_item_data_t *) elm_object_item_data_get(gli);
 	MP_CHECK(item);
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		mp_list_edit_mode_sel((MpList_t *)list, item);
 
 		MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
@@ -432,16 +415,14 @@ static int _mp_artist_detail_list_append_album_tracks(void *thiz, char *name, El
 
 	DEBUG_TRACE("count is %d", count);
 	real_count = count;
-	int index =0;
-	for (index = 0; index < count; index++)
-	{
+	int index = 0;
+	for (index = 0; index < count; index++) {
 		mp_media_info_h item = NULL;
 		char *title = NULL;
 
 		item = mp_media_info_list_nth_item(svc_handle, index);
 		ret = mp_media_info_get_title(item, &title);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			DEBUG_TRACE("Fail to mp_media_info_get_title, ret[%d], index[%d]", ret, index);
 			goto END;
 		}
@@ -451,21 +432,17 @@ static int _mp_artist_detail_list_append_album_tracks(void *thiz, char *name, El
 #ifdef MP_FEATURE_PERSONAL_PAGE
 		char *path = NULL;
 		mp_media_info_get_file_path(item, &path);
-		if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_NONE)
+		if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_NONE) {
 			goto append_artist_items;
+		}
 
-		if (mp_util_is_in_personal_page((const char *)path))
-		{
-			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD)
-			{
+		if (mp_util_is_in_personal_page((const char *)path)) {
+			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD) {
 				real_count--;
 				continue;
 			}
-		}
-		else
-		{
-			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE)
-			{
+		} else {
+			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE) {
 				real_count--;
 				continue;
 			}
@@ -478,7 +455,7 @@ append_artist_items:
 		item_data->index = index;
 
 		item_data->it = elm_genlist_item_append(list->genlist, list->itc_track, item_data, parent_group,
-								    ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_select_cb, list);
+		                                        ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_select_cb, list);
 	}
 
 	list->track_lists = g_list_append(list->track_lists, svc_handle);
@@ -518,8 +495,8 @@ _mp_artist_detail_list_shuffle_text_get(void *data, Evas_Object *obj, const char
 
 		markup = (count == 1) ? g_strdup(GET_STR(STR_MP_SHUFFLE_1_TRACK)) : g_strdup_printf(GET_STR(STR_MP_SHUFFLE_PD_TRACKS), count);
 
-		memset(result, 0x00, DEF_STR_LEN+1);
-		snprintf(result, DEF_STR_LEN,"<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup);
+		memset(result, 0x00, DEF_STR_LEN + 1);
+		snprintf(result, DEF_STR_LEN, "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup);
 		IF_FREE(markup);
 
 		return g_strdup(result);
@@ -572,23 +549,20 @@ _mp_artist_detail_list_shuffle_cb(void *data, Evas_Object * obj, void *event_inf
 
 void mp_artist_detail_list_update_genlist(void *thiz)
 {
-        startfunc;
+	startfunc;
 
-        MP_CHECK(thiz);
-        MpArtistDetailList_t *list = thiz;
-        MP_CHECK(list->genlist);
+	MP_CHECK(thiz);
+	MpArtistDetailList_t *list = thiz;
+	MP_CHECK(list->genlist);
 
-        int count = 0;
-        mp_media_info_list_count(MP_TRACK_BY_ARTIST, list->type_str, NULL,  NULL, 0, &count);
+	int count = 0;
+	mp_media_info_list_count(MP_TRACK_BY_ARTIST, list->type_str, NULL,  NULL, 0, &count);
 
-        if (count <= 0)
-        {
-                mp_list_update(thiz);
-        }
-        else
-        {
-                elm_genlist_realized_items_update(list->genlist);
-        }
+	if (count <= 0) {
+		mp_list_update(thiz);
+	} else {
+		elm_genlist_realized_items_update(list->genlist);
+	}
 }
 
 static void
@@ -620,7 +594,7 @@ static void _mp_artist_detail_list_append_shuffle_item(MpArtistDetailList_t *lis
 	item_data = mp_list_item_data_create(MP_LIST_ITEM_TYPE_SHUFFLE);
 	MP_CHECK(item_data);
 	item_data->it = list->shuffle_it = elm_genlist_item_append(list->genlist, list->itc_shuffle, item_data, NULL,
-			ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_shuffle_cb, list);
+	                                   ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_shuffle_cb, list);
 	elm_object_item_data_set(item_data->it, item_data);
 
 	endfunc;
@@ -636,8 +610,7 @@ static void _mp_artist_detail_list_load_list(void *thiz, int count)
 
 	/*clear genlist*/
 	Elm_Object_Item *item = elm_genlist_first_item_get(list->genlist);
-	if (item)
-	{
+	if (item) {
 		elm_genlist_item_bring_in(item, ELM_GENLIST_ITEM_SCROLLTO_IN);
 		elm_genlist_clear(list->genlist);
 	}
@@ -647,11 +620,11 @@ static void _mp_artist_detail_list_load_list(void *thiz, int count)
 
 	DEBUG_TRACE("count: %d", count);
 
-	if (count < 0)
+	if (count < 0) {
 		goto END;
+	}
 
-	if (list->album_list)
-	{
+	if (list->album_list) {
 		mp_media_info_group_list_destroy(list->album_list);
 		g_list_free_full(list->track_lists, _free_track_lists);
 		list->track_lists = NULL;
@@ -659,8 +632,7 @@ static void _mp_artist_detail_list_load_list(void *thiz, int count)
 
 	ret = mp_media_info_group_list_create(&list->album_list, MP_GROUP_BY_ARTIST_ALBUM, list->type_str, list->filter_str, 0, count);
 
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to get items");
 		goto END;
 	}
@@ -670,15 +642,13 @@ static void _mp_artist_detail_list_load_list(void *thiz, int count)
 
 	_mp_artist_detail_list_append_shuffle_item(list);
 
-	for (index = 0; index < count; index++)
-	{
+	for (index = 0; index < count; index++) {
 		mp_media_info_h item = NULL;
 		Elm_Object_Item *list_item = NULL;
 		char *title = NULL;
 
 		item = mp_media_info_group_list_nth_item(svc_handle, index);
-		if (!item)
-		{
+		if (!item) {
 			DEBUG_TRACE("Fail to mp_media_info_group_list_nth_item, ret[%d], index[%d]", ret, index);
 			goto END;
 		}
@@ -691,21 +661,21 @@ static void _mp_artist_detail_list_load_list(void *thiz, int count)
 		item_data->index = index;
 
 		item_data->it = list_item = elm_genlist_item_append(list->genlist, list->itc_album, item_data, NULL,
-				ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_album_title_select_cb, (void *)list);
+		                            ELM_GENLIST_ITEM_NONE, _mp_artist_detail_list_album_title_select_cb, (void *)list);
 
-		if (!list->edit_mode)
+		if (!list->edit_mode) {
 			elm_genlist_item_select_mode_set(list_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		}
 
 		/* append tracks of the album */
 		int appended_track_num = _mp_artist_detail_list_append_album_tracks(list, title, list_item);
-		if (!appended_track_num)
-		{
+		if (!appended_track_num) {
 			elm_object_item_del(list_item);
 			list->count_album--;
 		}
 	}
 
-	END:
+END:
 	endfunc;
 }
 
@@ -729,7 +699,7 @@ void _mp_artist_detail_list_destory_cb(void *thiz)
 		elm_genlist_item_class_free(list->itc_album);
 		list->itc_album = NULL;
 	}
-        if (list->itc_shuffle) {
+	if (list->itc_shuffle) {
 		elm_genlist_item_class_free(list->itc_shuffle);
 		list->itc_shuffle = NULL;
 	}
@@ -847,8 +817,7 @@ static void _mp_artist_detail_list_item_highlighted(void *data, Evas_Object *obj
 	Elm_Object_Item *it = event_info;
 	MP_CHECK(it);
 
-	if (list->shuffle_it == it)
-	{
+	if (list->shuffle_it == it) {
 		Evas_Object *icon = elm_object_item_part_content_get(it, "elm.icon.2");
 		if (icon) {
 			elm_image_file_set(icon, IMAGE_EDJ_NAME, MP_ICON_SHUFFLE_PRESS);
@@ -864,8 +833,7 @@ static void _mp_artist_detail_list_item_unhighlighted(void *data, Evas_Object *o
 	Elm_Object_Item *it = event_info;
 	MP_CHECK(it);
 
-	if (list->shuffle_it == it)
-	{
+	if (list->shuffle_it == it) {
 		Evas_Object *icon = elm_object_item_part_content_get(it, "elm.icon.2");
 		if (icon) {
 			elm_image_file_set(icon, IMAGE_EDJ_NAME, MP_ICON_SHUFFLE);
@@ -879,8 +847,7 @@ static void _mp_artist_detail_list_set_edit(void *thiz, bool edit)
 	MpArtistDetailList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (edit)
-	{
+	if (edit) {
 		mp_elm_object_item_del(list->shuffle_it);
 
 		Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
@@ -893,9 +860,7 @@ static void _mp_artist_detail_list_set_edit(void *thiz, bool edit)
 		}
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
-	}
-	else
-	{
+	} else {
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_DEFAULT);
 
 		Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
@@ -903,7 +868,7 @@ static void _mp_artist_detail_list_set_edit(void *thiz, bool edit)
 			mp_list_item_data_t *item_data = (mp_list_item_data_t *) elm_object_item_data_get(item);
 			if (item_data) {
 				item_data->checked = EINA_FALSE;
-					if (item_data->item_type == MP_LIST_ITEM_TYPE_SELECTABLE_GROUP_TITLE) {
+				if (item_data->item_type == MP_LIST_ITEM_TYPE_SELECTABLE_GROUP_TITLE) {
 					mp_list_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 				}
 			}
@@ -932,8 +897,7 @@ void _mp_artist_detail_list_update(void *thiz)
 	mp_evas_object_del(list->genlist);
 	mp_evas_object_del(list->no_content);
 
-	if (count_album)
-	{
+	if (count_album) {
 		/*create new genlist*/
 		list->genlist = mp_widget_genlist_create(list->box);
 		evas_object_size_hint_weight_set(list->genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -1010,11 +974,13 @@ _mp_artist_detail_list_get_count(void *thiz, MpListEditType_e type)
 
 	int count = elm_genlist_items_count(list->genlist);
 
-	if (list->shuffle_it)
+	if (list->shuffle_it) {
 		--count;
+	}
 
-	if (list->bottom_counter_item)
+	if (list->bottom_counter_item) {
 		--count;
+	}
 	count = count - list->count_album ;
 
 	return count;
@@ -1030,17 +996,19 @@ _mp_aritst_detail_list_edit_mode_sel(void *thiz, void *data)
 	mp_list_item_selected_set(gli, EINA_FALSE);
 
 
-	if (elm_genlist_item_flip_get(gli) || elm_genlist_item_select_mode_get(gli) == ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY)
+	if (elm_genlist_item_flip_get(gli) || elm_genlist_item_select_mode_get(gli) == ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY) {
 		return;
+	}
 
 	mp_list_item_check_set(gli, !it_data->checked);
 
-        _mp_aritst_detail_list_update_check(it_data);
+	_mp_aritst_detail_list_update_check(it_data);
 
 	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 	MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
-	if (view)
+	if (view) {
 		mp_util_create_selectioninfo_with_count(view, mp_list_get_checked_count(list));
+	}
 }
 
 static void
@@ -1050,27 +1018,30 @@ _mp_artist_detail_list_selected_item_data_get(void *thiz, GList **selected)
 	MpList_t *list = (MpList_t *)thiz;
 	GList *sel_list = NULL;
 
-	if (!list->genlist)
+	if (!list->genlist) {
 		goto END;
+	}
 
 	Elm_Object_Item *item = mp_list_first_item_get(list->genlist);
 
-	if (!item)
+	if (!item) {
 		goto END;
+	}
 
-	while (item)
-	{
+	while (item) {
 		mp_list_item_data_t *item_data = elm_object_item_data_get(item);
 		if (item_data && item_data->item_type == MP_LIST_ITEM_TYPE_NORMAL) {
-			if (item_data->checked)
+			if (item_data->checked) {
 				sel_list = g_list_append(sel_list, item_data);
+			}
 		}
 
 		item = mp_list_item_next_get(item);
 	}
-	END:
-	if (selected)
+END:
+	if (selected) {
 		*selected = sel_list;
+	}
 }
 
 static char *
@@ -1081,10 +1052,11 @@ _mp_artist_detail_list_bottom_counter_text_cb(void *thiz)
 
 	unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
 	char *text = NULL;
-	if (count == 1)
+	if (count == 1) {
 		text = g_strdup(GET_STR(STR_MP_1_SONG));
-	else
+	} else {
 		text = g_strdup_printf(GET_STR(STR_MP_PD_SONGS), count);
+	}
 
 	return text;
 }
@@ -1132,45 +1104,39 @@ void mp_artist_detail_list_set_data(MpArtistDetailList_t *list, ...)
 	int field;
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
-		switch (field)
-		{
-		case MP_ARTIST_DETAIL_LIST_TYPE:
-			{
-				int val = va_arg((var_args), int);
+		switch (field) {
+		case MP_ARTIST_DETAIL_LIST_TYPE: {
+			int val = va_arg((var_args), int);
 
-				list->group_type = val;
-				DEBUG_TRACE("list->group_type = %d", list->group_type);
-				break;
-			}
+			list->group_type = val;
+			DEBUG_TRACE("list->group_type = %d", list->group_type);
+			break;
+		}
 
-		case MP_ARTIST_DETAIL_LIST_TYPE_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->type_str);
-				list->type_str = g_strdup(val);
-				DEBUG_TRACE("list->type_str = %s", list->type_str);
+		case MP_ARTIST_DETAIL_LIST_TYPE_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->type_str);
+			list->type_str = g_strdup(val);
+			DEBUG_TRACE("list->type_str = %s", list->type_str);
 
-				break;
-			}
-		case MP_ARTIST_DETAIL_LIST_FILTER_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->filter_str);
-				list->filter_str = g_strdup(val);
-				DEBUG_TRACE("list->filter_str = %s", list->filter_str);
+			break;
+		}
+		case MP_ARTIST_DETAIL_LIST_FILTER_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->filter_str);
+			list->filter_str = g_strdup(val);
+			DEBUG_TRACE("list->filter_str = %s", list->filter_str);
 
-				break;
-			}
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }

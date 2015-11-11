@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <sound_manager.h>
@@ -26,16 +26,16 @@ Eina_Bool
 ms_util_is_earjack_connected(void)
 {
 	int ear_jack;
-	if (runtime_info_get_value_int(RUNTIME_INFO_KEY_AUDIO_JACK_STATUS, &ear_jack))
-	{
+	if (runtime_info_get_value_int(RUNTIME_INFO_KEY_AUDIO_JACK_STATUS, &ear_jack)) {
 		DEBUG_TRACE("Failed to get ear jack status");
 		return FALSE;
 	}
 
-	if (ear_jack == RUNTIME_INFO_AUDIO_JACK_STATUS_UNCONNECTED)
+	if (ear_jack == RUNTIME_INFO_AUDIO_JACK_STATUS_UNCONNECTED) {
 		return FALSE;
-	else
+	} else {
 		return TRUE;
+	}
 }
 
 bool
@@ -46,10 +46,11 @@ ms_util_is_sound_device_connected(void)
 	sound_device_mask_e g_device_mask = SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 	WARN_TRACE("Enter sound_manager_get_active_device");
 	int ret;
-	if (!(ret= sound_manager_get_current_device_list(g_device_mask,&g_device_list)))
+	if (!(ret = sound_manager_get_current_device_list(g_device_mask, &g_device_list))) {
 		return true;
-	else
+	} else {
 		return false;
+	}
 	//Replaced for _prod dependency end
 }
 

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-playlist-detail-view.h"
@@ -87,14 +87,15 @@ static char *_mp_media_info_get_live_auto_playlist_icon_by_name(const char *name
 
 	char *icon_path = NULL;
 
-	if (!g_strcmp0(name, STR_MP_FAVOURITES))
+	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
 		icon_path = LIVE_ICON_QUICK_LIST;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
 		icon_path = LIVE_ICON_RECENTLY_PLAYED;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
 		icon_path = LIVE_ICON_RECENTLY_ADDED;
-	else if (!g_strcmp0(name, STR_MP_MOST_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
 		icon_path = LIVE_ICON_MOST_PLAYED;
+	}
 
 	return icon_path;
 }
@@ -105,14 +106,15 @@ static char *_mp_media_info_get_live_auto_playlist_thumbnail_by_name(const char 
 
 	char *thumb_path = NULL;
 
-	if (!g_strcmp0(name, STR_MP_FAVOURITES))
+	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
 		thumb_path = LIVE_THUMBNAIL_QUICK_LIST;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
 		thumb_path = LIVE_THUMBNAIL_RECENTLY_PLAYED;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
 		thumb_path = LIVE_THUMBNAIL_RECENTLY_ADDED;
-	else if (!g_strcmp0(name, STR_MP_MOST_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
 		thumb_path = LIVE_THUMBNAIL_MOST_PLAYED;
+	}
 
 	return thumb_path;
 }
@@ -159,8 +161,9 @@ _mp_playlist_list_take_picture_button_cb(void *data, Evas_Object * obj, void *ev
 	mp_popup_destroy(ad);
 
 	int ret = mp_ug_camera_take_picture(mp_list_get_playlist_handle(view->content_to_show));
-	if (ret != 0)
+	if (ret != 0) {
 		ERROR_TRACE("taken picture failed");
+	}
 }
 
 static void
@@ -176,8 +179,9 @@ _mp_playlist_list_change_image_button_cb(void *data, Evas_Object * obj, void *ev
 	mp_popup_destroy(ad);
 
 	int ret = mp_ug_gallery_get_picture(mp_list_get_playlist_handle(view->content_to_show));
-	if (ret != 0)
+	if (ret != 0) {
 		ERROR_TRACE("taken picture failed");
+	}
 
 }
 
@@ -199,9 +203,9 @@ _mp_playlist_detail_edit_image_cb(void *data, Evas_Object *obj, void *event_info
 	MP_CHECK(genlist);
 
 	mp_genlist_popup_item_append(popup, GET_STR(STR_MP_TAKE_PICTURE), NULL, NULL, NULL,
-				_mp_playlist_list_take_picture_button_cb, data);
+	                             _mp_playlist_list_take_picture_button_cb, data);
 	mp_genlist_popup_item_append(popup, GET_STR(STR_MP_CHANGE_IMAGE), NULL, NULL, NULL,
-				_mp_playlist_list_change_image_button_cb, data);
+	                             _mp_playlist_list_change_image_button_cb, data);
 
 	evas_object_show(popup);
 
@@ -225,88 +229,88 @@ static void _mp_playlist_detail_view_normal_more_btn_cb(void *data, Evas_Object 
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_SHARE)) {
 		/*share*/
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
+		                             STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
 	}
 #endif
 
 	int count = 0;
 	mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, NULL, 0, &count);
 	if (count > 0) {
-	if ((view->list_type == MP_TRACK_BY_PLAYLIST) || !strcmp((STR_MP_FAVOURITES), view->name) ||
-			!strcmp(GET_STR(STR_MP_FAVOURITES), view->name)) {
-		/*add tracks*/
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_ADD_TRACKS, MP_PLAYER_MORE_BTN_ADD,
-								_mp_playlist_detail_view_tracklist_add_cb,
-								view);
-	}
+		if ((view->list_type == MP_TRACK_BY_PLAYLIST) || !strcmp((STR_MP_FAVOURITES), view->name) ||
+		        !strcmp(GET_STR(STR_MP_FAVOURITES), view->name)) {
+			/*add tracks*/
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_ADD_TRACKS, MP_PLAYER_MORE_BTN_ADD,
+			                             _mp_playlist_detail_view_tracklist_add_cb,
+			                             view);
+		}
 
 #ifdef MP_FEATURE_CLOUD
-	/*cloud */
-	int is_on = false;
-	mp_cloud_is_on(&is_on);
-	if (is_on) {
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
+		/*cloud */
+		int is_on = false;
+		mp_cloud_is_on(&is_on);
+		if (is_on) {
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
 
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
-	}
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
+		}
 #endif
 
-	if (view->list_type == MP_TRACK_BY_PLAYLIST) {
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-			STR_MP_RENAME, MP_PLAYER_MORE_BTN_RENAME_IMAGE, _mp_playlist_detail_rename_cb, view);
-	}
+		if (view->list_type == MP_TRACK_BY_PLAYLIST) {
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_RENAME, MP_PLAYER_MORE_BTN_RENAME_IMAGE, _mp_playlist_detail_rename_cb, view);
+		}
 
-	if ((mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL) > 1) &&
-		view->list_type == MP_TRACK_BY_PLAYLIST) {
-		/*reorder*/
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_REORDER, MP_PLAYER_MORE_BTN_SET_REORDER,
-								_mp_playlist_detail_view_tracklist_reorder_cb,
-								view);
-	}
+		if ((mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL) > 1) &&
+		        view->list_type == MP_TRACK_BY_PLAYLIST) {
+			/*reorder*/
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_REORDER, MP_PLAYER_MORE_BTN_SET_REORDER,
+			                             _mp_playlist_detail_view_tracklist_reorder_cb,
+			                             view);
+		}
 
 #ifdef MP_FEATURE_EDIT_PLAYLIST_IMAGE
-	/*edit image*/
-	if (view->p_id >= 0) {
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_EDIT_IMAGE, MP_PLAYER_MORE_BTN_EDIT_IMAGE, _mp_playlist_detail_edit_image_cb, view);
-	}
+		/*edit image*/
+		if (view->p_id >= 0) {
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_EDIT_IMAGE, MP_PLAYER_MORE_BTN_EDIT_IMAGE, _mp_playlist_detail_edit_image_cb, view);
+		}
 #endif
 
-	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL)) {
-		/*remove*/
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_REMOVE, MP_PLAYER_MORE_BTN_EDIT,
-								mp_playlist_detail_view_tracklist_edit_cb,							view);
-	}
+		if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL)) {
+			/*remove*/
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_REMOVE, MP_PLAYER_MORE_BTN_EDIT,
+			                             mp_playlist_detail_view_tracklist_edit_cb,							view);
+		}
 
-	if (count) {
-/*search*/
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
-	}
+		if (count) {
+			/*search*/
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
+		}
 
-	/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);*/
+		/*mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);*/
 #ifndef MP_FEATURE_NO_END
-	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+		                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
-/*
-	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				GET_SYS_STR(STR_MP_END), MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
-*/
+		/*
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+						GET_SYS_STR(STR_MP_END), MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+		*/
 
-	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
+		mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
-	evas_object_show(view->more_btn_ctxpopup);
+		evas_object_show(view->more_btn_ctxpopup);
 	} else {
 		if (view->list_type == MP_TRACK_BY_PLAYLIST) {
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_RENAME, MP_PLAYER_MORE_BTN_RENAME_IMAGE, _mp_playlist_detail_rename_cb, view);
+			                             STR_MP_RENAME, MP_PLAYER_MORE_BTN_RENAME_IMAGE, _mp_playlist_detail_rename_cb, view);
 			mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
 			evas_object_show(view->more_btn_ctxpopup);
@@ -431,8 +435,9 @@ static void _mp_playlist_detail_view_content_load(void *thiz)
 	if (view->list_type == MP_TRACK_BY_PLAYLIST) {
 		DEBUG_TRACE("playlist id: %d", view->p_id);
 		mp_track_list_set_data((MpTrackList_t *)view->content_to_show, MP_TRACK_LIST_TYPE, view->list_type, MP_TRACK_LIST_PLAYLIT_ID, view->p_id, -1);
-	} else
+	} else {
 		mp_track_list_set_data((MpTrackList_t *)view->content_to_show, MP_TRACK_LIST_TYPE, view->list_type, -1);
+	}
 	/*mp_track_list_set_data((MpTrackList_t *)view->content_to_show, MP_TRACK_LIST_INDEX_TYPE, MP_TRACK_LIST_INDEX_ALBUM_ART_LIST, -1);*/
 
 	mp_list_update(view->content_to_show);
@@ -450,8 +455,7 @@ _mp_playlist_detail_view_on_event_cb(void *thiz, MpViewEvent_e event)
 
 	mp_debug("event = %d", event);
 	switch (event) {
-	case MP_ADD_TO_PLAYLIST_DONE:
-	{
+	case MP_ADD_TO_PLAYLIST_DONE: {
 		int count = mp_list_get_editable_count((MpList_t *)view->content_to_show, mp_list_get_edit_type(view->content_to_show));
 		if (count != 0) {
 			mp_track_list_update_albumart_index((MpTrackList_t *)view->content_to_show);
@@ -466,14 +470,12 @@ _mp_playlist_detail_view_on_event_cb(void *thiz, MpViewEvent_e event)
 		mp_track_list_popup_delete_genlist_item(view->content_to_show);
 		mp_track_list_update_genlist(view->content_to_show);
 		break;
-	case MP_UPDATE_FAVORITE_LIST:
-	{
+	case MP_UPDATE_FAVORITE_LIST: {
 		mp_list_update(view->content_to_show);
 		break;
 	}
 #ifdef MP_FEATURE_LANDSCAPE
-	case MP_VIEW_ROTATE:
-	{
+	case MP_VIEW_ROTATE: {
 		Evas_Object *content = NULL;
 		content = elm_object_part_content_unset(view->playlist_detail_view_layout, "list-content");
 		evas_object_del(content);
@@ -491,14 +493,13 @@ _mp_playlist_detail_view_on_event_cb(void *thiz, MpViewEvent_e event)
 #endif
 #ifndef MP_SOUND_PLAYER
 	case MP_UPDATE_PLAYING_LIST:
-			mp_list_realized_item_part_update(view->content_to_show, "elm.text.main.left.top", ELM_GENLIST_ITEM_FIELD_TEXT);
-			mp_list_realized_item_part_update(view->content_to_show, "elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
+		mp_list_realized_item_part_update(view->content_to_show, "elm.text.main.left.top", ELM_GENLIST_ITEM_FIELD_TEXT);
+		mp_list_realized_item_part_update(view->content_to_show, "elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
 		break;
 #endif
-	case MP_PLAY_TIME_COUNT_UPDATED:
-	{
+	case MP_PLAY_TIME_COUNT_UPDATED: {
 		if (view->p_id == MP_SYS_PLST_RECENTELY_PLAYED ||
-			view->p_id == MP_SYS_PLST_MOST_PLAYED) {
+		        view->p_id == MP_SYS_PLST_MOST_PLAYED) {
 			Evas_Object *content = NULL;
 			content = elm_object_part_content_unset(view->playlist_detail_view_layout, "list-content");
 			evas_object_del(content);
@@ -521,8 +522,7 @@ _mp_playlist_detail_view_on_event_cb(void *thiz, MpViewEvent_e event)
 	case MP_RESUME_PLAYBACK:
 	case MP_PAUSE_PLAYBACK:
 	case MP_PLAYING_TRACK_CHANGED:
-	case MP_STOP_PLAYBACK:
-	{
+	case MP_STOP_PLAYBACK: {
 		mp_list_realized_item_part_update(view->content_to_show, "elm.icon.left", ELM_GENLIST_ITEM_FIELD_CONTENT);
 		break;
 	}
@@ -595,7 +595,9 @@ MpPlaylistDetailView_t *mp_playlist_detail_view_create(Evas_Object *parent, mp_t
 	MP_CHECK_NULL(view);
 
 	ret = _mp_playlist_detail_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	view->list_type = list_type;
 	view->name = g_strdup(name);

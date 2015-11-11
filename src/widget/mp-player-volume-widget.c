@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-player-volume-widget.h"
@@ -91,8 +91,9 @@ _mp_player_volume_widget_drag_start_cb(void *data, Evas_Object *obj, const char 
 	Volume_Widget_Data *wd = data;
 	MP_CHECK(wd);
 
-	if (wd->event_cb)
+	if (wd->event_cb) {
 		wd->event_cb(wd->user_data, obj, VOLUME_WIDGET_EVENT_DRAG_START);
+	}
 }
 
 static void
@@ -102,16 +103,18 @@ _mp_player_volume_widget_drag_stop_cb(void *data, Evas_Object *obj, const char *
 	Volume_Widget_Data *wd = data;
 	MP_CHECK(wd);
 
-	if (wd->event_cb)
+	if (wd->event_cb) {
 		wd->event_cb(wd->user_data, obj, VOLUME_WIDGET_EVENT_DRAG_STOP);
+	}
 }
 
 static void
 _mp_player_volume_widget_mousedown_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
 	startfunc;
-	if (data == NULL && obj == NULL && event_info == NULL)
+	if (data == NULL && obj == NULL && event_info == NULL) {
 		return;
+	}
 
 	if ((elm_config_scale_get() - 1.7) < 0.0001) {
 		VOLUME_WIDGET_SLIDER_SIZE = 274;
@@ -137,47 +140,47 @@ _mp_player_volume_widget_mousedown_cb(void *data, Evas * e, Evas_Object * obj, v
 
 	int val = mp_player_mgr_volume_get_current();
 
-        int max_vol = VOLUME_WIDGET_SLIDER_LEVEL_MAX;
+	int max_vol = VOLUME_WIDGET_SLIDER_LEVEL_MAX;
 
 #ifdef MP_FEATURE_LANDSCAPE
-	if (mp_util_is_landscape())
-	{
+	if (mp_util_is_landscape()) {
 		current = ev->canvas.y - VOLUME_WIDGET_SLIDER_LD_START_POINT;
 		double dval = ((VOLUME_WIDGET_SLIDER_LD_SIZE - current) * max_vol) / VOLUME_WIDGET_SLIDER_LD_SIZE + 1;
 		val = ((VOLUME_WIDGET_SLIDER_LD_SIZE - current) * max_vol) / VOLUME_WIDGET_SLIDER_LD_SIZE + 1;
-		if ((dval - val) > 0.5)
+		if ((dval - val) > 0.5) {
 			val =  val + 1;
-	}
-	else
+		}
+	} else
 #endif
 	{
 		current = ev->canvas.y;
-		double dval = (((VOLUME_WIDGET_SLIDER_START_POINT - current) * max_vol)*1.0 ) / VOLUME_WIDGET_SLIDER_SIZE ;
+		double dval = (((VOLUME_WIDGET_SLIDER_START_POINT - current) * max_vol) * 1.0) / VOLUME_WIDGET_SLIDER_SIZE ;
 		val = dval;
-		DEBUG_TRACE("dval = %f, val = %d, dval-val=%f ", dval,val,(dval-val));
-		if ((dval - val) > 0.5)
+		DEBUG_TRACE("dval = %f, val = %d, dval-val=%f ", dval, val, (dval - val));
+		if ((dval - val) > 0.5) {
 			val =  val + 1;
+		}
 	}
 
-	if (val < VOLUME_WIDGET_SLIDER_LEVEL_MIN)
+	if (val < VOLUME_WIDGET_SLIDER_LEVEL_MIN) {
 		val = VOLUME_WIDGET_SLIDER_LEVEL_MIN;
-	else if (val > max_vol)
+	} else if (val > max_vol) {
 		val = max_vol;
+	}
 
 	//int val = _mp_player_volume_widget_get_val(wd);
 	DEBUG_TRACE("val = %d", val);
 	DEBUG_TRACE("wd->current = %d", wd->current);
 
-	if (val != wd->current)
-	{
-		if (!mp_player_mgr_volume_set(val))
-		{
+	if (val != wd->current) {
+		if (!mp_player_mgr_volume_set(val)) {
 			return ;
 		}
 		_mp_player_volume_widget_set_indicator(wd, val);
 	}
-	if (wd->event_cb)
+	if (wd->event_cb) {
 		wd->event_cb(wd->user_data, obj, VOLUME_WIDGET_EVENT_DRAG_STOP);
+	}
 
 	endfunc;
 }
@@ -186,16 +189,18 @@ static void
 _mp_player_volume_widget_mouseup_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 {
 	startfunc;
-	if (data == NULL && obj == NULL && event_info == NULL)
+	if (data == NULL && obj == NULL && event_info == NULL) {
 		return;
+	}
 
 	Volume_Widget_Data *wd = data;
 	MP_CHECK(wd);
 
 	mp_player_volume_widget_set_val(wd->obj, mp_player_mgr_volume_get_current());
 
-	if (wd->event_cb)
+	if (wd->event_cb) {
 		wd->event_cb(wd->user_data, obj, VOLUME_WIDGET_EVENT_DRAG_STOP);
+	}
 	//when up ,the slider position is wrong cause by this code
 	endfunc;
 }
@@ -212,18 +217,16 @@ _mp_player_volume_widget_changed_cb(void *data, Evas_Object *obj, const char *em
 	DEBUG_TRACE("val = %d", val);
 	DEBUG_TRACE("wd->current = %d", wd->current);
 	if (val != wd->current) {
-		if (!mp_player_mgr_volume_set(val))
-		{
+		if (!mp_player_mgr_volume_set(val)) {
 			mp_player_volume_widget_set_val(wd->obj, 9);
-		}
-		else
-		{
+		} else {
 			_mp_player_volume_widget_set_indicator(wd, val);
 		}
 	}
 
-        if (wd->event_cb)
+	if (wd->event_cb) {
 		wd->event_cb(wd->user_data, obj, VOLUME_WIDGET_EVENT_DRAG_MAX);
+	}
 }
 
 static void
@@ -240,18 +243,15 @@ mp_player_volume_widget_add(Evas_Object *parent)
 	MP_CHECK_NULL(parent);
 
 	Evas_Object *widget = NULL;
-	if (mp_util_is_landscape())
-	{
+	if (mp_util_is_landscape()) {
 		widget = mp_common_load_edj(parent, PLAY_VIEW_EDJ_NAME, VOLUME_WIDGET_GROUP_NAME_LD);
 #ifdef MP_FEATURE_SPLIT_WINDOW
-                evas_object_resize(widget, MP_VOLUME_WIDGET_LD_W, MP_VOLUME_WIDGET_LD_H);
+		evas_object_resize(widget, MP_VOLUME_WIDGET_LD_W, MP_VOLUME_WIDGET_LD_H);
 #endif
-	}
-	else
-	{
+	} else {
 		widget = mp_common_load_edj(parent, PLAY_VIEW_EDJ_NAME, VOLUME_WIDGET_GROUP_NAME);
 #ifdef MP_FEATURE_SPLIT_WINDOW
-                evas_object_resize(widget, MP_VOLUME_WIDGET_W, MP_VOLUME_WIDGET_H);
+		evas_object_resize(widget, MP_VOLUME_WIDGET_W, MP_VOLUME_WIDGET_H);
 #endif
 	}
 	evas_object_size_hint_weight_set(widget, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -275,7 +275,7 @@ mp_player_volume_widget_add(Evas_Object *parent)
 	evas_object_event_callback_add(widget, EVAS_CALLBACK_FREE, _mp_player_volume_widget_del_cb, wd);
 
 #ifdef MP_SOUND_PLAYER
-	edje_object_signal_emit(edj_obj,"hide,sound,alive", "*");
+	edje_object_signal_emit(edj_obj, "hide,sound,alive", "*");
 #endif
 
 	return widget;
@@ -299,8 +299,12 @@ mp_player_volume_widget_set_val(Evas_Object *obj, int val)
 	Volume_Widget_Data *wd = evas_object_data_get(obj, "widget_data");
 	MP_CHECK_VAL(wd, 0);
 
-	if (val < 0) val = 0;
-	if (val > wd->max) val = wd->max;
+	if (val < 0) {
+		val = 0;
+	}
+	if (val > wd->max) {
+		val = wd->max;
+	}
 	double ratio = (double)val / (double)wd->max;
 	edje_object_part_drag_value_set(_EDJ(wd->obj), VOLUME_WIDGET_SLIDER_HANDLE, 1.0, ratio);
 	_mp_player_volume_widget_set_indicator(wd, val);

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-search.h"
@@ -30,7 +30,7 @@ _mc_search_view_clicked_cb(void *data, Evas_Object * obj, void *event_info)
 {
 	MP_CHECK(data);
 	MP_CHECK(obj);
-	elm_object_focus_allow_set(obj,EINA_TRUE);
+	elm_object_focus_allow_set(obj, EINA_TRUE);
 	elm_object_focus_set(obj, EINA_TRUE);
 }
 
@@ -43,10 +43,11 @@ _mc_search_entry_changed_cb(void *data, Evas_Object * obj, void *event_info)
 	MP_CHECK(entry);
 
 	const char *signal = NULL;
-	if (elm_entry_is_empty(entry))
+	if (elm_entry_is_empty(entry)) {
 		signal = "elm,state,eraser,hide";
-	else
+	} else {
 		signal = "elm,state,eraser,show";
+	}
 
 	elm_object_signal_emit(searchbar, signal, "elm");
 }
@@ -71,10 +72,11 @@ static void _entry_text_changed_cb(void *data, Evas_Object *obj, void *event_inf
 	MP_CHECK(entry);
 
 	const char *signal = NULL;
-	if (elm_entry_is_empty(entry))
+	if (elm_entry_is_empty(entry)) {
 		signal = "elm,state,eraser,hide";
-	else
+	} else {
 		signal = "elm,state,eraser,show";
+	}
 
 	elm_object_signal_emit(searchbar, signal, "elm");
 }
@@ -88,7 +90,7 @@ _mc_search_entry_maxlength_reached_cb(void *data, Evas_Object * obj, void *event
 
 Evas_Object *
 mc_search_create_new(Evas_Object * parent, Evas_Smart_Cb change_cb, void *change_cb_data, Evas_Smart_Cb cancel_cb, void *cancel_cb_data,
-			Evas_Smart_Cb focus_cb, void *focus_cb_data, Evas_Smart_Cb unfocus_cb, void *unfocus_cb_data)
+                     Evas_Smart_Cb focus_cb, void *focus_cb_data, Evas_Smart_Cb unfocus_cb, void *unfocus_cb_data)
 {
 	startfunc;
 	Evas_Object *sb = NULL;
@@ -137,14 +139,14 @@ mc_search_create_new(Evas_Object * parent, Evas_Smart_Cb change_cb, void *change
 	evas_object_smart_callback_add(en, "unfocused", unfocus_cb, focus_cb_data);
 
 	evas_object_smart_callback_add(en, "preedit,changed", _entry_text_changed_cb, sb);
-        evas_object_smart_callback_add(en, "preedit,changed", change_cb, change_cb_data);
+	evas_object_smart_callback_add(en, "preedit,changed", change_cb, change_cb_data);
 	evas_object_smart_callback_add(en, "clicked", _mc_search_view_clicked_cb, sb);
 
 	static Elm_Entry_Filter_Limit_Size limit_filter_data;
 	limit_filter_data.max_char_count = 0;
 	limit_filter_data.max_byte_count = 193;
 	elm_entry_markup_filter_append(en, elm_entry_filter_limit_size, &limit_filter_data);
-	evas_object_smart_callback_add(en, "maxlength,reached", _mc_search_entry_maxlength_reached_cb,NULL);
+	evas_object_smart_callback_add(en, "maxlength,reached", _mc_search_entry_maxlength_reached_cb, NULL);
 
 	evas_object_show(sb);
 	//elm_object_focus_set(en,EINA_TRUE);
@@ -157,7 +159,7 @@ mc_search_hide_imf_pannel(Evas_Object * search)
 {
 	MP_CHECK(search);
 	Evas_Object *en = mc_search_entry_get(search);
-	elm_object_focus_set(en,EINA_FALSE);
+	elm_object_focus_set(en, EINA_FALSE);
 }
 
 void
@@ -165,7 +167,7 @@ mc_search_show_imf_pannel(Evas_Object * search)
 {
 	MP_CHECK(search);
 	Evas_Object *en = mc_search_entry_get(search);
-	elm_object_focus_set(en,EINA_TRUE);
+	elm_object_focus_set(en, EINA_TRUE);
 }
 
 Evas_Object *
@@ -186,7 +188,7 @@ mc_search_text_get(Evas_Object *search)
 	MP_CHECK_NULL(entry);
 
 	const char *text = elm_entry_entry_get(entry);
-        char *markup_text = elm_entry_markup_to_utf8(text);
+	char *markup_text = elm_entry_markup_to_utf8(text);
 
 	return markup_text;
 }
@@ -198,8 +200,9 @@ mc_search_text_set(Evas_Object *search, const char *text)
 	Evas_Object *entry = evas_object_data_get(search, "entry");
 	MP_CHECK(entry);
 
-	if (text == NULL)
+	if (text == NULL) {
 		text = "";
+	}
 
 	DEBUG_TRACE("Text: %s", text);
 	elm_entry_entry_set(entry, text);

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <string.h>
@@ -72,8 +72,8 @@ _mp_setting_playlist_changed_cb(const char *key, void *user_data)
 {
 	startfunc;
 
-	mp_retm_if (key == NULL, "keymode is NULL");
-	mp_retm_if (user_data == NULL, "user_date is NULL");
+	mp_retm_if(key == NULL, "keymode is NULL");
+	mp_retm_if(user_data == NULL, "user_date is NULL");
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_SETTING_PLAYLIST_CHANGED);
 
@@ -86,8 +86,8 @@ _mp_setting_auto_off_changed_cb(const char *key, void *user_data)
 {
 	mp_setting_t *sd = NULL;
 	keynode_t *node = (keynode_t *) key;
-	mp_retm_if (node == NULL, "keymode is NULL");
-	mp_retm_if (user_data == NULL, "user_date is NULL");
+	mp_retm_if(node == NULL, "keymode is NULL");
+	mp_retm_if(user_data == NULL, "user_date is NULL");
 	sd = (mp_setting_t *) user_data;
 
 	int min = 0;
@@ -97,8 +97,9 @@ _mp_setting_auto_off_changed_cb(const char *key, void *user_data)
 	}
 
 	mp_debug("auto off time changed [%d] miniute", min);
-	if (sd->auto_off_cb)
+	if (sd->auto_off_cb) {
 		sd->auto_off_cb(min, sd->auto_off_udata);
+	}
 
 	return;
 }
@@ -110,8 +111,8 @@ _mp_setting_play_speed_changed_cb(const char *key, void *user_data)
 {
 	mp_setting_t *sd = NULL;
 	keynode_t * node = (keynode_t *) key;
-	mp_retm_if (node == NULL, "keymode is NULL");
-	mp_retm_if (user_data == NULL, "user_date is NULL");
+	mp_retm_if(node == NULL, "keymode is NULL");
+	mp_retm_if(user_data == NULL, "user_date is NULL");
 	sd = (mp_setting_t *) user_data;
 
 	double speed = 0;
@@ -121,8 +122,9 @@ _mp_setting_play_speed_changed_cb(const char *key, void *user_data)
 	}
 
 	mp_debug("play speed changed [%f]", speed);
-	if (sd->play_speed_cb)
+	if (sd->play_speed_cb) {
 		sd->play_speed_cb(speed, sd->play_speed_udata);
+	}
 
 	return;
 }
@@ -183,7 +185,7 @@ mp_setting_key_cb_init(void)
 {
 	int ret = 0;
 
-	mp_retvm_if (g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
+	mp_retvm_if(g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
 
 	if (preference_set_changed_cb(MP_PREFKEY_PLAYLIST_VAL_INT, _mp_setting_playlist_changed_cb, g_setting) < 0) {
 		ERROR_TRACE("Fail to register MP_PREFKEY_PLAYLIST_VAL_INT key callback");
@@ -196,7 +198,8 @@ mp_setting_key_cb_init(void)
 	}
 
 	if (preference_set_changed_cb(MP_KEY_MUSIC_REPEAT, _mp_setting_repeat_changed_cb, g_setting) < 0) {
-		ERROR_TRACE("Fail to register MP_KEY_MUSIC_REPEAT key callback"); ret = -1;
+		ERROR_TRACE("Fail to register MP_KEY_MUSIC_REPEAT key callback");
+		ret = -1;
 	}
 
 #ifdef MP_FEATURE_AUTO_OFF
@@ -488,18 +491,18 @@ mp_setting_get_nowplaying_id(void)
 	startfunc;
 
 	FILE *fp = NULL;
-	char line[MAX_NAM_LEN+1];
+	char line[MAX_NAM_LEN + 1];
 	int pid = -1;
 	if ((fp = fopen(MP_NOW_PLAYING_ID_INI, "r")) == NULL) {
 		DEBUG_TRACE("unable to open %s/shared/data/NowPlayingStatus", DATA_PREFIX);
 		return -1;
 	}
-	if (fgets(line, MAX_NAM_LEN, fp))/* #Nowplaying */ {
-	/* skip */
+	if (fgets(line, MAX_NAM_LEN, fp)) { /* #Nowplaying */
+		/* skip */
 	}
-	if (fgets(line, MAX_NAM_LEN, fp))/* pid */ {
+	if (fgets(line, MAX_NAM_LEN, fp)) { /* pid */
 		line[MAX_NAM_LEN] = 0;
-		line[strlen(line)-1] = 0;
+		line[strlen(line) - 1] = 0;
 		pid = atoi(line);
 	}
 	fclose(fp);
@@ -514,12 +517,12 @@ mp_setting_set_player_state(int val)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	DEBUG_TRACE("%d",ad->freeze_indicator_icon);
-	if (val == MP_PLAY_STATE_PLAYING)
+	DEBUG_TRACE("%d", ad->freeze_indicator_icon);
+	if (val == MP_PLAY_STATE_PLAYING) {
 		ad->freeze_indicator_icon = false;
+	}
 
-	if (ad->freeze_indicator_icon)
-	{
+	if (ad->freeze_indicator_icon) {
 		WARN_TRACE("icon freezed.. skip state changes [%d]", val);
 		return;
 	}
@@ -645,18 +648,19 @@ mp_setting_save_playing_info(void *data)
 
 	if (ad->music_length > 3600.) {
 		snprintf(total_time, sizeof(total_time), "%" MUSIC_TIME_FORMAT,
-			 MUSIC_TIME_ARGS(ad->music_length + 0.5));
+		         MUSIC_TIME_ARGS(ad->music_length + 0.5));
 		snprintf(position, sizeof(position), "%" MUSIC_TIME_FORMAT,
-			 MUSIC_TIME_ARGS(ad->music_pos + 0.5));
+		         MUSIC_TIME_ARGS(ad->music_pos + 0.5));
 	} else {
 		snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-			 PLAY_TIME_ARGS(ad->music_length + 0.5));
+		         PLAY_TIME_ARGS(ad->music_length + 0.5));
 		snprintf(position, sizeof(position), "%" PLAY_TIME_FORMAT,
-			 PLAY_TIME_ARGS(ad->music_pos + 0.5));
+		         PLAY_TIME_ARGS(ad->music_pos + 0.5));
 	}
 
-	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING)
+	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING) {
 		playing = "true";
+	}
 
 	fprintf(fp, "%s\n", ad->current_track_info->title);
 	fprintf(fp, "%s\n", ad->current_track_info->artist);
@@ -712,19 +716,19 @@ mp_setting_get_now_playing_path_from_file(char **path)
 {
 	MP_CHECK(path);
 
-	char line[MAX_NAM_LEN+1];
+	char line[MAX_NAM_LEN + 1];
 	FILE *fp = NULL;
 
 	if ((fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "r")) == NULL) {
 		SECURE_ERROR("unable to open %s...", MP_NOWPLAYING_INI_FILE_NAME);
 		return;
 	}
-	if (fgets(line, MAX_NAM_LEN, fp))/* audio id */ {
+	if (fgets(line, MAX_NAM_LEN, fp)) { /* audio id */
 		/* skip */
 	}
-	if (fgets(line, MAX_NAM_LEN, fp))/* uri */ {
+	if (fgets(line, MAX_NAM_LEN, fp)) { /* uri */
 		line[MAX_NAM_LEN] = 0;
-		line[strlen(line)-1] = 0;
+		line[strlen(line) - 1] = 0;
 		*path = g_strdup(line);
 	}
 
@@ -758,10 +762,10 @@ mp_setting_save_now_playing(void *data)
 	char music_length[16] = { 0, };
 	if (ad->music_length > 3600.) {
 		snprintf(total_time, sizeof(total_time), "%" MUSIC_TIME_FORMAT,
-			 MUSIC_TIME_ARGS(ad->music_length));
+		         MUSIC_TIME_ARGS(ad->music_length));
 	} else {
 		snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-			 PLAY_TIME_ARGS(ad->music_length));
+		         PLAY_TIME_ARGS(ad->music_length));
 	}
 	snprintf(music_length, sizeof(music_length), "%f", ad->music_length);
 
@@ -820,8 +824,9 @@ mp_setting_save_shortcut(char *shortcut_title, char *artist, char *shortcut_desc
 
 	fprintf(fp, "[ShortCut]\n");
 	fprintf(fp, "title=%s\n", shortcut_title);
-	if (artist)
+	if (artist) {
 		fprintf(fp, "artist=%s\n", artist);
+	}
 	fprintf(fp, "desc=%s\n", shortcut_description);
 	fprintf(fp, "artwork=%s\n", shortcut_image_path);
 	fprintf(fp, "\n");
@@ -866,24 +871,28 @@ mp_setting_read_playing_status(char *uri, char *status)
 
 			if (!strcmp(key, "status")) {
 				DEBUG_TRACE("status: %s", status);
-				if (!strcmp(value, status))
+				if (!strcmp(value, status)) {
 					valid_status = 1;
+				}
 			}
 
 			if (!strcmp(key, "uri")) {
 				DEBUG_TRACE("uri: %s", uri);
-				if (!strcmp(value, uri))
+				if (!strcmp(value, uri)) {
 					valid_uri = 1;
+				}
 			}
 		}
 	}
 	if ((valid_uri == 1) && (valid_status == 1)) {
-		if (fp)
+		if (fp) {
 			fclose(fp);
+		}
 		return 1;
 	}
-	if (fp)
+	if (fp) {
 		fclose(fp);
+	}
 	return 0;
 }
 
@@ -906,18 +915,19 @@ mp_setting_write_playing_status(char *uri, char *status)
 		fprintf(fp, "#Nowplaying\n");
 		fprintf(fp, "uri=%s\n", uri);
 		fprintf(fp, "status=%s\n", status);
-	#ifndef MP_SOUND_PLAYER
+#ifndef MP_SOUND_PLAYER
 		struct appdata *ad = mp_util_get_appdata();
 		if (ad && ad->current_track_info) {
 			fprintf(fp, "title=%s\n", ad->current_track_info->title);
 			fprintf(fp, "artist=%s\n", ad->current_track_info->artist);
 			fprintf(fp, "album=%s\n", ad->current_track_info->album);
-			if (ad->current_track_info->thumbnail_path)
+			if (ad->current_track_info->thumbnail_path) {
 				fprintf(fp, "thumbnail=%s\n", ad->current_track_info->thumbnail_path);
-			else
+			} else {
 				fprintf(fp, "thumbnail=/usr/apps/org.tizen.music-player/shared/res/shared_images/default_albumart.png\n");
+			}
 		}
-	#endif
+#endif
 
 		fprintf(fp, "changePlayer=%s\n", "false");
 		fsync((int)fp);
@@ -931,7 +941,7 @@ mp_setting_write_playing_status(char *uri, char *status)
 int
 mp_setting_auto_off_set_callback(MpSettingAutoOff_Cb func, void *data)
 {
-	mp_retvm_if (g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
+	mp_retvm_if(g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
 
 	g_setting->auto_off_cb = func;
 	g_setting->auto_off_udata = data;
@@ -969,7 +979,7 @@ mp_setting_get_auto_off_time()
 #ifdef MP_FEATURE_PLAY_SPEED
 int mp_setting_set_play_speed_change_callback(MpSettingPlaySpeed_Cb func, void *data)
 {
-	mp_retvm_if (g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
+	mp_retvm_if(g_setting == NULL, -1, "setting data is not initialized, init first!!!!!");
 
 	g_setting->play_speed_cb = func;
 	g_setting->play_speed_udata = data;
@@ -1012,8 +1022,9 @@ mp_setting_update_active_device()
 
 int mp_setting_get_side_sync_status(void)
 {
-	if (!g_setting)
+	if (!g_setting) {
 		mp_setting_init(mp_util_get_appdata());
+	}
 	return g_setting->side_sync_status;
 
 }

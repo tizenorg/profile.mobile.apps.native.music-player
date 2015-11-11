@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -32,17 +32,18 @@ mc_widget_no_content_add(Evas_Object *parent, NoContentType_e type)
 	elm_object_part_content_set(nocontents, "nocontents.image", icon);
 
 	const char *ids;
-	if (type == NO_CONTENT_PLAYLIST)
+	if (type == NO_CONTENT_PLAYLIST) {
 		ids = MC_TEXT_NO_PLAYLIST;
-	else if (type == NO_CONTENT_ALBUM)
+	} else if (type == NO_CONTENT_ALBUM) {
 		ids = MC_TEXT_NO_ALBUM;
-	else if (type == NO_CONTENT_ARTIST)
+	} else if (type == NO_CONTENT_ARTIST) {
 		ids = MC_TEXT_NO_ARTIST;
-	else
+	} else {
 		ids = MC_TEXT_NO_SONGS;
+	}
 
 	//elm_object_text_set(nocontents, GET_STR(ids));
-        mc_common_obj_domain_text_translate(nocontents, ids);
+	mc_common_obj_domain_text_translate(nocontents, ids);
 	elm_object_focus_allow_set(nocontents, EINA_TRUE);
 
 	return nocontents;
@@ -79,7 +80,9 @@ Evas_Object *mc_widget_create_title_icon_btn(Evas_Object *parent, const char *fi
 {
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "naviframe/title_icon");
 
 	ic = elm_image_add(parent);
@@ -117,11 +120,11 @@ Elm_Object_Item *mc_widget_create_toolbar_item_btn(Evas_Object *parent, const ch
 	Evas_Object *toolbar = parent;
 	MP_CHECK_NULL(toolbar);
 
-        Elm_Object_Item *toolbar_item = NULL;
-        //Evas_Object *toolbar_obj_item = NULL;
+	Elm_Object_Item *toolbar_item = NULL;
+	//Evas_Object *toolbar_obj_item = NULL;
 
-        toolbar_item = elm_toolbar_item_append(toolbar, NULL, text, func, data);
-        //toolbar_obj_item = elm_toolbar_item_object_get(toolbar_item);
+	toolbar_item = elm_toolbar_item_append(toolbar, NULL, text, func, data);
+	//toolbar_obj_item = elm_toolbar_item_object_get(toolbar_item);
 	return toolbar_item;
 }
 static inline const char *_mc_get_text_domain(const char *string_id)
@@ -132,11 +135,10 @@ static inline const char *_mc_get_text_domain(const char *string_id)
 }
 
 Evas_Object* mc_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 
-	if (!pParent || !pNaviItem)
-	{
+	if (!pParent || !pNaviItem) {
 		ERROR_TRACE("parent is NULL.");
 		return NULL;
 	}
@@ -147,8 +149,7 @@ Evas_Object* mc_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Ite
 	const char *domain = _mc_get_text_domain(STR_MP_NAVI_CANCEL);
 	elm_object_domain_translatable_text_set(pLeftbtn, domain, STR_MP_NAVI_CANCEL);
 
-	if (!pLeftbtn)
-	{
+	if (!pLeftbtn) {
 		ERROR_TRACE("[ERR] Fail to create pLeftbtn");
 		return NULL;
 	}
@@ -161,11 +162,10 @@ Evas_Object* mc_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Ite
 }
 
 Evas_Object* mc_widget_create_navi_right_btn(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 
-	if (!pParent || !pNaviItem)
-	{
+	if (!pParent || !pNaviItem) {
 		ERROR_TRACE("parent is NULL.");
 		return NULL;
 	}
@@ -178,14 +178,13 @@ Evas_Object* mc_widget_create_navi_right_btn(Evas_Object *pParent, Elm_Object_It
 	const char *domain = _mc_get_text_domain(STR_MP_NAVI_DONE);
 	elm_object_domain_translatable_text_set(pRightbtn, domain, STR_MP_NAVI_DONE);
 
-	if (!pRightbtn)
-	{
+	if (!pRightbtn) {
 		ERROR_TRACE("[ERR] Fail to create pRightbtn");
 		return NULL;
 	}
 
 	elm_object_item_part_content_set(pNaviItem, "title_right_btn", pRightbtn);
-	elm_object_disabled_set(pRightbtn,EINA_TRUE);
+	elm_object_disabled_set(pRightbtn, EINA_TRUE);
 
 	evas_object_show(pRightbtn);
 

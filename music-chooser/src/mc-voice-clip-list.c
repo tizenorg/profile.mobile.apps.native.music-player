@@ -1,25 +1,25 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-track-list.h"
 #include "mp-media-info.h"
 #include "mc-common.h"
 
-typedef struct{
+typedef struct {
 	struct app_data *ad;
 
 	Evas_Object *no_content;
@@ -29,7 +29,7 @@ typedef struct{
 	mp_media_list_h voice_clip_list;
 
 	Ecore_Timer *destroy_timer;
-}voice_clip_list_data_t;
+} voice_clip_list_data_t;
 
 #define GET_LIST_DATA(obj)	evas_object_data_get(obj, "list_data")
 
@@ -52,7 +52,7 @@ static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 	int ret = 0;
 	if (strcmp(part, "elm.text") == 0) {
 		ret = mp_media_info_get_title(data, &text);
-		MP_CHECK_NULL(ret==0);
+		MP_CHECK_NULL(ret == 0);
 		return g_strdup(text);
 	}
 	return NULL;
@@ -87,7 +87,7 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 	app_control_create(&service);
 	app_control_add_extra_data(service, APP_CONTROL_DATA_PATH, path);
 
-	app_control_reply_to_launch_request(service,ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
+	app_control_reply_to_launch_request(service, ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
 
 	ld->destroy_timer = ecore_timer_add(0.1, _destory_timer_cb, ld);
 
@@ -141,8 +141,7 @@ int mc_voice_clip_list_update(Evas_Object *list)
 	voice_clip_list_data_t *ld  = GET_LIST_DATA(list);
 	MP_CHECK_VAL(ld, -1);
 
-	if (ld->voice_clip_list)
-	{
+	if (ld->voice_clip_list) {
 		mp_media_info_list_destroy(ld->voice_clip_list);
 		ld->voice_clip_list = NULL;
 	}
@@ -151,19 +150,17 @@ int mc_voice_clip_list_update(Evas_Object *list)
 	evas_object_del(content);
 
 	mp_media_info_list_count(MP_TRACK_BY_VOICE_CLIP, NULL, NULL, NULL, 0, &count);
-	if (count)
-	{
+	if (count) {
 		content = _mc_create_genlist(list);
 		mp_media_info_list_create(&ld->voice_clip_list, MP_TRACK_BY_VOICE_CLIP, NULL, NULL, NULL, 0, 0, count);
 		int i = 0;
-		for (i=0; i<count; i++)
-		{
+		for (i = 0; i < count; i++) {
 			mp_media_info_h media =  mp_media_info_list_nth_item(ld->voice_clip_list, i);
 			elm_genlist_item_append(content, &ld->itc, media, NULL, ELM_GENLIST_ITEM_NONE, _gl_sel_cb, ld);
 		}
-	}
-	else
+	} else {
 		content = mc_widget_no_content_add(list, NO_CONTENT_SONG);
+	}
 
 	elm_layout_content_set(list, "elm.swallow.content", content);
 

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <stdio.h>
@@ -96,62 +96,56 @@ mp_ug_dropbox_attatch_file(const char *filepath, int count, void *user_data)
 	struct appdata *ad = NULL;
 	app_control_h service = NULL;
 
-	mp_retvm_if (filepath == NULL, -1, "file path is NULL");
-	mp_retvm_if (user_data == NULL, -1, "appdata is NULL");
+	mp_retvm_if(filepath == NULL, -1, "file path is NULL");
+	mp_retvm_if(user_data == NULL, -1, "appdata is NULL");
 
 	ad = user_data;
 	int err = 0;
 
 	err = app_control_create(&service);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_create");
 		return -1;
 	}
 
 	err = app_control_set_operation(service, APP_CONTROL_OPERATION_SEND);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
 	err = app_control_set_uri(service, filepath);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_uri().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
 	err = app_control_set_app_id(service, DROPBOX_PKG_NAME);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_app_id().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
-/*
-	err = app_control_set_window(service, elm_win_xwindow_get(ad->win_main));
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
-		ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
-		app_control_destroy(service);
-		return -1;
-	}
-*/
+	/*
+		err = app_control_set_window(service, elm_win_xwindow_get(ad->win_main));
+		if (err != APP_CONTROL_ERROR_NONE)
+		{
+			ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
+			app_control_destroy(service);
+			return -1;
+		}
+	*/
 	err = app_control_send_launch_request(service, NULL, NULL);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_send_launch_request().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
 	err = app_control_destroy(service);
-	if (err != APP_CONTROL_ERROR_NONE)
-	{
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 	}
 
@@ -180,15 +174,16 @@ static void __mp_ug_gallery_result_cb(app_control_h request, app_control_h reply
 		}
 
 		if (result_filename) {
- 			/*update thumbnail in db*/
+			/*update thumbnail in db*/
 			ret = mp_media_info_playlist_set_thumbnail_path(data, result_filename);
 			ERROR_TRACE("ret from set thumbnail is %d", ret);
 			mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_IMAGE_UPDATED);
 			char *popup_txt = NULL;
-			if (!ret)
+			if (!ret) {
 				popup_txt = GET_SYS_STR("IDS_COM_POP_SUCCESS");
-			else
+			} else {
 				popup_txt = GET_SYS_STR("IDS_COM_POP_FAILED");
+			}
 
 			mp_widget_text_popup(ad, popup_txt);
 		} else {
@@ -214,9 +209,9 @@ mp_ug_gallery_get_picture(void *data)
 		ERROR_TRACE("app_control_create() is failed !!");
 		return -1;
 	}
-/*
-	app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
-*/
+	/*
+		app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
+	*/
 	int a, b;
 
 	evas_object_geometry_get(ad->win_main, NULL, NULL, &a, &b);
@@ -257,7 +252,7 @@ static void __mp_ug_camera_result_cb(app_control_h request, app_control_h reply,
 		}
 
 		if (result_filename) {
- 			/*update thumbnail in db*/
+			/*update thumbnail in db*/
 			ret = mp_media_info_playlist_set_thumbnail_path(data, result_filename);
 			mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_IMAGE_UPDATED);
 
@@ -284,9 +279,9 @@ mp_ug_camera_take_picture(void *data)
 		ERROR_TRACE("app_control_create() is failed !!");
 		return -1;
 	}
-/*
-	app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
-*/
+	/*
+		app_control_set_window(svc_handle, elm_win_xwindow_get(ad->win_main));
+	*/
 	int a, b;
 
 	evas_object_geometry_get(ad->win_main, NULL, NULL, &a, &b);
@@ -320,8 +315,7 @@ static void _mp_ug_contact_reply_cb(app_control_h request, app_control_h reply, 
 	app_control_get_extra_data(reply, "is_success", &value);
 	DEBUG_TRACE("is_success: %s", value);
 
-	if (!g_strcmp0(value, "1"))
-	{
+	if (!g_strcmp0(value, "1")) {
 		mp_util_post_status_message(NULL, GET_STR(STR_MP_POP_CALLER_RINGTONE_SAVED));
 	}
 
@@ -334,13 +328,12 @@ mp_ug_contact_user_sel(const char *filepath, void *user_data)
 	startfunc;
 	//struct appdata *ad = NULL;
 	app_control_h service = NULL;
-        int err = 0;
+	int err = 0;
 
-	mp_retvm_if (filepath == NULL, -1, "file path is NULL");
+	mp_retvm_if(filepath == NULL, -1, "file path is NULL");
 	//ad = mp_util_get_appdata();
 
-	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE)
-	{
+	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_create");
 		return -1;
 	}
@@ -350,49 +343,44 @@ mp_ug_contact_user_sel(const char *filepath, void *user_data)
 	app_control_add_extra_data(service, CT_UG_BUNDLE_TYPE, buf);
 	app_control_add_extra_data(service, CT_UG_BUNDLE_PATH, filepath);
 
-        err = app_control_add_extra_data(service, "tone", filepath);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_add_extra_data(service, "tone", filepath);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_add_extra_data().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_set_operation(service, APP_CONTROL_OPERATION_DEFAULT);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_set_operation(service, APP_CONTROL_OPERATION_DEFAULT);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_set_app_id(service, UG_CONTACTS_LIST);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_set_app_id(service, UG_CONTACTS_LIST);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_app_id().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
-/*
-        err = app_control_set_window(service, ad->xwin);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
-		ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
-		app_control_destroy(service);
-		return -1;
-	}
-*/
-        err = app_control_send_launch_request(service, _mp_ug_contact_reply_cb, NULL);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	/*
+	        err = app_control_set_window(service, ad->xwin);
+	        if (err != APP_CONTROL_ERROR_NONE)
+		{
+			ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
+			app_control_destroy(service);
+			return -1;
+		}
+	*/
+	err = app_control_send_launch_request(service, _mp_ug_contact_reply_cb, NULL);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_send_launch_request().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_destroy(service);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_destroy(service);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 	}
 
@@ -405,83 +393,74 @@ mp_ug_set_as_alarm_tone(const char *filepath, int position)
 	startfunc;
 	//struct appdata *ad = NULL;
 	app_control_h service = NULL;
-        int err = 0;
-        char *pos = NULL;
+	int err = 0;
+	char *pos = NULL;
 
-	mp_retvm_if (filepath == NULL, -1, "file path is NULL");
+	mp_retvm_if(filepath == NULL, -1, "file path is NULL");
 	//ad = mp_util_get_appdata();
 
-	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE)
-	{
+	if (app_control_create(&service) != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_create");
 		return -1;
 	}
 
-        err = app_control_add_extra_data(service, "tone", filepath);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_add_extra_data(service, "tone", filepath);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_add_extra_data().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-	if (position > 0)
-	{
+	if (position > 0) {
 		pos = g_strdup_printf("%d", position);
 		DEBUG_TRACE("pos: %s", pos);
 		err = app_control_add_extra_data(service, "position", pos);
 		IF_FREE(pos);
-	        if (err != APP_CONTROL_ERROR_NONE)
-		{
+		if (err != APP_CONTROL_ERROR_NONE) {
 			ERROR_TRACE("Error: app_control_add_extra_data().. [0x%x]", err);
 			app_control_destroy(service);
 			return -1;
 		}
 	}
 
-        err = app_control_set_operation(service, APP_CONTROL_OPERATION_SEND);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_set_operation(service, APP_CONTROL_OPERATION_SEND);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_set_uri(service, filepath);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_set_uri(service, filepath);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_uri().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_set_app_id(service, "alarm-efl");
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_set_app_id(service, "alarm-efl");
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_app_id().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
-/*
-        err = app_control_set_window(service, ad->xwin);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
-		ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
-		app_control_destroy(service);
-		return -1;
-	}
-*/
-        err = app_control_send_launch_request(service, NULL, NULL);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	/*
+	        err = app_control_set_window(service, ad->xwin);
+	        if (err != APP_CONTROL_ERROR_NONE)
+		{
+			ERROR_TRACE("Error: app_control_set_window().. [0x%x]", err);
+			app_control_destroy(service);
+			return -1;
+		}
+	*/
+	err = app_control_send_launch_request(service, NULL, NULL);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_send_launch_request().. [0x%x]", err);
 		app_control_destroy(service);
 		return -1;
 	}
 
-        err = app_control_destroy(service);
-        if (err != APP_CONTROL_ERROR_NONE)
-	{
+	err = app_control_destroy(service);
+	if (err != APP_CONTROL_ERROR_NONE) {
 		ERROR_TRACE("Error: app_control_set_operation().. [0x%x]", err);
 	}
 
@@ -539,13 +518,13 @@ mp_send_via_appcontrol(struct appdata *ad, mp_send_type_e send_type, const char 
 	}
 
 	/* set window */
-/*
-	ret = app_control_set_window(service, ad->xwin);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		mp_error("app_control_set_window()... [0x%x]", ret);
-		goto END;
-	}
-*/
+	/*
+		ret = app_control_set_window(service, ad->xwin);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			mp_error("app_control_set_window()... [0x%x]", ret);
+			goto END;
+		}
+	*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);
@@ -586,13 +565,13 @@ mp_setting_privacy_launch(void)
 	}
 
 	/* set window */
-/*
-	ret = app_control_set_window(service, ad->xwin);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		mp_error("app_control_set_window()... [0x%x]", ret);
-		goto END;
-	}
-*/
+	/*
+		ret = app_control_set_window(service, ad->xwin);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			mp_error("app_control_set_window()... [0x%x]", ret);
+			goto END;
+		}
+	*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);
@@ -631,13 +610,13 @@ _mp_ug_launch_as_appcontrol(const char *ug_name)
 	}
 
 	/* set window */
-/*
-	ret = app_control_set_window(service, ad->xwin);
-	if (ret != APP_CONTROL_ERROR_NONE) {
-		mp_error("app_control_set_window()... [0x%x]", ret);
-		goto END;
-	}
-*/
+	/*
+		ret = app_control_set_window(service, ad->xwin);
+		if (ret != APP_CONTROL_ERROR_NONE) {
+			mp_error("app_control_set_window()... [0x%x]", ret);
+			goto END;
+		}
+	*/
 	ret = app_control_send_launch_request(service, NULL, NULL);
 	if (ret != APP_CONTROL_ERROR_NONE) {
 		mp_error("app_control_send_launch_request()... [0x%x]", ret);

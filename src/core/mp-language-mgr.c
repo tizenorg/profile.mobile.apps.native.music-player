@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -36,7 +36,7 @@ typedef struct {
 } obj_item_data;
 
 typedef struct _lang_mgr *lang_mgr;
-struct  _lang_mgr{
+struct  _lang_mgr {
 	GList *objs;
 	GList *obj_items;
 	GList *glist_items;
@@ -48,10 +48,10 @@ static lang_mgr g_lang_mgr;
 
 #define G_LIST_FOREACH(list, l, data) \
 	for (l = list,                         \
-		data = g_list_nth_data(l, 0);     \
-		l;                                \
-		l = g_list_next(l),            \
-		data = g_list_nth_data(l, 0))
+	        data = g_list_nth_data(l, 0);     \
+	        l;                                \
+	        l = g_list_next(l),            \
+	        data = g_list_nth_data(l, 0))
 
 static void __glist_free(void *data)
 {
@@ -84,12 +84,13 @@ static void __update_obj(void *data, void *userdata)
 
 	text = __get_text(item->text_id);
 
-	if (item->type == OBJ_TYPE_ELM_OBJECT)
+	if (item->type == OBJ_TYPE_ELM_OBJECT) {
 		elm_object_text_set(item->obj, text);
-	else if (item->type == OBJ_TYPE_EDJE_OBJECT)
+	} else if (item->type == OBJ_TYPE_EDJE_OBJECT) {
 		elm_object_part_text_set(item->obj, item->part, text);
-	else
+	} else {
 		WARN_TRACE("Unhandled case");
+	}
 }
 
 static void __update_obj_item(void *data, void *userdata)
@@ -129,7 +130,7 @@ static void __obj_del_cb(void *data, Evas *e, Evas_Object *eo, void *event_info)
 	MP_CHECK(item);
 
 	g_lang_mgr->objs =
-		g_list_delete_link(g_lang_mgr->objs, g_list_find(g_lang_mgr->objs, item));
+	    g_list_delete_link(g_lang_mgr->objs, g_list_find(g_lang_mgr->objs, item));
 
 	free(item);
 }
@@ -205,12 +206,12 @@ void mp_language_mgr_unregister_object_item(Elm_Object_Item *object_item)
 	GList *l;
 	obj_item_data *data;
 
-	G_LIST_FOREACH(g_lang_mgr->obj_items, l, data)
-	{
+	G_LIST_FOREACH(g_lang_mgr->obj_items, l, data) {
 		if (data && data->obj_item == object_item) {
 			g_lang_mgr->obj_items = g_list_delete_link(g_lang_mgr->obj_items, l);
-			if (data)
+			if (data) {
 				free(data);
+			}
 			break;
 		}
 	}
@@ -222,8 +223,7 @@ void mp_language_mgr_object_item_text_ID_set(Elm_Object_Item *object_item, const
 	GList *l;
 	obj_item_data *data;
 
-	G_LIST_FOREACH(g_lang_mgr->obj_items, l, data)
-	{
+	G_LIST_FOREACH(g_lang_mgr->obj_items, l, data) {
 		if (data->obj_item == object_item) {
 			data->text_id = text_ID;
 			break;
@@ -236,21 +236,21 @@ void mp_language_mgr_unregister_genlist_item(Elm_Object_Item *item)
 {
 	MP_CHECK(g_lang_mgr);
 	g_lang_mgr->glist_items =
-		g_list_delete_link(g_lang_mgr->glist_items, g_list_find(g_lang_mgr->glist_items, item));
+	    g_list_delete_link(g_lang_mgr->glist_items, g_list_find(g_lang_mgr->glist_items, item));
 }
 
 void mp_language_mgr_register_gengrid_item(Elm_Object_Item *item)
 {
 	MP_CHECK(g_lang_mgr);
 	g_lang_mgr->grid_items =
-		g_list_append(g_lang_mgr->grid_items, item);
+	    g_list_append(g_lang_mgr->grid_items, item);
 }
 
 void mp_language_mgr_unregister_gengrid_item(Elm_Object_Item *item)
 {
 	MP_CHECK(g_lang_mgr);
 	g_lang_mgr->grid_items =
-		g_list_delete_link(g_lang_mgr->grid_items, g_list_find(g_lang_mgr->grid_items, item));
+	    g_list_delete_link(g_lang_mgr->grid_items, g_list_find(g_lang_mgr->grid_items, item));
 }
 
 void mp_language_mgr_update()

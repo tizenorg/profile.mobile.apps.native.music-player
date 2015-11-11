@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-folder-view.h"
@@ -71,12 +71,12 @@ static void _mp_folder_view_normal_more_btn_cb(void *data, Evas_Object *obj, voi
 
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL) > 0) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_folder_view_add_to_playlist_cb, view);
+		                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_folder_view_add_to_playlist_cb, view);
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_DELETE,
-								MP_PLAYER_MORE_BTN_DELETE_IMAGE,
-								_mp_folder_view_edit_cb,
-								view);
+		                             STR_MP_DELETE,
+		                             MP_PLAYER_MORE_BTN_DELETE_IMAGE,
+		                             _mp_folder_view_edit_cb,
+		                             view);
 	}
 #ifdef MP_FEATURE_CLOUD
 	/*cloud */
@@ -84,10 +84,10 @@ static void _mp_folder_view_normal_more_btn_cb(void *data, Evas_Object *obj, voi
 	mp_cloud_is_on(&is_on);
 	if (is_on) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
+		                             STR_MP_VIEW, MP_PLAYER_MORE_BTN_VIEW, mp_common_cloud_view_cb, view);
 
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
+		                             STR_MP_MAKE_AVAILABLE_OFFLINE, MP_PLAYER_MORE_BTN_MAKE_AVAILABLE_OFFICE, mp_common_ctxpopup_make_offline_cb, view);
 	}
 #endif
 
@@ -97,26 +97,26 @@ static void _mp_folder_view_normal_more_btn_cb(void *data, Evas_Object *obj, voi
 		/*add*/
 		if (status != MP_COMMON_ALL_IN && status != MP_COMMON_ALL_ERROR)
 			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-						STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
+			                             STR_MP_ADD_TO_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_ADD_TO_PERSONAL_PAGE, mp_common_add_to_personal_page_cb, view);
 		/*remove*/
 		if (status != MP_COMMON_ALL_OUT && status != MP_COMMON_ALL_ERROR)
-		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-					STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
+			mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+			                             STR_MP_REMOVE_FROM_PERSONAL_PAGE, MP_PLAYER_MORE_BTN_REMOVE_FROM_PERSONAL_PAGE, mp_common_remove_from_personal_page_cb, view);
 	}
 #endif
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_GO_TO_LIBRARY, MP_PLAYER_MORE_BTN_GO_TO_LIB, mp_common_go_to_library_cb, view);
+	                             STR_MP_GO_TO_LIBRARY, MP_PLAYER_MORE_BTN_GO_TO_LIB, mp_common_go_to_library_cb, view);
 
 	/*search*/
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
+	                             STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
+	                             STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
@@ -202,10 +202,10 @@ static int _mp_folder_view_update_options_edit(void *thiz)
 	Evas_Object *toolbar = mp_widget_create_naviframe_toolbar(view->navi_it);
 
 	mp_widget_create_toolbar_item_btn(toolbar,
-		MP_TOOLBAR_BTN_LEFT, STR_MP_ADD_TO, mp_common_button_add_to_playlist_cb, view->navi_it);
+	                                  MP_TOOLBAR_BTN_LEFT, STR_MP_ADD_TO, mp_common_button_add_to_playlist_cb, view->navi_it);
 
 	mp_widget_create_toolbar_item_btn(toolbar,
-		MP_TOOLBAR_BTN_RIGHT, STR_MP_DELETE, mp_common_button_delete_list_cb, view->navi_it);
+	                                  MP_TOOLBAR_BTN_RIGHT, STR_MP_DELETE, mp_common_button_delete_list_cb, view->navi_it);
 
 	elm_naviframe_item_pop_cb_set(view->navi_it, _mp_folder_view_back_cb, view);
 
@@ -277,7 +277,9 @@ MpFolderView_t *mp_folder_view_create(Evas_Object *parent)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_folder_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	view->content_set(view);
 	return view;

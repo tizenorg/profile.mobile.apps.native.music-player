@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -71,10 +71,11 @@ static int _mp_make_offline_view_update_option(void *thiz)
 	Elm_Object_Item *toolbar_item = NULL;
 
 	toolbar_item = mp_widget_create_toolbar_item_btn(toolbar,
-		MP_TOOLBAR_BTN_DEFAULT, STR_MP_DONE, _mp_make_offline_view_done_cb, view);
+	               MP_TOOLBAR_BTN_DEFAULT, STR_MP_DONE, _mp_make_offline_view_done_cb, view);
 	view->toolbar_options[MP_OPTION_LEFT] = toolbar_item;
-	if (mp_list_get_checked_count(view->content_to_show) == 0)
+	if (mp_list_get_checked_count(view->content_to_show) == 0) {
 		elm_object_item_disabled_set(view->toolbar_options[MP_OPTION_LEFT], EINA_TRUE);
+	}
 
 	elm_naviframe_item_pop_cb_set(view->navi_it, _mp_make_offline_view_back_cb, view);
 
@@ -99,7 +100,7 @@ _mp_make_offline_view_on_event(void *thiz, MpViewEvent_e event)
 	switch (event) {
 	case MP_ADD_TO_PLAYLIST_DONE:
 		DEBUG_TRACE("Edit done");
-	break;
+		break;
 
 	default:
 		break;
@@ -151,7 +152,9 @@ MpMakeOfflineView_t *mp_make_offline_view_create(Evas_Object *parent)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_make_offline_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	_mp_make_offline_view_content_load(view);
 	return view;

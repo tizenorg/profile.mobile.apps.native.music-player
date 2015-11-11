@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-view-mgr.h"
@@ -40,8 +40,7 @@ static void _print_view_stack()
 	Eina_List *l = NULL;
 	int i = 0;
 	Elm_Object_Item *data = NULL;
-	EINA_LIST_FOREACH(list, l, data)
-	{
+	EINA_LIST_FOREACH(list, l, data) {
 		MpView_t *view = elm_object_item_data_get(data);
 		WARN_TRACE("view[0x%x], depth[%d], type[%d]", view, i, view->view_type);
 		i++;
@@ -83,8 +82,9 @@ _mp_view_mgr_show_event_blocker(void)
 
 	evas_object_geometry_get(ad->conformant, &x, &y, &w, &h);
 
-	if (!g_rect)
+	if (!g_rect) {
 		g_rect = evas_object_rectangle_add(evas_object_evas_get(ad->win_main));
+	}
 
 	evas_object_repeat_events_set(g_rect, 0);
 	evas_object_color_set(g_rect, 0, 0, 0, 0);
@@ -183,11 +183,11 @@ EXPORT_API MpView_t *mp_view_mgr_get_view(MpViewMgr_t *view_mgr, MpViewType_e ty
 
 	Eina_List *l = NULL;
 	Elm_Object_Item *data = NULL;
-	EINA_LIST_FOREACH(list, l, data)
-	{
+	EINA_LIST_FOREACH(list, l, data) {
 		view = elm_object_item_data_get(data);
-		if (view->view_type == type)
+		if (view->view_type == type) {
 			break;
+		}
 		view = NULL;
 	}
 	eina_list_free(list);
@@ -204,11 +204,11 @@ EXPORT_API MpView_t *mp_view_mgr_get_view_prev(MpViewMgr_t *view_mgr, MpViewType
 	Eina_List *l = NULL;
 	Elm_Object_Item *data = NULL;
 	MpView_t *prev_view = NULL;
-	EINA_LIST_FOREACH(list, l, data)
-	{
+	EINA_LIST_FOREACH(list, l, data) {
 		view = elm_object_item_data_get(data);
-		if (view->view_type == type)
+		if (view->view_type == type) {
 			break;
+		}
 		prev_view = view;
 		view = NULL;
 	}
@@ -228,8 +228,9 @@ EXPORT_API int mp_view_mgr_push_view_with_effect(MpViewMgr_t *view_mgr, MpView_t
 	last_item = elm_naviframe_top_item_get(view_mgr->navi);
 
 #ifdef MP_EVENT_BLOCKER
-	if (list && eina_list_count(list))
+	if (list && eina_list_count(list)) {
 		_mp_view_mgr_show_event_blocker();
+	}
 #endif
 
 
@@ -251,8 +252,9 @@ EXPORT_API int mp_view_mgr_push_view_with_effect(MpViewMgr_t *view_mgr, MpView_t
 	view->navi_it = navi_it;
 	elm_object_item_data_set(navi_it, view);
 
-	if (request_transition_effect)
+	if (request_transition_effect) {
 		mp_view_mgr_post_event(view_mgr, MP_VIEW_TRANSITION_REQUESTED);
+	}
 
 	mp_view_view_resume(view);
 
@@ -292,8 +294,9 @@ int mp_view_mgr_pop_view(MpViewMgr_t *view_mgr, bool pop_view)
 	Eina_List *list = elm_naviframe_items_get(view_mgr->navi);
 
 #ifdef MP_EVENT_BLOCKER
-	if (eina_list_count(list) > 1)
+	if (eina_list_count(list) > 1) {
 		_mp_view_mgr_show_event_blocker();
+	}
 #endif
 
 	list = eina_list_last(list);
@@ -307,7 +310,7 @@ int mp_view_mgr_pop_view(MpViewMgr_t *view_mgr, bool pop_view)
 	}
 
 	mp_view_view_resume(elm_object_item_data_get(list->data));
-	END:
+END:
 	eina_list_free(list);
 	return 0;
 }
@@ -318,10 +321,11 @@ int mp_view_mgr_pop_a_view(MpViewMgr_t *view_mgr, MpView_t *view)
 	MP_CHECK_VAL(view_mgr, -1);
 	MP_CHECK_VAL(view, -1);
 
-	if (mp_view_mgr_get_top_view(view_mgr) == view)
+	if (mp_view_mgr_get_top_view(view_mgr) == view) {
 		elm_naviframe_item_pop(view_mgr->navi);
-	else
+	} else {
 		elm_object_item_del(view->navi_it);
+	}
 
 	return 0;
 }
@@ -334,23 +338,25 @@ int mp_view_mgr_pop_to_view(MpViewMgr_t *view_mgr, MpViewType_e type)
 	MpView_t *pop_to = mp_view_mgr_get_view(view_mgr, type);
 	MP_CHECK_VAL(pop_to, -1);
 
-	if (pop_to == mp_view_mgr_get_top_view(view_mgr))
+	if (pop_to == mp_view_mgr_get_top_view(view_mgr)) {
 		return 0;
+	}
 #ifdef MP_EVENT_BLOCKER
 	_mp_view_mgr_show_event_blocker();
 #endif
 	Eina_List *list = elm_naviframe_items_get(view_mgr->navi);
 	Eina_List *l = NULL;
 	Elm_Object_Item *data = NULL;
-	EINA_LIST_FOREACH(list, l, data)
-	{
+	EINA_LIST_FOREACH(list, l, data) {
 		view = elm_object_item_data_get(data);
-		if (view == pop_to)
+		if (view == pop_to) {
 			break;
+		}
 	}
 
-	if (l)
+	if (l) {
 		mp_view_view_resume(elm_object_item_data_get(l->data));
+	}
 
 	eina_list_free(list);
 	MP_CHECK_VAL(view, -1);
@@ -369,8 +375,9 @@ int mp_view_mgr_delete_view(MpViewMgr_t *view_mgr, MpViewType_e type)
 
 	bool need_to_resume = false;
 	MpView_t *top_view = mp_view_mgr_get_top_view(view_mgr);
-	if (top_view == view)
+	if (top_view == view) {
 		need_to_resume = true;
+	}
 
 	elm_object_item_del(view->navi_it);
 	view = NULL;
@@ -405,17 +412,17 @@ static void _view_foreach_cb(void *data, void *user_data)
 
 	if (ad->is_lcd_off) {
 		switch (event) {
-			case MP_UPDATE_NOW_PLAYING:
-			case MP_START_PLAYBACK:
-			case MP_RESUME_PLAYBACK:
-			case MP_PAUSE_PLAYBACK:
-			case MP_STOP_PLAYBACK:
-			case MP_UPDATE_PLAYING_LIST:
-			case MP_UPDATE:
-				DEBUG_TRACE("Lcd off event exit:%d", event);
-				return;
-			default:
-				break;
+		case MP_UPDATE_NOW_PLAYING:
+		case MP_START_PLAYBACK:
+		case MP_RESUME_PLAYBACK:
+		case MP_PAUSE_PLAYBACK:
+		case MP_STOP_PLAYBACK:
+		case MP_UPDATE_PLAYING_LIST:
+		case MP_UPDATE:
+			DEBUG_TRACE("Lcd off event exit:%d", event);
+			return;
+		default:
+			break;
 		}
 	}
 
@@ -428,10 +435,11 @@ static void _view_foreach_cb(void *data, void *user_data)
 		mp_view_update_nowplaying(view, true);
 		break;
 	case MP_UNSET_NOW_PLAYING:
-		if ((view->view_type == MP_VIEW_DETAIL) || (view->view_type == MP_VIEW_PLAYER)) /*if detail view, it need to do view pop*/
+		if ((view->view_type == MP_VIEW_DETAIL) || (view->view_type == MP_VIEW_PLAYER)) { /*if detail view, it need to do view pop*/
 			mp_view_on_event(view, event);
-		else
+		} else {
 			mp_view_unset_nowplaying(view);
+		}
 		break;
 	case MP_START_PLAYBACK:
 		mp_view_update_nowplaying(view, true);
@@ -473,10 +481,11 @@ static void _view_foreach_cb(void *data, void *user_data)
 		break;
 #endif
 	case MP_DB_UPDATED:
-		if ((view->view_type == MP_VIEW_ADD_TRACK) || (view->view_type == MP_VIEW_SET_AS))
+		if ((view->view_type == MP_VIEW_ADD_TRACK) || (view->view_type == MP_VIEW_SET_AS)) {
 			mp_view_on_event(view, event);
-		else
+		} else {
 			mp_view_update(view);
+		}
 		break;
 	case MP_DELETE_DONE:
 		if (view->nowplaying_bar && ad && ad->playlist_mgr) {
@@ -486,8 +495,9 @@ static void _view_foreach_cb(void *data, void *user_data)
 					mp_util_free_track_info(ad->current_track_info);
 					ad->current_track_info = NULL;
 				}
-				if (ad->b_minicontroller_show)
+				if (ad->b_minicontroller_show) {
 					mp_minicontroller_hide(ad);
+				}
 #ifdef MP_FEATURE_LOCKSCREEN
 				if (ad->b_lockmini_show) {
 					mp_lockscreenmini_hide(ad);
@@ -497,8 +507,7 @@ static void _view_foreach_cb(void *data, void *user_data)
 		}
 		mp_view_on_event(view, event);
 		break;
-	case MP_POPUP_DELETE_DONE:
-	{
+	case MP_POPUP_DELETE_DONE: {
 		/*check if to unset now-playing*/
 		int count = 0;
 		mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, NULL, 0, &count);
@@ -509,8 +518,9 @@ static void _view_foreach_cb(void *data, void *user_data)
 				mp_util_free_track_info(ad->current_track_info);
 				ad->current_track_info = NULL;
 			}
-			if (ad->b_minicontroller_show)
+			if (ad->b_minicontroller_show) {
 				mp_minicontroller_hide(ad);
+			}
 #ifdef MP_FEATURE_LOCKSCREEN
 			if (ad->b_lockmini_show) {
 				mp_lockscreenmini_hide(ad);
@@ -521,8 +531,7 @@ static void _view_foreach_cb(void *data, void *user_data)
 		break;
 	}
 #ifndef MP_SOUND_PLAYER
-	case MP_WIN_RESIZED:
-	{
+	case MP_WIN_RESIZED: {
 		if (view->nowplaying_bar) {
 			mp_now_playing_set_layout(view->nowplaying_bar);
 		}
@@ -574,8 +583,7 @@ void mp_view_mgr_post_event(MpViewMgr_t *view_mgr, MpViewEvent_e event)
 			mp_view_view_pause(second_view);
 		}
 	} else {
-		EINA_LIST_FOREACH(list, l, data)
-		{
+		EINA_LIST_FOREACH(list, l, data) {
 			_view_foreach_cb(elm_object_item_data_get(data), (void *)event);
 		}
 	}

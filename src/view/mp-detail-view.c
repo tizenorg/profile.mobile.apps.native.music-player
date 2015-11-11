@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <media_content.h>
@@ -48,7 +48,7 @@ static void _mp_detail_view_pop_on_back_button(void *data, Evas_Object *obj, voi
 static char *
 _mp_detail_view_get_location_info_from_file_path(char *file_path)
 {
-	mp_retvm_if (!file_path, NULL, "File path is null...");
+	mp_retvm_if(!file_path, NULL, "File path is null...");
 
 	int prefix_pos;
 	if (!strncmp(file_path, MP_PHONE_ROOT_PATH, strlen(MP_PHONE_ROOT_PATH))) {
@@ -85,12 +85,13 @@ _mp_detail_view_append_media_info_item(Evas_Object *genlist, char *header, char 
 	info->detail = g_strdup(detail);
 
 	Elm_Object_Item *item = elm_genlist_item_append(genlist, view->meta_itc,
-							info,
-							NULL,
-							ELM_GENLIST_ITEM_NONE,
-							NULL, NULL);
-	if (item)
+	                        info,
+	                        NULL,
+	                        ELM_GENLIST_ITEM_NONE,
+	                        NULL, NULL);
+	if (item) {
 		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	}
 
 }
 
@@ -287,7 +288,7 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 	}
 
 	if (get_item) {
-	_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_TITLE_STR, title);
+		_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_TITLE_STR, title);
 
 		if (artist && strlen(artist)) {
 			_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_ARTIST_STR, artist);
@@ -305,8 +306,8 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 		snprintf(duration_format, sizeof(duration_format), "%02u:%02u", min, sec);
 
 
-			_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_LENGTH_STR,
-							 duration_format);
+		_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_LENGTH_STR,
+		                                       duration_format);
 
 
 		if (date && strlen(date)) {
@@ -333,7 +334,7 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 		_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_BITDEPTH_STR, bitdepth);
 		SAFE_FREE(bitdepth);
 
-		sample =  g_strdup_printf("%dKHz", sample_rate/1000);
+		sample =  g_strdup_printf("%dKHz", sample_rate / 1000);
 		_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_SAMPLING_STR, sample);
 		SAFE_FREE(sample);
 
@@ -355,29 +356,29 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 		**	use player to get information of streaming case
 		*/
 		mp_dir_e located = mp_util_get_file_location(view->uri);
-		if (located == MP_DIR_PHONE || located == MP_DIR_MMC) /*local file case*/ {
+		if (located == MP_DIR_PHONE || located == MP_DIR_MMC) { /*local file case*/
 			mp_tag_info_t tag_info;
 			mp_file_tag_info_get_all_tag(view->uri, &tag_info);
 
 
 			if (tag_info.artist && strlen(tag_info.artist)) {
 
-					_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_ARTIST",
-									 tag_info.artist);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_ARTIST",
+				                                       tag_info.artist);
 
 			}
 
 			if (tag_info.title && strlen(tag_info.title)) {
 
-					_mp_detail_view_append_media_info_item(genlist, "IDS_COM_BODY_DETAILS_TITLE",
-									 tag_info.title);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_COM_BODY_DETAILS_TITLE",
+				                                       tag_info.title);
 
 			}
 
 			if (tag_info.album && strlen(tag_info.album)) {
 
-					_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_ALBUM",
-									 tag_info.album);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_ALBUM",
+				                                       tag_info.album);
 
 			}
 
@@ -388,18 +389,18 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 			snprintf(duration_format, sizeof(duration_format), "%02u:%02u", min, sec);
 
 
-				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_TRACK_LENGTH",
-								 duration_format);
+			_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_TRACK_LENGTH",
+			                                       duration_format);
 
 
 			if (tag_info.date && strlen(tag_info.date)) {
-					_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_RECORDED_DATE",
-									 tag_info.date);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_RECORDED_DATE",
+				                                       tag_info.date);
 			}
 
 			if (tag_info.author && strlen(tag_info.author)) {
-					_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_AUTHOR",
-									 tag_info.author);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_AUTHOR",
+				                                       tag_info.author);
 			}
 
 			if (tag_info.copyright && strlen(tag_info.copyright)) {
@@ -408,43 +409,46 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 
 			if (tag_info.track && strlen(tag_info.track)) {
 				if (!strstr(tag_info.track, "-") && strcmp(tag_info.track, "0")) {
-						_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_TRACK_NUMBER",
-										 tag_info.track);
+					_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_TRACK_NUMBER",
+					                                       tag_info.track);
 				}
 			}
 
 			if (tag_info.rating && strlen(tag_info.rating)) {
 
-					_mp_detail_view_append_media_info_item(genlist, "IDS_MF_BODY_PARENT_RATING",
-									 tag_info.rating);
+				_mp_detail_view_append_media_info_item(genlist, "IDS_MF_BODY_PARENT_RATING",
+				                                       tag_info.rating);
 			}
 
 			GString *format = g_string_new("");
-			if (tag_info.audio_bitrate > 0)
+			if (tag_info.audio_bitrate > 0) {
 				g_string_append_printf(format, "%dbps ", tag_info.audio_bitrate);
+			}
 
-			if (tag_info.audio_samplerate > 0)
+			if (tag_info.audio_samplerate > 0) {
 				g_string_append_printf(format, "%.1fHz ", (double)tag_info.audio_samplerate);
+			}
 
-			if (tag_info.audio_channel > 0)
+			if (tag_info.audio_channel > 0) {
 				g_string_append_printf(format, "%dch", tag_info.audio_channel);
+			}
 
 			if (format) {
 
 				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_FORMAT",
-									 format->str);
+				                                       format->str);
 				g_string_free(format, TRUE);
 			}
 
 			location =
-				_mp_detail_view_get_location_info_from_file_path(view->uri);
+			    _mp_detail_view_get_location_info_from_file_path(view->uri);
 
-				_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_MUSIC_LOCATION", location);
+			_mp_detail_view_append_media_info_item(genlist, "IDS_MUSIC_BODY_MUSIC_LOCATION", location);
 			SAFE_FREE(location);
 
 
 			mp_file_tag_free(&tag_info);
-		} else if (located != MP_DIR_NONE) /*streaming case*/ {
+		} else if (located != MP_DIR_NONE) { /*streaming case*/
 			player_h current_player = mp_player_mgr_get_player();
 			int error_code = PLAYER_ERROR_NONE;
 			char *temp_string = NULL;
@@ -495,7 +499,7 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 			int dur_sec = duration / 1000;
 			int sec = dur_sec % 60;
 			int min = dur_sec / 60;
-			temp_string = g_strdup_printf ("%02u:%02u", min, sec);
+			temp_string = g_strdup_printf("%02u:%02u", min, sec);
 
 			_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_LENGTH_STR, temp_string);
 
@@ -517,7 +521,7 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 			_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_BITDEPTH_STR, bitdepth);
 			SAFE_FREE(bitdepth);
 
-			sample =  g_strdup_printf("%dKHz", sample_rate/1000);
+			sample =  g_strdup_printf("%dKHz", sample_rate / 1000);
 			_mp_detail_view_append_media_info_item(genlist, MP_DETAIL_SAMPLING_STR, sample);
 			SAFE_FREE(sample);
 
@@ -606,12 +610,15 @@ _mp_detail_view_destory_cb(void *thiz)
 	IF_FREE(view->id);
 	IF_FREE(view->thumb);
 
-	if (view->meta_itc)
+	if (view->meta_itc) {
 		elm_genlist_item_class_free(view->meta_itc);
-	if (view->credit_itc)
+	}
+	if (view->credit_itc) {
 		elm_genlist_item_class_free(view->credit_itc);
-	if (view->video_itc)
+	}
+	if (view->video_itc) {
 		elm_genlist_item_class_free(view->video_itc);
+	}
 
 	mp_view_fini((MpView_t *)view);
 
@@ -634,10 +641,11 @@ static void _mp_detail_view_get_playing_track_data(MpDetailView_t *view)
 	view->title = g_strdup(info->title);
 	view->uri = g_strdup(info->uri);
 	view->albumart = g_strdup(info->title);
-	if (info->artist != NULL)
+	if (info->artist != NULL) {
 		view->artist = g_strdup(info->artist);
-	else
+	} else {
 		view->artist = g_strdup(GET_SYS_STR("IDS_COM_BODY_UNKNOWN"));
+	}
 	view->album = g_strdup(info->album);
 	view->id = g_strdup(uid);
 	view->thumb = g_strdup(info->thumbnail_path);
@@ -756,7 +764,9 @@ MpDetailView_t *mp_detail_view_create(Evas_Object *parent)
 
 	_mp_detail_view_get_playing_track_data(view);
 	ret = _mp_detail_view_init(parent, view, view->uri);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	return view;
 

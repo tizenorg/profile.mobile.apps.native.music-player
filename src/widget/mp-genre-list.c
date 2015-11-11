@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <stdio.h>
@@ -47,18 +47,20 @@ _mp_genre_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
 
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
 	if (!strcmp(part, "elm.text.main.left") || !strcmp(part, "elm.slide.text.1") || !strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
-		if (!name || !strlen(name))
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
+		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
+		}
 
-		if (!strcmp(part, "elm.text.1"))
+		if (!strcmp(part, "elm.text.1")) {
 			return elm_entry_utf8_to_markup(name);
-		else
+		} else {
 			return g_strdup(name);
+		}
 
 	}
 	/*
@@ -90,7 +92,7 @@ _mp_genre_list_icon_get(void *data, Evas_Object *obj, const char *part)
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h svc_item = (item->handle);
-	mp_retv_if (svc_item == NULL, NULL);
+	mp_retv_if(svc_item == NULL, NULL);
 
 	bool landscape = mp_util_is_landscape();
 
@@ -162,10 +164,11 @@ _mp_genre_select_cb(void *data, Evas_Object * obj, void *event_info)
 
 	Elm_Object_Item *gli = (Elm_Object_Item *) event_info;
 	MP_CHECK(gli);
-	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
+	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		elm_gengrid_item_selected_set(gli, EINA_FALSE);
-	else
+	} else {
 		elm_genlist_item_selected_set(gli, EINA_FALSE);
+	}
 
 	mp_list_item_data_t *gli_data = elm_object_item_data_get(gli);
 	MP_CHECK(gli_data);
@@ -182,8 +185,8 @@ _mp_genre_select_cb(void *data, Evas_Object * obj, void *event_info)
 		DEBUG_TRACE("");
 		mp_media_info_group_get_thumbnail_path(gli_data->handle, &thumbnail);
 		DEBUG_TRACE("thumbnail=%s", thumbnail);
-		mp_retm_if (ret != 0, "Fail to get value");
-		mp_retm_if (name == NULL, "Fail to get value");
+		mp_retm_if(ret != 0, "Fail to get value");
+		mp_retm_if(name == NULL, "Fail to get value");
 
 		title = name;
 	}
@@ -236,8 +239,9 @@ void _mp_genre_list_load_list(void *thiz, int count)
 
 	DEBUG_TRACE("count: %d", count);
 
-	if (count < 0)
+	if (count < 0) {
 		goto END;
+	}
 
 	if (list->genre_list) {
 		mp_media_info_group_list_destroy(list->genre_list);
@@ -274,11 +278,11 @@ void _mp_genre_list_load_list(void *thiz, int count)
 
 		if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 			list_item = elm_gengrid_item_append(list->genlist, list->gengrid_itc, item_data,
-							_mp_genre_select_cb, (void *)list);
+			                                    _mp_genre_select_cb, (void *)list);
 		} else {
 			Elm_Object_Item *parent_group = NULL;
 			list_item = elm_genlist_item_append(list->genlist, list->itc, item_data, parent_group,
-									    ELM_GENLIST_ITEM_NONE, _mp_genre_select_cb, (void *)list);
+			                                    ELM_GENLIST_ITEM_NONE, _mp_genre_select_cb, (void *)list);
 		}
 		item_data->it = list_item;
 		elm_object_item_data_set(item_data->it, item_data);
@@ -294,8 +298,9 @@ void _mp_genre_list_destory_cb(void *thiz)
 	MpGenreList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (list->genre_list)
+	if (list->genre_list) {
 		mp_media_info_group_list_destroy(list->genre_list);
+	}
 
 
 	if (list->itc) {
@@ -342,8 +347,9 @@ _mp_genre_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_inf
 	Evas_Object *popup = NULL;
 	mp_list_item_data_t *item_data = NULL;
 
-	if (list->scroll_drag_status)
+	if (list->scroll_drag_status) {
 		return;
+	}
 
 	Elm_Object_Item *temp = NULL;
 	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
@@ -378,13 +384,13 @@ _mp_genre_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_inf
 	IF_FREE(up_title);
 
 	mp_genlist_popup_item_append(popup, STR_MP_PLAY_ALL, NULL, NULL, NULL,
-			mp_common_playall_cb, list);
+	                             mp_common_playall_cb, list);
 
 	mp_genlist_popup_item_append(popup, STR_MP_ADD_TO_PLAYLIST, NULL, NULL, NULL,
-			mp_common_list_add_to_playlist_cb, list);
+	                             mp_common_list_add_to_playlist_cb, list);
 
 	mp_genlist_popup_item_append(popup, STR_MP_DELETE, NULL, NULL, NULL,
-			mp_common_list_delete_cb, list);
+	                             mp_common_list_delete_cb, list);
 
 	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		MP_GENGRID_ITEM_LONG_PRESSED(obj, popup, event_info);
@@ -449,7 +455,7 @@ _mp_genre_list_set_grid_style(MpGenreList_t *list)
 	/*if (landscape)
 		list->gengrid_itc->item_style = "music/artist_grid";
 	else*/
-		list->gengrid_itc->item_style = "music/artist_grid";
+	list->gengrid_itc->item_style = "music/artist_grid";
 
 	double scale = elm_config_scale_get();
 	int w;
@@ -563,10 +569,11 @@ static char *_mp_genre_list_bottom_counter_text_cb(void *thiz)
 	unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
 
 	char *text = NULL;
-	if (count == 1)
+	if (count == 1) {
 		text = g_strdup(GET_STR(STR_MP_1_GENRE));
-	else
+	} else {
 		text = g_strdup_printf(GET_STR(STR_MP_PD_GENRE), count);
+	}
 
 	return text;
 }
@@ -606,29 +613,26 @@ void mp_genre_list_set_data(MpGenreList_t *list, ...)
 		field = va_arg(var_args, int);
 		switch (field) {
 
-		case MP_GENRE_LIST_FUNC:
-			{
-				int val = va_arg((var_args), int);
+		case MP_GENRE_LIST_FUNC: {
+			int val = va_arg((var_args), int);
 
-				list->function_type = val;
-				DEBUG_TRACE("list->function_type = %d", list->function_type);
-				break;
-			}
-		case MP_GENRE_LIST_DISPLAY_MODE:
-			{
-				int val = va_arg((var_args), int);
-				list->display_mode = val;
-				DEBUG_TRACE("list->display_mode = %d", list->display_mode);
+			list->function_type = val;
+			DEBUG_TRACE("list->function_type = %d", list->function_type);
+			break;
+		}
+		case MP_GENRE_LIST_DISPLAY_MODE: {
+			int val = va_arg((var_args), int);
+			list->display_mode = val;
+			DEBUG_TRACE("list->display_mode = %d", list->display_mode);
 
-				break;
-			}
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <media_content.h>
@@ -86,18 +86,18 @@ static Eina_Bool _mp_edit_view_back_cb(void *data, Elm_Object_Item *it)
 	struct appdata *ad = mp_util_get_appdata();
 	ad->del_cb_invoked = 0;
 
-/*
-	if (view->content_to_show->reorderable) {
-		DEBUG_TRACE("view->ref_list->reorderable = %d",view->ref_list->reorderable);
-		int ret = 0;
-		void *playlist_handle = mp_list_get_playlist_handle(view->content_to_show);
-		DEBUG_TRACE("playlist_handle = %p", playlist_handle);
-		ret = mp_media_info_playlist_update_db(playlist_handle);
-		MP_CHECK_VAL(ret == 0, -1);
-		mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_REORDER_DONE);
-		mp_list_set_reorder((MpList_t *)view->content_to_show, FALSE);
-	}
-*/
+	/*
+		if (view->content_to_show->reorderable) {
+			DEBUG_TRACE("view->ref_list->reorderable = %d",view->ref_list->reorderable);
+			int ret = 0;
+			void *playlist_handle = mp_list_get_playlist_handle(view->content_to_show);
+			DEBUG_TRACE("playlist_handle = %p", playlist_handle);
+			ret = mp_media_info_playlist_update_db(playlist_handle);
+			MP_CHECK_VAL(ret == 0, -1);
+			mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_REORDER_DONE);
+			mp_list_set_reorder((MpList_t *)view->content_to_show, FALSE);
+		}
+	*/
 
 	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 	mp_view_mgr_pop_view(view_mgr, false);
@@ -137,7 +137,7 @@ void mp_edit_view_remove_cb(void *data, Evas_Object *obj, void *event_info)
 	MP_CHECK(ad);
 	int list_count = _mp_list_get_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL);
 
-	if(list_count == mp_list_get_checked_count(view->content_to_show)) {
+	if (list_count == mp_list_get_checked_count(view->content_to_show)) {
 		ad->is_sdcard_removed = 1;
 		mp_lockscreenmini_destroy(ad);
 		mp_minicontroller_destroy(ad);
@@ -170,8 +170,9 @@ _mp_edit_view_move_execute_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 	mp_evas_object_del(ad->popup[MP_POPUP_CHECK_INFO_PERSONAL]);
 
-	if (flag_dont_ask)
+	if (flag_dont_ask) {
 		mp_setting_set_personal_dont_ask_again(flag_dont_ask);
+	}
 
 	mp_edit_cb_excute_move(list);
 }
@@ -200,7 +201,7 @@ mp_edit_view_notify_popup(void *data)
 	evas_object_show(popup);
 
 	Evas_Object *btn1 = mp_widget_create_button(popup, "popup", STR_MP_CANCEL, NULL,
-		_mp_edit_view_notify_cancel_cb, NULL);
+	                    _mp_edit_view_notify_cancel_cb, NULL);
 	Evas_Object *btn2 = mp_widget_create_button(popup, "popup", STR_MP_OK, NULL, _mp_edit_view_move_execute_cb, list);
 	elm_object_part_content_set(popup, "button1", btn1);
 	elm_object_part_content_set(popup, "button2", btn2);
@@ -212,10 +213,11 @@ mp_edit_view_notify_popup(void *data)
 		if (lable != NULL) {
 			int count = mp_list_get_checked_count(list);
 			char *lable_text = NULL;
-			if (count > 1)
+			if (count > 1) {
 				lable_text = g_strdup_printf(GET_STR(MP_PERSONAL_ITEMS_MOVE_TO), MP_MUSIC_DIR);
-			else
+			} else {
 				lable_text = g_strdup_printf(GET_STR(MP_PERSONAL_ITEM_MOVE_TO), MP_MUSIC_DIR);
+			}
 
 			mp_util_domain_translatable_text_set(lable, lable_text);
 			IF_FREE(lable_text);
@@ -410,8 +412,7 @@ static int _mp_edit_view_content_load(void *thiz)
 
 	DEBUG_TRACE("------------------------>list type is %d", ref_list->list_type);
 	switch (ref_list->list_type) {
-	case MP_LIST_TYPE_TRACK:
-	{
+	case MP_LIST_TYPE_TRACK: {
 		view->content_to_show = (MpList_t *)mp_track_list_create(view->layout);
 
 		if (view->content_to_show == NULL) {
@@ -468,8 +469,7 @@ static int _mp_edit_view_content_load(void *thiz)
 		view->content_to_show->personal_page_type = view->person_page_sel;
 #endif
 		break;
-	case MP_LIST_TYPE_ALL:
-	{
+	case MP_LIST_TYPE_ALL: {
 		MpView_t *all_view = mp_common_get_all_view();
 
 		if (all_view == NULL) {
@@ -481,12 +481,12 @@ static int _mp_edit_view_content_load(void *thiz)
 
 		if (tab == MP_TAB_SONGS) {
 			MpTrackList_t *list = mp_track_list_create(view->layout);
-			
+
 			if (list == NULL) {
 				ERROR_TRACE("Cannot create track list");
 				break;
 			}
-			
+
 			list->cloud_view_type = ref_list->cloud_view_type;
 #ifdef MP_FEATURE_PERSONAL_PAGE
 			list->personal_page_type = view->person_page_sel;
@@ -518,8 +518,9 @@ static int _mp_edit_view_content_load(void *thiz)
 			list->group_type = MP_GROUP_BY_ARTIST;
 			list->display_mode = ref_list->display_mode;
 			view->content_to_show = (MpList_t *)list;
-		} else
+		} else {
 			ERROR_TRACE("Never should be here");
+		}
 
 		break;
 	}
@@ -529,8 +530,9 @@ static int _mp_edit_view_content_load(void *thiz)
 	}
 	MP_CHECK_VAL(view->content_to_show, -1);
 
-	if (view->share)
+	if (view->share) {
 		mp_list_set_edit_type(view->content_to_show, MP_LIST_EDIT_TYPE_SHARE);
+	}
 
 	elm_object_part_content_set(view->layout, "list_content", view->content_to_show->layout);
 
@@ -557,23 +559,25 @@ _mp_edit_view_on_event(void *thiz, MpViewEvent_e event)
 	case MP_POPUP_CANCEL:
 		mp_view_update_options((MpView_t *)view);
 		break;
-	case MP_LANG_CHANGED:
-	{
+	case MP_LANG_CHANGED: {
 		int count = 0;
-		if (view->content_to_show)
+		if (view->content_to_show) {
 			count = mp_list_get_checked_count((MpList_t *)view->content_to_show);
+		}
 		mp_util_create_selectioninfo_with_count((MpView_t *)view, count);
 		break;
 	}
 	case MP_PERSONAL_PAGE_OFF:
-		if (view->person_page_sel != MP_EDIT_VIEW_PERSONAL_PAGE_NONE)
+		if (view->person_page_sel != MP_EDIT_VIEW_PERSONAL_PAGE_NONE) {
 			mp_view_mgr_pop_a_view(GET_VIEW_MGR, thiz);
+		}
 		break;
 
 	case MP_REORDER_DISABLE:
 		view->reorder = false;
-		if (view->done_btn)
+		if (view->done_btn) {
 			elm_object_disabled_set(view->done_btn, EINA_TRUE);
+		}
 		break;
 #ifndef MP_SOUND_PLAYER
 	case MP_UPDATE_PLAYING_LIST:
@@ -582,12 +586,13 @@ _mp_edit_view_on_event(void *thiz, MpViewEvent_e event)
 			mp_list_realized_item_part_update((MpList_t *)view->content_to_show, "elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
 			mp_list_realized_item_part_update((MpList_t *)view->content_to_show, "elm.icon.left", ELM_GENLIST_ITEM_FIELD_CONTENT);
 		}
-	break;
+		break;
 #endif
 	case MP_REORDER_ENABLE:
 		view->reorder = TRUE;
-		if (view->done_btn)
+		if (view->done_btn) {
 			elm_object_disabled_set(view->done_btn, EINA_FALSE);
+		}
 		break;
 	default:
 		break;
@@ -635,7 +640,9 @@ MpEditView_t *mp_edit_view_create(Evas_Object *parent, MpList_t *list, bool shar
 #endif
 
 	ret = _mp_edit_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	_mp_edit_view_content_load(view);
 	return view;

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-now-playing.h"
@@ -25,7 +25,7 @@
 #include "mp-setting-ctrl.h"
 #include "mp-minicontroller.h"
 
-typedef struct{
+typedef struct {
 	Evas_Object *now_playing;
 	Evas_Object *thumbnail;
 	Evas_Object *progress;
@@ -44,7 +44,7 @@ typedef struct{
 	char *play_time;
 	Evas_Object* shuffle_focus_btn;
 	Evas_Object* repeate_focus_btn;
-}MpNpData_t;
+} MpNpData_t;
 
 #define GET_WIDGET_DATA(o) evas_object_data_get(o, "widget_d");
 #define NOW_PLAYING_LABEL_LEN 524
@@ -60,11 +60,11 @@ typedef struct{
 #define NOW_PLAYING_LONG_PRESS_TIME_INCREASE	1.0	//sec
 
 #ifdef MP_NOW_PLAYING_MINI_EQ
- #undef MP_NOW_PLAYING_MINI_EQ
+#undef MP_NOW_PLAYING_MINI_EQ
 #endif
 
 static void _mp_now_playing_update_playpause_btn(Evas_Object *obj);
-static void _mp_now_playing_update_time( void *data);
+static void _mp_now_playing_update_time(void *data);
 
 char *g_tts_located_part = NULL;
 
@@ -108,108 +108,106 @@ static void _progressbar_value_set(void *data)
 	double pos = ad->music_pos;
 	double duration = ad->music_length;
 	double value = 0.0;
-	if (duration > 0.0)
+	if (duration > 0.0) {
 		value = pos / duration;
+	}
 
 	ERROR_TRACE("wishjox pos :%f, duration: %f, val: %f", pos, duration, value);
 	elm_progressbar_value_set(wd->progress, value);
 }
 
 #ifdef MP_NOW_PLAYING_MINI_EQ
-static void _mini_eq_get_image(char **path1,char **path2,char **path3)
+static void _mini_eq_get_image(char **path1, char **path2, char **path3)
 {
-	int index1 = rand()%8 + 1;
-	int index2 = rand()%8 + 1;
-	int index3 = rand()%8 + 1;
+	int index1 = rand() % 8 + 1;
+	int index2 = rand() % 8 + 1;
+	int index3 = rand() % 8 + 1;
 
-	switch (index1)
-	{
-		case 1:
-			*path1 = MP_MINI_EQ_ANI_01;
-			break;
-		case 2:
-			*path1 = MP_MINI_EQ_ANI_02;
-			break;
-		case 3:
-			*path1 = MP_MINI_EQ_ANI_03;
-			break;
-		case 4:
-			*path1 = MP_MINI_EQ_ANI_04;
-			break;
-		case 5:
-			*path1 = MP_MINI_EQ_ANI_05;
-			break;
-		case 6:
-			*path1 = MP_MINI_EQ_ANI_06;
-			break;
-		case 7:
-			*path1 = MP_MINI_EQ_ANI_07;
-			break;
-		case 8:
-			*path1 = MP_MINI_EQ_ANI_08;
-			break;
-		default:
-			*path1 = MP_MINI_EQ_ANI_01;
-
-	}
-	switch (index2)
-	{
-		case 1:
-			*path2 = MP_MINI_EQ_ANI_01;
-			break;
-		case 2:
-			*path2 = MP_MINI_EQ_ANI_02;
-			break;
-		case 3:
-			*path2 = MP_MINI_EQ_ANI_03;
-			break;
-		case 4:
-			*path2 = MP_MINI_EQ_ANI_04;
-			break;
-		case 5:
-			*path2 = MP_MINI_EQ_ANI_05;
-			break;
-		case 6:
-			*path2 = MP_MINI_EQ_ANI_06;
-			break;
-		case 7:
-			*path2 = MP_MINI_EQ_ANI_07;
-			break;
-		case 8:
-			*path2 = MP_MINI_EQ_ANI_08;
-			break;
-		default:
-			*path2 = MP_MINI_EQ_ANI_02;
+	switch (index1) {
+	case 1:
+		*path1 = MP_MINI_EQ_ANI_01;
+		break;
+	case 2:
+		*path1 = MP_MINI_EQ_ANI_02;
+		break;
+	case 3:
+		*path1 = MP_MINI_EQ_ANI_03;
+		break;
+	case 4:
+		*path1 = MP_MINI_EQ_ANI_04;
+		break;
+	case 5:
+		*path1 = MP_MINI_EQ_ANI_05;
+		break;
+	case 6:
+		*path1 = MP_MINI_EQ_ANI_06;
+		break;
+	case 7:
+		*path1 = MP_MINI_EQ_ANI_07;
+		break;
+	case 8:
+		*path1 = MP_MINI_EQ_ANI_08;
+		break;
+	default:
+		*path1 = MP_MINI_EQ_ANI_01;
 
 	}
-	switch (index3)
-	{
-		case 1:
-			*path3 = MP_MINI_EQ_ANI_01;
-			break;
-		case 2:
-			*path3 = MP_MINI_EQ_ANI_02;
-			break;
-		case 3:
-			*path3 = MP_MINI_EQ_ANI_03;
-			break;
-		case 4:
-			*path3 = MP_MINI_EQ_ANI_04;
-			break;
-		case 5:
-			*path3 = MP_MINI_EQ_ANI_05;
-			break;
-		case 6:
-			*path3 = MP_MINI_EQ_ANI_06;
-			break;
-		case 7:
-			*path3 = MP_MINI_EQ_ANI_07;
-			break;
-		case 8:
-			*path3 = MP_MINI_EQ_ANI_08;
-			break;
-		default:
-			*path3 = MP_MINI_EQ_ANI_03;
+	switch (index2) {
+	case 1:
+		*path2 = MP_MINI_EQ_ANI_01;
+		break;
+	case 2:
+		*path2 = MP_MINI_EQ_ANI_02;
+		break;
+	case 3:
+		*path2 = MP_MINI_EQ_ANI_03;
+		break;
+	case 4:
+		*path2 = MP_MINI_EQ_ANI_04;
+		break;
+	case 5:
+		*path2 = MP_MINI_EQ_ANI_05;
+		break;
+	case 6:
+		*path2 = MP_MINI_EQ_ANI_06;
+		break;
+	case 7:
+		*path2 = MP_MINI_EQ_ANI_07;
+		break;
+	case 8:
+		*path2 = MP_MINI_EQ_ANI_08;
+		break;
+	default:
+		*path2 = MP_MINI_EQ_ANI_02;
+
+	}
+	switch (index3) {
+	case 1:
+		*path3 = MP_MINI_EQ_ANI_01;
+		break;
+	case 2:
+		*path3 = MP_MINI_EQ_ANI_02;
+		break;
+	case 3:
+		*path3 = MP_MINI_EQ_ANI_03;
+		break;
+	case 4:
+		*path3 = MP_MINI_EQ_ANI_04;
+		break;
+	case 5:
+		*path3 = MP_MINI_EQ_ANI_05;
+		break;
+	case 6:
+		*path3 = MP_MINI_EQ_ANI_06;
+		break;
+	case 7:
+		*path3 = MP_MINI_EQ_ANI_07;
+		break;
+	case 8:
+		*path3 = MP_MINI_EQ_ANI_08;
+		break;
+	default:
+		*path3 = MP_MINI_EQ_ANI_03;
 
 	}
 }
@@ -225,11 +223,13 @@ _mp_nowplaying_timer_cb(void *data)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK_FALSE(ad);
 
-	if (!ad->app_is_foreground)
+	if (!ad->app_is_foreground) {
 		MP_TIMER_FREEZE(wd->timer);
+	}
 
-	if (wd->dragging)
+	if (wd->dragging) {
 		return EINA_TRUE;
+	}
 
 	ad->music_pos = mp_player_mgr_get_position() / 1000.0;
 	_mp_now_playing_update_time(wd);
@@ -239,7 +239,7 @@ _mp_nowplaying_timer_cb(void *data)
 	char *path2 = NULL;
 	char *path3 = NULL;
 
-	_mini_eq_get_image(&path1,&path2,&path3);
+	_mini_eq_get_image(&path1, &path2, &path3);
 
 	Evas_Object *unused_image = NULL;
 	unused_image = elm_object_part_content_unset(wd->mini_eq, "image1");
@@ -249,9 +249,9 @@ _mp_nowplaying_timer_cb(void *data)
 	unused_image = elm_object_part_content_unset(wd->mini_eq, "image3");
 	evas_object_del(unused_image);
 
-	Evas_Object *image1 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path1, 11,38);
-	Evas_Object *image2 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path2, 11,38);
-	Evas_Object *image3 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path3, 11,38);
+	Evas_Object *image1 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path1, 11, 38);
+	Evas_Object *image2 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path2, 11, 38);
+	Evas_Object *image3 = _mp_now_playing_create_thumb_icon(wd->mini_eq, path3, 11, 38);
 	elm_object_part_content_set(wd->mini_eq, "image1", image1);
 	elm_object_part_content_set(wd->mini_eq, "image2", image2);
 	elm_object_part_content_set(wd->mini_eq, "image3", image3);
@@ -282,8 +282,7 @@ static void _mp_now_playing_update_btn(Evas_Object *obj)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	if (ad->player_state == PLAY_STATE_PLAYING)
-	{
+	if (ad->player_state == PLAY_STATE_PLAYING) {
 		edje_object_signal_emit(elm_layout_edje_get(obj), "control_play_visible", "control_play");
 		edje_object_signal_emit(elm_layout_edje_get(obj), "control_pause_invisible", "control_pause");
 	} else {
@@ -316,14 +315,15 @@ static void _mp_now_playing_update_playpause_btn(Evas_Object *obj)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED)
+	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED) {
 		_mp_now_playing_update_btn(obj);
-	else
+	} else {
 		wd->stop_update_timer = ecore_timer_add(1.0, _btn_update_timer, obj);
+	}
 }
 
 static void
-_mp_now_playing_update_time( void *data)
+_mp_now_playing_update_time(void *data)
 {
 
 	struct appdata *ad = mp_util_get_appdata();
@@ -339,31 +339,24 @@ _mp_now_playing_update_time( void *data)
 
 	double duration = ad->music_length;
 
-	if (duration > 0.)
-	{
-		if (duration > 3600.)
-		{
+	if (duration > 0.) {
+		if (duration > 3600.) {
 			snprintf(total_time, sizeof(total_time), "%" MUSIC_TIME_FORMAT,
-				 MUSIC_TIME_ARGS(duration ));
+			         MUSIC_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" MUSIC_TIME_FORMAT, MUSIC_TIME_ARGS(ad->music_pos));
-		}
-		else
-		{
+		} else {
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-				 PLAY_TIME_ARGS(duration ));
+			         PLAY_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(ad->music_pos));
 		}
-	}
-	else
-	{
+	} else {
 		if (ad->current_track_info)
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-					 PLAY_TIME_ARGS(ad->current_track_info->duration/1000. ));
+			         PLAY_TIME_ARGS(ad->current_track_info->duration / 1000.));
 		snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(ad->music_pos));
 	}
 
-	if (g_strcmp0(play_time, wd->play_time))
-	{
+	if (g_strcmp0(play_time, wd->play_time)) {
 		IF_FREE(wd->play_time);
 		wd->play_time = g_strdup(play_time);
 
@@ -384,7 +377,7 @@ _mp_now_playing_progressarea_down_cb(void *data, Evas * e, Evas_Object * obj, vo
 	MP_CHECK(wd);
 	MP_CHECK(wd->progress);
 
-        struct appdata *ad = mp_util_get_appdata();
+	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
 	Evas_Event_Mouse_Down *ev = event_info;
@@ -392,23 +385,25 @@ _mp_now_playing_progressarea_down_cb(void *data, Evas * e, Evas_Object * obj, vo
 	int w = 0, current = 0, x = 0;
 	double ratio = 0.0;
 
-        MP_TIMER_FREEZE(wd->timer);
+	MP_TIMER_FREEZE(wd->timer);
 
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
-        ratio = (double)current / w;
-        DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
+	ratio = (double)current / w;
+	DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
 
 	int duration = mp_player_mgr_get_duration();
 	if (duration <= 0) {
 		mp_track_info_t *track_info = ad->current_track_info;
-		if (track_info)
+		if (track_info) {
 			duration = track_info->duration;
+		}
 	}
 
 	ad->music_length = duration / 1000.;
@@ -419,8 +414,8 @@ _mp_now_playing_progressarea_down_cb(void *data, Evas * e, Evas_Object * obj, vo
 
 	ERROR_TRACE("wishjox pos :%f, duration: %f, val: %f", ad->music_pos , ad->music_length, ratio);
 
-        elm_progressbar_value_set(wd->progress, ratio);
-        _mp_now_playing_update_time(wd);
+	elm_progressbar_value_set(wd->progress, ratio);
+	_mp_now_playing_update_time(wd);
 	endfunc;
 }
 
@@ -432,29 +427,30 @@ _mp_now_playing_progressarea_move_cb(void *data, Evas * e, Evas_Object * obj, vo
 	MP_CHECK(wd);
 	MP_CHECK(wd->progress);
 
-        struct appdata *ad = mp_util_get_appdata();
+	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
 	Evas_Event_Mouse_Down *ev = event_info;
 	Evas_Object *progressbar = obj;
 	int w = 0, current = 0, x = 0;
 	double ratio = 0.0;
-        int new_pos;
+	int new_pos;
 
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
-        ratio = (double)current / w;
+	ratio = (double)current / w;
 
-	new_pos= ratio * ad->music_length;
+	new_pos = ratio * ad->music_length;
 	ad->music_pos = new_pos;
 
-        elm_progressbar_value_set(wd->progress, ratio);
-        _mp_now_playing_update_time(wd);
+	elm_progressbar_value_set(wd->progress, ratio);
+	_mp_now_playing_update_time(wd);
 	endfunc;
 }
 
@@ -466,7 +462,7 @@ _mp_now_playing_progressarea_up_cb(void *data, Evas * e, Evas_Object * obj, void
 	MP_CHECK(wd);
 	MP_CHECK(wd->progress);
 
-        struct appdata *ad = mp_util_get_appdata();
+	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
 	Evas_Event_Mouse_Down *ev = event_info;
@@ -477,26 +473,26 @@ _mp_now_playing_progressarea_up_cb(void *data, Evas * e, Evas_Object * obj, void
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
 
-        DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
-	if (current < 0)
+	DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
-        ratio = (double)current / w;
+	ratio = (double)current / w;
 
-        ad->music_pos = ratio * ad->music_length;
+	ad->music_pos = ratio * ad->music_length;
 
 	DEBUG_TRACE("ad->music_pos=%lf", ad->music_pos);
-	if (mp_player_mgr_set_position(ad->music_pos * 1000, NULL, NULL))
-        {
-                mp_now_playing_thaw_timer(wd->now_playing);
-        }
+	if (mp_player_mgr_set_position(ad->music_pos * 1000, NULL, NULL)) {
+		mp_now_playing_thaw_timer(wd->now_playing);
+	}
 
-        wd->dragging = false;
+	wd->dragging = false;
 
-        elm_progressbar_value_set(wd->progress, ratio);
-        _mp_now_playing_update_time(wd);
+	elm_progressbar_value_set(wd->progress, ratio);
+	_mp_now_playing_update_time(wd);
 	endfunc;
 }
 
@@ -531,23 +527,16 @@ static void _set_layout(Evas_Object *obj)
 	evas_object_size_hint_min_set(obj, w, 0);
 	evas_object_size_hint_max_set(obj, w, -1);
 
-	if (w<CONTROL_W * elm_config_scale_get())
-	{
+	if (w < CONTROL_W * elm_config_scale_get()) {
 		DEBUG_TRACE("control_only mode");
 		elm_object_signal_emit(obj, "control_only", "*");
-	}
-	else if (w<(CONTROL_W+ALBUMART_W)*elm_config_scale_get())
-	{
+	} else if (w < (CONTROL_W + ALBUMART_W)*elm_config_scale_get()) {
 		DEBUG_TRACE("hide_center");
 		elm_object_signal_emit(obj, "hide_center", "*");
-	}
-	else if (w<(CONTROL_W+ALBUMART_W+CENTER_MIN_W)*elm_config_scale_get())
-	{
+	} else if (w < (CONTROL_W + ALBUMART_W + CENTER_MIN_W)*elm_config_scale_get()) {
 		DEBUG_TRACE("center min mode");
 		elm_object_signal_emit(obj, "center_min", "*");
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("default mode");
 		elm_object_signal_emit(obj, "set_default", "*");
 	}
@@ -555,13 +544,14 @@ static void _set_layout(Evas_Object *obj)
 
 static void _mp_now_left_area_clicked_cb(void *data, Evas_Object *o, const char *emission, const char *source)
 {
-        startfunc;
+	startfunc;
 	DEBUG_TRACE("album clicked");
 
 	MpNpData_t *wd = data;
 	MP_CHECK(wd);
-	if (wd->clicked)
+	if (wd->clicked) {
 		wd->clicked(wd->userdata);
+	}
 }
 
 static void _mp_now_playing_btn_clicked_cb(void *data, Evas_Object *obj, void *event_info)
@@ -579,20 +569,22 @@ static void _mp_now_playing_btn_pressed_cb(void *data, Evas_Object *obj, void *e
 {
 	DEBUG_TRACE("button pressed");
 	char *source = (char *)data;
-	if (!g_strcmp0(source, NOW_PLAYING_FF_SOURCE))
+	if (!g_strcmp0(source, NOW_PLAYING_FF_SOURCE)) {
 		mp_play_control_ff(true, false, true);
-	else
+	} else {
 		mp_play_control_rew(true, false, true);
+	}
 }
 
 static void _mp_now_playing_btn_unpressed_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	DEBUG_TRACE("button unpressed");
 	char *source = (char *)data;
-	if (!g_strcmp0(source, NOW_PLAYING_FF_SOURCE))
+	if (!g_strcmp0(source, NOW_PLAYING_FF_SOURCE)) {
 		mp_play_control_ff(false, false, true);
-	else
+	} else {
 		mp_play_control_rew(false, false, true);
+	}
 }
 
 Evas_Object *mp_now_playing_create(Evas_Object *parent, MpNowplayingCb play_bt_clicked, MpNowplayingCb clicked, void *data)
@@ -609,7 +601,7 @@ Evas_Object *mp_now_playing_create(Evas_Object *parent, MpNowplayingCb play_bt_c
 #endif
 	playing_pannel = elm_layout_add(parent);
 	if (playing_pannel) {
-			r = elm_layout_file_set(playing_pannel, PLAY_VIEW_EDJ_NAME, "mp_now_playing");
+		r = elm_layout_file_set(playing_pannel, PLAY_VIEW_EDJ_NAME, "mp_now_playing");
 
 		if (!r) {
 			ERROR_TRACE("Error: elm_layout_file_set");
@@ -620,8 +612,7 @@ Evas_Object *mp_now_playing_create(Evas_Object *parent, MpNowplayingCb play_bt_c
 	}
 
 	wd = calloc(1, sizeof(MpNpData_t));
-	if (!wd)
-	{
+	if (!wd) {
 		ERROR_TRACE("Error: memory alloc failed");
 		evas_object_del(playing_pannel);
 		return NULL;
@@ -654,31 +645,32 @@ Evas_Object *mp_now_playing_create(Evas_Object *parent, MpNowplayingCb play_bt_c
 	wd->progress = progress;
 
 	evas_object_event_callback_add(progress, EVAS_CALLBACK_MOUSE_DOWN,
-			_mp_now_playing_progressarea_down_cb, wd);
+	                               _mp_now_playing_progressarea_down_cb, wd);
 	evas_object_event_callback_add(progress, EVAS_CALLBACK_MOUSE_UP,
-					_mp_now_playing_progressarea_up_cb, wd);
+	                               _mp_now_playing_progressarea_up_cb, wd);
 	evas_object_event_callback_add(progress, EVAS_CALLBACK_MOUSE_MOVE,
-					_mp_now_playing_progressarea_move_cb, wd);
+	                               _mp_now_playing_progressarea_move_cb, wd);
 
 #ifdef MP_NOW_PLAYING_MINI_EQ
 	Evas_Object *mini_eq_ani = NULL;
 	mini_eq_ani = mp_common_load_edj(playing_pannel, PLAY_VIEW_EDJ_NAME, "mini_eq_layout");
-	if (mini_eq_ani == NULL)
+	if (mini_eq_ani == NULL) {
 		ERROR_TRACE("create mini_eq_ani failed");
+	}
 	elm_object_part_content_set(playing_pannel, "mini_icon", mini_eq_ani);
 	char *path1 = NULL;
 	char *path2 = NULL;
 	char *path3 = NULL;
-	_mini_eq_get_image(&path1,&path2,&path3);
-	Evas_Object *image1 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path1, 11,38);
-	Evas_Object *image2 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path2, 11,38);
-	Evas_Object *image3 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path3, 11,38);
+	_mini_eq_get_image(&path1, &path2, &path3);
+	Evas_Object *image1 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path1, 11, 38);
+	Evas_Object *image2 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path2, 11, 38);
+	Evas_Object *image3 = _mp_now_playing_create_thumb_icon(mini_eq_ani, path3, 11, 38);
 	elm_object_part_content_set(mini_eq_ani, "image1", image1);
 	elm_object_part_content_set(mini_eq_ani, "image2", image2);
 	elm_object_part_content_set(mini_eq_ani, "image3", image3);
 	wd->mini_eq = mini_eq_ani;
 #endif
-	mp_retvm_if (playing_pannel == NULL, NULL, "now playing view is NULL");
+	mp_retvm_if(playing_pannel == NULL, NULL, "now playing view is NULL");
 
 	wd->clicked = clicked;
 	wd->play_bt_clicked = play_bt_clicked;
@@ -744,8 +736,9 @@ void mp_now_playing_thaw_timer(Evas_Object *now_playing)
 	elm_label_slide_mode_set(wd->label, ELM_LABEL_SLIDE_MODE_AUTO);
 	elm_label_slide_go(wd->label);
 
-	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING)
+	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING) {
 		MP_TIMER_THAW(wd->timer);
+	}
 }
 
 void mp_now_playing_freeze_timer(Evas_Object *now_playing)
@@ -779,15 +772,13 @@ static void _mp_now_playing_set_title(Evas_Object *now_playing, const char *titl
 
 #ifdef MP_FEATURE_LANDSCAPE
 	bool landscape = mp_util_is_landscape();
-	if (wd->landscape_layout_mode)
-	{
+	if (wd->landscape_layout_mode) {
 		mtitle = g_strdup_printf("<align=left><font_size=%d><color=#%s>%s</color></font_size> <font_size=%d><color=#%s>- %s</color></font_size></align>",
-				NOW_PLAYING_TITLE_SIZE, NOW_PLAYING_TITLE_COLOR,
-				markup_title,
-				NOW_PLAYING_ARTIST_SIZE, NOW_PLAYING_ARTIST_COLOR,
-				markup_artist);
-	}
-	else
+		                         NOW_PLAYING_TITLE_SIZE, NOW_PLAYING_TITLE_COLOR,
+		                         markup_title,
+		                         NOW_PLAYING_ARTIST_SIZE, NOW_PLAYING_ARTIST_COLOR,
+		                         markup_artist);
+	} else
 #endif
 	{
 		char *title_format = "<align=left><font_size=%d>%s</font_size></align>";
@@ -829,21 +820,22 @@ void mp_now_playing_update(Evas_Object *now_playing, const char *title, const ch
 	MP_CHECK(ad);
 
 	elm_image_file_set(wd->thumbnail, thumbnail, NULL);
-	if (with_title)
+	if (with_title) {
 		_mp_now_playing_set_title(now_playing, title, artist);
+	}
 
 	ad->music_pos = mp_player_mgr_get_position() / 1000.0;
 
-	if (ad->player_state == PLAY_STATE_PAUSED && ad->is_Longpress)
+	if (ad->player_state == PLAY_STATE_PAUSED && ad->is_Longpress) {
 		_progressbar_value_set(wd);
+	}
 	/*
 	else if (ad->player_state == PLAY_STATE_PAUSED && !((MpView_t *)(wd->userdata))->rotate_flag)
 	{
 		_progressbar_value_update_to_zero(wd);
 	}
 	*/
-	else if (((MpView_t *)(wd->userdata))->rotate_flag)
-	{
+	else if (((MpView_t *)(wd->userdata))->rotate_flag) {
 		_progressbar_value_set(wd);
 #ifdef MP_NOW_PLAYING_MINI_EQ
 		elm_object_part_content_set(wd->mini_eq, "image1", NULL);

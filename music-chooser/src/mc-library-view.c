@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-library-view.h"
@@ -24,15 +24,15 @@
 #include "mc-search-view.h"
 #include <efl_extension.h>
 
-typedef struct{
+typedef struct {
 	struct app_data *ad;
 
 	Evas_Object *toolbar;
 	Evas_Object *list;
 
-}lib_view_data_t;
+} lib_view_data_t;
 
-enum{
+enum {
 	TAB_ALL,
 #ifdef MC_ENABLE_PLAYLIST
 	TAB_PLAYLIST,
@@ -174,7 +174,9 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 
 	/* create toolbar */
 	obj = elm_toolbar_add(parent);
-	if (obj == NULL) return NULL;
+	if (obj == NULL) {
+		return NULL;
+	}
 	elm_toolbar_shrink_mode_set(obj, ELM_TOOLBAR_SHRINK_SCROLL);
 	elm_toolbar_reorder_mode_set(obj, EINA_FALSE);
 	elm_toolbar_transverse_expanded_set(obj, EINA_TRUE);
@@ -186,8 +188,7 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 
 	if (ad->track_type == MP_TRACK_BY_ALBUM) {
 		selected_tab = TAB_ALBUM;
-	}
-	else if (ad->track_type == MP_TRACK_BY_ARTIST) {
+	} else if (ad->track_type == MP_TRACK_BY_ARTIST) {
 		selected_tab = TAB_ARTIST;
 	} else {
 		selected_tab = TAB_ALL;
@@ -212,7 +213,7 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 
 void mc_create_search_view_cb(void *data, Evas_Object *obj, void *event_info)
 {
-        startfunc;
+	startfunc;
 
 	struct app_data *ad = data;
 	MP_CHECK(ad);
@@ -224,7 +225,7 @@ void mc_create_search_view_cb(void *data, Evas_Object *obj, void *event_info)
 
 static void mc_common_item_domain_text_translate(Elm_Object_Item* item, const char *part, const char *label)
 {
-	 elm_object_item_domain_translatable_part_text_set(item, part, DOMAIN_NAME, (const char *)label);
+	elm_object_item_domain_translatable_part_text_set(item, part, DOMAIN_NAME, (const char *)label);
 }
 
 void
@@ -252,8 +253,8 @@ mc_library_view_create(struct app_data *ad)
 #if  0
 		Evas_Object *search_btn = NULL;
 		search_btn = mc_widget_create_title_icon_btn(g_ly, IMAGE_EDJ_NAME, MP_ICON_SEARCH,
-													 (Evas_Smart_Cb)mc_create_search_view_cb,
-													 ad);
+		             (Evas_Smart_Cb)mc_create_search_view_cb,
+		             ad);
 		elm_object_item_part_content_set(g_navi_it, "title_right_btn", search_btn);
 #endif
 

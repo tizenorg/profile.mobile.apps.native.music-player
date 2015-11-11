@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <sound_manager.h>
@@ -86,8 +86,9 @@ _mp_play_control_play_next_on_error(void *data)
 		mp_playlist_mgr_set_current(ad->playlist_mgr, next);
 		mp_play_new_file(ad, true);
 #ifdef MP_FEATURE_CLOUD
-		if (ret == MP_PLAY_ERROR_NETWORK)
+		if (ret == MP_PLAY_ERROR_NETWORK) {
 			mp_play_next_file(ad, true);
+		}
 #endif
 	} else {
 #ifdef MP_SOUND_PLAYER
@@ -102,8 +103,9 @@ _mp_play_control_play_next_on_error(void *data)
 		}
 	}
 
-	if (GET_PLAYER_VIEW)
+	if (GET_PLAYER_VIEW) {
 		mp_player_view_refresh(GET_PLAYER_VIEW);
+	}
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_MGR_ITEM_CHANGED);
 
@@ -134,7 +136,7 @@ _mp_play_control_long_press_seek_done_cb(void *data)
 	MP_CHECK(ad);
 	mp_minicontroller_update_progressbar(ad);
 #ifdef MP_FEATURE_LOCKSCREEN
-		mp_lockscreenmini_update_progressbar(ad);
+	mp_lockscreenmini_update_progressbar(ad);
 #endif
 }
 
@@ -179,10 +181,10 @@ _mp_player_control_move_position(int diff)
 		}
 	}
 
-	#ifndef MP_SOUND_PLAYER
+#ifndef MP_SOUND_PLAYER
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_NOW_PLAYING);
 	/* mp_setting_save_now_playing(ad); */
-	#endif
+#endif
 
 
 }
@@ -195,7 +197,7 @@ _mp_play_control_long_press_timer_cb(void *data)
 
 	int error = 0;
 
-	mp_retvm_if (ad == NULL, ECORE_CALLBACK_CANCEL, "appdata is NULL");
+	mp_retvm_if(ad == NULL, ECORE_CALLBACK_CANCEL, "appdata is NULL");
 	if (ad->player_state != PLAY_STATE_PAUSED && ad->player_state != PLAY_STATE_PLAYING && ad->player_state != PLAY_STATE_READY) {
 		return ECORE_CALLBACK_RENEW;
 	}
@@ -203,14 +205,16 @@ _mp_play_control_long_press_timer_cb(void *data)
 	if (ad->is_ff) {
 		ad->ff_rew_distance += LONG_PRESS_TIME_INCREASE;
 #ifdef MP_FEATURE_AVRCP_13
-		if (!ad->is_Longpress)
+		if (!ad->is_Longpress) {
 			mp_avrcp_noti_player_state(MP_AVRCP_STATE_FF);
+		}
 #endif
 	} else {
 		ad->ff_rew_distance -= LONG_PRESS_TIME_INCREASE;
 #ifdef MP_FEATURE_AVRCP_13
-		if (!ad->is_Longpress)
+		if (!ad->is_Longpress) {
 			mp_avrcp_noti_player_state(MP_AVRCP_STATE_FF);
+		}
 #endif
 	}
 
@@ -223,8 +227,9 @@ _mp_play_control_long_press_timer_cb(void *data)
 	}
 	_mp_player_control_move_position(ad->ff_rew_distance);
 
-	if (ad->longpress_timer)
+	if (ad->longpress_timer) {
 		ecore_timer_interval_set(ad->longpress_timer, FF_REW_INTERVAL);
+	}
 
 	endfunc;
 
@@ -236,18 +241,18 @@ static void
 _mp_play_control_add_longpressed_timer(void *data, double interval)
 {
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(!ad->longpress_timer);
 
 	ad->longpress_timer =
-		ecore_timer_add(interval, _mp_play_control_long_press_timer_cb, ad);
+	    ecore_timer_add(interval, _mp_play_control_long_press_timer_cb, ad);
 }
 
 void
 _mp_play_control_del_longpressed_timer(void *data)
 {
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	ad->ff_rew_distance = 0;
 	mp_ecore_timer_del(ad->longpress_timer);
@@ -294,8 +299,9 @@ _mp_play_control_interrupted_cb(player_interrupted_code_e code, void *userdata)
 			int error = mp_player_mgr_resume(ad);
 			if (!error) {
 				mp_setting_set_nowplaying_id(getpid());
-				if (ad->player_state == PLAY_STATE_PAUSED)
+				if (ad->player_state == PLAY_STATE_PAUSED) {
 					mp_play_resume(ad);
+				}
 				ad->player_state = PLAY_STATE_PLAYING;
 			} else {
 				ad->auto_resume = true;
@@ -418,12 +424,13 @@ mp_play_control_on_error(struct appdata *ad, int ret, bool add_watch)
 				mp_play_destory(ad);
 			}
 #endif
-		} else if (!ad->auto_resume)
+		} else if (!ad->auto_resume) {
 			message = STR_MP_UNABLE_TO_PLAY_ERROR_OCCURED;
+		}
 
 		if (add_watch && (ad->auto_next || ad->auto_resume)) {
 			WARN_TRACE("Enter add watch callback to resume after call or alarm");
-	WARN_TRACE("Leave add watch callback to resume after call or alarm");
+			WARN_TRACE("Leave add watch callback to resume after call or alarm");
 		}
 	} else if (ret == PLAYER_ERROR_INVALID_OPERATION && mp_player_mgr_is_seeking()) {
 		WARN_TRACE("Trying to resume while seeking. Do not show error msg");
@@ -432,13 +439,13 @@ mp_play_control_on_error(struct appdata *ad, int ret, bool add_watch)
 	}
 
 	if (message) {
-		if (ad->is_focus_out)
+		if (ad->is_focus_out) {
 			mp_util_post_status_message(ad, GET_STR(message));
-		else
+		} else
 #ifndef MP_SOUND_PLAYER
-	mp_widget_text_popup(ad, GET_STR(message));
+			mp_widget_text_popup(ad, GET_STR(message));
 #else
-	mp_widget_text_cb_popup(ad, GET_STR(message), _mp_play_text_popup_exit_timeout_cb);
+			mp_widget_text_cb_popup(ad, GET_STR(message), _mp_play_text_popup_exit_timeout_cb);
 #endif
 	}
 }
@@ -452,8 +459,9 @@ _mp_play_control_duration_changed_cb(void *data)
 	ad->music_length = mp_player_mgr_get_duration() / 1000.0;
 	if (ad->music_length <= 0) {
 		mp_track_info_t *track_info = ad->current_track_info;
-		if (track_info)
+		if (track_info) {
 			ad->music_length = track_info->duration / 1000.0;
+		}
 	}
 }
 
@@ -493,8 +501,9 @@ mp_player_control_ready_new_file(void *data, bool check_drm)
 	}
 	PROFILE_OUT("mp_player_mgr_create");
 
-	if (ad->b_minicontroller_show)
+	if (ad->b_minicontroller_show) {
 		mp_minicontroller_update(ad, true);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 	if (ad->b_lockmini_show) {
@@ -531,11 +540,11 @@ mp_player_control_ready_new_file(void *data, bool check_drm)
 void
 mp_play_control_play_pause(struct appdata *ad, bool play)
 {
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	SECURE_DEBUG("play [%d], ad->player_state: %d", play, ad->player_state);
 
-/* int ret = 0; */
+	/* int ret = 0; */
 
 	_mp_play_control_del_longpressed_timer(ad);
 
@@ -546,8 +555,9 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 			int error = mp_player_mgr_resume(ad);
 			if (!error) {
 				mp_setting_set_nowplaying_id(getpid());
-				if (ad->player_state == PLAY_STATE_PAUSED)
+				if (ad->player_state == PLAY_STATE_PAUSED) {
 					mp_play_resume(ad);
+				}
 				ad->player_state = PLAY_STATE_PLAYING;
 			} else {
 				mp_play_control_on_error(ad, error, FALSE);
@@ -556,8 +566,9 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 				}
 				return;
 			}
-			if (ad->win_minicon)
+			if (ad->win_minicon) {
 				mp_minicontroller_update_control(ad);
+			}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 			if (ad->win_lockmini) {
@@ -568,8 +579,9 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 			mp_play_start_in_ready_state(ad);
 		} else if (ad->player_state == PLAY_STATE_PLAYING) {
 			WARN_TRACE("player_state is already playing. Update view state");
-			if (ad->win_minicon)
+			if (ad->win_minicon) {
 				mp_minicontroller_update(ad, false);
+			}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 			if (ad->win_lockmini) {
@@ -598,8 +610,9 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 			WARN_TRACE("player_state is prepareing. set paused_by_user!!!");
 			ad->paused_by_user = TRUE;
 			ad->freeze_indicator_icon = false;
-			if (ad->win_minicon)
+			if (ad->win_minicon) {
 				mp_minicontroller_update_control(ad);
+			}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 			if (ad->win_lockmini) {
@@ -611,13 +624,15 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 	}
 	if (play) {
 		if (ad->current_track_info) {
-			if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1)
+			if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1) {
 				mp_setting_write_playing_status(ad->current_track_info->uri, "playing");
+			}
 		}
 	} else {
 		if (ad->current_track_info) {
-			if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1)
+			if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1) {
 				mp_setting_write_playing_status(ad->current_track_info->uri, "paused");
+			}
 		}
 	}
 }
@@ -625,7 +640,7 @@ mp_play_control_play_pause(struct appdata *ad, bool play)
 void
 mp_play_control_resume_via_media_key(struct appdata *ad)
 {
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	SECURE_DEBUG("ad->player_state: %d", ad->player_state);
 
@@ -647,12 +662,14 @@ mp_play_control_resume_via_media_key(struct appdata *ad)
 			mp_play_control_on_error(ad, error, FALSE);
 		}
 	} else {
-		if (ad->player_state == PLAY_STATE_PAUSED)
+		if (ad->player_state == PLAY_STATE_PAUSED) {
 			mp_play_resume(ad);
+		}
 		ad->player_state = PLAY_STATE_PLAYING;
 
-		if (ad->win_minicon)
+		if (ad->win_minicon) {
 			mp_minicontroller_update_control(ad);
+		}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 		if (ad->win_lockmini) {
@@ -679,8 +696,9 @@ void mp_player_control_stop(struct appdata *ad)
 	}
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UNSET_NOW_PLAYING);
-	if (ad->b_minicontroller_show)
+	if (ad->b_minicontroller_show) {
 		mp_minicontroller_hide(ad);
+	}
 #ifdef MP_FEATURE_LOCKSCREEN
 	if (ad->b_lockmini_show) {
 		mp_lockscreenmini_hide(ad);
@@ -693,7 +711,7 @@ mp_play_control_next(void)
 {
 	eventfunc;
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	mp_play_next_file(ad, TRUE);
 }
 
@@ -702,7 +720,7 @@ mp_play_control_set_position_cb(void *data)
 {
 	startfunc;
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	MpView_t *view = mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_PLAYER);
 	mp_player_view_update_progressbar(view);
@@ -715,10 +733,10 @@ mp_play_control_prev(void)
 {
 	eventfunc;
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	int pos = mp_player_mgr_get_position();
 
-	if (pos > 3000)/* mp_playlist_mgr_count(ad->playlist_mgr) == 1 */ {
+	if (pos > 3000) { /* mp_playlist_mgr_count(ad->playlist_mgr) == 1 */
 		if (mp_player_mgr_set_position(0, mp_play_control_set_position_cb, NULL)) {
 			double get_pos = mp_player_mgr_get_position() / 1000.0;
 
@@ -738,14 +756,15 @@ void
 mp_play_control_ff(int press, bool event_by_mediakey, bool clicked)
 {
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	EVENT_TRACE("Next button press[%d]\n", press);
 
 	ad->is_ff = TRUE;
 
 	double interval = LONG_PRESS_INTERVAL;
-	if (event_by_mediakey)
+	if (event_by_mediakey) {
 		interval = MEDIA_KEY_LONG_PRESS_INTERVAL;
+	}
 
 	if (press) {
 		_mp_play_control_add_longpressed_timer(ad, interval);
@@ -773,14 +792,15 @@ void
 mp_play_control_rew(int press, bool event_by_mediakey, bool clicked)
 {
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	EVENT_TRACE("Previous button press[%d]\n", press);
 
 	ad->is_ff = FALSE;
 
 	double interval = LONG_PRESS_INTERVAL;
-	if (event_by_mediakey)
+	if (event_by_mediakey) {
 		interval = MEDIA_KEY_LONG_PRESS_INTERVAL;
+	}
 
 	if (press) {
 		_mp_play_control_add_longpressed_timer(ad, interval);
@@ -790,9 +810,9 @@ mp_play_control_rew(int press, bool event_by_mediakey, bool clicked)
 		if (ad->is_Longpress) {
 			mp_play_control_reset_ff_rew();
 		} else if (clicked) {
-			if (!event_by_mediakey)
+			if (!event_by_mediakey) {
 				mp_play_control_prev();
-			else {
+			} else {
 				/* if media key event is MEDIA_KEY_REWIND, move position even if short press */
 				_mp_player_control_move_position(-SEEK_DIFF);
 			}
@@ -804,7 +824,7 @@ mp_play_control_rew(int press, bool event_by_mediakey, bool clicked)
 void mp_play_control_reset_ff_rew(void)
 {
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	_mp_play_control_del_longpressed_timer(ad);
 
@@ -812,12 +832,13 @@ void mp_play_control_reset_ff_rew(void)
 		ad->is_Longpress = false;
 
 #ifdef MP_FEATURE_AVRCP_13
-		if (ad->player_state == PLAY_STATE_PLAYING)
+		if (ad->player_state == PLAY_STATE_PLAYING) {
 			mp_avrcp_noti_player_state(MP_AVRCP_STATE_PLAYING);
-		else if (ad->player_state == PLAY_STATE_PAUSED)
+		} else if (ad->player_state == PLAY_STATE_PAUSED) {
 			mp_avrcp_noti_player_state(MP_AVRCP_STATE_PAUSED);
-		else
+		} else {
 			mp_avrcp_noti_player_state(MP_AVRCP_STATE_STOPPED);
+		}
 #endif
 	}
 }
@@ -833,7 +854,7 @@ mp_play_control_menu_cb(void *data, Evas_Object * o, const char *emission, const
 		mp_play_control_shuffle_set(ad, FALSE);
 	} else if (!strcmp(emission, SIGNAL_SHUFFLE_OFF)) {			/* TURN ON SHUFFE */
 		mp_play_control_shuffle_set(ad, TRUE);
-	} else if (!strcmp(emission, SIGNAL_REP_ALL))	/* off -1 - all - off  //off - all - 1 */ {
+	} else if (!strcmp(emission, SIGNAL_REP_ALL)) {	/* off -1 - all - off  //off - all - 1 */
 		/* repeat 1 */
 		mp_setting_set_repeat_state(MP_SETTING_REP_1);
 		mp_playlist_mgr_set_repeat(ad->playlist_mgr, MP_PLST_REPEAT_ONE);
@@ -858,9 +879,9 @@ mp_play_control_menu_cb(void *data, Evas_Object * o, const char *emission, const
 	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-		if (ad->win_lockmini) {
-			mp_lockscreenmini_update_shuffle_and_repeat_btn(ad);
-		}
+	if (ad->win_lockmini) {
+		mp_lockscreenmini_update_shuffle_and_repeat_btn(ad);
+	}
 #endif
 }
 
@@ -870,7 +891,7 @@ mp_play_control_end_of_stream(void *data)
 {
 	eventfunc;
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	ad->music_pos = ad->music_length;
 	mp_player_view_update_progressbar(GET_PLAYER_VIEW);
@@ -894,13 +915,14 @@ void
 mp_play_control_shuffle_set(void *data, bool shuffle_enable)
 {
 	struct appdata *ad = mp_util_get_appdata();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 #ifdef MP_FEATURE_AVRCP_13
-	if (shuffle_enable)
+	if (shuffle_enable) {
 		mp_avrcp_noti_shuffle_mode(MP_AVRCP_SHUFFLE_ON);
-	else
+	} else {
 		mp_avrcp_noti_shuffle_mode(MP_AVRCP_SHUFFLE_OFF);
+	}
 #endif
 
 	mp_playlist_mgr_set_shuffle(ad->playlist_mgr, shuffle_enable);

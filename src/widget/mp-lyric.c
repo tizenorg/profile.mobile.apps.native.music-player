@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "music.h"
@@ -38,7 +38,7 @@ typedef struct {
 	int prev_line_index;
 	int cur_line_index;
 	char *path;
-}MpLyricData_t;
+} MpLyricData_t;
 
 #define MP_LRC_STR_NO_LYRIC ("IDS_MUSIC_SK3_NO_LYRICS")
 #define MP_LRC_FOLDER_PATH "/opt/usr/media/Sounds/Lyric/"
@@ -89,7 +89,7 @@ _mp_lyric_view_layout_del_cb(void *data, Evas * e, Evas_Object * obj, void *even
 {
 	startfunc;
 	MpLyricData_t *wd = data;
-	MP_CHECK(wd );
+	MP_CHECK(wd);
 	mp_lyric_mgr_destory(wd->lyric_mgr);
 	IF_FREE(wd->path);
 	IF_FREE(wd);
@@ -105,13 +105,13 @@ _create_lyric(Evas_Object *parent, MpLyricData_t *wd)
 	layout = mp_common_load_edj(parent, PLAY_VIEW_EDJ_NAME, "mp_lrc_layout");
 	MP_CHECK_NULL(layout);
 	evas_object_event_callback_add(layout, EVAS_CALLBACK_FREE, _mp_lyric_view_layout_del_cb,
-				       wd);
+	                               wd);
 	wd->layout = layout;
 
 	/* Create scroller */
 	Evas_Object *scroller = elm_scroller_add(layout);
 	elm_scroller_bounce_set(scroller, EINA_FALSE, EINA_TRUE);
-	elm_scroller_policy_set(scroller,ELM_SCROLLER_POLICY_OFF,ELM_SCROLLER_POLICY_AUTO);
+	elm_scroller_policy_set(scroller, ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
 	evas_object_show(scroller);
 	wd->scroller = scroller;
 
@@ -150,15 +150,13 @@ _mp_lyric_view_load_lyric(MpLyricData_t *wd)
 	Eina_List *list = wd->lyric_mgr->synclrc_list;
 	int count = eina_list_count(list);
 
-	if (count <= 0)
-	{
+	if (count <= 0) {
 		list = wd->lyric_mgr->unsynclrc_list;
 		count = eina_list_count(list);
 	}
 
 	elm_box_clear(wd->box);
-	for (index = 0; index < count; index++)
-	{
+	for (index = 0; index < count; index++) {
 		mp_lrc_node_t *lrc_node = (mp_lrc_node_t*)eina_list_nth(list, index);
 		MP_CHECK(lrc_node);
 		Evas_Object* label = elm_label_add(wd->box);
@@ -190,22 +188,23 @@ _mp_lyric_set_line_color(MpLyricData_t *wd, Evas_Object *obj, int index, const c
 	MP_CHECK(list);
 	int count = eina_list_count(list);
 
-	if (count <= 0)
+	if (count <= 0) {
 		list = wd->lyric_mgr->unsynclrc_list;
+	}
 
 	mp_lrc_node_t *lrc_node = (mp_lrc_node_t*)eina_list_nth(list, index);
 	MP_CHECK(lrc_node);
 	char *text_old = lrc_node->lyric;
 	MP_CHECK(text_old);
 
-	char *text_new = (char*)malloc(sizeof(char)*(strlen(text_old)+50));
+	char *text_new = (char*)malloc(sizeof(char) * (strlen(text_old) + 50));
 	MP_CHECK(text_new);
 	char * text = "<color=";
 	strncpy(text_new, text, strlen(text));
-	strncat(text_new, color ,strlen(color));
+	strncat(text_new, color , strlen(color));
 	text = ">";
 	strncat(text_new, text, strlen(text));
-	strncat(text_new, text_old ,strlen(text_old));
+	strncat(text_new, text_old , strlen(text_old));
 	text = "</color>";
 	strncat(text_new, text, strlen(text));
 
@@ -239,7 +238,7 @@ _mp_lyric_get_line(MpLyricData_t *wd, int index)
 	Eina_List *list = _mp_lyric_get_line_list(wd);
 	Evas_Object *line = NULL;
 	if (list) {
-		line = eina_list_nth(list, index+1);
+		line = eina_list_nth(list, index + 1);
 
 		eina_list_free(list);
 		list = NULL;
@@ -260,8 +259,9 @@ _mp_lyric_set_current_line(MpLyricData_t *wd, int index)
 	MP_CHECK(line);
 
 	/* No change */
-	if (wd->cur_line == line)
+	if (wd->cur_line == line) {
 		return;
+	}
 
 	/* Update current line */
 	wd->prev_line = wd->cur_line;
@@ -282,36 +282,27 @@ _mp_lyric_set_current_line(MpLyricData_t *wd, int index)
 	//DEBUG_TRACE("===Get current line====i =%d, x=%d, y=%d, w=%d, h=%d\n",index, x, y, w, h);
 
 	int new_y = 0;
-	if (ad->screen_mode == MP_SCREEN_MODE_LANDSCAPE)
-	{
-		int scale_h_ls = wd->win_w*MP_LRC_VIEW_H_SCALE_LS;
-		int scale_w_ls = wd->win_h*MP_LRC_VIEW_W_SCALE_LS;
-		int scale_head_h_ls = wd->win_w*MP_LRC_HEAD_H_SCALE_LS;
+	if (ad->screen_mode == MP_SCREEN_MODE_LANDSCAPE) {
+		int scale_h_ls = wd->win_w * MP_LRC_VIEW_H_SCALE_LS;
+		int scale_w_ls = wd->win_h * MP_LRC_VIEW_W_SCALE_LS;
+		int scale_head_h_ls = wd->win_w * MP_LRC_HEAD_H_SCALE_LS;
 
-		if ((y-y0) > (scale_h_ls/2 - scale_head_h_ls))
-		{
-			new_y = y-head_gap+(h)-(scale_h_ls/2 - scale_head_h_ls);
-		}
-		else
-		{
-			new_y = y-head_gap+(h/2)-(y-y0);
+		if ((y - y0) > (scale_h_ls / 2 - scale_head_h_ls)) {
+			new_y = y - head_gap + (h) - (scale_h_ls / 2 - scale_head_h_ls);
+		} else {
+			new_y = y - head_gap + (h / 2) - (y - y0);
 		}
 
 		elm_scroller_region_bring_in(wd->scroller, x, new_y, scale_w_ls, scale_h_ls);
-	}
-	else
-	{
-		int scale_h = wd->win_h*MP_LRC_VIEW_H_SCALE;
-		int scale_w = wd->win_w*MP_LRC_VIEW_W_SCALE;
-		int scale_head_h = wd->win_h*MP_LRC_HEAD_H_SCALE;
+	} else {
+		int scale_h = wd->win_h * MP_LRC_VIEW_H_SCALE;
+		int scale_w = wd->win_w * MP_LRC_VIEW_W_SCALE;
+		int scale_head_h = wd->win_h * MP_LRC_HEAD_H_SCALE;
 
-		if ((y-y0) > (scale_h/2 - scale_head_h))
-		{
-			new_y = y-head_gap+(h)-(scale_h/2 - scale_head_h);
-		}
-		else
-		{
-			new_y = y-head_gap+(h/2)-(y-y0);
+		if ((y - y0) > (scale_h / 2 - scale_head_h)) {
+			new_y = y - head_gap + (h) - (scale_h / 2 - scale_head_h);
+		} else {
+			new_y = y - head_gap + (h / 2) - (y - y0);
 		}
 
 		elm_scroller_region_bring_in(wd->scroller, x, new_y, scale_w, scale_h);
@@ -319,8 +310,7 @@ _mp_lyric_set_current_line(MpLyricData_t *wd, int index)
 
 	_mp_lyric_set_line_color(wd, wd->cur_line, wd->cur_line_index, MP_LRC_LINE_COLOR_PLAYING);
 
-	if (wd->prev_line != NULL)
-	{
+	if (wd->prev_line != NULL) {
 		_mp_lyric_set_line_color(wd, wd->prev_line, wd->prev_line_index, MP_LRC_LINE_COLOR_DEFAULT);
 	}
 
@@ -344,10 +334,14 @@ Evas_Object *mp_lyric_create(Evas_Object *parent, const char *path)
 	MP_CHECK_NULL(lyric_mgr);
 
 	wd = calloc(1, sizeof(MpLyricData_t));
-	if (!wd) goto ERROR;
+	if (!wd) {
+		goto ERROR;
+	}
 
 	lyric_layout = _create_lyric(parent, wd);
-	if (!lyric_layout) goto ERROR;
+	if (!lyric_layout) {
+		goto ERROR;
+	}
 
 	wd->lyric_mgr = lyric_mgr;
 
@@ -357,7 +351,7 @@ Evas_Object *mp_lyric_create(Evas_Object *parent, const char *path)
 
 	return lyric_layout;
 
-	ERROR:
+ERROR:
 	ERROR_TRACE("Unable to create lyric");
 	IF_FREE(wd);
 
@@ -371,27 +365,27 @@ void mp_lyric_sync_update(Evas_Object *lyric)
 	MpLyricData_t *wd =  evas_object_data_get(lyric, "wd");
 	MP_CHECK(wd);
 
-	if (wd->b_drag)
+	if (wd->b_drag) {
 		return;
+	}
 
-	if (wd->lyric_mgr)
-	{
+	if (wd->lyric_mgr) {
 		Eina_List *list = wd->lyric_mgr->synclrc_list;
-		if (!list) return;
+		if (!list) {
+			return;
+		}
 
 		int count = eina_list_count(list);
 		int pos = mp_player_mgr_get_position();
 		int index = 0;
 		//DEBUG_TRACE("pos=%d, count=%d", pos, count);
 		/* Get the current playing line */
-		for (index = 0; index < count-1; index++)
-		{
+		for (index = 0; index < count - 1; index++) {
 			mp_lrc_node_t *node1 = (mp_lrc_node_t*)eina_list_nth(list, index);
 			//mp_lrc_node_t *node2 = (mp_lrc_node_t*)eina_list_nth(list, index+1);
 			MP_CHECK(node1);
 			//MP_CHECK(node2);
-			if ((pos <= node1->time))
-			{
+			if ((pos <= node1->time)) {
 				//DEBUG_TRACE("node1->time=%ld", node1->time);
 				_mp_lyric_set_current_line(wd, index);
 				break;

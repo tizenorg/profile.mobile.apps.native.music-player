@@ -30,37 +30,37 @@ extern "C"
 {
 #endif
 
-int mp_file_exists(const char *path);
+	int mp_file_exists(const char *path);
 
-int mp_file_is_dir(const char *path);
+	int mp_file_is_dir(const char *path);
 
-int mp_file_path_dir_exists(const char *folderPath);
+	int mp_file_path_dir_exists(const char *folderPath);
 
-int mp_file_unlink(const char *filename);
+	int mp_file_unlink(const char *filename);
 
-int mp_file_size(const char *filename);
+	int mp_file_size(const char *filename);
 
-int mp_file_rmdir(const char *filename);
+	int mp_file_rmdir(const char *filename);
 
-int mp_file_dir_is_empty(const char *path);
+	int mp_file_dir_is_empty(const char *path);
 
-Eina_List *mp_file_ls(const char *dir);
+	Eina_List *mp_file_ls(const char *dir);
 
-int mp_file_recursive_rm(const char *dir);
+	int mp_file_recursive_rm(const char *dir);
 
-char* mp_file_dir_get(const char path[]);
+	char* mp_file_dir_get(const char path[]);
 
-int mp_file_mkpath(char *path);
+	int mp_file_mkpath(char *path);
 
-int mp_file_mv(const char *src, const char *dst);
+	int mp_file_mv(const char *src, const char *dst);
 
-int mp_file_cp(const char *src, const char *dst);
+	int mp_file_cp(const char *src, const char *dst);
 
-int mp_file_remove(const char *path);
+	int mp_file_remove(const char *path);
 
-char * mp_file_file_get(char path[]);
+	char * mp_file_file_get(char path[]);
 
-char *mp_file_strip_ext(const char *path);
+	char *mp_file_strip_ext(const char *path);
 #ifdef __cplusplus
 }
 #endif

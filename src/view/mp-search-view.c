@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-search-view.h"
@@ -57,8 +57,8 @@ static void _mp_search_view_update_option_clear(void *thiz)
 
 	/* destroy back button */
 	Evas_Object *btn = NULL;
-	btn = elm_object_item_part_content_unset(view->navi_it, 
-		"toolbar_more_btn");
+	btn = elm_object_item_part_content_unset(view->navi_it,
+	        "toolbar_more_btn");
 	mp_evas_object_del(btn);
 	endfunc
 }
@@ -91,10 +91,10 @@ static int _mp_search_view_update_options(void *thiz)
 
 	_mp_search_view_update_option_clear(view);
 
-	elm_naviframe_item_title_enabled_set(view->navi_it, 
-		(Eina_Bool)EINA_FALSE, false);
-	elm_naviframe_item_pop_cb_set(view->navi_it, 
-		_mp_search_view_back_cb, view);
+	elm_naviframe_item_title_enabled_set(view->navi_it,
+	                                     (Eina_Bool)EINA_FALSE, false);
+	elm_naviframe_item_pop_cb_set(view->navi_it,
+	                              _mp_search_view_back_cb, view);
 
 	/* update the first controlba item */
 	/* mp_view_manager_update_first_controlbar_item(layout_data); */
@@ -126,8 +126,8 @@ _mp_search_view_update_list_timer_cb(void *data)
 
 
 static void
-_mp_search_view_keyword_changed_cb(void *data, 
-	Evas_Object *obj, void *event_info)
+_mp_search_view_keyword_changed_cb(void *data,
+                                   Evas_Object *obj, void *event_info)
 {
 	MpSearchView_t *view = (MpSearchView_t *) data;
 	MP_CHECK(view);
@@ -139,21 +139,23 @@ _mp_search_view_keyword_changed_cb(void *data,
 	if (search_str) {
 		int length = strlen(search_str);
 		if (length > 0) {
-			elm_object_signal_emit(view->search_bar, 
-				"image,enable,1", "*");
+			elm_object_signal_emit(view->search_bar,
+			                       "image,enable,1", "*");
 		} else {
-			elm_object_signal_emit(view->search_bar, 
-				"image,disable,1", "*");
+			elm_object_signal_emit(view->search_bar,
+			                       "image,disable,1", "*");
 		}
 	}
 	if (search_str) {
-		if (view->needle)
+		if (view->needle) {
 			free(view->needle);
+		}
 		view->needle = search_str;
 		/* signal = "hide.screen"; */
 	} else {
-		if (view->needle)
+		if (view->needle) {
 			free(view->needle);
+		}
 		/* signal = "show.screen"; */
 	}
 	/*when create search view, we use this first_called flag to load genlsit
@@ -165,8 +167,8 @@ _mp_search_view_keyword_changed_cb(void *data,
 		view->needle_change = TRUE;
 	}
 	mp_ecore_timer_del(view->search_timer);
-	view->search_timer = ecore_timer_add(0.1, 
-	_mp_search_view_update_list_timer_cb, view);
+	view->search_timer = ecore_timer_add(0.1,
+	                                     _mp_search_view_update_list_timer_cb, view);
 }
 
 
@@ -179,13 +181,13 @@ _mp_search_view_create_search_bar(void *thiz)
 	MP_CHECK(view->search_base_layout);
 
 	view->search_bar = mp_search_create_new(view->search_base_layout,
-			_mp_search_view_keyword_changed_cb, view, NULL, NULL,
-			NULL, view, NULL, view);
+	                                        _mp_search_view_keyword_changed_cb, view, NULL, NULL,
+	                                        NULL, view, NULL, view);
 	MP_CHECK(view->search_base_layout);
 	evas_object_show(mp_search_entry_get(view->search_bar));
 	/*elm_object_focus_set(mp_search_entry_get(view->search_bar), TRUE);
 
-	elm_object_signal_callback_add(view->search_view_layout, 
+	elm_object_signal_callback_add(view->search_view_layout,
 	SIGNAL_MOUSE_CLICK, "elm.rect.screen", _mp_search_view_screen_
 	clicked_cb, view); */
 	endfunc;
@@ -198,28 +200,28 @@ static void _mp_search_view_content_load(void *thiz)
 	MpSearchView_t *view = (MpSearchView_t *)thiz;
 	MP_CHECK(view);
 
-	/* when keyword change, we hide items, 
+	/* when keyword change, we hide items,
 	do not need create genlist again */
 	if (view->needle_change) {
 		MpSearchList_t* list = (MpSearchList_t *)view->content_to_show;
-		mp_search_list_set_data(list, 
-			MP_SEARCH_LIST_FILTER_STR, view->needle, -1);
+		mp_search_list_set_data(list,
+		                        MP_SEARCH_LIST_FILTER_STR, view->needle, -1);
 		list->refresh(list);
 	} else {
 		Evas_Object *content = elm_object_part_content_unset(
-			view->search_view_layout, "elm.swallow.content");
+		                           view->search_view_layout, "elm.swallow.content");
 		evas_object_del(content);
 
 		view->content_to_show = (MpList_t *)mp_search_list_create(
-			view->layout);
+		                            view->layout);
 		mp_search_list_set_data((MpSearchList_t *)view->content_to_show
-			, MP_SEARCH_LIST_FILTER_STR, view->needle, -1);
+		                        , MP_SEARCH_LIST_FILTER_STR, view->needle, -1);
 
 		mp_list_update(view->content_to_show);
 		layout = mp_list_get_layout(view->content_to_show);
 		if (layout != NULL) {
 			elm_object_part_content_set(view->search_view_layout,
-				"elm.swallow.content", layout);
+			                            "elm.swallow.content", layout);
 		}
 	}
 }
@@ -236,28 +238,27 @@ _mp_search_view_on_event_cb(void *thiz, MpViewEvent_e event)
 		view->transition = false;
 		if ((int)mp_view_mgr_get_top_view(GET_VIEW_MGR) == (int)view) {
 			elm_object_focus_allow_set(mp_search_entry_get(view->
-				search_bar), EINA_TRUE);
+			                           search_bar), EINA_TRUE);
 			elm_object_focus_set(mp_search_entry_get(view->
-				search_bar), EINA_TRUE);
+			                     search_bar), EINA_TRUE);
 		}
 		break;
-	case MP_SIP_STATE_CHANGED:
-		{
-			if ((int)mp_view_mgr_get_top_view(GET_VIEW_MGR) == 
-				(int)view) {
-				struct appdata *ad = mp_util_get_appdata();
-				if (ad->sip_state) {
-					elm_object_focus_allow_set(
-					mp_search_entry_get(view->search_bar), 
-						EINA_TRUE);
-				} else {
-					elm_object_focus_allow_set(
-						mp_search_entry_get(view->search_bar), 
-						EINA_FALSE);
-				}
+	case MP_SIP_STATE_CHANGED: {
+		if ((int)mp_view_mgr_get_top_view(GET_VIEW_MGR) ==
+		        (int)view) {
+			struct appdata *ad = mp_util_get_appdata();
+			if (ad->sip_state) {
+				elm_object_focus_allow_set(
+				    mp_search_entry_get(view->search_bar),
+				    EINA_TRUE);
+			} else {
+				elm_object_focus_allow_set(
+				    mp_search_entry_get(view->search_bar),
+				    EINA_FALSE);
 			}
 		}
-		break;
+	}
+	break;
 	default:
 		break;
 	}
@@ -272,14 +273,15 @@ _mp_search_view_rotate_cb(void *thiz, int randscape)
 	MP_CHECK(view);
 
 	if (mp_util_get_sip_state() && (int)mp_view_mgr_get_top_view
-	(GET_VIEW_MGR) == (int)view)
+	        (GET_VIEW_MGR) == (int)view) {
 		_mp_search_view_on_event_cb(view, MP_SIP_STATE_CHANGED);
+	}
 }
 #endif
 
 static void
-_mp_search_view_back_button_clicked(void *data, Evas_Object *o, 
-	const char *emission, const char *source)
+_mp_search_view_back_button_clicked(void *data, Evas_Object *o,
+                                    const char *emission, const char *source)
 {
 	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 	MP_CHECK(view_mgr);
@@ -320,16 +322,16 @@ _mp_search_view_init(Evas_Object *parent, MpSearchView_t *view)
 	double scale = elm_config_scale_get();
 	if ((scale - 1.8) < 0.0001) {
 		elm_layout_theme_set(view->search_view_layout,
-				"layout", "application", "search_view_layout_wvga");
+		                     "layout", "application", "search_view_layout_wvga");
 	} else if ((scale - 2.6) < 0.0001) {
 		elm_layout_theme_set(view->search_view_layout,
-				"layout", "application", "search_view_layout_hd");
+		                     "layout", "application", "search_view_layout_hd");
 	} else {
 		elm_layout_theme_set(view->search_view_layout,
-				"layout", "application", "search_view_layout_qhd");
+		                     "layout", "application", "search_view_layout_qhd");
 	}
 	elm_object_part_content_set(view->layout,
-		"list_content", view->search_view_layout);
+	                            "list_content", view->search_view_layout);
 
 	/* search bar Base Layout */
 	Elm_Theme *th1 = elm_theme_new();
@@ -337,17 +339,17 @@ _mp_search_view_init(Evas_Object *parent, MpSearchView_t *view)
 
 	view->search_base_layout  = elm_layout_add(view->search_view_layout);
 	elm_layout_theme_set(view->search_base_layout,
-			"layout", "application", "searches");
+	                     "layout", "application", "searches");
 	elm_object_part_content_set(view->search_view_layout,
-			"search_bar", view->search_base_layout);
+	                            "search_bar", view->search_base_layout);
 
 	_mp_search_view_create_search_bar(view);
 	elm_object_part_content_set(view->search_base_layout,
-		"searching", view->search_bar);
+	                            "searching", view->search_bar);
 
 	edje_object_signal_callback_add(_EDJ(view->search_base_layout),
-		"elm,action,click", "back_button", 
-		_mp_search_view_back_button_clicked, view);
+	                                "elm,action,click", "back_button",
+	                                _mp_search_view_back_button_clicked, view);
 	return ret;
 }
 
@@ -361,7 +363,9 @@ MpSearchView_t *mp_search_view_create(Evas_Object *parent, const char *keyword)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_search_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	view->needle = g_strdup(keyword);
 

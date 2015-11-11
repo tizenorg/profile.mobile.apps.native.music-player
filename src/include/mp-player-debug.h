@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -109,35 +109,35 @@
 #define SECURE_ERROR(fmt, args...)	SECURE_LOGD("[T:%d] " fmt, gettid(), ##args)
 
 #define SM_ERROR_CHECK(err)\
-do{\
-	if(err != SM_ERROR_NONE)\
-		ERROR_TRACE("Error!! [%d]", err);\
-}while(0);\
-
+	do{\
+		if(err != SM_ERROR_NONE)\
+			ERROR_TRACE("Error!! [%d]", err);\
+	}while(0);\
+	 
 #else // use USE_DLOG_SYSTEM
 
 #define mp_debug(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define mp_error(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define VER_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define DEBUG_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define INFO_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define WARN_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define EVENT_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define ERROR_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define mp_debug_temp(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define TIMER_TRACE(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 #define PARAM_CHECK(fmt, arg...) do{fprintf(stderr, "[%s : %s-%d]\t - \n", __FILE__, __func__, __LINE__);\
-	    fprintf (stderr, __VA_ARGS__);}while(0)
+		fprintf (stderr, __VA_ARGS__);}while(0)
 
 #define PROFILE_IN(func)
 #define PROFILE_OUT(func)
@@ -178,38 +178,38 @@ do{\
 #endif
 
 #define mp_ret_if(expr) do { \
-	if(expr) { \
-		PARAM_CHECK("");\
-		return; \
-	} \
-} while (0)
+		if(expr) { \
+			PARAM_CHECK("");\
+			return; \
+		} \
+	} while (0)
 #define mp_retv_if(expr, val) do { \
-	if(expr) { \
-		PARAM_CHECK("");\
-		return (val); \
-	} \
-} while (0)
+		if(expr) { \
+			PARAM_CHECK("");\
+			return (val); \
+		} \
+	} while (0)
 
 #define mp_retm_if(expr, fmt, arg...) do { \
-	if(expr) { \
-		PARAM_CHECK(fmt, ##arg); \
-		return; \
-	} \
-} while (0)
+		if(expr) { \
+			PARAM_CHECK(fmt, ##arg); \
+			return; \
+		} \
+	} while (0)
 
 #define mp_retvm_if(expr, val, fmt, arg...) do { \
-	if(expr) { \
-		PARAM_CHECK(fmt, ##arg); \
-		return (val); \
-	} \
-} while (0)
+		if(expr) { \
+			PARAM_CHECK(fmt, ##arg); \
+			return (val); \
+		} \
+	} while (0)
 
 #define MP_CHECK_EXCEP(expr) do { \
-	if(!(expr)) { \
-		ERROR_TRACE("CRITICAL ERROR ## CHECK BELOW ITEM");\
-		goto mp_exception;\
-	} \
-} while (0)
+		if(!(expr)) { \
+			ERROR_TRACE("CRITICAL ERROR ## CHECK BELOW ITEM");\
+			goto mp_exception;\
+		} \
+	} while (0)
 
 #define MP_CHECK_VAL(expr, val) 	mp_retvm_if(!(expr),val,"INVALID PARM RETURN VAL: 0x%x", val)
 #define MP_CHECK_NULL(expr) 		mp_retvm_if(!(expr),NULL,"INVALID PARM RETURN NULL")
@@ -218,11 +218,11 @@ do{\
 #define MP_CHECK(expr) 				mp_retm_if(!(expr),"INVALID PARAM RETURN")
 
 #define mp_assert(expr) do { \
-	if(!(expr)) { \
-		ERROR_TRACE("CRITICAL ERROR ## CHECK BELOW ITEM");\
-		assert(FALSE); \
-	} \
-} while (0)
+		if(!(expr)) { \
+			ERROR_TRACE("CRITICAL ERROR ## CHECK BELOW ITEM");\
+			assert(FALSE); \
+		} \
+	} while (0)
 
 
 #endif // __MP_PLAYER_DEBUG_H_

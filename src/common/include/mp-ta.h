@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef _MP_TA_H_
@@ -31,14 +31,12 @@
 #define MP_TA_MAX_CHECKPOINT	500
 #define MP_TA_MAX_ACCUM		500
 
-typedef struct _mp_ta_checkpoint
-{
+typedef struct _mp_ta_checkpoint {
 	unsigned long timestamp;
 	char *name;
 } mp_ta_checkpoint;
 
-typedef struct _mp_ta_accum_item
-{
+typedef struct _mp_ta_accum_item {
 	unsigned long elapsed_accum;
 	unsigned long num_calls;
 	unsigned long elapsed_min;
@@ -113,60 +111,60 @@ MP_TA_ACUM_ITEM_END(name, 0);
 */
 
 #define TA(start, label)\
-do{\
-	if(start)\
-		TA_S(label);\
-	else\
-		TA_E(label);\
-}while(0)
+	do{\
+		if(start)\
+			TA_S(label);\
+		else\
+			TA_E(label);\
+	}while(0)
 
 #define TA_PADDING "  "
 
 #define TA_S(label)\
-do{\
-	if(!mp_ta_is_init())\
-		break;\
-	char buf[128] = {0,};\
-	int i = 0, pos = 0, level = 0;\
-	level = mp_ta_increase_level();\
-	while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
-	snprintf(buf+pos, 128-pos, "%s", label);\
-	mp_ta_accum_item_begin(buf,0,__FILE__,__LINE__);\
-}while(0)
+	do{\
+		if(!mp_ta_is_init())\
+			break;\
+		char buf[128] = {0,};\
+		int i = 0, pos = 0, level = 0;\
+		level = mp_ta_increase_level();\
+		while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
+		snprintf(buf+pos, 128-pos, "%s", label);\
+		mp_ta_accum_item_begin(buf,0,__FILE__,__LINE__);\
+	}while(0)
 
 #define TA_E(label)\
-do{\
-	if(!mp_ta_is_init())\
-		break;\
-	char buf[128] = {0,};\
-	int i = 0, pos = 0, level = 0;\
-	level = mp_ta_decrease_level();\
-	while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
-	snprintf(&buf[pos], 128-pos, "%s", label);\
-	mp_ta_accum_item_end(buf,0,__FILE__,__LINE__);\
-}while(0)
+	do{\
+		if(!mp_ta_is_init())\
+			break;\
+		char buf[128] = {0,};\
+		int i = 0, pos = 0, level = 0;\
+		level = mp_ta_decrease_level();\
+		while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
+		snprintf(&buf[pos], 128-pos, "%s", label);\
+		mp_ta_accum_item_end(buf,0,__FILE__,__LINE__);\
+	}while(0)
 
 #define TA_S_L(level, label)\
-do{\
-	if(!mp_ta_is_init())\
-		break;\
-	char buf[128] = {0,};\
-	int i = 0, pos = 0;\
-	while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
-	snprintf(buf+pos, 128-pos, "%s", label);\
-	mp_ta_accum_item_begin(buf,0,__FILE__,__LINE__);\
-}while(0)
+	do{\
+		if(!mp_ta_is_init())\
+			break;\
+		char buf[128] = {0,};\
+		int i = 0, pos = 0;\
+		while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
+		snprintf(buf+pos, 128-pos, "%s", label);\
+		mp_ta_accum_item_begin(buf,0,__FILE__,__LINE__);\
+	}while(0)
 
 #define TA_E_L(level, label)\
-do{\
-	if(!mp_ta_is_init())\
-		break;\
-	char buf[128] = {0,};\
-	int i = 0, pos = 0;\
-	while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
-	snprintf(&buf[pos], 128-pos, "%s", label);\
-	mp_ta_accum_item_end(buf,0,__FILE__,__LINE__);\
-}while(0)
+	do{\
+		if(!mp_ta_is_init())\
+			break;\
+		char buf[128] = {0,};\
+		int i = 0, pos = 0;\
+		while(i < level){pos += snprintf(buf+pos, 128-pos, TA_PADDING); i++;}\
+		snprintf(&buf[pos], 128-pos, "%s", label);\
+		mp_ta_accum_item_end(buf,0,__FILE__,__LINE__);\
+	}while(0)
 
 #else //#ifdef ENABLE_MP_TA
 

@@ -1,18 +1,18 @@
 /*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -57,8 +57,7 @@
 
 //E_DBus_Connection *EDBusHandle;
 
-typedef struct
-{
+typedef struct {
 
 	/* controlbar tab item */
 	Elm_Object_Item *ctltab_songs;
@@ -78,15 +77,14 @@ typedef struct
 #define MP_VIEW_DATA_MAGIC	0x801211aa
 #define MP_SET_VIEW_DATA_MAGIC(view_data)	((view_data_t *)view_data)->magic = MP_VIEW_DATA_MAGIC
 #define MP_CHECK_VIEW_DATA(view_data)	\
-do {                                                  \
-	if (((view_data_t *)view_data)->magic != MP_VIEW_DATA_MAGIC) {        \
-		ERROR_TRACE("\n###########      ERROR   CHECK  #############\nPARAM is not view_data\n###########      ERROR   CHECK  #############\n"); \
-		mp_assert(FALSE);}            \
-} while (0)
+	do {                                                  \
+		if (((view_data_t *)view_data)->magic != MP_VIEW_DATA_MAGIC) {        \
+			ERROR_TRACE("\n###########      ERROR   CHECK  #############\nPARAM is not view_data\n###########      ERROR   CHECK  #############\n"); \
+			mp_assert(FALSE);}            \
+	} while (0)
 
 
-typedef struct
-{
+typedef struct {
 	Evas_Object *layout;
 	void *EvasPlugin;
 	Evas_Object *box;
@@ -120,8 +118,7 @@ typedef struct
 	struct appdata *ad;
 } mp_coverflow_view;
 
-typedef struct
-{
+typedef struct {
 	char *uri;
 	char *title;
 	char *artist;
@@ -146,10 +143,9 @@ typedef struct
 	bool isDiffAP;
 
 	mp_track_type track_type;
-}mp_track_info_t;
+} mp_track_info_t;
 
-enum
-{
+enum {
 	MP_CREATE_PLAYLIST_MODE_NONE,
 	MP_CREATE_PLAYLIST_MODE_NEW,
 	MP_CREATE_PLAYLIST_MODE_WITHMUSICS,
@@ -157,8 +153,7 @@ enum
 	MP_CREATE_PLAYLIST_MODE_SWEEP
 };
 
-typedef enum
-{
+typedef enum {
 	MP_LAUNCH_DEFAULT = 0,	//normal case
 	MP_LAUNCH_BY_PATH,		//ug case
 	MP_LAUNCH_ADD_TO_HOME,	//add to home
@@ -170,8 +165,7 @@ typedef enum
 
 } mp_launch_type;
 
-typedef enum
-{
+typedef enum {
 	LOAD_DEFAULT,
 	LOAD_TRACK,		//load by path
 	LOAD_GROUP,		//load by shortcut
@@ -181,14 +175,12 @@ typedef enum
 
 } mp_load_type;
 
-typedef enum
-{
+typedef enum {
 	MP_SPLIT_VIEW_TYPE_NORMAL = 0,
 	MP_SPLIT_VIEW_TYPE_FULL,
 } mp_split_view_type;
 
-typedef struct mp_split_view
-{
+typedef struct mp_split_view {
 	Evas_Object *layout;
 	Evas_Object *left_layout;
 	Evas_Object *right_layout;
@@ -199,8 +191,7 @@ typedef struct mp_split_view
 	Ecore_Idler *idle_idler;
 } mp_split_view;
 
-typedef enum
-{
+typedef enum {
 	PLAY_STATE_NONE,
 	PLAY_STATE_CREATED,
 	PLAY_STATE_PREPARING,
@@ -234,8 +225,7 @@ typedef enum {
 	MP_DEVICE_TYPE_TV,
 } mp_device_type_e;
 
-struct appdata
-{
+struct appdata {
 
 	Evas *evas;
 	Evas_Object *win_main;
@@ -293,7 +283,7 @@ struct appdata
 
 	struct {
 		bool  downed;
-        	bool  moving;
+		bool  moving;
 		Evas_Coord sx;
 		Evas_Coord sy;
 	} mouse;
@@ -326,12 +316,12 @@ struct appdata
 #endif
 	Evas_Object *win_minicon;
 	Evas_Object *minicontroller_layout;
-        Evas_Object *progress_box;
-        Evas_Object *progress_layout;
-        Evas_Object *progress_bar;
+	Evas_Object *progress_box;
+	Evas_Object *progress_layout;
+	Evas_Object *progress_bar;
 	Evas_Object *minicon_icon;
 	Ecore_Timer *minicon_progress_timer;
-        Ecore_Timer *minicon_button_timer;
+	Ecore_Timer *minicon_button_timer;
 	bool b_minicontroller_show;
 	bool minicon_visible;
 	int quickpanel_angle;
@@ -468,7 +458,7 @@ struct appdata
 	Ecore_Job *exit_job;
 
 	bool store_enable;
-        bool mirror_to_local;
+	bool mirror_to_local;
 
 	int samsung_link;
 	int disable_change_player;
@@ -481,16 +471,14 @@ struct appdata
 };
 
 
-typedef void (*mpOptCallBack) (void *, Evas_Object *, void *);
+typedef void (*mpOptCallBack)(void *, Evas_Object *, void *);
 
-typedef struct
-{
+typedef struct {
 	const char *name;
 	mpOptCallBack cb;
 } MpOptItemType;
 
-typedef struct
-{
+typedef struct {
 	MpOptItemType *l_opt;
 	MpOptItemType *m_opt;
 	MpOptItemType *r_opt;

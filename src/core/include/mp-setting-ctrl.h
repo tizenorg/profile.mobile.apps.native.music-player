@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_SETTING_CTRL_H_
@@ -27,8 +27,8 @@
 #endif
 
 
-typedef void (*MpSettingPlaylist_Cb) (int state, void *data);
-typedef void (*MpSettingSaChange_Cb) (int state, void *data);
+typedef void (*MpSettingPlaylist_Cb)(int state, void *data);
+typedef void (*MpSettingSaChange_Cb)(int state, void *data);
 typedef void (*MpSettingAutoOff_Cb)(int min, void *data);
 typedef void (*MpSettingPlaySpeed_Cb)(double speed, void *data);
 
@@ -47,7 +47,7 @@ void mp_setting_save_now_playing(void *ad);
 void mp_setting_save_playing_info(void *ad);
 void mp_setting_get_now_playing_path_from_file(char **path);
 void mp_setting_save_shortcut(char *shortcut_title, char *artist, char *shortcut_description,
-			      char *shortcut_image_path);
+                              char *shortcut_image_path);
 
 void mp_setting_remove_now_playing_shared_status(void);
 void mp_setting_remove_now_playing(void);

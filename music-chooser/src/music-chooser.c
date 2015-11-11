@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef MC_MODULE_API
@@ -45,32 +45,31 @@ _mc_app_control_extra_data_cb(app_control_h service, const char *key, void *user
 	app_control_get_extra_data(service, key, &val);
 	DEBUG_TRACE("key: %s, val: %s", key, val);
 
-	if (!g_strcmp0(key, MC_REQ_TYPE_KEY))
-	{
-		if (!g_strcmp0(val, MC_REQ_SHORT_ALBUM_VAL))
+	if (!g_strcmp0(key, MC_REQ_TYPE_KEY)) {
+		if (!g_strcmp0(val, MC_REQ_SHORT_ALBUM_VAL)) {
 			ad->select_type = MC_SHORTCUT_ALBUM;
-		else if (!g_strcmp0(val, MC_REQ_SHORT_PLAYLIST_VAL))
+		} else if (!g_strcmp0(val, MC_REQ_SHORT_PLAYLIST_VAL)) {
 			ad->select_type = MC_SHORTCUT_PLAYLIST;
-		else if (!g_strcmp0(val, MC_REQ_SHORT_ARTIST_VAL))
+		} else if (!g_strcmp0(val, MC_REQ_SHORT_ARTIST_VAL)) {
 			ad->select_type = MC_SHORTCUT_ARTIST;
-		else if (!g_strcmp0(val, MC_REQ_SELECT_SINGLE))
+		} else if (!g_strcmp0(val, MC_REQ_SELECT_SINGLE)) {
 			ad->select_type = MC_SELECT_SINGLE;
-		else if (!g_strcmp0(val, MC_REQ_SELECT_SINGLE_RINGTONE))
-		{
+		} else if (!g_strcmp0(val, MC_REQ_SELECT_SINGLE_RINGTONE)) {
 			ad->select_type = MC_SELECT_SINGLE_RINGTONE;
 			app_control_get_extra_data(service, MC_SELECT_URI_KEY, &ad->select_uri);
-		}
-		else if (!g_strcmp0(val, MC_REQ_SELECT_MULTI))
+		} else if (!g_strcmp0(val, MC_REQ_SELECT_MULTI)) {
 			ad->select_type = MC_SELECT_MULTI;
-		else if (!g_strcmp0(val, MC_REQ_VOICE_CLIP))
+		} else if (!g_strcmp0(val, MC_REQ_VOICE_CLIP)) {
 			ad->select_type = MC_SELECT_VOICE_CLIP;
-		else if (!g_strcmp0(val, MC_REQ_GROUP_PLAY))
+		} else if (!g_strcmp0(val, MC_REQ_GROUP_PLAY)) {
 			ad->select_type = MC_SELECT_GROUP_PLAY;
-		else
+		} else {
 			WARN_TRACE("unsupported type: %s", val);
+		}
 	} else if (!g_strcmp0(key, MC_REQ_SHOW_RECOMMENDED_KEY)) {
-		if (!g_strcmp0(val, MC_SHOW_VAL))
+		if (!g_strcmp0(val, MC_SHOW_VAL)) {
 			ad->auto_recommended_show = TRUE;
+		}
 	}
 
 	IF_FREE(val);
@@ -88,8 +87,7 @@ _parse_service(struct app_data *ad, app_control_h service)
 	app_control_get_operation(service, &operation);
 	DEBUG_TRACE("operation: %s", operation);
 
-	if (!g_strcmp0(operation, APP_CONTROL_OPERATION_PICK))
-	{
+	if (!g_strcmp0(operation, APP_CONTROL_OPERATION_PICK)) {
 		ad->max_count = 0;
 #if 0
 		app_control_get_extra_data(service, APP_CONTROL_DATA_TOTAL_COUNT, &value);
@@ -132,7 +130,7 @@ _mc_create_fullview(Evas_Object * parent, struct app_data *ad)
 
 	base_layout = elm_layout_add(parent);
 
-	mp_retv_if (base_layout == NULL, NULL);
+	mp_retv_if(base_layout == NULL, NULL);
 
 	elm_layout_theme_set(base_layout, "layout", "application", "default");
 
@@ -144,7 +142,7 @@ _mc_create_navigation_layout(Evas_Object * parent)
 {
 	Evas_Object *navi_bar;
 
-	mp_retv_if (parent == NULL, NULL);
+	mp_retv_if(parent == NULL, NULL);
 
 	navi_bar = elm_naviframe_add(parent);
 	evas_object_show(navi_bar);
@@ -159,11 +157,11 @@ _mc_create_navigation_layout(Evas_Object * parent)
 static Evas_Object *
 _mc_crete_bg(Evas_Object *parent)
 {
-    Evas_Object *bg = elm_bg_add(parent);
-    evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-    elm_object_style_set(bg, "group_list");
-    evas_object_show(bg);
-    return bg;
+	Evas_Object *bg = elm_bg_add(parent);
+	evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	elm_object_style_set(bg, "group_list");
+	evas_object_show(bg);
+	return bg;
 }
 
 static bool
@@ -193,7 +191,7 @@ mc_create(void *data)
 	ad->conformant = conformant;
 
 	//support light theme
-	elm_theme_extension_add(NULL,"/usr/apps/org.tizen.music-player/res/edje/mp-custom-winset-style.edj");
+	elm_theme_extension_add(NULL, "/usr/apps/org.tizen.music-player/res/edje/mp-custom-winset-style.edj");
 
 
 	DEBUG_TRACE("end");
@@ -221,23 +219,23 @@ mc_app_control(app_control_h app_control, void* data)
 
 	ad->base_layout = _mc_create_fullview(ad->conformant, ad);
 
-	if (ad->base_layout)
-	{
+	if (ad->base_layout) {
 		Evas_Object *bg = _mc_crete_bg(ad->base_layout);
-		if (bg)
+		if (bg) {
 			elm_win_resize_object_add(parent, bg);
+		}
 
 		elm_object_part_content_set(ad->base_layout, "elm.swallow.bg", bg);
 		ad->navi_bar = _mc_create_navigation_layout(ad->base_layout);
 		elm_object_part_content_set(ad->base_layout, "elm.swallow.content", ad->navi_bar);
 	}
-	if (ad->select_type >= MC_SHORTCUT_ALBUM)
+	if (ad->select_type >= MC_SHORTCUT_ALBUM) {
 		mc_select_view_create(ad);
-	else
+	} else {
 		mc_library_view_create(ad);
+	}
 
-	if (ad->select_type == MC_SELECT_SINGLE_RINGTONE)
-	{
+	if (ad->select_type == MC_SELECT_SINGLE_RINGTONE) {
 		mc_vol_type_set(SOUND_TYPE_MEDIA);
 	}
 
@@ -286,8 +284,7 @@ mc_device_orientation(app_event_info_h event_info, void *data)
 	app_device_orientation_e orientation = APP_DEVICE_ORIENTATION_0;
 	app_event_get_device_orientation(event_info, &orientation);
 
-	switch (orientation)
-	{
+	switch (orientation) {
 	case APP_DEVICE_ORIENTATION_270:
 		angle = -90;
 		break;
@@ -319,10 +316,8 @@ mc_destroy(void *data)
 	struct app_data *ad = data;
 
 	mp_media_info_disconnect();
-	if (ad)
-	{
-		if (ad->base_layout)
-		{
+	if (ad) {
+		if (ad->base_layout) {
 			evas_object_del(ad->base_layout);
 			ad->base_layout = NULL;
 		}
@@ -332,8 +327,7 @@ mc_destroy(void *data)
 
 		elm_win_lower(ad->win);
 
-		if (ad->smat_pipe)
-		{
+		if (ad->smat_pipe) {
 			ecore_pipe_del(ad->smat_pipe);
 			ad->smat_pipe = NULL;
 		}
@@ -376,17 +370,17 @@ main(int argc, char *argv[])
 	event_callbacks.resume = mc_resume;
 	event_callbacks.terminate = mc_destroy;
 
-	nRet = ui_app_add_event_handler(&hLowMemoryHandle, APP_EVENT_LOW_MEMORY,  NULL, (void*)&ad );
+	nRet = ui_app_add_event_handler(&hLowMemoryHandle, APP_EVENT_LOW_MEMORY,  NULL, (void*)&ad);
 	if (nRet != APP_ERROR_NONE) {
 		WARN_TRACE("APP_EVENT_LOW_MEMORY ui_app_add_event_handler failed : [%d]!!!", nRet);
 	}
 
-	nRet = ui_app_add_event_handler(&hLowBatteryHandle, APP_EVENT_LOW_BATTERY, NULL, (void*)&ad );
+	nRet = ui_app_add_event_handler(&hLowBatteryHandle, APP_EVENT_LOW_BATTERY, NULL, (void*)&ad);
 	if (nRet != APP_ERROR_NONE) {
 		WARN_TRACE("APP_EVENT_LOW_BATTERY ui_app_add_event_handler failed : [%d]!!!", nRet);
 	}
 
-	nRet = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, __mc_language_changed_cb, (void*)&ad );
+	nRet = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, __mc_language_changed_cb, (void*)&ad);
 	if (nRet != APP_ERROR_NONE) {
 		WARN_TRACE("APP_EVENT_LANGUAGE_CHANGED ui_app_add_event_handler failed : [%d]!!!", nRet);
 	}
@@ -397,13 +391,14 @@ main(int argc, char *argv[])
 //		return -1;
 //	}
 
-	nRet = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, NULL, (void*)&ad );
+	nRet = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, NULL, (void*)&ad);
 	if (nRet != APP_ERROR_NONE) {
 		WARN_TRACE("APP_EVENT_REGION_FORMAT_CHANGED ui_app_add_event_handler failed : [%d]!!!", nRet);
 	}
 
 	int ret = ui_app_main(argc, argv, &event_callbacks, &ad);
-	if (ret != 0)
+	if (ret != 0) {
 		ERROR_TRACE("ret failed %d", ret);
+	}
 	return ret;
 }

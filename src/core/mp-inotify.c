@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifdef MP_ENABLE_INOTIFY
@@ -85,7 +85,7 @@ _mp_app_inotify_watch_thread(gpointer user_data)
 	mp_inotify_t *handle = (mp_inotify_t *) user_data;
 	int oldtype = 0;
 
-	mp_retvm_if (handle == NULL, NULL, "handle is NULL");
+	mp_retvm_if(handle == NULL, NULL, "handle is NULL");
 	DEBUG_TRACE("Create _mp_app_inotify_watch_thread!!! ");
 
 	pthread_setcanceltype(PTHREAD_CANCEL_DEFERRED, &oldtype);
@@ -111,7 +111,7 @@ _mp_app_inotify_watch_thread(gpointer user_data)
 
 			if (pevent->len && strncmp(pevent->name, ".", 1) == 0) {
 				s_event = MP_INOTI_NONE;
-			} else if (pevent->mask & IN_ISDIR)	/* directory */{
+			} else if (pevent->mask & IN_ISDIR) {	/* directory */
 				/*
 				if (pevent->mask & IN_DELETE_SELF)
 				s_event = MP_INOTI_DELETE_SELF;
@@ -131,7 +131,7 @@ _mp_app_inotify_watch_thread(gpointer user_data)
 				if (pevent->mask & IN_MOVED_TO)
 				s_event = MP_INOTI_MOVE_IN;
 				 */
-			} else	/* file */{
+			} else {	/* file */
 				if (pevent->mask & IN_CREATE) {
 					s_event = MP_INOTI_NONE;
 					handle->prev_event = IN_CREATE;
@@ -144,8 +144,9 @@ _mp_app_inotify_watch_thread(gpointer user_data)
 					handle->prev_event = MP_INOTI_NONE;
 				}
 
-				if (pevent->mask & IN_DELETE)
+				if (pevent->mask & IN_DELETE) {
 					s_event = MP_INOTI_DELETE;
+				}
 
 				if (pevent->mask & IN_MODIFY) {
 					s_event = MP_INOTI_MODIFY;
@@ -168,8 +169,9 @@ _mp_app_inotify_watch_thread(gpointer user_data)
 
 			i += sizeof(struct inotify_event) + pevent->len;
 
-			if (i >= MP_EVENT_BUF_LEN)
+			if (i >= MP_EVENT_BUF_LEN) {
 				break;
+			}
 		}
 	}
 
@@ -239,17 +241,20 @@ _mp_app_inotify_add_recursive_watch(const char *path, void *ad)
 	}
 
 	dp = opendir(sub_path);
-	if (dp == NULL)
+	if (dp == NULL) {
 		return;
+	}
 
 	while ((entry = (struct dirent *)readdir(dp)) != NULL) {
-		if (entry->d_name[0] == '.')
+		if (entry->d_name[0] == '.') {
 			continue;
+		}
 
 		IF_FREE(sub_path);
 		sub_path = g_strdup_printf("%s/%s", path, entry->d_name);
-		if (entry->d_type == DT_DIR)
+		if (entry->d_type == DT_DIR) {
 			_mp_app_inotify_add_recursive_watch(sub_path, ad);
+		}
 	}
 	IF_FREE(sub_path);
 
@@ -261,13 +266,14 @@ static void
 _mp_app_pipe_cb(void *data, void *path, unsigned int nbyte)
 {
 	struct appdata *ad = (struct appdata *)data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	DEBUG_TRACE("%s modified..", path);
-	mp_retm_if (ad->app_is_foreground, "Do not refresh list");
+	mp_retm_if(ad->app_is_foreground, "Do not refresh list");
 
-	if (_g_inotyfy_timer)
+	if (_g_inotyfy_timer) {
 		ecore_timer_del(_g_inotyfy_timer);
+	}
 	_g_inotyfy_timer = ecore_timer_add(0.5, _mp_app_inotify_timer_cb, data);
 
 
@@ -283,8 +289,9 @@ _mp_add_inofity_refresh_watch(struct appdata *ad)
 
 	GList *wd_list = handle->wd_list;
 	while (wd_list) {
-		if (wd_list->data >= 0)
+		if (wd_list->data >= 0) {
 			mp_app_inotify_rm_watch((int)wd_list->data);
+		}
 		wd_list = g_list_delete_link(wd_list, wd_list);
 	}
 
@@ -301,7 +308,7 @@ mp_app_inotify_init(void *data)
 
 	mp_inotify_t *handle = NULL;
 	handle = _mp_app_inotify_handle_init();
-	mp_retvm_if (handle == NULL, -1, "fail to _mp_app_inotify_handle_init()");
+	mp_retvm_if(handle == NULL, -1, "fail to _mp_app_inotify_handle_init()");
 
 	handle->fd = inotify_init();
 
@@ -360,14 +367,14 @@ mp_app_inotify_add_watch(const char *path, mp_inotify_cb callback, void *user_da
 			break;
 		case EINVAL:
 			ERROR_TRACE
-				("The given event mask contains no legal events; or fd is not an inotify file descriptor.\n");
+			("The given event mask contains no legal events; or fd is not an inotify file descriptor.\n");
 			break;
 		case ENOMEM:
 			ERROR_TRACE("Insufficient kernel memory is available.\n");
 			break;
 		case ENOSPC:
 			ERROR_TRACE
-				("The user limit on the total number of inotify watches was reached or the kernel failed to allocate a needed resource.\n");
+			("The user limit on the total number of inotify watches was reached or the kernel failed to allocate a needed resource.\n");
 			break;
 		default:
 			ERROR_TRACE("Fail to mp_inotify_add_watch(), Unknown error.\n");
@@ -398,12 +405,12 @@ mp_app_inotify_rm_watch(int wd)
 	mp_inotify_t *handle = NULL;
 
 	handle = g_handle;
-	mp_retvm_if (handle == NULL, -1, "handle is NULL");
+	mp_retvm_if(handle == NULL, -1, "handle is NULL");
 
 	if (handle->fd < 0 || wd < 0) {
 		WARN_TRACE
-			("inotify is not initialized or has no watching dir - fd [%d] wd [%d]",
-			 handle->fd, wd);
+		("inotify is not initialized or has no watching dir - fd [%d] wd [%d]",
+		 handle->fd, wd);
 		return 0;
 	}
 
@@ -443,7 +450,7 @@ mp_app_inotify_finalize(struct appdata *ad)
 	mp_inotify_t *handle = NULL;
 	handle = g_handle;
 
-	mp_retm_if (handle == NULL, "handle is NULL");
+	mp_retm_if(handle == NULL, "handle is NULL");
 
 	if (ad->inotify_pipe) {
 		ecore_pipe_del(ad->inotify_pipe);

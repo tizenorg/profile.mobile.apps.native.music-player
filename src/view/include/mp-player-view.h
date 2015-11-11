@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_PLAYER_VIEW_H_
@@ -23,8 +23,7 @@
 #include <cairo.h>
 #endif
 
-enum
-{
+enum {
 	PLAYER_VIEW_MOVE_NONE,
 	PLAYER_VIEW_MOVE_LEFT,
 	PLAYER_VIEW_MOVE_RIGHT,
@@ -32,8 +31,7 @@ enum
 
 /*OPTION_VOLUME,*/
 /*OPTION_INFO,*/
-enum
-{
+enum {
 	OPTION_VOLUME,
 	OPTION_VOLUME_MUTE,
 	OPTION_FAVO_ON,
@@ -43,11 +41,10 @@ enum
 	OPTION_MAX
 };
 
-enum
-{
+enum {
 
-    CONTROL_SHUFFLE_ON,
-    CONTROL_SHUFFLE_OFF,
+	CONTROL_SHUFFLE_ON,
+	CONTROL_SHUFFLE_OFF,
 	CONTROL_PREVIOUS,
 	CONTROL_PLAY,
 	CONTROL_PAUSE,
@@ -59,22 +56,19 @@ enum
 	CONTROL_MAX
 };
 
-enum
-{
+enum {
 	MP_PLAYER_NORMAL,
 	MP_PLAYER_RADIO_PLAY,
 	MP_PLAYER_ARTIST_PLAY
 };
 
-enum
-{
+enum {
 	MP_PLAYER_VIEW_LAUNCH_TYPE
 };
 
 #define PLAYER_VIEW_MAGIC	0x7877
 
-typedef struct
-{
+typedef struct {
 	INHERIT_MP_VIEW;
 	int player_view_magic;
 	bool start_on_transition_finish;
@@ -144,10 +138,10 @@ typedef struct
 #endif
 
 #ifdef MP_FEATURE_SPLIT_WINDOW
-        Evas_Object *popup_win;
-        int nPosY;
-        int nHeight;
-        int nWidth;
+	Evas_Object *popup_win;
+	int nPosY;
+	int nHeight;
+	int nWidth;
 #endif
 
 	/* launch type: music file / radio / artist*/
@@ -163,8 +157,8 @@ typedef struct
 	int  unmute_vol;
 
 #ifdef MP_FEATURE_ALBUM_COVER_BG
-        int  cur_color;
-        char *cur_path;
+	int  cur_color;
+	char *cur_path;
 #endif
 	Elm_Transit *trans_queue_list;
 	Ecore_Idler *queue_title_idler;
@@ -179,8 +173,8 @@ typedef struct
 	GList* suggest_list;
 	Evas_Object* label;
 #endif
-        bool show_lyric;
-}MpPlayerView_t;
+	bool show_lyric;
+} MpPlayerView_t;
 
 MpPlayerView_t *mp_player_view_create(Evas_Object *parent, int launch_type, bool start_new_file);
 void mp_player_view_update_progressbar(void *data);

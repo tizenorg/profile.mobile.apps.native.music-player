@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-ta.h"
@@ -165,8 +165,9 @@ _mp_main_init(struct appdata *ad)
 static bool
 _mp_main_is_launching_available(struct appdata *ad)
 {
-	if (!ad)
+	if (!ad) {
 		return false;
+	}
 
 	if (ad->low_battery_status == APP_EVENT_LOW_BATTERY_POWER_OFF) {
 		Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_NORMAL, NULL, ad, _mp_main_exit_cb, ad);
@@ -198,7 +199,7 @@ static void _mp_main_win_visibility_withdrawn_cb(void *data, Evas_Object *obj, v
 	Ecore_X_Event_Window_Visibility_Change* ev = (Ecore_X_Event_Window_Visibility_Change *)event;
 
 	if (ev->win == ad->xwin) {
-		 main window
+		main window
 		if (ev->fully_obscured == 1) {
 			ad->app_is_foreground = false;
 			mp_player_mgr_vol_type_unset();
@@ -248,11 +249,11 @@ static void _mp_main_win_focus_in_cb(void *data, Evas_Object *obj, void *event)
 		return ECORE_CALLBACK_PASS_ON;
 	}
 #endif
-/* TODO Know about the event */
+	/* TODO Know about the event */
 	/*Ecore_X_Event_Window_Focus_In *ev = (Ecore_X_Event_Window_Focus_In *)event;
 	if (ev->win != ad->xwin)
 		return ECORE_CALLBACK_PASS_ON;*/
-/* TODO */
+	/* TODO */
 	ad->is_focus_out = false;
 	/*if (ad->win_minicon && ad->b_minicontroller_show)
 		mp_minicontroller_destroy(ad); */
@@ -260,8 +261,9 @@ static void _mp_main_win_focus_in_cb(void *data, Evas_Object *obj, void *event)
 	DEBUG_TRACE("ad->is_focus_out: %d", ad->is_focus_out);
 
 	MpPlayerView_t *player_view = (MpPlayerView_t *)GET_PLAYER_VIEW;
-	if (player_view)
+	if (player_view) {
 		mp_player_view_refresh(player_view);
+	}
 
 	mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_WINDOW_FOCUS, true);
 
@@ -274,7 +276,7 @@ static void _mp_main_win_focus_in_cb(void *data, Evas_Object *obj, void *event)
 
 static void _show_minicontroller(struct appdata *ad)
 {
-ERROR_TRACE("");
+	ERROR_TRACE("");
 	int playing_pid = 0;
 	playing_pid = mp_setting_get_nowplaying_id();
 	if (playing_pid != -1) {
@@ -289,10 +291,11 @@ ERROR_TRACE("");
 	}
 
 	if (ad->player_state == PLAY_STATE_PAUSED || ad->player_state == PLAY_STATE_PLAYING) {
-		if (!ad->win_minicon)
+		if (!ad->win_minicon) {
 			mp_minicontroller_create(ad);
-		else
+		} else {
 			mp_minicontroller_show(ad);
+		}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 		if (!ad->win_lockmini) {
@@ -324,10 +327,10 @@ static void _mp_main_win_focus_out_cb(void *data, Evas_Object *obj, void *event)
 	if (ev->win != ad->xwin)
 		return ECORE_CALLBACK_PASS_ON;*/
 
-		/* Testing Code. If a track is getting played or paused,
-		   the MiniController should be displayed as soon as the main window goes to back ground.
-		   When again the Music ICon in Main menu is pressed, the mini controller will be hidden and
-		   The Main Screen of the Music Application will be displayed. */
+	/* Testing Code. If a track is getting played or paused,
+	   the MiniController should be displayed as soon as the main window goes to back ground.
+	   When again the Music ICon in Main menu is pressed, the mini controller will be hidden and
+	   The Main Screen of the Music Application will be displayed. */
 	_show_minicontroller(ad);
 
 	mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_WINDOW_FOCUS, false);
@@ -384,7 +387,7 @@ static void __mp_main_lcd_state_changed_cb(device_callback_e type, void *state_d
 {
 	struct appdata *ad = user_data;
 	MP_CHECK(ad);
-	display_state_e state = (display_state_e )state_data;
+	display_state_e state = (display_state_e)state_data;
 	DEBUG_TRACE("power_state: %d", state);
 
 	if (state == DISPLAY_STATE_SCREEN_OFF) {
@@ -392,8 +395,9 @@ static void __mp_main_lcd_state_changed_cb(device_callback_e type, void *state_d
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_LCD_OFF);
 		mp_view_view_pause(mp_view_mgr_get_top_view(GET_VIEW_MGR));
 
-		if (ad->duration_change_timer)
+		if (ad->duration_change_timer) {
 			ecore_timer_freeze(ad->duration_change_timer);
+		}
 
 #ifdef MP_FEATURE_LOCKSCREEN
 		mp_lockscreenmini_on_lcd_event(ad, false);
@@ -417,15 +421,17 @@ static void __mp_main_lcd_state_changed_cb(device_callback_e type, void *state_d
 #endif
 
 #ifdef MP_FEATURE_APP_IN_APP
-			if (ad->mini_player_mode)
+			if (ad->mini_player_mode) {
 				mp_mini_player_refresh(ad);
+			}
 #endif
 
-			if (ad->duration_change_timer && mp_player_mgr_get_state() == PLAYER_STATE_PLAYING)
+			if (ad->duration_change_timer && mp_player_mgr_get_state() == PLAYER_STATE_PLAYING) {
 				MP_TIMER_THAW(ad->duration_change_timer);
+			}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-				mp_lockscreenmini_on_lcd_event(ad, true);
+			mp_lockscreenmini_on_lcd_event(ad, true);
 #endif
 
 		}
@@ -458,7 +464,9 @@ static bool _parse_widget_event(bundle *b, bool *activate_window)
 			mp_play_control_ff(1, 0, 1);
 		} else if (!g_strcmp0(value, MP_LB_EVENT_NEXT_RELEASED)) {
 			mp_play_control_ff(0, 0, 1);
-			if (prepare_by_init) ad->prepare_by_init = true;
+			if (prepare_by_init) {
+				ad->prepare_by_init = true;
+			}
 		} else if (!g_strcmp0(value, MP_LB_EVENT_PREV_PRESSED)) {
 			mp_play_control_rew(1, 0, 1);
 		} else if (!g_strcmp0(value, MP_LB_EVENT_PREV_RELEASED)) {
@@ -484,8 +492,9 @@ static bool _parse_widget_event(bundle *b, bool *activate_window)
 
 		*activate_window = false;
 		int index = 0;
-		if(value)
+		if (value) {
 			index = atoi(value);
+		}
 
 		mp_play_destory(ad);
 
@@ -513,8 +522,9 @@ _mp_main_message_port_cb(int local_port_id, const char *remote_app_id, const cha
 		DEBUG_TRACE("message port done");
 		if (active_window) {
 			struct appdata * ad = mp_util_get_appdata();
-			if (ad && ad->win_main)
+			if (ad && ad->win_main) {
 				elm_win_inwin_activate(ad->win_main);
+			}
 		}
 	}
 }
@@ -603,8 +613,9 @@ _mp_main_app_init_idler_cb(void *data)
 		mp_common_create_playlist_mgr();
 
 		if (ad->playlist_mgr && ad->current_track_info) {
-			if (ad->current_track_info->uri)
+			if (ad->current_track_info->uri) {
 				mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_NOWPLAYING_LIST_DATA, ad->current_track_info->uri, -1);
+			}
 		}
 	}
 
@@ -618,13 +629,13 @@ _mp_main_app_init_idler_cb(void *data)
 #endif
 
 	/*initialize session type */
-/*
-	if (!mp_player_mgr_session_init())
-	{
-		ERROR_TRACE("Error when set session");
-	}
-*/
-	mp_volume_init(ad->xwin,ad->win_main);
+	/*
+		if (!mp_player_mgr_session_init())
+		{
+			ERROR_TRACE("Error when set session");
+		}
+	*/
+	mp_volume_init(ad->xwin, ad->win_main);
 #ifdef MP_SOUND_PLAYER
 	mp_volume_key_grab_condition_set(MP_VOLUME_KEY_GRAB_COND_VIEW_VISIBLE, true);
 #endif
@@ -666,8 +677,9 @@ static void _mp_main_parse_get_playlist(struct appdata *ad)
 		DEBUG_TRACE("No recently played music.. Play All tracks");
 		track_type = MP_TRACK_ALL;
 		mp_media_info_list_count(track_type, NULL, NULL, NULL, 0, &count);
-	} else if (count > 100)
+	} else if (count > 100) {
 		count = 100;
+	}
 
 	mp_media_info_list_create(&media, track_type, NULL, NULL, NULL, 0, 0, count);
 	mp_common_create_playlist_mgr();
@@ -694,8 +706,9 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 		mp_common_create_playlist_mgr();
 
 		if (!app_control_get_extra_data_array(app_control, MP_EXTRA_KEY_PLAY_FILES, &path_array, &count)) {
-			if (path_array == NULL)
+			if (path_array == NULL) {
 				return -1;
+			}
 			if (count == 0) {
 				free(path_array);
 				return -1;
@@ -715,7 +728,9 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 			str = val;
 			char *title = NULL;
 			if (!app_control_get_extra_data(app_control, MP_EXTRA_KEY_PLAY_FILE_COUNT, &val)) {
-				if (val) count = atoi(val);
+				if (val) {
+					count = atoi(val);
+				}
 			}
 			IF_FREE(val);
 
@@ -726,19 +741,21 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 			mp_playlist_mgr_clear(ad->playlist_mgr);
 			for (i = 0; i < count; i++, str = NULL) {
 				token = strtok_r(str, MP_EXTRA_KEY_PLAY_FILE_DELIM, &save_ptr);
-				if (token == NULL)
+				if (token == NULL) {
 					break;
-				if (count == 1)
+				}
+				if (count == 1) {
 					mp_playlist_mgr_item_append(ad->playlist_mgr, token, NULL, title, NULL, MP_TRACK_URI);
-				else
+				} else {
 					mp_playlist_mgr_item_append(ad->playlist_mgr, token, NULL, NULL, NULL, MP_TRACK_URI);
+				}
 			}
 			mp_playlist_mgr_set_current(ad->playlist_mgr, mp_playlist_mgr_get_nth(ad->playlist_mgr, 0));
 			*start_playback = true;
 		}
 		IF_FREE(val);
 	} else if (!g_strcmp0(request, MP_REQ_TYPE_AUTO_PLAYLIST)) {
-			if (!app_control_get_extra_data(app_control, MP_EXTRA_KEY_PLAY_PLAYLIST, &val)) {
+		if (!app_control_get_extra_data(app_control, MP_EXTRA_KEY_PLAY_PLAYLIST, &val)) {
 			mp_media_list_h media = NULL;
 			int count = 0;
 			mp_track_type_e type = 0;
@@ -756,8 +773,9 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 			}
 
 			mp_media_info_list_count(type, NULL, NULL, NULL, 0, &count);
-			if (count > 100)
+			if (count > 100) {
 				count = 100;
+			}
 			mp_media_info_list_create(&media, type, NULL, NULL, NULL, 0, 0, count);
 			mp_common_create_playlist_mgr();
 			mp_playlist_mgr_clear(ad->playlist_mgr);
@@ -774,8 +792,9 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 
 			mp_media_info_playlist_get_id_by_name(val, &id);
 			mp_media_info_list_count(MP_TRACK_BY_PLAYLIST, NULL, NULL, NULL, id, &count);
-			if (count > 100)
+			if (count > 100) {
 				count = 100;
+			}
 			mp_media_info_list_create(&media, MP_TRACK_BY_PLAYLIST, NULL, NULL, NULL, id, 0, count);
 			mp_common_create_playlist_mgr();
 			mp_playlist_mgr_clear(ad->playlist_mgr);
@@ -796,8 +815,8 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 			ret = -1;
 		}
 	} else if (!g_strcmp0(request, MP_REQ_TYPE_PLAY_PREV)) {
-			if (ad->playlist_mgr == NULL) {
-				_mp_main_parse_get_playlist(ad);
+		if (ad->playlist_mgr == NULL) {
+			_mp_main_parse_get_playlist(ad);
 		}
 		if (mp_playlist_mgr_count(ad->playlist_mgr)) {
 			mp_play_prev_file(ad);
@@ -890,13 +909,15 @@ _mp_main_parse_playback_control(struct appdata *ad, app_control_h app_control)
 	if (control) {
 		WARN_TRACE("control = %s", control);
 		mp_plst_item *current = NULL;
-		if (!g_strcmp0(control, "PREV"))
+		if (!g_strcmp0(control, "PREV")) {
 			current = mp_playlist_mgr_get_prev(ad->playlist_mgr);
-		else if (!g_strcmp0(control, "NEXT"))
+		} else if (!g_strcmp0(control, "NEXT")) {
 			current = mp_playlist_mgr_get_next(ad->playlist_mgr, true, false);
+		}
 
-		if (current)
+		if (current) {
 			mp_playlist_mgr_set_current(ad->playlist_mgr, current);
+		}
 	}
 	IF_FREE(control);
 }
@@ -977,11 +998,11 @@ _mp_main_parse_livebox_event(app_control_h app_control, bool *activate_window, b
 		} else {
 			_mp_main_create_default_playing_list(ad, 0);
 			if (g_strcmp0(value, MP_LB_EVENT_NEXT_PRESSED) &&
-				g_strcmp0(value, MP_LB_EVENT_NEXT_RELEASED) &&
-				g_strcmp0(value, MP_LB_EVENT_PREV_PRESSED) &&
-				g_strcmp0(value, MP_LB_EVENT_PREV_RELEASED) &&
-				g_strcmp0(value, MP_LB_EVENT_PLAY_CLICKED) &&
-				g_strcmp0(value, MP_LB_EVENT_PAUSE_CLICKED)) {
+			        g_strcmp0(value, MP_LB_EVENT_NEXT_RELEASED) &&
+			        g_strcmp0(value, MP_LB_EVENT_PREV_PRESSED) &&
+			        g_strcmp0(value, MP_LB_EVENT_PREV_RELEASED) &&
+			        g_strcmp0(value, MP_LB_EVENT_PLAY_CLICKED) &&
+			        g_strcmp0(value, MP_LB_EVENT_PAUSE_CLICKED)) {
 				*start_playback = false;
 			} else {
 				*start_playback = true;
@@ -994,14 +1015,15 @@ _mp_main_parse_livebox_event(app_control_h app_control, bool *activate_window, b
 				} else if (!g_strcmp0(value, MP_LB_EVENT_PREV_RELEASED)) {
 					mp_play_control_rew(0, 0, 1);
 				}
-			 }
+			}
 		}
 
 	} else if (!app_control_get_extra_data(app_control, MP_NOWPLAYING_LIST_INDEX, &value)) {
 		*activate_window = false;
 		int index = 0;
-		if (value)
+		if (value) {
 			index = atoi(value);
+		}
 		IF_FREE(value);
 
 		app_control_get_extra_data(app_control, MP_REFRESH_PLAYLIST, &value);
@@ -1084,8 +1106,9 @@ _mp_main_parse_service(struct appdata *ad, app_control_h app_control, bool *acti
 		IF_FREE(value);
 	} else if (mp_common_parse_view_operation(app_control)) {
 		*start_playback = TRUE;
-	} else
+	} else {
 		ERROR_TRACE("No uri...");
+	}
 
 	IF_FREE(ad->cookie);
 	IF_FREE(ad->proxy);
@@ -1174,7 +1197,7 @@ _mp_main_parse_service(struct appdata *ad, app_control_h app_control, bool *acti
 
 		_mp_main_parse_playback_control(ad, app_control);
 	}
-	END:
+END:
 
 #endif
 	IF_FREE(value);
@@ -1273,16 +1296,18 @@ _mp_main_multi_window(struct appdata *ad, app_control_h app_control)
 	int id_startup_by = (int)evas_object_data_get(ad->win_main, "id_startup_by");
 	int id_layout_pos = (int)evas_object_data_get(ad->win_main, "id_layout_pos");
 
-	if (app_control_get_extra_data(app_control, "window_startup_type", &val_startup) != APP_CONTROL_ERROR_NONE)
+	if (app_control_get_extra_data(app_control, "window_startup_type", &val_startup) != APP_CONTROL_ERROR_NONE) {
 		val_startup = strdup("0");
-	if (app_control_get_extra_data(app_control, "window_layout_id", &val_layout) != APP_CONTROL_ERROR_NONE)
+	}
+	if (app_control_get_extra_data(app_control, "window_layout_id", &val_layout) != APP_CONTROL_ERROR_NONE) {
 		val_layout = strdup("-1");
+	}
 	EVENT_TRACE("id_startup_by is [%d] id_layout_pos is [%d]", id_startup_by, id_layout_pos);
 
 	if (id_startup_by == -1) {
 		id = elm_win_aux_hint_add(ad->win_main, "wm.policy.win.startup.by", val_startup);
-	evas_object_data_set(ad->win_main, "id_startup_by", (void *)id);
-	EVENT_TRACE("It is launched by split launcher but full window mode");
+		evas_object_data_set(ad->win_main, "id_startup_by", (void *)id);
+		EVENT_TRACE("It is launched by split launcher but full window mode");
 	} else {
 		elm_win_aux_hint_val_set(ad->win_main, id_startup_by, val_startup);
 		EVENT_TRACE("Split window mode");
@@ -1291,8 +1316,9 @@ _mp_main_multi_window(struct appdata *ad, app_control_h app_control)
 	if (id_layout_pos == -1) {
 		id = elm_win_aux_hint_add(ad->win_main, "wm.policy.win.zone.desk.layout.pos", val_layout);
 		evas_object_data_set(ad->win_main, "id_layout_pos", (void *)id);
-	} else
+	} else {
 		elm_win_aux_hint_val_set(ad->win_main, id_layout_pos, val_layout);
+	}
 
 	IF_FREE(val_startup);
 	IF_FREE(val_layout);
@@ -1307,8 +1333,9 @@ _mp_main_multi_window(struct appdata *ad, app_control_h app_control)
 	}
 	IF_FREE(operation);
 
-	if (relaunch)
+	if (relaunch) {
 		elm_win_activate(ad->win_main);
+	}
 
 	__is_relaunch = 1;
 
@@ -1349,12 +1376,12 @@ mp_create(void *data)
 
 	PROFILE_IN("mp_create_win");
 	ad->win_main = mp_create_win("music-player");
-	mp_retv_if (ad->win_main == NULL, EINA_FALSE);
+	mp_retv_if(ad->win_main == NULL, EINA_FALSE);
 
 #ifdef MP_FEATURE_SPLIT_WINDOW
 	elm_win_wm_desktop_layout_support_set(ad->win_main, EINA_TRUE);
-	evas_object_data_set(ad->win_main, "id_startup_by", (void *)-1);
-	evas_object_data_set(ad->win_main, "id_layout_pos", (void *)-1);
+	evas_object_data_set(ad->win_main, "id_startup_by", (void *) - 1);
+	evas_object_data_set(ad->win_main, "id_layout_pos", (void *) - 1);
 #endif
 
 #ifdef MP_FEATURE_LANDSCAPE
@@ -1488,8 +1515,9 @@ mp_terminate(void *data)
 	if (!mp_util_is_other_player_playing()) {
 		int ret_set = 0;
 		ret_set = preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_OFF);
-		if (ret_set)
+		if (ret_set) {
 			ERROR_TRACE("set preference failed");
+		}
 	}
 	ad->freeze_indicator_icon = false;
 	mp_setting_set_player_state(MP_PLAY_STATE_NONE);
@@ -1584,7 +1612,7 @@ app_control(app_control_h app_control, void *data)
 
 	char *operation = NULL;
 	struct appdata *ad = data;
-	mp_ret_if (ad == NULL);
+	mp_ret_if(ad == NULL);
 
 	bool activate_window = true;
 	bool start_playback = false;
@@ -1647,15 +1675,17 @@ app_control(app_control_h app_control, void *data)
 #ifdef MP_FEATURE_OPTIMIZATION_LAUNCH_TIME
 	int early_show_main_win = true;
 #ifdef MP_SOUND_PLAYER
-	if (!start_playback)
+	if (!start_playback) {
 		early_show_main_win = false;
+	}
 #else
 	if (activate_window) {
 		MpTab_e tab = MP_TAB_SONGS;
 		char *shortcut_main_info = NULL;
 		_mp_common_parse_open_shortcut(app_control, &tab, &shortcut_main_info);
-		if (shortcut_main_info)
+		if (shortcut_main_info) {
 			launch_by_shortcut = true;
+		}
 	}
 #endif
 	if (activate_window && !launch_by_shortcut && early_show_main_win) {
@@ -1672,8 +1702,9 @@ app_control(app_control_h app_control, void *data)
 		if (ret) {
 			ERROR_TRACE("Error: mp_play_new_file..");
 #ifdef MP_FEATURE_CLOUD
-			if (ret == MP_PLAY_ERROR_NETWORK)
+			if (ret == MP_PLAY_ERROR_NETWORK) {
 				mp_play_next_file(ad, true);
+			}
 #endif
 		}
 #ifndef MP_SOUND_PLAYER
@@ -1715,10 +1746,11 @@ app_control(app_control_h app_control, void *data)
 
 
 #ifdef MP_FEATURE_LANDSCAPE
-	#ifndef defined (MP_3D_FEATURE)
-	if (ad->screen_mode == MP_SCREEN_MODE_LANDSCAPE)
+#ifndef defined (MP_3D_FEATURE)
+	if (ad->screen_mode == MP_SCREEN_MODE_LANDSCAPE) {
 		evas_object_hide(ad->conformant);
-	#endif
+	}
+#endif
 #endif
 
 	evas_object_show(ad->win_main);
@@ -1762,7 +1794,7 @@ app_control(app_control_h app_control, void *data)
 	evas_event_callback_add(evas_object_evas_get(ad->win_main), EVAS_CALLBACK_RENDER_FLUSH_POST,  _mp_main_window_flush_pre, NULL);
 #endif
 
-	END:
+END:
 	if (!g_normal_launched) {
 		if (!_mp_main_is_launching_available(ad)) {
 			return;
@@ -1799,7 +1831,7 @@ mp_low_battery(app_event_info_h event_info, void *data)
 	MP_CHECK(ad);
 
 	app_event_low_battery_status_e status = -1;
-	
+
 	int ret = app_event_get_low_battery_status(event_info, &status);
 	if (ret == APP_ERROR_NONE) {
 		ad->low_battery_status = status;

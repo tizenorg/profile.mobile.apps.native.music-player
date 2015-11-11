@@ -112,8 +112,7 @@ mp_noti_update_size(mp_noti_h noti, unsigned long long total, unsigned long long
 		if (err != NOTIFICATION_ERROR_NONE) {
 			mp_error("notification_set_progress().. [0x%x]", err);
 		}
-	}
-	else {
+	} else {
 		err = notification_set_size(noti_data->handle, (double)byte);
 		if (err != NOTIFICATION_ERROR_NONE) {
 			mp_error("notification_set_size().. [0x%x]", err);

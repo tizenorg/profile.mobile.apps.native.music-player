@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <sound_manager.h>
@@ -66,8 +66,7 @@ _mp_play_set_pos(void *data)
 	struct appdata *ad = (struct appdata *)data;
 	MP_CHECK_FALSE(ad);
 
-	if (ad->is_lcd_off)
-	{
+	if (ad->is_lcd_off) {
 		MP_TIMER_FREEZE(ad->live_pos_timer);
 		return EINA_TRUE;
 	}
@@ -78,8 +77,7 @@ _mp_play_set_pos(void *data)
 
 static Eina_Bool _mp_item_update_db_idler(void *data)
 {
-	if (!mp_item_update_db(data))
-	{
+	if (!mp_item_update_db(data)) {
 		WARN_TRACE("Error when update db");
 	}
 	return ECORE_CALLBACK_CANCEL;
@@ -97,23 +95,20 @@ mp_play_start_in_ready_state(void *data)
 	mp_plst_item * current_item = mp_playlist_mgr_get_current(ad->playlist_mgr);
 	MP_CHECK_FALSE(current_item);
 
-	if (!ad->paused_by_user)
-	{
+	if (!ad->paused_by_user) {
 		int error = mp_player_mgr_play(ad);
-		if (error)
-		{
+		if (error) {
 			mp_play_control_on_error(ad, error, true);
 			//Don't destory player if play return error because of seek
-			if (error != PLAYER_ERROR_INVALID_OPERATION)
+			if (error != PLAYER_ERROR_INVALID_OPERATION) {
 				mp_play_destory(ad);
+			}
 			return FALSE;
 		}
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("stay in pause state..");
 		if (track_deleted) {
-		        mp_play_start(ad);
+			mp_play_start(ad);
 		}
 		ad->freeze_indicator_icon = true;
 		mp_play_stop(ad);
@@ -124,31 +119,29 @@ mp_play_start_in_ready_state(void *data)
 
 	//if (ad->is_focus_out)
 	//{
-		if (!ad->win_minicon)
-			mp_minicontroller_create(ad);
-		else if (!ad->b_minicontroller_show)
-			mp_minicontroller_show(ad);
+	if (!ad->win_minicon) {
+		mp_minicontroller_create(ad);
+	} else if (!ad->b_minicontroller_show) {
+		mp_minicontroller_show(ad);
+	}
 #ifdef MP_FEATURE_LOCKSCREEN
-		if (!ad->win_lockmini)
-		{
-			mp_lockscreenmini_create(ad);
-		}
-		else if (!ad->b_lockmini_show)
-		{
-			mp_lockscreenmini_show(ad);
-		}
+	if (!ad->win_lockmini) {
+		mp_lockscreenmini_create(ad);
+	} else if (!ad->b_lockmini_show) {
+		mp_lockscreenmini_show(ad);
+	}
 #endif
 	//}
 
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 	if (current_item->uid) {
 
-		if (current_item->track_type ==  MP_TRACK_URI)
-		{
+		if (current_item->track_type ==  MP_TRACK_URI) {
 			ecore_idler_add(_mp_item_update_db_idler, current_item->uid);
 		}
 	}
@@ -173,7 +166,7 @@ mp_play_new_file(void *data, bool check_drm)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retvm_if (ad == NULL, -1, "appdata is NULL");
+	mp_retvm_if(ad == NULL, -1, "appdata is NULL");
 	PROFILE_IN("mp_playlist_mgr_get_current");
 	mp_plst_item * current_item = mp_playlist_mgr_get_current(ad->playlist_mgr);
 	PROFILE_OUT("mp_playlist_mgr_get_current");
@@ -181,20 +174,14 @@ mp_play_new_file(void *data, bool check_drm)
 	int res = 0;
 
 #ifdef MP_FEATURE_CLOUD
-	if (current_item->track_type == MP_TRACK_CLOUD)
-	{
+	if (current_item->track_type == MP_TRACK_CLOUD) {
 		char *uri = NULL;
 		int ret = mp_cloud_play_available(current_item->uid, current_item);
-		if (ret == MP_CLOUD_PLAY_UNAVAILABLE)
-		{
+		if (ret == MP_CLOUD_PLAY_UNAVAILABLE) {
 			return MP_PLAY_ERROR_NETWORK;
-		}
-		else if (ret == MP_CLOUD_PLAY_STREAMING)
-		{
+		} else if (ret == MP_CLOUD_PLAY_STREAMING) {
 			return MP_PLAY_ERROR_STREAMING;
-		}
-		else
-		{
+		} else {
 			//play offline
 			IF_FREE(current_item->uri);
 			current_item->uri = uri;
@@ -203,10 +190,11 @@ mp_play_new_file(void *data, bool check_drm)
 #endif
 
 	PROFILE_IN("mp_player_control_ready_new_file");
-	if (mp_util_is_streaming(current_item->uri))
+	if (mp_util_is_streaming(current_item->uri)) {
 		res = mp_streaming_mgr_play_new_streaming(ad);
-	else
+	} else {
 		res = mp_player_control_ready_new_file(ad, check_drm);
+	}
 	PROFILE_OUT("mp_player_control_ready_new_file");
 
 	return res;
@@ -227,13 +215,13 @@ mp_play_item_play_current_item(void *data)
 
 	mp_play_destory(ad);
 	int ret = mp_play_new_file(ad, TRUE);
-	if (ret)
-	{
+	if (ret) {
 		ERROR_TRACE("Fail to play new file");
 		ad->freeze_indicator_icon = false;
 #ifdef MP_FEATURE_CLOUD
-		if (ret == MP_PLAY_ERROR_NETWORK)
+		if (ret == MP_PLAY_ERROR_NETWORK) {
 			mp_widget_text_popup(NULL, GET_STR(STR_MP_THIS_FILE_IS_UNABAILABLE));
+		}
 #endif
 		return FALSE;
 	}
@@ -248,24 +236,22 @@ void
 mp_play_prev_file(void *data)
 {
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	mp_plst_item *item = mp_playlist_mgr_get_prev(ad->playlist_mgr);
-	if (item)
-	{
+	if (item) {
 		ad->freeze_indicator_icon = TRUE;
 
 		mp_playlist_mgr_set_current(ad->playlist_mgr, item);
 		mp_play_item_play_current_item(ad);
-	}
-	else
-	{
+	} else {
 		mp_error("mp_play_list_get_prev_item return false");
 #ifdef MP_SOUND_PLAYER
 		if (ad->is_focus_out)
 			//mp_app_exit(ad);
+		{
 			DEBUG_TRACE("No playlist and windows focus out");
-		else
+		} else
 #endif
 		{
 			mp_widget_text_popup(data, GET_SYS_STR("IDS_COM_POP_FILE_NOT_FOUND"));
@@ -280,20 +266,17 @@ mp_play_next_file(void *data, bool forced)
 	struct appdata *ad = data;
 	mp_plst_item *item = NULL;
 
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->playlist_mgr);
 
 	int repeat = mp_playlist_mgr_get_repeat(ad->playlist_mgr);
 
-	if (!forced)
-	{
+	if (!forced) {
 		ad->auto_next = true;
 		if (repeat == MP_PLST_REPEAT_ONE
-			||(repeat == MP_PLST_REPEAT_ALL && mp_playlist_mgr_count(ad->playlist_mgr) == 1))
-		{
+		        || (repeat == MP_PLST_REPEAT_ALL && mp_playlist_mgr_count(ad->playlist_mgr) == 1)) {
 			DEBUG_TRACE("play same track");
-			if (ad->camcoder_start)
-			{
+			if (ad->camcoder_start) {
 				WARN_TRACE("Camera is camcording. unable to play next");
 				mp_player_mgr_stop(ad);
 				return;
@@ -302,21 +285,20 @@ mp_play_next_file(void *data, bool forced)
 			mp_play_item_play_current_item(ad);
 			return;
 		}
-	}
-	else
+	} else {
 		ad->auto_next = false;
+	}
 #ifdef MP_FEATURE_CLOUD
 	int i;
-	for (i=0; i< mp_playlist_mgr_count(ad->playlist_mgr); i++)
-	{
+	for (i = 0; i < mp_playlist_mgr_count(ad->playlist_mgr); i++) {
 		item = mp_playlist_mgr_get_next(ad->playlist_mgr, forced, true);
-		if (item && item->track_type == MP_TRACK_CLOUD)
-		{
-			if (mp_cloud_play_available(item->uid, NULL) != MP_CLOUD_PLAY_UNAVAILABLE)
+		if (item && item->track_type == MP_TRACK_CLOUD) {
+			if (mp_cloud_play_available(item->uid, NULL) != MP_CLOUD_PLAY_UNAVAILABLE) {
 				break;
-		}
-		else
+			}
+		} else {
 			break;
+		}
 	}
 #else
 	item = mp_playlist_mgr_get_next(ad->playlist_mgr, forced, true);
@@ -328,16 +310,13 @@ mp_play_next_file(void *data, bool forced)
 #endif
 	MpPlayerView_t *player_view = (MpPlayerView_t *)GET_PLAYER_VIEW;
 
-	if (item)
-	{
+	if (item) {
 		mp_playlist_mgr_set_current(ad->playlist_mgr, item);
 
 		ad->freeze_indicator_icon = TRUE;
 
 		mp_play_item_play_current_item(ad);
-	}
-	else
-	{
+	} else {
 		WARN_TRACE("mp_play_list_get_next_item return false");
 		ad->auto_next = false;
 		ad->auto_resume = false;
@@ -356,15 +335,13 @@ mp_play_next_file(void *data, bool forced)
 			//if (!mp_minicontroller_visible_get(ad))
 			//	mp_app_exit(ad);
 			DEBUG_TRACE("End of playlist and windows focus out");
-		}
-		else
+		} else
 #endif
 		{
 			DEBUG_TRACE("End of playlist");
 #ifdef MP_FEATURE_AUTO_OFF
-			if (mp_playlist_mgr_get_repeat(ad->playlist_mgr)== MP_PLST_REPEAT_NONE
-				&& ad->auto_off_timer)
-			{
+			if (mp_playlist_mgr_get_repeat(ad->playlist_mgr) == MP_PLST_REPEAT_NONE
+			        && ad->auto_off_timer) {
 				mp_ecore_timer_del(ad->auto_off_timer);
 				mp_setting_reset_auto_off_time();
 				mp_app_exit(ad);
@@ -386,33 +363,31 @@ mp_play_prepare(void  *data)
 
 	//if (ad->is_focus_out)
 	//{
-        if (!ad->prepare_by_init)
-        {
-		if (!ad->win_minicon)
+	if (!ad->prepare_by_init) {
+		if (!ad->win_minicon) {
 			mp_minicontroller_create(ad);
-		else if (!ad->b_minicontroller_show)
+		} else if (!ad->b_minicontroller_show) {
 			mp_minicontroller_show(ad);
-#ifdef MP_FEATURE_LOCKSCREEN
-		if (!ad->win_lockmini)
-		{
-			mp_lockscreenmini_create(ad);
 		}
-		else if (!ad->b_lockmini_show)
-		{
+#ifdef MP_FEATURE_LOCKSCREEN
+		if (!ad->win_lockmini) {
+			mp_lockscreenmini_create(ad);
+		} else if (!ad->b_lockmini_show) {
 			mp_lockscreenmini_show(ad);
 		}
 #endif
-        }
+	}
 
-        ad->prepare_by_init = false;
+	ad->prepare_by_init = false;
 
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 #ifndef MP_SOUND_PLAYER
-        mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_PLAYING_LIST);
+	mp_view_mgr_post_event(GET_VIEW_MGR, MP_UPDATE_PLAYING_LIST);
 	mp_setting_save_now_playing(ad);
 	_mp_play_set_pos(ad);
 #else
@@ -421,8 +396,7 @@ mp_play_prepare(void  *data)
 	/*if (ad->current_track_info)
 		mp_setting_write_playing_status(ad->current_track_info->uri, "paused");*/
 
-	if (ad->create_view_on_play)
-	{
+	if (ad->create_view_on_play) {
 		mp_view_mgr_push_view_with_effect(GET_VIEW_MGR, (MpView_t *)ad->preload_player_view, NULL, false);
 		mp_view_update((MpView_t *)ad->preload_player_view);
 		ad->create_view_on_play = false;
@@ -450,34 +424,29 @@ _mp_play_start_lazy(void *data)
 	mp_plst_item * item = mp_playlist_mgr_get_current(ad->playlist_mgr);
 	MP_CHECK(item);
 
-	if (!item->uid && !mp_check_file_exist(item->uri))
-	{
+	if (!item->uid && !mp_check_file_exist(item->uri)) {
 		char *title = NULL, *album = NULL, * artist = NULL, * genre = NULL;
 
 		mp_player_mgr_get_content_info(&title, &album, &artist, NULL, &genre, NULL);
 
-		if (ad->current_track_info)
-		{
-			if (ad->current_track_info->title == 0 || strlen(ad->current_track_info->title) == 0)
-			{
-				if (title == NULL || strlen(title) == 0)
-				{
+		if (ad->current_track_info) {
+			if (ad->current_track_info->title == 0 || strlen(ad->current_track_info->title) == 0) {
+				if (title == NULL || strlen(title) == 0) {
 					title = mp_util_get_title_from_path(item->uri);
 					DEBUG_TRACE("title from path: %s", title);
 				}
 				IF_FREE(ad->current_track_info->title);
 				ad->current_track_info->title = title;
-			}
-			else
+			} else {
 				IF_FREE(title);
+			}
 
-			if (ad->current_track_info->artist == NULL || strlen(ad->current_track_info->artist) == 0)
-			{
+			if (ad->current_track_info->artist == NULL || strlen(ad->current_track_info->artist) == 0) {
 				IF_FREE(ad->current_track_info->artist);
 				ad->current_track_info->artist = artist;
-			}
-			else
+			} else {
 				IF_FREE(artist);
+			}
 
 			IF_FREE(ad->current_track_info->album);
 			ad->current_track_info->album = album;
@@ -486,12 +455,13 @@ _mp_play_start_lazy(void *data)
 		}
 
 		mp_player_view_set_title(GET_PLAYER_VIEW);
-                //update minicontrol title if title info gotten for streaming play
-                mp_minicontroller_update(ad, true);
+		//update minicontrol title if title info gotten for streaming play
+		mp_minicontroller_update(ad, true);
 	}
 
-	if (!ad->live_pos_timer)
+	if (!ad->live_pos_timer) {
 		ad->live_pos_timer = ecore_timer_add(1, _mp_play_set_pos, ad);
+	}
 	mp_util_set_livebox_update_timer();
 
 #ifdef MP_FEATURE_DRM_CONSUMPTION
@@ -501,34 +471,34 @@ _mp_play_start_lazy(void *data)
 
 	//if (ad->is_focus_out)
 	//{
-		if (!ad->win_minicon)
-			mp_minicontroller_create(ad);
-		else
-			mp_minicontroller_show(ad);
+	if (!ad->win_minicon) {
+		mp_minicontroller_create(ad);
+	} else {
+		mp_minicontroller_show(ad);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-		if (!ad->win_lockmini)
-		{
-			mp_lockscreenmini_create(ad);
-		}
-		else
-		{
-			mp_lockscreenmini_show(ad);
-		}
-                mp_setting_save_playing_info(ad);
+	if (!ad->win_lockmini) {
+		mp_lockscreenmini_create(ad);
+	} else {
+		mp_lockscreenmini_show(ad);
+	}
+	mp_setting_save_playing_info(ad);
 #endif
 	//}
 
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_START_PLAYBACK);
 
 	if (ad->current_track_info) {
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1)
-				mp_setting_write_playing_status(ad->current_track_info->uri, "playing");
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1) {
+			mp_setting_write_playing_status(ad->current_track_info->uri, "playing");
+		}
 	}
 	mp_setting_set_player_state(MP_PLAY_STATE_PLAYING);
 	mp_app_grab_mm_keys(ad);
@@ -579,15 +549,14 @@ mp_play_start(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	ad->music_length = mp_player_mgr_get_duration() / 1000.0;
 	ad->player_state = PLAY_STATE_PLAYING;
 
 
 #ifndef MP_SOUND_PLAYER
-	if (mp_view_mgr_count_view(GET_VIEW_MGR) == 0)
-	{
+	if (mp_view_mgr_count_view(GET_VIEW_MGR) == 0) {
 		mp_common_create_initial_view(ad, NULL, NULL);
 		evas_object_show(ad->win_main);
 		elm_win_iconified_set(ad->win_main, EINA_TRUE);
@@ -596,8 +565,7 @@ mp_play_start(void *data)
 		ad->is_focus_out = true;
 	}
 
-	if (ad->create_view_on_play)
-	{
+	if (ad->create_view_on_play) {
 		mp_view_mgr_push_view_with_effect(GET_VIEW_MGR, (MpView_t *)ad->preload_player_view, NULL, false);
 		mp_view_update((MpView_t *)ad->preload_player_view);
 		ad->create_view_on_play = false;
@@ -606,7 +574,7 @@ mp_play_start(void *data)
 #endif
 	mp_ecore_idler_del(ad->create_on_play_lay_idler);
 
-		_mp_play_start_lazy(ad);
+	_mp_play_start_lazy(ad);
 
 
 	endfunc;
@@ -620,27 +588,21 @@ _mp_play_control_paused_off_timer_cb(void *data)
 	struct appdata *ad = data;
 	MP_CHECK_VAL(ad, ECORE_CALLBACK_CANCEL);
 
-	if (ad->player_state == PLAY_STATE_PLAYING)
-	{
+	if (ad->player_state == PLAY_STATE_PLAYING) {
 		ad->pause_off_timer = NULL;
 		return ECORE_CALLBACK_CANCEL;
 	}
 
-	if (ad->is_focus_out && !ad->app_is_foreground)
-	{
+	if (ad->is_focus_out && !ad->app_is_foreground) {
 		ad->pause_off_timer = NULL;
 		WARN_TRACE("exit by pause timer");
-		if (!mp_util_is_other_player_playing())
-		{
-			if (preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_OFF) != 0)
-			{
+		if (!mp_util_is_other_player_playing()) {
+			if (preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_OFF) != 0) {
 				ERROR_TRACE("set Preference failed");
 			}
 		}
 		elm_exit();
-	}
-	else
-	{
+	} else {
 		WARN_TRACE("pause off timer but foreground");
 		return ECORE_CALLBACK_RENEW;
 	}
@@ -654,53 +616,54 @@ mp_play_pause(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	MP_TIMER_FREEZE(ad->live_pos_timer);
 
 	ad->player_state = PLAY_STATE_PAUSED;
 
-	if (ad->b_minicontroller_show)
-	{
+	if (ad->b_minicontroller_show) {
 		mp_minicontroller_update_control(ad);
 	}
 #ifdef MP_FEATURE_LOCKSCREEN
-	if (ad->b_lockmini_show)
-	{
+	if (ad->b_lockmini_show) {
 		mp_lockscreenmini_update_control(ad);
 	}
 #endif
 
 
-	if (!ad->paused_by_other_player)
+	if (!ad->paused_by_other_player) {
 		preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_PAUSE);
+	}
 
 #ifdef MP_FEATURE_DRM_CONSUMPTION
 	mp_drm_pause_consumption();
 #endif
 	mp_util_sleep_lock_set(FALSE, FALSE);
 
-	if (ad->win_minicon)
+	if (ad->win_minicon) {
 		mp_minicontroller_update_control(ad);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-	if (ad->win_lockmini)
-	{
+	if (ad->win_lockmini) {
 		mp_lockscreenmini_update_control(ad);
 	}
-        mp_setting_save_playing_info(ad);
+	mp_setting_save_playing_info(ad);
 #endif
 
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_PAUSE_PLAYBACK);
 
 	if (ad->current_track_info) {
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1)
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "paused");
+		}
 	}
 	mp_setting_set_player_state(MP_PLAY_STATE_PAUSED);
 
@@ -725,36 +688,35 @@ mp_play_stop(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	MP_TIMER_FREEZE(ad->live_pos_timer);
 
 	ad->player_state = PLAY_STATE_READY;
 	ad->music_pos = 0;
 
-	if (!ad->freeze_indicator_icon)
-	{
-		if (!mp_util_is_other_player_playing())
+	if (!ad->freeze_indicator_icon) {
+		if (!mp_util_is_other_player_playing()) {
 			preference_set_int(PREF_MUSIC_STATE, PREF_MUSIC_STOP);
+		}
 
 		mp_setting_set_player_state(MP_PLAY_STATE_STOP);
 	}
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_STOP_PLAYBACK);
 
-	if (mp_minicontroller_visible_get(ad))
-	{
+	if (mp_minicontroller_visible_get(ad)) {
 		mp_minicontroller_update_control(ad);
 	}
 #ifdef MP_FEATURE_LOCKSCREEN
-	if (mp_lockscreenmini_visible_get(ad))
-	{
+	if (mp_lockscreenmini_visible_get(ad)) {
 		mp_lockscreenmini_update_control(ad);
 	}
-        mp_setting_save_playing_info(ad);
+	mp_setting_save_playing_info(ad);
 #endif
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 #ifdef MP_FEATURE_DRM_CONSUMPTION
@@ -764,8 +726,9 @@ mp_play_stop(void *data)
 	mp_util_sleep_lock_set(FALSE, FALSE);
 
 	if (ad->current_track_info) {
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "stop") != 1)
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "stop") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "stop");
+		}
 	}
 	mp_setting_set_player_state(MP_PLAY_STATE_STOP);
 	mp_player_view_update_buffering_progress(GET_PLAYER_VIEW, -1);
@@ -787,10 +750,11 @@ mp_play_resume(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
-	if (!ad->live_pos_timer)
+	if (!ad->live_pos_timer) {
 		ad->live_pos_timer = ecore_timer_add(1, _mp_play_set_pos, ad);
+	}
 	mp_util_set_livebox_update_timer();
 
 	ad->player_state = PLAY_STATE_PLAYING;
@@ -802,43 +766,42 @@ mp_play_resume(void *data)
 #endif
 	mp_util_sleep_lock_set(TRUE, FALSE);
 
-        if (!ad->win_minicon)
-                mp_minicontroller_create(ad);
-        else
-                mp_minicontroller_show(ad);
+	if (!ad->win_minicon) {
+		mp_minicontroller_create(ad);
+	} else {
+		mp_minicontroller_show(ad);
+	}
 
-        if (ad->b_minicontroller_show)
-                mp_minicontroller_update_control(ad);
+	if (ad->b_minicontroller_show) {
+		mp_minicontroller_update_control(ad);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-		if (!ad->win_lockmini)
-		{
-                mp_lockscreenmini_create(ad);
-		}
-        else
-        {
-                mp_lockscreenmini_show(ad);
-        }
+	if (!ad->win_lockmini) {
+		mp_lockscreenmini_create(ad);
+	} else {
+		mp_lockscreenmini_show(ad);
+	}
 
-		if (ad->b_lockmini_show)
-		{
-                mp_lockscreenmini_update_control(ad);
-		}
-                mp_setting_save_playing_info(ad);
+	if (ad->b_lockmini_show) {
+		mp_lockscreenmini_update_control(ad);
+	}
+	mp_setting_save_playing_info(ad);
 #endif
 
 #ifdef MP_FEATURE_APP_IN_APP
-	if (ad->mini_player_mode)
+	if (ad->mini_player_mode) {
 		mp_mini_player_refresh(ad);
+	}
 #endif
 
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_RESUME_PLAYBACK);
 	mp_app_grab_mm_keys(ad);
 
-	if (ad->current_track_info)
-	{
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1)
+	if (ad->current_track_info) {
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "playing") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "playing");
+		}
 	}
 	ad->freeze_indicator_icon = false;
 	mp_setting_set_player_state(MP_PLAY_STATE_PLAYING);
@@ -860,11 +823,12 @@ mp_play_destory(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retvm_if (ad == NULL, FALSE, "appdata is NULL");
+	mp_retvm_if(ad == NULL, FALSE, "appdata is NULL");
 
 	if (ad->current_track_info) {
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "stop") != 1)
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "stop") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "stop");
+		}
 	}
 
 	mp_player_mgr_stop(ad);
@@ -882,7 +846,7 @@ mp_play_fast_destory(void *data)
 {
 	startfunc;
 	struct appdata *ad = data;
-	mp_retvm_if (ad == NULL, FALSE, "appdata is NULL");
+	mp_retvm_if(ad == NULL, FALSE, "appdata is NULL");
 
 	mp_player_mgr_destroy(ad);
 
@@ -898,10 +862,9 @@ mp_play_stop_and_updateview(void *data, bool mmc_removed)
 	startfunc;
 
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
-	if (ad->player_state != PLAY_STATE_NONE)
-	{
+	if (ad->player_state != PLAY_STATE_NONE) {
 		DEBUG_TRACE("mp_play_stop_and_updateview");
 		ad->freeze_indicator_icon = false;
 		mp_play_destory(ad);
@@ -913,20 +876,21 @@ mp_play_stop_and_updateview(void *data, bool mmc_removed)
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_PAUSE_PLAYBACK);
 	mp_view_update(mp_view_mgr_get_view(GET_VIEW_MGR, MP_VIEW_ALL));
 #ifdef MP_3D_FEATURE
-	if (ad->coverflow_view && ad->coverflow_view->back_button)
+	if (ad->coverflow_view && ad->coverflow_view->back_button) {
 		mp_coverflow_view_back_2d_view(ad);
+	}
 #endif
 
 #endif
 
-        if (ad->b_minicontroller_show)
-                mp_minicontroller_hide(ad);
+	if (ad->b_minicontroller_show) {
+		mp_minicontroller_hide(ad);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-		if (ad->b_lockmini_show)
-		{
-                mp_lockscreenmini_hide(ad);
-		}
+	if (ad->b_lockmini_show) {
+		mp_lockscreenmini_hide(ad);
+	}
 #endif
 
 	return;
@@ -938,18 +902,18 @@ mp_play_next_and_updateview(void *data)
 	startfunc;
 
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 
 	mp_play_next_file(ad, true);
 #ifdef MP_SOUND_PLAYER
 	mp_view_mgr_pop_to_view(GET_VIEW_MGR, MP_VIEW_ALL);
 #endif
-        if (ad->b_minicontroller_show)
-                mp_minicontroller_hide(ad);
+	if (ad->b_minicontroller_show) {
+		mp_minicontroller_hide(ad);
+	}
 
 #ifdef MP_FEATURE_LOCKSCREEN
-	if (ad->b_lockmini_show)
-	{
+	if (ad->b_lockmini_show) {
 		mp_lockscreenmini_hide(ad);
 	}
 #endif

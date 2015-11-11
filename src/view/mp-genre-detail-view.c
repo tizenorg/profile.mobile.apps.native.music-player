@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-genre-detail-view.h"
@@ -84,23 +84,23 @@ static void _mp_genre_detail_view_normal_more_btn_cb(void *data, Evas_Object *ob
 
 	if (mp_list_get_editable_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL)) {
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_genre_detail_view_add_to_playlist_cb, view);
+		                             STR_MP_ADD_TO_PLAYLIST, MP_PLAYER_MORE_BTN_ADD_TO_PLAYLSIT_IMAGE, _mp_genre_detail_view_add_to_playlist_cb, view);
 		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-								STR_MP_DELETE,
-								MP_PLAYER_MORE_BTN_DELETE_IMAGE,
-								_mp_genre_detail_view_tracklist_edit_cb,
-								view);
+		                             STR_MP_DELETE,
+		                             MP_PLAYER_MORE_BTN_DELETE_IMAGE,
+		                             _mp_genre_detail_view_tracklist_edit_cb,
+		                             view);
 	}
 
 	/*search*/
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
+	                             STR_MP_SEARCH, NULL, mp_common_create_search_view_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
+	                             STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
@@ -192,15 +192,14 @@ _mp_genre_detaill_view_on_event(void *thiz, MpViewEvent_e event)
 		if (!mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show))) {
 			mp_view_mgr_pop_to_view(GET_VIEW_MGR, MP_VIEW_ALL);
 		}
-	break;
+		break;
 #ifndef MP_SOUND_PLAYER
 	case MP_UPDATE_PLAYING_LIST:
 		mp_list_realized_item_part_update(view->content_to_show, "elm.text.main.left.top", ELM_GENLIST_ITEM_FIELD_TEXT);
 		mp_list_realized_item_part_update(view->content_to_show, "elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
 		break;
 #endif
-	case MP_VIEW_EVENT_ALBUMART_CHANGED:
-	{
+	case MP_VIEW_EVENT_ALBUMART_CHANGED: {
 		mp_media_list_h media_list = NULL;
 		mp_media_info_h media = NULL;
 		mp_media_info_list_create(&media_list, MP_TRACK_BY_GENRE, view->name, NULL, NULL, 0, 0, 1);
@@ -217,10 +216,9 @@ _mp_genre_detaill_view_on_event(void *thiz, MpViewEvent_e event)
 		mp_media_info_list_destroy(media_list);
 
 	}
-		break;
+	break;
 
-	case MP_UPDATE_FAVORITE_LIST:
-	{
+	case MP_UPDATE_FAVORITE_LIST: {
 		mp_list_update(view->content_to_show);
 		break;
 	}
@@ -260,7 +258,9 @@ MpGenreDetailView_t *mp_genre_detail_view_create(Evas_Object *parent, char *genr
 	MP_CHECK_NULL(view);
 
 	ret = _mp_genre_detail_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	IF_G_FREE(view->name);
 	IF_G_FREE(view->artist);

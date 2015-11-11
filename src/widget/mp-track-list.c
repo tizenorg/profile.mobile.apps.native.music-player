@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-track-list.h"
@@ -46,10 +46,10 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 {
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
-	mp_media_info_h track = (mp_media_info_h) (item->handle);
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_media_info_h track = (mp_media_info_h)(item->handle);
+	mp_retvm_if(!track, NULL, "data is null");
 
-	if ((!strcmp(part, "elm.text.main.left.top"))||(!strcmp(part, "elm.text.sub.left.bottom"))) {
+	if ((!strcmp(part, "elm.text.main.left.top")) || (!strcmp(part, "elm.text.sub.left.bottom"))) {
 		MpTrackList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -63,8 +63,7 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 			if (list->track_type == MP_TRACK_BY_FOLDER) {
 				mp_media_info_get_display_name(track, &title);
-			}
-			else {
+			} else {
 				mp_media_info_get_title(track,  &title);
 			}
 		} else {
@@ -75,7 +74,7 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 		char *uri = NULL;
 		static char result[DEF_STR_LEN + 1] = { 0, };
 		mp_media_info_get_file_path(track, &uri);
-		mp_retv_if (!uri, NULL);
+		mp_retv_if(!uri, NULL);
 
 		bool match = false;
 		if (current && !g_strcmp0(current->uri, uri) && list->edit_mode == 0) {
@@ -85,8 +84,9 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 		if (match && list->track_type == MP_TRACK_BY_PLAYLIST) {
 			int member_id = 0;
 			mp_media_info_get_playlist_member_id(track, &member_id);
-			if (member_id != current->playlist_member_id)
+			if (member_id != current->playlist_member_id) {
 				match = false;
+			}
 		}
 
 		if (match) {
@@ -98,9 +98,9 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 			g = 108;
 			b = 148;
 			a = 255;
-			memset(result, 0x00, DEF_STR_LEN+1);
+			memset(result, 0x00, DEF_STR_LEN + 1);
 			snprintf(result, DEF_STR_LEN,
-					 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup_title);
+			         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup_title);
 			IF_FREE(markup_title);
 
 			return g_strdup(result);
@@ -130,7 +130,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	mp_list_item_data_t *item = (mp_list_item_data_t *) data;
 	MP_CHECK_NULL(item);
 	mp_media_info_h track = item->handle;
-	mp_retvm_if (!track, NULL, "data is null");
+	mp_retvm_if(!track, NULL, "data is null");
 	MP_CHECK_NULL(obj);
 	MpTrackList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
@@ -182,10 +182,11 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 #ifdef MP_FEATURE_PERSONAL_PAGE
 		char *filepath = NULL;
 		mp_media_info_get_file_path(track, &filepath);
-		if (mp_util_is_in_personal_page(filepath))
+		if (mp_util_is_in_personal_page(filepath)) {
 			icon = mp_widget_lock_icon_create(obj, (const char *)thumbpath);
-		else
+		} else {
 			icon = mp_util_create_lazy_update_thumb_icon(obj, thumbpath, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
+		}
 #else
 		icon = mp_util_create_lazy_update_thumb_icon(obj, thumbpath, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
 #endif
@@ -194,7 +195,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		PROFILE_OUT("_mp_track_list_icon_get");
 
 		if (match && content) {
-			if ((int)mp_player_mgr_get_state()== (int)PLAYER_STATE_PLAYING) {
+			if ((int)mp_player_mgr_get_state() == (int)PLAYER_STATE_PLAYING) {
 				elm_object_signal_emit(content, "show_play", "*");
 			} else {
 				elm_object_signal_emit(content, "show_pause", "*");
@@ -266,8 +267,7 @@ _mp_track_genlist_sel_cb(void *data, Evas_Object * obj, void *event_info)
 	mp_list_item_data_t *item = (mp_list_item_data_t *) elm_object_item_data_get(gli);
 	MP_CHECK(item);
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		mp_list_edit_mode_sel(list, item);
 		MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
 		MpView_t *view = mp_view_mgr_get_top_view(view_mgr);
@@ -275,8 +275,9 @@ _mp_track_genlist_sel_cb(void *data, Evas_Object * obj, void *event_info)
 		return;
 	}
 
-	if (!list->reorderable)
+	if (!list->reorderable) {
 		mp_common_play_track_list_with_playlist_id(item, obj, list->playlist_id);
+	}
 
 	return;
 }
@@ -343,10 +344,11 @@ _mp_track_list_albumart_index_contnet_get_cb(void *data, Evas_Object *obj, const
 	int albumart_count = g_list_length(list->albumart_index_list);
 
 	int shortcut_count = 1;
-	if (albumart_count >= 6)
+	if (albumart_count >= 6) {
 		shortcut_count = 6;
-	else if (albumart_count >= 4)
+	} else if (albumart_count >= 4) {
 		shortcut_count = 4;
+	}
 
 #ifdef MP_FEATURE_LANDSCAPE
 	bool landscape = mp_util_is_landscape();
@@ -356,54 +358,54 @@ _mp_track_list_albumart_index_contnet_get_cb(void *data, Evas_Object *obj, const
 
 	char *group = g_strdup_printf("playlist_shortcut_layout_%d", shortcut_count);
 #ifdef MP_FEATURE_LANDSCAPE
-	if (landscape)
+	if (landscape) {
 		layout = mp_common_load_edj(obj, MP_EDJ_NAME, "landscape_playlist_shortcut_layout");
-	else
+	} else
 #endif
 		layout = mp_common_load_edj(obj, MP_EDJ_NAME, group);
 	IF_FREE(group);
 
 #ifdef MP_FEATURE_LANDSCAPE
-	if (landscape)
+	if (landscape) {
 		evas_object_size_hint_min_set(layout, LANDSCAPE_ALBUMART_INDEX_SIZE, LANDSCAPE_ALBUMART_INDEX_SIZE * elm_config_scale_get());
-	else
+	} else
 #endif
 		evas_object_size_hint_min_set(layout, ALBUMART_INDEX_SIZE, ALBUMART_INDEX_SIZE * elm_config_scale_get());
 
 	int i = 0;
 	int size = 0;
 #ifdef MP_FEATURE_LANDSCAPE
-	if (landscape)
-	{
+	if (landscape) {
 		for (; i < landscape_shortcut_count; i++) {
 			albumart_info_s *info = g_list_nth_data(list->albumart_index_list, i);
 			if (info) {
 				size = LANDSCAPE_ALBUMART_INDEX_SIZE;
- 				Evas_Object *shortcut = mp_widget_shorcut_box_add(layout, NULL, info->path, NULL, size, size, _mp_track_list_albumart_index_shortcut_clicked_cb, list);
+				Evas_Object *shortcut = mp_widget_shorcut_box_add(layout, NULL, info->path, NULL, size, size, _mp_track_list_albumart_index_shortcut_clicked_cb, list);
 				evas_object_data_set(shortcut, "index", (void *)i);
-				char *part = g_strdup_printf("elm.icon.%d", i+1);
+				char *part = g_strdup_printf("elm.icon.%d", i + 1);
 				elm_object_part_content_set(layout, part, shortcut);
 				IF_FREE(part);
 			}
 		}
-	}
-	else
+	} else
 #endif
 	{
 		for (; i < shortcut_count; i++) {
 			albumart_info_s *info = g_list_nth_data(list->albumart_index_list, i);
 			if (info) {
-				if (shortcut_count == 1)
+				if (shortcut_count == 1) {
 					size = ALBUMART_INDEX_SIZE;
-				else if (shortcut_count == 4)
+				} else if (shortcut_count == 4) {
 					size = ALBUMART_INDEX_SIZE / 2;
-				else {
+				} else {
 					size = ALBUMART_INDEX_SIZE / 3;
-					if (i == 0) size = size * 2;
+					if (i == 0) {
+						size = size * 2;
+					}
 				}
- 				Evas_Object *shortcut = mp_widget_shorcut_box_add(layout, NULL, info->path, NULL, size, size, _mp_track_list_albumart_index_shortcut_clicked_cb, list);
+				Evas_Object *shortcut = mp_widget_shorcut_box_add(layout, NULL, info->path, NULL, size, size, _mp_track_list_albumart_index_shortcut_clicked_cb, list);
 				evas_object_data_set(shortcut, "index", (void *)i);
-				char *part = g_strdup_printf("elm.icon.%d", i+1);
+				char *part = g_strdup_printf("elm.icon.%d", i + 1);
 				elm_object_part_content_set(layout, part, shortcut);
 				IF_FREE(part);
 			}
@@ -422,8 +424,9 @@ _mp_track_list_albumart_index_item_del_cb(void *data, Evas_Object *obj)
 	MpTrackList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK(list);
 
-	if (list->albumart_index_item  == item_data->it)
+	if (list->albumart_index_item  == item_data->it) {
 		list->albumart_index_item = NULL;
+	}
 }
 
 static int
@@ -466,8 +469,7 @@ _mp_track_list_albumart_index_list_append(MpTrackList_t *list, const mp_media_in
 
 	char *path = NULL;
 	mp_media_info_get_thumbnail_path(media, &path);
-	if (path == NULL || strlen(path) == 0)
-	{
+	if (path == NULL || strlen(path) == 0) {
 		path = g_strdup(DEFAULT_THUMBNAIL);
 	}
 	MP_CHECK(path);
@@ -517,8 +519,9 @@ void mp_track_list_update_albumart_index(MpTrackList_t *list)
 	mp_media_info_list_destroy(svc_handle);
 
 	if (list->albumart_index_list) {
-		if (list->playlist_id > 0)
+		if (list->playlist_id > 0) {
 			list->albumart_index_list = g_list_sort(list->albumart_index_list, _mp_track_list_album_index_list_with_sort);
+		}
 
 		mp_list_item_data_t *item_data = calloc(1, sizeof(mp_list_item_data_t));
 		MP_CHECK(item_data);
@@ -541,59 +544,51 @@ MpCloudView_e mp_track_list_get_cloud_view(MpTrackList_t *list)
 static void _mp_track_list_append_item(MpTrackList_t *list, mp_media_list_h svc_handle, int count)
 {
 
-	int index =0;
-	for (index = 0; index < count; index++)
-	{
+	int index = 0;
+	for (index = 0; index < count; index++) {
 		mp_media_info_h item = NULL;
 		item = mp_media_info_list_nth_item(svc_handle, index);
 		mp_list_item_data_t *item_data;
 #ifdef MP_FEATURE_CLOUD
-		if (list->cloud_view_type != MP_TRACK_LIST_VIEW_ALL)
-		{
+		if (list->cloud_view_type != MP_TRACK_LIST_VIEW_ALL) {
 			mp_storage_type_e storage;
 			int ret = mp_media_info_get_storage_type(item, &storage);
-			if (ret != 0)
-			{
+			if (ret != 0) {
 				ERROR_TRACE("Fail to mp_media_info_get_title, ret[%d], index[%d]", ret, index);
 				goto END;
 			}
-			if (storage == MP_STORAGE_CLOUD)
-			{
-				if (list->cloud_view_type == MP_TRACK_LIST_VIEW_LOCAL)
+			if (storage == MP_STORAGE_CLOUD) {
+				if (list->cloud_view_type == MP_TRACK_LIST_VIEW_LOCAL) {
 					continue;
-			}
-			else
-			{
-				if (list->cloud_view_type == MP_TRACK_LIST_VIEW_CLOUD)
+				}
+			} else {
+				if (list->cloud_view_type == MP_TRACK_LIST_VIEW_CLOUD) {
 					continue;
+				}
 			}
 		}
 #endif
 		/* check DRM FL */
-		#if 0
+#if 0
 		if (mp_list_get_edit((MpList_t *)list) && mp_list_get_edit_type((MpList_t *)list) == MP_LIST_EDIT_TYPE_SHARE) {
 			char *file_name = NULL;
 			mp_media_info_get_file_path(item,  &file_name);
-			if (mp_drm_check_foward_lock(file_name))
+			if (mp_drm_check_foward_lock(file_name)) {
 				continue;
+			}
 		}
-		#endif
+#endif
 #ifdef MP_FEATURE_PERSONAL_PAGE
 		char *path = NULL;
 		mp_media_info_get_file_path(item, &path);
 
-		if (mp_util_is_in_personal_page((const char *)path))
-		{
-			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD || !mp_util_is_personal_page_on())
-			{
+		if (mp_util_is_in_personal_page((const char *)path)) {
+			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_ADD || !mp_util_is_personal_page_on()) {
 				DEBUG_TRACE("ignore the items out of personal storage");
 				continue;
 			}
-		}
-		else
-		{
-			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE)
-			{
+		} else {
+			if (list->personal_page_type == MP_LIST_PERSONAL_PAGE_REMOVE) {
 				DEBUG_TRACE("ignore the items in personal storage");
 				continue;
 			}
@@ -605,16 +600,16 @@ static void _mp_track_list_append_item(MpTrackList_t *list, mp_media_list_h svc_
 		item_data->index = index;
 		item_data->group_type = MP_GROUP_NONE;
 
-                char *file_path = NULL;
-                mp_media_info_get_file_path(item, &file_path);
-                item_data->checked = mp_list_is_in_checked_path_list(list->checked_path_list, file_path);
+		char *file_path = NULL;
+		mp_media_info_get_file_path(item, &file_path);
+		item_data->checked = mp_list_is_in_checked_path_list(list->checked_path_list, file_path);
 
 		item_data->it = elm_genlist_item_append(list->genlist, list->itc, item_data, NULL,
-								    ELM_GENLIST_ITEM_NONE, _mp_track_genlist_sel_cb, list);
+		                                        ELM_GENLIST_ITEM_NONE, _mp_track_genlist_sel_cb, list);
 		elm_object_item_data_set(item_data->it, item_data);
 	}
 #ifdef MP_FEATURE_CLOUD
-	END:
+END:
 #endif
 	endfunc;
 
@@ -639,20 +634,18 @@ _mp_track_list_lazy_load(void *thiz)
 
 //	mp_list_bottom_counter_item_append((MpList_t *)list);
 
-	if (list->track_list[1])
-	{
+	if (list->track_list[1]) {
 		mp_media_info_list_destroy(list->track_list[1]);
 	}
 	list->track_list[1] = svc_handle;
 
 	list->load_timer = NULL;
-        if (mp_list_get_edit((MpList_t *)list) || list->get_by_view)
-        {
-                MpView_t *view = mp_view_mgr_get_top_view(GET_VIEW_MGR);
-                if (view) {
-                        mp_view_update_options(view);
-                }
-        }
+	if (mp_list_get_edit((MpList_t *)list) || list->get_by_view) {
+		MpView_t *view = mp_view_mgr_get_top_view(GET_VIEW_MGR);
+		if (view) {
+			mp_view_update_options(view);
+		}
+	}
 	return EINA_FALSE;
 }
 
@@ -673,9 +666,9 @@ _mp_track_list_shuffle_text_get(void *data, Evas_Object *obj, const char *part)
 
 		markup = (list->track_count == 1) ? g_strdup(GET_STR(STR_MP_SHUFFLE_1_TRACK)) : g_strdup_printf(GET_STR(STR_MP_SHUFFLE_PD_TRACKS), list->track_count);
 
-		memset(result, 0x00, DEF_STR_LEN+1);
+		memset(result, 0x00, DEF_STR_LEN + 1);
 		snprintf(result, DEF_STR_LEN,
-				 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup);
+		         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup);
 		IF_FREE(markup);
 
 		return g_strdup(result);
@@ -735,8 +728,7 @@ static void _mp_track_list_append_shuffle_item(MpTrackList_t *list)
 	startfunc;
 	MP_CHECK(list);
 
-	if (list->itc_shuffle == NULL)
-	{
+	if (list->itc_shuffle == NULL) {
 		list->itc_shuffle = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_shuffle);
 		//list->itc_shuffle->item_style = "music/1line";//"music/3text.1icon.2"
@@ -747,68 +739,61 @@ static void _mp_track_list_append_shuffle_item(MpTrackList_t *list)
 		list->itc_shuffle->func.del = _mp_track_list_shuffle_item_del_cb;
 	}
 
-        mp_list_item_data_t *item_data;
-        item_data = calloc(1, sizeof(mp_list_item_data_t));
-        MP_CHECK(item_data);
-        item_data->item_type = MP_LIST_ITEM_TYPE_SHUFFLE;
+	mp_list_item_data_t *item_data;
+	item_data = calloc(1, sizeof(mp_list_item_data_t));
+	MP_CHECK(item_data);
+	item_data->item_type = MP_LIST_ITEM_TYPE_SHUFFLE;
 
-        item_data->it = list->shuffle_it = elm_genlist_item_append(list->genlist, list->itc_shuffle, item_data, NULL,
-                                                            ELM_GENLIST_ITEM_NONE, _mp_track_list_shuffle_cb, list);
+	item_data->it = list->shuffle_it = elm_genlist_item_append(list->genlist, list->itc_shuffle, item_data, NULL,
+	                                   ELM_GENLIST_ITEM_NONE, _mp_track_list_shuffle_cb, list);
 
-        elm_object_item_data_set(item_data->it, item_data);
+	elm_object_item_data_set(item_data->it, item_data);
 
-        endfunc;
+	endfunc;
 }
 
 void mp_track_list_show_shuffle(void *thiz, bool show)
 {
 	startfunc;
-        MP_CHECK(thiz);
-        MpTrackList_t *list = thiz;
-        MP_CHECK(list->genlist);
+	MP_CHECK(thiz);
+	MpTrackList_t *list = thiz;
+	MP_CHECK(list->genlist);
 
-        DEBUG_TRACE("show shuffle: %d   list->shuffle_it: %0x", show, list->shuffle_it);
-        if (show)
-        {
-                _mp_track_list_append_shuffle_item(list);
-        }
-        else if (list->shuffle_it)
-        {
-                elm_object_item_del(list->shuffle_it);
-                list->shuffle_it = NULL;
-        }
+	DEBUG_TRACE("show shuffle: %d   list->shuffle_it: %0x", show, list->shuffle_it);
+	if (show) {
+		_mp_track_list_append_shuffle_item(list);
+	} else if (list->shuffle_it) {
+		elm_object_item_del(list->shuffle_it);
+		list->shuffle_it = NULL;
+	}
 }
 
 void mp_track_list_popup_delete_genlist_item(void *thiz)
 {
-        startfunc;
+	startfunc;
 
-        MP_CHECK(thiz);
-        MpTrackList_t *list = thiz;
-        MP_CHECK(list->genlist);
+	MP_CHECK(thiz);
+	MpTrackList_t *list = thiz;
+	MP_CHECK(list->genlist);
 
-        if (list->track_count > 0)
-        {
-                list->track_count--;
-        }
+	if (list->track_count > 0) {
+		list->track_count--;
+	}
 }
 
 void mp_track_list_update_genlist(void *thiz)
 {
-        startfunc;
+	startfunc;
 
-        MP_CHECK(thiz);
-        MpTrackList_t *list = thiz;
-        MP_CHECK(list->genlist);
+	MP_CHECK(thiz);
+	MpTrackList_t *list = thiz;
+	MP_CHECK(list->genlist);
 
-        if (list->track_count <= 0)
-        {
-                mp_list_update(thiz);
-        }
-        else
-        {
-                elm_genlist_realized_items_update(list->genlist);
-        }
+	if (list->track_count <= 0) {
+		mp_list_update(thiz);
+	} else {
+		elm_genlist_realized_items_update(list->genlist);
+	}
 }
 
 static void _mp_track_list_load_list(void *thiz, int count)
@@ -822,8 +807,7 @@ static void _mp_track_list_load_list(void *thiz, int count)
 
 	/*clear genlist*/
 	Elm_Object_Item *item = elm_genlist_first_item_get(list->genlist);
-	if (item)
-	{
+	if (item) {
 		elm_genlist_item_bring_in(item, ELM_GENLIST_ITEM_SCROLLTO_IN);
 		elm_genlist_clear(list->genlist);
 	}
@@ -831,8 +815,7 @@ static void _mp_track_list_load_list(void *thiz, int count)
 	mp_track_list_update_albumart_index(list);
 
 	mp_ecore_timer_del(list->load_timer);
-	if (list->track_type == MP_TRACK_ALL && count > INITIAL_LOAD_COUNT)
-	{
+	if (list->track_type == MP_TRACK_ALL && count > INITIAL_LOAD_COUNT) {
 		count = INITIAL_LOAD_COUNT;
 		list->load_timer = ecore_timer_add(0.4, _mp_track_list_lazy_load, list);
 	}
@@ -852,8 +835,7 @@ static void _mp_track_list_load_list(void *thiz, int count)
 	_mp_track_list_append_item(list, svc_handle, count);
 	PROFILE_OUT("_mp_track_list_append_item");
 
-	if (list->track_list[0])
-	{
+	if (list->track_list[0]) {
 		mp_media_info_list_destroy(list->track_list[0]);
 	}
 	list->track_list[0] = svc_handle;
@@ -867,16 +849,15 @@ static void _mp_track_list_destory_cb(void *thiz)
 
 	mp_ecore_timer_del(list->load_timer);
 
-	if (list->playlists)
+	if (list->playlists) {
 		mp_media_info_group_list_destroy(list->playlists);
+	}
 
-	if (list->track_list[0])
-	{
+	if (list->track_list[0]) {
 		mp_media_info_list_destroy(list->track_list[0]);
 		list->track_list[0] = NULL;
 	}
-	if (list->track_list[1])
-	{
+	if (list->track_list[1]) {
 		mp_media_info_list_destroy(list->track_list[1]);
 		list->track_list[1] = NULL;
 	}
@@ -1101,8 +1082,7 @@ static void _mp_track_list_item_highlighted(void *data, Evas_Object *obj, void *
 	Elm_Object_Item *it = event_info;
 	MP_CHECK(it);
 
-	if (list->shuffle_it == it)
-	{
+	if (list->shuffle_it == it) {
 		Evas_Object *icon = elm_object_item_part_content_get(it, "elm.icon.2");
 		if (icon) {
 			elm_image_file_set(icon, IMAGE_EDJ_NAME, MP_ICON_SHUFFLE_PRESS);
@@ -1118,8 +1098,7 @@ static void _mp_track_list_item_unhighlighted(void *data, Evas_Object *obj, void
 	Elm_Object_Item *it = event_info;
 	MP_CHECK(it);
 
-	if (list->shuffle_it == it)
-	{
+	if (list->shuffle_it == it) {
 		Evas_Object *icon = elm_object_item_part_content_get(it, "elm.icon.2");
 		if (icon) {
 			elm_image_file_set(icon, IMAGE_EDJ_NAME, MP_ICON_SHUFFLE);
@@ -1147,8 +1126,7 @@ static void _mp_track_list_update(void *thiz)
 	mp_evas_object_del(list->no_content);
 	mp_evas_object_del(list->genlist);
 
-	if (count)
-	{
+	if (count) {
 		/*create new genlist*/
 		PROFILE_IN("elm_genlist_add");
 		list->genlist = mp_widget_genlist_create(list->box);
@@ -1163,8 +1141,7 @@ static void _mp_track_list_update(void *thiz)
 
 		evas_object_data_set(list->genlist, "list_data", list);
 
-		if (!list->itc)
-		{
+		if (!list->itc) {
 			list->itc = elm_genlist_item_class_new();
 			if (list->itc) {
 				list->itc->item_style = "2line.top";
@@ -1177,19 +1154,20 @@ static void _mp_track_list_update(void *thiz)
 			}
 		}
 
-		if (list->reorderable)
+		if (list->reorderable) {
 			evas_object_smart_callback_add(list->genlist, "moved", mp_list_item_reorder_moved_cb, list);
+		}
 
-                /*
+		/*
 		evas_object_smart_callback_add(list->genlist, "drag,start,left", list->flick_left_cb, NULL);
-		evas_object_smart_callback_add(list->genlist, "drag,start,right", list->flick_right_cb, NULL);
-		evas_object_smart_callback_add(list->genlist, "drag,stop", list->flick_stop_cb, NULL);
+			evas_object_smart_callback_add(list->genlist, "drag,start,right", list->flick_right_cb, NULL);
+			evas_object_smart_callback_add(list->genlist, "drag,stop", list->flick_stop_cb, NULL);
 
-		evas_object_smart_callback_add(list->genlist, "drag,start,right", list->mode_right_cb, NULL);
-		evas_object_smart_callback_add(list->genlist, "drag,start,left", list->mode_left_cb, NULL);
-		evas_object_smart_callback_add(list->genlist, "drag,start,up", list->mode_cancel_cb, NULL);
-		evas_object_smart_callback_add(list->genlist, "drag,start,down", list->mode_cancel_cb, NULL);
-		*/
+			evas_object_smart_callback_add(list->genlist, "drag,start,right", list->mode_right_cb, NULL);
+			evas_object_smart_callback_add(list->genlist, "drag,start,left", list->mode_left_cb, NULL);
+			evas_object_smart_callback_add(list->genlist, "drag,start,up", list->mode_cancel_cb, NULL);
+			evas_object_smart_callback_add(list->genlist, "drag,start,down", list->mode_cancel_cb, NULL);
+			*/
 		//evas_object_smart_callback_add(list->genlist, "longpressed", _mp_track_list_item_longpressed_cb, list);
 		evas_object_smart_callback_add(list->genlist, "scroll,drag,start", list->drag_start_cb, list);
 		evas_object_smart_callback_add(list->genlist, "scroll,drag,stop", list->drag_stop_cb, list);
@@ -1203,8 +1181,9 @@ static void _mp_track_list_update(void *thiz)
 		list->show_fastscroll(list);
 		PROFILE_OUT("_mp_track_list_load_list");
 
-		if (!mp_list_get_editable_count(thiz, mp_list_get_edit_type(thiz)))
+		if (!mp_list_get_editable_count(thiz, mp_list_get_edit_type(thiz))) {
 			goto NoContents;
+		}
 
 		return;
 	}
@@ -1212,16 +1191,13 @@ static void _mp_track_list_update(void *thiz)
 NoContents:
 	list->hide_fastscroll(list);
 	mp_evas_object_del(list->genlist);
-	if (!list->no_content)
-	{
-		if (list->track_type > MP_TRACK_TYPE_PLAYLIST_MIN && list->track_type < MP_TRACK_TYPE_PLAYLIST_MAX)
-		{
+	if (!list->no_content) {
+		if (list->track_type > MP_TRACK_TYPE_PLAYLIST_MIN && list->track_type < MP_TRACK_TYPE_PLAYLIST_MAX) {
 			char *helptext = NULL;
 			Evas_Smart_Cb callback = NULL;
 			void *cb_data = NULL;
 
-			if (list->track_type == MP_TRACK_BY_PLAYLIST)
-			{
+			if (list->track_type == MP_TRACK_BY_PLAYLIST) {
 				char *playlist_name = NULL;
 				mp_media_info_group_get_main_info(list->playlist_handle, &playlist_name);
 				char *title = elm_entry_utf8_to_markup(playlist_name);
@@ -1229,22 +1205,17 @@ NoContents:
 				IF_FREE(title);
 				//callback = mp_track_list_add_tracks_to_playlist_cb;
 				//cb_data = list;
-			}
-			else if (list->track_type == MP_TRACK_BY_FAVORITE) {
+			} else if (list->track_type == MP_TRACK_BY_FAVORITE) {
 				helptext = g_strdup(STR_MP_AFTER_YOU_ADD_TRACK_TO_FAVOURITE);
-			}
-			else if (list->track_type == MP_TRACK_BY_PLAYED_COUNT || list->track_type == MP_TRACK_BY_PLAYED_TIME) {
+			} else if (list->track_type == MP_TRACK_BY_PLAYED_COUNT || list->track_type == MP_TRACK_BY_PLAYED_TIME) {
 				helptext = g_strdup(STR_MP_AFTER_YOU_PLAY_TRACKS_THEY_WILL_BE_SHOWN);
-			}
-			else if (list->track_type == MP_TRACK_BY_ADDED_TIME) {
+			} else if (list->track_type == MP_TRACK_BY_ADDED_TIME) {
 				helptext = g_strdup(STR_MP_AFTER_YOU_DOWNLOAD_TRACKS);
 			}
 
 			list->no_content = mp_widget_create_no_content_playlist(list->box, helptext, callback, cb_data);
 			IF_FREE(helptext);
-		}
-		else
-		{
+		} else {
 			list->no_content = mp_widget_create_no_contents(list->box, MP_NOCONTENT_TRACKS, NULL, list);
 		}
 		elm_box_pack_end(list->box, list->no_content);
@@ -1284,7 +1255,7 @@ static void _mp_track_list_set_edit(void *thiz, bool edit)
 	MpTrackList_t *list = thiz;
 	MP_CHECK(list);
 
-        mp_track_list_show_shuffle(list, false);
+	mp_track_list_show_shuffle(list, false);
 
 	/* check DRM FL */
 	if (mp_list_get_edit_type((MpList_t*)list) == MP_LIST_EDIT_TYPE_SHARE) {
@@ -1296,11 +1267,13 @@ static void _mp_track_list_set_edit(void *thiz, bool edit)
 		list->albumart_index_item = NULL;
 	}
 
-	if (list->set_edit_default)
+	if (list->set_edit_default) {
 		list->set_edit_default(list, edit);
+	}
 
-	if (!edit)
+	if (!edit) {
 		mp_track_list_update_albumart_index(list);
+	}
 }
 
 static unsigned int
@@ -1324,11 +1297,13 @@ _mp_track_list_get_editable_count(void *thiz, MpListEditType_e type)
 		}
 	}
 
-	if (list->shuffle_it)
+	if (list->shuffle_it) {
 		--count;
+	}
 
-	if (list->bottom_counter_item)
+	if (list->bottom_counter_item) {
 		--count;
+	}
 
 	return count;
 }
@@ -1342,10 +1317,11 @@ _mp_track_list_bottom_counter_text_cb(void *thiz)
 	unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
 
 	char *text = NULL;
-	if (count == 1)
+	if (count == 1) {
 		text = g_strdup(GET_STR(STR_MP_1_SONG));
-	else
+	} else {
 		text = g_strdup_printf(GET_STR(STR_MP_PD_SONGS), count);
+	}
 
 	return text;
 }
@@ -1398,16 +1374,17 @@ _set_playlist_handle(MpTrackList_t *list)
 	res = mp_media_info_group_list_create(&media_list, MP_GROUP_BY_PLAYLIST, NULL, NULL, 0, count);
 	MP_CHECK(res == 0);
 
-	for (i=0; i<count; i++)
-	{
+	for (i = 0; i < count; i++) {
 		int playlist_id;
 		media = mp_media_info_group_list_nth_item(media_list, i);
 		mp_media_info_group_get_playlist_id(media, &playlist_id);
-		if (playlist_id == list->playlist_id)
+		if (playlist_id == list->playlist_id) {
 			break;
+		}
 	}
-	if (list->playlists)
+	if (list->playlists) {
 		mp_media_info_group_list_destroy(list->playlists);
+	}
 
 	list->playlists = media_list;
 	list->playlist_handle = media;
@@ -1423,88 +1400,77 @@ void mp_track_list_set_data(MpTrackList_t *list, ...)
 	int field;
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
 		DEBUG_TRACE("field is %d", field);
 
-		switch (field)
-		{
-		case MP_TRACK_LIST_TYPE:
-			{
-				int val = va_arg((var_args), int);
+		switch (field) {
+		case MP_TRACK_LIST_TYPE: {
+			int val = va_arg((var_args), int);
 
-				list->track_type = val;
-				DEBUG_TRACE("list->track_type = %d", list->track_type);
-				break;
-			}
+			list->track_type = val;
+			DEBUG_TRACE("list->track_type = %d", list->track_type);
+			break;
+		}
 
-		case MP_TRACK_LIST_PLAYLIT_ID:
-			{
-				int val = va_arg((var_args), int);
-				list->playlist_id = val;
-				DEBUG_TRACE("list->playlist_id = %d", list->playlist_id);
+		case MP_TRACK_LIST_PLAYLIT_ID: {
+			int val = va_arg((var_args), int);
+			list->playlist_id = val;
+			DEBUG_TRACE("list->playlist_id = %d", list->playlist_id);
 
-				_set_playlist_handle(list);
+			_set_playlist_handle(list);
 
-				break;
-			}
+			break;
+		}
 
-		case MP_TRACK_LIST_TYPE_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->type_str);
-				list->type_str = g_strdup(val);
-				DEBUG_TRACE("list->type_str = %s", list->type_str);
+		case MP_TRACK_LIST_TYPE_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->type_str);
+			list->type_str = g_strdup(val);
+			DEBUG_TRACE("list->type_str = %s", list->type_str);
 
-				break;
-			}
-		case MP_TRACK_LIST_TYPE_STR2:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->type_str2);
-				list->type_str2 = g_strdup(val);
-				DEBUG_TRACE("list->type_str = %s", list->type_str2);
+			break;
+		}
+		case MP_TRACK_LIST_TYPE_STR2: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->type_str2);
+			list->type_str2 = g_strdup(val);
+			DEBUG_TRACE("list->type_str = %s", list->type_str2);
 
-				break;
-			}
-		case MP_TRACK_LIST_FILTER_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->filter_str);
-				list->filter_str = g_strdup(val);
-				DEBUG_TRACE("list->filter_str = %s", list->filter_str);
+			break;
+		}
+		case MP_TRACK_LIST_FILTER_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->filter_str);
+			list->filter_str = g_strdup(val);
+			DEBUG_TRACE("list->filter_str = %s", list->filter_str);
 
-				break;
-			}
-		case MP_TRACK_LIST_INDEX_TYPE:
-			{
-				int val = va_arg((var_args), int);
-				list->index_type = (MpTrackListIndex_t)val;
-				DEBUG_TRACE("list->index_type = %d", list->index_type);
-				break;
-			}
-		case MP_TRACK_LIST_CLOUD_TYPE:
-			{
-				int val = va_arg((var_args), int);
-				list->cloud_view_type= val;
-				DEBUG_TRACE("list->index_type = %d", list->index_type);
-				break;
-			}
-                case MP_TRACK_LIST_CHECKED_LIST:
-                {
-                        GList *val = va_arg((var_args), GList*);
-                        list->checked_path_list = val;
-                        list->get_by_view = true;
-                        break;
-                }
+			break;
+		}
+		case MP_TRACK_LIST_INDEX_TYPE: {
+			int val = va_arg((var_args), int);
+			list->index_type = (MpTrackListIndex_t)val;
+			DEBUG_TRACE("list->index_type = %d", list->index_type);
+			break;
+		}
+		case MP_TRACK_LIST_CLOUD_TYPE: {
+			int val = va_arg((var_args), int);
+			list->cloud_view_type = val;
+			DEBUG_TRACE("list->index_type = %d", list->index_type);
+			break;
+		}
+		case MP_TRACK_LIST_CHECKED_LIST: {
+			GList *val = va_arg((var_args), GList*);
+			list->checked_path_list = val;
+			list->get_by_view = true;
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field >= 0);
+	} while (field >= 0);
 
 	va_end(var_args);
 }
@@ -1528,6 +1494,6 @@ void mp_track_list_copy_data(MpTrackList_t *src, MpTrackList_t *dest)
 	dest->filter_str = g_strdup(src->filter_str);
 
 	dest->index_type = src->index_type;
-	dest->cloud_view_type= src->cloud_view_type;
+	dest->cloud_view_type = src->cloud_view_type;
 }
 

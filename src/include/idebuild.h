@@ -20,15 +20,15 @@
 #define __MP_IDEBUILD_H_
 
 typedef struct _keynode_t {
-    char *keyname;           /**< Keyname for keynode */
-    int type;                /**< Keynode type */
-    union {
-        int i;               /**< Integer type */
-        int b;               /**< Bool type */
-        double d;            /**< Double type */
-        char *s;             /**< String type */
-    } value;                 /**< Value for keynode */
-    struct _keynode_t *next; /**< Next keynode */
+	char *keyname;           /**< Keyname for keynode */
+	int type;                /**< Keynode type */
+	union {
+		int i;               /**< Integer type */
+		int b;               /**< Bool type */
+		double d;            /**< Double type */
+		char *s;             /**< String type */
+	} value;                 /**< Value for keynode */
+	struct _keynode_t *next; /**< Next keynode */
 } keynode_t;
 
 #define MH_SCROLL_MAX 3

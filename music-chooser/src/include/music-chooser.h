@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MUSIC_CHOOSER_H__
@@ -54,7 +54,7 @@
 #define MC_SELECT_MODE_KEY	"http://tizen.org/appcontrol/data/selection_mode"
 #define MC_SELECT_MULTIPLE	"multiple"
 
-typedef enum{
+typedef enum {
 	MC_SELECT_SINGLE,
 	MC_SELECT_SINGLE_RINGTONE,
 	MC_SELECT_MULTI,
@@ -64,9 +64,9 @@ typedef enum{
 	MC_SHORTCUT_ALBUM,
 	MC_SHORTCUT_ARTIST,
 	MC_SHORTCUT_PLAYLIST,
-}ug_type;
+} ug_type;
 
-typedef enum{
+typedef enum {
 	MC_TRACK,
 	MC_ALBUM,
 	MC_ALBUM_TRACK,
@@ -74,10 +74,9 @@ typedef enum{
 	MC_ARTIST_TRACK,
 	MC_FOLDER,
 	MC_FOLDER_TRACK,
-}mc_list_type_e;
+} mc_list_type_e;
 
-typedef struct
-{
+typedef struct {
 	int index;
 	mc_list_type_e item_type;
 	Elm_Object_Item *it;
@@ -89,8 +88,7 @@ typedef struct
 	void *plst_item;
 } mc_list_item_data_t;
 
-struct app_data
-{
+struct app_data {
 	Evas_Object *base_layout;
 	Evas_Object *navi_bar;
 	int max_count;

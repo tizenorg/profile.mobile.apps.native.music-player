@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -24,30 +24,26 @@
 //#include <libsoup/soup.h>
 //#include "mp-info-popup.h"
 
-enum
-{
+enum {
 	DETAIL_VIEW_MOVE_NONE,
 	DETAIL_VIEW_MOVE_LEFT,
 	DETAIL_VIEW_MOVE_RIGHT,
 };
 
-enum
-{
+enum {
 	DETAIL_VIEW_PAGE_VIDEO = 1,
 	DETAIL_VIEW_PAGE_CREDIT,
 	DETAIL_VIEW_PAGE_META,
 };
 
-typedef enum
-{
+typedef enum {
 	DETAIL_VIEW_ITC_NO_META,
 	DETAIL_VIEW_ITC_VIDEO,
 	DETAIL_VIEW_ITC_CREDIT,
 	DETAIL_VIEW_ITC_META_INFO,
-}mp_detail_view_itc;
+} mp_detail_view_itc;
 
-typedef struct
-{
+typedef struct {
 	INHERIT_MP_VIEW;
 	Elm_Object_Item *inner_navi_it;
 	//add pagecontrol begin
@@ -96,7 +92,7 @@ typedef struct
 	char *album;
 	char *id;
 	char *thumb;
-}MpDetailView_t;
+} MpDetailView_t;
 
 MpDetailView_t *mp_detail_view_create(Evas_Object *parent);
 int mp_detail_view_destory(MpDetailView_t *view);

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-playlist-list.h"
@@ -43,16 +43,17 @@ static int
 _mp_playlist_list_get_track_type_by_playlist_id(int playlist_id)
 {
 	int track_type;
-	if (playlist_id == MP_SYS_PLST_MOST_PLAYED)
+	if (playlist_id == MP_SYS_PLST_MOST_PLAYED) {
 		track_type = MP_TRACK_BY_PLAYED_COUNT;
-	else if (playlist_id == MP_SYS_PLST_RECENTELY_ADDED)
+	} else if (playlist_id == MP_SYS_PLST_RECENTELY_ADDED) {
 		track_type = MP_TRACK_BY_ADDED_TIME;
-	else if (playlist_id == MP_SYS_PLST_RECENTELY_PLAYED)
+	} else if (playlist_id == MP_SYS_PLST_RECENTELY_PLAYED) {
 		track_type = MP_TRACK_BY_PLAYED_TIME;
-	else if (playlist_id == MP_SYS_PLST_QUICK_LIST)
+	} else if (playlist_id == MP_SYS_PLST_QUICK_LIST) {
 		track_type = MP_TRACK_BY_FAVORITE;
-	else
+	} else {
 		track_type = MP_TRACK_BY_PLAYLIST;
+	}
 
 	return track_type;
 }
@@ -66,18 +67,15 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(plst_item);
 
 	int ret = 0;
-	if (!strcmp(part, "elm.text.main.left.top") || !strcmp(part, "elm.text"))
-	{
+	if (!strcmp(part, "elm.text.main.left.top") || !strcmp(part, "elm.text")) {
 
 		char *name = NULL;
 		ret = mp_media_info_group_get_main_info(plst_item, &name);
-		mp_retvm_if (ret != 0, NULL, "Fail to get value");
-		mp_retvm_if (name == NULL, NULL, "Fail to get value");
+		mp_retvm_if(ret != 0, NULL, "Fail to get value");
+		mp_retvm_if(name == NULL, NULL, "Fail to get value");
 
 		return elm_entry_utf8_to_markup(GET_STR(name));
-	}
-	else if (!strcmp(part, "elm.text.sub.left.bottom"))
-	{
+	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
 		int count = -1;
 		int plst_id = -1;
 		int total_time = 0;
@@ -86,7 +84,7 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 		// TODO:  fix performance issue
 		ret = mp_media_info_group_get_playlist_id(plst_item, &plst_id);
-		mp_retvm_if ((ret != 0), NULL, "Fail to get value");
+		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 
 		char *text = NULL;
 		int track_type = _mp_playlist_list_get_track_type_by_playlist_id(plst_id);
@@ -95,10 +93,11 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 		total_time = mp_common_get_playlist_totaltime(track_type, plst_id, count);
 		mp_util_format_duration(time, total_time);
 
-		if (count == 1)
-		        text = g_strdup(GET_STR(STR_MP_1_SONG));
-                else
-                        text = g_strdup_printf(GET_STR(STR_MP_PD_SONGS), count);
+		if (count == 1) {
+			text = g_strdup(GET_STR(STR_MP_1_SONG));
+		} else {
+			text = g_strdup_printf(GET_STR(STR_MP_PD_SONGS), count);
+		}
 
 		format_text = g_strdup_printf("%s | %s", text, time);
 		IF_FREE(text);
@@ -128,8 +127,7 @@ _mp_playlist_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_
 
 	MpPlaylistList_t *list = (MpPlaylistList_t *)data;
 	MP_CHECK(list);
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		return ;
 	}
 
@@ -146,27 +144,27 @@ _mp_playlist_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_
 	Evas_Object *popup = NULL;
 	mp_list_item_data_t *item_data = NULL;
 
-	if (list->scroll_drag_status )
+	if (list->scroll_drag_status) {
 		return;
+	}
 
 	Elm_Object_Item *temp = NULL;
-	if (MP_LIST_OBJ_IS_GENGRID(list->genlist))
-	{
+	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		temp = elm_gengrid_first_item_get(list->genlist);
 		while (temp) {
 			item_data = elm_object_item_data_get(temp);
-			if (item_data)
+			if (item_data) {
 				item_data->checked = false;
+			}
 			temp = elm_gengrid_item_next_get(temp);
 		}
-	}
-	else
-	{
+	} else {
 		temp = elm_genlist_first_item_get(list->genlist);
 		while (temp) {
 			item_data = elm_object_item_data_get(temp);
-			if (item_data)
+			if (item_data) {
 				item_data->checked = false;
+			}
 			temp = elm_genlist_item_next_get(temp);
 		}
 	}
@@ -174,40 +172,36 @@ _mp_playlist_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_
 	item_data = elm_object_item_data_get(item);
 	MP_CHECK(item_data);
 
-        item_data->checked = true;
+	item_data->checked = true;
 
 	int item_index = 0;
 	int playlist_auto_count = 0;
 	int i = 0;
 	pop_item_count = 2;
 
-	if (MP_LIST_OBJ_IS_GENGRID(list->genlist))
+	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 		item_index = elm_gengrid_item_index_get(item);
-	else
+	} else {
 		item_index = elm_genlist_item_index_get(item);
+	}
 
 
 	mp_media_info_group_get_main_info(item_data->handle, &title);
 	mp_setting_playlist_get_state(&playlist_state);
-	for (i = 0; i < MP_SYS_PLST_COUNT; i++)
-	{
-		if (playlist_state&(1<<i))
+	for (i = 0; i < MP_SYS_PLST_COUNT; i++) {
+		if (playlist_state & (1 << i)) {
 			playlist_auto_count++;
+		}
 	}
 
-	if (MP_LIST_OBJ_IS_GENGRID(list->genlist))
-	{
-		if (item_index <(playlist_auto_count))
-		{
+	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
+		if (item_index < (playlist_auto_count)) {
 			pop_item_count = 1;
 			pop_del_status = false;
 			title = GET_SYS_STR(title);
 		}
-	}
-	else
-	{
-		if (item_index <= (playlist_auto_count))
-		{
+	} else {
+		if (item_index <= (playlist_auto_count)) {
 			pop_item_count = 1;
 			pop_del_status = false;
 			title = GET_SYS_STR(title);
@@ -223,23 +217,19 @@ _mp_playlist_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_
 	IF_FREE(up_title);
 
 	mp_genlist_popup_item_append(popup, STR_MP_PLAY_ALL, NULL, NULL, NULL,
-			mp_common_playall_cb, list);
+	                             mp_common_playall_cb, list);
 
-        if (pop_del_status)
-        {
+	if (pop_del_status) {
 		mp_genlist_popup_item_append(popup, STR_MP_DELETE, NULL, NULL, NULL,
-				mp_common_list_delete_cb, list);
-                mp_genlist_popup_item_append(popup, STR_MP_RENAME, NULL, NULL, NULL,
-				mp_common_playlist_rename_cb, list);
+		                             mp_common_list_delete_cb, list);
+		mp_genlist_popup_item_append(popup, STR_MP_RENAME, NULL, NULL, NULL,
+		                             mp_common_playlist_rename_cb, list);
 
-        }
-
-	if (MP_LIST_OBJ_IS_GENGRID(list->genlist))
-	{
-		MP_GENGRID_ITEM_LONG_PRESSED(obj, popup, event_info);
 	}
-	else
-	{
+
+	if (MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
+		MP_GENGRID_ITEM_LONG_PRESSED(obj, popup, event_info);
+	} else {
 		MP_GENLIST_ITEM_LONG_PRESSED(obj, popup, event_info);
 	}
 
@@ -269,19 +259,15 @@ mp_playlist_list_view_rename_done_cb(void *data, Evas_Object * obj, void *event_
 	MP_CHECK(ad);
 	text = mp_util_isf_get_edited_str(editfiled_entry, TRUE);
 
-	if (!mp_util_is_playlist_name_valid((char *)text))
+	if (!mp_util_is_playlist_name_valid((char *)text)) {
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_UNABLE_RENAME_PLAYLIST"));
-	else
-	{
+	} else {
 		bool exist = false;
 		ret = mp_media_info_playlist_is_exist(text, &exist);
-		if (ret != 0)
-		{
+		if (ret != 0) {
 			ERROR_TRACE("Fail to get playlist count by name: %d", ret);
 			mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"));
-		}
-		else
-		{
+		} else {
 			char *origin_name = NULL;
 			mp_media_info_group_get_main_info(plst, &origin_name);
 
@@ -338,21 +324,20 @@ mp_playlist_list_set_playlist(mp_plst_mgr *plst_mgr, int playlist_id)
 
 	/* get music item data */
 	ret = mp_media_info_list_create(&svc_handle, track_type, NULL, NULL, NULL, playlist_id, 0, count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("fail to get list item: %d", ret);
 		ret = mp_media_info_list_destroy(svc_handle);
 		svc_handle = NULL;
 	}
 
-	if (count)
-	{
+	if (count) {
 		mp_playlist_mgr_clear(plst_mgr);
 		mp_util_append_media_list_item_to_playlist(plst_mgr, svc_handle, count, 0, NULL);
 	}
 
-	if (svc_handle)
+	if (svc_handle) {
 		mp_media_info_list_destroy(svc_handle);
+	}
 
 	return count;
 }
@@ -376,15 +361,15 @@ _mp_playlist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	mp_media_info_group_get_playlist_id(plst, &playlist_id);
 
-	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon"))
-	{
+	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon")) {
 		mp_common_playlist_album_update(plst);
 		ret = mp_media_info_playlist_get_thumbnail_path(plst, &thumb_path);
-		mp_retvm_if (ret != 0, NULL, "Fail to get value");
-		if (playlist_id >=0)
+		mp_retvm_if(ret != 0, NULL, "Fail to get value");
+		if (playlist_id >= 0) {
 			eo = mp_util_create_lazy_update_thumb_icon(obj, thumb_path, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
-		else
+		} else {
 			eo = mp_util_create_thumb_icon(obj, thumb_path, MP_LIST_ICON_SIZE, MP_LIST_ICON_SIZE);
+		}
 
 		elm_layout_theme_set(content, "layout", "list/B/music.type.1", "default");
 		elm_layout_content_set(content, "elm.swallow.content", eo);
@@ -395,15 +380,15 @@ _mp_playlist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *check = NULL;
 	MpPlaylistList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
-	if (list->edit_mode)
-	{
-		if (!strcmp(part, "elm.icon.2"))
-		{		// swallow checkbox or radio button
+	if (list->edit_mode) {
+		if (!strcmp(part, "elm.icon.2")) {
+			// swallow checkbox or radio button
 			check = elm_check_add(obj);
-			if (MP_LIST_OBJ_IS_GENGRID(obj))
+			if (MP_LIST_OBJ_IS_GENGRID(obj)) {
 				elm_object_style_set(check, "grid");
-			else
+			} else {
 				elm_object_style_set(check, "default");
+			}
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
@@ -418,13 +403,12 @@ _mp_playlist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 Evas_Object *
 _mp_playlist_add_icon_get(void *data, Evas_Object * obj, const char *part)
 {
-	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon"))
-	{
+	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *eo = NULL;
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 		eo = mp_util_create_thumb_icon(obj, PLAYLIST_CREATE_THUMBNAIL, MP_LIST_ICON_SIZE,
-							       MP_LIST_ICON_SIZE);
+		                               MP_LIST_ICON_SIZE);
 
 		elm_layout_theme_set(content, "layout", "list/B/music.type.1", "default");
 		elm_layout_content_set(content, "elm.swallow.content", eo);
@@ -441,8 +425,9 @@ _mp_playlist_list_item_del_cb(void *data, Evas_Object * obj)
 	startfunc;
 	mp_list_item_data_t *item_data = data;
 	MP_CHECK(item_data);
-	if (item_data->unregister_lang_mgr)
+	if (item_data->unregister_lang_mgr) {
 		mp_language_mgr_unregister_genlist_item(item_data->it);
+	}
 	free(item_data);
 }
 
@@ -452,20 +437,18 @@ static void _mp_playlist_list_set_edit(void *thiz, bool edit)
 	MpPlaylistList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (edit)
-	{
+	if (edit) {
 		list->auto_playlist_count = 0;
 
 		if (!MP_LIST_OBJ_IS_GENGRID(list->genlist)) {
 			elm_genlist_clear(list->genlist);
-		}
-		else
-		{
+		} else {
 			elm_gengrid_clear(list->genlist);
 		}
 
-		if (list->reorderable)
+		if (list->reorderable) {
 			mp_list_reorder_mode_set(list->genlist, EINA_TRUE);
+		}
 
 		mp_list_select_mode_set(list->genlist, ELM_OBJECT_SELECT_MODE_ALWAYS);
 
@@ -488,24 +471,24 @@ _mp_playlist_user_playlist_select_cb(void *data, Evas_Object * obj, void *event_
 	mp_list_item_data_t *item_data = NULL;
 
 	Elm_Object_Item *gli = (Elm_Object_Item *) event_info;
-	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
+	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		elm_gengrid_item_selected_set(gli, EINA_FALSE);
-	else
+	} else {
 		elm_genlist_item_selected_set(gli, EINA_FALSE);
+	}
 
 	item_data = elm_object_item_data_get(gli);
 	MP_CHECK(item_data);
 
 	ret = mp_media_info_group_get_playlist_id(item_data->handle, &p_id);
-	mp_retm_if (ret != 0, "Fail to get value");
+	mp_retm_if(ret != 0, "Fail to get value");
 
 	ret = mp_media_info_group_get_main_info(item_data->handle, &name);
-	mp_retm_if (ret != 0, "Fail to get value");
-	mp_retm_if (name == NULL, "Fail to get value");
+	mp_retm_if(ret != 0, "Fail to get value");
+	mp_retm_if(name == NULL, "Fail to get value");
 
 
-	if (list->function_type == MP_LIST_FUNC_ADD_TRACK)
-	{
+	if (list->function_type == MP_LIST_FUNC_ADD_TRACK) {
 		MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
 		MP_CHECK(view_manager);
 		MpSelectTrackView_t *view_select_track = mp_select_track_view_create(view_manager->navi);
@@ -521,8 +504,7 @@ _mp_playlist_user_playlist_select_cb(void *data, Evas_Object * obj, void *event_
 		return;
 	}
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		//mp_edit_view_genlist_sel_cb(data, obj, event_info);
 		mp_list_edit_mode_sel((MpList_t *)list, item_data);
 
@@ -553,31 +535,21 @@ _mp_playlist_create_auto_playlist(void *data, mp_list_item_data_t *item_data, ch
 	MP_CHECK(list);
 
 	mp_track_type_e type = MP_TRACK_ALL;
- 	if (!strcmp(STR_MP_MOST_PLAYED, name))
-	{
+	if (!strcmp(STR_MP_MOST_PLAYED, name)) {
 		type = MP_TRACK_BY_PLAYED_COUNT;
-	}
-	else if (!strcmp((STR_MP_RECENTLY_ADDED), name))
-	{
+	} else if (!strcmp((STR_MP_RECENTLY_ADDED), name)) {
 		type = MP_TRACK_BY_ADDED_TIME;
-	}
-	else if (!strcmp((STR_MP_RECENTLY_PLAYED), name))
-	{
+	} else if (!strcmp((STR_MP_RECENTLY_PLAYED), name)) {
 		type = MP_TRACK_BY_PLAYED_TIME;
-	}
-	else if (!strcmp((STR_MP_FAVOURITES), name))
-	{
+	} else if (!strcmp((STR_MP_FAVOURITES), name)) {
 		type = MP_TRACK_BY_FAVORITE;
-	}
-	else
-	{
+	} else {
 		SECURE_ERROR("Invalid type: %s", name);
 	}
 
 	ERROR_TRACE("type is %d", type);
 
-	if (list->function_type == MP_LIST_FUNC_ADD_TRACK)
-	{
+	if (list->function_type == MP_LIST_FUNC_ADD_TRACK) {
 		MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
 		MP_CHECK(view_manager);
 		MpSelectTrackView_t *view_select_track = mp_select_track_view_create(view_manager->navi);
@@ -592,8 +564,7 @@ _mp_playlist_create_auto_playlist(void *data, mp_list_item_data_t *item_data, ch
 		return;
 	}
 
-	if (list->edit_mode)
-	{
+	if (list->edit_mode) {
 		//mp_edit_view_genlist_sel_cb(data, obj, event_info);
 		mp_list_edit_mode_sel((MpList_t *)list, item_data);
 
@@ -628,16 +599,17 @@ _mp_playlist_auto_playlist_select_cb(void *data, Evas_Object * obj, void *event_
 
 	Elm_Object_Item *gli = (Elm_Object_Item *) event_info;
 
-	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL)
+	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		elm_gengrid_item_selected_set(gli, EINA_FALSE);
-	else
+	} else {
 		elm_genlist_item_selected_set(gli, EINA_FALSE);
+	}
 
 	item_data = elm_object_item_data_get(gli);
 	MP_CHECK(item_data);
 	ret = mp_media_info_group_get_main_info(item_data->handle, &name);
-	mp_retm_if (ret != 0, "Fail to get value");
-	mp_retm_if (name == NULL, "Fail to get value");
+	mp_retm_if(ret != 0, "Fail to get value");
+	mp_retm_if(name == NULL, "Fail to get value");
 
 	SECURE_DEBUG("playlist name: %s", name);
 
@@ -653,8 +625,9 @@ _mp_playlist_append_auto_playlists(void *thiz, Elm_Object_Item *parent_item)
 	MpPlaylistList_t *plst = (MpPlaylistList_t *)thiz;
 	MP_CHECK(plst);
 
-	if (plst->playlists_auto)
+	if (plst->playlists_auto) {
 		mp_media_info_group_list_destroy(plst->playlists_auto);
+	}
 
 	mp_setting_playlist_get_state(&playlist_state);
 
@@ -663,28 +636,25 @@ _mp_playlist_append_auto_playlists(void *thiz, Elm_Object_Item *parent_item)
 
 	int value = atoi(str);
 	int playlist[4] = {0};
-	DEBUG_TRACE("value %d",value);
+	DEBUG_TRACE("value %d", value);
 	int j = 0;
-        for (j = 3; j>=0 ;j--)
-        {
-	        playlist[j] = value%10;
+	for (j = 3; j >= 0 ; j--) {
+		playlist[j] = value % 10;
 		value = value / 10;
-		DEBUG_TRACE("index  %d  %d",j,playlist[j]);
-        }
+		DEBUG_TRACE("index  %d  %d", j, playlist[j]);
+	}
 
 	mp_media_info_group_list_create(&(plst->playlists_auto), MP_GROUP_BY_SYS_PLAYLIST, NULL, NULL, 0, 0);
-	for (i = 0; i < MP_SYS_PLST_COUNT; i++)
-	{
-		int enable = playlist_state&(1<<(playlist[i]-1));
-		DEBUG_TRACE("index: %d, state: %d",i, enable);
-		if (!enable)
-		{
+	for (i = 0; i < MP_SYS_PLST_COUNT; i++) {
+		int enable = playlist_state & (1 << (playlist[i] - 1));
+		DEBUG_TRACE("index: %d, state: %d", i, enable);
+		if (!enable) {
 			continue;
 		}
 
 		mp_media_info_h item;
 		//item = mp_media_info_group_list_nth_item(plst->playlists_auto, i);
-		item = mp_media_info_group_list_nth_item(plst->playlists_auto, playlist[i]-1);
+		item = mp_media_info_group_list_nth_item(plst->playlists_auto, playlist[i] - 1);
 
 		mp_list_item_data_t *item_data;
 		item_data = calloc(1, sizeof(mp_list_item_data_t));
@@ -695,13 +665,12 @@ _mp_playlist_append_auto_playlists(void *thiz, Elm_Object_Item *parent_item)
 		plst->auto_playlist_count++;
 		if (MP_LIST_OBJ_IS_GENGRID(plst->genlist)) {
 			item_data->it = elm_gengrid_item_append(plst->genlist, plst->gengrid_itc, item_data,
-							_mp_playlist_auto_playlist_select_cb, (void *)plst);
-		}
-		else {
+			                                        _mp_playlist_auto_playlist_select_cb, (void *)plst);
+		} else {
 			item_data->it = elm_genlist_item_append(plst->genlist, plst->itc_auto,
-							item_data, parent_item,
-							ELM_GENLIST_ITEM_NONE, _mp_playlist_auto_playlist_select_cb,
-							plst);
+			                                        item_data, parent_item,
+			                                        ELM_GENLIST_ITEM_NONE, _mp_playlist_auto_playlist_select_cb,
+			                                        plst);
 		}
 		elm_object_item_data_set(item_data->it, item_data);
 	}
@@ -716,34 +685,31 @@ _mp_playlist_append_user_playlists(void *thiz, Elm_Object_Item *parent_item)
 	int ret = 0;
 
 	MpPlaylistList_t *plst = (MpPlaylistList_t *)thiz;
-	mp_retm_if (!plst, "plst is null");
+	mp_retm_if(!plst, "plst is null");
 
 	mp_media_info_group_list_count(MP_GROUP_BY_PLAYLIST, plst->type_str, plst->filter_str, &count);
 
-	if (count < 0)
+	if (count < 0) {
 		goto END;
+	}
 
-	if (plst->playlists_user)
-	{
+	if (plst->playlists_user) {
 		mp_media_info_group_list_destroy(plst->playlists_user);
 		plst->playlists_user = NULL;
 	}
 
 	ret = mp_media_info_group_list_create(&plst->playlists_user, MP_GROUP_BY_PLAYLIST, plst->type_str, plst->filter_str, 0, count);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		DEBUG_TRACE("Fail to get items");
 		goto END;
 	}
 
-	for (index = 0; index < count; index++)
-	{
+	for (index = 0; index < count; index++) {
 		mp_media_info_h item = NULL;
 		char *title = NULL;
 
 		item = mp_media_info_group_list_nth_item(plst->playlists_user, index);
-		if (!item)
-		{
+		if (!item) {
 			DEBUG_TRACE("Fail to mp_media_info_group_list_nth_item, ret[%d], index[%d]", ret, index);
 			goto END;
 		}
@@ -757,19 +723,18 @@ _mp_playlist_append_user_playlists(void *thiz, Elm_Object_Item *parent_item)
 
 		if (MP_LIST_OBJ_IS_GENGRID(plst->genlist)) {
 			item_data->it = elm_gengrid_item_append(plst->genlist, plst->gengrid_itc, item_data,
-							_mp_playlist_user_playlist_select_cb, (void *)plst);
-		}
-		else {
+			                                        _mp_playlist_user_playlist_select_cb, (void *)plst);
+		} else {
 			item_data->it = elm_genlist_item_append(plst->genlist, plst->itc_auto,
-							item_data, parent_item,
-							ELM_GENLIST_ITEM_NONE, _mp_playlist_user_playlist_select_cb,
-							plst);
+			                                        item_data, parent_item,
+			                                        ELM_GENLIST_ITEM_NONE, _mp_playlist_user_playlist_select_cb,
+			                                        plst);
 		}
 		elm_object_item_data_set(item_data->it, item_data);
 
 	}
 
-      END:
+END:
 	endfunc;
 }
 
@@ -804,19 +769,21 @@ static void _mp_playlist_list_load_list(void *thiz, int count_auto, int count_us
 
 	Elm_Object_Item *group_index = NULL;
 
-	if (count_auto)
-	{
-		if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0))
+	if (count_auto) {
+		if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0)) {
 			group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_DEFAULT);
+		}
 		_mp_playlist_append_auto_playlists(list, group_index);
 		group_index = NULL;
 	}
 
-	if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0))
+	if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0)) {
 		group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_NUM);
+	}
 
-	if (count_user)
+	if (count_user) {
 		_mp_playlist_append_user_playlists(list, group_index);
+	}
 
 	/*if (!list->edit_mode)
 		_mp_playlist_append_add_playlist(list, group_index);*/
@@ -833,14 +800,16 @@ void _mp_playlist_list_destory_cb(void *thiz)
 	MpPlaylistList_t *list = thiz;
 	MP_CHECK(list);
 
-	if (list->playlists_auto)
+	if (list->playlists_auto) {
 		mp_media_info_group_list_destroy(list->playlists_auto);
-	if (list->playlists_user)
+	}
+	if (list->playlists_user) {
 		mp_media_info_group_list_destroy(list->playlists_user);
+	}
 
 	if (list->itc_user) {
 		elm_genlist_item_class_free(list->itc_user);
-		list->itc_user= NULL;
+		list->itc_user = NULL;
 	}
 	if (list->itc_auto) {
 		elm_genlist_item_class_free(list->itc_auto);
@@ -911,11 +880,13 @@ _mp_playlist_genlist_group_index_text_get(void *data, Evas_Object * obj, const c
 	MP_CHECK_NULL(item_data);
 	const char *text = NULL;
 	if (!strcmp(part, "elm.text.main.top")) {
-		if (item_data->index == 0)
+		if (item_data->index == 0) {
 			text = STR_MP_DEFAULT_PLAYLIST_GROUP_TITLE;
+		}
 	} else if (!strcmp(part, "elm.text.main")) {
-		if (item_data->index != 0)
+		if (item_data->index != 0) {
 			text = STR_MP_MY_PLAYLIST_GROUP_TITLE;
+		}
 	} else if (!strcmp(part, "elm.text.sub")) {
 		MpPlaylistList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
@@ -923,10 +894,11 @@ _mp_playlist_genlist_group_index_text_get(void *data, Evas_Object * obj, const c
 		if (item_data->index != 0) {
 			if (count <= 0) {
 				text = g_strdup(GET_STR(STR_MP_NO_PLAYLISTS));
-			} else if (count == 1)
+			} else if (count == 1) {
 				text = g_strdup(GET_STR(STR_MP_1_PLAYLIST));
-			else
+			} else {
 				text = g_strdup_printf(GET_STR(STR_MP_PD_PLAYLISTS), count);
+			}
 		}
 	}
 	return g_strdup(GET_STR(text));
@@ -973,8 +945,7 @@ _mp_playlist_list_genlist_create(MpPlaylistList_t *list)
 	list->itc_user->func.content_get = _mp_playlist_list_icon_get;
 	list->itc_user->func.del = _mp_playlist_list_item_del_cb; */
 
-	if (!list->itc_auto)
-	{
+	if (!list->itc_auto) {
 		list->itc_auto = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_auto);
 		//list->itc_auto->item_style = "music/2line.top";
@@ -985,8 +956,7 @@ _mp_playlist_list_genlist_create(MpPlaylistList_t *list)
 		list->itc_auto->func.del = _mp_playlist_list_item_del_cb;
 	}
 
-	if (!list->itc_group_index)
-	{
+	if (!list->itc_group_index) {
 		list->itc_group_index = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_group_index);
 		list->itc_group_index->item_style = "music/1text/bottom_counter";
@@ -1011,13 +981,12 @@ static void _mp_playlist_list_update(void *thiz)
 	res = mp_media_info_group_list_count(MP_GROUP_BY_PLAYLIST, NULL, list->filter_str, &count_user);
 	MP_CHECK(res == 0);
 
-	if (!list->edit_mode)
-	{
+	if (!list->edit_mode) {
 		mp_setting_playlist_get_state(&playlist_state);
-		for (i = 0; i < MP_SYS_PLST_COUNT; i++)
-		{
-			if (playlist_state&(1<<i))
+		for (i = 0; i < MP_SYS_PLST_COUNT; i++) {
+			if (playlist_state & (1 << i)) {
 				count_auto++;
+			}
 		}
 	}
 
@@ -1026,19 +995,18 @@ static void _mp_playlist_list_update(void *thiz)
 
 	//if (count_auto + count_user)
 	//{
-        if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
-                _mp_playlist_list_gengrid_create(list);
-        }
-        else {
-                _mp_playlist_list_genlist_create(list);
-        }
-        evas_object_data_set(list->genlist, "list_handle", list);
+	if (list->display_mode == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
+		_mp_playlist_list_gengrid_create(list);
+	} else {
+		_mp_playlist_list_genlist_create(list);
+	}
+	evas_object_data_set(list->genlist, "list_handle", list);
 
-        /* load list */
-        _mp_playlist_list_load_list(thiz, count_auto, count_user);
+	/* load list */
+	_mp_playlist_list_load_list(thiz, count_auto, count_user);
 
 	//}
-        /*
+	/*
 	else
 	{
 		DEBUG_TRACE("count is 0");
@@ -1062,21 +1030,23 @@ _mp_playlist_list_get_count(void *thiz, MpListEditType_e type)
 
 	int group_index_count = 0;
 	int i = 0;
-	while (i < MP_PLAYLIST_GROUP_INDEX_NUM)
-	{
-		if (list->group_index[i])
+	while (i < MP_PLAYLIST_GROUP_INDEX_NUM) {
+		if (list->group_index[i]) {
 			++group_index_count;
+		}
 
 		++i;
 	}
 
 	count = count - list->auto_playlist_count - group_index_count;
 
-	if (!list->edit_mode)
-		--count;	/// create playlist item
+	if (!list->edit_mode) {
+		--count;    /// create playlist item
+	}
 
-	if (list->bottom_counter_item)
+	if (list->bottom_counter_item) {
 		--count;
+	}
 
 	return count;
 }
@@ -1088,21 +1058,19 @@ _mp_playlist_list_set_grid_style(MpPlaylistList_t *list)
 
 	MP_CHECK(list->gengrid_itc);
 
-	if (landscape)
+	if (landscape) {
 		list->gengrid_add_itc->item_style = list->gengrid_itc->item_style = "music/landscape/album_grid";
-	else
+	} else {
 		list->gengrid_add_itc->item_style = list->gengrid_itc->item_style = "music/album_grid2";
+	}
 
 	double scale = elm_config_scale_get();
 	int w;
 	int h;
-	if (landscape)
-	{
+	if (landscape) {
 		w = (int)(ALBUM_GRID_LAND_W * scale);
 		h = (int)(ALBUM_GRID_LAND_H * scale);
-	}
-	else
-	{
+	} else {
 		w = (int)(ALBUM_GRID_W * scale);
 		h = (int)(ALBUM_GRID_H * scale);
 	}
@@ -1112,8 +1080,7 @@ _mp_playlist_list_set_grid_style(MpPlaylistList_t *list)
 void _mp_playlist_list_rotate(void *thiz)
 {
 	MpPlaylistList_t * list = thiz;
-	if (mp_list_get_display_mode((MpList_t *)list) == MP_LIST_DISPLAY_MODE_THUMBNAIL)
-	{
+	if (mp_list_get_display_mode((MpList_t *)list) == MP_LIST_DISPLAY_MODE_THUMBNAIL) {
 		_mp_playlist_list_set_grid_style(list);
 	}
 }
@@ -1126,10 +1093,11 @@ static char * _mp_playlist_list_bottom_counter_text_get_cb(void *thiz)
 	char *text = NULL;
 
 	unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
-	if (count == 1)
+	if (count == 1) {
 		text = g_strdup(GET_STR(STR_MP_1_PLAYLIST));
-	else
+	} else {
 		text = g_strdup_printf(GET_STR(STR_MP_PD_PLAYLISTS), count);
+	}
 	return text;
 }
 
@@ -1170,67 +1138,58 @@ void mp_playlist_list_set_data(MpPlaylistList_t *list, ...)
 
 
 	va_start(var_args, list);
-	do
-	{
+	do {
 		field = va_arg(var_args, int);
-		if (field < 0)
-		{
+		if (field < 0) {
 			break;
 		}
 
-		switch (field)
-		{
-		case MP_PLAYLIST_LIST_TYPE:
-			{
-				int val = va_arg((var_args), int);
+		switch (field) {
+		case MP_PLAYLIST_LIST_TYPE: {
+			int val = va_arg((var_args), int);
 
-				list->group_type = val;
-				DEBUG_TRACE("list->group_type = %d", list->group_type);
-				break;
-			}
+			list->group_type = val;
+			DEBUG_TRACE("list->group_type = %d", list->group_type);
+			break;
+		}
 
-		case MP_PLAYLIST_LIST_FUNC:
-			{
-				int val = va_arg((var_args), int);
+		case MP_PLAYLIST_LIST_FUNC: {
+			int val = va_arg((var_args), int);
 
-				list->function_type = val;
-				DEBUG_TRACE("list->function_type = %d", list->function_type);
-				break;
-			}
+			list->function_type = val;
+			DEBUG_TRACE("list->function_type = %d", list->function_type);
+			break;
+		}
 
-		case MP_PLAYLIST_LIST_TYPE_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->type_str);
-				list->type_str = g_strdup(val);
-				DEBUG_TRACE("list->type_str = %s", list->type_str);
+		case MP_PLAYLIST_LIST_TYPE_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->type_str);
+			list->type_str = g_strdup(val);
+			DEBUG_TRACE("list->type_str = %s", list->type_str);
 
-				break;
-			}
-		case MP_PLAYLIST_LIST_FILTER_STR:
-			{
-				char *val = va_arg((var_args), char *);
-				SAFE_FREE(list->filter_str);
-				list->filter_str = g_strdup(val);
-				DEBUG_TRACE("list->filter_str = %s", list->filter_str);
+			break;
+		}
+		case MP_PLAYLIST_LIST_FILTER_STR: {
+			char *val = va_arg((var_args), char *);
+			SAFE_FREE(list->filter_str);
+			list->filter_str = g_strdup(val);
+			DEBUG_TRACE("list->filter_str = %s", list->filter_str);
 
-				break;
-			}
-		case MP_PLAYLIST_LIST_DISPLAY_MODE:
-			{
-				int val = va_arg((var_args), int);
-				list->display_mode = val;
-				DEBUG_TRACE("list->display_mode = %d", list->display_mode);
+			break;
+		}
+		case MP_PLAYLIST_LIST_DISPLAY_MODE: {
+			int val = va_arg((var_args), int);
+			list->display_mode = val;
+			DEBUG_TRACE("list->display_mode = %d", list->display_mode);
 
-				break;
-			}
+			break;
+		}
 
 		default:
 			DEBUG_TRACE("Invalid arguments");
 		}
 
-	}
-	while (field);
+	} while (field);
 
 	va_end(var_args);
 }

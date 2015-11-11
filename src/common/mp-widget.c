@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -33,9 +33,9 @@ Evas_Object *
 mp_widget_navigation_new(Evas_Object * parent)
 {
 	Evas_Object *navi_bar;
-	mp_retv_if (parent == NULL, NULL);
+	mp_retv_if(parent == NULL, NULL);
 	navi_bar = elm_naviframe_add(parent);
-	mp_retvm_if (navi_bar == NULL, NULL, "Fail to create navigation bar");
+	mp_retvm_if(navi_bar == NULL, NULL, "Fail to create navigation bar");
 	elm_naviframe_event_enabled_set(navi_bar, EINA_FALSE);
 
 	evas_object_show(navi_bar);
@@ -60,7 +60,7 @@ mp_widget_genlist_create(Evas_Object * parent)
 #ifdef MP_WATCH_DOG
 	evas_object_smart_callback_add(list, "unrealized", _unrealized_cb, list);
 #endif
-	elm_scroller_bounce_set(list, EINA_FALSE,EINA_TRUE);
+	elm_scroller_bounce_set(list, EINA_FALSE, EINA_TRUE);
 	return list;
 }
 
@@ -100,8 +100,9 @@ mp_widget_text_popup_show(void *data, const char *message, bool show)
 	char *text = g_strconcat("<align=center>", message, "</align>", NULL);
 	elm_object_text_set(popup, (const char *)text);
 	mp_popup_timeout_set(popup, MP_POPUP_TIMEOUT);
-        if (show)
-	        evas_object_show(popup);
+	if (show) {
+		evas_object_show(popup);
+	}
 	IF_FREE(text);
 	return popup;
 }
@@ -188,10 +189,10 @@ mp_widget_set_text_theme_color(const char *text, const char *color)
 	int a = 0;
 	static char return_str[DEF_BUF_LEN + 1] = { 0, };
 
-	memset(return_str, 0x00, DEF_BUF_LEN+1);
+	memset(return_str, 0x00, DEF_BUF_LEN + 1);
 
 	snprintf(return_str, DEF_BUF_LEN,
-			 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, text);
+	         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, text);
 
 	ERROR_TRACE("return_str %s", return_str);
 
@@ -201,23 +202,27 @@ mp_widget_set_text_theme_color(const char *text, const char *color)
 
 Evas_Object *
 mp_widget_create_button(Evas_Object * parent, char *style, char *caption, Evas_Object * icon,
-			void (*func) (void *, Evas_Object *, void *), void *data)
+                        void (*func)(void *, Evas_Object *, void *), void *data)
 {
-	if (!parent)
+	if (!parent) {
 		return NULL;
+	}
 
 	Evas_Object *btn;
 
 	btn = elm_button_add(parent);
 
-	if (style)
+	if (style) {
 		elm_object_style_set(btn, style);
+	}
 
-	if (caption)
+	if (caption) {
 		mp_util_domain_translatable_text_set(btn, caption);
+	}
 
-	if (icon)
+	if (icon) {
 		elm_object_content_set(btn, icon);
+	}
 
 	elm_object_focus_allow_set(btn, EINA_TRUE);
 	evas_object_propagate_events_set(btn, EINA_FALSE);
@@ -281,9 +286,9 @@ mp_widget_create_editfield(Evas_Object * parent, int limit_size, char *guide_txt
 	elm_layout_theme_set(editfield, "layout", "editfield", "default");
 	MP_CHECK_NULL(editfield);
 	evas_object_size_hint_weight_set(editfield, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(editfield, EVAS_HINT_FILL,
-					EVAS_HINT_FILL);
+	                                EVAS_HINT_FILL);
 
 	entry = elm_entry_add(editfield);
 	MP_CHECK_NULL(entry);
@@ -299,19 +304,19 @@ mp_widget_create_editfield(Evas_Object * parent, int limit_size, char *guide_txt
 	evas_object_smart_callback_add(entry, "changed", _mp_widget_entry_changed_cb, editfield);
 	elm_object_signal_callback_add(editfield, "elm,eraser,clicked", "elm", _mp_widget_entry_eraser_clicked_cb, entry);
 
-	if (limit_size > 0)
-	{
+	if (limit_size > 0) {
 		static Elm_Entry_Filter_Limit_Size limit_filter_data;
 
 		limit_filter_data.max_char_count = 0;
 		limit_filter_data.max_byte_count = limit_size;
 		elm_entry_markup_filter_append(entry, elm_entry_filter_limit_size, &limit_filter_data);
 		evas_object_smart_callback_add(entry, "maxlength,reached", _mp_widget_entry_maxlength_reached_cb,
-					       ad);
+		                               ad);
 	}
 
-	if (guide_txt)
+	if (guide_txt) {
 		elm_object_part_text_set(editfield, "elm.guidetext", guide_txt);
+	}
 
 	return editfield;
 
@@ -334,10 +339,9 @@ mp_widget_create_title_btn(Evas_Object *parent, const char *text, const char * i
 	Evas_Object * icon = NULL;
 	MP_CHECK_NULL(btn);
 
-	if (text)
+	if (text) {
 		elm_object_text_set(btn, text);
-	else if (icon_path)
-	{
+	} else if (icon_path) {
 		icon = elm_icon_add(btn);
 		MP_CHECK_NULL(icon);
 		elm_image_file_set(icon, IMAGE_EDJ_NAME, icon_path);
@@ -353,9 +357,9 @@ mp_widget_create_layout_main(Evas_Object * parent)
 {
 	Evas_Object *layout;
 
-	mp_retv_if (parent == NULL, NULL);
+	mp_retv_if(parent == NULL, NULL);
 	layout = elm_layout_add(parent);
-	mp_retvm_if (layout == NULL, NULL, "Failed elm_layout_add.");
+	mp_retvm_if(layout == NULL, NULL, "Failed elm_layout_add.");
 
 	elm_layout_theme_set(layout, "layout", "application", "default");
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -373,11 +377,9 @@ mp_common_load_edj(Evas_Object * parent, const char *file, const char *group)
 	int r = -1;
 
 	eo = elm_layout_add(parent);
-	if (eo)
-	{
+	if (eo) {
 		r = elm_layout_file_set(eo, file, group);
-		if (!r)
-		{
+		if (!r) {
 			evas_object_del(eo);
 			return NULL;
 		}
@@ -422,21 +424,21 @@ mp_common_create_naviframe_title_button(Evas_Object *parent, const char * text_i
 	Evas_Object *btn_save = NULL;
 	btn_save = elm_button_add(parent);
 	elm_object_style_set(btn_save, "naviframe/title1/default");
-        evas_object_size_hint_align_set(btn_save, EVAS_HINT_FILL, EVAS_HINT_FILL);
+	evas_object_size_hint_align_set(btn_save, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
-        evas_object_smart_callback_add(btn_save, "clicked", save_cb, user_data);
+	evas_object_smart_callback_add(btn_save, "clicked", save_cb, user_data);
 
-        elm_object_text_set(btn_save, GET_SYS_STR(text_id));
+	elm_object_text_set(btn_save, GET_SYS_STR(text_id));
 	mp_language_mgr_register_object(btn_save, OBJ_TYPE_ELM_OBJECT, NULL, text_id);
-        evas_object_show(btn_save);
+	evas_object_show(btn_save);
 
-        return btn_save;
+	return btn_save;
 
 }
 
 Evas_Object *
 mp_widget_create_toolbar_btn(Evas_Object *parent,
-		const char *style, const char *text, Evas_Smart_Cb func, void *data)
+                             const char *style, const char *text, Evas_Smart_Cb func, void *data)
 {
 	startfunc;
 	Evas_Object *btn = elm_button_add(parent);
@@ -458,10 +460,10 @@ Evas_Object *mp_widget_create_naviframe_toolbar(Elm_Object_Item *navi_it)
 		MP_CHECK_NULL(toolbar);
 
 		elm_object_style_set(toolbar, "default");
-	        elm_toolbar_shrink_mode_set(toolbar, ELM_TOOLBAR_SHRINK_EXPAND);
-	        elm_toolbar_transverse_expanded_set(toolbar, EINA_TRUE);
-	        elm_object_item_part_content_set(navi_it, "toolbar", toolbar);
-        }
+		elm_toolbar_shrink_mode_set(toolbar, ELM_TOOLBAR_SHRINK_EXPAND);
+		elm_toolbar_transverse_expanded_set(toolbar, EINA_TRUE);
+		elm_object_item_part_content_set(navi_it, "toolbar", toolbar);
+	}
 
 	Elm_Object_Item *item = elm_toolbar_first_item_get(toolbar);
 	while (item) {
@@ -478,12 +480,12 @@ Elm_Object_Item *mp_widget_create_toolbar_item_btn(Evas_Object *parent, const ch
 	Evas_Object *toolbar = parent;
 	MP_CHECK_NULL(toolbar);
 
-        Elm_Object_Item *toolbar_item = NULL;
-        //Evas_Object *toolbar_obj_item = NULL;
+	Elm_Object_Item *toolbar_item = NULL;
+	//Evas_Object *toolbar_obj_item = NULL;
 
-        toolbar_item = elm_toolbar_item_append(toolbar, NULL, NULL, func, data);
-        //toolbar_obj_item = elm_toolbar_item_object_get(toolbar_item);
-        mp_util_item_domain_translatable_part_text_set(toolbar_item, "elm.text", text);
+	toolbar_item = elm_toolbar_item_append(toolbar, NULL, NULL, func, data);
+	//toolbar_obj_item = elm_toolbar_item_object_get(toolbar_item);
+	mp_util_item_domain_translatable_part_text_set(toolbar_item, "elm.text", text);
 	return toolbar_item;
 }
 
@@ -492,7 +494,9 @@ Evas_Object *mp_widget_create_title_icon_btn_black(Evas_Object *parent, const ch
 	startfunc;
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "music/naviframe/title_icon_black");
 
 	ic = elm_icon_add(parent);
@@ -511,7 +515,9 @@ Evas_Object *mp_widget_create_title_icon_btn_second(Evas_Object *parent, const c
 	startfunc;
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "music/naviframe/title_icon_second");
 
 	ic = elm_icon_add(parent);
@@ -529,9 +535,11 @@ Evas_Object *mp_create_title_text_btn(Evas_Object *parent, const char *text, Eva
 {
 	startfunc;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "naviframe/title_text");
-        mp_util_domain_translatable_text_set(btn, text);
+	mp_util_domain_translatable_text_set(btn, text);
 	evas_object_smart_callback_add(btn, "clicked", func, data);
 	return btn;
 }
@@ -540,7 +548,9 @@ Evas_Object *mp_widget_create_title_icon_btn(Evas_Object *parent, const char *fi
 	startfunc;
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "naviframe/title_icon");
 
 	ic = elm_image_add(parent);
@@ -555,12 +565,11 @@ Evas_Object *mp_widget_create_title_icon_btn(Evas_Object *parent, const char *fi
 }
 
 Evas_Object* mp_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 	startfunc;
 
-	if (!pParent || !pNaviItem)
-	{
+	if (!pParent || !pNaviItem) {
 		ERROR_TRACE("parent is NULL.");
 		return NULL;
 	}
@@ -568,10 +577,9 @@ Evas_Object* mp_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Ite
 	pLeftbtn = elm_button_add(pParent);
 	elm_object_style_set(pLeftbtn, "naviframe/title_left");
 	evas_object_smart_callback_add(pLeftbtn, "clicked", pFunc, pUserData);
-	mp_util_domain_translatable_text_set(pLeftbtn,STR_MP_NAVI_CANCEL);
+	mp_util_domain_translatable_text_set(pLeftbtn, STR_MP_NAVI_CANCEL);
 
-	if (!pLeftbtn)
-	{
+	if (!pLeftbtn) {
 		ERROR_TRACE("[ERR] Fail to create pLeftbtn");
 		return NULL;
 	}
@@ -583,12 +591,11 @@ Evas_Object* mp_widget_create_navi_left_btn(Evas_Object *pParent, Elm_Object_Ite
 	return pLeftbtn;
 }
 Evas_Object* mp_widget_create_navi_right_btn(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 	startfunc;
 
-	if (!pParent || !pNaviItem)
-	{
+	if (!pParent || !pNaviItem) {
 		ERROR_TRACE("parent is NULL.");
 		return NULL;
 	}
@@ -598,10 +605,9 @@ Evas_Object* mp_widget_create_navi_right_btn(Evas_Object *pParent, Elm_Object_It
 	pRightbtn = elm_button_add(pParent);
 	elm_object_style_set(pRightbtn, "naviframe/title_right");
 	evas_object_smart_callback_add(pRightbtn, "clicked", pFunc, pUserData);
-	mp_util_domain_translatable_text_set(pRightbtn,STR_MP_NAVI_DONE);
+	mp_util_domain_translatable_text_set(pRightbtn, STR_MP_NAVI_DONE);
 
-	if (!pRightbtn)
-	{
+	if (!pRightbtn) {
 		ERROR_TRACE("[ERR] Fail to create pRightbtn");
 		return NULL;
 	}
@@ -655,8 +661,7 @@ _mp_widget_no_content_w_help_add(Evas_Object *parent, char *text, char *helptext
 		mp_util_domain_translatable_part_text_set(lay, "elm.help.text", helptext);
 	}
 
-	if (cb)
-	{
+	if (cb) {
 		btn = elm_button_add(lay);
 		elm_object_style_set(btn, "style1");
 		mp_util_domain_translatable_text_set(btn, btntext);
@@ -673,44 +678,41 @@ _mp_widget_no_content_w_help_add(Evas_Object *parent, char *text, char *helptext
 Evas_Object *mp_widget_create_no_contents(Evas_Object *parent, MpNocontent_e type, void(*callback)(void *data, Evas_Object *obj, void *event_info), void *user_data)
 {
 	MP_CHECK_NULL(parent);
-        startfunc;
+	startfunc;
 
-        Evas_Object *content = NULL;
+	Evas_Object *content = NULL;
 
-	if (type == MP_NOCONTENT_NORMAL || type == MP_NOCONTENT_PLAYLIST || type == MP_NOCONTENT_DEVICE)
-	{
+	if (type == MP_NOCONTENT_NORMAL || type == MP_NOCONTENT_PLAYLIST || type == MP_NOCONTENT_DEVICE) {
 		content = elm_layout_add(parent);
 		elm_layout_theme_set(content, "layout", "nocontents", "default");
 		evas_object_size_hint_weight_set(content, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(content, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		const char *text = NULL;
-		if (type == MP_NOCONTENT_PLAYLIST)
+		if (type == MP_NOCONTENT_PLAYLIST) {
 			text = STR_MP_NO_PLAYLISTS;
-		else if (type == MP_NOCONTENT_DEVICE)
+		} else if (type == MP_NOCONTENT_DEVICE) {
 			text = STR_MP_NO_DEVICES;
-		else
+		} else {
 			text = STR_MP_NO_TRACKS;
+		}
 		mp_util_domain_translatable_text_set(content, text);
 		evas_object_show(content);
-	}
-	else if (type == MP_NOCONTENT_ARTISTS || type == MP_NOCONTENT_ALBUMS)
-	{
-		char *text = (type == MP_NOCONTENT_ARTISTS) ? STR_MP_NO_ARTISTS: STR_MP_NO_ALBUMS;
+	} else if (type == MP_NOCONTENT_ARTISTS || type == MP_NOCONTENT_ALBUMS) {
+		char *text = (type == MP_NOCONTENT_ARTISTS) ? STR_MP_NO_ARTISTS : STR_MP_NO_ALBUMS;
 		content = _mp_widget_no_content_w_help_add(parent, text,
-			STR_MP_AFTER_ADD_TRACKS_HELP, NULL, NULL, NULL);
+		          STR_MP_AFTER_ADD_TRACKS_HELP, NULL, NULL, NULL);
 	}
 
-	else
-	{
-		 content = _mp_widget_no_content_w_help_add(parent, STR_MP_NO_TRACKS,
-			STR_MP_AFTER_YOU_ADD_TRACKS, NULL, NULL, NULL);
+	else {
+		content = _mp_widget_no_content_w_help_add(parent, STR_MP_NO_TRACKS,
+		          STR_MP_AFTER_YOU_ADD_TRACKS, NULL, NULL, NULL);
 	}
 
 	return content;
 }
 
 Evas_Object *mp_widget_create_no_content_playlist(Evas_Object *parent,
-		char *helptext, void(*callback)(void *data, Evas_Object *obj, void *event_info), void *user_data)
+        char *helptext, void(*callback)(void *data, Evas_Object *obj, void *event_info), void *user_data)
 {
 	MP_CHECK_NULL(parent);
 	startfunc;
@@ -732,8 +734,7 @@ Evas_Object *mp_widget_create_no_content_playlist(Evas_Object *parent,
 		edje_object_message_signal_process(elm_layout_edje_get(lay));
 	}
 
-	if (callback)
-	{
+	if (callback) {
 		btn = elm_button_add(lay);
 		elm_object_style_set(btn, "style1");
 		mp_util_domain_translatable_text_set(btn, STR_MP_ADD_TRACKS);
@@ -759,13 +760,12 @@ Evas_Object *mp_widget_shorcut_box_add(Evas_Object *parent, const char *title, c
 	MP_CHECK_NULL(layout);
 	Evas_Object *image = NULL;
 
-	if (group)
-	{
+	if (group) {
 		image = mp_util_create_thumb_icon(layout, NULL, w, h);
 		elm_bg_file_set(image, file, group);
-	}
-	else
+	} else {
 		image = mp_util_create_thumb_icon(layout, file, w, h);
+	}
 
 	elm_object_part_content_set(layout, "bg", image);
 	if (title) {
@@ -773,8 +773,9 @@ Evas_Object *mp_widget_shorcut_box_add(Evas_Object *parent, const char *title, c
 		mp_language_mgr_register_object(layout, OBJ_TYPE_EDJE_OBJECT, "label", title);
 	}
 
-	if (func)
+	if (func) {
 		elm_object_signal_callback_add(layout, "clicked", "*", func, data);
+	}
 
 	return layout;
 }
@@ -792,12 +793,12 @@ Evas_Object *mp_widget_slide_title_create(Evas_Object *parent, const char *style
 	// set the label text
 	elm_object_text_set(label, text);
 	evas_object_show(label);
-/*
-	double duration = strlen(text) / (double)10;
-	if (duration < 1.0)
-		duration = 1.0;
-	elm_label_slide_duration_set(label, duration);
-*/
+	/*
+		double duration = strlen(text) / (double)10;
+		if (duration < 1.0)
+			duration = 1.0;
+		elm_label_slide_duration_set(label, duration);
+	*/
 
 	//elm_label_ellipsis_set(label, EINA_TRUE);
 
@@ -809,10 +810,11 @@ Evas_Object *mp_widget_device_icon_add(Evas_Object *parent, int device_type)
 	MP_CHECK_NULL(parent);
 
 	const char *group = NULL;
-	if (device_type == MP_DEVICE_TYPE_MY_DEVICE)
+	if (device_type == MP_DEVICE_TYPE_MY_DEVICE) {
 		group = MP_ICON_CONNECTED_MY_DEVICE;
-	else
+	} else {
 		group = MP_ICON_CONNECTED_TV;
+	}
 
 	Evas_Object *icon = mp_common_load_edj(parent, IMAGE_EDJ_NAME, group);
 	evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -872,14 +874,15 @@ Evas_Object *mp_widget_loading_icon_add(Evas_Object *parent, mp_loading_icon_siz
 	progressbar = elm_progressbar_add(parent);
 
 	const char *style = NULL;
-	if (size == MP_LOADING_ICON_SIZE_MEDIUM)
+	if (size == MP_LOADING_ICON_SIZE_MEDIUM) {
 		style = "process_medium";
-	else if (size == MP_LOADING_ICON_SIZE_SMALL)
+	} else if (size == MP_LOADING_ICON_SIZE_SMALL) {
 		style = "process_small";
-	else if (size == MP_LOADING_ICON_SIZE_XLARGE)
+	} else if (size == MP_LOADING_ICON_SIZE_XLARGE) {
 		style = "process_large";
-	else
+	} else {
 		style = "process_large";
+	}
 	elm_object_style_set(progressbar, style);
 	evas_object_size_hint_align_set(progressbar, EVAS_HINT_FILL, 0.5);
 	evas_object_size_hint_weight_set(progressbar, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -895,15 +898,17 @@ Evas_Object *mp_widget_lock_icon_create(Evas_Object *obj, const char *thumbpath)
 	/*create layout*/
 	Evas_Object *layout = NULL;
 	layout = mp_common_load_edj(obj, MP_EDJ_NAME, "thumbnail_only");
-	if (layout == NULL)
+	if (layout == NULL) {
 		mp_error("layout create failed");
+	}
 	/*create thumbnail*/
 	Evas_Object *thumb = elm_image_add(layout);
 	elm_object_focus_set(thumb, EINA_FALSE);
-	if (thumbpath != NULL)
+	if (thumbpath != NULL) {
 		elm_image_file_set(thumb, thumbpath, NULL);
-	else
+	} else {
 		elm_image_file_set(thumb, DEFAULT_THUMBNAIL, NULL);
+	}
 
 	elm_object_part_content_set(layout, "default_thumbnail", thumb);
 	/*check if it is in personal page*/
@@ -937,29 +942,28 @@ Evas_Object *mp_widget_rich_info_text_add(Evas_Object *parent, const char *text)
 }
 
 bool mp_widget_create_select_all_layout(Evas_Object *pParent, Evas_Smart_Cb pChangeFunc,
-	Evas_Object_Event_Cb pMouseDownFunc, void *pUserData, Evas_Object **pCheckBox, Evas_Object **pSelectLayout)
+                                        Evas_Object_Event_Cb pMouseDownFunc, void *pUserData, Evas_Object **pCheckBox, Evas_Object **pSelectLayout)
 {
-		if (!pParent)
-		{
-			ERROR_TRACE("parent is NULL.");
-			return FALSE;
-		}
+	if (!pParent) {
+		ERROR_TRACE("parent is NULL.");
+		return FALSE;
+	}
 
-		Evas_Object *pSelectAllLayout = elm_layout_add(pParent);
-		elm_layout_theme_set(pSelectAllLayout, "genlist", "item", "select_all/default");
-		evas_object_size_hint_weight_set(pSelectAllLayout, EVAS_HINT_EXPAND, EVAS_HINT_FILL);
-		evas_object_size_hint_align_set(pSelectAllLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		evas_object_event_callback_add(pSelectAllLayout, EVAS_CALLBACK_MOUSE_DOWN, pMouseDownFunc, pUserData);
-		*pSelectLayout = pSelectAllLayout;
+	Evas_Object *pSelectAllLayout = elm_layout_add(pParent);
+	elm_layout_theme_set(pSelectAllLayout, "genlist", "item", "select_all/default");
+	evas_object_size_hint_weight_set(pSelectAllLayout, EVAS_HINT_EXPAND, EVAS_HINT_FILL);
+	evas_object_size_hint_align_set(pSelectAllLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
+	evas_object_event_callback_add(pSelectAllLayout, EVAS_CALLBACK_MOUSE_DOWN, pMouseDownFunc, pUserData);
+	*pSelectLayout = pSelectAllLayout;
 
-		Evas_Object *pSelectAllCheckbox = elm_check_add(pSelectAllLayout);
-		evas_object_smart_callback_add(pSelectAllCheckbox, "changed", pChangeFunc, pUserData);
-		evas_object_propagate_events_set(pSelectAllCheckbox, EINA_FALSE);
-		elm_object_part_content_set(pSelectAllLayout, "elm.icon", pSelectAllCheckbox);
-		mp_util_domain_translatable_part_text_set(pSelectAllLayout, "elm.text.main", MP_SCREEN_READER_SELECT_ALL);
-		evas_object_show(pSelectAllLayout);
-		*pCheckBox = pSelectAllCheckbox;
-		return TRUE;
+	Evas_Object *pSelectAllCheckbox = elm_check_add(pSelectAllLayout);
+	evas_object_smart_callback_add(pSelectAllCheckbox, "changed", pChangeFunc, pUserData);
+	evas_object_propagate_events_set(pSelectAllCheckbox, EINA_FALSE);
+	elm_object_part_content_set(pSelectAllLayout, "elm.icon", pSelectAllCheckbox);
+	mp_util_domain_translatable_part_text_set(pSelectAllLayout, "elm.text.main", MP_SCREEN_READER_SELECT_ALL);
+	evas_object_show(pSelectAllLayout);
+	*pCheckBox = pSelectAllCheckbox;
+	return TRUE;
 
 }
 

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-floating-widget-mgr.h"
@@ -67,7 +67,7 @@ static inline void __mp_floating_widget_cb(void *data, Evas_Object *obj, void *e
 	if (FwMgr->Item[1].cb) {
 
 		/* height of second object; */
-		int rel_h = y+FwMgr->Item[0].content_h;
+		int rel_h = y + FwMgr->Item[0].content_h;
 
 		item = elm_genlist_at_xy_item_get(FwMgr->genlist, x, rel_h, &posret);
 		if (elm_genlist_item_index_get(item) < FwMgr->Item[1].positon) {
@@ -125,8 +125,9 @@ void mp_floating_widget_mgr_destroy(MpFwMgr FwMgr)
 	MP_CHECK(FwMgr);
 
 	int index = 0;
-	for (; index < FLOATING_WIDGET_MAX; index++)
+	for (; index < FLOATING_WIDGET_MAX; index++) {
 		mp_floating_widget_mgr_widget_deleted(FwMgr, index);
+	}
 
 	free(FwMgr);
 }
@@ -135,7 +136,7 @@ void mp_floating_widget_mgr_destroy(MpFwMgr FwMgr)
 *	index - index between floating widgets
 **/
 void mp_floating_widget_callback_add(MpFwMgr FwMgr,
-		int content_h, int position, int index, mp_floaing_widget_cb cb , void *data)
+                                     int content_h, int position, int index, mp_floaing_widget_cb cb , void *data)
 {
 	MP_CHECK(FwMgr);
 	if (index >= FLOATING_WIDGET_MAX) {
@@ -157,13 +158,14 @@ void mp_floating_widget_mgr_widget_deleted(MpFwMgr FwMgr, int index)
 		ERROR_TRACE("Only 2 items are supported");
 		return;
 	}
-	
+
 	int x, y, w;
 	evas_object_geometry_get(FwMgr->genlist, &x, &y, &w, NULL);
 	/* DEBUG_TRACE("Genlist x[%d] y[%d]", x, y); */
 
-	if (FwMgr->Item[index].cb)
+	if (FwMgr->Item[index].cb) {
 		FwMgr->Item[index].cb(false, x, y, w, FwMgr->Item[index].content_h, FwMgr->Item[index].data);
+	}
 	FwMgr->Item[index].visible = false;
 }
 

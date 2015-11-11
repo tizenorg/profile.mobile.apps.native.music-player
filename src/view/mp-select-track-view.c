@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-select-track-view.h"
@@ -56,8 +56,8 @@ static Eina_Bool _mp_select_track_view_back_cb(void *data, Elm_Object_Item *it)
 {
 	eventfunc;
 
-    MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
-    mp_view_mgr_pop_view(view_mgr, false);
+	MpViewMgr_t *view_mgr = mp_view_mgr_get_view_manager();
+	mp_view_mgr_pop_view(view_mgr, false);
 
 	return EINA_TRUE;
 }
@@ -130,7 +130,7 @@ _mp_select_track_view_on_event(void *thiz, MpViewEvent_e event)
 	switch (event) {
 	case MP_ADD_TO_PLAYLIST_DONE:
 		mp_view_mgr_pop_a_view(GET_VIEW_MGR, thiz);
-	break;
+		break;
 
 	default:
 		break;
@@ -168,7 +168,9 @@ MpSelectTrackView_t *mp_select_track_view_create(Evas_Object *parent)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_select_track_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	_mp_select_track_view_content_load(view);
 	return view;

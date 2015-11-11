@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_VIEW_H__
@@ -23,14 +23,13 @@
 #include "mp-define.h"
 #include "mp-menu.h"
 
-enum
-{
+enum {
 	MP_VIEW_MOVE_NONE,
 	MP_VIEW_MOVE_LEFT,
 	MP_VIEW_MOVE_RIGHT,
 };
 
-typedef enum{
+typedef enum {
 	MP_VIEW_ALL,
 	MP_VIEW_ALBUM_DETAIL,
 	MP_VIEW_ARTIST_DETAIL,
@@ -55,9 +54,9 @@ typedef enum{
 	MP_VIEW_MAKE_OFFLINE,
 	MP_VIEW_EDIT,
 	MP_VIEW_MAX,
-}MpViewType_e;
+} MpViewType_e;
 
-typedef enum{
+typedef enum {
 	MP_UPDATE_NOW_PLAYING = 0, //0
 	MP_UNSET_NOW_PLAYING,
 	MP_START_PLAYBACK,
@@ -72,11 +71,11 @@ typedef enum{
 	MP_LCD_OFF,
 	MP_LCD_ON,
 
-	MP_UPDATE= 50,
+	MP_UPDATE = 50,
 	MP_ADD_TO_PLAYLIST_DONE,
 	MP_DELETE_DONE,
 	MP_POPUP_DELETE_DONE,
-        MP_UPDATE_PLAYING_LIST,
+	MP_UPDATE_PLAYING_LIST,
 	MP_SETTING_PLAYLIST_CHANGED,
 	MP_PLAY_TIME_COUNT_UPDATED,
 	MP_ROUTE_CHANGED,
@@ -91,7 +90,7 @@ typedef enum{
 	MP_WIN_RESIZED,
 
 
-	MP_SIP_STATE_CHANGED =100,
+	MP_SIP_STATE_CHANGED = 100,
 	MP_VIEW_TRANSITION_REQUESTED,
 	MP_VIEW_TRANSITION_FINISHED,
 	MP_PLAYLIST_RENAMED,
@@ -116,21 +115,21 @@ typedef enum{
 	MP_QUICKPANNEL_SHOW,
 	MP_QUICKPANNEL_HIDE,
 
-}MpViewEvent_e;
+} MpViewEvent_e;
 
-typedef enum{
+typedef enum {
 	MP_OPTION_LEFT,
 	MP_OPTION_MIDDLE,
 	MP_OPTION_RIGHT,
 	MP_OPTION_MORE,
 	MP_OPTION_BACK,
 	MP_OPTION_MAX,
-}MpOptionType_e;
+} MpOptionType_e;
 
-typedef enum{
+typedef enum {
 	MP_TITLE_OPTION_SAVE,
 	MP_TITLE_OPTION_MAX,
-}MpTitleOption_e;
+} MpTitleOption_e;
 
 #define VIEW_MAGIC 0x37373700
 #define LIST_VIEW_MAGIC 0x37373701
@@ -180,10 +179,9 @@ typedef enum{
 	void (*rotate)(void *view, int randscape);\
 	MP_STORE_MEMBER
 
-typedef struct _mp_view
-{
+typedef struct _mp_view {
 	INHERIT_MP_VIEW
-}MpView_t;
+} MpView_t;
 
 int mp_view_init(Evas_Object *parent, MpView_t *view, MpViewType_e view_type, ...);
 int mp_view_fini(MpView_t *view);

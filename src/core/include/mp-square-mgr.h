@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -53,25 +53,24 @@
 #define MP_SQUARE_CELLS_COUNT MP_SQUARE_AXIS_X_LEN*MP_SQUARE_AXIS_Y_LEN*4
 
 #define MP_SQUARE_POSITION_TO_INT(position, pos) do { \
-	*pos = (int)position;\
-} while (0)
+		*pos = (int)position;\
+	} while (0)
 
 #define MP_SQUARE_INT_TO_POSITION(pos, position) do { \
-	*position.x = pos&0xFF;\
-	*position.y = pos>>8;\
-} while (0)
+		*position.x = pos&0xFF;\
+		*position.y = pos>>8;\
+	} while (0)
 
 #define MP_SQUARE_POSITION_TO_INDEX(position, index) do { \
-	*index = (position.y*MP_SQUARE_AXIS_X_LEN - (MP_SQUARE_AXIS_Y_LEN - position.x)) - 1;\
-} while (0)
+		*index = (position.y*MP_SQUARE_AXIS_X_LEN - (MP_SQUARE_AXIS_Y_LEN - position.x)) - 1;\
+	} while (0)
 
 #define MP_SQUARE_INDEX_TO_POSITION(index, position) do { \
-	*position.x = index%MP_SQUARE_AXIS_Y_LEN+1;\
-	*position.y = index/MP_SQUARE_AXIS_X_LEN+1;\
-} while (0)
+		*position.x = index%MP_SQUARE_AXIS_Y_LEN+1;\
+		*position.y = index/MP_SQUARE_AXIS_X_LEN+1;\
+	} while (0)
 
-typedef enum
-{
+typedef enum {
 	MP_SQUARE_TYPE_MOOD,
 	MP_SQUARE_TYPE_YEAR,
 	MP_SQUARE_TYPE_ADDED,
@@ -79,8 +78,7 @@ typedef enum
 	MP_SQUARE_TYPE_MAX,
 } mp_square_type_t;
 
-enum
-{
+enum {
 	MP_SQUARE_CELL_0,
 	MP_SQUARE_CELL_1,
 	MP_SQUARE_CELL_2,
@@ -89,21 +87,18 @@ enum
 	MP_SQUARE_CELL_MAX
 };
 
-typedef struct
-{
-	int x:8;
-	int y:8;
+typedef struct {
+	int x: 8;
+	int y: 8;
 } mp_square_position_t;
 
-typedef struct
-{
-	char path[MP_SQUARE_MUSIC_FILE_PATH_LEN_MAX+1];
+typedef struct {
+	char path[MP_SQUARE_MUSIC_FILE_PATH_LEN_MAX + 1];
 	mp_square_position_t pos;
 	mp_square_type_t type;
 } mp_square_item_t;
 
-typedef struct
-{
+typedef struct {
 	struct appdata *ad;
 
 	sqlite3 *sqlite_handle;
@@ -123,7 +118,7 @@ typedef struct
 	mp_media_list_h svc_handle;
 	int media_count;
 	bool *added_media_array;
-        bool terminal_status;
+	bool terminal_status;
 	int current_index;
 	void *record;
 
@@ -132,8 +127,8 @@ typedef struct
 	GList *year_x[MP_SQUARE_CELL_MAX];
 } mp_square_mgr_t;
 
-typedef struct{
-	char audio_id[SQUARE_MAX_NAM_LEN+1];		/**< Unique ID of item */
+typedef struct {
+	char audio_id[SQUARE_MAX_NAM_LEN + 1];		/**< Unique ID of item */
 	char pathname[SQUARE_MAX_NAM_LEN];			/**< Full path and file name of media file */
 	char title[MP_SQUARE_METADATA_LEN_MAX];			/**< title of track */
 	char artist[MP_SQUARE_METADATA_LEN_MAX];		/**< artist of track */
@@ -142,8 +137,7 @@ typedef struct{
 	int rating;										/**< track rating*/
 } mp_square_list_item_t;
 
-typedef enum
-{
+typedef enum {
 	MP_SQUARE_LIST_ITEM_AUDIO_ID,				/**< Unique media file index*/
 	MP_SQUARE_LIST_ITEM_PATHNAME,				/**< Full path and file name of media file*/
 	MP_SQUARE_LIST_ITEM_THUMBNAIL_PATH,			/**< Thumbnail path of first item in the group */
@@ -155,15 +149,15 @@ typedef enum
 } mp_square_list_item_type_t;
 
 bool mp_square_mgr_records_get_by_type_and_positions(
-			mp_square_mgr_t *square_mgr,
-			mp_square_type_t type,
-			GList *list_pos,
-			GList **list_record);
+    mp_square_mgr_t *square_mgr,
+    mp_square_type_t type,
+    GList *list_pos,
+    GList **list_record);
 bool mp_square_mgr_get_positon_by_type_and_path(
-			mp_square_mgr_t *square_mgr,
-			mp_square_type_t type,
-			const char *path,
-			mp_square_position_t *pos);
+    mp_square_mgr_t *square_mgr,
+    mp_square_type_t type,
+    const char *path,
+    mp_square_position_t *pos);
 int mp_square_mgr_create(struct appdata *ad);
 bool mp_square_mgr_destory(struct appdata *ad);
 int mp_square_mgr_update(struct appdata *ad);

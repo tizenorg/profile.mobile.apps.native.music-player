@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -46,16 +46,14 @@
 #endif
 #define MP_SOUND_TYPE 				MP_MEDIA_COND_COMMON"AND (MEDIA_TYPE=2)"
 
-struct mp_media_list_s
-{
+struct mp_media_list_s {
 	GList *list;
 	int count;
 	mp_group_type_e group_type;
 	char *distinct_check;
 };
 
-struct mp_minfo_s
-{
+struct mp_minfo_s {
 	char *media_id;
 	char *title;
 	char *artist;
@@ -73,8 +71,7 @@ struct mp_minfo_s
 	int playlist_member_id;
 };
 
-struct mp_ginfo_s
-{
+struct mp_ginfo_s {
 	char *main_info;
 	char *sub_info;
 	char *thumb_path;
@@ -85,22 +82,21 @@ struct mp_ginfo_s
 	int album_count;
 };
 
-struct mp_media_info_s
-{
-	union{
+struct mp_media_info_s {
+	union {
 		media_info_h media;	//media_info_h
 		void *group;			//handle for group item like media_playlist_h, media_album_h, media_folder_h...
-	}h;
+	} h;
 
-	union{
+	union {
 		audio_meta_h meta;	//audio_meta_h for a media
 		mp_group_type_e group_type;
-	}s;
+	} s;
 
 	union {
 		struct mp_minfo_s *minfo;	//media info
 		struct mp_ginfo_s *ginfo;	//group info
-	}i;
+	} i;
 };
 
 #define STRNCAT_LEN(dest) (sizeof(dest)-1-strlen(dest))
@@ -133,8 +129,11 @@ static inline int _mp_media_info_compare_cb(const void *a , const void *b)
 	n_a = atoi(s_a);
 	n_b = atoi(s_b);
 
-	if (n_a < n_b) 	res =  1;
-	else if (n_a > n_b)	res =  -1;
+	if (n_a < n_b) {
+		res =  1;
+	} else if (n_a > n_b)	{
+		res =  -1;
+	}
 
 	DEBUG_TRACE("a: %d, b: %d, res: %d", n_a, n_b, res);
 
@@ -150,7 +149,7 @@ static inline bool __mp_media_info_of_album_cb(media_info_h media, void *user_da
 	MP_CHECK_FALSE(media_list);
 
 	res = media_info_clone(&m, media);
-	MP_CHECK_VAL (res == MEDIA_CONTENT_ERROR_NONE, true);
+	MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, true);
 	MP_CHECK_VAL(m, true);
 
 	media_info = calloc(1, sizeof(struct mp_media_info_s));
@@ -162,7 +161,7 @@ static inline bool __mp_media_info_of_album_cb(media_info_h media, void *user_da
 	media_info->i.minfo = calloc(1, sizeof(struct mp_minfo_s));
 	if (!media_info->i.minfo) {
 		media_info_destroy(m);
-		IF_FREE (media_info);
+		IF_FREE(media_info);
 		return false;
 	}
 
@@ -189,7 +188,7 @@ static inline bool __mp_media_info_cb(media_info_h media, void *user_data)
 	MP_CHECK_FALSE(media_list);
 
 	res = media_info_clone(&m, media);
-	MP_CHECK_VAL (res == MEDIA_CONTENT_ERROR_NONE, true);
+	MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, true);
 	MP_CHECK_VAL(m, true);
 
 	media_info = calloc(1, sizeof(struct mp_media_info_s));
@@ -209,7 +208,7 @@ static inline bool __mp_media_info_cb(media_info_h media, void *user_data)
 	media_list->list = g_list_prepend(media_list->list, media_info);
 
 	res = media_info_get_audio(m, &media_info->s.meta);
-	MP_CHECK_VAL (res == MEDIA_CONTENT_ERROR_NONE, true);
+	MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, true);
 
 	return true;
 }
@@ -223,7 +222,7 @@ static inline bool __mp_playlist_media_info_cb(int playlist_member_id, media_inf
 	MP_CHECK_FALSE(media_list);
 
 	res = media_info_clone(&m, media);
-	MP_CHECK_FALSE (res == MEDIA_CONTENT_ERROR_NONE);
+	MP_CHECK_FALSE(res == MEDIA_CONTENT_ERROR_NONE);
 	MP_CHECK_FALSE(m);
 
 	media_info = calloc(1, sizeof(struct mp_media_info_s));
@@ -244,7 +243,7 @@ static inline bool __mp_playlist_media_info_cb(int playlist_member_id, media_inf
 	media_list->list = g_list_prepend(media_list->list, media_info);
 
 	res = media_info_get_audio(m, &media_info->s.meta);
-	MP_CHECK_FALSE (res == MEDIA_CONTENT_ERROR_NONE);
+	MP_CHECK_FALSE(res == MEDIA_CONTENT_ERROR_NONE);
 
 	return true;
 }
@@ -258,8 +257,7 @@ static inline bool __mp_media_album_cb(media_album_h album, void *user_data)
 	char *album_name = NULL;
 	media_album_get_name(album, &album_name);
 
-	if (!g_strcmp0(media_list->distinct_check, album_name))
-	{
+	if (!g_strcmp0(media_list->distinct_check, album_name)) {
 		IF_FREE(album_name);
 		return true;
 	}
@@ -329,8 +327,9 @@ static inline bool __mp_media_playlist_cb(media_playlist_h playlist, void *user_
 
 	char *path = NULL;
 	media_playlist_get_thumbnail_path(playlist, &path);
-	if (path)
+	if (path) {
 		media_info->i.ginfo->thumb_path = g_strdup(path);
+	}
 	IF_FREE(path);
 
 	return true;
@@ -379,14 +378,12 @@ static void __mp_media_group_destory(void *data)
 		IF_FREE(media_info->h.group);
 	}
 
-	if (media_info->i.ginfo)
-	{
+	if (media_info->i.ginfo) {
 		IF_FREE(media_info->i.ginfo->main_info);
 		IF_FREE(media_info->i.ginfo->sub_info);
 		IF_FREE(media_info->i.ginfo->thumb_path);
 
-		while (media_info->i.ginfo->album_count)
-		{
+		while (media_info->i.ginfo->album_count) {
 			media_info->i.ginfo->album_count--;
 			IF_FREE(media_info->i.ginfo->album_thumb_paths[media_info->i.ginfo->album_count]);
 		}
@@ -402,24 +399,20 @@ static void __mp_media_group_destory(void *data)
 static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e group_type, const char *type_string, const char *filter_string)
 {
 	char cond[MAX_FILTER_LEN] = {0,};
-	if (group_type != MP_GROUP_BY_PLAYLIST)
-	{
+	if (group_type != MP_GROUP_BY_PLAYLIST) {
 		strncat(cond, MP_MEDIA_TYPE, STRNCAT_LEN(cond));
-	}
-	else
+	} else {
 		strncat(cond, "((MEDIA_TYPE=3 and PLAYLIST_MEDIA_COUNT>0) or PLAYLIST_MEDIA_COUNT=0)", STRNCAT_LEN(cond));
+	}
 
-	switch (group_type)
-	{
+	switch (group_type) {
 	case MP_GROUP_BY_ALBUM:
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_ALBUM = '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
 		}
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_ALBUM like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -427,14 +420,12 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_ALBUM, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_ARTIST:
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_ARTIST = '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
 		}
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_ARTIST like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -443,8 +434,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		break;
 	case MP_GROUP_BY_ARTIST_ALBUM:
 		MP_CHECK(type_string && strlen(type_string));
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_ALBUM like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%' AND ", STRNCAT_LEN(cond));
@@ -455,8 +445,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_ALBUM, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_GENRE:
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_GENRE like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -464,8 +453,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_GENRE, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_FOLDER:
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND FOLDER_PATH like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -473,8 +461,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, FOLDER_NAME, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_YEAR:
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_YEAR like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -482,8 +469,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_YEAR, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_COMPOSER:
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND MEDIA_COMPOSER like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -491,8 +477,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_COMPOSER, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_GROUP_BY_PLAYLIST:
-		if (filter_string)
-		{
+		if (filter_string) {
 			strncat(cond, " AND PLAYLIST_NAME like '\%", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 			strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -503,8 +488,7 @@ static void __mp_media_info_set_group_filter(mp_filter_h filter, mp_group_type_e
 		WARN_TRACE("Unhandled type: %d", group_type);
 		break;
 	}
-	if (strlen(cond))
-	{
+	if (strlen(cond)) {
 		media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 	}
 
@@ -520,14 +504,15 @@ static int __mp_media_info_get_thumbnail_path(media_info_h media, char **path)
 	albumart_path = mp_albumart_path_get(media_id);
 
 	IF_FREE(media_id);
-	if (albumart_path)
+	if (albumart_path) {
 		*path = albumart_path;
-	else
+	} else
 #endif
 	{
 		media_info_get_thumbnail_path(media, path);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 
 	return res;
@@ -536,52 +521,43 @@ static int __mp_media_info_get_thumbnail_path(media_info_h media, char **path)
 static void __mp_media_info_set_filter(filter_h filter, mp_track_type_e track_type, const char *type_string, const char *type_string2, const char *filter_string)
 {
 	char cond[MAX_FILTER_LEN] = {0,};
-	if (track_type == MP_TRACK_BY_VOICE_CLIP)
+	if (track_type == MP_TRACK_BY_VOICE_CLIP) {
 		strncat(cond, MP_SOUND_TYPE, STRNCAT_LEN(cond));
-	else
+	} else {
 		strncat(cond, MP_MEDIA_TYPE, STRNCAT_LEN(cond));
+	}
 
-	switch (track_type)
-	{
+	switch (track_type) {
 	case MP_TRACK_ALL:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
 		break;
 	case MP_TRACK_BY_ALBUM:
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_ALBUM='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_ALBUM is null", STRNCAT_LEN(cond));
 		}
 		//strncat(cond, " ORDER BY CAST(MEDIA_TRACK_NUM as integer)", STRNCAT_LEN(cond));
 		break;
 	case MP_TRACK_BY_ARTIST:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, "MEDIA_ALBUM, MEDIA_TITLE", MEDIA_CONTENT_COLLATE_NOCASE);
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_ARTIST='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_ARTIST is null", STRNCAT_LEN(cond));
 		}
 		break;
 	case MP_TRACK_BY_GENRE:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_GENRE='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_GENRE is null", STRNCAT_LEN(cond));
 		}
 		break;
@@ -590,49 +566,37 @@ static void __mp_media_info_set_filter(filter_h filter, mp_track_type_e track_ty
 		break;
 	case MP_TRACK_BY_YEAR:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_YEAR='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_YEAR is null", STRNCAT_LEN(cond));
 		}
 		break;
 	case MP_TRACK_BY_COMPOSER:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
-		if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_COMPOSER='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_COMPOSER is null", STRNCAT_LEN(cond));
 		}
 		break;
 	case MP_TRACK_BY_ARTIST_ALBUM:
-	if (type_string)
-		{
+		if (type_string) {
 			strncat(cond, " AND MEDIA_ALBUM='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_ALBUM is null", STRNCAT_LEN(cond));
 		}
-		if (type_string2)
-		{
+		if (type_string2) {
 			strncat(cond, " AND MEDIA_ARTIST='", STRNCAT_LEN(cond));
 			_mp_media_info_sql_strncat(cond, type_string2, STRNCAT_LEN(cond));
 			strncat(cond, "'", STRNCAT_LEN(cond));
-		}
-		else
-		{
+		} else {
 			strncat(cond, " AND MEDIA_ARTIST is null", STRNCAT_LEN(cond));
 		}
 		//strncat(cond, " ORDER BY CAST(MEDIA_TRACK_NUM as integer)", STRNCAT_LEN(cond));
@@ -669,8 +633,7 @@ static void __mp_media_info_set_filter(filter_h filter, mp_track_type_e track_ty
 		break;
 	}
 
-	if (filter_string && strlen(filter_string))
-	{
+	if (filter_string && strlen(filter_string)) {
 		strncat(cond, " AND MEDIA_TITLE like '\%", STRNCAT_LEN(cond));
 		_mp_media_info_sql_strncat(cond, filter_string, STRNCAT_LEN(cond));
 		strncat(cond, "\%'", STRNCAT_LEN(cond));
@@ -685,16 +648,18 @@ static void __mp_media_info_set_filter(filter_h filter, mp_track_type_e track_ty
 int mp_media_info_connect(void)
 {
 	int res = media_content_connect();
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error: media_content_connect");
+	}
 
 	return res;
 }
 int mp_media_info_disconnect(void)
 {
 	int res = media_content_disconnect();
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error: media_content_disconnect");
+	}
 
 	return res;
 }
@@ -704,35 +669,45 @@ int mp_media_filter_create(mp_filter_h *filter)
 {
 	//startfunc;
 	int res = media_filter_create(filter);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 int mp_media_filter_destory(mp_filter_h filter)
 {
 	//startfunc;
 	int res = media_filter_destroy(filter);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 int mp_media_filter_set_offset(mp_filter_h filter, int offset, int count)
 {
 	//startfunc;
 	int res = media_filter_set_offset(filter, offset, count);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 int mp_media_filter_set_order(mp_filter_h filter, bool descending, const char *order_keyword, mp_media_content_collation_e collation)
 {
 	//startfunc;
 	int res = media_filter_set_order(filter, descending, order_keyword, collation);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
-int mp_media_filter_set_condition(mp_filter_h filter, const char *condition, mp_media_content_collation_e collation )
+int mp_media_filter_set_condition(mp_filter_h filter, const char *condition, mp_media_content_collation_e collation)
 {
 	//startfunc;
 	int res = media_filter_set_condition(filter, condition, collation);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -741,23 +716,25 @@ int mp_media_info_list_count_w_filter(mp_track_type_e track_type, const char * f
 {
 	//startfunc;
 	int res = MEDIA_CONTENT_ERROR_NONE;
-	if (track_type == MP_TRACK_BY_FOLDER)
+	if (track_type == MP_TRACK_BY_FOLDER) {
 		res = media_folder_get_media_count_from_db(folder_id, filter, count);
-	else if (track_type == MP_TRACK_BY_PLAYLIST)
+	} else if (track_type == MP_TRACK_BY_PLAYLIST) {
 		res = media_playlist_get_media_count_from_db(playlist_id, filter, count);
-	else
+	} else {
 		res = media_info_get_media_count_from_db(filter, count);
-	if (res != MEDIA_CONTENT_ERROR_NONE) ERROR_TRACE("Error code 0x%x", res);
-
-	if (track_type == MP_TRACK_BY_PLAYED_TIME ||track_type == MP_TRACK_BY_ADDED_TIME ||track_type == MP_TRACK_BY_PLAYED_COUNT)
-	{
-		if (*count > MP_AUTO_PLAYLIST_ITEM_MAX)
-			*count = MP_AUTO_PLAYLIST_ITEM_MAX;
 	}
-	else if (track_type == MP_TRACK_BY_PLAYLIST)
-	{
-		if (*count > MP_PLAYLIST_MAX_ITEM_COUNT)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
+		ERROR_TRACE("Error code 0x%x", res);
+	}
+
+	if (track_type == MP_TRACK_BY_PLAYED_TIME || track_type == MP_TRACK_BY_ADDED_TIME || track_type == MP_TRACK_BY_PLAYED_COUNT) {
+		if (*count > MP_AUTO_PLAYLIST_ITEM_MAX) {
+			*count = MP_AUTO_PLAYLIST_ITEM_MAX;
+		}
+	} else if (track_type == MP_TRACK_BY_PLAYLIST) {
+		if (*count > MP_PLAYLIST_MAX_ITEM_COUNT) {
 			*count = MP_PLAYLIST_MAX_ITEM_COUNT;
+		}
 	}
 
 	return res;
@@ -791,22 +768,18 @@ int mp_media_info_list_create_w_filter(mp_track_type_e track_type, const char *f
 	MP_CHECK_VAL(*media_list, -1);
 	(*media_list)->group_type = MP_GROUP_NONE;
 
-	if (track_type == MP_TRACK_BY_FOLDER)
+	if (track_type == MP_TRACK_BY_FOLDER) {
 		res = media_folder_foreach_media_from_db(folder_id, filter, __mp_media_info_cb, *media_list);
-	else if (track_type == MP_TRACK_BY_PLAYLIST)
-	{
+	} else if (track_type == MP_TRACK_BY_PLAYLIST) {
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, PLAYLIST_MEMBER_ORDER, MEDIA_CONTENT_COLLATE_NOCASE);
 		res = media_playlist_foreach_media_from_db(playlist_id, filter, __mp_playlist_media_info_cb, *media_list);
-	}
-	else if (track_type == MP_TRACK_BY_ALBUM || track_type ==MP_TRACK_BY_ARTIST_ALBUM)
-	{
+	} else if (track_type == MP_TRACK_BY_ALBUM || track_type == MP_TRACK_BY_ARTIST_ALBUM) {
 		res = media_info_foreach_media_from_db(filter, __mp_media_info_of_album_cb, *media_list);
-	}
-	else
+	} else {
 		res = media_info_foreach_media_from_db(filter, __mp_media_info_cb, *media_list);
+	}
 
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		free(*media_list);
 		*media_list = NULL;
@@ -820,7 +793,7 @@ int mp_media_info_list_create_w_filter(mp_track_type_e track_type, const char *f
 }
 
 int mp_media_info_list_create(mp_media_list_h *out_list,
-		mp_track_type_e track_type, const char *type_string, const char *type_string2, const char *filter_string, int playlist_id, int offset, int count)
+                              mp_track_type_e track_type, const char *type_string, const char *type_string2, const char *filter_string, int playlist_id, int offset, int count)
 {
 	//startfunc;
 	int res = MEDIA_CONTENT_ERROR_NONE;
@@ -831,7 +804,7 @@ int mp_media_info_list_create(mp_media_list_h *out_list,
 	MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, res);
 
 	res = media_filter_set_offset(filter, offset, count);
- 	//DEBUG_TRACE("offset: %d, count: %d", offset, count);
+	//DEBUG_TRACE("offset: %d, count: %d", offset, count);
 	__mp_media_info_set_filter(filter, track_type, type_string, type_string2, filter_string);
 
 	res = mp_media_info_list_create_w_filter(track_type, type_string, playlist_id, filter, out_list);
@@ -854,14 +827,15 @@ int mp_media_info_sorted_track_list_create(mp_media_list_h *out_list, char *sort
 	strncat(cond, "(MEDIA_TYPE=3) OR (MEDIA_TYPE=2)", STRNCAT_LEN(cond));
 	media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
-	if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_NAME_A2Z"))
+	if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_NAME_A2Z")) {
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_DESC, MEDIA_DISPLAY_NAME, MEDIA_CONTENT_COLLATE_NOCASE);
-	else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_NAME_Z2A"))
+	} else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_NAME_Z2A")) {
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_DISPLAY_NAME, MEDIA_CONTENT_COLLATE_NOCASE);
-	else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_DATE_O2R"))
+	} else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_DATE_O2R")) {
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_DESC, MEDIA_MODIFIED_TIME, MEDIA_CONTENT_COLLATE_NOCASE);
-	else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_SIZE_L2S"))
+	} else if (!g_strcmp0(sort_type, "MYFILE_SORT_BY_SIZE_L2S")) {
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_SIZE, MEDIA_CONTENT_COLLATE_NOCASE);
+	}
 
 	res = mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, out_list);
 	media_filter_destroy(filter);
@@ -880,8 +854,9 @@ int mp_media_info_list_destroy(mp_media_list_h media_list)
 	//startfunc;
 	MP_CHECK_VAL(media_list, -1);
 
-	if (media_list->list)
+	if (media_list->list) {
 		g_list_free_full(media_list->list, __mp_media_info_destory);
+	}
 	free(media_list);
 	media_list = NULL;
 	return 0;
@@ -981,8 +956,7 @@ int mp_media_info_destroy(mp_media_info_h media_info)
 	audio_meta_destroy(media_info->s.meta);
 	media_info_destroy(media_info->h.media);
 
-	if (media_info->i.minfo)
-	{
+	if (media_info->i.minfo) {
 		IF_FREE(media_info->i.minfo->media_id);
 		IF_FREE(media_info->i.minfo->title);
 		IF_FREE(media_info->i.minfo->album);
@@ -1011,7 +985,7 @@ bool mp_media_info_uri_is_exist_in_db(const char *file_path)
 	mp_filter_h filter = NULL;
 	char sql[MAX_NAM_LEN] = {0,};
 	char *cond = NULL;
-        bool exist = false;
+	bool exist = false;
 	int count = 0;
 
 	res = media_filter_create(&filter);
@@ -1024,13 +998,14 @@ bool mp_media_info_uri_is_exist_in_db(const char *file_path)
 
 	media_filter_set_offset(filter, 0, 1);
 
-        res = media_info_get_media_count_from_db(filter, &count);
+	res = media_info_get_media_count_from_db(filter, &count);
 	media_filter_destroy(filter);
 
 	MP_CHECK_FALSE(res == MEDIA_CONTENT_ERROR_NONE);
 
-        if (count > 0)
+	if (count > 0) {
 		exist = true;
+	}
 
 	return exist;
 }
@@ -1041,11 +1016,11 @@ int mp_media_info_get_media_id(mp_media_info_h media, char **media_id)
 	MP_CHECK_VAL(media->i.minfo, -1);
 	int res = MEDIA_CONTENT_ERROR_NONE;
 
-	if (!media->i.minfo->media_id)
-	{
+	if (!media->i.minfo->media_id) {
 		res = media_info_get_media_id(media->h.media, &media->i.minfo->media_id);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*media_id = media->i.minfo->media_id;
 	PRINT_STR(*media_id);
@@ -1059,11 +1034,11 @@ int mp_media_info_get_file_path(mp_media_info_h media, char **path)
 	MP_CHECK_VAL(media->i.minfo, -1);
 	int res = MEDIA_CONTENT_ERROR_NONE;
 
-	if (!media->i.minfo->file_path)
-	{
+	if (!media->i.minfo->file_path) {
 		res = media_info_get_file_path(media->h.media, &media->i.minfo->file_path);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*path = media->i.minfo->file_path;
 	PRINT_STR(*path);
@@ -1075,8 +1050,9 @@ int mp_media_info_get_thumbnail_path(mp_media_info_h media, char **path)
 	MP_CHECK_VAL(media->i.minfo, -1);
 	int res = MEDIA_CONTENT_ERROR_NONE;
 
-	if (media->i.minfo->thumbnail_path)
-	IF_FREE(media->i.minfo->thumbnail_path);
+	if (media->i.minfo->thumbnail_path) {
+		IF_FREE(media->i.minfo->thumbnail_path);
+	}
 	res = __mp_media_info_get_thumbnail_path(media->h.media, &media->i.minfo->thumbnail_path);
 	*path = media->i.minfo->thumbnail_path;
 	PRINT_STR(*path);
@@ -1087,8 +1063,9 @@ int mp_media_info_get_favorite(mp_media_info_h media, bool *favorite)
 	MP_CHECK_VAL(media, -1);
 
 	int res = media_info_get_favorite(media->h.media, favorite);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1096,8 +1073,9 @@ int mp_media_info_is_drm(mp_media_info_h media, bool *drm)
 {
 	MP_CHECK_VAL(media, -1);
 	int res = media_info_is_drm(media->h.media, drm);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1110,13 +1088,15 @@ int mp_media_info_get_media_type(mp_media_info_h media, int *media_type)
 	media_content_type_e mtype;
 
 	res = media_info_get_media_type(media->h.media, &mtype);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 
-	if (mtype == MEDIA_CONTENT_TYPE_SOUND)
+	if (mtype == MEDIA_CONTENT_TYPE_SOUND) {
 		*media_type = MP_MEDIA_TYPE_SOUND;
-	else
+	} else {
 		*media_type = MP_MEDIA_TYPE_MUSIC;
+	}
 
 	return res;
 }
@@ -1127,11 +1107,11 @@ int mp_media_info_get_display_name(mp_media_info_h media, char **display_name)
 	MP_CHECK_VAL(media->i.minfo, -1);
 	int res = MEDIA_CONTENT_ERROR_NONE;
 
-	if (!media->i.minfo->display_name)
-	{
+	if (!media->i.minfo->display_name) {
 		res = media_info_get_display_name(media->h.media, &media->i.minfo->display_name);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*display_name = media->i.minfo->display_name;
 	PRINT_STR(*display_name);
@@ -1145,11 +1125,11 @@ int mp_media_info_get_title(mp_media_info_h media, char **title)
 	MP_CHECK_VAL(media->h.media, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->title)
-	{
+	if (!media->i.minfo->title) {
 		res = media_info_get_title(media->h.media, &media->i.minfo->title);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*title = media->i.minfo->title;
 	PRINT_STR(*title);
@@ -1162,11 +1142,11 @@ int mp_media_info_get_album(mp_media_info_h media, char **album)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->album)
-	{
+	if (!media->i.minfo->album) {
 		res = audio_meta_get_album(media->s.meta, &media->i.minfo->album);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*album = media->i.minfo->album;
 	PRINT_STR(*album);
@@ -1179,11 +1159,11 @@ int mp_media_info_get_artist(mp_media_info_h media, char **artist)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->artist)
-	{
+	if (!media->i.minfo->artist) {
 		res = audio_meta_get_artist(media->s.meta, &media->i.minfo->artist);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*artist = media->i.minfo->artist;
 	PRINT_STR(*artist);
@@ -1199,15 +1179,16 @@ int mp_media_info_get_recorded_date(mp_media_info_h media, char **date)
 
 	if (!media->i.minfo->date) {
 		res = audio_meta_get_recorded_date(media->s.meta, &media->i.minfo->date);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	if (!(media->i.minfo->date)) {
 		char default_date[] = "Unknown";
 		*date = strdup(default_date);
-	}
-	else
+	} else {
 		*date = strdup(media->i.minfo->date);
+	}
 	PRINT_STR(*date);
 	return res;
 }
@@ -1219,11 +1200,11 @@ int mp_media_info_get_genre(mp_media_info_h media, char **genre)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->genre)
-	{
+	if (!media->i.minfo->genre) {
 		res = audio_meta_get_genre(media->s.meta, &media->i.minfo->genre);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*genre = media->i.minfo->genre;
 	PRINT_STR(*genre);
@@ -1233,13 +1214,14 @@ int mp_media_playlist_get_playlist_count_from_db()
 {
 	mp_filter_h filter = NULL;
 	int res = media_filter_create(&filter);
-	ERROR_TRACE("media filter %d" ,res);
+	ERROR_TRACE("media filter %d" , res);
 	int count = 0;
 	res = media_playlist_get_playlist_count_from_db(filter, &count);
-	if (res ==0)
+	if (res == 0) {
 		ERROR_TRACE("successful");
+	}
 	media_filter_destroy(filter);
-	ERROR_TRACE("%d the count is",count);
+	ERROR_TRACE("%d the count is", count);
 	return count;
 }
 int mp_media_info_get_composer(mp_media_info_h media, char **composer)
@@ -1249,11 +1231,11 @@ int mp_media_info_get_composer(mp_media_info_h media, char **composer)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->composer)
-	{
+	if (!media->i.minfo->composer) {
 		res = audio_meta_get_composer(media->s.meta, &media->i.minfo->composer);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*composer = media->i.minfo->composer;
 	PRINT_STR(*composer);
@@ -1266,14 +1248,13 @@ int mp_media_info_get_year(mp_media_info_h media, char **year)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->year)
-	{
+	if (!media->i.minfo->year) {
 		res = audio_meta_get_year(media->s.meta, &media->i.minfo->year);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
-	if (!g_strcmp0(media->i.minfo->year, "Unknown"))
-	{
+	if (!g_strcmp0(media->i.minfo->year, "Unknown")) {
 		char *default_year = "2014";
 		strncpy(media->i.minfo->year, default_year, strlen(default_year));
 	}
@@ -1288,11 +1269,11 @@ int mp_media_info_get_copyright(mp_media_info_h media, char **copyright)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->copyright)
-	{
+	if (!media->i.minfo->copyright) {
 		res = audio_meta_get_copyright(media->s.meta, &media->i.minfo->copyright);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*copyright = media->i.minfo->copyright;
 	PRINT_STR(*copyright);
@@ -1306,11 +1287,11 @@ int mp_media_info_get_track_num(mp_media_info_h media, char **track_num)
 	MP_CHECK_VAL(media->s.meta, -1);
 	MP_CHECK_VAL(media->i.minfo, -1);
 
-	if (!media->i.minfo->track_num)
-	{
+	if (!media->i.minfo->track_num) {
 		res = audio_meta_get_track_num(media->s.meta, &media->i.minfo->track_num);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 	}
 	*track_num = media->i.minfo->track_num;
 	PRINT_STR(*track_num);
@@ -1328,19 +1309,21 @@ int mp_media_info_get_format(mp_media_info_h media, char **format)
 	int sample_rate = 0;
 	int channel = 0;
 
-	if (!media->i.minfo->format)
-	{
+	if (!media->i.minfo->format) {
 		res = audio_meta_get_sample_rate(media->s.meta, &sample_rate);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 		res = audio_meta_get_bit_rate(media->s.meta, &bit_rate);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 		res = audio_meta_get_channel(media->s.meta, &channel);
-		if (res != MEDIA_CONTENT_ERROR_NONE)
+		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+		}
 
-		media->i.minfo->format = g_strdup_printf("%dKbps %.1fKHz %dch", bit_rate/1000, sample_rate/1000.0, channel);
+		media->i.minfo->format = g_strdup_printf("%dKbps %.1fKHz %dch", bit_rate / 1000, sample_rate / 1000.0, channel);
 	}
 	*format = media->i.minfo->format;
 	PRINT_STR(*format);
@@ -1354,8 +1337,9 @@ int mp_media_info_get_bit_rate(mp_media_info_h media, int *bitrate)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_get_bit_rate(media->s.meta, bitrate);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1364,13 +1348,15 @@ int mp_media_info_get_bitpersample(mp_media_info_h media, int *bitpersample)
 	int res = MEDIA_CONTENT_ERROR_NONE;
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->s.meta, -1);
-        MP_CHECK_VAL(bitpersample, -1);
+	MP_CHECK_VAL(bitpersample, -1);
 
 	res = audio_meta_get_bitpersample(media->s.meta, bitpersample);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
-        if (*bitpersample == 0) //get 0 except wav/flac, show 16
-              *bitpersample = 16;
+	}
+	if (*bitpersample == 0) { //get 0 except wav/flac, show 16
+		*bitpersample = 16;
+	}
 	return res;
 }
 
@@ -1381,8 +1367,9 @@ int mp_media_info_get_sample_rate(mp_media_info_h media, int *sample_rate)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_get_sample_rate(media->s.meta, sample_rate);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 int mp_media_info_get_duration(mp_media_info_h media, int *duration)
@@ -1392,11 +1379,13 @@ int mp_media_info_get_duration(mp_media_info_h media, int *duration)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_get_duration(media->s.meta, duration);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 
-	if (*duration < 0)
+	if (*duration < 0) {
 		*duration = 0;
+	}
 
 	return res;
 }
@@ -1408,8 +1397,9 @@ int mp_media_info_get_played_time(mp_media_info_h media, time_t *time)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_get_played_time(media->s.meta, time);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1420,8 +1410,9 @@ int mp_media_info_get_played_count(mp_media_info_h media, int *count)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_get_played_count(media->s.meta, count);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1432,8 +1423,7 @@ int mp_media_info_get_added_time(mp_media_info_h media, time_t *time)
 	MP_CHECK_VAL(media->h.media, -1);
 
 	res = media_info_get_added_time(media->h.media, time);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
@@ -1467,22 +1457,21 @@ int mp_media_info_set_favorite_media_db_only(mp_media_info_h media, bool favorit
 	int res = MEDIA_CONTENT_ERROR_NONE;
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->h.media, -1);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
 
 	res = media_info_set_favorite(media->h.media, favorite);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
 
 	res = media_info_update_to_db(media->h.media);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 
 	return res;
 }
@@ -1504,14 +1493,14 @@ int mp_media_info_set_played_time(mp_media_info_h media, time_t time)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_set_played_time(media->s.meta, time);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
 	res = audio_meta_update_to_db(media->s.meta);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 int mp_media_info_set_played_count(mp_media_info_h media, int count)
@@ -1521,14 +1510,14 @@ int mp_media_info_set_played_count(mp_media_info_h media, int count)
 	MP_CHECK_VAL(media->s.meta, -1);
 
 	res = audio_meta_set_played_count(media->s.meta, count);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
 	res = audio_meta_update_to_db(media->s.meta);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1539,14 +1528,14 @@ int mp_media_info_set_added_time(mp_media_info_h media, time_t time)
 	MP_CHECK_VAL(media->h.media, -1);
 
 	res = media_info_set_added_time(media->h.media, time);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		return res;
 	}
 	res = media_info_update_to_db(media->h.media);
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 	return res;
 }
 
@@ -1611,8 +1600,7 @@ int mp_media_info_group_list_count_w_filter(mp_group_type_e group_type, mp_filte
 	//startfunc;
 	int res = MEDIA_CONTENT_ERROR_NONE;
 	MP_CHECK_VAL(filter, -1);
-	switch (group_type)
-	{
+	switch (group_type) {
 	case MP_GROUP_BY_ALBUM:
 	case MP_GROUP_BY_ARTIST_ALBUM:
 		res = media_album_get_album_count_from_db(filter, count);
@@ -1640,14 +1628,14 @@ int mp_media_info_group_list_count_w_filter(mp_group_type_e group_type, mp_filte
 		res = -1;
 		break;
 	}
-	if (res != MEDIA_CONTENT_ERROR_NONE)
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
+	}
 
 	return res;
 }
 
-typedef struct
-{
+typedef struct {
 	char *info; //album, artist, folder name
 	char *album; //album name for artist list
 	int count; //track_count
@@ -1655,7 +1643,7 @@ typedef struct
 	char **album_thumnails; //thumbnail list of albums
 	int thumb_count; //album thumbnail count
 	int track_num; //tracknumber for album
-}MpCountData_t;
+} MpCountData_t;
 
 static inline bool _folder_track_foreach_cb(media_info_h media, void *user_data)
 {
@@ -1688,8 +1676,7 @@ static inline bool _folder_track_foreach_cb(media_info_h media, void *user_data)
 	if (!g_strcmp0(data->info, folder))	{
 		IF_FREE(folder);
 		data->count++;
-	}
-	else {
+	} else {
 		data = calloc(1, sizeof(MpCountData_t));
 		if (data == NULL) {
 			IF_FREE(folder);
@@ -1750,8 +1737,9 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 			return true;
 		}
 
-		if (data->info != NULL)
+		if (data->info != NULL) {
 			free(data->info);
+		}
 		data->info = strdup(album);
 		__mp_media_info_get_thumbnail_path(media, &data->thumb_path);
 
@@ -1775,18 +1763,15 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 		data->count++;
 		IF_FREE(album);
 		int track = 0;
-		if (track_num)
-		{
+		if (track_num) {
 			track = atoi(track_num);
-			if (track < data->track_num)
-			{
+			if (track < data->track_num) {
 				IF_FREE(data->thumb_path);
 				__mp_media_info_get_thumbnail_path(media, &data->thumb_path);
 			}
 			free(track_num);
 		}
-	}
-	else {
+	} else {
 		data = calloc(1, sizeof(MpCountData_t));
 		if (data == NULL) {
 			ERROR_TRACE("data is null, audio destroyed");
@@ -1796,16 +1781,16 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 			return EINA_TRUE;
 		}
 
-		if (data->info != NULL)
+		if (data->info != NULL) {
 			free(data->info);
+		}
 		data->info = strdup(album);
 		__mp_media_info_get_thumbnail_path(media, &data->thumb_path);
 
 		data->count++;
 		*list = g_list_append(*list, data);
 
-		if (track_num)
-		{
+		if (track_num) {
 			data->track_num = atoi(track_num);
 			free(track_num);
 		}
@@ -1850,15 +1835,17 @@ static inline bool _artist_track_foreach_cb(media_info_h media, void *user_data)
 	if (!*list) {
 		audio_meta_destroy(audio);
 		data = calloc(1, sizeof(MpCountData_t));
-		if ( data == NULL) {
+		if (data == NULL) {
 			IF_FREE(album);
 			IF_FREE(artist);
 			return EINA_TRUE;
 		}
-		if ( data->info != NULL)
+		if (data->info != NULL) {
 			free(data->info);
-		if (data->album != NULL)
-			free(data->album );
+		}
+		if (data->album != NULL) {
+			free(data->album);
+		}
 		data->info = strdup(artist);
 		data->album = strdup(album);
 		data->album_thumnails = calloc(1, sizeof(char *));
@@ -1875,7 +1862,7 @@ static inline bool _artist_track_foreach_cb(media_info_h media, void *user_data)
 
 	*list = g_list_last(*list);
 	data = (*list)->data;
-	if ( data == NULL) {
+	if (data == NULL) {
 		ERROR_TRACE("data is null, audio destroyed");
 		IF_FREE(album);
 		IF_FREE(artist);
@@ -1884,34 +1871,35 @@ static inline bool _artist_track_foreach_cb(media_info_h media, void *user_data)
 	}
 	if (!g_strcmp0(data->info, artist))	{
 		data->count++;
-		if (g_strcmp0(data->album, album))
-		{
-			if (data->album != NULL)
-				free(data->album );
+		if (g_strcmp0(data->album, album)) {
+			if (data->album != NULL) {
+				free(data->album);
+			}
 			data->album = strdup(album);
-			data->album_thumnails = realloc(data->album_thumnails, sizeof(char *) * (data->thumb_count+1));
+			data->album_thumnails = realloc(data->album_thumnails, sizeof(char *) * (data->thumb_count + 1));
 			__mp_media_info_get_thumbnail_path(media, &(data->album_thumnails[data->thumb_count]));
 			data->thumb_count++;
 			//DEBUG_TRACE("artist: %s, album: %s", artist, album);
 			IF_FREE(album);
-		}
-		else
+		} else {
 			IF_FREE(album);
+		}
 
 		IF_FREE(artist);
-	}
-	else {
+	} else {
 		data = calloc(1, sizeof(MpCountData_t));
-		if ( data == NULL) {
+		if (data == NULL) {
 			IF_FREE(album);
 			IF_FREE(artist);
 			audio_meta_destroy(audio);
 			return EINA_TRUE;
 		};
-		if ( data->info != NULL)
+		if (data->info != NULL) {
 			free(data->info);
-		if (data->album != NULL)
-			free(data->album );
+		}
+		if (data->album != NULL) {
+			free(data->album);
+		}
 		data->info = strdup(artist);
 		data->album = strdup(album);
 		data->album_thumnails = calloc(1, sizeof(char *));
@@ -1946,13 +1934,12 @@ _mp_media_info_set_group_extra_info(mp_media_list_h media_list, mp_group_type_e 
 	strncat(cond, MP_MEDIA_TYPE, STRNCAT_LEN(cond));
 
 	//create track list
-	switch (group_type)
-	{
+	switch (group_type) {
 	case MP_GROUP_BY_ALBUM:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_ALBUM, MEDIA_CONTENT_COLLATE_NOCASE);
 		media_foreach_cb = _album_track_foreach_cb;
 		break;
-	//case MP_GROUP_BY_ARTIST_ALBUM:
+		//case MP_GROUP_BY_ARTIST_ALBUM:
 		//break;
 	case MP_GROUP_BY_ARTIST:
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, "MEDIA_ARTIST, MEDIA_ALBUM", MEDIA_CONTENT_COLLATE_NOCASE);
@@ -1964,12 +1951,12 @@ _mp_media_info_set_group_extra_info(mp_media_list_h media_list, mp_group_type_e 
 		media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, "folder_uuid", MEDIA_CONTENT_COLLATE_NOCASE);
 		media_foreach_cb = _folder_track_foreach_cb;
 		break;
-	//case MP_GROUP_BY_YEAR:
-	//	break;
-	//case MP_GROUP_BY_COMPOSER:
-	//	break;
-	//case MP_GROUP_BY_PLAYLIST:
-	//	break;
+		//case MP_GROUP_BY_YEAR:
+		//	break;
+		//case MP_GROUP_BY_COMPOSER:
+		//	break;
+		//case MP_GROUP_BY_PLAYLIST:
+		//	break;
 	default:
 		WARN_TRACE("Unsupported type: %d", group_type);
 		media_filter_destroy(filter);
@@ -1983,31 +1970,31 @@ _mp_media_info_set_group_extra_info(mp_media_list_h media_list, mp_group_type_e 
 	int i = 0;
 	mp_media_info_h media = NULL;
 	MpCountData_t *data;
-	do{
-		list =node = g_list_first(list);
+	do {
+		list = node = g_list_first(list);
 		media = mp_media_info_group_list_nth_item(media_list, i++);
-		if (media)
-		{
+		if (media) {
 			char *info = NULL;
 			int ret = MEDIA_CONTENT_ERROR_NONE;
-			if (group_type != MP_GROUP_BY_FOLDER)
+			if (group_type != MP_GROUP_BY_FOLDER) {
 				ret = mp_media_info_group_get_main_info(media, &info);
-			else
+			} else {
 				ret = mp_media_info_group_get_sub_info(media, &info);
+			}
 			//DEBUG_TRACE("find folder from glist: %s", folder);
 			//DEBUG_TRACE("list count: %d", g_list_length(node));
-			if (ret != MEDIA_CONTENT_ERROR_NONE)
+			if (ret != MEDIA_CONTENT_ERROR_NONE) {
 				ERROR_TRACE("Get group info error");
-			while (node)
-			{
+			}
+			while (node) {
 				data = node->data;
-				if (!g_strcmp0(data->info, info))
-				{
+				if (!g_strcmp0(data->info, info)) {
 					media->i.ginfo->track_count = data->count;
-					if (data->thumb_path)
+					if (data->thumb_path) {
 						media->i.ginfo->thumb_path = data->thumb_path;
-					else if (data->album_thumnails && data->thumb_count)
+					} else if (data->album_thumnails && data->thumb_count) {
 						media->i.ginfo->thumb_path = g_strdup(data->album_thumnails[0]);
+					}
 
 					media->i.ginfo->album_thumb_paths = data->album_thumnails;
 					media->i.ginfo->album_count = data->thumb_count;
@@ -2023,21 +2010,18 @@ _mp_media_info_set_group_extra_info(mp_media_list_h media_list, mp_group_type_e 
 			}
 
 		}
-	}while (media);
+	} while (media);
 
-	if (list)
-	{
+	if (list) {
 		ERROR_TRACE("Shouldn't be here...");
-		while (list)
-		{
+		while (list) {
 			data = list->data;
 			ERROR_TRACE("This item not  matched...: %s", data->info);
 			IF_FREE(data->info);
 			IF_FREE(data->album);
 			IF_FREE(data->thumb_path);
 
-			while (data->thumb_count)
-			{
+			while (data->thumb_count) {
 				data->thumb_count--;
 				IF_FREE(data->album_thumnails[data->thumb_count]);
 			}
@@ -2066,8 +2050,7 @@ int mp_media_info_group_list_create(mp_media_list_h *media_list, mp_group_type_e
 	mp_filter_h filter = NULL;
 	int res = MEDIA_CONTENT_ERROR_NONE;
 
-	if (group_type != MP_GROUP_BY_SYS_PLAYLIST)
-	{
+	if (group_type != MP_GROUP_BY_SYS_PLAYLIST) {
 		res = media_filter_create(&filter);
 		MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, res);
 		media_filter_set_offset(filter, offset, count);
@@ -2079,9 +2062,7 @@ int mp_media_info_group_list_create(mp_media_list_h *media_list, mp_group_type_e
 		MP_CHECK_VAL(res == MEDIA_CONTENT_ERROR_NONE, res);
 
 		_mp_media_info_set_extra_info(*media_list, group_type, type_string, filter_string);
-	}
-	else
-	{
+	} else {
 
 		int i;
 		mp_media_info_h media_info = NULL;
@@ -2090,12 +2071,11 @@ int mp_media_info_group_list_create(mp_media_list_h *media_list, mp_group_type_e
 		(*media_list)->group_type = group_type;
 
 		char names[][50] =
-			{ STR_MP_FAVOURITES, STR_MP_RECENTLY_ADDED, STR_MP_MOST_PLAYED, STR_MP_RECENTLY_PLAYED};
-		char thumb[][4096]=
-			{ THUMBNAIL_QUICK_LIST, THUMBNAIL_RECENTLY_ADDED, THUMBNAIL_MOST_PLAYED, THUMBNAIL_RECENTLY_PLAYED};
+		{ STR_MP_FAVOURITES, STR_MP_RECENTLY_ADDED, STR_MP_MOST_PLAYED, STR_MP_RECENTLY_PLAYED};
+		char thumb[][4096] =
+		{ THUMBNAIL_QUICK_LIST, THUMBNAIL_RECENTLY_ADDED, THUMBNAIL_MOST_PLAYED, THUMBNAIL_RECENTLY_PLAYED};
 
-		for (i=0; i< 4; i++)
-		{
+		for (i = 0; i < 4; i++) {
 			media_info = calloc(1, sizeof(struct mp_media_info_s));
 			MP_CHECK_FALSE(media_info);
 
@@ -2106,7 +2086,7 @@ int mp_media_info_group_list_create(mp_media_list_h *media_list, mp_group_type_e
 			}
 
 			media_info->i.ginfo->main_info = g_strdup(names[i]);
-			media_info->i.ginfo->thumb_path= g_strdup(thumb[i]);
+			media_info->i.ginfo->thumb_path = g_strdup(thumb[i]);
 			media_info->s.group_type = group_type;
 			(*media_list)->list = g_list_append((*media_list)->list, media_info);
 		}
@@ -2126,8 +2106,7 @@ int mp_media_info_group_list_create_w_filter(mp_filter_h filter, mp_group_type_e
 	(*media_list)->group_type = group_type;
 
 	int res = MEDIA_CONTENT_ERROR_NONE;
-	switch (group_type)
-	{
+	switch (group_type) {
 	case MP_GROUP_BY_ALBUM:
 	case MP_GROUP_BY_ARTIST_ALBUM:
 		res = media_album_foreach_album_from_db(filter, __mp_media_album_cb, *media_list);
@@ -2155,14 +2134,11 @@ int mp_media_info_group_list_create_w_filter(mp_filter_h filter, mp_group_type_e
 		res = -1;
 		break;
 	}
-	if (res != MEDIA_CONTENT_ERROR_NONE)
-	{
+	if (res != MEDIA_CONTENT_ERROR_NONE) {
 		ERROR_TRACE("Error code 0x%x", res);
 		free(*media_list);
 		*media_list = NULL;
-	}
-	else
-	{
+	} else {
 		(*media_list)->list = g_list_reverse((*media_list)->list);
 		(*media_list)->count = g_list_length((*media_list)->list);
 	}
@@ -2204,16 +2180,16 @@ int mp_media_info_group_get_main_info(mp_media_info_h media, char **main_info)
 	MP_CHECK_VAL(main_info, -1);
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->i.ginfo, -1);
-	if (!media->i.ginfo->main_info && media->s.group_type != MP_GROUP_BY_SYS_PLAYLIST)
-	{
-		if (media->s.group_type == MP_GROUP_BY_FOLDER)
+	if (!media->i.ginfo->main_info && media->s.group_type != MP_GROUP_BY_SYS_PLAYLIST) {
+		if (media->s.group_type == MP_GROUP_BY_FOLDER) {
 			res = media_folder_get_name(media->h.group, &media->i.ginfo->main_info);
-		else if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM)
+		} else if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM) {
 			res = media_album_get_name(media->h.group, &media->i.ginfo->main_info);
-		else if (media->s.group_type == MP_GROUP_BY_PLAYLIST)
+		} else if (media->s.group_type == MP_GROUP_BY_PLAYLIST) {
 			res = media_playlist_get_name(media->h.group, &media->i.ginfo->main_info);
-		else
+		} else {
 			media->i.ginfo->main_info = g_strdup(media->h.group);
+		}
 	}
 	*main_info = g_strdup(media->i.ginfo->main_info);
 	PRINT_STR(*main_info);
@@ -2227,12 +2203,12 @@ int mp_media_info_group_get_sub_info(mp_media_info_h media, char **sub_info)
 	MP_CHECK_VAL(sub_info, -1);
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->i.ginfo, -1);
-	if (!media->i.ginfo->sub_info && media->s.group_type != MP_GROUP_BY_SYS_PLAYLIST)
-	{
-		if (media->s.group_type == MP_GROUP_BY_FOLDER)
+	if (!media->i.ginfo->sub_info && media->s.group_type != MP_GROUP_BY_SYS_PLAYLIST) {
+		if (media->s.group_type == MP_GROUP_BY_FOLDER) {
 			res = media_folder_get_path(media->h.group, &media->i.ginfo->sub_info);
-		else if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM)
+		} else if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM) {
 			res = media_album_get_artist(media->h.group, &media->i.ginfo->sub_info);
+		}
 	}
 	*sub_info = media->i.ginfo->sub_info;
 	PRINT_STR(*sub_info);
@@ -2247,10 +2223,11 @@ int mp_media_info_group_get_playlist_id(mp_media_info_h media, int *playlist_id)
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->s.group_type == MP_GROUP_BY_PLAYLIST || media->s.group_type == MP_GROUP_BY_SYS_PLAYLIST, -1);
 
-	if (media->s.group_type == MP_GROUP_BY_SYS_PLAYLIST)
+	if (media->s.group_type == MP_GROUP_BY_SYS_PLAYLIST) {
 		*playlist_id = mp_media_info_get_auto_playlist_id_by_name(media->i.ginfo->main_info);
-	else
+	} else {
 		res = media_playlist_get_playlist_id(media->h.group, playlist_id);
+	}
 	PRINT_INT(*playlist_id);
 	return res;
 }
@@ -2276,8 +2253,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 	MP_CHECK_VAL(media, -1);
 	MP_CHECK_VAL(media->i.ginfo, -1);
 	char *folde_id = NULL;
-	if (!media->i.ginfo->thumb_path)
-	{
+	if (!media->i.ginfo->thumb_path) {
 
 		/*if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM)
 			res = media_album_get_album_art(media->h.group, &media->i.ginfo->thumb_path);
@@ -2299,10 +2275,11 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 			}
 
 			strncat(cond, MP_MEDIA_TYPE, STRNCAT_LEN(cond));
-			if (media->s.group_type == MP_GROUP_BY_PLAYLIST)
+			if (media->s.group_type == MP_GROUP_BY_PLAYLIST) {
 				media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, PLAYLIST_MEMBER_ORDER, MEDIA_CONTENT_COLLATE_NOCASE);
-			else
+			} else {
 				media_filter_set_order(filter, MEDIA_CONTENT_ORDER_ASC, MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
+			}
 
 			if (media->s.group_type == MP_GROUP_BY_ALBUM || media->s.group_type == MP_GROUP_BY_ARTIST_ALBUM) {
 				strncat(cond, " AND MEDIA_ALBUM='", STRNCAT_LEN(cond));
@@ -2311,8 +2288,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
 				mp_media_info_list_count_w_filter(MP_TRACK_ALL, NULL, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, &list);
 				}
@@ -2324,8 +2300,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
 				mp_media_info_list_count_w_filter(MP_TRACK_ALL, NULL, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, &list);
 				}
@@ -2337,8 +2312,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
 				mp_media_info_list_count_w_filter(MP_TRACK_ALL, NULL, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, &list);
 				}
@@ -2349,8 +2323,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 				mp_media_info_list_count_w_filter(MP_TRACK_BY_FOLDER, folde_id, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_BY_FOLDER, folde_id, 0, filter, &list);
 				}
@@ -2361,8 +2334,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
 				mp_media_info_list_count_w_filter(MP_TRACK_ALL, NULL, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, &list);
 				}
@@ -2373,8 +2345,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 
 				mp_media_info_list_count_w_filter(MP_TRACK_ALL, NULL, 0, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_ALL, NULL, 0, filter, &list);
 				}
@@ -2386,8 +2357,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 
 				media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 				mp_media_info_list_count_w_filter(MP_TRACK_BY_PLAYLIST, NULL, playlist_id, filter, &count);
-				if (count>0)
-				{
+				if (count > 0) {
 					media_filter_set_offset(filter, 0, 1);
 					mp_media_info_list_create_w_filter(MP_TRACK_BY_PLAYLIST, NULL, playlist_id, filter, &list);
 				}
@@ -2398,8 +2368,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 			}
 			WARN_TRACE("count: %d", count);
 
-			if (list)
-			{
+			if (list) {
 				char *thumb_path = NULL;
 				minfo = mp_media_info_list_nth_item(list, 0);
 				if (!minfo) {
@@ -2414,7 +2383,7 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 		}
 
 	}
-	END:
+END:
 	IF_FREE(folde_id);
 	*path = media->i.ginfo->thumb_path;
 	PRINT_STR(*path);
@@ -2424,18 +2393,21 @@ int mp_media_info_group_get_thumbnail_path(mp_media_info_h media, char **path)
 int mp_media_info_group_get_track_count(mp_media_info_h media, int *count)
 {
 	MP_CHECK_VAL(media, -1);
-	if (count)
+	if (count) {
 		*count = media->i.ginfo->track_count;
+	}
 	return 0;
 }
 
 int mp_media_info_group_get_album_thumnail_paths(mp_media_info_h media, char ***thumbs, int *count)
 {
 	MP_CHECK_VAL(media, -1);
-	if (thumbs)
+	if (thumbs) {
 		*thumbs = media->i.ginfo->album_thumb_paths;
-	if (count)
+	}
+	if (count) {
 		*count = media->i.ginfo->album_count;
+	}
 	return 0;
 }
 
@@ -2599,10 +2571,11 @@ int mp_media_info_playlist_is_exist(const char *playlist_name, bool *exist)
 	media_filter_set_condition(filter, cond, MEDIA_CONTENT_COLLATE_NOCASE);
 	res = mp_media_info_group_list_count_w_filter(MP_GROUP_BY_PLAYLIST, filter, &count);
 	media_filter_destroy(filter);
-	if (count ==0)
+	if (count == 0) {
 		*exist = false;
-	else
+	} else {
 		*exist = true;
+	}
 	return res;
 }
 
@@ -2617,8 +2590,8 @@ int mp_media_info_playlist_unique_name(const char *orig_name, char *unique_name,
 
 	if (exist) {
 		while (i < 1000) {
-                        char id_str[4] = {0};
-                        snprintf(id_str, 4, "%.3d", i + 1);
+			char id_str[4] = {0};
+			snprintf(id_str, 4, "%.3d", i + 1);
 			snprintf(unique_name, max_unique_name_length, orig_name, id_str);
 			mp_media_info_playlist_is_exist(unique_name, &exist);
 			if (!exist) {
@@ -2627,7 +2600,7 @@ int mp_media_info_playlist_unique_name(const char *orig_name, char *unique_name,
 				i++;
 			}
 		}
-		MP_CHECK_VAL(i<1000, -1);
+		MP_CHECK_VAL(i < 1000, -1);
 	}
 	return 0;
 }
@@ -2728,8 +2701,9 @@ int mp_media_info_playlist_add_item(mp_playlist_h playlist_handle, const char *m
 	MP_CHECK_VAL(playlist_handle, -1);
 	MP_CHECK_VAL(media_id, -1);
 
-	if (thumbnail_path)
+	if (thumbnail_path) {
 		media_playlist_set_thumbnail_path((media_playlist_h)playlist_handle, thumbnail_path);
+	}
 
 	return media_playlist_add_media((media_playlist_h)playlist_handle, media_id);;
 }
@@ -2757,10 +2731,11 @@ int mp_media_info_playlist_insert_to_db(const char * name, int *playlist_id, mp_
 
 	res = media_playlist_get_playlist_id(playlist, playlist_id);
 
-	if (playlist_handle)
+	if (playlist_handle) {
 		*playlist_handle = (mp_playlist_h)playlist;
-	else
+	} else {
 		media_playlist_destroy(playlist);
+	}
 	return res;
 }
 
@@ -2777,8 +2752,7 @@ int mp_media_info_playlist_get_name_by_id(int playlist_id, char **playlist_name)
 
 	MP_CHECK_VAL(playlist_name, -1);
 
-	switch (playlist_id)
-	{
+	switch (playlist_id) {
 	case MP_SYS_PLST_QUICK_LIST:
 		*playlist_name = g_strdup(STR_MP_FAVOURITES);
 		return 0;
@@ -2797,8 +2771,9 @@ int mp_media_info_playlist_get_name_by_id(int playlist_id, char **playlist_name)
 
 	res = mp_media_filter_create(&filter);
 	if (res != 0) {
-		if (filter)
+		if (filter) {
 			media_filter_destroy(filter);
+		}
 		return res;
 	}
 
@@ -2810,16 +2785,16 @@ int mp_media_info_playlist_get_name_by_id(int playlist_id, char **playlist_name)
 		return -1;
 	}
 
-	do{
+	do {
 		media = mp_media_info_group_list_nth_item(list, index);
 		mp_media_info_group_get_playlist_id(media, &id);
-		if (playlist_id == id)
+		if (playlist_id == id) {
 			break;
+		}
 		index++;
-	}while (media);
+	} while (media);
 
-	if (!media)
-	{
+	if (!media) {
 		WARN_TRACE("No such playlist.. ID: %d", playlist_id);
 		return -1;
 	}
@@ -2857,22 +2832,19 @@ int mp_media_info_playlist_prepend_media(mp_playlist_h playlist_handle, const ch
 	int playlist_id = 0;
 
 	res = media_playlist_add_media(playlist, media_id);
-	if (res)
-	{
+	if (res) {
 		mp_error("media_playlist_add_media() .. [0x%x]", res);
 		return res;
 	}
 
 	res = media_playlist_update_to_db(playlist);
-	if (res)
-	{
+	if (res) {
 		mp_error("media_playlist_update_to_db() .. [0x%x]", res);
 		return res;
 	}
 
 	res = media_playlist_get_playlist_id(playlist, &playlist_id);
-	if (res)
-	{
+	if (res) {
 		mp_error("media_playlist_get_playlist_id() .. [0x%x]", res);
 		return res;
 	}
@@ -2880,8 +2852,7 @@ int mp_media_info_playlist_prepend_media(mp_playlist_h playlist_handle, const ch
 	GList *member_id_list = NULL;
 	filter_h filter = NULL;
 	res = media_filter_create(&filter);
-	if (res)
-	{
+	if (res) {
 		mp_error("media_filter_create() .. [0x%x]", res);
 		return res;
 	}
@@ -2889,8 +2860,7 @@ int mp_media_info_playlist_prepend_media(mp_playlist_h playlist_handle, const ch
 	res = media_playlist_foreach_media_from_db(playlist_id, filter, _mp_media_info_playlist_foreach_cb_by_media_id, &member_id_list);
 	media_filter_destroy(filter);
 	filter = NULL;
-	if (res)
-	{
+	if (res) {
 		mp_error("media_playlist_foreach_media_from_db() .. [0x%x]", res);
 		return res;
 	}
@@ -2900,12 +2870,12 @@ int mp_media_info_playlist_prepend_media(mp_playlist_h playlist_handle, const ch
 	while (list) {
 		int order = ++index;
 		int member_id = (int)list->data;
-		if (list == g_list_last(member_id_list))
+		if (list == g_list_last(member_id_list)) {
 			order = 0;
+		}
 
 		res = media_playlist_set_play_order(playlist, member_id, order);
-		if (res)
-		{
+		if (res) {
 			mp_error("media_playlist_set_play_order() .. [0x%x]", res);
 			return res;
 		}
@@ -2916,8 +2886,7 @@ int mp_media_info_playlist_prepend_media(mp_playlist_h playlist_handle, const ch
 	member_id_list = NULL;
 
 	res = media_playlist_update_to_db(playlist);
-	if (res)
-	{
+	if (res) {
 		mp_error("media_playlist_update_to_db() .. [0x%x]", res);
 		return res;
 	}
@@ -2951,8 +2920,9 @@ int mp_media_info_get_folder_path_by_folder_id(const char *folder_id, char **pat
 	}
 
 END:
-	if (folder)
+	if (folder) {
 		media_folder_destroy(folder);
+	}
 	return ret;
 }
 
@@ -2962,14 +2932,15 @@ int mp_media_info_get_auto_playlist_id_by_name(const char *name)
 
 	int playlist_id = 0;
 
-	if (!g_strcmp0(name, STR_MP_FAVOURITES))
+	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
 		playlist_id = MP_SYS_PLST_QUICK_LIST;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
 		playlist_id = MP_SYS_PLST_RECENTELY_PLAYED;
-	else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED))
+	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
 		playlist_id = MP_SYS_PLST_RECENTELY_ADDED;
-	else if (!g_strcmp0(name, STR_MP_MOST_PLAYED))
+	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
 		playlist_id = MP_SYS_PLST_MOST_PLAYED;
+	}
 
 	return playlist_id;
 }
@@ -2984,19 +2955,20 @@ _mp_media_content_db_update_timer_cb(void *data)
 	DEBUG_TRACE("Trigger Update list");
 
 #ifdef MP_FEATURE_SUGGEST_FOR_YOU
-        app_control_h service = NULL;
+	app_control_h service = NULL;
 
-        app_control_create(&service);
-        app_control_set_app_id(service, "org.tizen.music-player.service");
-        //char *type_str = g_strdup_printf("%d", update_type);
-        //app_control_add_extra_data(service, "update_type", type_str);
-        //app_control_add_extra_data(service, "url", path);
-        app_control_send_launch_request(service, NULL, NULL);
-        app_control_destroy(service);
-        //SAFE_FREE(type_str);
+	app_control_create(&service);
+	app_control_set_app_id(service, "org.tizen.music-player.service");
+	//char *type_str = g_strdup_printf("%d", update_type);
+	//app_control_add_extra_data(service, "update_type", type_str);
+	//app_control_add_extra_data(service, "url", path);
+	app_control_send_launch_request(service, NULL, NULL);
+	app_control_destroy(service);
+	//SAFE_FREE(type_str);
 #endif
-	if (g_db_update_cb)
+	if (g_db_update_cb) {
 		g_db_update_cb(g_db_update_data);
+	}
 
 	g_db_update_timer = NULL;
 	return false;
@@ -3004,26 +2976,26 @@ _mp_media_content_db_update_timer_cb(void *data)
 
 void
 mp_media_content_db_update_cb(
-	media_content_error_e error,	int pid, media_content_db_update_item_type_e update_item,
-	media_content_db_update_type_e update_type,	media_content_type_e media_type,
-	char *uuid, char *path, char *mime_type, void *user_data)
+    media_content_error_e error,	int pid, media_content_db_update_item_type_e update_item,
+    media_content_db_update_type_e update_type,	media_content_type_e media_type,
+    char *uuid, char *path, char *mime_type, void *user_data)
 {
 
 	//if music-player update db, do not update views
-	if (pid == getpid())
-		return;
-
-	DEBUG_TRACE("url: %s, media_type: %d, update_type: %d, item_type: %d", path, media_type, update_type, update_item);
-/*
-	if (update_type == MEDIA_CONTENT_UPDATE)
-	{
-		DEBUG_TRACE("don't update list when some item is just updated");
+	if (pid == getpid()) {
 		return;
 	}
-*/
 
-	if (( media_type != MEDIA_CONTENT_TYPE_MUSIC ) && ( media_type != MEDIA_CONTENT_TYPE_SOUND ) && ( update_item == MEDIA_ITEM_FILE ) )
-	{
+	DEBUG_TRACE("url: %s, media_type: %d, update_type: %d, item_type: %d", path, media_type, update_type, update_item);
+	/*
+		if (update_type == MEDIA_CONTENT_UPDATE)
+		{
+			DEBUG_TRACE("don't update list when some item is just updated");
+			return;
+		}
+	*/
+
+	if ((media_type != MEDIA_CONTENT_TYPE_MUSIC) && (media_type != MEDIA_CONTENT_TYPE_SOUND) && (update_item == MEDIA_ITEM_FILE)) {
 		DEBUG_TRACE("ignore not music file type");
 		return;
 	}
@@ -3035,8 +3007,9 @@ mp_media_content_db_update_cb(
 int mp_media_info_set_db_update_cb(db_update_cb cb, void *data)
 {
 	MP_CHECK_VAL(cb, -1);
-	if (g_db_update_cb)
+	if (g_db_update_cb) {
 		WARN_TRACE("registering multiple callback not supported!!");
+	}
 
 	g_db_update_cb = cb;
 	g_db_update_data = data;

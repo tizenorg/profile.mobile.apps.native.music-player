@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_UTIL_H_
@@ -21,21 +21,19 @@
 #include <app_preference.h>
 #include "music.h"
 
-typedef enum
-{
+typedef enum {
 	MP_FILE_DELETE_ERR_USING = -2,
 	MP_FILE_DELETE_ERR_REMOVE_FAIL = -1,
 	MP_FILE_DELETE_ERR_INVALID_FID = 0,
 	MP_FILE_DELETE_ERR_NONE,
-}mp_file_delete_err_t;
+} mp_file_delete_err_t;
 
-typedef enum
-{
+typedef enum {
 	MP_DIR_NONE = 0,
 	MP_DIR_PHONE,
 	MP_DIR_MMC,
 	MP_DIR_HTTP
-}mp_dir_e;
+} mp_dir_e;
 
 enum {
 	PREF_MUSIC_OFF = 0x00,
@@ -51,8 +49,8 @@ enum {
 
 int mp_setting_get_nowplaying_id(void);
 bool			mp_util_is_streaming(const char *uri);
-bool                    mp_util_text_multiline_check(Evas_Object *obj,const char*text, const char*textstyle, int text_width, int text_height);
-bool 			mp_check_file_exist (const char *path);
+bool                    mp_util_text_multiline_check(Evas_Object *obj, const char*text, const char*textstyle, int text_width, int text_height);
+bool 			mp_check_file_exist(const char *path);
 void 			mp_util_format_duration(char *time, int ms);
 void mp_util_song_format_duration(char *time, int ms);
 bool				mp_util_add_to_playlist_by_key(int playlist_id, char *key_id);
@@ -65,7 +63,7 @@ const char* 		mp_util_get_second_index(const char *p);
 Evas_Object * 			mp_util_create_selectioninfo_with_count(void *data, int count);
 void mp_util_post_status_message(struct appdata *ad, const char *text);
 void mp_util_post_add_to_playlist_popup_message(int count);
-char *			mp_util_get_new_playlist_name (void);
+char *			mp_util_get_new_playlist_name(void);
 mp_file_delete_err_t mp_util_delete_track(void *data, char *fid, char *file_path);
 
 int				mp_util_share_via_bt(const char *formed_path, int file_cnt);
@@ -81,20 +79,20 @@ bool mp_util_launch_browser(const char *url, struct appdata *ad);
 
 
 #define mp_object_free(obj)	\
-do {						\
-	if(obj != NULL) {		\
-		g_free(obj);		\
-		obj = NULL;			\
-	}						\
-}while(0)
+	do {						\
+		if(obj != NULL) {		\
+			g_free(obj);		\
+			obj = NULL;			\
+		}						\
+	}while(0)
 
 #define MMC_PATH			MP_MMC_ROOT_PATH
 #define PKGNAME_SYSTEM			"sys_string"
 
 gunichar mp_util_get_utf8_initial_value(const char *name);
-gchar * mp_get_new_playlist_name (void);
-gchar *mp_parse_get_title_from_path (const gchar *path);
-char *mp_util_get_title_from_path (const char *path);
+gchar * mp_get_new_playlist_name(void);
+gchar *mp_parse_get_title_from_path(const gchar *path);
+char *mp_util_get_title_from_path(const char *path);
 bool	mp_util_is_playlist_name_valid(char *name);
 void mp_util_set_library_controlbar_items(void *data);
 
@@ -129,14 +127,14 @@ EXPORT_API struct appdata *mp_util_get_appdata(void);
 char *mp_util_get_text(const char *str);
 void mp_util_more_btn_move_ctxpopup(Evas_Object *ctxpopup, Evas_Object *btn);
 Elm_Object_Item *mp_util_ctxpopup_item_append_ext(Evas_Object *obj, const char *label, const char *file,
-	                         const char *group, Evas_Smart_Cb func,
-	                         const void *data);
+        const char *group, Evas_Smart_Cb func,
+        const void *data);
 Elm_Object_Item *mp_util_ctxpopup_item_append(Evas_Object *obj, const char *label,
-	                         const char *group, Evas_Smart_Cb func,
-	                         const void *data);
+        const char *group, Evas_Smart_Cb func,
+        const void *data);
 Elm_Object_Item *mp_util_toolbar_item_append(Evas_Object *obj, const char *icon,
-				const char *label, Evas_Smart_Cb func,
-				const void *data);
+        const char *label, Evas_Smart_Cb func,
+        const void *data);
 
 Elm_Object_Item *mp_util_toolbar_nth_item(Evas_Object *obj, int n);
 

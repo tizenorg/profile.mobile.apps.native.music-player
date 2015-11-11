@@ -38,7 +38,7 @@ int LOCKSCREEN_MINI_CONTROLLER_WIDTH;
 //#define LOCKSCREEN_MSG_DOMAIN_CONTROL_ACCESS (int)ECORE_X_ATOM_E_ILLUME_ACCESS_CONTROL
 
 
-enum{
+enum {
 	LOCKSCREEN_FF_PRESSED = 1,
 	LOCKSCREEN_REW_PRESSED = 2,
 };
@@ -81,10 +81,11 @@ _mp_lockscreenmini_update_elapsed_time(struct appdata *ad, bool get_pos)
 
 	double played_ratio = 0.;
 	double music_pos = 0.;
-	if (get_pos)
+	if (get_pos) {
 		music_pos = mp_player_mgr_get_position() / 1000;
-	else
+	} else {
 		music_pos = ad->music_pos;
+	}
 
 	char play_time[16] = { 0, };
 	char total_time[16] = { 0, };
@@ -94,17 +95,17 @@ _mp_lockscreenmini_update_elapsed_time(struct appdata *ad, bool get_pos)
 	if (duration > 0.) {
 		if (duration > 3600.) {
 			snprintf(total_time, sizeof(total_time), "%" MUSIC_TIME_FORMAT,
-				MUSIC_TIME_ARGS(duration));
+			         MUSIC_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" MUSIC_TIME_FORMAT, MUSIC_TIME_ARGS(music_pos));
 		} else {
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-				PLAY_TIME_ARGS(duration));
+			         PLAY_TIME_ARGS(duration));
 			snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(music_pos));
 		}
 	} else {
 		if (ad->current_track_info) {
 			snprintf(total_time, sizeof(total_time), "%" PLAY_TIME_FORMAT,
-					PLAY_TIME_ARGS(ad->current_track_info->duration/1000.));
+			         PLAY_TIME_ARGS(ad->current_track_info->duration / 1000.));
 		}
 		snprintf(play_time, sizeof(play_time), "%" PLAY_TIME_FORMAT, PLAY_TIME_ARGS(music_pos));
 	}
@@ -123,14 +124,15 @@ _lockscreenmini_update_progresstime_cb(void *data)
 {
 	TIMER_TRACE();
 	struct appdata *ad = data;
-	mp_retvm_if (ad == NULL, ECORE_CALLBACK_CANCEL, "appdata is NULL");
+	mp_retvm_if(ad == NULL, ECORE_CALLBACK_CANCEL, "appdata is NULL");
 
 	if (ad->is_lcd_off) {
 		mp_ecore_timer_del(ad->lockmini_progress_timer);
 		return ECORE_CALLBACK_CANCEL;
 	}
-	if (ad->progress_dragging)
+	if (ad->progress_dragging) {
 		return ECORE_CALLBACK_RENEW;
+	}
 
 	if (ad->player_state == PLAY_STATE_PLAYING) {
 		_mp_lockscreenmini_update_elapsed_time(ad, true);
@@ -143,7 +145,7 @@ static void
 _lockscreenmini_progress_timer_add(void *data)
 {
 	struct appdata *ad = data;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	DEBUG_TRACE();
 
 	mp_ecore_timer_del(ad->lockmini_progress_timer);
@@ -271,8 +273,9 @@ _load_lockscreenmini(struct appdata *ad)
 #endif
 
 
-	if (!win)
+	if (!win) {
 		return;
+	}
 	elm_win_alpha_set(win, EINA_TRUE);
 
 	ad->win_lockmini = win;
@@ -327,10 +330,11 @@ _mp_lockscreenmini_progressarea_down_cb(void *data, Evas * e, Evas_Object * obj,
 
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 	DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
@@ -338,8 +342,9 @@ _mp_lockscreenmini_progressarea_down_cb(void *data, Evas * e, Evas_Object * obj,
 	int duration = mp_player_mgr_get_duration();
 	if (duration <= 0) {
 		mp_track_info_t *track_info = ad->current_track_info;
-		if (track_info)
+		if (track_info) {
 			duration = track_info->duration;
+		}
 	}
 
 	ad->music_length = duration / 1000.;
@@ -369,10 +374,11 @@ _mp_lockscreenmini_progressarea_move_cb(void *data, Evas * e, Evas_Object * obj,
 
 	evas_object_geometry_get(progressbar, &x, NULL, &w, NULL);
 	current = ev->canvas.x - x;
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 
@@ -395,14 +401,16 @@ _mp_lockscreenmini_progressarea_up_cb(void *data, Evas *e, Evas_Object *obj, voi
 
 	elm_object_signal_emit(ad->lockmini_progress_bar, "signal.lockscreenmini.progress.unclick", "*");
 
-	if (ad->progress_dragging == false)
+	if (ad->progress_dragging == false) {
 		return;
+	}
 
 	int pressed_x = (int)evas_object_data_get(obj, "pressed_x");
 	unsigned int timestamp = (unsigned int)evas_object_data_get(obj, "timestamp");
-	 Evas_Event_Mouse_Up *ev = event_info;
-	 if (abs(ev->canvas.x - pressed_x) > 10 || (ev->timestamp - timestamp) > 500)
-		 return;
+	Evas_Event_Mouse_Up *ev = event_info;
+	if (abs(ev->canvas.x - pressed_x) > 10 || (ev->timestamp - timestamp) > 500) {
+		return;
+	}
 
 	Evas_Object *progressbar = obj;
 	int w = 0, current = 0, x = 0;
@@ -412,10 +420,11 @@ _mp_lockscreenmini_progressarea_up_cb(void *data, Evas *e, Evas_Object *obj, voi
 	current = ev->canvas.x - x;
 
 	DEBUG_TRACE("canvas.x:%d  x:%d  w:%d", ev->canvas.x, x, w);
-	if (current < 0)
+	if (current < 0) {
 		current = 0;
-	else if (current > w)
+	} else if (current > w) {
 		current = w;
+	}
 
 	ratio = (double)current / w;
 
@@ -457,13 +466,13 @@ static void _mp_lockscreenmini_create_progress_layout(struct appdata *ad)
 	_mp_lockscreenmini_progress_val_set(ad, 0.0);
 
 	evas_object_event_callback_add(ad->lockmini_progress_bar, EVAS_CALLBACK_MOUSE_DOWN,
-	_mp_lockscreenmini_progressarea_down_cb, ad);
+	                               _mp_lockscreenmini_progressarea_down_cb, ad);
 	evas_object_event_callback_add(ad->lockmini_progress_bar, EVAS_CALLBACK_MOUSE_UP,
-	_mp_lockscreenmini_progressarea_up_cb, ad);
-	#if 0
+	                               _mp_lockscreenmini_progressarea_up_cb, ad);
+#if 0
 	evas_object_event_callback_add(ad->lockmini_progress_bar, EVAS_CALLBACK_MOUSE_MOVE,
-	_mp_lockscreenmini_progressarea_move_cb, ad);
-	#endif
+	                               _mp_lockscreenmini_progressarea_move_cb, ad);
+#endif
 }
 #endif
 void
@@ -496,7 +505,7 @@ int
 mp_lockscreenmini_create(struct appdata *ad)
 {
 	DEBUG_TRACE_FUNC();
-	mp_retvm_if (ad == NULL, -1, "appdata is NULL");
+	mp_retvm_if(ad == NULL, -1, "appdata is NULL");
 
 	if (!(ad->lockmini_layout && ad->win_lockmini)) {
 
@@ -519,7 +528,7 @@ int
 mp_lockscreenmini_show(struct appdata *ad)
 {
 	DEBUG_TRACE("minicontroller view show!!");
-	mp_retvm_if (ad == NULL, -1, "appdata is NULL");
+	mp_retvm_if(ad == NULL, -1, "appdata is NULL");
 	MP_CHECK_VAL(ad->win_lockmini, -1);
 	MP_CHECK_VAL(!ad->is_lcd_off, -1);
 	/* Not show minicontrol when current track not exsit */
@@ -529,7 +538,9 @@ mp_lockscreenmini_show(struct appdata *ad)
 	mp_lockscreenmini_update(ad);
 
 	FILE *fp = fopen(MP_LSCR_CONTROL, "w");
-	if (fp) fclose(fp);
+	if (fp) {
+		fclose(fp);
+	}
 
 	evas_object_show(ad->win_lockmini);
 	return 0;
@@ -539,7 +550,7 @@ mp_lockscreenmini_show(struct appdata *ad)
 static void _mp_lockscreenmini_update_progressbar_state(struct appdata *ad)
 {
 	startfunc;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->lockmini_progress_bar);
 }
 #endif
@@ -547,7 +558,7 @@ static void _mp_lockscreenmini_update_progressbar_state(struct appdata *ad)
 static void _mp_lockscreenmini_update_btn(struct appdata *ad)
 {
 	startfunc;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->win_lockmini);
 	MP_CHECK(!ad->is_lcd_off);
 
@@ -580,17 +591,18 @@ static void _mp_lockscreenmini_update_playpause_btn(struct appdata *ad)
 {
 	mp_ecore_timer_del(ad->lockmini_button_timer);
 
-	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED)
+	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED) {
 		_mp_lockscreenmini_update_btn(ad);
-	else
+	} else {
 		ad->lockmini_button_timer = ecore_timer_add(1.0, _mp_lockscreenmini_btn_update_timer, ad);
+	}
 }
 
 void
 mp_lockscreenmini_update_control(struct appdata *ad)
 {
 	startfunc;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->win_lockmini);
 	MP_CHECK(!ad->is_lcd_off);
 
@@ -602,7 +614,7 @@ void
 mp_lockscreenmini_update_shuffle_and_repeat_btn(struct appdata *ad)
 {
 	startfunc;
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->win_lockmini);
 	MP_CHECK(!ad->is_lcd_off);
 
@@ -710,15 +722,16 @@ _mp_lockscreenmini_update_layout(struct appdata *ad, bool landscape)
 	mp_evas_object_del(ad->lockmini_layout);
 	ad->lockmini_layout = _load_edj(ad->win_lockmini, LOCKSCREENMINI_EDJ_NAME, "music-lockscreenmini");
 
-	if (!ad->lockmini_layout)
+	if (!ad->lockmini_layout) {
 		return ;
+	}
 
 #ifdef LOCKSCREEN_ENABLE_PROGRESS
 	_mp_lockscreenmini_create_progress_layout(ad);
 #endif
 	elm_win_resize_object_add(ad->win_lockmini, ad->lockmini_layout);
 
-/*add focused UI related*/
+	/*add focused UI related*/
 #ifdef LOCKSCREEN_ENABLE_SHUFFLE_REPEAT
 	/*-------> shuffle button ------->*/
 	Evas_Object *shuffle_focus_btn = elm_button_add(ad->lockmini_layout);
@@ -816,25 +829,25 @@ mp_lockscreenmini_update(struct appdata *ad)
 {
 
 	DEBUG_TRACE();
-	mp_retm_if (ad == NULL, "appdata is NULL");
+	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->win_lockmini);
 	MP_CHECK(!ad->is_lcd_off);
 
 	mp_lockscreenmini_update_control(ad);
 	if (ad->player_state == PLAY_STATE_PLAYING) {
-	#ifdef LOCKSCREEN_ENABLE_PROGRESS
+#ifdef LOCKSCREEN_ENABLE_PROGRESS
 		_lockscreenmini_progress_timer_add(ad);
-	#endif
+#endif
 	}
 
 	mp_track_info_t *current_item = ad->current_track_info;
 	if (current_item) {
-	#ifdef LOCKSCREEN_ENABLE_PROGRESS
+#ifdef LOCKSCREEN_ENABLE_PROGRESS
 		_mp_lockscreenmini_update_elapsed_time(ad, true);
-	#endif
-	#ifdef LOCKSCREEN_ENABLE_SHUFFLE_REPEAT
+#endif
+#ifdef LOCKSCREEN_ENABLE_SHUFFLE_REPEAT
 		mp_lockscreenmini_update_shuffle_and_repeat_btn(ad);
-	#endif
+#endif
 
 		_mp_lockscreenmini_title_set(ad);
 
@@ -846,7 +859,7 @@ int
 mp_lockscreenmini_hide(struct appdata *ad)
 {
 	DEBUG_TRACE("lockscreenmini view hide!!\n");
-	mp_retvm_if (ad == NULL, -1, "appdata is NULL");
+	mp_retvm_if(ad == NULL, -1, "appdata is NULL");
 	MP_CHECK_VAL(ad->win_lockmini, -1);
 
 	evas_object_hide(ad->win_lockmini);
@@ -863,7 +876,7 @@ int
 mp_lockscreenmini_destroy(struct appdata *ad)
 {
 	DEBUG_TRACE("lockscreenmini view destroy!!");
-	mp_retvm_if (ad == NULL, -1, "appdata is NULL");
+	mp_retvm_if(ad == NULL, -1, "appdata is NULL");
 	MP_CHECK_VAL(ad->win_lockmini, -1);
 
 	if (ad->lockmini_layout != NULL) {
@@ -897,10 +910,10 @@ mp_lockscreenmini_visible_set(struct appdata *ad, bool visible)
 	} else {
 		display_state_e lock_state;
 		int ret = device_display_get_state(&lock_state);
-		if(ret == DEVICE_ERROR_NONE) {
-			ERROR_TRACE("[SUCCESSFULL] Return value is %d",ret);
+		if (ret == DEVICE_ERROR_NONE) {
+			ERROR_TRACE("[SUCCESSFULL] Return value is %d", ret);
 		} else {
-			ERROR_TRACE("[ERROR] Return value is %d",ret);
+			ERROR_TRACE("[ERROR] Return value is %d", ret);
 		}
 		if (lock_state == DISPLAY_STATE_SCREEN_OFF || lock_state == DISPLAY_STATE_SCREEN_DIM) {
 			ERROR_TRACE("timer locks deleted");
@@ -934,9 +947,9 @@ void mp_lockscreenmini_on_lcd_event(struct appdata *ad, bool lcd_on)
 
 void mp_lockscreenmini_update_progressbar(struct appdata *ad)
 {
-	#ifdef LOCKSCREEN_ENABLE_PROGRESS
+#ifdef LOCKSCREEN_ENABLE_PROGRESS
 	_mp_lockscreenmini_update_elapsed_time(ad, true);
-	#endif
+#endif
 }
 
 #endif

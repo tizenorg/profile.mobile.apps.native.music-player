@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -49,8 +49,7 @@
 bool track_deleted = false;
 #define SINGLE_BYTE_MAX 0x7F
 
-struct index_s
-{
+struct index_s {
 	const char *index;
 	unsigned short start;
 	unsigned short end;
@@ -140,8 +139,7 @@ static int externalStorageId = -1;
 
 extern struct appdata *g_ad;
 
-EXPORT_API struct appdata *mp_util_get_appdata(void)
-{
+EXPORT_API struct appdata *mp_util_get_appdata(void) {
 	return g_ad;
 }
 
@@ -151,13 +149,10 @@ _mp_util_get_len(const char *p)
 	int i, r = -1;
 	unsigned char c;
 
-	if (p)
-	{
+	if (p) {
 		c = *p;
-		for (i = 0; i < sizeof(mask_len) / sizeof(char); i = i + 2)
-		{
-			if ((c & mask_len[i]) == mask_len[i + 1])
-			{
+		for (i = 0; i < sizeof(mask_len) / sizeof(char); i = i + 2) {
+			if ((c & mask_len[i]) == mask_len[i + 1]) {
 				r = (i >> 1) + 1;
 				break;
 			}
@@ -174,36 +169,29 @@ _mp_util_utf8_to_ucs2(const char *p)
 	int len;
 
 	len = _mp_util_get_len(p);
-	if (len == -1 || len > 3)
-	{
+	if (len == -1 || len > 3) {
 		return r;
 	}
 
-	switch (len)
-	{
-	case 1:
-		{
-			r = *p & 0x7F;
-			break;
-		}
-	case 2:
-		{
-			r = *p & 0x1F;
-			break;
-		}
-	case 3:
-		{
-			r = *p & 0x0F;
-			break;
-		}
-	default:
-		{
-			break;
-		}
+	switch (len) {
+	case 1: {
+		r = *p & 0x7F;
+		break;
+	}
+	case 2: {
+		r = *p & 0x1F;
+		break;
+	}
+	case 3: {
+		r = *p & 0x0F;
+		break;
+	}
+	default: {
+		break;
+	}
 	}
 
-	while (len > 1)
-	{
+	while (len > 1) {
 		r = r << 6;
 		p++;
 		r |= *p & 0x3F;
@@ -216,22 +204,15 @@ _mp_util_utf8_to_ucs2(const char *p)
 static const char *
 _mp_util_get_single(const char *p)
 {
-	int c = (int)*p;
+	int c = (int) * p;
 
-	if (islower(c) != 0)
-	{
+	if (islower(c) != 0) {
 		return single_lower_index[c - 'a'];
-	}
-	else if (isupper(c) != 0)
-	{
+	} else if (isupper(c) != 0) {
 		return single_upper_index[c - 'A'];
-	}
-	else if (48 <= c && 57 >= c)
-	{
+	} else if (48 <= c && 57 >= c) {
 		return single_numeric_index[c - '0'];
-	}
-	else
-	{
+	} else {
 		return single_numeric_index[10];
 	}
 
@@ -243,10 +224,8 @@ _mp_util_get_multi(unsigned short u)
 {
 	int i;
 
-	for (i = 0; i < sizeof(multi_index) / sizeof(struct index_s); i++)
-	{
-		if (u >= multi_index[i].start && u < multi_index[i].end)
-		{
+	for (i = 0; i < sizeof(multi_index) / sizeof(struct index_s); i++) {
+		if (u >= multi_index[i].start && u < multi_index[i].end) {
 			return multi_index[i].index;
 		}
 	}
@@ -261,13 +240,11 @@ _mp_util_get_next_char(const char *p)
 	MP_CHECK_NULL(p);
 
 	n = _mp_util_get_len(p);
-	if (n == -1)
-	{
+	if (n == -1) {
 		return NULL;
 	}
 
-	if (strlen(p) < n)
-	{
+	if (strlen(p) < n) {
 		return NULL;
 	}
 
@@ -305,23 +282,21 @@ mp_util_song_format_duration(char *time, int ms)
 	int min = sec / 60;
 
 	if (min >= 10) {
-			int hour = min / 60;
-			snprintf(time, TIME_FORMAT_LEN, "%02u:%02u:%02u", hour, min % 60, sec % 60);
-		} else {
-			snprintf(time, TIME_FORMAT_LEN, "%02u:%02u", min, sec % 60);
-		}
+		int hour = min / 60;
+		snprintf(time, TIME_FORMAT_LEN, "%02u:%02u:%02u", hour, min % 60, sec % 60);
+	} else {
+		snprintf(time, TIME_FORMAT_LEN, "%02u:%02u", min, sec % 60);
+	}
 }
 
 const char *
 mp_util_get_index(const char *p)
 {
-	if (p == NULL)
-	{
+	if (p == NULL) {
 		return NULL;
 	}
 
-	if ((unsigned char)*p < SINGLE_BYTE_MAX)
-	{
+	if ((unsigned char)*p < SINGLE_BYTE_MAX) {
 		return _mp_util_get_single(p);
 	}
 
@@ -333,19 +308,16 @@ mp_util_get_second_index(const char *p)
 {
 	unsigned short u2;
 
-	if (p == NULL)
-	{
+	if (p == NULL) {
 		return NULL;
 	}
 
-	if ((unsigned char)*p < SINGLE_BYTE_MAX)
-	{
+	if ((unsigned char)*p < SINGLE_BYTE_MAX) {
 		return mp_util_get_index(_mp_util_get_next_char(p));
 	}
 
 	u2 = _mp_util_utf8_to_ucs2(p);
-	if (u2 >= 0xAC00 && u2 < 0xD7A4)
-	{
+	if (u2 >= 0xAC00 && u2 < 0xD7A4) {
 		return _mp_util_get_second_kor(u2);
 	}
 
@@ -358,8 +330,7 @@ mp_util_add_to_playlist_by_key(int playlist_id, char *key_id)
 	int err;
 	{
 		err = mp_media_info_playlist_add_media(playlist_id, key_id);
-		if (err != 0)
-		{
+		if (err != 0) {
 			ERROR_TRACE("Error in mp_media_info_playlist_add_media (%d)\n", err);
 			return FALSE;
 		}
@@ -373,14 +344,14 @@ mp_util_create_image(Evas_Object * obj, const char *path, const char *group, int
 	MP_CHECK_NULL(obj);
 
 	Evas_Object *image = elm_image_add(obj);
-	if (w == h)
-	{
+	if (w == h) {
 		elm_image_prescale_set(image, w);
 		elm_image_fill_outside_set(image, true);
 	}
 
-	if (!path)
+	if (!path) {
 		path = DEFAULT_THUMBNAIL;
+	}
 	elm_image_file_set(image, path, group);
 
 	elm_image_resizable_set(image, EINA_TRUE, EINA_TRUE);
@@ -396,15 +367,15 @@ mp_util_create_thumb_icon(Evas_Object * obj, const char *path, int w, int h)
 {
 	//startfunc;
 	Evas_Object *thumbnail = elm_image_add(obj);
-	if (w == h)
-	{
+	if (w == h) {
 		elm_image_prescale_set(thumbnail, w);
 		elm_image_fill_outside_set(thumbnail, EINA_FALSE);
 		elm_image_aspect_fixed_set(thumbnail, EINA_TRUE);
 	}
 
-	if ((!path) || !g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR) || !strcmp(BROKEN_ALBUMART_IMAGE_PATH, path))
+	if ((!path) || !g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR) || !strcmp(BROKEN_ALBUMART_IMAGE_PATH, path)) {
 		path = DEFAULT_THUMBNAIL;
+	}
 	elm_image_file_set(thumbnail, path, NULL);
 
 	evas_object_size_hint_align_set(thumbnail, EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -428,16 +399,13 @@ mp_util_create_selectioninfo_with_count(void *data, int count)
 	startfunc;
 	MpView_t *view = data;
 	MP_CHECK_NULL(view);
-    if (count > 0)
-    {
-        char *text =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS),count);
-        mp_view_set_title(view, text);
-        IF_FREE(text);
-    }
-    else
-    {
-        mp_view_set_title(view, STR_MP_TILTE_SELECT_ITEM);
-    }
+	if (count > 0) {
+		char *text =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS), count);
+		mp_view_set_title(view, text);
+		IF_FREE(text);
+	} else {
+		mp_view_set_title(view, STR_MP_TILTE_SELECT_ITEM);
+	}
 
 	return NULL;
 
@@ -447,37 +415,37 @@ void
 mp_util_post_status_message(struct appdata *ad, const char *text)
 {
 	int ret = notification_status_message_post(text);
-	if (ret != 0)
+	if (ret != 0) {
 		ERROR_TRACE("notification_status_message_post()... [0x%x]", ret);
-	else
+	} else {
 		mp_debug("message: [%s]", text);
+	}
 }
 
 void
 mp_util_post_add_to_playlist_popup_message(int count)
 {
-        MP_CHECK(count>0);
+	MP_CHECK(count > 0);
 	int ret = 0;
-        char *message = NULL;
-        if (count > 1)
-        {
-                message = g_strdup_printf(GET_STR(STR_MP_POP_ADDED_TO_PLAYLIST), count);
-                ret = notification_status_message_post(message);
-                IF_FREE(message);
-        }
-        else if (count == 1)
-        {
-                ret = notification_status_message_post(GET_STR(STR_MP_POP_ADDED_1_TO_PLAYLIST));
-        }
-	if (ret != 0)
+	char *message = NULL;
+	if (count > 1) {
+		message = g_strdup_printf(GET_STR(STR_MP_POP_ADDED_TO_PLAYLIST), count);
+		ret = notification_status_message_post(message);
+		IF_FREE(message);
+	} else if (count == 1) {
+		ret = notification_status_message_post(GET_STR(STR_MP_POP_ADDED_1_TO_PLAYLIST));
+	}
+	if (ret != 0) {
 		ERROR_TRACE("notification_status_message_post()... [0x%x]", ret);
+	}
 }
 
 int
 mp_util_share_via_email(const char *formed_path, void *data)
 {
-	if (mp_ug_email_attatch_file(formed_path, data))
+	if (mp_ug_email_attatch_file(formed_path, data)) {
 		return -1;
+	}
 
 	return 0;
 }
@@ -514,12 +482,11 @@ mp_util_delete_track(void *data, char *fid, char *file_path)
 
 	ad->is_sdcard_removed = true;
 
- 	MP_CHECK_VAL(fid, MP_FILE_DELETE_ERR_INVALID_FID);
+	MP_CHECK_VAL(fid, MP_FILE_DELETE_ERR_INVALID_FID);
 
 	char *path = NULL;
 	mp_media_info_h item = NULL;
-	if (!file_path)
-	{
+	if (!file_path) {
 		mp_media_info_create(&item, fid);
 		if (item) {
 			mp_media_info_get_file_path(item, &path);
@@ -528,23 +495,23 @@ mp_util_delete_track(void *data, char *fid, char *file_path)
 			}
 		}
 		MP_CHECK_VAL(path, MP_FILE_DELETE_ERR_INVALID_FID);
-	}
-	else
+	} else {
 		path = file_path;
+	}
 
 	DEBUG_TRACE("path: %s", path);
 	ret = remove(path);
 	mp_media_info_delete_from_db(path);
 	track_deleted = true;
 
-	if (item)
+	if (item) {
 		mp_media_info_destroy(item);
+	}
 
-	if (ret < 0)
-	{
+	if (ret < 0) {
 		ERROR_TRACE("fail to remove file, ret: %d", ret);
 		//if (show_popup)
-			//mp_widget_text_popup(ad, GET_SYS_STR("IDS_COM_POP_FAILED"));
+		//mp_widget_text_popup(ad, GET_SYS_STR("IDS_COM_POP_FAILED"));
 		return MP_FILE_DELETE_ERR_REMOVE_FAIL;
 	}
 
@@ -555,10 +522,11 @@ int
 mp_util_file_is_in_phone_memory(const char *path)
 {
 	MP_CHECK_VAL(path, 0);
-	if (!strncmp(MP_PHONE_ROOT_PATH, path, strlen(MP_PHONE_ROOT_PATH)))
+	if (!strncmp(MP_PHONE_ROOT_PATH, path, strlen(MP_PHONE_ROOT_PATH))) {
 		return 1;
-	else
+	} else {
 		return 0;
+	}
 }
 
 // return value must be freed.
@@ -570,42 +538,36 @@ mp_util_isf_get_edited_str(Evas_Object * isf_entry, bool permit_first_blank)
 	char *strip_msg = NULL;
 	int strip_len = 0;
 
-	if (!isf_entry)
+	if (!isf_entry) {
 		return strdup("");
+	}
 	buf = elm_entry_entry_get(isf_entry);
-	if (!buf)
+	if (!buf) {
 		return strdup("");
+	}
 
 	strip_msg = elm_entry_markup_to_utf8(buf);
 
-	if (strip_msg != NULL)
-	{
+	if (strip_msg != NULL) {
 		strip_len = strlen(strip_msg);
 
-		if (strip_len > 0)
-		{
-			if (strip_msg[0] == ' ' && !permit_first_blank)	//start with space
-			{
+		if (strip_len > 0) {
+			if (strip_msg[0] == ' ' && !permit_first_blank) {	//start with space
 				DEBUG_TRACE("Filename should not be started with blank");
 				free(strip_msg);
 				return strdup("");
 			}
 
-			if (strip_msg[strip_len - 1] == '\n' || strip_msg[strip_len - 1] == '\r')
-			{
+			if (strip_msg[strip_len - 1] == '\n' || strip_msg[strip_len - 1] == '\r') {
 				strip_msg[strip_len - 1] = '\0';
 			}
 			DEBUG_TRACE("=====  The new edited str = %s", strip_msg);
 			return strip_msg;
-		}
-		else
-		{
+		} else {
 			DEBUG_TRACE(" strip_msg length is [%d], strip_msg [%s]", strip_len, strip_msg);
 			return strip_msg;
 		}
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("strip_msg is NULL");
 		return strdup("");
 	}
@@ -619,13 +581,10 @@ mp_util_set_screen_mode(void *data, int mode)
 	ad->current_appcore_rm = mode;	//set current appcore rm
 	elm_win_screen_size_get(ad->win_main, NULL, NULL, &ad->screen_width, &ad->screen_height);
 
-	if (mode == APP_DEVICE_ORIENTATION_270 || mode == APP_DEVICE_ORIENTATION_90)
-	{
+	if (mode == APP_DEVICE_ORIENTATION_270 || mode == APP_DEVICE_ORIENTATION_90) {
 		ad->screen_mode = MP_SCREEN_MODE_LANDSCAPE;
 		mp_debug("Set MP_SCREEN_MODE_LANDSCAPE");
-	}
-	else if (mode == APP_DEVICE_ORIENTATION_0 || mode == APP_DEVICE_ORIENTATION_180)
-	{
+	} else if (mode == APP_DEVICE_ORIENTATION_0 || mode == APP_DEVICE_ORIENTATION_180) {
 		ad->screen_mode = MP_SCREEN_MODE_PORTRAIT;
 		mp_debug("Set MP_SCREEN_MODE_PORTRAIT");
 	}
@@ -635,18 +594,15 @@ mp_util_set_screen_mode(void *data, int mode)
 bool
 mp_util_is_streaming(const char *uri)
 {
-	if (uri == NULL || strlen(uri) == 0)
-	{
+	if (uri == NULL || strlen(uri) == 0) {
 		return FALSE;
 	}
 
 	if (uri == strstr(uri, "http://") || uri == strstr(uri, "https://")
-			|| uri == strstr(uri, "rtp://") || uri == strstr(uri, "rtsp://")) {
+	        || uri == strstr(uri, "rtp://") || uri == strstr(uri, "rtsp://")) {
 		DEBUG_TRACE("Streaming URI... OK");
 		return TRUE;
-	}
-	else
-	{
+	} else {
 		//DEBUG_TRACE("uri check failed : [%s]", uri);
 		return FALSE;
 	}
@@ -655,42 +611,35 @@ mp_util_is_streaming(const char *uri)
 bool
 mp_check_file_exist(const char *path)
 {
-	if (path == NULL || strlen(path) == 0)
-	{
+	if (path == NULL || strlen(path) == 0) {
 		return FALSE;
 	}
 
 	bool mmc_removed = mp_util_is_mmc_removed();
 
-	if (mmc_removed && strstr(path, MP_MMC_ROOT_PATH) == path)
-	{
+	if (mmc_removed && strstr(path, MP_MMC_ROOT_PATH) == path) {
 		return false;
 	}
 
-	if (strstr(path,MP_FILE_PREFIX))
-        {
-                if (!g_file_test(path+strlen(MP_FILE_PREFIX), G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR))
-                {
-                	ERROR_TRACE("file not exist: %s", path);
-                        return FALSE;
-                }
-                return TRUE;
-        }
-        else
-        {
-                if (!g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR))
-                {
-                	ERROR_TRACE("file not exist: %s", path);
-                        return FALSE;
-                }
-                return TRUE;
-        }
+	if (strstr(path, MP_FILE_PREFIX)) {
+		if (!g_file_test(path + strlen(MP_FILE_PREFIX), G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR)) {
+			ERROR_TRACE("file not exist: %s", path);
+			return FALSE;
+		}
+		return TRUE;
+	} else {
+		if (!g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR)) {
+			ERROR_TRACE("file not exist: %s", path);
+			return FALSE;
+		}
+		return TRUE;
+	}
 	return TRUE;
 }
 
-bool mp_util_text_multiline_check(Evas_Object *obj,const char*text, const char*textstyle, int text_width, int text_height)
+bool mp_util_text_multiline_check(Evas_Object *obj, const char*text, const char*textstyle, int text_width, int text_height)
 {
-        MP_CHECK_FALSE(obj);
+	MP_CHECK_FALSE(obj);
 	Evas_Object *tb;
 	Evas_Coord ww = 0;
 	Evas_Coord hh = 0;
@@ -699,18 +648,21 @@ bool mp_util_text_multiline_check(Evas_Object *obj,const char*text, const char*t
 	char *strbuf = NULL;
 
 	tb = evas_object_textblock_add(evas_object_evas_get(obj));
-	if (!tb)
+	if (!tb) {
 		goto END;
+	}
 	evas_object_textblock_legacy_newline_set(tb, EINA_FALSE);
 	st = evas_textblock_style_new();
-	if (!st)
+	if (!st) {
 		goto END;
+	}
 	evas_textblock_style_set(st, textstyle);
 	evas_object_textblock_style_set(tb, st);
 	cur = evas_object_textblock_cursor_new(tb);
 	strbuf = elm_entry_markup_to_utf8(text);
-	if (!strbuf)
+	if (!strbuf) {
 		goto END;
+	}
 	evas_object_textblock_text_markup_set(tb, strbuf);
 	evas_textblock_cursor_format_prepend(cur, "+ wrap=mixed");
 	evas_object_resize(tb, text_width, 1000);
@@ -720,22 +672,17 @@ END:
 	IF_FREE(strbuf);
 	mp_evas_object_del(tb);
 
-	if (st)
-	{
+	if (st) {
 		evas_textblock_style_free(st);
 		st = NULL;
 	}
-	if (cur)
-	{
+	if (cur) {
 		evas_textblock_cursor_free(cur);
 		cur = NULL;
 	}
-	if (hh > text_height)
-	{
+	if (hh > text_height) {
 		return TRUE;
-	}
-	else
-	{
+	} else {
 		return FALSE;
 	}
 }
@@ -746,24 +693,28 @@ bool mp_util_file_playable(const char *uri)
 	metadata_extractor_h metadata = NULL;
 	char *value = NULL;
 	bool res = false;
-        int ret = METADATA_EXTRACTOR_ERROR_NONE;
+	int ret = METADATA_EXTRACTOR_ERROR_NONE;
 
-	if (!mp_check_file_exist(uri))
+	if (!mp_check_file_exist(uri)) {
 		return false;
+	}
 
 	ret = metadata_extractor_create(&metadata);
 	MP_CHECK_FALSE(metadata);
-        if (ret != METADATA_EXTRACTOR_ERROR_NONE)
-                ERROR_TRACE("create error");
+	if (ret != METADATA_EXTRACTOR_ERROR_NONE) {
+		ERROR_TRACE("create error");
+	}
 
 	ret = metadata_extractor_set_path(metadata, uri);
-        if (ret != METADATA_EXTRACTOR_ERROR_NONE)
-                ERROR_TRACE("set path error");
+	if (ret != METADATA_EXTRACTOR_ERROR_NONE) {
+		ERROR_TRACE("set path error");
+	}
 
 	metadata_extractor_get_metadata(metadata, METADATA_HAS_AUDIO, &value);
 
-	if (value && g_strcmp0(value, "0"))
+	if (value && g_strcmp0(value, "0")) {
 		res = true;
+	}
 
 	IF_FREE(value);
 	metadata_extractor_destroy(metadata);
@@ -776,8 +727,9 @@ char * mp_util_file_mime_type_get(const char *uri)
 	int retcode = -1;
 	char *mime = NULL;
 
-	if (!mp_check_file_exist(uri))
+	if (!mp_check_file_exist(uri)) {
 		return NULL;
+	}
 
 	char *extension = strrchr(uri, '.');
 	char *file_ext = g_strdup(extension + 1);
@@ -821,46 +773,41 @@ mp_util_get_utf8_initial_value(const char *name)
 	char *next = NULL;
 	MP_CHECK_VAL(name, 0);
 
-	if (g_utf8_strlen(name, -1) <= 0)
-	{
+	if (g_utf8_strlen(name, -1) <= 0) {
 		return 0;
 	}
 
 	first = g_utf8_get_char_validated(name, g_utf8_strlen(name, -1));
 	if (first == (gunichar) - 1 || first == (gunichar) - 2) {
-		DEBUG_TRACE ("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
+		DEBUG_TRACE("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
 		return 0;
 	}
 
 	next = (char *)name;
 
-	while (!g_unichar_isgraph(first))
-	{
+	while (!g_unichar_isgraph(first)) {
 		next = g_utf8_next_char(next);
 		first = g_utf8_get_char_validated(next, g_utf8_strlen(name, -1));
 		if (first == (gunichar) - 1 || first == (gunichar) - 2) {
-			DEBUG_TRACE ("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
+			DEBUG_TRACE("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
 			return 0;
 		}
 	}
 
-	if (first >= 0xAC00 && first <= 0xD7A3)
-	{			//korean
+	if (first >= 0xAC00 && first <= 0xD7A3) {
+		//korean
 		int index = 0;
 		index = ((((first - 0xAC00) - ((first - 0xAC00) % 28)) / 28) / 21);
-		if (index < 20 && index >= 0)
-		{
+		if (index < 20 && index >= 0) {
 			const gunichar chosung[20] = { 0x3131, 0x3132, 0x3134, 0x3137, 0x3138,
-				0x3139, 0x3141, 0x3142, 0x3143, 0x3145,
-				0x3146, 0x3147, 0x3148, 0x3149, 0x314a,
-				0x314b, 0x314c, 0x314d, 0x314e, 0
-			};
+			                               0x3139, 0x3141, 0x3142, 0x3143, 0x3145,
+			                               0x3146, 0x3147, 0x3148, 0x3149, 0x314a,
+			                               0x314b, 0x314c, 0x314d, 0x314e, 0
+			                             };
 
 			return chosung[index];
 		}
-	}
-	else
-	{
+	} else {
 		return first;
 	}
 	return 0;
@@ -872,17 +819,14 @@ mp_util_get_title_from_path(const char *path)
 {
 	gchar *file_ext = NULL, *file_name = NULL, *title = NULL;
 
-	if (path == NULL || strlen(path) == 0)
-	{
+	if (path == NULL || strlen(path) == 0) {
 		return NULL;
 	}
 
 	file_name = g_path_get_basename(path);
-	if (file_name)
-	{
+	if (file_name) {
 		file_ext = g_strrstr(file_name, ".");
-		if (file_ext)
-		{
+		if (file_ext) {
 			title = g_strndup(file_name, strlen(file_name) - strlen(file_ext));
 		}
 		free(file_name);
@@ -897,8 +841,7 @@ mp_util_is_playlist_name_valid(char *name)
 	MP_CHECK_NULL(name);
 
 	char *test_space = strdup(name);
-	if (strlen(g_strchug(test_space)) == 0)
-	{
+	if (strlen(g_strchug(test_space)) == 0) {
 		IF_FREE(test_space);
 		return FALSE;
 	}
@@ -914,23 +857,20 @@ mp_util_create_playlist(struct appdata *ad, char *name, mp_playlist_h *playlist_
 
 	int plst_uid = -1;
 
-	if (!mp_util_is_playlist_name_valid(name))
-	{
+	if (!mp_util_is_playlist_name_valid(name)) {
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"));
 		return -1;
 	}
 
 	bool exist = false;
 	int ret = mp_media_info_playlist_is_exist(name, &exist);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		ERROR_TRACE("Fail to get playlist count by name: %d", ret);
 		mp_widget_text_popup(ad, GET_STR("IDS_MUSIC_POP_UNABLE_CREATE_PLAYLIST"));
 		return -1;
 	}
 
-	if (exist)
-	{
+	if (exist) {
 		char *text = g_strdup_printf(GET_STR(STR_MP_POP_PLAYLIST_EXISTS), name);
 		mp_widget_text_popup(ad, text);
 		IF_FREE(text);
@@ -938,8 +878,7 @@ mp_util_create_playlist(struct appdata *ad, char *name, mp_playlist_h *playlist_
 	}
 
 	ret = mp_media_info_playlist_insert_to_db(name, &plst_uid, playlist_handle);
-	if (ret != 0)
-	{
+	if (ret != 0) {
 		ERROR_TRACE("Fail to get playlist count by name: %d", ret);
 		mp_widget_text_popup(ad, GET_SYS_STR("IDS_COM_BODY_UNABLE_TO_ADD"));
 		*playlist_handle = NULL;
@@ -954,7 +893,7 @@ mp_util_reset_genlist_mode_item(Evas_Object *genlist)
 {
 	MP_CHECK(genlist);
 	Elm_Object_Item *gl_item =
-		(Elm_Object_Item *)elm_genlist_decorated_item_get(genlist);
+	    (Elm_Object_Item *)elm_genlist_decorated_item_get(genlist);
 	if (gl_item) {
 		elm_genlist_item_decorate_mode_set(gl_item, "slide", EINA_FALSE);
 		elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
@@ -966,7 +905,9 @@ mp_util_reset_genlist_mode_item(Evas_Object *genlist)
 bool
 mp_util_is_image_valid(Evas *evas, const char *path)
 {
-	if (!path) return false;
+	if (!path) {
+		return false;
+	}
 	MP_CHECK_FALSE(evas);
 
 	if (!mp_file_exists(path)) {
@@ -1002,19 +943,18 @@ bool
 mp_util_is_string_elipsized(char *path)
 {
 	MP_CHECK_FALSE(path);
-	if (strlen(path) < MP_PATH_INFO_MAX_LENGTH)
-	{
+	if (strlen(path) < MP_PATH_INFO_MAX_LENGTH) {
 		return false;
-	}
-	else
+	} else {
 		return true;
+	}
 }
 
 char *mp_util_path_info_retrench(const char *string)
 {
-	mp_retvm_if (string == NULL, g_strdup(MP_PATH_INFO_TRANS_OMIT), "input path is NULL");
+	mp_retvm_if(string == NULL, g_strdup(MP_PATH_INFO_TRANS_OMIT), "input path is NULL");
 	char *retrench = NULL;
-	if (strlen (string) > MP_PATH_INFO_LEN_THRESHOLD) {
+	if (strlen(string) > MP_PATH_INFO_LEN_THRESHOLD) {
 		char *utf8_string = elm_entry_utf8_to_markup(string);
 		MP_CHECK_NULL(utf8_string);
 		if (g_utf8_strlen(utf8_string, -1) > 2) {
@@ -1025,9 +965,9 @@ char *mp_util_path_info_retrench(const char *string)
 				retrench = g_strconcat(retrench, MP_PATH_INFO_TRANS_OMIT, NULL);
 				free(utf8_string);
 				free(temp);
-			}
-			else
+			} else {
 				free(utf8_string);
+			}
 
 		} else {
 			retrench = utf8_string;
@@ -1054,46 +994,39 @@ mp_util_shorten_path(char *path_info)
 
 	MP_CHECK_EXCEP(path_info);
 
-	if (!mp_util_is_string_elipsized(path_info))
+	if (!mp_util_is_string_elipsized(path_info)) {
 		return g_strdup(path_info);
+	}
 
 	params = g_strsplit(path_info, "/", 0);
 	MP_CHECK_EXCEP(params);
 
 	count = g_strv_length(params);
 
-	if (count > MP_PATH_INFO_LEVEL_BOUNDARY)
-	{
+	if (count > MP_PATH_INFO_LEVEL_BOUNDARY) {
 		start = count - MP_PATH_INFO_LEVEL_BOUNDARY;
 		output = g_strdup("..");
-	}
-	else
-	{
+	} else {
 		output = g_strdup("");
 	}
 	MP_CHECK_EXCEP(output);
 
-	for (i=start ; i < count; i++)
-	{
+	for (i = start ; i < count; i++) {
 		base = g_strdup(output);
 		MP_CHECK_EXCEP(base);
-		for (j=i ; j < count; j++)
-		{
+		for (j = i ; j < count; j++) {
 			temp = g_strconcat(base, MP_PATH_INFO_SEP, params[j], NULL);
 			IF_FREE(base);
 			base = temp;
 			temp = NULL;
 		}
 
-		if (i == (count-1) || !mp_util_is_string_elipsized(base))
-		{
+		if (i == (count - 1) || !mp_util_is_string_elipsized(base)) {
 			IF_FREE(output);
 			output = base;
 			base = NULL;
 			break;
-		}
-		else
-		{
+		} else {
 			char *retrench = mp_util_path_info_retrench(params[i]);
 			MP_CHECK_EXCEP(retrench);
 			//len = strlen(params[i]);
@@ -1108,20 +1041,20 @@ mp_util_shorten_path(char *path_info)
 
 	exception = false;
 
-	mp_exception:
+mp_exception:
 
 
-	if (params)
+	if (params) {
 		g_strfreev(params);
+	}
 
-	if (exception)
-	{
+	if (exception) {
 		IF_FREE(output);
 		IF_FREE(base);
 		return g_strdup(GET_SYS_STR("IDS_COM_BODY_UNKNOWN"));
-	}
-	else
+	} else {
 		return output;
+	}
 }
 
 bool
@@ -1133,10 +1066,11 @@ mp_util_is_earjack_inserted(void)
 		return false;
 	}
 
-	if (value == RUNTIME_INFO_AUDIO_JACK_STATUS_UNCONNECTED)
+	if (value == RUNTIME_INFO_AUDIO_JACK_STATUS_UNCONNECTED) {
 		return false;
-	else
+	} else {
 		return true;
+	}
 }
 
 void
@@ -1149,13 +1083,15 @@ mp_util_get_sound_path(mp_snd_path *snd_path)
 	sound_device_mask_e g_device_mask = SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 	WARN_TRACE("Enter sound_manager_get_active_device");
 	int ret;
-	if ((ret= sound_manager_get_current_device_list(g_device_mask,&g_device_list)))
+	if ((ret = sound_manager_get_current_device_list(g_device_mask, &g_device_list))) {
 		ERROR_TRACE("sound_manager_get_active_device()... [0x%x]", ret);
+	}
 
 	if (!(ret = sound_manager_get_next_device(g_device_list, &device))) {
 		ERROR_TRACE("success to get next device\n");
-		if ((ret = sound_manager_get_device_type (device, &type)))
+		if ((ret = sound_manager_get_device_type(device, &type))) {
 			ERROR_TRACE("failed to get device type, ret[0x%x]\n", ret);
+		}
 	}
 
 	switch (type) {
@@ -1195,14 +1131,14 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 	int i = 0;
 	bool found = false;
 	gchar* markup_text_start = NULL;
-	gchar* markup_text_end= NULL;
-	gchar* markup_text= NULL;
+	gchar* markup_text_end = NULL;
+	gchar* markup_text = NULL;
 
 	MP_CHECK_NULL(string && strlen(string));
 	MP_CHECK_NULL(searchword && strlen(searchword));
 	MP_CHECK_NULL(result);
 
-	if (g_utf8_validate(string,-1,NULL)) {
+	if (g_utf8_validate(string, -1, NULL)) {
 
 		word_len = strlen(string);
 		if (word_len > DEF_BUF_LEN) {
@@ -1210,10 +1146,9 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 			MP_CHECK_NULL(temp);
 			strncpy(temp, string, strlen(string));
 			i = 0;
-			while (word_len > DEF_BUF_LEN)
-			{
+			while (word_len > DEF_BUF_LEN) {
 				/*truncate uft8 to byte_size DEF_BUF_LEN*/
-				gchar *pre_ch = g_utf8_find_prev_char(temp, (temp+ DEF_BUF_LEN - 1 - i*3));
+				gchar *pre_ch = g_utf8_find_prev_char(temp, (temp + DEF_BUF_LEN - 1 - i * 3));
 				if (!pre_ch) {
 					break;
 				}
@@ -1226,12 +1161,14 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 				word_len = strlen(temp);
 				i++;
 			}
-			if (strlen(temp) <= DEF_BUF_LEN)
+			if (strlen(temp) <= DEF_BUF_LEN) {
 				strncpy(pstr, temp, strlen(temp));
+			}
 			IF_FREE(temp);
 		} else {
-			if (strlen(string) <= DEF_BUF_LEN)
+			if (strlen(string) <= DEF_BUF_LEN) {
 				strncpy(pstr, string, strlen(string));
+			}
 		}
 
 		word_len = strlen(pstr);
@@ -1245,7 +1182,7 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 		}
 
 		*result = found;
-		memset(return_string, 0x00, DEF_BUF_LEN+1);
+		memset(return_string, 0x00, DEF_BUF_LEN + 1);
 
 		if (found) {
 			int r = 222;
@@ -1256,17 +1193,17 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 			if (i == 0) {
 				markup_text = g_markup_escape_text(&pstr[0], search_len);
 				MP_CHECK_NULL(markup_text);
-				markup_text_end = g_markup_escape_text(&pstr[search_len], word_len-search_len);
+				markup_text_end = g_markup_escape_text(&pstr[search_len], word_len - search_len);
 				if (!markup_text_end) {
 					IF_FREE(markup_text);
 					ERROR_TRACE("markup_text_end  NULL !!!");
 					return NULL;
 				}
 				snprintf(return_string,
-						 DEF_BUF_LEN,
-						 "<color=#%02x%02x%02x%02x>%s</color>%s", r, g, b, a,
-						 markup_text,
-						 (char*)markup_text_end);
+				         DEF_BUF_LEN,
+				         "<color=#%02x%02x%02x%02x>%s</color>%s", r, g, b, a,
+				         markup_text,
+				         (char*)markup_text_end);
 				IF_FREE(markup_text);
 				IF_FREE(markup_text_end);
 			} else {
@@ -1278,7 +1215,7 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 					ERROR_TRACE("markup_text  NULL !!!");
 					return NULL;
 				}
-				markup_text_end =  g_markup_escape_text(&pstr[i+search_len], word_len-(i+search_len));
+				markup_text_end =  g_markup_escape_text(&pstr[i + search_len], word_len - (i + search_len));
 				if (!markup_text_end) {
 					IF_FREE(markup_text_start);
 					IF_FREE(markup_text);
@@ -1287,12 +1224,12 @@ mp_util_search_markup_keyword(const char *string, char *searchword, bool *result
 				}
 
 				snprintf(return_string,
-						 DEF_BUF_LEN,
-						 "%s<color=#%02x%02x%02x%02x>%s</color>%s",
-						 (char*)markup_text_start,
-						 r, g, b, a,
-						 markup_text,
-						 (char*)markup_text_end);
+				         DEF_BUF_LEN,
+				         "%s<color=#%02x%02x%02x%02x>%s</color>%s",
+				         (char*)markup_text_start,
+				         r, g, b, a,
+				         markup_text,
+				         (char*)markup_text_end);
 				IF_FREE(markup_text);
 				IF_FREE(markup_text_start);
 				IF_FREE(markup_text_end);
@@ -1339,18 +1276,13 @@ mp_util_is_now_active_player(void)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK_FALSE(ad);
 
-	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED)
-	{
+	if (ad->player_state == PLAY_STATE_PLAYING || ad->player_state == PLAY_STATE_PAUSED) {
 		int pid = mp_setting_get_nowplaying_id();
-		if (pid != -1)
-		{
-			if (pid == 0 || pid == getpid())
-			{
+		if (pid != -1) {
+			if (pid == 0 || pid == getpid()) {
 				ret = TRUE;
 			}
-		}
-		else
-		{
+		} else {
 			mp_error("mp_setting_get_nowplaying_id() error");
 		}
 	}
@@ -1367,8 +1299,7 @@ mp_commmon_check_rotate_lock(void)
 	if (retcode == SYSTEM_SETTINGS_ERROR_NONE) {
 		mp_debug("lock state: %d", lock);
 		return (int)lock;
-	}
-	else {
+	} else {
 		ERROR_TRACE("Could not get the lock state.Invalid parameter return [%d]", retcode);
 		return -1;
 	}
@@ -1407,8 +1338,7 @@ mp_util_sleep_lock_set(bool lock, bool force_unlock)
 	MP_CHECK_FALSE(ad);
 	mp_ecore_timer_del(ad->sleep_unlock_timer);
 
-	if (ad->sleep_locked == lock)
-	{
+	if (ad->sleep_locked == lock) {
 		return true;
 	}
 
@@ -1417,10 +1347,9 @@ mp_util_sleep_lock_set(bool lock, bool force_unlock)
 		ret = power_lock_state(POWER_STATE_SCREEN_OFF, 0);
 		mp_player_mgr_safety_volume_set(ad->app_is_foreground);
 	} else {
-		if (!force_unlock)
+		if (!force_unlock) {
 			ad->sleep_unlock_timer = ecore_timer_add(30, _sleep_timer_cb, ad);
-		else
-		{
+		} else {
 			//unlock power state immediately
 			_sleep_timer_cb(ad);
 		}
@@ -1454,12 +1383,11 @@ mp_util_strncpy_safe(char *x_dst, const char *x_src, int max_len)
 		return;
 	}
 
-    strncpy(x_dst, x_src, max_len-1);
-	x_dst[max_len-1] = '\0';
+	strncpy(x_dst, x_src, max_len - 1);
+	x_dst[max_len - 1] = '\0';
 }
 #ifdef MP_IMAGE_EFFECT
-static const double gaussian_template[7][7] =
-{
+static const double gaussian_template[7][7] = {
 	{0.00000067, 0.00002292, 0.00019117, 0.00038771, 0.00019117, 0.00002292, 0.00000067},
 	{0.00002292, 0.00078633, 0.00655965, 0.01330373, 0.00655965, 0.00078633, 0.00002292},
 	{0.00019117, 0.00655965, 0.05472157, 0.11098164, 0.05472157, 0.00655965, 0.00019117},
@@ -1473,35 +1401,37 @@ static const double gaussian_template[7][7] =
 
 static void __mp_util_gaussian_blur(unsigned char *src, unsigned char *dest, int w, int h)
 {
-         MP_CHECK(src);
-         MP_CHECK(dest);
+	MP_CHECK(src);
+	MP_CHECK(dest);
 
-         int x, y, i, j, idx, idx2, xx, yy;
-         for (y = 0; y < h; y++) {
-                   for (x = 0; x < w; x++) {
-		   idx = (y*w+x)*4;
-                   double v1 = 0, v2 = 0, v3 = 0;
+	int x, y, i, j, idx, idx2, xx, yy;
+	for (y = 0; y < h; y++) {
+		for (x = 0; x < w; x++) {
+			idx = (y * w + x) * 4;
+			double v1 = 0, v2 = 0, v3 = 0;
 
-                   for (i = 0; i < 7; i++) {
-                            for (j = 0; j < 7; j++) {
-                                     yy = y + j;
-                                     xx = x + i;
-                                     if (xx >= w)
-                                               xx = w - 1;
-                                     if (yy >= h)
-                                               yy = h - 1;
-                                     idx2 = (yy*w+xx)*4;
-                                     v1 += (*(src+idx2))*gaussian_template[i][j];
-                                     v2 += (*(src+idx2+1))*gaussian_template[i][j];
-                                     v3 += (*(src+idx2+2))*gaussian_template[i][j];
-                            }
-                   }
-                   *(dest+idx) = v1 * DARK_SCALE;
-                   *(dest+idx+1) = v2 * DARK_SCALE;
-                   *(dest+idx+2) = v3 * DARK_SCALE;
-                   *(dest+idx+3) = (*(src+idx+3));
-                   }
-         }
+			for (i = 0; i < 7; i++) {
+				for (j = 0; j < 7; j++) {
+					yy = y + j;
+					xx = x + i;
+					if (xx >= w) {
+						xx = w - 1;
+					}
+					if (yy >= h) {
+						yy = h - 1;
+					}
+					idx2 = (yy * w + xx) * 4;
+					v1 += (*(src + idx2)) * gaussian_template[i][j];
+					v2 += (*(src + idx2 + 1)) * gaussian_template[i][j];
+					v3 += (*(src + idx2 + 2)) * gaussian_template[i][j];
+				}
+			}
+			*(dest + idx) = v1 * DARK_SCALE;
+			*(dest + idx + 1) = v2 * DARK_SCALE;
+			*(dest + idx + 2) = v3 * DARK_SCALE;
+			*(dest + idx + 3) = (*(src + idx + 3));
+		}
+	}
 }
 
 
@@ -1514,8 +1444,8 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 	MP_CHECK_FALSE(mode >= MP_PLAYING_VIEW_TOP_LEFT);
 	MP_CHECK_FALSE(mode <= MP_PLAYING_VIEW_BOTTOM_RIGHT);
 
-	float rate_w = 720.0/1500.0;
-	float rate_h = 1280.0/1500.0;
+	float rate_w = 720.0 / 1500.0;
+	float rate_h = 1280.0 / 1500.0;
 
 	DEBUG_TRACE("rate_w=%f, rate_h=%f", rate_w, rate_h);
 
@@ -1542,7 +1472,7 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 		break;
 
 	case MP_PLAYING_VIEW_TOP_CENTER:
-		start_x = (w - dest_w)/2;
+		start_x = (w - dest_w) / 2;
 		start_y = 0;
 		break;
 
@@ -1557,7 +1487,7 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 		break;
 
 	case MP_PLAYING_VIEW_BOTTOM_CENTER:
-		start_x = (w - dest_w)/2;
+		start_x = (w - dest_w) / 2;
 		start_y = h - dest_h;
 		break;
 
@@ -1584,14 +1514,14 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 	unsigned char gray = 0;
 	for (y = start_y; y < end_y; y++) {
 		for (x = start_x; x < end_x; x++) {
-			dest_idx = ((y-start_y)*dest_w+(x-start_x))*4;
-			src_idx = (y*w+x)*4;
+			dest_idx = ((y - start_y) * dest_w + (x - start_x)) * 4;
+			src_idx = (y * w + x) * 4;
 
-			gray = (*(src+src_idx))*0.3+(*(src+src_idx+1))*0.59+(*(src+src_idx+2))*0.11;
-			*(dest+dest_idx) = gray;
-			*(dest+dest_idx+1) = gray;
-			*(dest+dest_idx+2) = gray;
-			*(dest+dest_idx+3) = 0;
+			gray = (*(src + src_idx)) * 0.3 + (*(src + src_idx + 1)) * 0.59 + (*(src + src_idx + 2)) * 0.11;
+			*(dest + dest_idx) = gray;
+			*(dest + dest_idx + 1) = gray;
+			*(dest + dest_idx + 2) = gray;
+			*(dest + dest_idx + 3) = 0;
 			//*(dest+dest_idx+3) = (*(src+src_idx+3));
 		}
 	}
@@ -1615,7 +1545,7 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 	endfunc;
 	return true;
 
-	mp_exception:
+mp_exception:
 	mp_evas_object_del(image);
 	IF_FREE(dest);
 	IF_FREE(dest_data);
@@ -1626,7 +1556,9 @@ bool mp_util_edit_image(Evas *evas, Evas_Object *src_image, const char *path, in
 void
 mp_util_free_track_info(mp_track_info_t *track_info)
 {
-	if (!track_info) return;
+	if (!track_info) {
+		return;
+	}
 
 	IF_FREE(track_info->uri);
 	IF_FREE(track_info->title);
@@ -1665,22 +1597,20 @@ mp_util_load_track_info(struct appdata *ad, mp_plst_item *cur_item, mp_track_inf
 	track_info->track_type = cur_item->track_type;
 	track_info->uri = g_strdup(cur_item->uri);
 	track_info->playlist_member_id = cur_item->playlist_memeber_id;
-	if (!cur_item->uid)
-	{
+	if (!cur_item->uid) {
 		char *media_id = NULL;
 
 		ret = mp_media_info_create_by_path(&svc_audio_item, track_info->uri);
-		if (ret == 0)
-		{
+		if (ret == 0) {
 			mp_media_info_get_media_id(svc_audio_item, &media_id);
 			cur_item->uid = g_strdup(media_id);
 		}
 	}
 
-	if (cur_item->uid)
-	{
-		if (!svc_audio_item)
+	if (cur_item->uid) {
+		if (!svc_audio_item) {
 			ret = mp_media_info_create(&svc_audio_item, cur_item->uid);
+		}
 
 		mp_media_info_get_title(svc_audio_item, &track_info->title);
 		mp_media_info_get_album(svc_audio_item, &track_info->album);
@@ -1711,9 +1641,7 @@ mp_util_load_track_info(struct appdata *ad, mp_plst_item *cur_item, mp_track_inf
 		track_info->location = g_strdup(track_info->location);
 		track_info->year = g_strdup(track_info->year);
 
-	}
-	else if (mp_check_file_exist(cur_item->uri))
-	{
+	} else if (mp_check_file_exist(cur_item->uri)) {
 		mp_tag_info_t tag_info;
 		mp_file_tag_info_get_all_tag(cur_item->uri, &tag_info);
 
@@ -1731,25 +1659,25 @@ mp_util_load_track_info(struct appdata *ad, mp_plst_item *cur_item, mp_track_inf
 		track_info->duration = tag_info.duration;
 
 		GString *format = g_string_new("");
-		if (format)
-		{
-			if (tag_info.audio_bitrate > 0)
+		if (format) {
+			if (tag_info.audio_bitrate > 0) {
 				g_string_append_printf(format, "%dbps ", tag_info.audio_bitrate);
+			}
 
-			if (tag_info.audio_samplerate > 0)
+			if (tag_info.audio_samplerate > 0) {
 				g_string_append_printf(format, "%.1fHz ", (double)tag_info.audio_samplerate);
+			}
 
-			if (tag_info.audio_channel > 0)
+			if (tag_info.audio_channel > 0) {
 				g_string_append_printf(format, "%dch", tag_info.audio_channel);
+			}
 
 			track_info->format = g_strdup(format->str);
 			g_string_free(format, TRUE);
 		}
 
 		mp_file_tag_free(&tag_info);
-	}
-	else
-	{
+	} else {
 		track_info->title = g_strdup(cur_item->title);
 		track_info->artist = g_strdup(cur_item->artist);
 		track_info->thumbnail_path = g_strdup(cur_item->thumbnail_path);
@@ -1757,8 +1685,9 @@ mp_util_load_track_info(struct appdata *ad, mp_plst_item *cur_item, mp_track_inf
 
 	track_info->isDiffAP = cur_item->isDiffAP;
 
-	if (track_info->duration < 0)
+	if (track_info->duration < 0) {
 		track_info->duration = 0;
+	}
 
 	if (svc_audio_item) {
 		mp_media_info_destroy(svc_audio_item);
@@ -1775,8 +1704,7 @@ mp_util_append_media_list_item_to_playlist(mp_plst_mgr *playlist_mgr, mp_media_l
 	char *artist = NULL;
 	mp_plst_item *cur_item = NULL;
 
-	for (i = 0; i < count; i++)
-	{
+	for (i = 0; i < count; i++) {
 		mp_plst_item *plst_item;
 		mp_track_type track_type = MP_TRACK_URI;
 		mp_media_info_h item = mp_media_info_list_nth_item(media_list, i);
@@ -1787,12 +1715,14 @@ mp_util_append_media_list_item_to_playlist(mp_plst_mgr *playlist_mgr, mp_media_l
 #ifdef MP_FEATURE_CLOUD
 		mp_storage_type_e storage;
 		mp_media_info_get_storage_type(item, &storage);
-		if (storage == MP_STORAGE_CLOUD)
+		if (storage == MP_STORAGE_CLOUD) {
 			track_type = MP_TRACK_CLOUD;
+		}
 #endif
 		plst_item = mp_playlist_mgr_item_append(playlist_mgr, uri, uid, title, artist, track_type);
-		if (i == current_index || !g_strcmp0(uri, path))
+		if (i == current_index || !g_strcmp0(uri, path)) {
 			cur_item = plst_item;
+		}
 	}
 	mp_playlist_mgr_set_current(playlist_mgr, cur_item);
 
@@ -1809,21 +1739,17 @@ char* mp_util_get_fid_by_full_path(const char *full_path, char **title, char **a
 
 	int ret = 0;
 	mp_media_info_h record = NULL;
-	if (mp_check_file_exist(full_path))
-	{
+	if (mp_check_file_exist(full_path)) {
 		ret = mp_media_info_create_by_path(&record, full_path);
-		if (ret == 0)
-		{
+		if (ret == 0) {
 			ret = mp_media_info_get_media_id(record, &uid);
 			uid = g_strdup(uid);
 
-			if (title)
-			{
+			if (title) {
 				mp_media_info_get_title(record, &val);
 				*title = g_strdup(val);
 			}
-			if (artist)
-			{
+			if (artist) {
 				mp_media_info_get_artist(record, &val);
 				*artist = g_strdup(val);
 			}
@@ -1839,8 +1765,9 @@ static inline const char *_mp_util_get_text_domain(const char *string_id)
 
 	if (string_id) {
 #ifdef STORE_DOMAIN_NAME
-		else if (strstr(string_id, "IDS_MH") || strstr(string_id, "IDS_IS"))
+		else if (strstr(string_id, "IDS_MH") || strstr(string_id, "IDS_IS")) {
 			domain = STORE_DOMAIN_NAME;
+		}
 #endif
 	}
 
@@ -1849,7 +1776,7 @@ static inline const char *_mp_util_get_text_domain(const char *string_id)
 
 EXPORT_API char *mp_util_get_text(const char *str)
 {
-        MP_CHECK_NULL(str);
+	MP_CHECK_NULL(str);
 
 	const char *domain_name = _mp_util_get_text_domain(str);
 	return dgettext(domain_name, str);
@@ -1870,16 +1797,16 @@ void mp_util_more_btn_move_ctxpopup(Evas_Object *ctxpopup, Evas_Object *btn)
 	pos = elm_win_rotation_get(win);
 
 	switch (pos) {
-		case 0:
-		case 180:
-			evas_object_move(ctxpopup, (w/2), h);
-			break;
-		case 90:
-			evas_object_move(ctxpopup, 0, w);
-			break;
-		case 270:
-			evas_object_move(ctxpopup, (h/2), w);
-			break;
+	case 0:
+	case 180:
+		evas_object_move(ctxpopup, (w / 2), h);
+		break;
+	case 90:
+		evas_object_move(ctxpopup, 0, w);
+		break;
+	case 270:
+		evas_object_move(ctxpopup, (h / 2), w);
+		break;
 
 	}
 }
@@ -1889,13 +1816,13 @@ void mp_util_object_item_translate_set(Elm_Object_Item *item, const char *ID)
 	MP_CHECK(ID);
 	MP_CHECK(item);
 	const char *domain = _mp_util_get_text_domain(ID);
- 	elm_object_item_domain_text_translatable_set(item, domain, EINA_TRUE);
+	elm_object_item_domain_text_translatable_set(item, domain, EINA_TRUE);
 }
 
 Elm_Object_Item *
 mp_util_ctxpopup_item_append_ext(Evas_Object *obj, const char *label, const char *file,
-	                         const char *group, Evas_Smart_Cb func,
-	                         const void *data)
+                                 const char *group, Evas_Smart_Cb func,
+                                 const void *data)
 {
 	Elm_Object_Item *item = elm_ctxpopup_item_append(obj, label, NULL, func, data);
 	MP_CHECK_NULL(item);
@@ -1905,15 +1832,15 @@ mp_util_ctxpopup_item_append_ext(Evas_Object *obj, const char *label, const char
 
 Elm_Object_Item *
 mp_util_ctxpopup_item_append(Evas_Object *obj, const char *label,
-	                         const char *group, Evas_Smart_Cb func,
-	                         const void *data)
+                             const char *group, Evas_Smart_Cb func,
+                             const void *data)
 {
 	return mp_util_ctxpopup_item_append_ext(obj, label, NULL, group, func, data);
 }
 
 Elm_Object_Item *mp_util_toolbar_item_append(Evas_Object *obj, const char *icon,
-				const char *label, Evas_Smart_Cb func,
-				const void *data)
+        const char *label, Evas_Smart_Cb func,
+        const void *data)
 {
 	Elm_Object_Item *item = elm_toolbar_item_append(obj, icon, label, func, data);
 	MP_CHECK_NULL(item);
@@ -1928,9 +1855,8 @@ Elm_Object_Item *mp_util_toolbar_nth_item(Evas_Object *obj, int n)
 	MP_CHECK_NULL(obj);
 	Elm_Object_Item *it = elm_toolbar_first_item_get(obj);
 	int i = 0;
-	for (i = 0; i<n; i++)
-	{
-		it  = elm_toolbar_item_next_get(it );
+	for (i = 0; i < n; i++) {
+		it  = elm_toolbar_item_next_get(it);
 	}
 	return it;
 }
@@ -1959,20 +1885,23 @@ mp_util_parse_device_type(const char *name)
 	MP_CHECK_VAL(name, MP_DEVICE_TYPE_UNKNOWN);
 
 	char *p = strstr(name, "[");
-	if (p)
+	if (p) {
 		p++;
-	else
+	} else {
 		return MP_DEVICE_TYPE_UNKNOWN;
+	}
 	char * str = NULL;
 	p = g_strdup(p);	/* strtok make string dirty */
-	char *device = strtok_r(p, "]" ,&str);
+	char *device = strtok_r(p, "]" , &str);
 	int type = MP_DEVICE_TYPE_UNKNOWN;
-	if (!g_strcmp0(device, "TV"))
+	if (!g_strcmp0(device, "TV")) {
 		type = MP_DEVICE_TYPE_TV;
-	if (!g_strcmp0(device, "PC"))
+	}
+	if (!g_strcmp0(device, "PC")) {
 		type = MP_DEVICE_TYPE_DESKTOP_PC;
-	else
+	} else {
 		type = MP_DEVICE_TYPE_UNKNOWN;
+	}
 
 	//mp_debug("type = %d [%s]", type, device);
 
@@ -1989,12 +1918,9 @@ mp_util_set_livebox_update_timer(void)
 
 	DEBUG_TRACE("ad->is_lcd_off[%d] ad->is_focus_out[%d] ad->app_is_foreground[%d] ", ad->is_lcd_off, ad->is_focus_out, ad->app_is_foreground);
 
-	if (ad->live_pos_timer)
-	{
-		if (ad->is_focus_out && !ad->app_is_foreground)
-		{
-			if (!ad->is_lcd_off && mp_player_mgr_get_state() == PLAYER_STATE_PLAYING)
-			{
+	if (ad->live_pos_timer) {
+		if (ad->is_focus_out && !ad->app_is_foreground) {
+			if (!ad->is_lcd_off && mp_player_mgr_get_state() == PLAYER_STATE_PLAYING) {
 				WARN_TRACE("thaw livebox pos timer");
 				MP_TIMER_THAW(ad->live_pos_timer);
 				return;
@@ -2012,7 +1938,7 @@ static Eina_Bool _print_geometry_cb(void *data)
 
 	evas_object_geometry_get(obj, &x, &y, &w, &h);
 
- 	return false;
+	return false;
 }
 
 void mp_util_print_geometry(Evas_Object *obj, const char *name)
@@ -2080,10 +2006,10 @@ void mp_util_hide_lock_screen()
 {
 	display_state_e lock_state;
 	int ret = device_display_get_state(&lock_state);
-	if(ret == DEVICE_ERROR_NONE) {
-		ERROR_TRACE("[successful] Return value is %d",ret);
+	if (ret == DEVICE_ERROR_NONE) {
+		ERROR_TRACE("[successful] Return value is %d", ret);
 	} else {
-		ERROR_TRACE("[ERROR] Return value is %d",ret);
+		ERROR_TRACE("[ERROR] Return value is %d", ret);
 	}
 
 	if (lock_state == DISPLAY_STATE_NORMAL) {
@@ -2092,10 +2018,11 @@ void mp_util_hide_lock_screen()
 	}
 
 	int result = device_display_change_state(DISPLAY_STATE_NORMAL);
-	if( result < 0 )
-		printf("[ERROR] return value result =%d",result);
-	else
-		printf("[SUCCESS] return value result =%d",result);
+	if (result < 0) {
+		printf("[ERROR] return value result =%d", result);
+	} else {
+		printf("[SUCCESS] return value result =%d", result);
+	}
 }
 
 bool
@@ -2165,8 +2092,9 @@ mp_util_system_volume_popup_show(void)
 	ret = true;
 
 END:
-	if (service)
+	if (service) {
 		app_control_destroy(service);
+	}
 
 	return ret;
 }
@@ -2178,13 +2106,13 @@ mp_util_is_call_connected(void)
 	telephony_handle_list_s tel_list;
 	int tel_valid = telephony_init(&tel_list);
 	if (tel_valid != 0) {
-		ERROR_TRACE("telephony is not initialized. ERROR Code is %d",tel_valid);
+		ERROR_TRACE("telephony is not initialized. ERROR Code is %d", tel_valid);
 		return false;
 	}
 
 	telephony_h *newhandle = tel_list.handle;
 
-	int error = telephony_call_get_voice_call_state(*newhandle , &state );
+	int error = telephony_call_get_voice_call_state(*newhandle , &state);
 
 	telephony_deinit(&tel_list);
 
@@ -2195,7 +2123,7 @@ mp_util_is_call_connected(void)
 		/* There exists at least one call that is dialing, alerting or incoming*/
 		return true;
 	} else {
-		ERROR_TRACE("ERROR: state error is %d",error);
+		ERROR_TRACE("ERROR: state error is %d", error);
 	}
 
 	return false;
@@ -2237,9 +2165,9 @@ bool mp_util_is_mmc_removed(void)
 		storage_state_e state;
 		storage_get_state(externalStorageId, &state);
 		if (state == STORAGE_STATE_REMOVED || state == STORAGE_STATE_UNMOUNTABLE) {
- 			return true;
- 		}
- 	}
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -2250,8 +2178,7 @@ bool mp_util_is_mmc_removed(void)
 EXPORT_API void dump_win(Evas_Object *obj, int max_depth)
 {
 
-	if (evas_object_smart_type_check(obj, "elm_win") == false )
-	{
+	if (evas_object_smart_type_check(obj, "elm_win") == false) {
 		ERROR_TRACE("Obj(0x%08x) is not elm_win Object", obj);
 		return;
 	}
@@ -2261,11 +2188,11 @@ EXPORT_API void dump_win(Evas_Object *obj, int max_depth)
 
 	Diff = 0xC4;
 
-	Eina_List **ppList = (Eina_List **)( (char *)pData + ((Diff)) /* B - A */);
+	Eina_List **ppList = (Eina_List **)((char *)pData + ((Diff)) /* B - A */);
 	Eina_List *subobjs = *ppList;
 
 	DEBUG_TRACE("pData=0x%08x SubObj=0x%08x pData+C4=0x%08x SubObjCnt=%d",
-		pData, subobjs, (unsigned int)(pData) + (Diff), eina_list_count(subobjs));
+	            pData, subobjs, (unsigned int)(pData) + (Diff), eina_list_count(subobjs));
 
 	{
 		int x, y, w, h;
@@ -2277,7 +2204,7 @@ EXPORT_API void dump_win(Evas_Object *obj, int max_depth)
 		Eina_Bool propagate = evas_object_propagate_events_get(obj);
 
 		DEBUG_TRACE("Win=%s(%s,0x%08x) %s(%d,%d,%d,%d) P%d|R%d|V%d|E%d", evas_object_name_get(obj),
-			elm_object_widget_type_get(obj), obj, evas_object_type_get(obj), x, y, w, h, pass, repeat, visible, propagate);
+		            elm_object_widget_type_get(obj), obj, evas_object_type_get(obj), x, y, w, h, pass, repeat, visible, propagate);
 	}
 
 	const Eina_List *l;
@@ -2285,11 +2212,10 @@ EXPORT_API void dump_win(Evas_Object *obj, int max_depth)
 
 	void *MyData = NULL;
 
-	EINA_LIST_FOREACH(subobjs, l, MyData)
-	{
+	EINA_LIST_FOREACH(subobjs, l, MyData) {
 		child = (Evas_Object *)MyData;
 
-		dump_obj(child, 0, max_depth-1);
+		dump_obj(child, 0, max_depth - 1);
 	}
 
 }
@@ -2298,11 +2224,11 @@ EXPORT_API void dump_obj(Evas_Object *obj, int lvl, int max_depth)
 {
 	Eina_List *list = evas_object_smart_members_get(obj);
 
-	if (max_depth <= 0)
+	if (max_depth <= 0) {
 		return;
+	}
 
-	if (lvl == 0 )
-	{
+	if (lvl == 0) {
 		int x, y, w, h;
 
 		evas_object_geometry_get(obj, &x, &y, &w, &h);
@@ -2323,8 +2249,7 @@ EXPORT_API void dump_obj(Evas_Object *obj, int lvl, int max_depth)
 	Evas_Object *data;
 	Eina_List *l;
 
-	for (l = list, data = (Evas_Object *)eina_list_data_get(l); l; l = eina_list_next(l), data = (Evas_Object *)eina_list_data_get(l))
-	{
+	for (l = list, data = (Evas_Object *)eina_list_data_get(l); l; l = eina_list_next(l), data = (Evas_Object *)eina_list_data_get(l)) {
 		int x, y, w, h;
 
 		evas_object_geometry_get(data, &x, &y, &w, &h);
@@ -2338,85 +2263,79 @@ EXPORT_API void dump_obj(Evas_Object *obj, int lvl, int max_depth)
 		evas_object_size_hint_min_get(data, &mW, &mH);
 		evas_object_size_hint_max_get(data, &MW, &MH);
 
-		char *space = calloc(sizeof(char), (lvl*2+1));
-		if (space)
-		{
+		char *space = calloc(sizeof(char), (lvl * 2 + 1));
+		if (space) {
 			int i;
-			for ( i = 0; i < lvl*2; i++)
-			{
+			for (i = 0; i < lvl * 2; i++) {
 				space[i] = ' ';
 			}
 
-			space[lvl*2] = '\0';
+			space[lvl * 2] = '\0';
 
 			DEBUG_TRACE("%sObj=%s(%s,0x%08x) (%d,%d,%d,%d) m(%d,%d) M(%d,%d) P%d|R%d|V%d|E%d",
-				space, evas_object_name_get(data), evas_object_type_get(data), data, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
+			            space, evas_object_name_get(data), evas_object_type_get(data), data, x, y, w, h, mW, mH, MW, MH, pass, repeat, visible, propagate);
 		}
 
 		IF_FREE(space);
 
-		dump_obj(data, lvl+1, max_depth-1);
+		dump_obj(data, lvl + 1, max_depth - 1);
 
 	}
 }
 
 EXPORT_API void dump_widget(Evas_Object *obj, int lvl, int max_depth)
- {
-	 Eina_List *list = evas_object_smart_members_get(obj);
+{
+	Eina_List *list = evas_object_smart_members_get(obj);
 
-	 if (max_depth <= 0)
+	if (max_depth <= 0) {
 		return;
+	}
 
-	 if (lvl == 0 )
-	 {
-		 int x, y, w, h;
+	if (lvl == 0) {
+		int x, y, w, h;
 
-		 evas_object_geometry_get(obj, &x, &y, &w, &h);
-		 Eina_Bool repeat = evas_object_repeat_events_get(obj);
-		 Eina_Bool pass = evas_object_pass_events_get(obj);
-		 Eina_Bool visible = evas_object_visible_get(obj);
-		 Eina_Bool propagate = evas_object_propagate_events_get(obj);
+		evas_object_geometry_get(obj, &x, &y, &w, &h);
+		Eina_Bool repeat = evas_object_repeat_events_get(obj);
+		Eina_Bool pass = evas_object_pass_events_get(obj);
+		Eina_Bool visible = evas_object_visible_get(obj);
+		Eina_Bool propagate = evas_object_propagate_events_get(obj);
 
-		 SECURE_DEBUG("Obj=%s(%s,0x%08x) (%d,%d,%d,%d) P%d|R%d|V%d|E%d", evas_object_name_get(obj), elm_object_widget_type_get(obj), obj, x, y, w, h, pass, repeat, visible, propagate);
-		 lvl++;
-	 }
+		SECURE_DEBUG("Obj=%s(%s,0x%08x) (%d,%d,%d,%d) P%d|R%d|V%d|E%d", evas_object_name_get(obj), elm_object_widget_type_get(obj), obj, x, y, w, h, pass, repeat, visible, propagate);
+		lvl++;
+	}
 
-	 Evas_Object *data;
-	 Eina_List *l;
+	Evas_Object *data;
+	Eina_List *l;
 
-	 for (l = list, data = (Evas_Object *)eina_list_data_get(l); l; l = eina_list_next(l), data = (Evas_Object *)eina_list_data_get(l))
-	 {
-		 int x, y, w, h;
+	for (l = list, data = (Evas_Object *)eina_list_data_get(l); l; l = eina_list_next(l), data = (Evas_Object *)eina_list_data_get(l)) {
+		int x, y, w, h;
 
-		 evas_object_geometry_get(data, &x, &y, &w, &h);
-		 Eina_Bool repeat = evas_object_repeat_events_get(data);
-		 Eina_Bool pass = evas_object_pass_events_get(data);
-		 Eina_Bool visible = evas_object_visible_get(data);
-		 Eina_Bool propagate = evas_object_propagate_events_get(data);
+		evas_object_geometry_get(data, &x, &y, &w, &h);
+		Eina_Bool repeat = evas_object_repeat_events_get(data);
+		Eina_Bool pass = evas_object_pass_events_get(data);
+		Eina_Bool visible = evas_object_visible_get(data);
+		Eina_Bool propagate = evas_object_propagate_events_get(data);
 
-		if (elm_object_widget_type_get(data) != NULL || evas_object_name_get(data) != NULL )
-		{
-			char *space = calloc(sizeof(char),(lvl*2+1));
-			if (space)
-			{
+		if (elm_object_widget_type_get(data) != NULL || evas_object_name_get(data) != NULL) {
+			char *space = calloc(sizeof(char), (lvl * 2 + 1));
+			if (space) {
 				int i;
-				for ( i = 0; i < lvl*2; i++)
-				{
+				for (i = 0; i < lvl * 2; i++) {
 					space[i] = ' ';
 				}
 
-				space[lvl*2] = '\0';
+				space[lvl * 2] = '\0';
 
 				SECURE_DEBUG("%sObj=%s(%s,0x%08x) (%d,%d,%d,%d) P%d|R%d|V%d|E%d",
-					space, evas_object_name_get(data), elm_object_widget_type_get(data), data, x, y, w, h, pass, repeat, visible, propagate);
+				             space, evas_object_name_get(data), elm_object_widget_type_get(data), data, x, y, w, h, pass, repeat, visible, propagate);
 			}
 			IF_FREE(space);
-		 }
+		}
 
-		 dump_widget(data, lvl+1, max_depth-1);
+		dump_widget(data, lvl + 1, max_depth - 1);
 
-	 }
- }
+	}
+}
 
 #ifdef MP_FEATURE_PERSONAL_PAGE
 int mp_util_get_file_ext(const char *filename, char **file_ext)
@@ -2438,8 +2357,8 @@ int mp_util_get_file_ext(const char *filename, char **file_ext)
 
 int mp_util_is_duplicated_name(const char *dir, const char *name)
 {
-	MP_CHECK_VAL(dir,-1);
-	MP_CHECK_VAL(name,-1);
+	MP_CHECK_VAL(dir, -1);
+	MP_CHECK_VAL(name, -1);
 	char *file_path = g_strconcat(dir, "/", name, NULL);
 	if (mp_file_exists(file_path)) {
 		IF_FREE(file_path);
@@ -2537,8 +2456,7 @@ void mp_util_get_unique_name(char *original_file_name, char **unique_file_name)
 
 	if (bExt == 0) {
 		new_file_name = g_strdup_printf("%s_%d.%s", file_name_without_ext, nCount, file_ext);
-	}
-	else {
+	} else {
 		new_file_name = g_strdup_printf("%s_%d", file_name_without_ext, nCount);
 	}
 	mp_debug("new_file_name [%s]", new_file_name);
@@ -2565,10 +2483,11 @@ bool mp_util_is_personal_page_on()
 		mp_error("preference_get_int() fail!!");
 		status = FALSE;
 	}
-	if (status)
+	if (status) {
 		return true;
-	else
+	} else {
 		return false;
+	}
 }
 #endif
 
@@ -2581,7 +2500,7 @@ mp_util_mirroring_is_connected(void)
 bool
 mp_util_is_scan_nearby_available()
 {
-        return false;
+	return false;
 }
 
 bool
@@ -2600,19 +2519,13 @@ mp_util_free_space_check(double size)
 	int r;
 
 	r = storage_get_internal_memory_size(&s);
-	if (r < 0)
-	{
+	if (r < 0) {
 		mp_error("get free space failed");
 		return false;
-	}
-	else
-	{
-		if ((double)s.f_bsize*s.f_bavail >= size)
-		{
+	} else {
+		if ((double)s.f_bsize*s.f_bavail >= size) {
 			return true;
-		}
-		else
-		{
+		} else {
 			struct appdata *ad = mp_util_get_appdata();
 			if (ad) {
 				Evas_Object *popup = mp_popup_create(ad->win_main, MP_POPUP_NORMAL, NULL, NULL, NULL, ad);
@@ -2656,8 +2569,7 @@ mp_dir_e mp_util_get_file_location(const char *uri)
 		return MP_DIR_PHONE;
 	} else if (strncmp(uri, MP_MMC_DIR, len_memory) == 0) {
 		return MP_DIR_MMC;
-	}
-	else if (strncmp(uri, MP_HTTP_DIR, len_http) == 0) {
+	} else if (strncmp(uri, MP_HTTP_DIR, len_http) == 0) {
 		return MP_DIR_HTTP;
 	} else {
 		return MP_DIR_NONE;

@@ -28,8 +28,8 @@ extern "C" {
 #endif
 
 //mp_noti_h mp_noti_on_going_create(const char *title, const char *extra_data);
-void mp_noti_destroy(mp_noti_h noti);
-bool mp_noti_update_size(mp_noti_h noti, unsigned long long total, unsigned long long byte);
+	void mp_noti_destroy(mp_noti_h noti);
+	bool mp_noti_update_size(mp_noti_h noti, unsigned long long total, unsigned long long byte);
 //mp_noti_h mp_noti_box_create(const char *title, const char *extra_data);
 //void mp_noti_box_update(mp_noti_h noti, const char *title, const char *info, time_t time);
 

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -22,8 +22,7 @@
 #include "mp-vconf-private-keys.h"
 #include "ms-util.h"
 
-enum
-{
+enum {
 	MS_MENU_ALBUMS = 0,
 	MS_MENU_ARTISTS,
 	MS_MENU_GENRES,
@@ -34,8 +33,7 @@ enum
 	MS_MENU_NUMS,
 };
 
-typedef struct _ms_eq_custom_t
-{
+typedef struct _ms_eq_custom_t {
 	double band_1;
 	double band_2;
 	double band_3;

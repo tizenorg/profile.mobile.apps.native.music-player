@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -52,8 +52,7 @@
  * 2 : repeat only a songs
  */
 #define MP_KEY_MUSIC_REPEAT			MP_DB_PREFIX"repeat"
-enum
-{
+enum {
 	MP_SETTING_REP_ALL,
 	MP_SETTING_REP_NON,
 	MP_SETTING_REP_1
@@ -151,8 +150,7 @@ enum
  * type: int
  */
 #define KEY_MUSIC_AUTO_OFF_TYPE_VAL	"auto_off_type_val"
-enum
-{
+enum {
 	KEY_MUSIC_AUTO_OFF_TIME_OFF	= 0,
 	KEY_MUSIC_AUTO_OFF_TIME_15,
 	KEY_MUSIC_AUTO_OFF_TIME_30,
@@ -181,8 +179,7 @@ enum
  * 2 : repeat only a songs
  */
 #define MP_KEY_MUSIC_SQUARE_AXIS_VAL	"square_axis_val"
-enum
-{
+enum {
 	MP_KEY_MUSIC_SQUARE_AXIS_MOOD,
 	MP_KEY_MUSIC_SQUARE_AXIS_YEAR,
 	MP_KEY_MUSIC_SQUARE_AXIS_ADDED,

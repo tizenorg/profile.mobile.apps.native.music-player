@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-search-view.h"
@@ -81,17 +81,16 @@ _mc_search_view_keyword_changed_cb(void *data, Evas_Object * obj, void *event_in
 	search_str = mc_search_text_get(search->search_bar);
 
 	EVENT_TRACE("search_str: %s", search_str);
-	if (search_str)
-	{
-		if (search->needle)
+	if (search_str) {
+		if (search->needle) {
 			free(search->needle);
+		}
 		search->needle = search_str;
 		//signal = "hide.screen";
-	}
-	else
-	{
-		if (search->needle)
+	} else {
+		if (search->needle) {
 			free(search->needle);
+		}
 		//signal = "show.screen";
 	}
 
@@ -109,8 +108,8 @@ _mc_search_view_create_search_bar(void *thiz)
 	MP_CHECK(search->layout);
 
 	search->search_bar = mc_search_create_new(search->layout,
-			_mc_search_view_keyword_changed_cb, search, NULL, NULL,
-			NULL, search, NULL, search);
+	                     _mc_search_view_keyword_changed_cb, search, NULL, NULL,
+	                     NULL, search, NULL, search);
 	MP_CHECK(search->search_bar);
 	evas_object_show(mc_search_entry_get(search->search_bar));
 	endfunc;
@@ -148,19 +147,19 @@ _mc_search_init(Evas_Object *parent, void *thiz)
 {
 	startfunc;
 
-        search_view_data_t *search = (search_view_data_t *)thiz;
+	search_view_data_t *search = (search_view_data_t *)thiz;
 
-        Evas_Object *layout = mc_common_load_edj(parent, MC_EDJ_FILE, "view_layout");
+	Evas_Object *layout = mc_common_load_edj(parent, MC_EDJ_FILE, "view_layout");
 
-        search->layout = layout;
+	search->layout = layout;
 
 	/* search bar */
 	_mc_search_view_create_search_bar(search);
 
-        evas_object_event_callback_add(layout, EVAS_CALLBACK_DEL, _mc_search_layout_del_cb, search);
+	evas_object_event_callback_add(layout, EVAS_CALLBACK_DEL, _mc_search_layout_del_cb, search);
 
 	char *keyword = NULL;
-	search->needle= g_strdup(keyword);
+	search->needle = g_strdup(keyword);
 	mc_search_text_set(search->search_bar, keyword);
 
 	_mc_search_view_content_load(search);
@@ -171,23 +170,23 @@ _mc_search_init(Evas_Object *parent, void *thiz)
 search_view_data_t *mc_search_view_create(Evas_Object *parent, struct app_data *ad)
 {
 	eventfunc;
-        search_view_data_t *search = NULL;
+	search_view_data_t *search = NULL;
 
-        search = calloc(1, sizeof(search_view_data_t));
+	search = calloc(1, sizeof(search_view_data_t));
 	MP_CHECK_NULL(search);
 
-        search->ad = ad;
+	search->ad = ad;
 
-        _mc_search_init(ad->navi_bar, search);
+	_mc_search_init(ad->navi_bar, search);
 
-        Evas_Object *searchbar_layout = NULL;
-        elm_object_part_content_set(search->layout, "searchbar", searchbar_layout);
-        search->searchbar_layout = searchbar_layout;
+	Evas_Object *searchbar_layout = NULL;
+	elm_object_part_content_set(search->layout, "searchbar", searchbar_layout);
+	search->searchbar_layout = searchbar_layout;
 
-        Elm_Object_Item *navi_it = elm_naviframe_item_push(ad->navi_bar, NULL, NULL, NULL, search->layout, "empty/music");
-        search->navi_it = navi_it;
+	Elm_Object_Item *navi_it = elm_naviframe_item_push(ad->navi_bar, NULL, NULL, NULL, search->layout, "empty/music");
+	search->navi_it = navi_it;
 
-        elm_naviframe_item_pop_cb_set(navi_it, mc_quit_cb, ad);
+	elm_naviframe_item_pop_cb_set(navi_it, mc_quit_cb, ad);
 
 	return search;
 }
@@ -197,6 +196,6 @@ mc_search_view_set_keyword(search_view_data_t *search, const char *keyword)
 {
 	MP_CHECK(search);
 	IF_FREE(search->needle);
-	search->needle= g_strdup(keyword);
+	search->needle = g_strdup(keyword);
 	mc_search_text_set(search->search_bar, keyword);
 }

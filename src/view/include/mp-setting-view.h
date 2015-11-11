@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_SETTING_VIEW__
@@ -21,8 +21,7 @@
 #include "mp-view.h"
 #include "ms-key-ctrl.h"
 
-typedef enum
-{
+typedef enum {
 	MP_SETTING_VIEW_DEFAULT,
 	//MP_SETTING_VIEW_SA,
 	//MP_SETTING_VIEW_CUSTOM_EQ,
@@ -32,9 +31,8 @@ typedef enum
 } MpSettingViewType_e;
 
 
-typedef enum
-{
-        MP_SETTING_TABS_TRACKS ,
+typedef enum {
+	MP_SETTING_TABS_TRACKS ,
 	MP_SETTING_TABS_PLAYLISTS,
 	MP_SETTING_TABS_ALBUMS,
 	MP_SETTING_TABS_ARTISTS,
@@ -44,14 +42,12 @@ typedef enum
 	MP_SETTING_TABS_ITEM_MAX,
 } MpSettingViewTabs_e;
 
-typedef enum
-{
-        MP_SETTING_REORDER_TABS ,
+typedef enum {
+	MP_SETTING_REORDER_TABS ,
 	MP_SETTING_REORDER_PLAYLISTS,
 } MpSettingReorderType_e;
 
-typedef enum
-{
+typedef enum {
 	MS_MAIN_MENU_PLAYLIST,
 	MS_MAIN_MENU_LYRICS,
 	MS_MAIN_MENU_ITEM_MAX,
@@ -68,25 +64,24 @@ typedef enum {
 } ms_itc_type;
 
 typedef enum {
-        MS_EFFECT_THREE_D,
-        MS_EFFECT_BASS,
-        MS_EFFECT_CLARITY,
-        MS_EFFECT_MAX,
+	MS_EFFECT_THREE_D,
+	MS_EFFECT_BASS,
+	MS_EFFECT_CLARITY,
+	MS_EFFECT_MAX,
 } ms_effect_tab_type;
 
 enum {
-        MS_EF_NONE,
-        MS_EF_TUBE,
-        MS_EF_VIRTUAL,
-        MS_EF_SMALL_ROOM,
-        MS_EF_LARGE_ROOM,
-        MS_EF_CONCER_HALL,
+	MS_EF_NONE,
+	MS_EF_TUBE,
+	MS_EF_VIRTUAL,
+	MS_EF_SMALL_ROOM,
+	MS_EF_LARGE_ROOM,
+	MS_EF_CONCER_HALL,
 
-        MS_EF_MAX,
+	MS_EF_MAX,
 };
 
-enum
-{
+enum {
 	MS_TAB_BASIC,
 	MS_TAB_ADVANCED,
 
@@ -94,8 +89,7 @@ enum
 };
 
 
-typedef struct
-{
+typedef struct {
 	INHERIT_MP_VIEW;
 	MpSettingViewType_e setting_type;
 	Evas_Object *content;
@@ -107,22 +101,22 @@ typedef struct
 
 	Evas_Object *effect_layout;
 	Evas_Object *tabbar;
-        Evas_Object *basic_layout;
-        Evas_Object *gengrid;
-        Evas_Object *effect_gengrid;
-        ms_effect_tab_type effcet_tab_status;
+	Evas_Object *basic_layout;
+	Evas_Object *gengrid;
+	Evas_Object *effect_gengrid;
+	ms_effect_tab_type effcet_tab_status;
 	Evas_Object *parent;
-        MpSettingReorderType_e reorder_type;
-        bool landscape_mode;
+	MpSettingReorderType_e reorder_type;
+	bool landscape_mode;
 
-        Evas_Object *advanced_layout;
-        Evas_Object *progress_layout;
-        Evas_Object *effect_toolbar;
-        Evas_Object *effect_check[MS_EFFECT_MAX];
+	Evas_Object *advanced_layout;
+	Evas_Object *progress_layout;
+	Evas_Object *effect_toolbar;
+	Evas_Object *effect_check[MS_EFFECT_MAX];
 
-        Ecore_Idler *set_effect_idler;
-        int current_effect_val;
-        int tabbar_status;
+	Ecore_Idler *set_effect_idler;
+	int current_effect_val;
+	int tabbar_status;
 
 	Evas_Object *user_layout;
 	Evas_Object *eq_layout;
@@ -140,22 +134,21 @@ typedef struct
 
 	Evas_Object *auto_off_radio_grp;
 	bool b_mouse_down;
-        Evas_Object *auto_check;
-        int init_square;
-        int init_effect;
-        ms_extended_effect_t init_extended_value;
-        ms_eq_custom_t  init_custom_values;
-}MpSettingView_t;
+	Evas_Object *auto_check;
+	int init_square;
+	int init_effect;
+	ms_extended_effect_t init_extended_value;
+	ms_eq_custom_t  init_custom_values;
+} MpSettingView_t;
 
-typedef struct
-{
-	int x:8;
-	int y:8;
+typedef struct {
+	int x: 8;
+	int y: 8;
 } ms_effect_position_t;
 
 typedef struct {
 	Elm_Object_Item *it;
-        int index;
+	int index;
 	MpSettingView_t *view;
 	ms_effect_position_t position;
 	bool b_seleted;
@@ -163,13 +156,13 @@ typedef struct {
 
 typedef struct {
 	Elm_Object_Item *it;
-        int index;
+	int index;
 	bool b_seleted;
 } ms_effect_ef_gengrid_item_data_t;
 
 typedef struct {
 	Elm_Object_Item *it;
-        int index;
+	int index;
 	char* str;
 	int seq;
 } mp_setting_genlist_item_data_t;

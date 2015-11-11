@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MC_COMMON_H__
@@ -24,8 +24,8 @@
 void mc_common_push_track_view_by_group_name(void *ad, int track_type, const char *name, int playlist_id, const char *folder_name);
 bool mc_check_image_valid(Evas *evas, const char *path);
 Elm_Object_Item *mc_common_toolbar_item_append(Evas_Object *obj, const char *icon,
-				const char *label, Evas_Smart_Cb func,
-				const void *data);
+        const char *label, Evas_Smart_Cb func,
+        const void *data);
 void mc_post_status_message(const char *text);
 bool mc_is_call_connected(void);
 void mc_common_obj_domain_text_translate(Evas_Object *obj, const char *label);

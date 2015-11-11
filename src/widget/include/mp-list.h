@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_LIST_H__
@@ -24,55 +24,49 @@
 #include "mp-floating-widget-mgr.h"
 #include "mp-popup.h"
 
-typedef enum
-{
+typedef enum {
 	MP_LIST_TYPE_TRACK,
 	MP_LIST_TYPE_GROUP,
 	MP_LIST_TYPE_PLAYLIST,
-        MP_LIST_TYPE_ALBUM_DETAIL,
+	MP_LIST_TYPE_ALBUM_DETAIL,
 	MP_LIST_TYPE_ARTIST_DETAIL,
 	MP_LIST_TYPE_ALL,
-        MP_LIST_TYPE_SQUARE,
+	MP_LIST_TYPE_SQUARE,
 	MP_LIST_TYPE_MAX,
-}MpListType_e;
+} MpListType_e;
 
-typedef enum
-{
+typedef enum {
 	MP_LIST_FUNC_NORMAL,	//in all-view
 	MP_LIST_FUNC_ADD_TRACK,	//in add-track-view
 	MP_LIST_FUNC_MAX,
-}MpListFunction_e;
+} MpListFunction_e;
 
-typedef enum
-{
+typedef enum {
 	MP_LIST_DISPLAY_MODE_NORMAL,
 	MP_LIST_DISPLAY_MODE_THUMBNAIL,
 	MP_LIST_DISPLAY_MODE_MAX,
 } MpListDisplayMode_e;				// view as
 
-typedef enum
-{
+typedef enum {
 	MP_LIST_EDIT_TYPE_NORMAL,
 	MP_LIST_EDIT_TYPE_SHARE,
 } MpListEditType_e;
 
-typedef enum
-{
+typedef enum {
 	MP_LIST_ITEM_TYPE_NORMAL	= 0,
-        MP_LIST_ITEM_TYPE_SHUFFLE,
+	MP_LIST_ITEM_TYPE_SHUFFLE,
 	MP_LIST_ITEM_TYPE_GROUP_TITLE,
 	MP_LIST_ITEM_TYPE_SELECTABLE_GROUP_TITLE,
 	MP_LIST_ITEM_TYPE_ALBUMART_INDEX,
 	MP_LIST_ITEM_TYPE_BOTTOM_COUNTER,
 } MpListItemType_e;
 
-typedef enum
-{
+typedef enum {
 	MP_TRACK_LIST_VIEW_ALL,
 	MP_TRACK_LIST_VIEW_LOCAL,
 	MP_TRACK_LIST_VIEW_CLOUD,
 	MP_TRACK_LIST_VIEW_MAX,
-}MpCloudView_e;
+} MpCloudView_e;
 
 typedef enum {
 	MP_TRACK_LIST_INDEX_NONE,
@@ -109,8 +103,8 @@ typedef enum {
 	Evas_Object *fast_scroll;\
 	Elm_Object_Item *bottom_counter_item; \
 	char *(*bottom_counter_text_get_cb)(void *thiz); \
-        mp_popup_t popup_type;\
-        Ecore_Timer *pop_delay_timer;\
+	mp_popup_t popup_type;\
+	Ecore_Timer *pop_delay_timer;\
 	int edit_mode;\
 	MpListEditType_e edit_type;\
 	int reorderable;\
@@ -121,7 +115,7 @@ typedef enum {
 	MpListPersonalPage_t personal_page_type; \
 	MpListPersonalPageLocation_t personal_page_storage; \
 	void (*update)(void *thiz);\
-        void (*realized_item_update)(void *thiz, const char *part, int field);\
+	void (*realized_item_update)(void *thiz, const char *part, int field);\
 	void (*set_edit)(void *thiz, bool edit);\
 	void (*set_reorder)(void *thiz, bool reorder);\
 	void (*rotate)(void *thiz);\
@@ -141,11 +135,11 @@ typedef enum {
 	void (*mode_right_cb)(void *thiz, Evas_Object * obj, void *event_info);\
 	void (*mode_cancel_cb)(void *thiz, Evas_Object * obj, void *event_info);\
 	void (*longpressed_cb)(void *data, Evas_Object *obj, void *event_info);\
-        void (*drag_start_cb)(void *data, Evas_Object *obj, void *event_info);\
-        void (*drag_stop_cb)(void *data, Evas_Object *obj, void *event_info);\
+	void (*drag_start_cb)(void *data, Evas_Object *obj, void *event_info);\
+	void (*drag_stop_cb)(void *data, Evas_Object *obj, void *event_info);\
 	void (*change_display_mode)(void *thiz, MpListDisplayMode_e mode); \
 	void (*selected_item_data_get)(void *thiz, GList **selected);\
-        void (*all_item_data_get)(void *thiz, GList **selected);\
+	void (*all_item_data_get)(void *thiz, GList **selected);\
 	const char *(*get_label)(void *thiz, void *event_info);\
 	mp_group_type_e group_type; \
 	char *type_str; \
@@ -156,10 +150,10 @@ typedef enum {
 	MpTrackListIndex_t index_type; \
 	MpListFunction_e function_type; \
 	GList *checked_path_list; \
-
-typedef struct __MpList{
+	 
+typedef struct __MpList {
 	INHERIT_MP_LIST
-}MpList_t;
+} MpList_t;
 
 #define INHERIT_MP_LIST_ITEM_DATA \
 	int index; \
@@ -173,15 +167,13 @@ typedef struct __MpList{
 	int artist_album_page; \
 	void *plst_item;
 
-typedef struct
-{
+typedef struct {
 	// for mh_list_item_data;
 	INHERIT_MP_LIST_ITEM_DATA;
 
 } mp_list_item_data_t;
 
-typedef struct
-{
+typedef struct {
 	int item_count;
 	mp_list_item_data_t **item_data;
 } mp_grid_item_data_t;

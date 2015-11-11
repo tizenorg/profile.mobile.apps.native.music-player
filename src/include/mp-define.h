@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -210,8 +210,8 @@
 #define HIGHLIGHT_COLOR "2A71E7FF"
 
 typedef int SLP_Bool;
-typedef void (*MpHttpOpenRspCb) (gpointer user_data);
-typedef void (*MpGetShazamSigCb) (char *signature, int size, void *data);
+typedef void (*MpHttpOpenRspCb)(gpointer user_data);
+typedef void (*MpGetShazamSigCb)(char *signature, int size, void *data);
 
 #define TIME_FORMAT_LEN	15
 
@@ -225,59 +225,59 @@ typedef void (*MpGetShazamSigCb) (char *signature, int size, void *data);
 #define IF_G_FREE(p) ({g_free(p);p=NULL;})
 
 #define mp_evas_object_del(object) do { \
-	if(object) { \
-		evas_object_del(object); \
-		object = NULL; \
-	} \
-} while (0)
+		if(object) { \
+			evas_object_del(object); \
+			object = NULL; \
+		} \
+	} while (0)
 
 #define mp_elm_object_item_del(object) do { \
-	if(object) { \
-		elm_object_item_del(object); \
-		object = NULL; \
-	} \
-} while (0)
+		if(object) { \
+			elm_object_item_del(object); \
+			object = NULL; \
+		} \
+	} while (0)
 
 #define mp_elm_genlist_del(list) do { \
-	if(list) { \
-		elm_genlist_clear(list);\
-		evas_object_del(list); \
-		list = NULL; \
-	} \
-} while (0)
+		if(list) { \
+			elm_genlist_clear(list);\
+			evas_object_del(list); \
+			list = NULL; \
+		} \
+	} while (0)
 
 #define mp_ecore_timer_del(timer) do { \
-	if(timer) { \
-		ecore_timer_del(timer);\
-		timer = NULL; \
-	} \
-} while (0)
+		if(timer) { \
+			ecore_timer_del(timer);\
+			timer = NULL; \
+		} \
+	} while (0)
 
 #define mp_ecore_animator_del(animator) do { \
-	if(animator) { \
-		ecore_animator_del(animator);\
-		animator = NULL; \
-	} \
-} while (0)
+		if(animator) { \
+			ecore_animator_del(animator);\
+			animator = NULL; \
+		} \
+	} while (0)
 
 #define mp_ecore_idler_del(idler) do { \
-	if(idler) { \
-		ecore_idler_del(idler);\
-		idler = NULL; \
-	} \
-} while (0)
+		if(idler) { \
+			ecore_idler_del(idler);\
+			idler = NULL; \
+		} \
+	} while (0)
 
 #define MP_TIMER_FREEZE(timer) do { \
-	if(timer) { \
-		ecore_timer_freeze(timer);\
-	} \
-} while (0)
+		if(timer) { \
+			ecore_timer_freeze(timer);\
+		} \
+	} while (0)
 
 #define MP_TIMER_THAW(timer) do { \
-	if(timer) { \
-		ecore_timer_thaw(timer);\
-	} \
-} while (0)
+		if(timer) { \
+			ecore_timer_thaw(timer);\
+		} \
+	} while (0)
 
 
 #define SAFE_STRCPY(dest, src) \
@@ -286,42 +286,38 @@ typedef void (*MpGetShazamSigCb) (char *signature, int size, void *data);
 		dest[sizeof(dest)-1] = 0;	}while(0)
 
 #define mp_evas_object_response_set(obj, response) do { \
-	if (obj) { \
-		evas_object_data_set((obj), "response", (void *)(response)); \
-	} \
-} while (0)
+		if (obj) { \
+			evas_object_data_set((obj), "response", (void *)(response)); \
+		} \
+	} while (0)
 
 #define mp_evas_object_response_get(obj) (int)evas_object_data_get((obj), "response")
 
 #define SCALED_SIZE(x)	((x) * elm_config_scale_get())
 
-typedef enum
-{
+typedef enum {
 	MP_SCREEN_MODE_PORTRAIT = 0,
 	MP_SCREEN_MODE_LANDSCAPE,
 } mp_screen_mode;
 
 
-typedef enum
-{
+typedef enum {
 	MP_SND_PATH_SPEAKER = 0x01,
-	MP_SND_PATH_EARPHONE= 0x02,
-	MP_SND_PATH_BT= 0x04,
-	MP_SND_PATH_HDMI= 0x10,
-	MP_SND_PATH_MIRRORING= 0x20, //WIFI display
-	MP_SND_PATH_USB_AUDIO= 0x40,
+	MP_SND_PATH_EARPHONE = 0x02,
+	MP_SND_PATH_BT = 0x04,
+	MP_SND_PATH_HDMI = 0x10,
+	MP_SND_PATH_MIRRORING = 0x20, //WIFI display
+	MP_SND_PATH_USB_AUDIO = 0x40,
 	MP_SND_PATH_MAX,
 } mp_snd_path;
 
-typedef enum
-{
+typedef enum {
 	MP_VIEW_MODE_DEFAULT,
 	MP_VIEW_MODE_EDIT,
 	MP_VIEW_MODE_SEARCH,
 } mp_view_mode_t;
 
-typedef enum
-{
+typedef enum {
 	MP_VIEW_TYPE_SONGS,
 	MP_VIEW_TYPE_PLAYLIST,
 	MP_VIEW_TYPE_ALBUM,
@@ -336,8 +332,7 @@ typedef enum
 	MP_VIEW_TYPE_MAX,
 } mp_view_type_t;
 
-typedef enum
-{
+typedef enum {
 	MP_DONE_DELETE_TYPE = 0x01,
 	MP_DONE_REMOVED_TYPE,
 	MP_DONE_ADD_TO_TYPE,
@@ -347,8 +342,7 @@ typedef enum
 	MP_DONE_MAX,
 } mp_done_operator_type_t;
 
-enum
-{
+enum {
 	MP_PLAY_STATE_NONE,
 	MP_PLAY_STATE_PLAYING,
 	MP_PLAY_STATE_PAUSED,
@@ -356,8 +350,7 @@ enum
 	MP_PLAY_STATE_MAX,
 } mp_play_state;
 
-typedef enum
-{
+typedef enum {
 	MP_TAB_PLAYLISTS,
 	MP_TAB_SONGS,
 	MP_TAB_ALBUMS,
@@ -368,12 +361,12 @@ typedef enum
 
 #define MP_GENLIST_CHECK_FOREACH_SAFE(first, current, next, data) \
 	for (current = first,                                      \
-		next = elm_genlist_item_next_get(current),                    \
-		data = elm_object_item_data_get(current);                  \
-		current;                                             \
-		current = next,                                    \
-		next = elm_genlist_item_next_get(current),                    \
-		data = elm_object_item_data_get(current))
+	        next = elm_genlist_item_next_get(current),                    \
+	        data = elm_object_item_data_get(current);                  \
+	        current;                                             \
+	        current = next,                                    \
+	        next = elm_genlist_item_next_get(current),                    \
+	        data = elm_object_item_data_get(current))
 
 #define 	MP_PLAYLIST_MAX_ITEM_COUNT 1000
 #define 	MP_NOW_PLAYING_ICON_SIZE 74 * elm_config_scale_get()
@@ -421,15 +414,14 @@ typedef enum
 
 #define SINGLE_BYTE_MAX 0x7F
 
-typedef enum
-{
+typedef enum {
 	MP_UG_MESSAGE_BACK,
 	MP_UG_MESSAGE_DEL,
 	MP_UG_MESSAGE_LOAD,
 #ifdef MP_FEATURE_INNER_SETTINGS
 	MP_UG_MESSAGE_SETTINGS_BACK,
 #endif
-}mp_ug_message_t;
+} mp_ug_message_t;
 
 #define MP_POPUP_TITLE_H 72
 #define MP_POPUP_MAX_H	752

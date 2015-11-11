@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-album-booklet-view.h"
@@ -98,13 +98,13 @@ static void _mp_album_booklet_view_normal_more_btn_cb(void *data, Evas_Object *o
 
 	/*Search */
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SEARCH, MP_PLAYER_MORE_BTN_SEARCH, _mp_album_booklet_view_search_cb, view);
+	                             STR_MP_SEARCH, MP_PLAYER_MORE_BTN_SEARCH, _mp_album_booklet_view_search_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
+	                             STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
@@ -181,8 +181,9 @@ _mp_album_booklet_view_album_index_text_get(void *data, Evas_Object * obj, const
 
 	char *text = NULL;
 	if (!g_strcmp0(part, "elm.text.1")) {
-		if (view->info_data)
+		if (view->info_data) {
 			text = view->info_data->album_title;
+		}
 	} else if (!g_strcmp0(part, "elm.text.2")) {
 		return _mp_album_booklet_view_get_year(view);
 	} else if (!g_strcmp0(part, "elm.text.3")) {
@@ -211,10 +212,11 @@ _mp_album_booklet_view_title_text_get(void *data, Evas_Object * obj, const char 
 	MP_CHECK_NULL(view);
 
 	const char *title = NULL;
-	if (type == ALBUM_BOOKLET_VIEW_TRACK_LIST)
+	if (type == ALBUM_BOOKLET_VIEW_TRACK_LIST) {
 		title = STR_MP_TRACK_LIST;
-	else if (type == ALBUM_BOOKLET_VIEW_REVIEW)
+	} else if (type == ALBUM_BOOKLET_VIEW_REVIEW) {
 		title = STR_MP_REVIEW;
+	}
 
 	char *text = GET_STR(title);
 	return g_strdup(text);
@@ -275,12 +277,13 @@ _mp_album_booklet_view_append_track_item(Evas_Object *genlist, char *header, cha
 	Elm_Object_Item *item;
 
 	item = elm_genlist_item_append(view->track_genlist, view->track_itc,
-				info,
-				NULL,
-				ELM_GENLIST_ITEM_NONE,
-				NULL, NULL);
-	if (item)
+	                               info,
+	                               NULL,
+	                               ELM_GENLIST_ITEM_NONE,
+	                               NULL, NULL);
+	if (item) {
 		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	}
 }
 
 static Evas_Object *
@@ -402,9 +405,9 @@ static void _mp_album_booklet_append_album_item(Evas_Object *gengrid, char *name
 	info->thumb = g_strdup(thumb);
 
 	elm_gengrid_item_append(view->album_gengrid, view->album_itc,
-				info,
-				NULL,
-				NULL);
+	                        info,
+	                        NULL,
+	                        NULL);
 }
 
 
@@ -444,13 +447,14 @@ _mp_album_booklet_view_gengrid_create(Evas_Object *parent, MpAlbumBookletView_t 
 		for (i = 0; i < info_data->discography_count; i++) {
 			if (info_data->discography[i].album_title && info_data->discography[i].thumbpath) {
 				_mp_album_booklet_append_album_item(view->album_gengrid, info_data->discography[i].album_title,
-					info_data->discography[i].year, info_data->discography[i].thumbpath);
+				                                    info_data->discography[i].year, info_data->discography[i].thumbpath);
 			} else {
 				DEBUG_TRACE("credits have error");
 			}
 		}
-	} else
+	} else {
 		view->album_gengrid = mp_widget_create_no_contents(view->current_page, MP_NOCONTENT_NORMAL, NULL, NULL);
+	}
 
 	endfunc;
 	return view->album_gengrid;
@@ -461,7 +465,7 @@ _mp_album_booklet_view_add_review(Evas_Object *parent, MpAlbumBookletView_t *vie
 {
 	startfunc;
 	MP_CHECK_NULL(parent);
-	MP_CHECK_NULL (view);
+	MP_CHECK_NULL(view);
 
 	Evas_Object *scroller = elm_scroller_add(parent);
 	elm_scroller_bounce_set(scroller, EINA_FALSE, EINA_TRUE);
@@ -542,10 +546,12 @@ static void _mp_album_booklet_view_content_load(void *thiz)
 	mp_scroll_page_hide_scroll_bar(scroll_page);
 
 	/* calc page total becasue of title index */
-	if (view->info_data->track_list_count > 0)
+	if (view->info_data->track_list_count > 0) {
 		++view->page_count;
-	if (view->info_data->review)
+	}
+	if (view->info_data->review) {
 		++view->page_count;
+	}
 
 	Evas_Object *page = NULL;
 	int page_count = 0;
@@ -606,7 +612,9 @@ MpAlbumBookletView_t *mp_album_booklet_view_create(Evas_Object *parent, mp_info_
 	MP_CHECK_NULL(view);
 
 	ret = _mp_album_booklet_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	view->info_data = info_data;
 	view->name = g_strdup(album);

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-now-playing-list-view.h"
@@ -46,26 +46,26 @@ _mp_now_playing_list_view_normal_more_btn_cb(void *data, Evas_Object *obj, void 
 
 	view->more_btn_ctxpopup = mp_common_create_more_ctxpopup(view);
 	MP_CHECK(view->more_btn_ctxpopup);
-/*
-	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				GET_SYS_STR("IDS_COM_SK_REFRESH"), NULL, NULL, view);
-	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				GET_SYS_STR("IDS_COM_BODY_SETTINGS"), NULL, NULL, view);
-*/
+	/*
+		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					GET_SYS_STR("IDS_COM_SK_REFRESH"), NULL, NULL, view);
+		mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
+					GET_SYS_STR("IDS_COM_BODY_SETTINGS"), NULL, NULL, view);
+	*/
 
 #ifdef MP_FEATURE_SHARE
 	/* share via */
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
+	                             STR_MP_SHARE, MP_PLAYER_MORE_BTN_SHARE, mp_common_share_cb, view);
 #endif
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_EDIT, MP_PLAYER_MORE_BTN_EDIT, _mp_now_playing_view_open_playlist_btn_edit_cb, view);
+	                             STR_MP_EDIT, MP_PLAYER_MORE_BTN_EDIT, _mp_now_playing_view_open_playlist_btn_edit_cb, view);
 
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-		STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
+	                             STR_MP_SETTINGS, MP_PLAYER_MORE_BTN_SETTING, mp_common_ctxpopup_setting_cb, view);
 #ifndef MP_FEATURE_NO_END
 	mp_util_ctxpopup_item_append(view->more_btn_ctxpopup,
-				STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
+	                             STR_MP_END, MP_PLAYER_MORE_BTN_VIEW_END, mp_common_ctxpopup_end_cb, view);
 #endif
 	mp_util_more_btn_move_ctxpopup(view->more_btn_ctxpopup, obj);
 
@@ -150,10 +150,10 @@ _mp_now_playing_list_view_back_cb(void *data, Elm_Object_Item *it)
 	MP_CHECK(now_playing_list);
 	if (now_playing_list->edit_mode == 1)*/
 	{
-/*		mp_list_set_edit((MpList_t *)now_playing_list, FALSE);
-		view->update_options(view);*/
+		/*		mp_list_set_edit((MpList_t *)now_playing_list, FALSE);
+				view->update_options(view);*/
 	}
-/*	else*/
+	/*	else*/
 	{
 		MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
 		mp_view_mgr_pop_view(view_manager, false);
@@ -196,11 +196,11 @@ _mp_now_playing_list_view_update_options_edit(void *thiz)
 	Elm_Object_Item *toolbar_item = NULL;
 
 	toolbar_item = mp_widget_create_toolbar_item_btn(toolbar,
-		MP_TOOLBAR_BTN_LEFT, STR_MP_ADD_TO, mp_common_button_add_to_playlist_cb, view->content_to_show);
+	               MP_TOOLBAR_BTN_LEFT, STR_MP_ADD_TO, mp_common_button_add_to_playlist_cb, view->content_to_show);
 	view->toolbar_options[MP_OPTION_LEFT] = toolbar_item;
 
 	toolbar_item = mp_widget_create_toolbar_item_btn(toolbar,
-		MP_TOOLBAR_BTN_RIGHT, STR_MP_REMOVE, _mp_now_playing_list_view_remove_btn_cb, view);
+	               MP_TOOLBAR_BTN_RIGHT, STR_MP_REMOVE, _mp_now_playing_list_view_remove_btn_cb, view);
 	view->toolbar_options[MP_OPTION_RIGHT] = toolbar_item;
 
 	Eina_Bool disabled = (mp_list_get_checked_count(view->content_to_show) == 0) ? EINA_TRUE : EINA_FALSE;
@@ -210,8 +210,9 @@ _mp_now_playing_list_view_update_options_edit(void *thiz)
 		mp_evas_object_del(view->selection_info);
 	}
 
-	if (view->select_all_btn)
+	if (view->select_all_btn) {
 		elm_object_disabled_set(view->select_all_btn, !((Eina_Bool)mp_list_get_editable_count(view->content_to_show, mp_list_get_edit_type(view->content_to_show))));
+	}
 
 	elm_naviframe_item_pop_cb_set(view->navi_it, _mp_now_playing_list_view_back_cb, view);
 
@@ -241,11 +242,13 @@ _mp_now_playing_list_view_update(void *thiz)
 	startfunc;
 	MpNowPlayingListiew_t *view = thiz;
 
-	if (view->content_to_show)
+	if (view->content_to_show) {
 		mp_list_update((MpList_t *)view->content_to_show);
+	}
 
-	if (mp_list_get_edit(view->content_to_show))
+	if (mp_list_get_edit(view->content_to_show)) {
 		mp_list_set_edit(view->content_to_show, true);
+	}
 
 	endfunc;
 	return 0;
@@ -297,7 +300,9 @@ mp_now_playing_list_view_create(Evas_Object *parent)
 	MP_CHECK_NULL(view);
 
 	ret = _mp_now_playing_list_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	_mp_now_playing_list_view_content_set(view);
 

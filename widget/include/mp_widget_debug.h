@@ -59,20 +59,20 @@ extern FILE *__file_log_fp;
 
 // DbgPrint("FREE\n");
 #define DbgFree(a) do { \
-	free(a); \
-} while (0)
+		free(a); \
+	} while (0)
 
 #define DbgXFree(a) do { \
-	DbgPrint("XFree\n"); \
-	XFree(a); \
-} while (0)
+		DbgPrint("XFree\n"); \
+		XFree(a); \
+	} while (0)
 
 #define mp_retvm_if(expr, val, fmt, arg...) do { \
-	if(expr) { \
-		PARAM_CHECK(fmt, ##arg); \
-		return (val); \
-	} \
-} while (0)
+		if(expr) { \
+			PARAM_CHECK(fmt, ##arg); \
+			return (val); \
+		} \
+	} while (0)
 
 #if defined(_ENABLE_PERF)
 #define PERF_INIT() \
@@ -81,18 +81,18 @@ extern FILE *__file_log_fp;
 	struct timeval __rtv
 
 #define PERF_BEGIN() do { \
-	if (gettimeofday(&__stv, NULL) < 0) { \
-		ErrPrint("gettimeofday: %s\n", strerror(errno)); \
-	} \
-} while (0)
+		if (gettimeofday(&__stv, NULL) < 0) { \
+			ErrPrint("gettimeofday: %s\n", strerror(errno)); \
+		} \
+	} while (0)
 
 #define PERF_MARK(tag) do { \
-	if (gettimeofday(&__etv, NULL) < 0) { \
-		ErrPrint("gettimeofday: %s\n", strerror(errno)); \
-	} \
-	timersub(&__etv, &__stv, &__rtv); \
-	DbgPrint("[%s] %u.%06u\n", tag, __rtv.tv_sec, __rtv.tv_usec); \
-} while (0)
+		if (gettimeofday(&__etv, NULL) < 0) { \
+			ErrPrint("gettimeofday: %s\n", strerror(errno)); \
+		} \
+		timersub(&__etv, &__stv, &__rtv); \
+		DbgPrint("[%s] %u.%06u\n", tag, __rtv.tv_sec, __rtv.tv_usec); \
+	} while (0)
 #else
 #define PERF_INIT()
 #define PERF_BEGIN()

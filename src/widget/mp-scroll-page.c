@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -58,7 +58,9 @@ static Evas_Object *_mp_scroll_page_scroller_get_page_at(void *data, unsigned in
 
 	box = sd->box;
 	page_list = elm_box_children_get(box);
-	if (NULL == page_list) return NULL;
+	if (NULL == page_list) {
+		return NULL;
+	}
 
 	page = eina_list_nth(page_list, idx);
 	eina_list_free(page_list);
@@ -90,54 +92,57 @@ _mp_scroll_page_scroller_drag_start_cb(void *data, Evas_Object *obj, void *event
 static void
 _mp_scroll_page_scroller_drag_stop_cb(void *data, Evas_Object *obj, void *event_info)
 {
-         startfunc;
-         scroll_page_s *sd = data;
-         MP_CHECK(sd);
+	startfunc;
+	scroll_page_s *sd = data;
+	MP_CHECK(sd);
 
-         if (sd->drag_started == false)
-                   return;
+	if (sd->drag_started == false) {
+		return;
+	}
 
-         int pagenum;
-         int prev_page = sd->current_page;
-         elm_scroller_current_page_get(sd->scroller, &pagenum, NULL);
-         sd->current_page = pagenum;
-         sd->drag_started = false;
+	int pagenum;
+	int prev_page = sd->current_page;
+	elm_scroller_current_page_get(sd->scroller, &pagenum, NULL);
+	sd->current_page = pagenum;
+	sd->drag_started = false;
 
-	 _mp_scroll_page_scroller_focus(sd);
-	  /*if page ckange callback set, call it*/
-         if (sd->page_change_callback && prev_page != sd->current_page)
+	_mp_scroll_page_scroller_focus(sd);
+	/*if page ckange callback set, call it*/
+	if (sd->page_change_callback && prev_page != sd->current_page) {
 		sd->page_change_callback(sd->current_page, sd->page_change_user_data);
+	}
 
 }
 
 static void
 _mp_scroll_page_scroller_anim_stop_cb(void *data, Evas_Object *obj, void *event_info)
 {
-         startfunc;
-         scroll_page_s *sd = data;
-         MP_CHECK(sd);
+	startfunc;
+	scroll_page_s *sd = data;
+	MP_CHECK(sd);
 
-         int pagenum;
-         int prev_page = sd->current_page;
-         elm_scroller_current_page_get(sd->scroller, &pagenum, NULL);
-         sd->current_page = pagenum;
+	int pagenum;
+	int prev_page = sd->current_page;
+	elm_scroller_current_page_get(sd->scroller, &pagenum, NULL);
+	sd->current_page = pagenum;
 
 	_mp_scroll_page_scroller_focus(sd);
-         /*if page ckange callback set, call it*/
-         if (sd->page_change_callback && prev_page != sd->current_page)
-                   sd->page_change_callback(sd->current_page, sd->page_change_user_data);
+	/*if page ckange callback set, call it*/
+	if (sd->page_change_callback && prev_page != sd->current_page) {
+		sd->page_change_callback(sd->current_page, sd->page_change_user_data);
+	}
 }
 
 
 static Eina_Bool
 _animator_cb(void *data)
 {
-   scroll_page_s *sd = (scroll_page_s *)data;
-   MP_CHECK_FALSE(sd);
+	scroll_page_s *sd = (scroll_page_s *)data;
+	MP_CHECK_FALSE(sd);
 
-   elm_scroller_page_show(sd->scroller, sd->current_page, 0);
-   sd->animator = NULL;
-   return ECORE_CALLBACK_CANCEL;
+	elm_scroller_page_show(sd->scroller, sd->current_page, 0);
+	sd->animator = NULL;
+	return ECORE_CALLBACK_CANCEL;
 }
 
 static void
@@ -207,8 +212,9 @@ _mp_scroll_page_smart_show(Evas_Object *obj)
 	scroll_page_s *sd = evas_object_smart_data_get(obj);
 	MP_CHECK(sd);
 
-	if (sd->scroller)
+	if (sd->scroller) {
 		evas_object_show(sd->scroller);
+	}
 }
 
 static void
@@ -218,8 +224,9 @@ _mp_scroll_page_smart_hide(Evas_Object *obj)
 	scroll_page_s *sd = evas_object_smart_data_get(obj);
 	MP_CHECK(sd);
 
-	if (sd->scroller)
+	if (sd->scroller) {
 		evas_object_hide(sd->scroller);
+	}
 }
 
 static void
@@ -229,8 +236,9 @@ _mp_scroll_page_smart_clip_set(Evas_Object *obj, Evas_Object *clip)
 	scroll_page_s *sd = evas_object_smart_data_get(obj);
 	MP_CHECK(sd);
 
-	if (sd->scroller)
+	if (sd->scroller) {
 		evas_object_clip_set(sd->scroller, clip);
+	}
 }
 
 static void
@@ -240,8 +248,9 @@ _mp_scroll_page_smart_clip_unset(Evas_Object *obj)
 	scroll_page_s *sd = evas_object_smart_data_get(obj);
 	MP_CHECK(sd);
 
-	if (sd->scroller)
+	if (sd->scroller) {
 		evas_object_clip_unset(sd->scroller);
+	}
 };
 
 
@@ -258,8 +267,7 @@ _mp_scroll_page_smart_calculate(Evas_Object *obj)
 
 	Eina_List *l;
 	Evas_Object *layout;
-	EINA_LIST_FOREACH(layout_list, l, layout)
-	{
+	EINA_LIST_FOREACH(layout_list, l, layout) {
 		Evas_Object *rect = elm_object_part_content_get(layout, "elm.swallow.bg");
 		if (rect) {
 			evas_object_size_hint_min_set(rect, sd->page_width, 0);
@@ -273,10 +281,9 @@ _mp_scroll_page_smart_calculate(Evas_Object *obj)
 	eina_list_free(layout_list);
 	layout_list = NULL;
 
-	if (sd->reloacation_flag == TRUE && (sd->location_page_type > SCROLL_PAGE_MIN && sd->location_page_type < SCROLL_PAGE_MAX))
-	{
+	if (sd->reloacation_flag == TRUE && (sd->location_page_type > SCROLL_PAGE_MIN && sd->location_page_type < SCROLL_PAGE_MAX)) {
 		Evas_Coord	x, y, w, h;
-		elm_scroller_region_get( sd->scroller, &x, &y, &w, &h );
+		elm_scroller_region_get(sd->scroller, &x, &y, &w, &h);
 		x = sd->page_width * sd->location_page_type;
 		elm_scroller_region_show(sd->scroller, x, y, w, h);
 		elm_scroller_current_page_get(sd->scroller, &(sd->current_page), NULL);
@@ -308,21 +315,22 @@ mp_scroll_page_add(Evas_Object *parent)
 		sc.clip_set = _mp_scroll_page_smart_clip_set;
 		sc.clip_unset = _mp_scroll_page_smart_clip_unset;
 		sc.calculate = _mp_scroll_page_smart_calculate;
-		if (!(smart = evas_smart_class_new(&sc))) return NULL;
+		if (!(smart = evas_smart_class_new(&sc))) {
+			return NULL;
+		}
 	}
 
 	obj = evas_object_smart_add(evas_object_evas_get(parent), smart);
 
 	scroll_page_s *sd = evas_object_smart_data_get(obj);
-	if (sd)
-	{
+	if (sd) {
 
 		Evas_Object *scroller = elm_scroller_add(parent);
 		elm_scroller_bounce_set(scroller, EINA_FALSE, EINA_FALSE);
 		elm_scroller_policy_set(scroller, ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_OFF);
 		elm_object_scroll_lock_y_set(scroller, EINA_TRUE);
-		elm_scroller_single_direction_set( scroller, ELM_SCROLLER_SINGLE_DIRECTION_HARD );
-	 	sd->scroller = scroller;
+		elm_scroller_single_direction_set(scroller, ELM_SCROLLER_SINGLE_DIRECTION_HARD);
+		sd->scroller = scroller;
 
 		Evas_Object *box = elm_box_add(scroller);
 		elm_box_horizontal_set(box, EINA_TRUE);
@@ -425,18 +433,16 @@ mp_scroll_page_remove(Evas_Object *obj, MpScrollPageType_e page_type)
 	Evas_Object *sub_obj = NULL;
 
 	children_list = elm_box_children_get(sd->box);
-	EINA_LIST_FOREACH(children_list, l, sub_obj)
-	{
+	EINA_LIST_FOREACH(children_list, l, sub_obj) {
 		MpScrollPageType_e obj_type = (MpScrollPageType_e)evas_object_data_get(sub_obj, "page_type");
-		if (obj_type == page_type)
-		{
+		if (obj_type == page_type) {
 			elm_box_unpack(sd->box, sub_obj);
 			sd->page_count--;
 			break;
 		}
 	}
 
-	if  (children_list) {
+	if (children_list) {
 		eina_list_free(children_list);
 		children_list = NULL;
 	}
@@ -488,20 +494,19 @@ mp_scroll_page_set_page_location(Evas_Object *obj, MpScrollPageType_e page_type)
 	MP_CHECK(sd);
 	MP_CHECK(sd->box);
 
-	switch (page_type)
-	{
-		case SCROLL_PAGE_STORE:
-			sd->current_page = 0;
-			break;
-		case SCROLL_PAGE_RADIO:
-			sd->current_page = (sd->page_count-2);
-			break;
-		case SCROLL_PAGE_PLAYER:
-			sd->current_page = (sd->page_count-1);
-			break;
-		default:
-			mp_error("unhandled page type %d", page_type);
-			return;
+	switch (page_type) {
+	case SCROLL_PAGE_STORE:
+		sd->current_page = 0;
+		break;
+	case SCROLL_PAGE_RADIO:
+		sd->current_page = (sd->page_count - 2);
+		break;
+	case SCROLL_PAGE_PLAYER:
+		sd->current_page = (sd->page_count - 1);
+		break;
+	default:
+		mp_error("unhandled page type %d", page_type);
+		return;
 	}
 	elm_scroller_page_show(sd->scroller, sd->current_page, 0);
 	_mp_scroll_page_scroller_focus(sd);
@@ -516,12 +521,13 @@ MpScrollPageType_e mp_scroll_page_get_current_page_type(Evas_Object *obj)
 	MP_CHECK_VAL(sd, SCROLL_PAGE_PLAYER);
 	MP_CHECK_VAL(sd->box, SCROLL_PAGE_PLAYER);
 
-	if (sd->current_page == (sd->page_count -1 ))
+	if (sd->current_page == (sd->page_count - 1)) {
 		return SCROLL_PAGE_PLAYER;
-	else if (sd->current_page == 0)
+	} else if (sd->current_page == 0) {
 		return SCROLL_PAGE_STORE;
-	else
+	} else {
 		return SCROLL_PAGE_RADIO;
+	}
 }
 
 void mp_scroll_page_hide_scroll_bar(Evas_Object *obj)

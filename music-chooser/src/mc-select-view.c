@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include <glib.h>
@@ -26,7 +26,7 @@
 
 //#define SHOW_SEARCHBAR
 
-typedef struct{
+typedef struct {
 	struct app_data *ad;
 
 	Evas_Object *layout;
@@ -45,7 +45,7 @@ typedef struct{
 	mp_media_list_h media_list;
 	mp_media_list_h defualt_playlist;
 
-}sel_view_data_t;
+} sel_view_data_t;
 
 static Elm_Genlist_Item_Class *itc;
 static void _mc_list_update(sel_view_data_t *vd);
@@ -55,8 +55,9 @@ static void _mc_layout_del_cb(void *data, Evas *evas, Evas_Object *obj, void *ev
 	sel_view_data_t *vd = data;
 	MP_CHECK(vd);
 	IF_FREE(vd->filter_text);
-	if (vd->media_list)
+	if (vd->media_list) {
 		mp_media_info_group_list_destroy(vd->media_list);
+	}
 	free(vd);
 }
 
@@ -72,10 +73,11 @@ static void _mc_changed_cb(void *data, Evas_Object *obj, void *event_info)
 	vd->filter_text = g_strdup(text);
 
 	if (elm_object_focus_get(vd->searchbar_layout)) {
-		if (elm_entry_is_empty(obj))
+		if (elm_entry_is_empty(obj)) {
 			elm_object_signal_emit(vd->searchbar_layout, "elm,state,eraser,hide", "elm");
-		else
+		} else {
 			elm_object_signal_emit(vd->searchbar_layout, "elm,state,eraser,show", "elm");
+		}
 	}
 
 	_mc_list_update(vd);
@@ -87,8 +89,9 @@ static void _mc_focused_cb(void *data, Evas_Object *obj, void *event_info)
 	sel_view_data_t *vd = data;
 	MP_CHECK(vd);
 
-	if (!elm_entry_is_empty(obj))
+	if (!elm_entry_is_empty(obj)) {
 		elm_object_signal_emit(vd->searchbar_layout, "elm,state,eraser,show", "elm");
+	}
 	elm_object_signal_emit(vd->searchbar_layout, "elm,state,guidetext,hide", "elm");
 	elm_object_signal_emit(vd->searchbar_layout, "cancel,in", "");
 }
@@ -98,8 +101,9 @@ static void _mc_unfocused_cb(void *data, Evas_Object *obj, void *event_info)
 	DEBUG_TRACE("");
 	sel_view_data_t *vd = data;
 	MP_CHECK(vd);
-	if (elm_entry_is_empty(obj))
+	if (elm_entry_is_empty(obj)) {
 		elm_object_signal_emit(vd->searchbar_layout, "elm,state,guidetext,show", "elm");
+	}
 	elm_object_signal_emit(vd->searchbar_layout, "elm,state,eraser,hide", "elm");
 	elm_object_signal_emit(vd->searchbar_layout, "cancel,out", "");
 }
@@ -129,8 +133,9 @@ static void _mc_cancel_clicked_cb(void *data, Evas_Object *obj, void *event_info
 	evas_object_hide(obj);
 	elm_object_signal_emit(vd->searchbar_layout, "cancel,out", "");
 	text = elm_entry_entry_get(vd->entry);
-	if (text != NULL && strlen(text) > 0)
+	if (text != NULL && strlen(text) > 0) {
 		elm_entry_entry_set(vd->entry, NULL);
+	}
 	elm_object_focus_set(vd->entry, EINA_FALSE);
 	elm_object_focus_set(vd->list_object, EINA_TRUE);
 }
@@ -162,7 +167,7 @@ _mc_create_searchbar(sel_view_data_t *vd)
 	evas_object_smart_callback_add(entry, "unfocused", _mc_unfocused_cb, vd);
 	elm_object_part_content_set(searchbar_layout, "elm.swallow.content", entry);
 	//elm_object_part_text_set(searchbar_layout, "elm.guidetext", GET_STR(MC_TEXT_SEARCH));
-        mc_common_obj_domain_translatable_part_text_set(searchbar_layout, "elm.guidetext", MC_TEXT_SEARCH);
+	mc_common_obj_domain_translatable_part_text_set(searchbar_layout, "elm.guidetext", MC_TEXT_SEARCH);
 	elm_object_signal_callback_add(searchbar_layout, "elm,eraser,clicked", "elm", _mc_eraser_clicked_cb, vd);
 	elm_object_signal_callback_add(searchbar_layout, "elm,bg,clicked", "elm", _mc_bg_clicked_cb, vd);
 	elm_entry_input_panel_layout_set(entry, ELM_INPUT_PANEL_LAYOUT_NORMAL);
@@ -209,8 +214,9 @@ static void _gl_sel(void *data, Evas_Object *obj, void *event_info)
 	mp_media_info_group_get_main_info(media, &title);
 	mp_media_info_group_get_thumbnail_path(media, &thumbnail_path);
 
-	if (vd->type == MP_GROUP_BY_PLAYLIST)
+	if (vd->type == MP_GROUP_BY_PLAYLIST) {
 		mp_media_info_group_get_playlist_id(media, &playlist_id);
+	}
 
 
 	//_add_to_home(vd, title, playlist_id, thumbnail_path);
@@ -222,36 +228,37 @@ static void _mc_append_items(sel_view_data_t *vd)
 	int i;
 	mp_media_list_h media_list = NULL;
 
-	if (vd->type == MP_GROUP_BY_PLAYLIST)
-	{
+	if (vd->type == MP_GROUP_BY_PLAYLIST) {
 		mp_media_info_h media = NULL;
 		mp_media_info_group_list_create(&media_list, MP_GROUP_BY_SYS_PLAYLIST, NULL, NULL, 0, 0);
 		i = 0;
-		for (i = 0; i<3; i++) {
+		for (i = 0; i < 3; i++) {
 			media = mp_media_info_group_list_nth_item(media_list, i);
-			if (!media)
+			if (!media) {
 				break;
+			}
 
 			elm_genlist_item_append(vd->genlist, itc, media,
-				NULL, ELM_GENLIST_ITEM_NONE, _gl_sel, vd);
+			                        NULL, ELM_GENLIST_ITEM_NONE, _gl_sel, vd);
 		}
 
-		if (vd->defualt_playlist)
+		if (vd->defualt_playlist) {
 			mp_media_info_group_list_destroy(vd->defualt_playlist);
+		}
 		vd->defualt_playlist = media_list;
 	}
 
 	mp_media_info_group_list_create(&media_list, vd->type, NULL, vd->filter_text, 0, vd->count);
 
-	for (i = 0; i < vd->count; i++)
-	{
+	for (i = 0; i < vd->count; i++) {
 		elm_genlist_item_append(vd->genlist, itc,
-			mp_media_info_group_list_nth_item(media_list, i),
-			NULL, ELM_GENLIST_ITEM_NONE, _gl_sel, vd);
+		                        mp_media_info_group_list_nth_item(media_list, i),
+		                        NULL, ELM_GENLIST_ITEM_NONE, _gl_sel, vd);
 	}
 
-	if (vd->media_list)
+	if (vd->media_list) {
 		mp_media_info_group_list_destroy(vd->media_list);
+	}
 	vd->media_list = media_list;
 	endfunc;
 }
@@ -276,20 +283,19 @@ _mc_list_update(sel_view_data_t *vd)
 		}
 		if (!vd->no_content) {
 			NoContentType_e type = NO_CONTENT_SONG;
-			if (vd->type == MP_GROUP_BY_PLAYLIST)
+			if (vd->type == MP_GROUP_BY_PLAYLIST) {
 				type = NO_CONTENT_PLAYLIST;
-			else if (vd->type == MP_GROUP_BY_ARTIST)
+			} else if (vd->type == MP_GROUP_BY_ARTIST) {
 				type = NO_CONTENT_ARTIST;
-			else if (vd->type == MP_GROUP_BY_ALBUM)
+			} else if (vd->type == MP_GROUP_BY_ALBUM) {
 				type = NO_CONTENT_ALBUM;
+			}
 
 			vd->no_content = mc_widget_no_content_add(vd->layout, type);
 		}
 
 		list_object = vd->no_content;
-	}
-	else
-	{
+	} else {
 		if (vd->no_content) {
 			evas_object_del(vd->no_content);
 			vd->no_content = NULL;
@@ -314,8 +320,7 @@ _mc_select_view_init(int type, sel_view_data_t *vd)
 
 	itc = elm_genlist_item_class_new();
 	itc->func.content_get = mc_group_content_get;
-	switch (type)
-	{
+	switch (type) {
 	case MC_SHORTCUT_ALBUM:
 		itc->item_style = "music/3text.1icon.2/";
 		itc->func.text_get = mc_album_text_get;

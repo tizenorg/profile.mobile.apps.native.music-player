@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -40,8 +40,9 @@ bool mp_http_mgr_create(void *data)
 	MP_CHECK_FALSE(ad->http_mgr);
 	ad->http_mgr->ad = ad;
 
-	if (!_mp_http_mgr_register_runtime_info_change_cb(ad->http_mgr))
+	if (!_mp_http_mgr_register_runtime_info_change_cb(ad->http_mgr)) {
 		goto mp_exception;
+	}
 
 	_mp_http_mgr_refresh_network_info(ad->http_mgr);
 
@@ -58,8 +59,9 @@ bool mp_http_mgr_destory(void *data)
 
 	MP_CHECK_FALSE(ad);
 
-	if (!ad->http_mgr)
+	if (!ad->http_mgr) {
 		mp_http_mgr_create(ad);
+	}
 	MP_CHECK_FALSE(ad->http_mgr);
 
 	_mp_http_mgr_ignore_runtime_info_change_cb();
@@ -80,33 +82,36 @@ static MpHttpState_t _mp_http_mgr_get_network_status()
 
 	err = wifi_get_connection_state(&state_wifi);
 	if (err != WIFI_ERROR_NONE) {
-		    WARN_TRACE("wifi_is_activated error. err is [%d]", err);
-		    bwifi_on_off = false;
+		WARN_TRACE("wifi_is_activated error. err is [%d]", err);
+		bwifi_on_off = false;
 	}
 
 	if (state_wifi == WIFI_CONNECTION_STATE_FAILURE
-		    || state_wifi == WIFI_CONNECTION_STATE_DISCONNECTED) {
-		    WARN_TRACE("WIFI_CONNECTION_STATE DISABLED");
-		    bwifi_on_off = false;
+	        || state_wifi == WIFI_CONNECTION_STATE_DISCONNECTED) {
+		WARN_TRACE("WIFI_CONNECTION_STATE DISABLED");
+		bwifi_on_off = false;
 	}
 
 	err = runtime_info_get_value_bool(RUNTIME_INFO_KEY_PACKET_DATA_ENABLED, &b3g_on_off);
 	if (err != RUNTIME_INFO_ERROR_NONE) {
-		    WARN_TRACE("runtime_info_get_value_bool error. err is [%d]", err);
-		    b3g_on_off = false;
+		WARN_TRACE("runtime_info_get_value_bool error. err is [%d]", err);
+		b3g_on_off = false;
 	}
 
 	DEBUG_TRACE("3g flag is %d", b3g_on_off);
 	DEBUG_TRACE("wifi flag is %d", bwifi_on_off);
 	/*decide status*/
-	if (bwifi_on_off == true)
+	if (bwifi_on_off == true) {
 		state = MP_HTTP_STATE_WIFI;
+	}
 #if 0	/* 3g has issue when getting runtime_info despite SIM is not inserted, it also returns 1 */
-	else if (b3g_on_off == true)
+	else if (b3g_on_off == true) {
 		state = MP_HTTP_STATE_CELLULAR;
+	}
 #endif
-	else
+	else {
 		state = MP_HTTP_STATE_OFF;
+	}
 
 	mp_debug("network state is %d", state);
 	return state;
@@ -118,7 +123,7 @@ static bool _mp_http_mgr_register_runtime_info_change_cb(mp_http_mgr_t *http_mgr
 	MP_CHECK_FALSE(http_mgr);
 
 	if (runtime_info_set_changed_cb(RUNTIME_INFO_KEY_PACKET_DATA_ENABLED,
-		_mp_http_mgr_network_config_changed_cb, http_mgr) != 0) {
+	                                _mp_http_mgr_network_config_changed_cb, http_mgr) != 0) {
 		mp_error("runtime_info_set_changed_cb() fail");
 		return FALSE;
 	}
@@ -182,8 +187,9 @@ mp_http_mgr_get_state(void *data)
 	struct appdata *ad = (struct appdata *)data;
 
 	MP_CHECK_FALSE(ad);
-	if (!ad->http_mgr)
+	if (!ad->http_mgr) {
 		mp_http_mgr_create(ad);
+	}
 
 	mp_http_mgr_t *http_mgr = ad->http_mgr;
 
@@ -194,8 +200,9 @@ inline bool mp_http_mgr_is_connected(void *data)
 {
 	struct appdata *ad = data;
 	MP_CHECK_FALSE(ad);
-	if (!ad->http_mgr)
+	if (!ad->http_mgr) {
 		mp_http_mgr_create(ad);
+	}
 
 	MpHttpState_t state = mp_http_mgr_get_state(data);
 	return (state > MP_HTTP_STATE_OFF) ? true : false;

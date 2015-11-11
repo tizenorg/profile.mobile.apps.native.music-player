@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __DEF_MC_LIST_PLAY_H_
@@ -43,10 +43,10 @@ typedef enum {
 	MC_VOLUME_NUM,
 } mc_player_volume_type;
 
-typedef struct __mc_player_cbs{
+typedef struct __mc_player_cbs {
 	/* player callbacks */
-/*	player_started_cb started_cb;
-	player_paused_cb paused_cb;*/
+	/*	player_started_cb started_cb;
+		player_paused_cb paused_cb;*/
 	player_completed_cb completed_cb;
 	player_interrupted_cb interrupted_cb;
 	player_error_cb error_cb;
@@ -55,7 +55,7 @@ typedef struct __mc_player_cbs{
 
 	/* callback user data */
 	void *user_data[MC_PLAYER_CB_TYPE_MAX];
-}mc_player_cbs;
+} mc_player_cbs;
 
 typedef struct {
 	mc_player_cb_type cb_type;

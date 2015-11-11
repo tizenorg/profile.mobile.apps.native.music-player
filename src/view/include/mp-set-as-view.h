@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_SET_AS_VIEW__
@@ -22,8 +22,7 @@
 #include "mp-media-info.h"
 #include <player.h>
 
-typedef enum
-{
+typedef enum {
 	MP_SET_AS_FROM_START = 0,
 	MP_SET_AS_RECOMMEND,
 	MP_SET_AS_RECOMMEND_PRE_LISTEN,
@@ -35,8 +34,7 @@ typedef enum
 } set_as_item_type;
 
 
-typedef struct
-{
+typedef struct {
 	INHERIT_MP_VIEW;
 	Evas_Object *content;
 	Evas_Object *progress_popup;
@@ -57,9 +55,9 @@ typedef struct
 	Ecore_Pipe *smat_pipe;
 
 	Ecore_Idler *move_idler;
-}MpSetAsView_t;
+} MpSetAsView_t;
 
-EXPORT_API MpSetAsView_t *mp_set_as_view_create(Evas_Object *parent,char* path);
+EXPORT_API MpSetAsView_t *mp_set_as_view_create(Evas_Object *parent, char* path);
 int mp_set_as_view_destory(MpSetAsView_t *view);
 #endif
 

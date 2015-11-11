@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mp-add-track-view.h"
@@ -31,7 +31,7 @@ static void _mp_add_track_view_change_cb(void *data, Evas_Object *obj, void *eve
 
 	it = elm_toolbar_selected_item_get(obj);
 	DEBUG_TRACE("selected toolbar item: 0x%x", it);
-	mp_retm_if (it == NULL, "tab item is NULL");
+	mp_retm_if(it == NULL, "tab item is NULL");
 
 	if (it == view->ctltab_album) {
 		tab = MP_ADD_TRACK_VIEW_TAB_ALBUMS;
@@ -176,20 +176,20 @@ _mp_add_track_view_content_load(void *view)
 	obj = add_track_view->add_track_view_tabbar;
 
 	add_track_view->ctltab_songs =
-		mp_util_toolbar_item_append(obj, NULL, (STR_MP_TRACKS), _mp_add_track_view_change_cb, add_track_view);
+	    mp_util_toolbar_item_append(obj, NULL, (STR_MP_TRACKS), _mp_add_track_view_change_cb, add_track_view);
 	/*mp_language_mgr_register_object_item(add_track_view->ctltab_songs, STR_MP_TRACKS);*/
 #ifdef MP_FEATURE_ADD_TO_INCLUDE_PLAYLIST_TAB
 	add_track_view->ctltab_plist =
-		mp_util_toolbar_item_append(obj, NULL, (STR_MP_PLAYLISTS), _mp_add_track_view_change_cb, add_track_view);
+	    mp_util_toolbar_item_append(obj, NULL, (STR_MP_PLAYLISTS), _mp_add_track_view_change_cb, add_track_view);
 #endif
 	/*mp_language_mgr_register_object_item(add_track_view->ctltab_plist,STR_MP_PLAYLISTS);*/
 
 	add_track_view->ctltab_album =
-		mp_util_toolbar_item_append(obj, NULL, (STR_MP_ALBUMS), _mp_add_track_view_change_cb, add_track_view);
+	    mp_util_toolbar_item_append(obj, NULL, (STR_MP_ALBUMS), _mp_add_track_view_change_cb, add_track_view);
 	/*mp_language_mgr_register_object_item(add_track_view->ctltab_album, STR_MP_ALBUMS);*/
 
 	add_track_view->ctltab_artist =
-		mp_util_toolbar_item_append(obj, NULL, (STR_MP_ARTISTS), _mp_add_track_view_change_cb, add_track_view);
+	    mp_util_toolbar_item_append(obj, NULL, (STR_MP_ARTISTS), _mp_add_track_view_change_cb, add_track_view);
 	/*mp_language_mgr_register_object_item(add_track_view->ctltab_artist, STR_MP_ARTISTS);*/
 
 	/*add_track_view->ctltab_folders =
@@ -259,7 +259,9 @@ MpAddTrackView_t *mp_add_track_view_create(Evas_Object *parent, int playlist_id)
 	view->playlist_id = playlist_id;
 
 	ret = _mp_add_track_view_init(parent, view);
-	if (ret) goto Error;
+	if (ret) {
+		goto Error;
+	}
 
 	_mp_add_track_view_content_load(view);
 	return view;
@@ -348,8 +350,9 @@ int mp_add_track_view_select_tab(MpAddTrackView_t *view, MpAddTrackViewTab_e tab
 		edje_object_signal_emit(_EDJ(view->add_track_view_layout), "SHOW_SELECT_ALL_PADDING", "*");
 		content = ((MpTrackList_t *)view->content_to_show)->layout;
 		save_btn = elm_object_item_part_content_get(view->navi_it, "title_right_btn");
-		if (save_btn)
+		if (save_btn) {
 			elm_object_disabled_set(save_btn, EINA_TRUE);
+		}
 	} else {
 		DEBUG_TRACE("tab out of control");
 		return -1;

@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-track-list.h"
@@ -28,7 +28,7 @@ extern list_item_data_t *pre_item_data;
 extern list_item_data_t *cur_item_data;
 extern int g_position;
 
-typedef struct{
+typedef struct {
 	struct app_data *ad;
 
 	Evas_Object *no_content;
@@ -50,7 +50,7 @@ typedef struct{
 
 	Ecore_Timer *destroy_timer;
 	Elm_Object_Item *win_navi_it;
-}track_list_data_t;
+} track_list_data_t;
 
 
 #define GET_LIST_DATA(obj)	evas_object_data_get(obj, "list_data")
@@ -148,10 +148,11 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		player_state_e state = mc_pre_play_get_player_state();
 
 		if (part_content) {
-			if (state == PLAYER_STATE_PLAYING || state == PLAYER_STATE_IDLE)
+			if (state == PLAYER_STATE_PLAYING || state == PLAYER_STATE_IDLE) {
 				elm_object_signal_emit(part_content, "show_play", "*");
-			else
+			} else {
 				elm_object_signal_emit(part_content, "show_pause", "*");
+			}
 
 			//elm_object_item_signal_emit(cur_item_data->it, "show_color" ,"*");
 		}
@@ -231,12 +232,12 @@ char *mc_create_selectioninfo_text_with_count(int count)
 {
 	startfunc;
 	char *name = NULL;
-    if (count > 0) {
-    	name =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS), count);
-    } else {
-    	name = GET_STR(MC_TEXT_SELECT);
-    }
-    return g_strdup(name);
+	if (count > 0) {
+		name =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS), count);
+	} else {
+		name = GET_STR(MC_TEXT_SELECT);
+	}
+	return g_strdup(name);
 }
 
 static char *_gl_select_all_text_get(void *data, Evas_Object *obj, const char *part)
@@ -262,16 +263,16 @@ static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 	mp_media_info_h media = it_data->media;
 
 	mp_media_info_get_file_path(media, &uri);
-	mp_retv_if (!uri, NULL);
+	mp_retv_if(!uri, NULL);
 
 	int ret = 0;
 	if ((!strcmp(part, "elm.text.main.left.top")) || (!strcmp(part, "elm.text.sub.left.bottom"))) {
 		if (!strcmp(part, "elm.text.main.left.top")) {
 			ret = mp_media_info_get_title(media,  &title);
-			MP_CHECK_NULL(ret==0);
+			MP_CHECK_NULL(ret == 0);
 		} else {
 			ret = mp_media_info_get_artist(media, &title);
-			MP_CHECK_NULL(ret==0);
+			MP_CHECK_NULL(ret == 0);
 		}
 
 		if (cur_item_data) {
@@ -294,9 +295,9 @@ static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 			g = 108;
 			b = 148;
 			a = 255;
-			memset(result, 0x00, DEF_STR_LEN+1);
+			memset(result, 0x00, DEF_STR_LEN + 1);
 			snprintf(result, DEF_STR_LEN,
-					 "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup_title);
+			         "<color=#%02x%02x%02x%02x>%s</color>", r, g, b, a, markup_title);
 			IF_FREE(markup_title);
 
 			return g_strdup(result);
@@ -394,8 +395,9 @@ _get_select_count(void *data)//(Evas_Object *genlist)
 	MP_CHECK_VAL(ld->genlist, 0);
 
 	item = elm_genlist_first_item_get(ld->genlist);
-	if (ld->ad->select_type == MC_SELECT_MULTI)
+	if (ld->ad->select_type == MC_SELECT_MULTI) {
 		item = elm_genlist_item_next_get(item);
+	}
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
 		item = elm_genlist_item_next_get(item);
@@ -408,25 +410,24 @@ _get_select_count(void *data)//(Evas_Object *genlist)
 
 static Elm_Object_Item  *_get_select_radio(void *data)
 {
-        startfunc;
+	startfunc;
 
-        track_list_data_t *ld  = data;
+	track_list_data_t *ld  = data;
 
-        Elm_Object_Item *item = NULL;
-        item = elm_genlist_first_item_get(ld->genlist);
+	Elm_Object_Item *item = NULL;
+	item = elm_genlist_first_item_get(ld->genlist);
 
-        while (item) {
-                list_item_data_t *it_data = elm_object_item_data_get(item);
-                item = elm_genlist_item_next_get(item);
+	while (item) {
+		list_item_data_t *it_data = elm_object_item_data_get(item);
+		item = elm_genlist_item_next_get(item);
 
-                int index = elm_radio_value_get(g_radio_main);
-                DEBUG_TRACE("index: %d", index);
-                if (it_data->index == index)
-                {
-                        return item;
-                }
-        }
-        return item;
+		int index = elm_radio_value_get(g_radio_main);
+		DEBUG_TRACE("index: %d", index);
+		if (it_data->index == index) {
+			return item;
+		}
+	}
+	return item;
 
 }
 
@@ -471,15 +472,17 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 			state_index = index;
 			elm_radio_value_set(g_radio_main, state_index);
 			if (index != -1) {
-				if (ld->btn_set)
+				if (ld->btn_set) {
 					elm_object_disabled_set(ld->btn_set, false);
-				if (ld->btn_cancel)
+				}
+				if (ld->btn_cancel) {
 					elm_object_disabled_set(ld->btn_cancel, false);
+				}
 			}
 //			elm_genlist_realized_items_update(ld->genlist);
 		}
 	} else if (it_data->ad->select_type == MC_SELECT_SINGLE) {
-		if(item) {
+		if (item) {
 			index = it_data->index;
 			elm_radio_value_set(g_radio_main, index);
 		}
@@ -503,11 +506,11 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 
 	elm_genlist_item_fields_update(event_info, "elm.icon.2", ELM_GENLIST_ITEM_FIELD_CONTENT);
 
-	if ((ld->ad->select_type == MC_SELECT_MULTI) && ((ld->ad->limitsize>0) && (item_size + mpFileInfo.st_size > ld->ad->limitsize)) && it_data->checked) {
+	if ((ld->ad->select_type == MC_SELECT_MULTI) && ((ld->ad->limitsize > 0) && (item_size + mpFileInfo.st_size > ld->ad->limitsize)) && it_data->checked) {
 		WARN_TRACE("Exceeded max size by caller");
 		size_exceeded = true;
 		it_data->checked = !it_data->checked;
-		if(!it_data->checkbox_cb) {
+		if (!it_data->checkbox_cb) {
 			Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon.right");
 			Eina_Bool check_state = elm_check_state_get(check);
 			elm_check_state_set(check, !check_state);
@@ -517,10 +520,10 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 		IF_FREE(name);
 	}
 
-	if ((ld->ad->select_type == MC_SELECT_MULTI) && ((ld->ad->max_count>0) && _get_select_count(ld) > ld->ad->max_count)) {
+	if ((ld->ad->select_type == MC_SELECT_MULTI) && ((ld->ad->max_count > 0) && _get_select_count(ld) > ld->ad->max_count)) {
 		WARN_TRACE("Exceeded max count by caller");
 		it_data->checked = !it_data->checked;
-		if(!it_data->checkbox_cb) {
+		if (!it_data->checkbox_cb) {
 			Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon.right");
 			Eina_Bool check_state = elm_check_state_get(check);
 			elm_check_state_set(check, !check_state);
@@ -535,10 +538,11 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 		Elm_Object_Item *selected_item = elm_genlist_first_item_get(ld->genlist);
 		Evas_Object *check = elm_object_item_part_content_get(selected_item, "elm.icon");
 		if (!size_exceeded) {
-			if (it_data->checked)
+			if (it_data->checked) {
 				item_size = item_size + mpFileInfo.st_size;
-			else
+			} else {
 				item_size = item_size - mpFileInfo.st_size;
+			}
 		}
 		if ((_get_media_list_count(ld) - _get_select_count(ld)) == 0) {
 			elm_check_state_set(check, EINA_TRUE);
@@ -572,26 +576,25 @@ void mc_track_list_set_uri_selected(void *thiz, const char *uri)
 	track_list_data_t *ld = evas_object_data_get(ad->track_list, "list_data");
 	MP_CHECK(ld);
 
-        Elm_Object_Item *item;
-        item = elm_genlist_first_item_get(ld->genlist);
+	Elm_Object_Item *item;
+	item = elm_genlist_first_item_get(ld->genlist);
 
-        while (item) {
-        	char *path = NULL;
+	while (item) {
+		char *path = NULL;
 		list_item_data_t *it_data = elm_object_item_data_get(item);
 
 		mp_media_info_h media = it_data->media;
 		MP_CHECK(media);
 		mp_media_info_get_file_path(media, &path);
 
-		if (!strcmp(path, uri))
-		{
+		if (!strcmp(path, uri)) {
 			elm_genlist_item_bring_in(it_data->it, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 			elm_radio_value_set(g_radio_main, it_data->index);
 
 			elm_genlist_item_selected_set(item, EINA_TRUE);
 		}
 		item = elm_genlist_item_next_get(item);
-        }
+	}
 
 //	elm_genlist_realized_items_update(ld->genlist);
 }
@@ -623,7 +626,7 @@ _cancel_cb(void *data, Evas_Object *obj, void *event_info)
 
 	app_control_h service = NULL;
 	app_control_create(&service);
-	app_control_reply_to_launch_request(service,ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
+	app_control_reply_to_launch_request(service, ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
 	if (ld->t_type == MP_TRACK_ALL) {
 		mp_ecore_timer_del(ld->destroy_timer);
 		ld->destroy_timer = ecore_timer_add(0.1, _destroy_timer_cb, ld);
@@ -659,17 +662,21 @@ _set_cb(void *data, Evas_Object *obj, void *event_info)
 		if (selected_item == item) {
 			char *tmp = NULL;
 			mp_media_info_h media = it_data->media;
-			if (!media) continue;
+			if (!media) {
+				continue;
+			}
 			mp_media_info_get_file_path(media, &tmp);
-			if (path == NULL)
+			if (path == NULL) {
 				path = g_string_new(tmp);
-			else
+			} else {
 				g_string_append_printf(path, fmt, tmp);
+			}
 
 			count++;
-			path_array = realloc(path_array, sizeof(char *)*count);
-			if (path_array != NULL)
-				path_array[count -1] = tmp;
+			path_array = realloc(path_array, sizeof(char *) * count);
+			if (path_array != NULL) {
+				path_array[count - 1] = tmp;
+			}
 		}
 	}
 
@@ -683,10 +690,10 @@ _set_cb(void *data, Evas_Object *obj, void *event_info)
 	app_control_h service = NULL;
 	app_control_create(&service);
 	app_control_add_extra_data_array(service, APP_CONTROL_DATA_PATH,
-					(const char **)path_array,
-					count);
+	                                 (const char **)path_array,
+	                                 count);
 	app_control_add_extra_data_array(service, APP_CONTROL_DATA_SELECTED, (const char **)path_array, count);
-	app_control_reply_to_launch_request(service,ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
+	app_control_reply_to_launch_request(service, ld->ad->service, APP_CONTROL_RESULT_SUCCEEDED);
 
 	mp_ecore_timer_del(ld->destroy_timer);
 	ld->destroy_timer = ecore_timer_add(0.1, _destroy_timer_cb, ld);
@@ -763,7 +770,9 @@ _done_cb(void *data, Evas_Object *obj, void *event_info)
 		if (it_data && it_data->checked) {
 			char *tmp = NULL;
 			mp_media_info_h media = it_data->media;
-			if (!media) break;
+			if (!media) {
+				break;
+			}
 
 			mp_media_info_get_file_path(media, &tmp);
 			if (path == NULL) {
@@ -774,9 +783,10 @@ _done_cb(void *data, Evas_Object *obj, void *event_info)
 			}
 
 			count++;
-			path_array = realloc(path_array, sizeof(char *)*count);
-			if (path_array != NULL)
-				path_array[count -1] = tmp;
+			path_array = realloc(path_array, sizeof(char *) * count);
+			if (path_array != NULL) {
+				path_array[count - 1] = tmp;
+			}
 		}
 	}
 
@@ -788,17 +798,17 @@ _done_cb(void *data, Evas_Object *obj, void *event_info)
 		app_control_h service = NULL;
 		app_control_create(&service);
 		app_control_add_extra_data_array(service, APP_CONTROL_DATA_PATH,
-				(const char **)path_array,
-				count);
+		                                 (const char **)path_array,
+		                                 count);
 		app_control_add_extra_data_array(service,
-				APP_CONTROL_DATA_SELECTED,
-				(const char **)path_array,
-				count);
+		                                 APP_CONTROL_DATA_SELECTED,
+		                                 (const char **)path_array,
+		                                 count);
 
 		app_control_reply_to_launch_request(service, ld->ad->service,
-						APP_CONTROL_RESULT_SUCCEEDED);
+		                                    APP_CONTROL_RESULT_SUCCEEDED);
 		ld->destroy_timer = ecore_timer_add(0.1, _destroy_timer_cb,
-							ld);
+		                                    ld);
 
 		app_control_destroy(service);
 	}
@@ -820,7 +830,7 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	Eina_Bool state = elm_check_state_get(check);
 	all_selected = state;
 
-	if ((ld->ad->limitsize>0) && (_get_total_size(ld) > ld->ad->limitsize)) {
+	if ((ld->ad->limitsize > 0) && (_get_total_size(ld) > ld->ad->limitsize)) {
 		DEBUG_TRACE("total size: %lld", _get_total_size(ld));
 		elm_check_state_set(check, !state);
 		char *name = g_strdup(GET_STR(STR_MC_MAX_SIZE_EXCEEDED));
@@ -830,7 +840,7 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 		return;
 	}
 
-	if ((ld->ad->max_count>0) && (_get_media_list_count(ld) > ld->ad->max_count)) {
+	if ((ld->ad->max_count > 0) && (_get_media_list_count(ld) > ld->ad->max_count)) {
 		elm_check_state_set(check, !state);
 		char *name = g_strdup_printf(GET_STR(STR_MC_MAX_COUNT_EXCEEDED), ld->ad->max_count);
 		mc_post_status_message(name);
@@ -872,11 +882,11 @@ void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
 	item = elm_genlist_first_item_get(ld->genlist);
 	Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon");
 	Eina_Bool state = elm_check_state_get(check);
-	if (state == EINA_FALSE && ld->ad->max_count<=0) {
+	if (state == EINA_FALSE && ld->ad->max_count <= 0) {
 		elm_check_state_set(check, !state);
 	}
 
-	if((ld->ad->limitsize>0) && (_get_total_size(ld) > ld->ad->limitsize)) {
+	if ((ld->ad->limitsize > 0) && (_get_total_size(ld) > ld->ad->limitsize)) {
 		char *name = g_strdup(GET_STR(STR_MC_MAX_SIZE_EXCEEDED));
 		mc_post_status_message(name);
 		IF_FREE(name);
@@ -884,7 +894,7 @@ void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
 		return;
 	}
 
-	if ((ld->ad->max_count>0) && (_get_media_list_count(ld) > ld->ad->max_count)) {
+	if ((ld->ad->max_count > 0) && (_get_media_list_count(ld) > ld->ad->max_count)) {
 		char *name = g_strdup_printf(GET_STR(STR_MC_MAX_COUNT_EXCEEDED), ld->ad->max_count);
 		mc_post_status_message(name);
 		IF_FREE(name);
@@ -914,15 +924,18 @@ Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad)
 	MP_CHECK_NULL(ld);
 
 	ld->ad = ad;
-	if (ad->select_type == MC_SELECT_MULTI)
+	if (ad->select_type == MC_SELECT_MULTI) {
 		ld->multiple = true;
+	}
 
-	if (ad->select_type == MC_SELECT_SINGLE_RINGTONE)
+	if (ad->select_type == MC_SELECT_SINGLE_RINGTONE) {
 		ld->single = true;
+	}
 
 	Evas_Object *done_btn = elm_object_item_part_content_unset(ld->win_navi_it, "toolbar");
-	if (done_btn)
+	if (done_btn) {
 		evas_object_del(done_btn);
+	}
 
 	evas_object_data_set(layout, "list_data", ld);
 	evas_object_event_callback_add(layout, EVAS_CALLBACK_FREE, _layout_del_cb, ld);
@@ -970,8 +983,8 @@ int mc_track_list_update(Evas_Object *list, Elm_Object_Item *navi_it, Evas_Objec
 	if (ad->select_type == MC_SELECT_MULTI) {
 #if 0
 		Evas_Object *toolbar = mc_widget_create_naviframe_toolbar(ld->win_navi_it);
-	        ld->btn_done = mc_widget_create_toolbar_item_btn(toolbar,
-			"naviframe/toolbar/default", GET_SYS_STR("IDS_COM_POP_DONE"), _done_cb, ld);
+		ld->btn_done = mc_widget_create_toolbar_item_btn(toolbar,
+		               "naviframe/toolbar/default", GET_SYS_STR("IDS_COM_POP_DONE"), _done_cb, ld);
 
 		elm_object_item_disabled_set(ld->btn_done, true);
 
@@ -990,15 +1003,15 @@ int mc_track_list_update(Evas_Object *list, Elm_Object_Item *navi_it, Evas_Objec
 
 		if (ld->win_navi_it && ad->navi_bar) {
 
-			ld->btn_done = mc_widget_create_navi_right_btn(ad->navi_bar,ld->win_navi_it,_done_cb,ld);
+			ld->btn_done = mc_widget_create_navi_right_btn(ad->navi_bar, ld->win_navi_it, _done_cb, ld);
 		}
 	} else if (ld->ad->select_type == MC_SELECT_SINGLE_RINGTONE || ld->ad->select_type == MC_SELECT_SINGLE) {
-        	if (ld->win_navi_it && ad->navi_bar) {
-				ld->btn_set = mc_widget_create_navi_right_btn(ad->navi_bar,ld->win_navi_it,_set_cb,ld);
-				elm_object_disabled_set(ld->btn_set, EINA_TRUE);
-	    }
+		if (ld->win_navi_it && ad->navi_bar) {
+			ld->btn_set = mc_widget_create_navi_right_btn(ad->navi_bar, ld->win_navi_it, _set_cb, ld);
+			elm_object_disabled_set(ld->btn_set, EINA_TRUE);
+		}
 		/*reset back button callback*/
-       /* elm_naviframe_item_pop_cb_set(navi_it, _back_cb, ld);*/
+		/* elm_naviframe_item_pop_cb_set(navi_it, _back_cb, ld);*/
 	}
 
 	if (ld->track_list) {

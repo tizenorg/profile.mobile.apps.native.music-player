@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #ifndef __MP_PLAY_LIST_H_
@@ -22,36 +22,34 @@
 #include <Eina.h>
 #include "mp-define.h"
 
-typedef enum{
+typedef enum {
 	MP_TRACK_URI,
 #ifdef MP_FEATURE_CLOUD
 	MP_TRACK_CLOUD,
 #endif
-}mp_track_type;
+} mp_track_type;
 
 typedef enum {
 	MP_PLST_TYPE_NONE,
 	MP_PLST_TYPE_MUSIC_SQUARE,
 } mp_plst_type;
 
-typedef enum _mp_plst_repeat_state
-{
+typedef enum _mp_plst_repeat_state {
 	MP_PLST_REPEAT_ALL,
 	MP_PLST_REPEAT_NONE,
 	MP_PLST_REPEAT_ONE,
-}mp_plst_repeat_state;
+} mp_plst_repeat_state;
 
 #ifdef MP_FEATURE_PLST_QUEUE
-typedef enum{
+typedef enum {
 	MP_PLAYLIST_QUEUE_ADDED,
 	MP_PLSYLIST_QUEUE_REMOVED,
 	MP_PLSYLIST_QUEUE_MOVED,
-}mp_playlist_queue_cmd_type;
-typedef void (*mp_queue_item_removed_cb)(mp_playlist_queue_cmd_type cmd_type, int index,void *userdata);
+} mp_playlist_queue_cmd_type;
+typedef void (*mp_queue_item_removed_cb)(mp_playlist_queue_cmd_type cmd_type, int index, void *userdata);
 #endif
 
-typedef struct
-{
+typedef struct {
 	FILE *fp;
 	Ecore_Timer *timer;
 	int index_of_first;
@@ -60,8 +58,7 @@ typedef struct
 	int add_remained;
 } mp_plst_lazy_appender_s;
 
-typedef struct _mp_list_item
-{
+typedef struct _mp_list_item {
 	mp_track_type track_type;
 #ifdef MP_FEATURE_PLST_QUEUE
 	Eina_Bool is_queue;
@@ -78,12 +75,11 @@ typedef struct _mp_list_item
 	int playlist_memeber_id;
 	Eina_Bool isDiffAP;
 	bool out_of_list;
-}mp_plst_item;
+} mp_plst_item;
 
 typedef void (*mp_playlist_item_change_callback)(mp_plst_item *item, void *userdata);
 
-typedef struct _mp_plst_mgr
-{
+typedef struct _mp_plst_mgr {
 	int current_index;
 	Eina_Bool shuffle_state;	//shuffle on/off
 	mp_plst_repeat_state repeat_state; //off:0/one:1/all:2
@@ -94,7 +90,7 @@ typedef struct _mp_plst_mgr
 	GList *queue_list;
 
 	void *userdata;
-	void(*queue_item_cb)(mp_playlist_queue_cmd_type cmd_type, int index,void *userdata);
+	void(*queue_item_cb)(mp_playlist_queue_cmd_type cmd_type, int index, void *userdata);
 #endif
 	void *item_change_userdata;
 	mp_playlist_item_change_callback item_change_cb;

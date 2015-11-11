@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -73,33 +73,33 @@
 #define SAFE_FREE(x)       if(x) {free(x); x = NULL;}
 
 #define mp_evas_object_del(object) do { \
-	if(object) { \
-		evas_object_del(object); \
-		object = NULL; \
-	} \
-} while (0)
+		if(object) { \
+			evas_object_del(object); \
+			object = NULL; \
+		} \
+	} while (0)
 
 #define mp_elm_genlist_del(list) do { \
-	if(list) { \
-		elm_genlist_clear(list);\
-		evas_object_del(list); \
-		list = NULL; \
-	} \
-} while (0)
+		if(list) { \
+			elm_genlist_clear(list);\
+			evas_object_del(list); \
+			list = NULL; \
+		} \
+	} while (0)
 
 #define mp_elm_genlist_item_class_free(itc) do { \
-	if(itc) { \
-		elm_genlist_item_class_free(itc); \
-		itc = NULL; \
-	} \
-} while (0)
+		if(itc) { \
+			elm_genlist_item_class_free(itc); \
+			itc = NULL; \
+		} \
+	} while (0)
 
 #define mp_ecore_timer_del(timer) do { \
-	if(timer) { \
-		ecore_timer_del(timer);\
-		timer = NULL; \
-	} \
-} while (0)
+		if(timer) { \
+			ecore_timer_del(timer);\
+			timer = NULL; \
+		} \
+	} while (0)
 
 #ifdef MUSICDIR
 #undef MUSICDIR

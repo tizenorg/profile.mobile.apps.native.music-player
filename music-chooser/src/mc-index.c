@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 #include "mc-index.h"
@@ -24,45 +24,45 @@
 #include <system_settings.h>
 
 static char *non_latin_lan[] = {
-     "ar_AE.UTF-8",
-     "as_IN.UTF-8",
-     "bg_BG.UTF-8",
-     "bn_IN.UTF-8",
-     "el_GR.UTF-8",
-     "fa_IR.UTF-8",
-     "gu_IN.UTF-8",
-     "he_IL.UTF-8",
-     "hi_IN.UTF-8",
-     "hy_AM.UTF-8",
-     "ja_JP.UTF-8",
-     "ka_GE.UTF-8",
-     "kk_KZ.UTF-8",
-     "km_KH.UTF-8",
-     "kn_IN.UTF-8",
-     "ko_KR.UTF-8",
-     "lo_LA.UTF-8",
-     "mk_MK.UTF-8",
-     "ml_IN.UTF-8",
-     "mn_MN.UTF-8",
-     "mr_IN.UTF-8",
-     "ne_NP.UTF-8",
-     "or_IN.UTF-8",
-     "pa_IN.UTF-8",
-     "ru_RU.UTF-8",
-     "si_LK.UTF-8",
-     "ta_IN.UTF-8",
-     "te_IN.UTF-8",
-     "th_TH.UTF-8",
-     "uk_UA.UTF-8",
-     "ur_PK.UTF-8",
-     "zh_TW.UTF-8",
-     NULL
+	"ar_AE.UTF-8",
+	"as_IN.UTF-8",
+	"bg_BG.UTF-8",
+	"bn_IN.UTF-8",
+	"el_GR.UTF-8",
+	"fa_IR.UTF-8",
+	"gu_IN.UTF-8",
+	"he_IL.UTF-8",
+	"hi_IN.UTF-8",
+	"hy_AM.UTF-8",
+	"ja_JP.UTF-8",
+	"ka_GE.UTF-8",
+	"kk_KZ.UTF-8",
+	"km_KH.UTF-8",
+	"kn_IN.UTF-8",
+	"ko_KR.UTF-8",
+	"lo_LA.UTF-8",
+	"mk_MK.UTF-8",
+	"ml_IN.UTF-8",
+	"mn_MN.UTF-8",
+	"mr_IN.UTF-8",
+	"ne_NP.UTF-8",
+	"or_IN.UTF-8",
+	"pa_IN.UTF-8",
+	"ru_RU.UTF-8",
+	"si_LK.UTF-8",
+	"ta_IN.UTF-8",
+	"te_IN.UTF-8",
+	"th_TH.UTF-8",
+	"uk_UA.UTF-8",
+	"ur_PK.UTF-8",
+	"zh_TW.UTF-8",
+	NULL
 };
 
-typedef struct{
+typedef struct {
 	char *first;
 	Eina_Bool multiple_selection;
-}MpIndexData_t;
+} MpIndexData_t;
 
 #define GET_WIDGET_DATA(o) evas_object_data_get(o, "widget_d");
 static const char *_mc_list_item_get_label(Elm_Object_Item *event_info)
@@ -74,16 +74,13 @@ static const char *_mc_list_item_get_label(Elm_Object_Item *event_info)
 		return NULL;
 	}
 	if ((item_data->list_type == MC_TRACK)
-	|| (item_data->list_type == MC_ALBUM_TRACK)
-	|| (item_data->list_type == MC_ARTIST_TRACK)
-	|| (item_data->list_type == MC_FOLDER_TRACK))
-	{
+	        || (item_data->list_type == MC_ALBUM_TRACK)
+	        || (item_data->list_type == MC_ARTIST_TRACK)
+	        || (item_data->list_type == MC_FOLDER_TRACK)) {
 		mp_media_info_get_title(item_data->media, &title);
-	}
-	else if ((item_data->list_type == MC_ALBUM)
-		||(item_data->list_type == MC_ARTIST)
-		||(item_data->list_type == MC_FOLDER))
-	{
+	} else if ((item_data->list_type == MC_ALBUM)
+	           || (item_data->list_type == MC_ARTIST)
+	           || (item_data->list_type == MC_FOLDER)) {
 		mp_media_info_group_get_main_info(item_data->media, &title);
 	}
 	return title;
@@ -96,49 +93,44 @@ _mc_util_get_utf8_initial(const char *name)
 	char *next = NULL;
 	MP_CHECK_NULL(name);
 
-	if (g_utf8_strlen(name, -1) <= 0)
-	{
+	if (g_utf8_strlen(name, -1) <= 0) {
 		return strdup("");
 	}
 
 	first = g_utf8_get_char_validated(name, g_utf8_strlen(name, -1));
 	if (first == (gunichar) - 1 || first == (gunichar) - 2) {
-		DEBUG_TRACE ("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
+		DEBUG_TRACE("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
 		return strdup("");
 	}
 
 	next = (char *)name;
 
-	while (!g_unichar_isgraph(first))
-	{
+	while (!g_unichar_isgraph(first)) {
 		next = g_utf8_next_char(next);
 		first = g_utf8_get_char_validated(next, g_utf8_strlen(name, -1));
 		if (first == (gunichar) - 1 || first == (gunichar) - 2) {
-			DEBUG_TRACE ("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
+			DEBUG_TRACE("failed to convert a sequence of bytes encoded as UTF-8 to a Unicode character.");
 			return strdup("");
 		}
 	}
 
-	if (first >= 0xAC00 && first <= 0xD7A3)
-	{			//korean
+	if (first >= 0xAC00 && first <= 0xD7A3) {
+		//korean
 		int index = 0;
 		index = ((((first - 0xAC00) - ((first - 0xAC00) % 28)) / 28) / 21);
-		if (index < 20 && index >= 0)
-		{
+		if (index < 20 && index >= 0) {
 			const gunichar chosung[20] = { 0x3131, 0x3132, 0x3134, 0x3137, 0x3138,
-				0x3139, 0x3141, 0x3142, 0x3143, 0x3145,
-				0x3146, 0x3147, 0x3148, 0x3149, 0x314a,
-				0x314b, 0x314c, 0x314d, 0x314e, 0
-			};
+			                               0x3139, 0x3141, 0x3142, 0x3143, 0x3145,
+			                               0x3146, 0x3147, 0x3148, 0x3149, 0x314a,
+			                               0x314b, 0x314c, 0x314d, 0x314e, 0
+			                             };
 
 			gchar result[10] = { 0, };
 			int len = 0;
 			len = g_unichar_to_utf8(chosung[index], result);
 			return strndup(result, len + 1);
 		}
-	}
-	else
-	{
+	} else {
 		gchar result[10] = { 0, };
 		int len = 0;
 		len = g_unichar_to_utf8(first, result);
@@ -150,9 +142,9 @@ _mc_util_get_utf8_initial(const char *name)
 static void
 _index_selected_cb(void *data, Evas_Object *obj, void *event_info)
 {
-        Elm_Object_Item *item = (Elm_Object_Item*)event_info;
+	Elm_Object_Item *item = (Elm_Object_Item*)event_info;
 
-        elm_index_item_selected_set(item, EINA_FALSE);
+	elm_index_item_selected_set(item, EINA_FALSE);
 }
 
 static void
@@ -173,8 +165,7 @@ _mc_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 	if (wd->multiple_selection) {
 		gl_item = elm_genlist_item_next_get(gl_item);
 	}
-	while (gl_item)
-	{
+	while (gl_item) {
 		char *uni = NULL;
 		label = _mc_list_item_get_label(gl_item);
 		if (!label) {
@@ -191,41 +182,33 @@ _mc_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 		char *text = NULL;
 		char code[16] = {0,};
 		text = g_strconcat("0x", NULL);
-		for (i= 0; i<strlen(uni) ; i++)
-		{
+		for (i = 0; i < strlen(uni) ; i++) {
 			snprintf(code, 16, "%x", uni[i]);
 			code[15] = 0;
 			text = g_strconcat(text, code, NULL);
 		}
 		DEBUG_TRACE("uni: %s, code: %s, A: 0x%x", uni, code, 'A');
 #endif
-		if (!g_strcmp0(index_letter, wd->first))
-		{
-			if (uni[0] < 'A'||uni[0] > 'z')
-			{
+		if (!g_strcmp0(index_letter, wd->first)) {
+			if (uni[0] < 'A' || uni[0] > 'z') {
 				elm_genlist_item_bring_in(gl_item, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 				IF_FREE(uni);
 				break;
 			}
 		}
 
-		if (!strcasecmp(uni, index_letter))
-		{
+		if (!strcasecmp(uni, index_letter)) {
 			elm_genlist_item_bring_in(gl_item, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 			IF_FREE(uni);
 			break;
-		}
-		else
-		{
+		} else {
 			char *capital = g_utf8_strup(uni, -1);
-			if (!capital)
-			{
-					IF_FREE(uni);
-					continue;
+			if (!capital) {
+				IF_FREE(uni);
+				continue;
 			}
 
-			if (capital[0] > index_letter[0]) //move to most close item
-			{
+			if (capital[0] > index_letter[0]) { //move to most close item
 				elm_genlist_item_bring_in(gl_item, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 				IF_FREE(uni);
 				IF_FREE(capital);
@@ -240,16 +223,19 @@ _mc_index_item_selected_cb(void *data, Evas_Object *obj, void *event_info)
 
 Eina_Bool ea_locale_latin_get(const char *locale)
 {
-   if (!locale) return EINA_FALSE;
+	if (!locale) {
+		return EINA_FALSE;
+	}
 
-   int i = 0;
+	int i = 0;
 
-   while(non_latin_lan[i])
-     {
-        if (!strcmp(non_latin_lan[i], locale)) return EINA_FALSE;
-        i++;
-     }
-   return EINA_TRUE;
+	while (non_latin_lan[i]) {
+		if (!strcmp(non_latin_lan[i], locale)) {
+			return EINA_FALSE;
+		}
+		i++;
+	}
+	return EINA_TRUE;
 }
 
 
@@ -268,17 +254,18 @@ static void _mp_fastscoller_append_item(void *data, Evas_Object *obj)
 	MP_CHECK(wd);
 	//1. Special character & Numbers
 	elm_index_item_append(obj, "#", _mc_index_item_selected_cb, list);
-	if (!wd->first)
+	if (!wd->first) {
 		wd->first = g_strdup("#");
+	}
 
 	//2. Local language
 	str = dgettext("efl-extension", "IDS_EA_BODY_ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 	MP_CHECK(str);
 	len = strlen(str);
-	if (len == 0)
+	if (len == 0) {
 		return;
-	while (i < len)
-	{
+	}
+	while (i < len) {
 		j = i;
 		uni = eina_unicode_utf8_next_get(str, &i);
 		MP_CHECK(uni);
@@ -322,7 +309,7 @@ static void _append_item(Evas_Object *index, Evas_Object *list)
 	_mp_fastscoller_append_item((void*)list, index);
 	elm_index_level_go(index, 0);
 	evas_object_smart_callback_add(index, "changed", _mc_index_item_selected_cb, list);
-        evas_object_smart_callback_add(index, "selected", _index_selected_cb, NULL);
+	evas_object_smart_callback_add(index, "selected", _index_selected_cb, NULL);
 }
 
 static Evas_Object* _create_fastscroll(Evas_Object* parent)
@@ -347,7 +334,7 @@ void _language_changed(void *data, Evas_Object *obj, void *event_info)
 {
 	MP_CHECK(data);
 	MP_CHECK(obj);
-	_mp_fastscoller_append_item(data,obj);
+	_mp_fastscoller_append_item(data, obj);
 	elm_index_level_go(obj, 0);
 	evas_object_smart_callback_add(obj, "changed", _mc_index_item_selected_cb, (Evas_Object *)data);
 	evas_object_smart_callback_add(obj, "selected", _index_selected_cb, NULL);

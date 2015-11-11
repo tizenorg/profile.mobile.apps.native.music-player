@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -147,8 +147,9 @@ mp_player_mgr_is_active(void)
 
 void mp_player_mgr_set_started_db(mp_player_started_cb callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -158,8 +159,9 @@ void mp_player_mgr_set_started_db(mp_player_started_cb callback, void *user_data
 
 void mp_player_mgr_set_completed_cb(player_completed_cb  callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -169,8 +171,9 @@ void mp_player_mgr_set_completed_cb(player_completed_cb  callback, void *user_da
 
 void mp_player_mgr_set_interrupted_cb(player_interrupted_cb  callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -180,8 +183,9 @@ void mp_player_mgr_set_interrupted_cb(player_interrupted_cb  callback, void *use
 
 void mp_player_mgr_set_error_cb(player_error_cb  callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -191,8 +195,9 @@ void mp_player_mgr_set_error_cb(player_error_cb  callback, void *user_data)
 
 void mp_player_mgr_set_buffering_cb(player_buffering_cb  callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -202,8 +207,9 @@ void mp_player_mgr_set_buffering_cb(player_buffering_cb  callback, void *user_da
 
 void mp_player_mgr_set_prepare_cb(player_prepared_cb callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -213,8 +219,9 @@ void mp_player_mgr_set_prepare_cb(player_prepared_cb callback, void *user_data)
 
 void mp_player_mgr_unset_completed_cb(void)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -224,8 +231,9 @@ void mp_player_mgr_unset_completed_cb(void)
 
 void mp_player_mgr_unset_interrupted_cb(void)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -235,8 +243,9 @@ void mp_player_mgr_unset_interrupted_cb(void)
 
 void mp_player_mgr_unset_error_cb(void)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -246,8 +255,9 @@ void mp_player_mgr_unset_error_cb(void)
 
 void mp_player_mgr_unset_buffering_cb(void)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -257,8 +267,9 @@ void mp_player_mgr_unset_buffering_cb(void)
 
 void mp_player_mgr_set_paused_cb(mp_player_paused_cb callback, void *user_data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -284,8 +295,9 @@ void mp_player_mgr_set_duration_changed_cb(mp_player_duration_changed_cb callbac
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	MP_CHECK(g_player_cbs);
 
@@ -295,10 +307,11 @@ void mp_player_mgr_set_duration_changed_cb(mp_player_duration_changed_cb callbac
 	mp_ecore_timer_del(ad->duration_change_timer);
 	ad->duration_change_timer = ecore_timer_add(5.0, _mp_player_mgr_duration_timer_cb, g_player_cbs);
 
-	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING && !ad->is_lcd_off)
+	if (mp_player_mgr_get_state() == PLAYER_STATE_PLAYING && !ad->is_lcd_off) {
 		MP_TIMER_THAW(ad->duration_change_timer);
-	else
+	} else {
 		MP_TIMER_FREEZE(ad->duration_change_timer);
+	}
 }
 
 player_state_e
@@ -306,8 +319,9 @@ mp_player_mgr_get_state(void)
 {
 	player_state_e state_now = PLAYER_STATE_NONE;
 
-	if (!_player)
+	if (!_player) {
 		return state_now;
+	}
 
 	g_player_apis.get_state(_player, &state_now);
 	return state_now;
@@ -329,43 +343,51 @@ _mp_player_mgr_callback_pipe_handler(void *data, void *buffer, unsigned int nbyt
 
 	switch (extra_data->cb_type) {
 	case MP_PLAYER_CB_TYPE_STARTED:
-		if (g_player_cbs->started_cb)
+		if (g_player_cbs->started_cb) {
 			g_player_cbs->started_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_STARTED]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_COMPLETED:
-		if (g_player_cbs->completed_cb)
+		if (g_player_cbs->completed_cb) {
 			g_player_cbs->completed_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_COMPLETED]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_INTURRUPTED:
-		if (g_player_cbs->interrupted_cb)
+		if (g_player_cbs->interrupted_cb) {
 			g_player_cbs->interrupted_cb(extra_data->param.interrupted_code, g_player_cbs->user_data[MP_PLAYER_CB_TYPE_INTURRUPTED]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_ERROR:
-		if (g_player_cbs->error_cb)
+		if (g_player_cbs->error_cb) {
 			g_player_cbs->error_cb(extra_data->param.error_code, g_player_cbs->user_data[MP_PLAYER_CB_TYPE_ERROR]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_BUFFERING:
-		if (g_player_cbs->buffering_cb)
+		if (g_player_cbs->buffering_cb) {
 			g_player_cbs->buffering_cb(extra_data->param.percent, g_player_cbs->user_data[MP_PLAYER_CB_TYPE_BUFFERING]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_PREPARE:
-		if (g_player_cbs->prepare_cb)
+		if (g_player_cbs->prepare_cb) {
 			g_player_cbs->prepare_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_PREPARE]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_PAUSED:
-		if (g_player_cbs->paused_cb)
+		if (g_player_cbs->paused_cb) {
 			g_player_cbs->paused_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_PAUSED]);
+		}
 		break;
 
 	case MP_PLAYER_CB_TYPE_PROGRESSIVE_DOWNLOAD_MESSAGE:
-		if (g_player_cbs->pd_message_cb)
+		if (g_player_cbs->pd_message_cb) {
 			g_player_cbs->pd_message_cb(extra_data->param.pd_message_type, g_player_cbs->user_data[MP_PLAYER_CB_TYPE_PROGRESSIVE_DOWNLOAD_MESSAGE]);
+		}
 		break;
 
 	default:
@@ -530,8 +552,9 @@ _mp_player_mgr_create_common(struct appdata *ad, mp_player_type_e type)
 	if (_player_type == MP_PLAYER_TYPE_MMFW) {
 
 #ifdef MP_SOUND_PLAYER
-		if (ad->cookie)
+		if (ad->cookie) {
 			player_set_streaming_cookie(_player, ad->cookie, strlen(ad->cookie));
+		}
 #endif
 	}
 
@@ -540,8 +563,9 @@ _mp_player_mgr_create_common(struct appdata *ad, mp_player_type_e type)
 		g_player_apis.set_sound_type(_player, SOUND_TYPE_MEDIA);
 		PLAYER_LEAVE_LOG("set_sound_type");
 	}
-	if (g_player_apis.set_audio_latency_mode)
+	if (g_player_apis.set_audio_latency_mode) {
 		g_player_apis.set_audio_latency_mode(_player, AUDIO_LATENCY_MODE_HIGH);
+	}
 
 	is_seeking = false;
 	resume_on_seek_done = false;
@@ -552,21 +576,28 @@ _mp_player_mgr_create_common(struct appdata *ad, mp_player_type_e type)
 		mp_assert(g_player_cbs);
 	}
 
-	if (g_player_apis.set_started_cb)
+	if (g_player_apis.set_started_cb) {
 		g_player_apis.set_started_cb(_player, _mp_player_mgr_started_cb, NULL);
-	if (g_player_apis.set_completed_cb)
+	}
+	if (g_player_apis.set_completed_cb) {
 		g_player_apis.set_completed_cb(_player, _mp_player_mgr_completed_cb, NULL);
-	if (g_player_apis.set_interrupted_cb)
+	}
+	if (g_player_apis.set_interrupted_cb) {
 		g_player_apis.set_interrupted_cb(_player, _mp_player_mgr_interrupted_cb, NULL);
-	if (g_player_apis.set_error_cb)
+	}
+	if (g_player_apis.set_error_cb) {
 		g_player_apis.set_error_cb(_player, _mp_player_mgr_error_cb, NULL);
-	if (g_player_apis.set_buffering_cb)
+	}
+	if (g_player_apis.set_buffering_cb) {
 		g_player_apis.set_buffering_cb(_player, _mp_player_mgr_buffering_cb, NULL);
-	if (g_player_apis.set_paused_cb)
+	}
+	if (g_player_apis.set_paused_cb) {
 		g_player_apis.set_paused_cb(_player, _mp_player_mgr_paused_cb, NULL);
+	}
 
-	if (!g_player_pipe)
+	if (!g_player_pipe) {
 		g_player_pipe = ecore_pipe_add(_mp_player_mgr_callback_pipe_handler, ad);
+	}
 
 	ad->player_state = PLAY_STATE_CREATED;
 
@@ -649,12 +680,14 @@ mp_player_mgr_destroy(void *data)
 	MP_CHECK_FALSE(ad);
 	int res = true;
 	if (ad->current_track_info) {
-		if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1)
+		if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "paused");
+		}
 	}
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 
 	mp_ecore_timer_del(ad->duration_change_timer);
 
@@ -692,8 +725,9 @@ mp_player_mgr_realize(void *data)
 	struct appdata *ad = data;
 	int error = PLAYER_ERROR_NONE;
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return -1;
+	}
 	PLAYER_ENTER_LOG("prepare_async");
 	error = g_player_apis.prepare_async(_player, _mp_player_mgr_prepare_cb, ad);
 	PLAYER_LEAVE_LOG("prepare_async");
@@ -709,8 +743,9 @@ mp_player_mgr_realize(void *data)
 bool
 mp_player_mgr_unrealize(void *data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 	PLAYER_ENTER_LOG("unprepare");
 	int res = g_player_apis.unprepare(_player);
 	PLAYER_LEAVE_LOG("unprepare");
@@ -760,11 +795,13 @@ mp_player_mgr_play(void *data)
 	pause_on_seek_done = false;
 	g_reserved_seek_pos = -1;
 
-	if (!g_player_apis.set_started_cb && g_player_cbs->started_cb)	/* sync */
+	if (!g_player_apis.set_started_cb && g_player_cbs->started_cb) {	/* sync */
 		g_player_cbs->started_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_STARTED]);
+	}
 
-	if (!ad->is_lcd_off)
+	if (!ad->is_lcd_off) {
 		MP_TIMER_THAW(ad->duration_change_timer);
+	}
 
 	return err;
 }
@@ -777,8 +814,9 @@ mp_player_mgr_stop(void *data)
 	struct appdata *ad = data;
 	MP_CHECK_FALSE(ad);
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 	PLAYER_ENTER_LOG("stop");
 	int res = g_player_apis.stop(_player);
 	PLAYER_LEAVE_LOG("stop");
@@ -792,8 +830,9 @@ mp_player_mgr_stop(void *data)
 	resume_on_seek_done = false;
 	pause_on_seek_done = false;
 
-	if (ad->duration_change_timer)
+	if (ad->duration_change_timer) {
 		MP_TIMER_FREEZE(ad->duration_change_timer);
+	}
 
 	mp_play_stop(ad);
 	return TRUE;
@@ -832,8 +871,9 @@ mp_player_mgr_resume(void *data)
 	is_seeking = false;
 	g_reserved_seek_pos = -1;
 
-	if (!ad->is_lcd_off)
+	if (!ad->is_lcd_off) {
 		MP_TIMER_THAW(ad->duration_change_timer);
+	}
 
 	mp_player_view_update_progressbar(GET_PLAYER_VIEW);
 	mp_player_view_progress_timer_thaw(GET_PLAYER_VIEW);
@@ -851,8 +891,9 @@ mp_player_mgr_pause(void *data)
 
 	mp_util_release_cpu();
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 
 	PLAYER_ENTER_LOG("pause");
 	err = g_player_apis.pause(_player);
@@ -876,8 +917,9 @@ mp_player_mgr_pause(void *data)
 
 	MP_TIMER_FREEZE(ad->duration_change_timer);
 
-	if (!g_player_apis.set_paused_cb && g_player_cbs->paused_cb)
+	if (!g_player_apis.set_paused_cb && g_player_cbs->paused_cb) {
 		g_player_cbs->paused_cb(g_player_cbs->user_data[MP_PLAYER_CB_TYPE_PAUSED]);
+	}
 
 	return TRUE;
 }
@@ -892,7 +934,7 @@ mp_player_mgr_seek_done(void *data)
 	is_seeking = false;
 
 #ifdef MP_FEATURE_AVRCP_13
-		mp_avrcp_noti_track_position((unsigned int)data);
+	mp_avrcp_noti_track_position((unsigned int)data);
 #endif
 
 	if (g_requesting_cb) {
@@ -924,8 +966,9 @@ mp_player_mgr_seek_done(void *data)
 static void
 _mp_player_mgr_seek_done_cb(void *data)
 {
-	if (is_seeking)
+	if (is_seeking) {
 		mp_player_mgr_seek_done(data);
+	}
 }
 
 bool
@@ -937,8 +980,9 @@ mp_player_mgr_is_seeking(void)
 bool
 mp_player_mgr_set_position(unsigned int pos, Seek_Done_Cb done_cb, void *data)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 
 	if (is_seeking) {
 		g_reserved_seek_pos = pos;
@@ -975,13 +1019,15 @@ bool
 mp_player_mgr_set_play_speed(double rate)
 {
 	int err = PLAYER_ERROR_NONE;
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return FALSE;
+	}
 
-	if (g_player_apis.set_play_rate)
+	if (g_player_apis.set_play_rate) {
 		err = g_player_apis.set_play_rate(_player, rate);
-	else
+	} else {
 		WARN_TRACE("Unsupported function");
+	}
 
 	if (err != PLAYER_ERROR_NONE) {
 		ERROR_TRACE("Error [0x%x] when set_playback_rate(%f)", err, rate);
@@ -995,8 +1041,9 @@ mp_player_mgr_get_position(void)
 {
 	int pos = 0;
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return 0;
+	}
 
 	if (g_player_apis.get_position(_player, &pos) != PLAYER_ERROR_NONE) {
 		ERROR_TRACE("Error when mp_player_mgr_get_position");
@@ -1009,8 +1056,9 @@ mp_player_mgr_get_position(void)
 int
 mp_player_mgr_get_duration(void)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return 0;
+	}
 
 	int duration = 0;
 
@@ -1043,10 +1091,11 @@ mp_player_mgr_safety_volume_set(int foreground)
 	if (foreground) {
 		set = true;
 	} else {
-		if (state == PLAYER_STATE_PLAYING)
+		if (state == PLAYER_STATE_PLAYING) {
 			set = true;
-		else
+		} else {
 			set = false;
+		}
 	}
 	EVENT_TRACE("Foreground[%d], PlayerState[%d], set[%d]", foreground, state, set);
 
@@ -1064,11 +1113,12 @@ mp_player_mgr_session_init(void)
 
 	PLAYER_ENTER_LOG("sound_manager_set_media_session_option");
 	ret = sound_manager_set_media_session_option(SOUND_SESSION_OPTION_PAUSE_OTHERS_WHEN_START,
-			SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
+	        SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
 	PLAYER_LEAVE_LOG("sound_manager_set_media_session_option");
 
-	if (ret != SOUND_MANAGER_ERROR_NONE)
+	if (ret != SOUND_MANAGER_ERROR_NONE) {
 		return FALSE;
+	}
 
 	return TRUE;
 }
@@ -1083,8 +1133,9 @@ void
 mp_player_mgr_set_mute(bool bMuteEnable)
 {
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return;
+	}
 
 	if (g_player_apis.set_mute(_player, bMuteEnable) != PLAYER_ERROR_NONE) {
 		ERROR_TRACE("[ERR] mm_player_set_mute");
@@ -1158,8 +1209,9 @@ mp_player_mgr_volume_up()
 	int step = 1;
 
 	int new_vol = current + step;
-	if (new_vol > max)
+	if (new_vol > max) {
 		new_vol = max;
+	}
 
 	bool ret = true;
 	if (current < max) {
@@ -1178,8 +1230,9 @@ mp_player_mgr_volume_down()
 	int step = 1;
 
 	int new_vol = current - step;
-	if (new_vol < 0)
+	if (new_vol < 0) {
 		new_vol = 0;
+	}
 
 	bool ret = true;
 	if (current > 0) {
@@ -1193,8 +1246,9 @@ mp_player_mgr_volume_down()
 bool
 mp_player_mgr_get_content_info(char **title, char **album, char **artist, char **author, char **genre, char **year)
 {
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return false;
+	}
 
 	MP_CHECK_FALSE(g_player_apis.get_content_info);
 
@@ -1237,8 +1291,9 @@ mp_player_mgr_set_progressive_download(const char *path, player_pd_message_cb ca
 {
 	startfunc;
 
-	if (!mp_player_mgr_is_active())
+	if (!mp_player_mgr_is_active()) {
 		return -1;
+	}
 
 	int err = player_set_progressive_download_path(_player, path);
 	if (err != PLAYER_ERROR_NONE) {

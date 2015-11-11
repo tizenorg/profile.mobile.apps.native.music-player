@@ -1,18 +1,18 @@
-/* 
+/*
 * Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
 *
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
 * http://www.apache.org/licenses/LICENSE-2.0
-* 
+*
 * Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
-* 
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
 */
 
 
@@ -88,11 +88,11 @@ void mc_vol_reset_default_value(void* data)
 
 	sound_type_e current_type;
 	current_type = mc_get_sound_type();
-	DEBUG_TRACE("current type is %d",current_type);
+	DEBUG_TRACE("current type is %d", current_type);
 	if (ad->select_type == MC_SELECT_SINGLE_RINGTONE) {
 		if (g_init_current_type != 	current_type) {
 			mc_vol_type_set(g_init_current_type);
-	    }
+		}
 	}
 }
 
@@ -120,12 +120,9 @@ player_h mc_pre_play_mgr_get_player_handle(void)
 {
 	player_h player_handle = NULL;
 
-	if (mc_player_mgr_is_active())
-	{
+	if (mc_player_mgr_is_active()) {
 		return mc_player;
-	}
-	else
-	{
+	} else {
 		_mc_pre_play_mgr_create_player(&player_handle);
 		mc_player = player_handle;
 		return player_handle;
@@ -154,18 +151,15 @@ void mc_pre_play_mgr_reset_song_without_stop(void *data)
 	list_item_data_t *item_data = (list_item_data_t*)data;
 	MP_CHECK(item_data);
 
-	if (mc_player)
-	{
+	if (mc_player) {
 		int error_code = player_destroy(mc_player);
-		if (error_code)
-		{
+		if (error_code) {
 			DEBUG_TRACE("player destroy error %d", error_code);
 		}
 		mc_player = NULL;
 	}
 
-	if (item_data)
-	{
+	if (item_data) {
 		item_data->state = PLAYER_STATE_NONE;
 		_mc_pre_play_mgr_update_play_button_status(item_data);
 	}
@@ -178,20 +172,19 @@ void mc_pre_play_mgr_destroy_play(void)
 	int error_code = 0;
 
 	player_get_state(mc_player, &state);
-	if (PLAYER_STATE_NONE != state)
-	{
+	if (PLAYER_STATE_NONE != state) {
 		player_stop(mc_player);
 		error_code = player_destroy(mc_player);
-		if (error_code)
-		{
+		if (error_code) {
 			DEBUG_TRACE("player destroy error %d", error_code);
 		}
 	}
 	mc_player = NULL;
 
 	MP_CHECK(cur_item_data);
-	if (cur_item_data)
+	if (cur_item_data) {
 		_mc_pre_play_mgr_update_play_button_status(cur_item_data);
+	}
 
 	return;
 }
@@ -206,19 +199,16 @@ void mc_pre_play_mgr_play_control(void *data)
 	player_get_state(mc_player, &state);
 	DEBUG_TRACE("mh_pre_play_mgr_play_control state = %d", state);
 
-	if (PLAYER_STATE_PLAYING == state)
-	{
+	if (PLAYER_STATE_PLAYING == state) {
 		_mc_pre_play_mgr_player_pause();
 	}
 
-	if (PLAYER_STATE_PAUSED == state)
-	{
+	if (PLAYER_STATE_PAUSED == state) {
 		_mc_pre_play_mgr_player_start();
 	}
 
 	//after complete click again
-	if (PLAYER_STATE_IDLE == state)
-	{
+	if (PLAYER_STATE_IDLE == state) {
 		mc_pre_play_mgr_play_song(item_data);
 	}
 	_mc_pre_play_mgr_update_play_button_status(item_data);
@@ -226,7 +216,7 @@ void mc_pre_play_mgr_play_control(void *data)
 	return ;
 }
 
-void mc_pre_play_mgr_play_song( void *data)
+void mc_pre_play_mgr_play_song(void *data)
 {
 	list_item_data_t *item_data = (list_item_data_t*)data;
 	MP_CHECK(item_data);
@@ -239,45 +229,44 @@ void mc_pre_play_mgr_play_song( void *data)
 
 void mc_player_pause(void)
 {
-        startfunc;
+	startfunc;
 	MP_CHECK(mc_player);
-        MP_CHECK(cur_item_data);
+	MP_CHECK(cur_item_data);
 
-        player_state_e play_status = mc_pre_play_get_player_state();
+	player_state_e play_status = mc_pre_play_get_player_state();
 
-        if (PLAYER_STATE_PLAYING == play_status)
-        {
-                _mc_pre_play_mgr_player_pause();
-        }
-        _mc_pre_play_mgr_update_play_button_status(cur_item_data);
+	if (PLAYER_STATE_PLAYING == play_status) {
+		_mc_pre_play_mgr_player_pause();
+	}
+	_mc_pre_play_mgr_update_play_button_status(cur_item_data);
 }
 
 void mc_player_play(void)
 {
-        startfunc;
+	startfunc;
 	MP_CHECK(mc_player);
-        MP_CHECK(cur_item_data);
+	MP_CHECK(cur_item_data);
 
-        player_state_e play_status = mc_pre_play_get_player_state();
+	player_state_e play_status = mc_pre_play_get_player_state();
 
-        if (PLAYER_STATE_PLAYING == play_status)
-        {
-               _mc_pre_play_mgr_player_start();
-        }
-        _mc_pre_play_mgr_update_play_button_status(cur_item_data);
+	if (PLAYER_STATE_PLAYING == play_status) {
+		_mc_pre_play_mgr_player_start();
+	}
+	_mc_pre_play_mgr_update_play_button_status(cur_item_data);
 }
 
 static void _mc_pre_play_error(int ret)
 {
 	const char *message = NULL;
 
-        if (ret == PLAYER_ERROR_SOUND_POLICY) {
-                if (mc_is_call_connected()) {
-                        message = STR_MP_UNABLE_TO_PLAY_DURING_CALL;
-                }
-        }
-        if (message)
-                mc_post_status_message(GET_STR(message));
+	if (ret == PLAYER_ERROR_SOUND_POLICY) {
+		if (mc_is_call_connected()) {
+			message = STR_MP_UNABLE_TO_PLAY_DURING_CALL;
+		}
+	}
+	if (message) {
+		mc_post_status_message(GET_STR(message));
+	}
 }
 
 static void _mc_pre_play_mgr_player_start()
@@ -289,7 +278,7 @@ static void _mc_pre_play_mgr_player_start()
 	error_code = player_start(mc_player);
 	if (error_code) {
 		DEBUG_TRACE("play start error %d", error_code);
-                _mc_pre_play_error(error_code);
+		_mc_pre_play_error(error_code);
 	}
 
 	return;
@@ -406,7 +395,7 @@ static void _mc_pre_play_interrupt_cb(player_interrupted_code_e code, void *data
 {
 	startfunc;
 	list_item_data_t *item_data = (list_item_data_t*)data;
-        player_state_e state = PLAYER_STATE_NONE;
+	player_state_e state = PLAYER_STATE_NONE;
 
 	switch (code) {
 	case PLAYER_INTERRUPTED_BY_MEDIA:
@@ -436,11 +425,11 @@ static void _mc_pre_play_interrupt_cb(player_interrupted_code_e code, void *data
 		break;
 	}
 
-        player_get_state(mc_player, &state);
+	player_get_state(mc_player, &state);
 	DEBUG_TRACE("mc_pre_play_mgr_play_control state = %d", state);
-        item_data->state = state;
+	item_data->state = state;
 
-        _mc_pre_play_mgr_update_play_button_status(item_data);
+	_mc_pre_play_mgr_update_play_button_status(item_data);
 
 	//mc_pre_play_mgr_play_control(item_data);
 
@@ -469,8 +458,7 @@ static void _mc_pre_play_error_cb(int error_code, void *userdata)
 	MP_CHECK(item_data);
 	DEBUG_TRACE("error code %d", error_code);
 
-	switch (error_code)
-	{
+	switch (error_code) {
 	case PLAYER_ERROR_OUT_OF_MEMORY:
 		DEBUG_TRACE("PLAYER_ERROR_OUT_OF_MEMORY");
 		break;
@@ -551,13 +539,10 @@ static void _mc_pre_play_mgr_play_new_uri(void *data)
 	mp_media_info_get_file_path(media_handle, &uri);
 	DEBUG_TRACE("uri = %s", uri);
 
-	if (NULL == uri)
-	{
+	if (NULL == uri) {
 		DEBUG_TRACE("play uri fail, get null uri");
 		return ;
-	}
-	else
-	{
+	} else {
 		DEBUG_TRACE("play uri, get uri = %s", uri);
 
 		_mc_pre_play_mgr_create_player_mgr(uri);
@@ -586,15 +571,12 @@ static void _mc_pre_play_mgr_realize_player_mgr(void *data)
 	player_state_e state = PLAYER_STATE_NONE;
 	int error = PLAYER_ERROR_NONE;
 
-	if (mc_player != NULL)
-	{
+	if (mc_player != NULL) {
 		error = player_get_state(mc_player, &state);
 		item_data->state = state;
-		if ((PLAYER_ERROR_NONE == error) && (PLAYER_STATE_IDLE == state))
-		{
+		if ((PLAYER_ERROR_NONE == error) && (PLAYER_STATE_IDLE == state)) {
 			DEBUG_TRACE("prepare async");
-			if (player_prepare_async(mc_player, _mc_pre_play_mgr_prepare_cb, item_data))
-			{
+			if (player_prepare_async(mc_player, _mc_pre_play_mgr_prepare_cb, item_data)) {
 				DEBUG_TRACE("prepare err");
 			}
 		}
@@ -674,8 +656,7 @@ static void _mc_pre_play_mgr_create_player_mgr(const char *uri)
 	startfunc;
 	MP_CHECK(uri);
 
-	if (NULL != uri)
-	{
+	if (NULL != uri) {
 		_mc_pre_play_mgr_create_player(&mc_player);
 
 		DEBUG_TRACE("player = %x", mc_player);
@@ -683,14 +664,12 @@ static void _mc_pre_play_mgr_create_player_mgr(const char *uri)
 		player_set_uri(mc_player, uri);
 
 
-		if (NULL == g_player_pipe)
-		{
+		if (NULL == g_player_pipe) {
 			g_player_pipe = ecore_pipe_add(_mc_pre_play_mgr_callback_pipe_handler, NULL);
 			/*ecore_pipe_del(g_player_pipe);
 			g_player_pipe = NULL;*/
 		}
-		if (NULL == g_player_cbs)
-		{
+		if (NULL == g_player_cbs) {
 			g_player_cbs = calloc(1, sizeof(mc_player_cbs));
 		}
 
@@ -713,51 +692,51 @@ static void _mc_pre_play_mgr_callback_pipe_handler(void *data, void *buffer, uns
 	MP_CHECK(g_player_cbs);
 
 	switch (extra_data->cb_type) {
-	/*note: start callback and paused callback for player have been removed*/
-	/*case MC_PLAYER_CB_TYPE_STARTED:
-		if (g_player_cbs->started_cb)
-			g_player_cbs->started_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_STARTED]);
-		break;
+		/*note: start callback and paused callback for player have been removed*/
+		/*case MC_PLAYER_CB_TYPE_STARTED:
+			if (g_player_cbs->started_cb)
+				g_player_cbs->started_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_STARTED]);
+			break;
 
-	case MC_PLAYER_CB_TYPE_PAUSED:
-		if (g_player_cbs->paused_cb)
-			g_player_cbs->paused_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_PAUSED]);
-		break; */
+		case MC_PLAYER_CB_TYPE_PAUSED:
+			if (g_player_cbs->paused_cb)
+				g_player_cbs->paused_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_PAUSED]);
+			break; */
 
-	case MC_PLAYER_CB_TYPE_COMPLETED:
-		{
-			if (g_player_cbs->completed_cb)
-				g_player_cbs->completed_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_COMPLETED]);
+	case MC_PLAYER_CB_TYPE_COMPLETED: {
+		if (g_player_cbs->completed_cb) {
+			g_player_cbs->completed_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_COMPLETED]);
 		}
-		break;
+	}
+	break;
 
-	case MC_PLAYER_CB_TYPE_INTURRUPTED:
-		{
-			if (g_player_cbs->interrupted_cb)
-				g_player_cbs->interrupted_cb(extra_data->param.interrupted_code, g_player_cbs->user_data[MC_PLAYER_CB_TYPE_INTURRUPTED]);
+	case MC_PLAYER_CB_TYPE_INTURRUPTED: {
+		if (g_player_cbs->interrupted_cb) {
+			g_player_cbs->interrupted_cb(extra_data->param.interrupted_code, g_player_cbs->user_data[MC_PLAYER_CB_TYPE_INTURRUPTED]);
 		}
-		break;
+	}
+	break;
 
-	case MC_PLAYER_CB_TYPE_ERROR:
-		{
-			if (g_player_cbs->error_cb)
-				g_player_cbs->error_cb(extra_data->param.error_code, g_player_cbs->user_data[MC_PLAYER_CB_TYPE_ERROR]);
+	case MC_PLAYER_CB_TYPE_ERROR: {
+		if (g_player_cbs->error_cb) {
+			g_player_cbs->error_cb(extra_data->param.error_code, g_player_cbs->user_data[MC_PLAYER_CB_TYPE_ERROR]);
 		}
-		break;
+	}
+	break;
 
-	case MC_PLAYER_CB_TYPE_BUFFERING:
-		{
-			if (g_player_cbs->buffering_cb)
-				g_player_cbs->buffering_cb(extra_data->param.percent ,g_player_cbs->user_data[MC_PLAYER_CB_TYPE_BUFFERING]);
+	case MC_PLAYER_CB_TYPE_BUFFERING: {
+		if (g_player_cbs->buffering_cb) {
+			g_player_cbs->buffering_cb(extra_data->param.percent , g_player_cbs->user_data[MC_PLAYER_CB_TYPE_BUFFERING]);
 		}
-		break;
+	}
+	break;
 
-	case MC_PLAYER_CB_TYPE_PREPARE:
-		{
-			if (g_player_cbs->prepare_cb)
-				g_player_cbs->prepare_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_PREPARE]);
+	case MC_PLAYER_CB_TYPE_PREPARE: {
+		if (g_player_cbs->prepare_cb) {
+			g_player_cbs->prepare_cb(g_player_cbs->user_data[MC_PLAYER_CB_TYPE_PREPARE]);
 		}
-		break;
+	}
+	break;
 
 	default:
 		DEBUG_TRACE("Not suppoted callback type [%d]", extra_data->cb_type);
@@ -795,26 +774,21 @@ void mc_pre_play_control_play_no_pause_music_item(list_item_data_t *item_data)
 	media_handle = (mp_media_info_h)item_data->media;
 	mp_media_info_get_file_path(media_handle, &cur_uri);
 	cur_item_data = item_data;
-	if (pre_item_data)
-	{
+	if (pre_item_data) {
 		mp_media_info_get_file_path((mp_media_info_h)(pre_item_data->media), &pre_uri);
 	}
 
-	if (NULL == pre_uri || NULL == mc_player)
-	{
+	if (NULL == pre_uri || NULL == mc_player) {
 		DEBUG_TRACE("pre listen play new song");
 		mc_pre_play_mgr_play_song(item_data);
-	}
-	else
-	{
+	} else {
 		if (g_strcmp0(pre_uri, cur_uri) != 0) {
 			//playing song changed update genlist
 			DEBUG_TRACE("pre listen change listen song");
 			//mc_pre_play_mgr_reset_song(pre_item_data);
 			mc_pre_play_mgr_reset_song_without_stop(pre_item_data);
 			mc_pre_play_mgr_play_song(item_data);
-		}
-		else {
+		} else {
 			// play control in pre song
 			DEBUG_TRACE("pre listen play control");
 			mc_pre_play_mgr_play_control(item_data);
@@ -836,30 +810,23 @@ void mc_pre_play_control_play_music_item(list_item_data_t *item_data)
 
 	media_handle = (mp_media_info_h)item_data->media;
 	mp_media_info_get_file_path(media_handle, &cur_uri);
-        cur_item_data = item_data;
-	if (pre_item_data)
-	{
+	cur_item_data = item_data;
+	if (pre_item_data) {
 		mp_media_info_get_file_path((mp_media_info_h)(pre_item_data->media), &pre_uri);
 	}
 	DEBUG_TRACE("pre uri = %s", pre_uri);
 
-	if (NULL == pre_uri || NULL == mc_player)
-	{
+	if (NULL == pre_uri || NULL == mc_player) {
 		//play new song
 		DEBUG_TRACE("pre listen play new song");
 		mc_pre_play_mgr_play_song(item_data);
-	}
-	else
-	{
-		if (g_strcmp0(pre_uri, cur_uri) != 0)
-		{
+	} else {
+		if (g_strcmp0(pre_uri, cur_uri) != 0) {
 			//playing song changed update genlist
 			DEBUG_TRACE("pre listen change listen song");
 			mc_pre_play_mgr_reset_song(pre_item_data);
 			mc_pre_play_mgr_play_song(item_data);
-		}
-		else
-		{
+		} else {
 			// play control in pre song
 			DEBUG_TRACE("pre listen play control");
 			mc_pre_play_mgr_play_control(item_data);

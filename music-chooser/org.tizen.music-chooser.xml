@@ -108,10 +108,10 @@
 		<label xml:lang="hi-in">संगीत</label>
 		<label xml:lang="en-ph">Music</label>
 		<label xml:lang="fr-ca">Musique</label>
-		<application-service>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/pick" />
 			<mime name="audio/*" />
-		</application-service>
+		</app-control>
         </ui-application>
 
 	<privileges>

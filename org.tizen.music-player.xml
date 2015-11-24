@@ -116,7 +116,7 @@
 		<label xml:lang="en-ph">Sound player</label>
 		<label xml:lang="fr-ca">Lecteur de son</label>
 		<background-category value="media"/>
-		<application-service>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view" />
 			<mime name="application/ogg" />
 			<mime name="application/x-smaf" />
@@ -179,8 +179,8 @@
 			<uri name="https" />
 			<uri name="rtsp" />
 			<uri name="rtp" />
-		</application-service>
-		<application-service>
+		</app-control>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view" />
 			<mime name="application/x-smaf" />
 			<mime name="application/vnd.smaf" />
@@ -239,7 +239,7 @@
 			<mime name="audio/3gpp" />
 			<mime name="audio/x-ms-asx" />
 
-		</application-service>
+		</app-control>
 	</ui-application>
 
 	<ui-application component-type="svcapp" auto-restart="false" on-boot="false" appid="org.tizen.music-player.service" exec="/usr/apps/org.tizen.music-player/bin/music-player-service" nodisplay="true"  multiple="false" type="capp" taskmanage="false" submode="true" submode-mainid="org.tizen.music-player">

@@ -245,7 +245,6 @@ chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.in
 %attr(-,app,app) %dir %{DATA_PREFIX}/data
 %{PREFIX}/lib/*.so*
 #/opt/usr/share/sstream-plugins/*.so
-/etc/smack/accesses.d/org.tizen.music-player.efl
 /usr/share/license/%{name}
 %attr(-,app,app) %dir %{DATA_PREFIX}/shared/data
 %attr(0744,root,root) %{_log_dump_script_dir}/dump_%{name}.sh
@@ -269,7 +268,6 @@ chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.in
 %{MC_PREFIX}/bin/*
 %{MC_PREFIX}/shared/trusted/music-chooser.edj
 /usr/share/icons/default/small/music-chooser.png
-/etc/smack/accesses.d/org.tizen.music-chooser.efl
 
 #END_START_PUBLIC_REMOVED_STRING
 

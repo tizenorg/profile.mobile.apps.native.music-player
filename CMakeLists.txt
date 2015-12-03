@@ -363,9 +363,6 @@ ADD_SUBDIRECTORY(music-chooser)
 # setting
 ADD_SUBDIRECTORY(src/setting)
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} -L${CMAKE_BINARY_DIR}/src/setting -lsetting-music-player)
-
-#install smack rule file
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/${PKG_NAME}.efl DESTINATION  /etc/smack/accesses.d)
 #END_START_PUBLIC_REMOVED_STRING
 
 # music-player widget

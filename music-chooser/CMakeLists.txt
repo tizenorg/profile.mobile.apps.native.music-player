@@ -37,6 +37,7 @@ pkg_check_modules(pkgs REQUIRED
 	capi-appfw-application
 	capi-appfw-preference
 	capi-appfw-app-manager
+	libtzplatform-config
 )
 
 FOREACH(flag ${pkgs_CFLAGS})
@@ -80,5 +81,6 @@ ADD_DEPENDENCIES(${PROJECT_NAME} music-chooser.edj)
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
 INSTALL(DIRECTORY DESTINATION ${DATADIR})
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/music-chooser.edj DESTINATION ${MC_PREFIX}/shared/trusted)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.tizen.music-chooser.xml DESTINATION ${DESKTOP_DIR}/packages)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/music-chooser.png DESTINATION /usr/share/icons/default/small)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.tizen.music-chooser.xml DESTINATION ${SHARE_DIR}/packages)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/music-chooser.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})
+

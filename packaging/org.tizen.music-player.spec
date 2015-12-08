@@ -23,6 +23,7 @@ BuildRequires:  pkgconfig(capi-telephony)
 BuildRequires:  pkgconfig(vconf)
 BuildRequires:  pkgconfig(libxml-2.0)
 #BuildRequires:  pkgconfig(ecore-x)
+BuildRequires:  pkgconfig(libtzplatform-config)
 BuildRequires:  pkgconfig(efl-extension)
 BuildRequires:  pkgconfig(edje)
 BuildRequires:  pkgconfig(capi-appfw-app-manager)
@@ -98,25 +99,23 @@ Description: music-chooser chooser
 %prep
 %setup -q
 
-%define DESKTOP_DIR /usr/share
-%define INSTALL_DIR	/usr/apps
-%define DATA_DIR	/opt/usr/apps
+%define SHARE_DIR %{TZ_SYS_SHARE}
+%define INSTALL_DIR	 %{TZ_SYS_RO_APP}
 
 %define PKG_NAME %{name}
 %define PREFIX %{INSTALL_DIR}/%{PKG_NAME}
 
 %define MC_PKG_NAME %{PKG_PREFIX}.music-chooser
 %define MC_PREFIX %{INSTALL_DIR}/%{MC_PKG_NAME}
-%define DATA_PREFIX %{DATA_DIR}/%{PKG_NAME}
+%define DATA_PREFIX %{INSTALL_DIR}/%{PKG_NAME}
 
 %define SP_PKG_NAME %{PKG_PREFIX}.sound-player
 %define SP_PREFIX %{INSTALL_DIR}/%{SP_PKG_NAME}
-%define SP_DATA_PREFIX %{DATA_DIR}/%{SP_PKG_NAME}
+%define SP_DATA_PREFIX %{INSTALL_DIR}/%{SP_PKG_NAME}
 
-%define _storage_phone /opt/usr/media
-%define _storage_sdcard /opt/storage/sdcard
-
-%define _log_dump_script_dir /opt/etc/dump.d/module.d
+%define _app_icon_dir %{TZ_SYS_RO_ICONS}/default/small/
+%define _app_share_packages_dir %{TZ_SYS_RO_PACKAGES}
+%define _app_license_dir %{TZ_SYS_SHARE}/license
 
 %build
 %if 0%{?sec_build_binary_debug_enable}
@@ -127,13 +126,12 @@ export FFLAGS="$FFLAGS -DTIZEN_DEBUG_ENABLE"
 cmake . -DMC_PREFIX="%{MC_PREFIX}" \
 	-DINSTALL_DIR="%{INSTALL_DIR}" \
 	-DCMAKE_INSTALL_PREFIX="%{PREFIX}" \
-	-DCMAKE_DESKTOP_ICON_DIR="%{DESKTOP_DIR}/icons/default/small" \
-	-DDESKTOP_DIR="%{DESKTOP_DIR}" \
+	-DCMAKE_DESKTOP_ICON_DIR="%{_app_icon_dir}" \
+	-DSHARE_DIR="%{SHARE_DIR}" \
 	-DPKG_NAME="%{PKG_NAME}" \
 	-DSP_PKG_NAME="%{SP_PKG_NAME}" \
 	-DDATA_PREFIX="%{DATA_PREFIX}" \
 	-DSP_DATA_PREFIX="%{SP_DATA_PREFIX}" \
-	-DCMAKE_LOG_DUMP_SCRIPT_DIR="%{_log_dump_script_dir}" \
 %if 0%{?sec_product_feature_msg_disable_mms}
 	-DCMAKE_DISABLE_FEATURE_MMS=YES \
 %endif
@@ -152,8 +150,9 @@ make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/license
-cp LICENSE %{buildroot}/usr/share/license/%{name}
+mkdir -p %{buildroot}/%{_app_license_dir}
+cp LICENSE %{buildroot}/%{_app_license_dir}/%{name}
+
 %make_install
 %define tizen_sign 1
 %define tizen_sign_base %{PREFIX}
@@ -178,65 +177,11 @@ else
 fi
 
 %post
-#/usr/bin/vconftool set -t int memory/music/state 0 -i -f -g 5000 -s org.tizen.music-player
-
-#/usr/bin/vconftool set -t string memory/private/org.tizen.music-player/pos "00:00" -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t double memory/private/org.tizen.music-player/progress_pos 0.0 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t double memory/private/org.tizen.music-player/position_changed 0.0 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int memory/private/org.tizen.music-player/player_state 0 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int memory/private/org.tizen.music-player/pd_genlist_clear 0 -i -f -g 5000 -s org.tizen.music-player
-
-#/usr/bin/vconftool set -t bool db/private/org.tizen.music-player/shuffle 0 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int db/private/org.tizen.music-player/repeat 1 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int db/private/org.tizen.music-player/square_axis_val 0 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int db/private/org.tizen.music-player/playlist 15 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t bool db/private/org.tizen.music-player/motion_asked 0 -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t bool db/private/org.tizen.music-player/square_asked 0 -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t bool db/private/org.tizen.music-player/smart_volume 0 -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t bool db/private/org.tizen.music-player/show_lyrics 1 -f -g 5000 -s org.tizen.music-player
-
-#/usr/bin/vconftool set -t string db/private/org.tizen.music-player/tabs_order "1234567" -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t int db/private/org.tizen.music-player/tabs_select 63 -i -f -g 5000 -s org.tizen.music-player
-#/usr/bin/vconftool set -t string db/private/org.tizen.music-player/playlist_order "1234" -i -f -g 5000 -s org.tizen.music-player
-
-#/usr/bin/vconftool set -t int memory/private/org.tizen.music-player/playing_pid 0 -i -f -g 5000 -s org.tizen.music-player
-
-#vconftool set -t int db/private/org.tizen.music-player/se_change 1 -g 5000 -s org.tizen.music-player
-#vconftool set -t bool db/private/org.tizen.music-player/menu_change 1 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_1 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_2 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_3 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_4 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_5 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_6 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_7 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/eq_custom_8 0.5 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/user_audio_effect_3d 0.0 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/user_audio_effect_bass 0.0 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/user_audio_effect_room 0.0 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/user_audio_effect_reverb 0.0 -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/user_audio_effect_clarity 0.0 -g 5000 -s org.tizen.music-player
-#vconftool set -t int memory/private/org.tizen.music-player/auto_off_time_val 0 -i -f -g 5000 -s org.tizen.music-player
-#vconftool set -t int memory/private/org.tizen.music-player/auto_off_custom_time 0 -i -f -g 5000 -s org.tizen.music-player
-#vconftool set -t int memory/private/org.tizen.music-player/auto_off_type_val 0 -i -f -g 5000 -s org.tizen.music-player
-#vconftool set -t int memory/private/org.tizen.music-player/sa_user_change 0 -i -f -g 5000 -s org.tizen.music-player
-#vconftool set -t double db/private/org.tizen.music-player/playspeed 1.0 -i -f -g 5000 -s org.tizen.music-player
-
-#vconftool set -t bool db/private/org.tizen.music-player/personal_no_ask_again 0  -i -f -g 5000 -s org.tizen.music-player
-
-#/usr/bin/signing-client/hash-signer-client.sh -a -d -p platform  %{PREFIX}
-
-touch /opt/usr/apps/org.tizen.music-player/shared/data/MusicPlayStatus.ini
-chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/MusicPlayStatus.ini
-
-touch /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.ini
-chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.ini
-
 %files
 %manifest %{name}.manifest
-%{DESKTOP_DIR}/packages/%{name}.xml
-%{DESKTOP_DIR}/icons/default/small/%{name}.png
-%{DESKTOP_DIR}/icons/default/small/preview_music_4x2.png
+%{_app_share_packages_dir}/%{name}.xml
+%{_app_icon_dir}/%{name}.png
+%{_app_icon_dir}/preview_music_4x2.png
 %{PREFIX}/bin/*
 %{PREFIX}/res/locale/*/LC_MESSAGES/*.mo
 %{PREFIX}/res/images/*
@@ -244,12 +189,10 @@ chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.in
 %{PREFIX}/shared/res/*
 %attr(-,app,app) %dir %{DATA_PREFIX}/data
 %{PREFIX}/lib/*.so*
-#/opt/usr/share/sstream-plugins/*.so
-/usr/share/license/%{name}
+%{_app_license_dir}/%{name}
 %attr(-,app,app) %dir %{DATA_PREFIX}/shared/data
-%attr(0744,root,root) %{_log_dump_script_dir}/dump_%{name}.sh
 
-%{DESKTOP_DIR}/icons/default/small/%{SP_PKG_NAME}.png
+%{_app_icon_dir}%{SP_PKG_NAME}.png
 %{SP_PREFIX}/bin/sound-player
 %attr(-,app,app) %dir %{SP_DATA_PREFIX}/data
 %attr(-,app,app) %dir %{SP_DATA_PREFIX}/shared/data
@@ -261,14 +204,14 @@ chown 5000:5000 /opt/usr/apps/org.tizen.music-player/shared/data/NowPlayingId.in
 
 %files -n org.tizen.music-chooser
 %manifest org.tizen.music-chooser.manifest
-%{DESKTOP_DIR}/packages/org.tizen.music-chooser.xml
+%{SHARE_DIR}/packages/org.tizen.music-chooser.xml
 %{MC_PREFIX}/res/locale/*/LC_MESSAGES/*.mo
 %defattr(-,root,root,-)
 #%attr(-,app,app) %dir %{MC_PREFIX}/res/etc/music-chooser
 %{MC_PREFIX}/bin/*
 %{MC_PREFIX}/shared/trusted/music-chooser.edj
-/usr/share/icons/default/small/music-chooser.png
+%{TZ_SYS_RO_ICONS}/default/small/music-chooser.png
 
 #END_START_PUBLIC_REMOVED_STRING
 
-/usr/apps/org.tizen.music-player/shared/res/*
+%{TZ_SYS_RW_APP}/org.tizen.music-player/shared/res/*

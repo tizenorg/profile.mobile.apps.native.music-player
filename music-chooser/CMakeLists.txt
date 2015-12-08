@@ -37,6 +37,7 @@ pkg_check_modules(pkgs REQUIRED
 	capi-appfw-application
 	capi-appfw-preference
 	capi-appfw-app-manager
+	libtzplatform-config
 )
 
 FOREACH(flag ${pkgs_CFLAGS})

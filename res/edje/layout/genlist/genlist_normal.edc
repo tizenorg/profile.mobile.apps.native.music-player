@@ -29,7 +29,7 @@
 #define GENLIST_LITE_PAUSE_ICON  "lite/play_list_control_pause.png"
 #define GENLIST_LITE_PLAY_ICON   "lite/play_list_control_play.png"
 
-group {name : "elm/genlist/item/music/album_detail/default";
+group { GENLIST_NAME("music/album_detail/default")
    data.item: "texts" "elm.text.main.top elm.text.sub.bottom elm.text.main.shuffle";
    data.item: "contents" "elm.icon.1";
    parts {

@@ -837,7 +837,7 @@ static char *_mp_list_bottom_counter_item_text_get_cb(void *data, Evas_Object *o
 	MpList_t *list = (MpList_t *)evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(list->bottom_counter_text_get_cb);
-	if (!strcmp(part, "elm.text")) {
+	if (!strcmp(part, "elm.text.end")) {
 		return list->bottom_counter_text_get_cb(list);
 	} else {
 		return NULL;
@@ -868,7 +868,7 @@ Elm_Object_Item *mp_list_bottom_counter_item_append(MpList_t *list)
 	evas_object_data_set(list->genlist, "list_data", list);
 
 	static Elm_Genlist_Item_Class itc = { 0, };
-	itc.item_style = "music/1text/bottom_counter";
+	itc.item_style = "group_index";
 	itc.func.text_get = _mp_list_bottom_counter_item_text_get_cb;
 	itc.func.del = _mp_list_bottom_counter_item_del_cb;
 

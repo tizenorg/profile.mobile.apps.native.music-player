@@ -73,7 +73,7 @@ _mp_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
@@ -82,7 +82,7 @@ _mp_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 		return elm_entry_utf8_to_markup(name);
 
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		ret = mp_media_info_group_get_sub_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
@@ -111,7 +111,7 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *content = NULL;
 	content = elm_layout_add(obj);
 
-	if (!strcmp(part, "elm.icon.1") || !strcmp(part, "elm.swallow.icon")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		char *thumb_name = NULL;
 		mp_media_info_group_get_thumbnail_path(svc_item, &thumb_name);
 		int w, h;
@@ -536,25 +536,12 @@ _mp_album_list_genlist_create(MpAlbumList_t *list)
 	if (!list->itc) {
 		list->itc = elm_genlist_item_class_new();
 		MP_CHECK(list->itc);
-		//list->itc->item_style = "music/2line.top";
-		list->itc->item_style = "2line.top";
-		//list->itc->decorate_all_item_style = "musiclist/edit_default";
-		//list->itc->decorate_item_style = group_slide_style;
+		list->itc->item_style = "type1";
 		list->itc->func.text_get = _mp_album_list_label_get;
 		list->itc->func.content_get = _mp_album_list_icon_get;
 		list->itc->func.del = _mp_album_list_item_del_cb;
 	}
 
-	/*
-	evas_object_smart_callback_add(list->genlist, "drag,start,left", list->flick_left_cb, NULL);
-	evas_object_smart_callback_add(list->genlist, "drag,start,right", list->flick_right_cb, NULL);
-	evas_object_smart_callback_add(list->genlist, "drag,stop", list->flick_stop_cb, NULL);
-
-	evas_object_smart_callback_add(list->genlist, "drag,start,right", list->mode_right_cb, NULL);
-	evas_object_smart_callback_add(list->genlist, "drag,start,left", list->mode_left_cb, NULL);
-	evas_object_smart_callback_add(list->genlist, "drag,start,up", list->mode_cancel_cb, NULL);
-	evas_object_smart_callback_add(list->genlist, "drag,start,down", list->mode_cancel_cb, NULL);
-	       */
 	endfunc;
 }
 

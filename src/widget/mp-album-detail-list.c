@@ -80,7 +80,7 @@ _mp_album_detail_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 	static char result[DEF_STR_LEN + 1] = { 0, };
 
-	if (!strcmp(part, "elm.text.main.left")) {
+	if (!strcmp(part, "elm.text")) {
 		char *title = NULL;
 		bool match = mp_common_track_is_current(track, (MpList_t *)list);
 
@@ -115,7 +115,7 @@ _mp_album_detail_list_label_get(void *data, Evas_Object * obj, const char *part)
 		return markup;
 	}
 	if (!list->edit_mode) {
-		if (!strcmp(part, "elm.text.sub.right")) {
+		if (!strcmp(part, "elm.text.end")) {
 			int duration;
 			char time[16] = "";
 			bool match = mp_common_track_is_current(track, (MpList_t *)list);
@@ -280,9 +280,9 @@ _mp_album_detail_list_album_text_get(void *data, Evas_Object *obj, const char *p
 	MpAlbumDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		return g_strdup(elm_entry_utf8_to_markup(list->artist));
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.end")) {
 		char *text = NULL;
 		char *tmp = NULL;
 		char time[16] = "";
@@ -313,7 +313,7 @@ _mp_album_detail_list_shuffle_text_get(void *data, Evas_Object *obj, const char 
 	char *markup = NULL;
 	static char result[DEF_STR_LEN + 1] = { 0, };
 
-	if (!strcmp(part, "elm.text.main.left")) {
+	if (!strcmp(part, "elm.text")) {
 		MpAlbumDetailList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -340,7 +340,7 @@ _mp_album_detail_list_shuffle_text_get(void *data, Evas_Object *obj, const char 
 Evas_Object *
 _mp_album_detail_list_album_icon_get(void *data, Evas_Object * obj, const char *part)
 {
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		MpAlbumDetailList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -361,7 +361,7 @@ _mp_album_detail_list_album_icon_get(void *data, Evas_Object * obj, const char *
 Evas_Object *
 _mp_album_detail_list_shuffle_icon_get(void *data, Evas_Object * obj, const char *part)
 {
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 
@@ -450,7 +450,7 @@ static void _mp_album_detail_list_append_album_item(MpAlbumDetailList_t *list)
 
 	list->itc_album = elm_genlist_item_class_new();
 	MP_CHECK(list->itc_album);
-	list->itc_album->item_style = "2line.top";//"music/1text.2icon.3";//"music/3text.1icon.2"
+	list->itc_album->item_style = "type1";//"music/1text.2icon.3";//"music/3text.1icon.2"
 	list->itc_album->func.text_get = _mp_album_detail_list_album_text_get;
 	list->itc_album->decorate_all_item_style = NULL;
 	list->itc_album->func.content_get = _mp_album_detail_list_album_icon_get;
@@ -484,7 +484,7 @@ void mp_album_detail_list_show_shuffle(void *thiz, bool show)
 		list->itc_shuffle = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_shuffle);
 		//list->itc_shuffle->item_style = "music/1line";
-		list->itc_shuffle->item_style = "1line";
+		list->itc_shuffle->item_style = "default";
 		list->itc_shuffle->func.text_get = _mp_album_detail_list_shuffle_text_get;
 		list->itc_shuffle->decorate_all_item_style = NULL;
 		list->itc_shuffle->func.content_get = _mp_album_detail_list_shuffle_icon_get;
@@ -779,21 +779,17 @@ static void _mp_album_detail_list_update(void *thiz)
 		if (!list->itc) {
 			list->itc = elm_genlist_item_class_new();
 			if (list->itc) {
-				list->itc->item_style = "1line.2";//"music/2text";
-				//list->itc->decorate_all_item_style = "decorate/edit_default";//edit_default
+				list->itc->item_style = "type1";
 				list->itc->func.text_get = _mp_album_detail_list_label_get;
 				list->itc->func.content_get = _mp_album_detail_list_icon_get;
 				list->itc->func.del = _mp_album_detail_list_item_del_cb;
 			}
 		}
 
-		//evas_object_smart_callback_add(list->genlist, "longpressed", _mp_album_detail_list_item_longpressed_cb, list);
 		evas_object_smart_callback_add(list->genlist, "scroll,drag,start", list->drag_start_cb, list);
 		evas_object_smart_callback_add(list->genlist, "scroll,drag,stop", list->drag_stop_cb, list);
 		evas_object_smart_callback_add(list->genlist, "highlighted", _mp_album_detail_list_item_highlighted, list);
 		evas_object_smart_callback_add(list->genlist, "unhighlighted", _mp_album_detail_list_item_unhighlighted, list);
-
-//		mp_list_bottom_counter_item_append((MpList_t *)list);
 
 		PROFILE_OUT("elm_genlist_add");
 		/* load list */

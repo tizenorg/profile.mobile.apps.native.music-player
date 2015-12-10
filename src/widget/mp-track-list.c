@@ -49,7 +49,7 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 	mp_media_info_h track = (mp_media_info_h)(item->handle);
 	mp_retvm_if(!track, NULL, "data is null");
 
-	if ((!strcmp(part, "elm.text.main.left.top")) || (!strcmp(part, "elm.text.sub.left.bottom"))) {
+	if (!strcmp(part, "elm.text") || !strcmp(part, "elm.text.sub")) {
 		MpTrackList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -59,7 +59,7 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 
 		char *title = NULL;
 
-		if (!strcmp(part, "elm.text.main.left.top")) {
+		if (!strcmp(part, "elm.text")) {
 
 			if (list->track_type == MP_TRACK_BY_FOLDER) {
 				mp_media_info_get_display_name(track, &title);
@@ -145,7 +145,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	char *uri = NULL;
 	mp_media_info_get_file_path(track, &uri);
 
-	Evas_Object *part_content = elm_object_item_part_content_get(item->it, "elm.icon.1");
+	Evas_Object *part_content = elm_object_item_part_content_get(item->it, "elm.swallow.icon");
 	if (part_content) {
 		elm_object_signal_emit(part_content, "show_default", "*");
 	}
@@ -172,7 +172,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		}
 	}
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		char *thumbpath = NULL;
 		Evas_Object *icon;
 
@@ -655,7 +655,7 @@ _mp_track_list_shuffle_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	char *markup = NULL;
 	static char result[DEF_STR_LEN + 1] = { 0, };
-	if (!strcmp(part, "elm.text.main.left")) {
+	if (!strcmp(part, "elm.text")) {
 		MpTrackList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -682,7 +682,7 @@ _mp_track_list_shuffle_icon_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *content = NULL;
 	content = elm_layout_add(obj);
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *icon;
 		icon = mp_util_create_image(obj, IMAGE_EDJ_NAME, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
 		evas_object_color_set(icon, 21, 108, 148, 255);
@@ -732,7 +732,7 @@ static void _mp_track_list_append_shuffle_item(MpTrackList_t *list)
 		list->itc_shuffle = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_shuffle);
 		//list->itc_shuffle->item_style = "music/1line";//"music/3text.1icon.2"
-		list->itc_shuffle->item_style = "1line";//"music/3text.1icon.2"
+		list->itc_shuffle->item_style = "default";//"music/3text.1icon.2"
 		list->itc_shuffle->func.text_get = _mp_track_list_shuffle_text_get;
 		list->itc_shuffle->decorate_all_item_style = NULL;
 		list->itc_shuffle->func.content_get = _mp_track_list_shuffle_icon_get;
@@ -1144,10 +1144,7 @@ static void _mp_track_list_update(void *thiz)
 		if (!list->itc) {
 			list->itc = elm_genlist_item_class_new();
 			if (list->itc) {
-				list->itc->item_style = "2line.top";
-				//list->itc->item_style = "music/2line.top";//"music/tracklist/2text.1icon.4";//"music/3text.1icon.2"
-				//list->itc->decorate_item_style = "NULL";
-				//list->itc->decorate_all_item_style = "decorate/edit_default";//edit_default
+				list->itc->item_style = "type1";
 				list->itc->func.text_get = _mp_track_list_label_get;
 				list->itc->func.content_get = _mp_track_list_icon_get;
 				list->itc->func.del = _mp_track_list_item_del_cb;

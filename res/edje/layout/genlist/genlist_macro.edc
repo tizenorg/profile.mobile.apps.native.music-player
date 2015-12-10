@@ -17,6 +17,9 @@
 
 #define GENLIST_NAME(NAME) \
       name: "elm/genlist/item/"NAME; \
+      alias: "elm/genlist/item_compress/"NAME; \
+      alias: "elm/genlist/tree/"NAME; \
+      alias: "elm/genlist/tree_compress/"NAME;
 
 
 //**************************************************************************//

@@ -74,14 +74,14 @@ _mp_artist_list_label_get(void *data, Evas_Object *obj, const char *part)
 	mp_media_info_h svc_item = (item->handle);
 	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!strcmp(part, "elm.text.main.left.top") || !strcmp(part, "elm.slide.text.1") || !strcmp(part, "elm.text")) {
+	if (!strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
 		}
 		return elm_entry_utf8_to_markup(name);
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		char **album_thumbs = NULL;
 		int album_count = 0;
 		int song_count = 0;
@@ -572,7 +572,7 @@ _mp_artist_list_genlist_create(MpArtistList_t *list)
 			return;
 		}
 		/*list->itc->item_style = "music/2line.top";*/
-		list->itc->item_style = "2line.top";
+		list->itc->item_style = "type1";
 		/*list->itc->decorate_all_item_style = "musiclist/edit_default";
 		list->itc->decorate_item_style = group_slide_style;*/
 		list->itc->func.text_get = _mp_artist_list_label_get;

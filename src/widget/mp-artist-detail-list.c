@@ -41,7 +41,7 @@ _mp_artist_detail_list_album_label_get(void *data, Evas_Object * obj, const char
 
 	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!g_strcmp0(part, "elm.text.main.left")) {
+	if (!g_strcmp0(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
@@ -122,7 +122,7 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 	MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
 	MP_CHECK_NULL(list);
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		content = elm_layout_add(obj);
 
 		char *thumb_name = NULL;
@@ -186,7 +186,7 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 
 	static char result[DEF_STR_LEN + 1] = { 0, };
 
-	if (!strcmp(part, "elm.text.main.left")) {
+	if (!strcmp(part, "elm.text")) {
 
 		bool match = mp_common_track_is_current(track, (MpList_t *)list);
 		char *title = NULL;
@@ -217,7 +217,7 @@ _mp_artist_detail_list_track_label_get(void *data, Evas_Object * obj, const char
 		return markup;
 	}
 	if (!list->edit_mode) {
-		if (!strcmp(part, "elm.text.sub.right")) {
+		if (!strcmp(part, "elm.text.end")) {
 			int duration;
 			char time[16] = "";
 			bool match = mp_common_track_is_current(track, (MpList_t *)list);
@@ -481,7 +481,7 @@ _mp_artist_detail_list_shuffle_text_get(void *data, Evas_Object *obj, const char
 	char *markup = NULL;
 	static char result[DEF_STR_LEN + 1] = { 0, };
 
-	if (!strcmp(part, "elm.text.main.left")) {
+	if (!strcmp(part, "elm.text")) {
 		MpArtistDetailList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 
@@ -507,7 +507,7 @@ _mp_artist_detail_list_shuffle_text_get(void *data, Evas_Object *obj, const char
 Evas_Object *
 _mp_artist_detail_list_shuffle_icon_get(void *data, Evas_Object * obj, const char *part)
 {
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 
@@ -584,7 +584,7 @@ static void _mp_artist_detail_list_append_shuffle_item(MpArtistDetailList_t *lis
 		return;
 	}
 	//list->itc_shuffle->item_style = "music/1line";//"music/1text.2icon.3";//"music/3text.1icon.2"
-	list->itc_shuffle->item_style = "1line";//"music/1text.2icon.3";//"music/3text.1icon.2"
+	list->itc_shuffle->item_style = "default";//"music/1text.2icon.3";//"music/3text.1icon.2"
 	list->itc_shuffle->func.text_get = _mp_artist_detail_list_shuffle_text_get;
 	list->itc_shuffle->decorate_all_item_style = NULL;
 	list->itc_shuffle->func.content_get = _mp_artist_detail_list_shuffle_icon_get;
@@ -914,7 +914,7 @@ void _mp_artist_detail_list_update(void *thiz)
 #endif
 		list->itc_album = elm_genlist_item_class_new();
 		if (list->itc_album) {
-			list->itc_album->item_style = "1line";//"artist/groupindex.icon";
+			list->itc_album->item_style = "default";//"artist/groupindex.icon";
 			//list->itc_album->item_style = "music/1line";//"artist/groupindex.icon";
 			//list->itc_album->decorate_all_item_style = "artistdetaillist/edit_default";
 			list->itc_album->func.text_get = _mp_artist_detail_list_album_label_get;
@@ -923,7 +923,7 @@ void _mp_artist_detail_list_update(void *thiz)
 
 			list->itc_track = elm_genlist_item_class_new();
 			if (list->itc_track) {
-				list->itc_track->item_style = "1line.2";//"music/2text";
+				list->itc_track->item_style = "type1";//"music/2text";
 				//list->itc_track->decorate_all_item_style = "musiclist/edit_default";
 				//list->itc_track->decorate_item_style = group_slide_style;
 				list->itc_track->func.text_get = _mp_artist_detail_list_track_label_get;

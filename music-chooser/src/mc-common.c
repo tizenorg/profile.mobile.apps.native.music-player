@@ -57,7 +57,14 @@ void mc_common_push_track_view_by_group_name(void *data, int track_type, const c
 
 	ad->track_type = track_type;
 
-	Evas_Object *navi_layout = mc_common_load_edj(ad->navi_bar, MC_EDJ_FILE, "view_layout_tabbar");
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	if (path == NULL) {
+		return;
+	}
+	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	Evas_Object *navi_layout = mc_common_load_edj(ad->navi_bar, mc_edj_path, "view_layout_tabbar");
 	g_navi_it = elm_naviframe_top_item_get(ad->navi_bar);
 //	g_ly = elm_object_item_part_content_get(g_navi_it, "elm.swallow.content");
 	tabbar = _create_tabbar(ad->navi_bar, ad);
@@ -534,8 +541,13 @@ Evas_Object *mc_common_create_processing_popup(void *data)
 
 	popup = elm_popup_add(ad->base_layout);
 	//eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, eext_popup_back_cb, NULL);
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	MP_CHECK_NULL(path);
+	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
 	Evas_Object *layout = elm_layout_add(popup);
-	elm_layout_file_set(layout, MC_EDJ_FILE, "popup_processingview_1button");
+	elm_layout_file_set(layout, mc_edj_path, "popup_processingview_1button");
 	/*create circle progressbar*/
 
 	progressbar = elm_progressbar_add(popup);

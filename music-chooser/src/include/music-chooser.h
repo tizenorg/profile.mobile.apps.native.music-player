@@ -35,13 +35,11 @@
 
 #define ICON_SIZE 64*elm_config_scale_get()
 
-#define PKGNAME "music-chooser"
 #define DOMAIN_NAME "org.tizen.music-chooser"
-//#define LOCALE_DIR PREFIX"/res/locale"
-#define LOCALE_DIR  "/usr/apps/org.tizen.music-chooser/res/locale"
-#define IMAGE_EDJ_NAME "/usr/apps/org.tizen.music-lite/res/edje/mp-images.edj"
+#define LOCALE_DIR  "locale"
+#define IMAGE_EDJ_NAME "mp-images.edj"
 #define SYS_DOMAIN_NAME "sys_string"
-#define MC_EDJ_FILE		"/usr/apps/org.tizen.music-chooser/shared/trusted/music-chooser.edj"
+#define MC_EDJ_FILE		"music-chooser.edj"
 
 #define _EDJ(o)			elm_layout_edje_get(o)
 #define GET_STR(s)			dgettext(DOMAIN_NAME, s)

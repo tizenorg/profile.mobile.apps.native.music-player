@@ -325,7 +325,13 @@ int mc_group_play_list_update(Evas_Object *list, Elm_Object_Item *navi_it)
 	Evas_Object *select_btn = elm_button_add(ad->navi_bar);
 	elm_object_style_set(select_btn, "naviframe/title_icon");
 	ic = elm_icon_add(ad->navi_bar);
-	elm_image_file_set(ic, IMAGE_EDJ_NAME, "00_icon_edit.png");
+
+	char image_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(image_path, 1024, "%s/%s/%s", path, "edje", IMAGE_EDJ_NAME);
+	elm_image_file_set(ic, image_path, "00_icon_edit.png");
+	free(image_path);
+
 	evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
 	elm_image_resizable_set(ic, EINA_TRUE, EINA_TRUE);
 	elm_object_part_content_set(select_btn, "icon", ic);

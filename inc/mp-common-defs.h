@@ -63,7 +63,7 @@
 #define DEFAULT_PLAYER_THUMBNAIL		"/usr/apps/org.tizen.music-player/shared/res/shared_images/default_album_art_480.png"
 #define BROKEN_ALBUMART_IMAGE_PATH		"/opt/usr/share/media/.thumb/thumb_default.png"
 
-#define PLAYLIST_CREATE_THUMBNAIL		"/usr/apps/org.tizen.music-player/res/images/music_player/T02_playlist_thumbnail_created.png"
+#define PLAYLIST_CREATE_THUMBNAIL		"T02_playlist_thumbnail_created.png"
 //for shortcut
 typedef enum {
 	MP_ADD_TO_HOME_SHORTCUT_TYPE_NONE,

@@ -378,7 +378,13 @@ mp_common_load_edj(Evas_Object * parent, const char *file, const char *group)
 
 	eo = elm_layout_add(parent);
 	if (eo) {
-		r = elm_layout_file_set(eo, file, group);
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", file);
+		r = elm_layout_file_set(eo, edje_path, group);
+		free(path);
 		if (!r) {
 			evas_object_del(eo);
 			return NULL;

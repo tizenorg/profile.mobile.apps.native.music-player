@@ -840,7 +840,14 @@ mp_popup_message_create(Evas_Object * parent, mp_popup_type type, char *title, c
 
 		Evas_Object *layout = NULL;
 		layout = elm_layout_add(popup);
-		elm_layout_file_set(layout, PLAY_VIEW_EDJ_NAME, "popup_processingview_string");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", PLAY_VIEW_EDJ_NAME);
+
+		elm_layout_file_set(layout, edje_path, "popup_processingview_string");
+		free(path);
 		evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		progressbar = mp_widget_loading_icon_add(popup, MP_LOADING_ICON_SIZE_SMALL);
 		elm_object_part_content_set(layout, "elm.swallow.content", progressbar);
@@ -924,7 +931,14 @@ mp_popup_create(Evas_Object * parent, mp_popup_type type, char *title, void *use
 
 		Evas_Object *layout = NULL;
 		layout = elm_layout_add(popup);
-		elm_layout_file_set(layout, PLAY_VIEW_EDJ_NAME, "popup_processingview_string");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", PLAY_VIEW_EDJ_NAME);
+
+		elm_layout_file_set(layout, edje_path, "popup_processingview_string");
+		free(path);
 		evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		progressbar = mp_widget_loading_icon_add(popup, MP_LOADING_ICON_SIZE_SMALL);
 		elm_object_part_content_set(layout, "elm.swallow.content", progressbar);
@@ -937,7 +951,14 @@ mp_popup_create(Evas_Object * parent, mp_popup_type type, char *title, void *use
 		Evas_Object *btn1;
 
 		layout = elm_layout_add(popup);
-		elm_layout_file_set(layout, PLAY_VIEW_EDJ_NAME, "popup_processingview_1button");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024,"%s%s/%s",path, "edje", PLAY_VIEW_EDJ_NAME);
+
+		elm_layout_file_set(layout, edje_path, "popup_processingview_1button");
+		free(path);
 
 		progressbar = mp_widget_loading_icon_add(popup, MP_LOADING_ICON_SIZE_LARGE);
 
@@ -959,7 +980,14 @@ mp_popup_create(Evas_Object * parent, mp_popup_type type, char *title, void *use
 		Evas_Object *layout;
 
 		layout = elm_layout_add(popup);
-		elm_layout_file_set(layout, PLAY_VIEW_EDJ_NAME, "popup_processingview_1button");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", PLAY_VIEW_EDJ_NAME);
+
+		elm_layout_file_set(layout, edje_path, "popup_processingview_1button");
+		free(path);
 		progressbar = mp_widget_loading_icon_add(popup, MP_LOADING_ICON_SIZE_LARGE);
 		elm_object_part_content_set(layout, "elm.swallow.content", progressbar);
 		elm_object_part_text_set(layout, "elm.text", title);
@@ -973,7 +1001,14 @@ mp_popup_create(Evas_Object * parent, mp_popup_type type, char *title, void *use
 		Evas_Object *btn1;
 
 		layout = elm_layout_add(popup);
-		elm_layout_file_set(layout, MP_EDJ_NAME, "popup_center_progressview");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024,"%s%s/%s",path, "edje", MP_EDJ_NAME);
+
+		elm_layout_file_set(layout, edje_path, "popup_center_progressview");
+		free(path);
 
 		progressbar = elm_progressbar_add(popup);
 		elm_object_style_set(progressbar, "list_progress");
@@ -1013,7 +1048,14 @@ mp_popup_create(Evas_Object * parent, mp_popup_type type, char *title, void *use
 		Evas_Object *label;
 
 		layout = elm_layout_add(popup);
-		int ret = elm_layout_file_set(layout, MP_EDJ_NAME, "popup_checkview_personal");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", MP_EDJ_NAME);
+
+		int ret = elm_layout_file_set(layout, edje_path, "popup_checkview_personal");
+		free(path);
 		if (!ret) {
 			ERROR_TRACE("Set layout style failed");
 		}
@@ -1254,7 +1296,14 @@ Evas_Object *mp_popup_multi_window_center_add(Evas_Object *parent)
 
 	Evas_Object *p_window = elm_popup_win_get(popup);
 	if (p_window) {
-		elm_theme_extension_add(NULL, THEME_NAME);
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", THEME_NAME);
+
+		elm_theme_extension_add(NULL, edje_path);
+		free(path);
 	}
 
 	return popup;

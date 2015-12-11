@@ -366,9 +366,15 @@ _mp_album_detail_list_shuffle_icon_get(void *data, Evas_Object * obj, const char
 		content = elm_layout_add(obj);
 
 		Evas_Object *icon;
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
 
-		icon = mp_util_create_image(obj, IMAGE_EDJ_NAME, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", IMAGE_EDJ_NAME);
+
+		icon = mp_util_create_image(obj, edje_path, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
 		evas_object_color_set(icon, 21, 108, 148, 255);
+		free(path);
 
 		elm_layout_theme_set(content, "layout", "list/B/type.3", "default");
 		elm_layout_content_set(content, "elm.swallow.content", icon);

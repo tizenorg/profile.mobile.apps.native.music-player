@@ -212,7 +212,9 @@ mc_app_control(app_control_h app_control, void* data)
 
 	app_control_clone(&ad->service, app_control);
 
-	bindtextdomain(DOMAIN_NAME, LOCALE_DIR);
+	char locale_path[1024] = {0};
+	char * path = app_get_resource_path();
+	snprintf(locale_path, 1024, "%s/%s", path, LOCALE_DIR);
 
 	mp_media_info_connect();
 	_parse_service(ad, app_control);

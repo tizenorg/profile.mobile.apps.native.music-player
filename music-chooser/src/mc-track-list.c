@@ -917,7 +917,11 @@ Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad)
 	MP_CHECK_NULL(parent);
 	MP_CHECK_NULL(ad);
 
-	layout = mc_common_load_edj(parent, MC_EDJ_FILE, "list_layout");
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	layout = mc_common_load_edj(parent, mc_edj_path, "list_layout");
 	MP_CHECK_NULL(layout);
 
 	ld = calloc(1, sizeof(track_list_data_t));

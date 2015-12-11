@@ -65,8 +65,8 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${pkgs_LDFLAGS} -lm)
 SET(BINDIR "${MC_PREFIX}/bin")
 
 # set extra defines
-SET(IMAGES_DIR "${MC_PREFIX}/shared/trusted/music-chooser")
-SET(MC_EDJ_NAME "${MC_PREFIX}/shared/trusted/music-chooser.edj")
+SET(IMAGES_DIR "${MC_PREFIX}/res/edje/music-chooser")
+SET(MC_EDJ_NAME "${MC_PREFIX}/res/edje/music-chooser.edj")
 ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
 ADD_DEFINITIONS("-DIMAGES_DIR=\"${IMAGES_DIR}\"")
 ADD_DEFINITIONS("-DMC_EDJ_NAME=\"${MC_EDJ_NAME}\"")
@@ -80,7 +80,7 @@ ADD_DEPENDENCIES(${PROJECT_NAME} music-chooser.edj)
 
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
 INSTALL(DIRECTORY DESTINATION ${DATADIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/music-chooser.edj DESTINATION ${MC_PREFIX}/shared/trusted)
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/music-chooser.edj DESTINATION ${MC_PREFIX}/res/edje)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.tizen.music-chooser.xml DESTINATION ${SHARE_DIR}/packages)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/music-chooser.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})
 

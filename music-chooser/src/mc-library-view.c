@@ -182,7 +182,11 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 	elm_toolbar_transverse_expanded_set(obj, EINA_TRUE);
 	elm_toolbar_select_mode_set(obj, ELM_OBJECT_SELECT_MODE_ALWAYS);
 
-	elm_theme_extension_add(NULL, MC_EDJ_FILE);
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	elm_theme_extension_add(NULL, mc_edj_path);
 	elm_object_style_set(obj, "scroll/tabbar");
 //	elm_object_style_set(obj, "tabbar/item_with_title");
 
@@ -248,7 +252,11 @@ mc_library_view_create(struct app_data *ad)
 	} else {
 		//g_ly = elm_layout_add(ad->navi_bar);
 		//elm_layout_theme_set(g_ly, "layout", "application", "default");
-		g_ly = mc_common_load_edj(ad->navi_bar, MC_EDJ_FILE, "view_layout_tabbar");
+		char mc_edj_path[1024] = {0};
+		char *path = app_get_resource_path();
+		snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+		free(path);
+		g_ly = mc_common_load_edj(ad->navi_bar, mc_edj_path, "view_layout_tabbar");
 		g_navi_it = elm_naviframe_item_push(ad->navi_bar, NULL, NULL, NULL, g_ly, NULL);
 #if  0
 		Evas_Object *search_btn = NULL;
@@ -264,7 +272,7 @@ mc_library_view_create(struct app_data *ad)
 #ifdef MC_AUTO_RECOMMENDED
 		if (ad->auto_recommended_show) {
 			elm_object_signal_emit(g_ly, "show.recommended", "*");
-			Evas_Object *recommended_area = mc_common_load_edj(ad->navi_bar, MC_EDJ_FILE, "recommended_area");
+			Evas_Object *recommended_area = mc_common_load_edj(ad->navi_bar, mc_edj_path, "recommended_area");
 			elm_object_part_content_set(g_ly, "recommended", recommended_area);
 			mc_common_obj_domain_translatable_part_text_set(recommended_area, "title_text", MC_TEXT_SET_AS_AUTO_RECOMMEND);
 			mc_common_obj_domain_translatable_part_text_set(recommended_area, "description_text", MC_TEXT_SET_AS_RECOMMENDED_TXT);
@@ -279,7 +287,6 @@ mc_library_view_create(struct app_data *ad)
 		}
 #endif
 	}
-
 
 	mc_common_item_domain_text_translate(g_navi_it, "elm.text.title", MC_TEXT_SELECT);
 	elm_naviframe_item_pop_cb_set(g_navi_it, mc_quit_cb, ad);

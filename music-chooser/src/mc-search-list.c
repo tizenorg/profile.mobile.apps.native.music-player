@@ -41,7 +41,11 @@ _mc_search_list_no_content_add(void *data)
 	evas_object_size_hint_weight_set(no_contents, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(no_contents, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
-	elm_layout_file_set(no_contents, MC_EDJ_FILE, "no_result");
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	elm_layout_file_set(no_contents, mc_edj_path, "no_result");
 
 	if (list->genlist) {
 		elm_box_unpack(list->box, list->genlist);
@@ -646,7 +650,11 @@ UgMpSearchList_t * mc_search_list_create(Evas_Object *parent, struct app_data *a
 
 	list->ad = ad;
 
-	list->layout = mc_common_load_edj(parent, MC_EDJ_FILE, "list_layout");
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	list->layout = mc_common_load_edj(parent, mc_edj_path, "list_layout");
 	if (list->layout == NULL) {
 		IF_FREE(list);
 		return NULL;

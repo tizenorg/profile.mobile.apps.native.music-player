@@ -149,7 +149,11 @@ _mc_search_init(Evas_Object *parent, void *thiz)
 
 	search_view_data_t *search = (search_view_data_t *)thiz;
 
-	Evas_Object *layout = mc_common_load_edj(parent, MC_EDJ_FILE, "view_layout");
+	char mc_edj_path[1024] = {0};
+	char *path = app_get_resource_path();
+	snprintf(mc_edj_path, 1024, "%s/%s/%s", path, "edje", MC_EDJ_FILE);
+	free(path);
+	Evas_Object *layout = mc_common_load_edj(parent, mc_edj_path, "view_layout");
 
 	search->layout = layout;
 

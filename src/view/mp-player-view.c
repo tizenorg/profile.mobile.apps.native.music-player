@@ -1145,7 +1145,6 @@ static Evas_Object *_mp_player_view_create_toolbar_more_btn(Evas_Object *parent,
 	if (!btn) {
 		return NULL;
 	}
-	elm_object_style_set(btn, "naviframe/more/default");
 	evas_object_smart_callback_add(btn, "clicked", func, data);
 	return btn;
 }

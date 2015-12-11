@@ -407,7 +407,15 @@ _mp_playlist_add_icon_get(void *data, Evas_Object * obj, const char *part)
 		Evas_Object *eo = NULL;
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
-		eo = mp_util_create_thumb_icon(obj, PLAYLIST_CREATE_THUMBNAIL, MP_LIST_ICON_SIZE,
+
+		char image_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(image_path, 1024, "%s%s/%s", path, "images/music_player", PLAYLIST_CREATE_THUMBNAIL);
+
+		MP_CHECK_NULL(image_path);
+		eo = mp_util_create_thumb_icon(obj, image_path, MP_LIST_ICON_SIZE,
 		                               MP_LIST_ICON_SIZE);
 
 		elm_layout_theme_set(content, "layout", "list/B/music.type.1", "default");

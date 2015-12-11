@@ -601,7 +601,15 @@ Evas_Object *mp_now_playing_create(Evas_Object *parent, MpNowplayingCb play_bt_c
 #endif
 	playing_pannel = elm_layout_add(parent);
 	if (playing_pannel) {
-		r = elm_layout_file_set(playing_pannel, PLAY_VIEW_EDJ_NAME, "mp_now_playing");
+		char edje_path[1024] ={0};
+		char * path = app_get_resource_path();
+
+		MP_CHECK_NULL(path);
+		snprintf(edje_path, 1024, "%s%s/%s", path, "edje", PLAY_VIEW_EDJ_NAME);
+
+		MP_CHECK_NULL(edje_path);
+		r = elm_layout_file_set(playing_pannel, edje_path, "mp_now_playing");
+		free(path);
 
 		if (!r) {
 			ERROR_TRACE("Error: elm_layout_file_set");

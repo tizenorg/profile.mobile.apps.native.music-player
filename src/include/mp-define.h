@@ -37,6 +37,7 @@
 #include <libxml/xpath.h>
 #include <libxml/xpathInternals.h>
 #include <sys/times.h>
+#include <app.h>
 
 #ifndef EXPORT_API
 #define EXPORT_API __attribute__((__visibility__("default")))
@@ -76,14 +77,14 @@
 #define PKGNAME_FOR_SHORTCUT	PKG_NAME
 
 #define EDJ_PATH EDJDIR
-#define EDJ_NAME EDJ_PATH"/mp-library.edj"
-#define MP_EDJ_NAME EDJ_PATH"/music.edj"
-#define MINICON_EDJ_NAME EDJ_PATH"/mp-minicontroller.edj"
-#define LOCKSCREENMINI_EDJ_NAME EDJ_PATH"/mp-lockscreenmini.edj"
-#define IMAGE_EDJ_NAME EDJ_PATH"/mp-images.edj"
+#define EDJ_NAME "/mp-library.edj"
+#define MP_EDJ_NAME "/music.edj"
+#define MINICON_EDJ_NAME "/mp-minicontroller.edj"
+#define LOCKSCREENMINI_EDJ_NAME "/mp-lockscreenmini.edj"
+#define IMAGE_EDJ_NAME "/mp-images.edj"
 #define GRP_MAIN "main"
 
-#define THEME_NAME	EDJ_PATH"/mp-custom-winset-style.edj"
+#define THEME_NAME	"/mp-custom-winset-style.edj"
 
 #define TITLE_H 90
 #define START_Y_POSITION	94
@@ -132,7 +133,7 @@
 #define MAX_URL_LEN				MAX_NAM_LEN
 #define DEF_STR_LEN				512
 
-#define PLAY_VIEW_EDJ_NAME 			EDJ_PATH"/music.edj"
+#define PLAY_VIEW_EDJ_NAME 		"/music.edj"
 
 //2 EVAS_OBJECT_TYPE define
 #define MP_FAST_SCROLLER_TYPE 					"mp_data_fast_scroller_type"

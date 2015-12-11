@@ -1366,8 +1366,18 @@ mp_create(void *data)
 
 	PROFILE_IN("elm_theme_extension_add");
 	/* do extension add before add elm object.*/
-	elm_theme_extension_add(NULL, THEME_NAME);
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
+
+	MP_CHECK_VAL(path, EINA_FALSE);
+	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", THEME_NAME);
+
+	MP_CHECK_VAL(edje_path, EINA_FALSE);
+	Elm_Theme *th = elm_theme_new();
+	elm_theme_extension_add(th, edje_path);
 	PROFILE_OUT("elm_theme_extension_add");
+	free(path);
+
 
 	PROFILE_IN("bindtextdomain");
 	bindtextdomain(DOMAIN_NAME, LOCALE_DIR);

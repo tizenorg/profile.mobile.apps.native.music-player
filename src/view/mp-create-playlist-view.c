@@ -384,7 +384,16 @@ _mp_create_plst_view_create_editfield_layout(void *thiz)
 
 	view->create_plst_layout = elm_layout_add(view->layout);
 	MP_CHECK_NULL(view->create_plst_layout);
-	elm_layout_file_set(view->create_plst_layout, EDJ_NAME, "create_playlist");
+
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
+
+	MP_CHECK_NULL(path);
+	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", EDJ_NAME);
+
+	MP_CHECK_NULL(edje_path);
+	elm_layout_file_set(view->create_plst_layout, edje_path, "create_playlist");
+	free(path);
 
 	genlist = mp_widget_genlist_create(view->create_plst_layout);
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);

@@ -640,8 +640,15 @@ static void _mp_common_list_track_more_detail(void *parent, void *data)
 
 	pop_layout = elm_layout_add(popup);
 	MP_CHECK(pop_layout);
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
 
-	elm_layout_file_set(pop_layout, MP_EDJ_NAME, "popup_detail");
+	MP_CHECK(path);
+	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", MP_EDJ_NAME);
+
+	MP_CHECK(edje_path);
+	elm_layout_file_set(pop_layout, edje_path, "popup_detail");
+	free(path);
 
 	pBox = elm_box_add(popup);
 	elm_box_horizontal_set(pBox, EINA_FALSE);

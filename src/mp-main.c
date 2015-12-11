@@ -1366,9 +1366,10 @@ mp_create(void *data)
 
 	PROFILE_IN("elm_theme_extension_add");
 	/* do extension add before add elm object.*/
+	
 	elm_theme_extension_add(NULL, THEME_NAME);
 	PROFILE_OUT("elm_theme_extension_add");
-
+	
 	PROFILE_IN("bindtextdomain");
 	bindtextdomain(DOMAIN_NAME, LOCALE_DIR);
 

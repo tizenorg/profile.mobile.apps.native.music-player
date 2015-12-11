@@ -488,7 +488,14 @@ mp_edit_playlist_content_create(void *thiz)
 	mp_playlist_data->add_to_selected = true;
 
 	layout = elm_layout_add(mp_playlist_data->popup);
-	elm_layout_file_set(layout, PLAY_VIEW_EDJ_NAME, "popup_entryview");
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
+
+	MP_CHECK(path);
+	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", PLAY_VIEW_EDJ_NAME);
+
+	elm_layout_file_set(layout, edje_path, "popup_entryview");
+	free(path);
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	elm_object_focus_set(layout, EINA_FALSE);
 

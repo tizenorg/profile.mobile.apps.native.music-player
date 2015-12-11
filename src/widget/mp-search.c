@@ -105,7 +105,6 @@ mp_search_create_new(Evas_Object * parent, Evas_Smart_Cb change_cb, void *change
 	Elm_Theme *th = elm_theme_new();
 	elm_theme_extension_add(th, THEME_NAME);
 	elm_layout_theme_set(searchfield, "layout", "searchbar", "cancel_button_case");
-	//elm_layout_theme_set(searchfield, "layout", "searchfield", "singleline");
 	const char *style = "DEFAULT='font=tizen; font_size=45'";
 
 	en = elm_entry_add(searchfield);

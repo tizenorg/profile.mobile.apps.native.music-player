@@ -112,12 +112,12 @@ _mp_detail_view_info_gl_text_get(void *data, Evas_Object * obj, const char *part
 	mp_media_info_t *info = data;
 	MP_CHECK_NULL(info);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		char *title = GET_STR(info->header);
 
 		return g_strdup(title);
 
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		char *sub_title = info->detail;
 
 		MP_CHECK_NULL(sub_title);
@@ -139,8 +139,7 @@ _mp_detail_view_set_itc(void *thiz, mp_detail_view_itc type)
 	case DETAIL_VIEW_ITC_META_INFO:
 		view->meta_itc = elm_genlist_item_class_new();
 		MP_CHECK(view->meta_itc);
-		/*view->meta_itc->item_style = "music/2line.top";*/
-		view->meta_itc->item_style = "2line.top";
+		view->meta_itc->item_style = "type1";
 		view->meta_itc->func.text_get = _mp_detail_view_info_gl_text_get;
 		view->meta_itc->func.content_get = NULL;
 		view->meta_itc->func.del = _mp_detail_info_gl_item_del;

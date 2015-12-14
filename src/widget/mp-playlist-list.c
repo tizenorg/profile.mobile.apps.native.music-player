@@ -67,7 +67,7 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(plst_item);
 
 	int ret = 0;
-	if (!strcmp(part, "elm.text.main.left.top") || !strcmp(part, "elm.text")) {
+	if (!strcmp(part, "elm.text.main") || !strcmp(part, "elm.text")) {
 
 		char *name = NULL;
 		ret = mp_media_info_group_get_main_info(plst_item, &name);
@@ -739,7 +739,7 @@ END:
 }
 
 static Elm_Object_Item *
-_mp_playlist_append_group_index(void *thiz, int index)
+_mp_playlist_append_group_index(void *thiz, int index, Elm_Genlist_Item_Class *itc_group_index)
 {
 	MpPlaylistList_t *list = (MpPlaylistList_t *)thiz;
 	MP_CHECK_NULL(list);
@@ -749,7 +749,7 @@ _mp_playlist_append_group_index(void *thiz, int index)
 	mp_list_item_data_t *item_data = mp_list_item_data_create(MP_LIST_ITEM_TYPE_GROUP_TITLE);
 	MP_CHECK_NULL(item_data);
 	item_data->index = index;
-	item_data->it = elm_genlist_item_append(list->genlist, list->itc_group_index, item_data, NULL, ELM_GENLIST_ITEM_GROUP, NULL, NULL);
+	item_data->it = elm_genlist_item_append(list->genlist, itc_group_index, item_data, NULL, ELM_GENLIST_ITEM_GROUP, NULL, NULL);
 	group_index = item_data->it;
 	elm_genlist_item_select_mode_set(group_index, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 
@@ -771,14 +771,14 @@ static void _mp_playlist_list_load_list(void *thiz, int count_auto, int count_us
 
 	if (count_auto) {
 		if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0)) {
-			group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_DEFAULT);
+			group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_DEFAULT, list->itc_group_index_default);
 		}
 		_mp_playlist_append_auto_playlists(list, group_index);
 		group_index = NULL;
 	}
 
 	if (!list->edit_mode && !MP_LIST_OBJ_IS_GENGRID(list->genlist) && (ad->del_cb_invoked == 0)) {
-		group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_NUM);
+		group_index = _mp_playlist_append_group_index(list, MP_PLAYLIST_GROUP_INDEX_NUM, list->itc_group_index_user);
 	}
 
 	if (count_user) {
@@ -824,9 +824,14 @@ void _mp_playlist_list_destory_cb(void *thiz)
 		list->gengrid_itc = NULL;
 	}
 
-	if (list->itc_group_index) {
-		elm_genlist_item_class_free(list->itc_group_index);
-		list->itc_group_index = NULL;
+	if (list->itc_group_index_default) {
+		elm_genlist_item_class_free(list->itc_group_index_default);
+		list->itc_group_index_default = NULL;
+	}
+
+	if (list->itc_group_index_user) {
+		elm_genlist_item_class_free(list->itc_group_index_user);
+		list->itc_group_index_user = NULL;
 	}
 
 	IF_FREE(list->type_str);
@@ -874,20 +879,30 @@ _mp_playlist_list_gengrid_create(MpPlaylistList_t *list)
 }
 
 static char *
-_mp_playlist_genlist_group_index_text_get(void *data, Evas_Object * obj, const char *part)
+_mp_playlist_genlist_group_index_default_text_get(void *data, Evas_Object * obj, const char *part)
 {
 	mp_list_item_data_t *item_data = data;
 	MP_CHECK_NULL(item_data);
 	const char *text = NULL;
-	if (!strcmp(part, "elm.text.main.top")) {
+	if (!strcmp(part, "elm.text")) {
 		if (item_data->index == 0) {
 			text = STR_MP_DEFAULT_PLAYLIST_GROUP_TITLE;
 		}
-	} else if (!strcmp(part, "elm.text.main")) {
+	}
+	return g_strdup(GET_STR(text));
+}
+
+static char *
+_mp_playlist_genlist_group_index_user_text_get(void *data, Evas_Object * obj, const char *part)
+{
+	mp_list_item_data_t *item_data = data;
+	MP_CHECK_NULL(item_data);
+	const char *text = NULL;
+	if (!strcmp(part, "elm.text")) {
 		if (item_data->index != 0) {
 			text = STR_MP_MY_PLAYLIST_GROUP_TITLE;
 		}
-	} else if (!strcmp(part, "elm.text.sub")) {
+	} else if (!strcmp(part, "elm.text.end")) {
 		MpPlaylistList_t *list = evas_object_data_get(obj, "list_data");
 		MP_CHECK_NULL(list);
 		unsigned int count = mp_list_get_editable_count((MpList_t *)list, mp_list_get_edit_type((MpList_t *)list));
@@ -956,12 +971,20 @@ _mp_playlist_list_genlist_create(MpPlaylistList_t *list)
 		list->itc_auto->func.del = _mp_playlist_list_item_del_cb;
 	}
 
-	if (!list->itc_group_index) {
-		list->itc_group_index = elm_genlist_item_class_new();
-		MP_CHECK(list->itc_group_index);
-		list->itc_group_index->item_style = "music/1text/bottom_counter";
-		list->itc_group_index->func.text_get = _mp_playlist_genlist_group_index_text_get;
-		list->itc_group_index->func.del = _mp_playlist_genlist_group_index_del_cb;
+	if (!list->itc_group_index_default) {
+		list->itc_group_index_default = elm_genlist_item_class_new();
+		MP_CHECK(list->itc_group_index_default);
+		list->itc_group_index_default->item_style = "group_index";
+		list->itc_group_index_default->func.text_get = _mp_playlist_genlist_group_index_default_text_get;
+		list->itc_group_index_default->func.del = _mp_playlist_genlist_group_index_del_cb;
+	}
+
+	if (!list->itc_group_index_user) {
+		list->itc_group_index_user = elm_genlist_item_class_new();
+		MP_CHECK(list->itc_group_index_user);
+		list->itc_group_index_user->item_style = "group_index";
+		list->itc_group_index_user->func.text_get = _mp_playlist_genlist_group_index_user_text_get;
+		list->itc_group_index_user->func.del = _mp_playlist_genlist_group_index_del_cb;
 	}
 
 	endfunc;

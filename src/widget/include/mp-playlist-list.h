@@ -41,7 +41,8 @@ enum
 typedef struct __MpPlaylistList{
 	INHERIT_MP_LIST
 
-	Elm_Gengrid_Item_Class *itc_group_index;
+	Elm_Genlist_Item_Class *itc_group_index_default;
+	Elm_Genlist_Item_Class *itc_group_index_user;
 	Elm_Genlist_Item_Class *itc_auto;
 	Elm_Genlist_Item_Class *itc_user;
 	Elm_Gengrid_Item_Class *gengrid_itc;

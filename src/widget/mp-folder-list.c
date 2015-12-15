@@ -631,9 +631,7 @@ void _mp_folder_list_update(void *thiz)
 		if (!list->itc) {
 			list->itc = elm_genlist_item_class_new();
 			if (list->itc) {
-				list->itc->item_style = "2line.top";
-				//list->itc->decorate_all_item_style = "musiclist/edit_default";
-				//list->itc->decorate_item_style = folder_slide_style;
+				list->itc->item_style = "type1";
 				list->itc->func.text_get = _mp_folder_list_label_get;
 				list->itc->func.content_get = _mp_folder_list_icon_get;
 				list->itc->func.del = _mp_folder_list_item_del_cb;

@@ -43,9 +43,9 @@ _mp_now_playing_list_label_get(void *data, Evas_Object * obj, const char *part)
 	struct appdata *ad = mp_util_get_appdata();
 	mp_plst_item * current = mp_playlist_mgr_get_current(ad->playlist_mgr);
 
-	if (!strcmp(part, "elm.text.main.left.top") || !strcmp(part, "elm.text.sub.left.bottom")) {
+	if (!strcmp(part, "elm.text") || !strcmp(part, "elm.text.sub")) {
 		char *title = NULL;
-		if (!strcmp(part, "elm.text.main.left.top")) {
+		if (!strcmp(part, "elm.text")) {
 			mp_media_info_get_title(track,  &title);
 		} else {
 			mp_media_info_get_artist(track, &title);
@@ -120,7 +120,7 @@ _mp_now_playing_list_content_get(void *data, Evas_Object * obj, const char *part
 		}
 	}
 
-	if (!g_strcmp0(part, "elm.icon.1")) {
+	if (!g_strcmp0(part, "elm.swallow.icon")) {
 		char *thumbpath = NULL;
 
 		mp_media_info_get_thumbnail_path(track, &thumbpath);
@@ -403,7 +403,7 @@ _mp_now_playing_list_update(void *thiz)
 
 			list->itc = elm_genlist_item_class_new();
 			MP_CHECK(list->itc);
-			list->itc->item_style = "2line.top";
+			list->itc->item_style = "type1";
 			list->itc->func.text_get = _mp_now_playing_list_label_get;
 			list->itc->func.content_get = _mp_now_playing_list_content_get;
 			list->itc->func.del = _mp_now_playing_list_item_del_cb;

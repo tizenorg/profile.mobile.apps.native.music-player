@@ -67,7 +67,7 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(plst_item);
 
 	int ret = 0;
-	if (!strcmp(part, "elm.text.main") || !strcmp(part, "elm.text")) {
+	if (!strcmp(part, "elm.text")) {
 
 		char *name = NULL;
 		ret = mp_media_info_group_get_main_info(plst_item, &name);
@@ -75,7 +75,7 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 		mp_retvm_if(name == NULL, NULL, "Fail to get value");
 
 		return elm_entry_utf8_to_markup(GET_STR(name));
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		int count = -1;
 		int plst_id = -1;
 		int total_time = 0;
@@ -970,9 +970,7 @@ _mp_playlist_list_genlist_create(MpPlaylistList_t *list)
 	if (!list->itc_auto) {
 		list->itc_auto = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_auto);
-		//list->itc_auto->item_style = "music/2line.top";
-		list->itc_auto->item_style = "2line.top";
-		//list->itc_auto->decorate_all_item_style = "decorate/edit_default";
+		list->itc_auto->item_style = "type1";
 		list->itc_auto->func.text_get = _mp_playlist_list_label_get;
 		list->itc_auto->func.content_get = _mp_playlist_list_icon_get;
 		list->itc_auto->func.del = _mp_playlist_list_item_del_cb;

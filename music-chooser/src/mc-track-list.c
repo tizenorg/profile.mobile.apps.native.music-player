@@ -158,7 +158,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		}
 	}
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		content = elm_layout_add(obj);
 		mp_media_info_get_thumbnail_path(media, &thumbpath);
 		icon = elm_image_add(obj);
@@ -175,7 +175,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		return content;
 	}
 
-	if ((!strcmp(part, "elm.icon.2") && (it_data->ad->select_type == MC_SELECT_SINGLE_RINGTONE || it_data->ad->select_type == MC_SELECT_SINGLE))) {	// swallow checkbox or radio button
+	if ((!strcmp(part, "elm.swallow.end") && (it_data->ad->select_type == MC_SELECT_SINGLE_RINGTONE || it_data->ad->select_type == MC_SELECT_SINGLE))) {	// swallow checkbox or radio button
 		if (it_data->ad->select_uri && it_data->ad->select_type == MC_SELECT_SINGLE_RINGTONE) {
 			char *filepath = NULL;
 			mp_media_info_get_file_path(media, &filepath);
@@ -194,7 +194,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		evas_object_propagate_events_set(check, EINA_TRUE);
 		elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
 		elm_layout_content_set(content, "elm.swallow.content", check);
-	} else if ((!strcmp(part, "elm.icon.right") && (it_data->ad->select_type == MC_SELECT_MULTI))) {
+	} else if ((!strcmp(part, "elm.swallow.end") && (it_data->ad->select_type == MC_SELECT_MULTI))) {
 		content = elm_check_add(obj);
 		elm_check_state_pointer_set(content, &it_data->checked);
 		elm_object_style_set(content, "default/genlist");
@@ -266,8 +266,8 @@ static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 	mp_retv_if(!uri, NULL);
 
 	int ret = 0;
-	if ((!strcmp(part, "elm.text.main.left.top")) || (!strcmp(part, "elm.text.sub.left.bottom"))) {
-		if (!strcmp(part, "elm.text.main.left.top")) {
+	if ((!strcmp(part, "elm.text")) || (!strcmp(part, "elm.text.sub"))) {
+		if (!strcmp(part, "elm.text")) {
 			ret = mp_media_info_get_title(media,  &title);
 			MP_CHECK_NULL(ret == 0);
 		} else {
@@ -945,7 +945,7 @@ Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad)
 	evas_object_data_set(layout, "list_data", ld);
 	evas_object_event_callback_add(layout, EVAS_CALLBACK_FREE, _layout_del_cb, ld);
 
-	ld->itc.item_style = "2line.top";
+	ld->itc.item_style = "type1";
 	ld->itc.func.content_get = _gl_content_get;
 	ld->itc.func.text_get = _gl_text_get;
 	ld->itc.func.del = _gl_del;

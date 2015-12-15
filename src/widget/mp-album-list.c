@@ -169,15 +169,13 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	if (list->edit_mode) {
 		// if edit mode
-		if (!strcmp(part, "elm.icon.2")) {
+		if (!strcmp(part, "elm.swallow.end")) {
 			// swallow checkbox or radio button
 			check = elm_check_add(obj);
 			elm_object_style_set(check, "default");
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
-			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-			elm_layout_content_set(content, "elm.swallow.content", check);
 			return content;
 		}
 	}

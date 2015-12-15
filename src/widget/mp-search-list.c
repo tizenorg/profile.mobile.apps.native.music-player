@@ -95,20 +95,20 @@ _mp_search_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		char *title = NULL;
 
 		mp_media_info_get_title(track,  &title);
 
 		mp_retv_if(!title, NULL);
-		if (!strcmp(part, "elm.text.main.left.top")) {
+		if (!strcmp(part, "elm.text")) {
 			bool res = false;
 			char *markup_name = (char *)mp_util_search_markup_keyword(title, list->filter_str, &res);
 			return (res) ? g_strdup(markup_name) : elm_entry_utf8_to_markup(title);
 		} else {
 			return g_strdup(title);
 		}
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		char *artist = NULL;
 
 		mp_media_info_get_artist(track, &artist);
@@ -128,7 +128,7 @@ _mp_search_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	mp_media_info_h track = item_data->handle;
 	mp_retvm_if(!track, NULL, "data is null");
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 		char *thumbpath = NULL;
@@ -244,14 +244,14 @@ _mp_search_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
 		}
 
-		if (!strcmp(part, "elm.text.main.left.top")) {
+		if (!strcmp(part, "elm.text")) {
 			bool res = false;
 			char *markup_name = (char *)mp_util_search_markup_keyword(name, list->filter_str, &res);
 			return (res) ? g_strdup(markup_name) : elm_entry_utf8_to_markup(name);
@@ -259,7 +259,7 @@ _mp_search_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 			return g_strdup(name);
 		}
 
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		ret = mp_media_info_group_get_sub_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
@@ -284,7 +284,7 @@ _mp_search_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	mp_retv_if(svc_item == NULL, NULL);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 		Evas_Object *icon = NULL;
@@ -354,13 +354,13 @@ _mp_search_artist_list_label_get(void *data, Evas_Object * obj, const char *part
 	MP_CHECK_NULL(list);
 	MP_CHECK_NULL(part);
 
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp(part, "elm.text")) {
 		ret = mp_media_info_group_get_main_info(svc_item, &name);
 		mp_retvm_if((ret != 0), NULL, "Fail to get value");
 		if (!name || !strlen(name)) {
 			name = GET_SYS_STR("IDS_COM_BODY_UNKNOWN");
 		}
-		if (!strcmp(part, "elm.text.main.left.top")) {
+		if (!strcmp(part, "elm.text")) {
 			bool res = false;
 			char *markup_name = (char *)mp_util_search_markup_keyword(name, list->filter_str, &res);
 			return (res) ? g_strdup(markup_name) : elm_entry_utf8_to_markup(name);
@@ -381,7 +381,7 @@ _mp_search_artist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	mp_media_info_h svc_item = item_data->handle;
 	mp_retv_if(svc_item == NULL, NULL);
 
-	if (!strcmp(part, "elm.icon.1")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *content = NULL;
 		content = elm_layout_add(obj);
 		char *thumb_name = NULL;
@@ -441,7 +441,7 @@ _mp_search_list_gl_label_get_title(void *data, Evas_Object * obj, const char *pa
 	startfunc;
 	char *text = NULL;
 
-	if (!strcmp(part, "elm.text.main")) {
+	if (!strcmp(part, "elm.text")) {
 		text = GET_STR(data);
 		return g_strdup(text);
 	}
@@ -465,9 +465,7 @@ static void _mp_search_list_set_itc(void *thiz)
 	if (!list->itc_track) {
 		list->itc_track = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_track);
-		//list->itc_track->item_style =  "music/2line.top";//"music/2text.1icon.tb";
-		list->itc_track->item_style =  "2line.top";//"music/2text.1icon.tb";
-		//list->itc_track->item_style =  "1linenew.top";//"music/2text.1icon.tb";
+		list->itc_track->item_style =  "type1";
 		list->itc_track->func.text_get = _mp_search_track_list_label_get;
 		list->itc_track->func.content_get = _mp_search_track_list_icon_get;
 		list->itc_track->func.del = _mp_search_list_item_del;
@@ -475,8 +473,7 @@ static void _mp_search_list_set_itc(void *thiz)
 	if (!list->itc_album) {
 		list->itc_album = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_album);
-		//list->itc_album->item_style =  "music/2line.top";//"music/2text.1icon.tb";
-		list->itc_album->item_style =  "2line.top";//"music/2text.1icon.tb";
+		list->itc_album->item_style =  "type1";
 		list->itc_album->func.text_get = _mp_search_album_list_label_get;
 		list->itc_album->func.content_get = _mp_search_album_list_icon_get;
 		list->itc_album->func.del = _mp_search_list_item_del;
@@ -484,7 +481,7 @@ static void _mp_search_list_set_itc(void *thiz)
 	if (!list->itc_artist) {
 		list->itc_artist = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_artist);
-		list->itc_artist->item_style = "2line.top";//"music/1text.1icon.2.tb";
+		list->itc_artist->item_style = "type1";
 		list->itc_artist->func.text_get = _mp_search_artist_list_label_get;
 		list->itc_artist->func.content_get = _mp_search_artist_list_icon_get;
 		list->itc_artist->func.del = _mp_search_list_item_del;
@@ -492,7 +489,7 @@ static void _mp_search_list_set_itc(void *thiz)
 	if (!list->itc_group_title) {
 		list->itc_group_title = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_group_title);
-		list->itc_group_title->item_style = "groupindex";//"music/groupindex";
+		list->itc_group_title->item_style = "groupindex";
 		list->itc_group_title->func.text_get = _mp_search_list_gl_label_get_title;
 	}
 }

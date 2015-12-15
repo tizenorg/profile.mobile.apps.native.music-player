@@ -119,7 +119,6 @@ static int __is_relaunch = 0;
 #endif
 
 static bool _mp_main_init(struct appdata *ad);
-//char *bundle_get_val(bundle *, char *);
 int app_control_to_bundle(app_control_h, bundle **);
 static void _mp_main_win_visibility_withdrawn_cb(void *data, Evas_Object *obj, void *event);
 static void _mp_main_win_visibility_normal_cb(void *data, Evas_Object *obj, void *event);
@@ -448,7 +447,8 @@ static bool _parse_widget_event(bundle *b, bool *activate_window)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK_FALSE(ad);
 
-	const char *value = bundle_get_val(b, MP_LB_EVENT_KEY);
+	char *value = NULL;
+	bundle_get_str(b, MP_LB_EVENT_KEY, &value);
 	if (value && strlen(value) > 0) {
 		*activate_window = false;
 		EVENT_TRACE("event: %s", value);
@@ -486,7 +486,7 @@ static bool _parse_widget_event(bundle *b, bool *activate_window)
 		return true;
 	}
 
-	value = bundle_get_val(b, MP_NOWPLAYING_LIST_INDEX);
+	bundle_get_str(b, MP_NOWPLAYING_LIST_INDEX, &value);
 	if (value && strlen(value) > 0) {
 		EVENT_TRACE("index: %s", value);
 

@@ -368,7 +368,7 @@ static int message_port_send_event_message(const char *event)
 		ERROR_TRACE("Unable to add data to bundle");
 		return -1;
 	}
-	bundle_add(b, MP_LB_EVENT_KEY, event);
+	bundle_add_str(b, MP_LB_EVENT_KEY, event);
 	ret = message_port_send_message(APP_ID, MP_MESSAGE_PORT_LIVEBOX, b);
 	if (ret != MESSAGE_PORT_ERROR_NONE) {
 		ERROR_TRACE("Message remote port error: %d", ret);

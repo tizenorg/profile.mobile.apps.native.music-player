@@ -210,7 +210,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	if (list->edit_mode) {
 		// if edit mode
-		if (!strcmp(part, "elm.icon.2")) {
+		if (!strcmp(part, "elm.swallow.end")) {
 			// swallow checkbox or radio button
 
 			check = elm_check_add(obj);
@@ -218,23 +218,19 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
-			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-			elm_layout_content_set(content, "elm.swallow.content", check);
 
 			return content;
 		}
 	}
 
 	if (list->reorderable) {
-		if (!strcmp(part, "elm.icon.2")) {
+		if (!strcmp(part, "elm.swallow.end")) {
 			Evas_Object *thumbnail = NULL;
 			thumbnail = elm_image_add(obj);
 			elm_image_file_set(thumbnail, IMAGE_EDJ_NAME, MP_LITE_REORDER_ICON);
 			evas_object_color_set(thumbnail, 8, 8, 8, 204);
 			evas_object_size_hint_align_set(thumbnail, EVAS_HINT_FILL, EVAS_HINT_FILL);
 			evas_object_size_hint_weight_set(thumbnail, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-			elm_layout_theme_set(content, "layout", "list/C/type.1", "default");
-			elm_layout_content_set(content, "elm.swallow.content", thumbnail);
 
 			return content;
 		}

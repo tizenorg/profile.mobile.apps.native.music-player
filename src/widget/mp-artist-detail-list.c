@@ -135,7 +135,7 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 		return content;
 	}
 	if (list->edit_mode) {
-		if (!strcmp(part, "elm.icon.2")) {
+		if (!strcmp(part, "elm.swallow.end")) {
 			content = elm_layout_add(obj);
 
 			icon = elm_check_add(obj);
@@ -143,9 +143,6 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 			evas_object_propagate_events_set(icon, EINA_FALSE);
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
-
-			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-			elm_layout_content_set(content, "elm.swallow.content", icon);
 
 			return content;
 		}
@@ -314,9 +311,6 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 			evas_object_propagate_events_set(icon, EINA_FALSE);
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
-
-			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-			elm_layout_content_set(content, "elm.swallow.content", icon);
 
 			return content;
 		}

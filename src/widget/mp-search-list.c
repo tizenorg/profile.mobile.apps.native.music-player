@@ -268,7 +268,6 @@ _mp_search_album_list_label_get(void *data, Evas_Object * obj, const char *part)
 		return g_strdup(name);
 	}
 
-	DEBUG_TRACE("Unusing part: %s", part);
 	return NULL;
 }
 

@@ -277,10 +277,10 @@ char *mc_artist_text_get(void *data, Evas_Object *obj, const char *part)
 	MP_CHECK_NULL(item_data);
 	mp_media_info_h handle = item_data->media;
 
-	if (strcmp(part, "elm.text.main.left.top") == 0) {
+	if (strcmp(part, "elm.text") == 0) {
 		mp_media_info_group_get_main_info(handle, &text);
 		return g_strdup(text);
-	} else if (strcmp(part, "elm.text.sub.left.bottom") == 0) {
+	} else if (strcmp(part, "elm.text.sub") == 0) {
 		char **album_thumbs = NULL;
 		int song_count;
 		int album_count = 0;

@@ -142,7 +142,7 @@ _mc_itc_init(int type, group_list_data_t *ld)
 		ld->type = MP_GROUP_BY_ALBUM;
 		break;
 	case MP_GROUP_BY_ARTIST:
-		ld->itc.item_style = "2line.top";
+		ld->itc.item_style = "type1";
 		ld->itc.func.text_get = mc_artist_text_get;
 		ld->type = MP_GROUP_BY_ARTIST;
 		break;

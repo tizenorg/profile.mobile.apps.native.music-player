@@ -21,6 +21,7 @@
 #include <app.h>
 #include <stdlib.h>
 #include <bundle.h>
+#include <bundle_internal.h>
 #include <telephony.h>
 #include <message_port.h>
 #include <linux/inotify.h>

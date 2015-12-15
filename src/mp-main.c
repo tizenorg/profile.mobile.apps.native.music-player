@@ -77,6 +77,7 @@
 #endif
 
 #include <system_settings.h>
+#include <bundle_internal.h>
 /* #include <appcore-common.h> */
 
 static char *test_uri;

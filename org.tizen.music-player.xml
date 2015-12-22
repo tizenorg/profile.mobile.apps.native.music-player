@@ -257,6 +257,7 @@
 		<privilege>http://tizen.org/privilege/telephony</privilege>
 		<privilege>http://tizen.org/privilege/network.get</privilege>
 		<privilege>http://tizen.org/privilege/volume.set</privilege>
+		<privilege>http://tizen.org/privilege/content.write</privilege>
 	</privileges>
 
     <widget-application appid="org.tizen.music-player.widget" exec="/usr/apps/org.tizen.music-player/bin/music-player-widget" main="false" update-period="60">

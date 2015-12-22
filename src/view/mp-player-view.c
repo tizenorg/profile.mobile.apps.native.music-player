@@ -436,7 +436,7 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 	} else {
 		DEBUG_TRACE("no queue list");
 		elm_object_style_set(view->option_button[OPTION_QUEUE], "music/control_queue");
-		elm_image_file_set(image, IMAGE_EDJ_NAME, MP_ICON_PLAY_LIST_PATH);
+		elm_image_file_set(image, "/usr/apps/org.tizen.music-player/shared/res/shared_images/player_icon_play_list_normal.png", NULL);
 	}
 	endfunc;
 }
@@ -461,6 +461,7 @@ static void _mp_player_view_control_queue_list_btn_clicked(void *data, Evas_Obje
 
 Evas_Object *_mp_player_view_create_control_queue_icon_btn(Evas_Object *parent, const char *file, const char *group, Evas_Smart_Cb func, void *data)
 {
+	EVENT_TRACE("start");
 	Evas_Object *ic;
 	Evas_Object *btn = elm_button_add(parent);
 	if (!btn) {
@@ -468,15 +469,15 @@ Evas_Object *_mp_player_view_create_control_queue_icon_btn(Evas_Object *parent, 
 	}
 	elm_object_style_set(btn, "music/control_queue");
 
-	ic = elm_icon_add(parent);
-	elm_image_file_set(ic, file, group);
-	evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-	elm_image_resizable_set(ic, EINA_TRUE, EINA_TRUE);
+	ic = elm_image_add(parent);
+	elm_image_file_set(ic, "/usr/apps/org.tizen.music-player/shared/res/shared_images/player_icon_play_list_normal.png",NULL);
+	evas_object_show(ic);
 	elm_object_content_set(btn, ic);
 
 	evas_object_smart_callback_add(btn, "clicked", func, data);
 
 	evas_object_show(btn);
+	EVENT_TRACE("end");
 	return btn;
 }
 

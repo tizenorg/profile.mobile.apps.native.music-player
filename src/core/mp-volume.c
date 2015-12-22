@@ -145,7 +145,7 @@ mp_volume_key_grab_start()
 		return false;
 	}
 
-	WARN_TRACE("START_volume_key_grab");
+	EVENT_TRACE("START_volume_key_grab");
 	g_volume_key_mgr.grabbed = true;
 	return true;
 }
@@ -162,7 +162,7 @@ mp_volume_key_grab_end()
 	}
 	mp_ecore_timer_del(g_volume_key_mgr.pressed_timer);
 
-	WARN_TRACE("STOP_volume_key_grab");
+	EVENT_TRACE("STOP_volume_key_grab");
 	g_volume_key_mgr.grabbed = false;
 }
 
@@ -211,10 +211,10 @@ void _mp_volume_handle_change(unsigned int volume)
 void
 mp_volume_key_event_send(mp_volume_key_e type, bool released)
 {
-	WARN_TRACE("volume key[%d], released[%d]", type, released);
+	EVENT_TRACE("volume key[%d], released[%d]", type, released);
 
-	if (!g_volume_key_mgr.grabbed) {
-		WARN_TRACE("already ungrabbed.. ignore this event");
+	if (g_volume_key_mgr.grabbed) {
+		EVENT_TRACE("already ungrabbed.. ignore this event");
 		return;
 	}
 

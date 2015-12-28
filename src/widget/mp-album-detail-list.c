@@ -162,9 +162,7 @@ _mp_album_detail_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		// if edit mode
 		if (!strcmp(part, "elm.swallow.end")) {
 			// swallow checkbox or radio button
-			Evas_Object *content = NULL;
 			Evas_Object *icon = NULL;
-			content = elm_layout_add(obj);
 
 			icon = elm_check_add(obj);
 			elm_object_style_set(icon, "default");
@@ -172,7 +170,7 @@ _mp_album_detail_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_smart_callback_add(icon, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(icon, &item->checked);
 
-			return content;
+			return icon;
 		}
 	}
 

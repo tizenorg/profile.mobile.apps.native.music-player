@@ -219,7 +219,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
 
-			return content;
+			return check;
 		}
 	}
 
@@ -232,7 +232,7 @@ _mp_track_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_size_hint_align_set(thumbnail, EVAS_HINT_FILL, EVAS_HINT_FILL);
 			evas_object_size_hint_weight_set(thumbnail, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-			return content;
+			return thumbnail;
 		}
 
 	}

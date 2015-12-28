@@ -75,7 +75,7 @@ _mp_playlist_list_label_get(void *data, Evas_Object * obj, const char *part)
 		mp_retvm_if(name == NULL, NULL, "Fail to get value");
 
 		return elm_entry_utf8_to_markup(GET_STR(name));
-	} else if (!strcmp(part, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		int count = -1;
 		int plst_id = -1;
 		int total_time = 0;
@@ -381,7 +381,7 @@ _mp_playlist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 	MpPlaylistList_t *list = evas_object_data_get(obj, "list_handle");
 	MP_CHECK_NULL(list);
 	if (list->edit_mode) {
-		if (!strcmp(part, "elm.icon.2")) {
+		if (!strcmp(part, "elm.swallow.end")) {
 			// swallow checkbox or radio button
 			check = elm_check_add(obj);
 			if (MP_LIST_OBJ_IS_GENGRID(obj)) {
@@ -392,9 +392,7 @@ _mp_playlist_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
-			elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
-			elm_layout_content_set(content, "elm.swallow.content", check);
-			return content;
+			return check;
 		}
 	}
 	return NULL;
@@ -971,7 +969,7 @@ _mp_playlist_list_genlist_create(MpPlaylistList_t *list)
 		list->itc_auto = elm_genlist_item_class_new();
 		MP_CHECK(list->itc_auto);
 		//list->itc_auto->item_style = "music/2line.top";
-		list->itc_auto->item_style = "2line.top";
+		list->itc_auto->item_style = "type1";
 		//list->itc_auto->decorate_all_item_style = "decorate/edit_default";
 		list->itc_auto->func.text_get = _mp_playlist_list_label_get;
 		list->itc_auto->func.content_get = _mp_playlist_list_icon_get;

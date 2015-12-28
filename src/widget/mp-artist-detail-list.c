@@ -144,7 +144,7 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
 
-			return content;
+			return icon;
 		}
 	}
 	return NULL;
@@ -301,7 +301,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 	if (list->edit_mode) {
 		// if edit mode
 		DEBUG_TRACE("edit mode starts");
-		if (!strcmp(part, "elm.icon.2")) {		// swallow checkbox or radio button
+		if (!strcmp(part, "elm.swallow.end")) {		// swallow checkbox or radio button
 			Evas_Object *content = NULL;
 			Evas_Object *icon = NULL;
 			content = elm_layout_add(obj);
@@ -312,7 +312,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
 
-			return content;
+			return icon;
 		}
 	}
 	return NULL;

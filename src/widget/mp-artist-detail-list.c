@@ -136,15 +136,13 @@ _mp_artist_detail_list_album_icon_get(void *data, Evas_Object * obj, const char 
 	}
 	if (list->edit_mode) {
 		if (!strcmp(part, "elm.swallow.end")) {
-			content = elm_layout_add(obj);
-
 			icon = elm_check_add(obj);
 			elm_object_style_set(icon, "default");
 			evas_object_propagate_events_set(icon, EINA_FALSE);
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
 
-			return content;
+			return icon;
 		}
 	}
 	return NULL;
@@ -301,10 +299,8 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 	if (list->edit_mode) {
 		// if edit mode
 		DEBUG_TRACE("edit mode starts");
-		if (!strcmp(part, "elm.icon.2")) {		// swallow checkbox or radio button
-			Evas_Object *content = NULL;
+		if (!strcmp(part, "elm.swallow.end")) {		// swallow checkbox or radio button
 			Evas_Object *icon = NULL;
-			content = elm_layout_add(obj);
 
 			icon = elm_check_add(obj);
 			elm_object_style_set(icon, "default");
@@ -312,7 +308,7 @@ _mp_artist_detail_list_track_icon_get(void *data, Evas_Object * obj, const char 
 			elm_check_state_pointer_set(icon, &item->checked);
 			evas_object_smart_callback_add(icon, "changed", _mp_artist_detail_list_check_changed_cb, item);
 
-			return content;
+			return icon;
 		}
 	}
 	return NULL;

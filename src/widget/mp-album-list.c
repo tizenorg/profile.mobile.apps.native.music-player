@@ -176,11 +176,11 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
-			return content;
+			return check;
 		}
 	}
 
-	return content;
+	return NULL;
 }
 
 static void

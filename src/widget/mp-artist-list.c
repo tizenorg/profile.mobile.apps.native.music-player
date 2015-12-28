@@ -193,14 +193,13 @@ _mp_artist_list_icon_get(void *data, Evas_Object *obj, const char *part)
 	Evas_Object *check = NULL;
 	if (list->edit_mode) {
 		if (!strcmp(part, "elm.swallow.end")) {
-			content = elm_layout_add(obj);
 			check = elm_check_add(obj);
 			elm_object_style_set(check, "default");
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
 
-			return content;
+			return check;
 		}
 	}
 	return icon;

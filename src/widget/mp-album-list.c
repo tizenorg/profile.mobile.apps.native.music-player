@@ -133,6 +133,7 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 		elm_layout_theme_set(content, "layout", "list/B/music.type.1", "default");
 		evas_object_resize(content, w, h);
 		elm_layout_content_set(content, "elm.swallow.content", icon);
+		return content;
 	}
 
 	MpAlbumList_t *list = evas_object_data_get(obj, "list_handle");
@@ -176,11 +177,11 @@ _mp_album_list_icon_get(void *data, Evas_Object * obj, const char *part)
 			evas_object_propagate_events_set(check, EINA_FALSE);
 			evas_object_smart_callback_add(check, "changed", mp_common_view_check_changed_cb, NULL);
 			elm_check_state_pointer_set(check, &item->checked);
-			return content;
+			return check;
 		}
 	}
 
-	return content;
+	return NULL;
 }
 
 static void

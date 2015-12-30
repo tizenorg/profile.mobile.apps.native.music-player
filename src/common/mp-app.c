@@ -1025,7 +1025,7 @@ mp_app_grab_mm_keys(struct appdata *ad)
 {
 	WARN_TRACE("");
 	Eina_Bool error = EINA_FALSE;
-	error = eext_win_keygrab_set(ad->xwin, "XF86AudioMedia");
+	error = eext_win_keygrab_set(ad->win_main, "XF86AudioMedia");
 	if (error != EINA_TRUE) {
 		ERROR_TRACE("Keygrab Failed");
 	}
@@ -1044,7 +1044,7 @@ mp_app_ungrab_mm_keys(struct appdata *ad)
 	WARN_TRACE("");
 	media_key_release();
 	Eina_Bool error = EINA_FALSE;
-	error = eext_win_keygrab_unset(ad->xwin, "XF86AudioMedia");
+	error = eext_win_keygrab_unset(ad->win_main, "XF86AudioMedia");
 	if (error != EINA_TRUE) {
 		ERROR_TRACE("Keygrab Failed");
 	}

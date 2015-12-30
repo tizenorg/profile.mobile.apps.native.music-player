@@ -55,11 +55,11 @@ void
 mp_volume_init(Ecore_X_Window xwin, Elm_Win *win)
 #else
 void
-mp_volume_init(void *xwin, Elm_Win *win)
+mp_volume_init(void *win)
 #endif
 {
 	startfunc;
-	g_volume_key_mgr.xwin = xwin;
+	g_volume_key_mgr.xwin = win;
 	g_volume_key_mgr.win = win;
 
 #if 0

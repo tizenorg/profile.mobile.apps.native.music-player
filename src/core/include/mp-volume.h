@@ -43,7 +43,7 @@ extern "C" {
 #if 0
 void mp_volume_init(Ecore_X_Window xwin, Elm_Win *Win);
 #else
-void mp_volume_init(void *xwin, Elm_Win *Win);
+void mp_volume_init(void *win);
 #endif
 void mp_volume_finalize(void);
 void mp_volume_key_grab_condition_set(mp_volume_key_grab_condition_e condition, bool enabled);

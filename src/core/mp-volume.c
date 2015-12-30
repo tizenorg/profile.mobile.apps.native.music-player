@@ -126,7 +126,7 @@ mp_volume_key_grab_start()
 
 	error = eext_win_keygrab_set(g_volume_key_mgr.win, "XF86AudioRaiseVolume");
 	if (error != EINA_TRUE) {
-		mp_error("(KEY_VOLUMEUP)... [%d]", error);
+		EVENT_TRACE("KEY_VOLUME UP");
 		return false;
 	}
 

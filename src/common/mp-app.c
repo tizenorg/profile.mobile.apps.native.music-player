@@ -1026,12 +1026,12 @@ mp_app_grab_mm_keys(struct appdata *ad)
 	WARN_TRACE("");
 	Eina_Bool error = EINA_FALSE;
 	error = eext_win_keygrab_set(ad->xwin, "XF86AudioMedia");
-	if (error != EINA_TRUE) {
-		ERROR_TRACE("Keygrab Failed");
+    if (error != EINA_TRUE) {
+		EVENT_TRACE("Keygrab Failed");
 	}
 	int err = media_key_reserve(_mp_app_media_key_event_cb, ad);
 	if (err != MEDIA_KEY_ERROR_NONE) {
-		mp_error("media_key_reserve().. [0x%x]", err);
+		EVENT_TRACE("media_key_reserve");
 		return false;
 	}
 

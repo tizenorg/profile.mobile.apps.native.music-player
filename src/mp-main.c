@@ -567,7 +567,6 @@ _mp_main_app_init_idler_cb(void *data)
 	if (!mp_app_noti_init(ad)) {
 		ERROR_TRACE("Error when noti init");
 	}
-
 	ad->key_down = ecore_event_handler_add(ECORE_EVENT_KEY_DOWN, mp_app_key_down_cb, ad);
 	ad->key_up = ecore_event_handler_add(ECORE_EVENT_KEY_UP, mp_app_key_up_cb, ad);
 	/*ad->mouse_button_down = ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_DOWN, mp_app_mouse_event_cb, ad);
@@ -1407,7 +1406,7 @@ mp_create(void *data)
 	evas_object_smart_callback_add(ad->win_main, "profile,changed", _mp_main_win_profile_changed_cb, ad);
 
 #endif
-//	ad->xwin = elm_win_xwindow_get(ad->win_main);
+   ad->xwin = ad->win_main;
 
 	ad->evas = evas_object_evas_get(ad->win_main);
 

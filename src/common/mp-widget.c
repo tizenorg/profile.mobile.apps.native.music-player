@@ -956,7 +956,7 @@ bool mp_widget_create_select_all_layout(Evas_Object *pParent, Evas_Smart_Cb pCha
 	}
 
 	Evas_Object *pSelectAllLayout = elm_layout_add(pParent);
-	elm_layout_theme_set(pSelectAllLayout, "genlist", "item", "select_all/default");
+	elm_layout_theme_set(pSelectAllLayout, "genlist", "item", "group_index/default");
 	evas_object_size_hint_weight_set(pSelectAllLayout, EVAS_HINT_EXPAND, EVAS_HINT_FILL);
 	evas_object_size_hint_align_set(pSelectAllLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_event_callback_add(pSelectAllLayout, EVAS_CALLBACK_MOUSE_DOWN, pMouseDownFunc, pUserData);
@@ -965,8 +965,8 @@ bool mp_widget_create_select_all_layout(Evas_Object *pParent, Evas_Smart_Cb pCha
 	Evas_Object *pSelectAllCheckbox = elm_check_add(pSelectAllLayout);
 	evas_object_smart_callback_add(pSelectAllCheckbox, "changed", pChangeFunc, pUserData);
 	evas_object_propagate_events_set(pSelectAllCheckbox, EINA_FALSE);
-	elm_object_part_content_set(pSelectAllLayout, "elm.icon", pSelectAllCheckbox);
-	mp_util_domain_translatable_part_text_set(pSelectAllLayout, "elm.text.main", MP_SCREEN_READER_SELECT_ALL);
+	elm_object_part_content_set(pSelectAllLayout, "elm.swallow.end", pSelectAllCheckbox);
+	mp_util_domain_translatable_part_text_set(pSelectAllLayout, "elm.text", MP_SCREEN_READER_SELECT_ALL);
 	evas_object_show(pSelectAllLayout);
 	*pCheckBox = pSelectAllCheckbox;
 	return TRUE;

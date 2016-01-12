@@ -422,6 +422,15 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 	struct appdata *ad = mp_util_get_appdata();
 	Evas_Object *image = elm_object_content_get(view->option_button[OPTION_QUEUE]);
 
+	char mp_image_path[1024] = {0};
+	char *path = app_get_resource_path();
+	if (path == NULL) {
+		return;
+	}
+	snprintf(mp_image_path, 1024, "%s%s/%s", path, "edje", IMAGE_EDJ_NAME);
+	EVENT_TRACE("path of IMAGE_EDJ_NAME is %s", IMAGE_EDJ_NAME);
+	free(path);
+
 	if (view->queue_list) {
 		DEBUG_TRACE("queue list create");
 		elm_object_style_set(view->option_button[OPTION_QUEUE], "music/control_queue_thumbnail");
@@ -436,7 +445,7 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 	} else {
 		DEBUG_TRACE("no queue list");
 		elm_object_style_set(view->option_button[OPTION_QUEUE], "music/control_queue");
-		elm_image_file_set(image, IMAGE_EDJ_NAME, MP_ICON_PLAY_LIST_PATH);
+		elm_image_file_set(image, mp_image_path, MP_ICON_PLAY_LIST_PATH);
 	}
 	endfunc;
 }
@@ -469,7 +478,16 @@ Evas_Object *_mp_player_view_create_control_queue_icon_btn(Evas_Object *parent, 
 	elm_object_style_set(btn, "music/control_queue");
 
 	ic = elm_icon_add(parent);
-	elm_image_file_set(ic, file, group);
+	char mp_image_path[1024] = {0};
+	char *path = app_get_resource_path();
+	if (path == NULL) {
+		return NULL;
+	}
+	snprintf(mp_image_path, 1024, "%s%s/%s", path, "edje", file);
+	EVENT_TRACE("path of IMAGE_EDJ_NAME is %s", file);
+	free(path);
+	elm_image_file_set(ic, mp_image_path, group);
+
 	evas_object_size_hint_aspect_set(ic, EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
 	elm_image_resizable_set(ic, EINA_TRUE, EINA_TRUE);
 	elm_object_content_set(btn, ic);

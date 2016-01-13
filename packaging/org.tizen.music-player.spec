@@ -56,10 +56,7 @@ BuildRequires:  pkgconfig(capi-network-wifi-direct)
 BuildRequires:  pkgconfig(capi-system-device)
 #widget relevant
 BuildRequires:  pkgconfig(appcore-efl)
-BuildRequires:  pkgconfig(widget)
 BuildRequires:  pkgconfig(widget_service)
-BuildRequires:  pkgconfig(widget_provider_app)
-BuildRequires:  pkgconfig(widget_provider)
 BuildRequires:  pkgconfig(capi-appfw-widget-application)
 
 %if "%{?sec_build_project_type}" != "lite"

@@ -20,10 +20,7 @@ pkg_check_modules(app_pkgs REQUIRED
 	appcore-efl
 	#ecore-x
 	dlog
-	widget
 	widget_service
-	widget_provider_app
-	widget_provider
 	capi-message-port
 	notification
 	capi-telephony

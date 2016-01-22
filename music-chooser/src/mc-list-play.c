@@ -398,28 +398,8 @@ static void _mc_pre_play_interrupt_cb(player_interrupted_code_e code, void *data
 	player_state_e state = PLAYER_STATE_NONE;
 
 	switch (code) {
-	case PLAYER_INTERRUPTED_BY_MEDIA:
-		DEBUG_TRACE("Interrupt :: PLAYER_INTERRUPTED_BY_MEDIA");
-		break;
-
-	case PLAYER_INTERRUPTED_BY_CALL:
-		DEBUG_TRACE("Interrupt :: PLAYER_INTERRUPTED_BY_CALL_START");
-		break;
-
 	case PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT:
 		DEBUG_TRACE("Interrupt :: PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT");
-		break;
-
-	case PLAYER_INTERRUPTED_BY_ALARM:
-		DEBUG_TRACE("Interrupt :: PLAYER_INTERRUPTED_BY_ALARM_START");
-		break;
-
-	case PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG:
-		DEBUG_TRACE("Interrupt :: PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG");
-		break;
-
-	case PLAYER_INTERRUPTED_COMPLETED:
-		DEBUG_TRACE("PLAYER_INTERRUPTED_COMPLETED");
 		break;
 	default:
 		break;

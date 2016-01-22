@@ -276,39 +276,8 @@ _mp_play_control_interrupted_cb(player_interrupted_code_e code, void *userdata)
 	MP_CHECK(ad);
 
 	switch (code) {
-	case PLAYER_INTERRUPTED_BY_MEDIA:
-		WARN_TRACE("receive MM_MSG_CODE_INTERRUPTED_BY_OTHER_APP");
-		break;
-	case PLAYER_INTERRUPTED_BY_CALL:
-		WARN_TRACE("receive PLAYER_INTERRUPTED_BY_CALL");
-		break;
-	case PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG:
-		WARN_TRACE("receive MM_MSG_CODE_INTERRUPTED_BY_EARJACK_UNPLUG");
-		break;
 	case PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT:
 		WARN_TRACE("receive MM_MSG_CODE_INTERRUPTED_BY_RESOURCE_CONFLICT");
-		break;
-	case PLAYER_INTERRUPTED_BY_ALARM:
-		WARN_TRACE("receive MM_MSG_CODE_INTERRUPTED_BY_ALARM_START");
-		break;
-	case PLAYER_INTERRUPTED_COMPLETED:
-		WARN_TRACE("PLAYER_INTERRUPTED_COMPLETED");
-		/* ready to resume */
-		if (ad->player_state == PLAY_STATE_PAUSED) {
-			ad->paused_by_user = false;
-			int error = mp_player_mgr_resume(ad);
-			if (!error) {
-				mp_setting_set_nowplaying_id(getpid());
-				if (ad->player_state == PLAY_STATE_PAUSED) {
-					mp_play_resume(ad);
-				}
-				ad->player_state = PLAY_STATE_PLAYING;
-			} else {
-				ad->auto_resume = true;
-				mp_play_control_on_error(ad, error, true);
-			}
-		}
-		return;
 		break;
 	default:
 		ERROR_TRACE("Unhandled code: %d", code);

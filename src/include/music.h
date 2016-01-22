@@ -37,6 +37,7 @@
 
 #include <sys/times.h>
 #include <storage.h>
+#include <sound_manager.h>
 #include "mp-define.h"
 #include "mp-resource.h"
 #include "mp-player-debug.h"
@@ -281,6 +282,8 @@ struct appdata
 	mp_group_type_e group_type;	// Support voice ui
 
 	MpViewMgr_t *view_manager;
+
+	sound_stream_info_h stream_info;//support sound_manager
 
 	bool create_view_on_play;
 	Evas_Object *preload_player_view;

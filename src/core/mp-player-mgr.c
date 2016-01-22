@@ -34,7 +34,6 @@
 #include "mp-setting-ctrl.h"
 #include "mp-lockscreenmini.h"
 #include "mp-player-view.h"
-#include <sound_manager.h>
 
 #ifdef MP_FEATURE_AVRCP_13
 #include "mp-avrcp.h"
@@ -110,7 +109,7 @@ typedef struct {
 	int (*unprepare)(player_h);
 	int (*set_uri)(player_h, const char *);
 	int (*get_state)(player_h, player_state_e *);
-	int (*set_sound_type)(player_h, sound_type_e);
+	int (*set_sound_type)(player_h, sound_stream_info_h);
 	int (*set_audio_latency_mode)(player_h, audio_latency_mode_e);
 	int (*get_audio_latency_mode)(player_h, audio_latency_mode_e *);
 	int (*start)(player_h);
@@ -504,7 +503,7 @@ _mp_player_mgr_change_player(mp_player_type_e player_type)
 		g_player_apis.unprepare = player_unprepare;
 		g_player_apis.set_uri = player_set_uri;
 		g_player_apis.get_state = player_get_state;
-		g_player_apis.set_sound_type = player_set_sound_type;
+		g_player_apis.set_sound_type = player_set_audio_policy_info;
 		g_player_apis.set_audio_latency_mode = player_set_audio_latency_mode;
 		g_player_apis.get_audio_latency_mode = player_get_audio_latency_mode;
 		g_player_apis.start = player_start;
@@ -560,7 +559,7 @@ _mp_player_mgr_create_common(struct appdata *ad, mp_player_type_e type)
 
 	if (g_player_apis.set_sound_type) {
 		PLAYER_ENTER_LOG("set_sound_type");
-		g_player_apis.set_sound_type(_player, SOUND_TYPE_MEDIA);
+		g_player_apis.set_sound_type(_player, ad->stream_info);
 		PLAYER_LEAVE_LOG("set_sound_type");
 	}
 	if (g_player_apis.set_audio_latency_mode) {
@@ -763,6 +762,7 @@ mp_player_mgr_play(void *data)
 	struct appdata *ad = data;
 	MP_CHECK_FALSE(ad);
 	int err = -1;
+	int error = SOUND_MANAGER_ERROR_NONE;
 
 	MP_CHECK_VAL(mp_player_mgr_is_active(), -1);
 
@@ -781,6 +781,10 @@ mp_player_mgr_play(void *data)
 	}
 
 	PLAYER_ENTER_LOG("start");
+	error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		ERROR_TRACE("failed to acquire focus [%x]", error);
+	}
 	err = g_player_apis.start(_player);
 	PLAYER_LEAVE_LOG("start");
 
@@ -888,6 +892,7 @@ mp_player_mgr_pause(void *data)
 	struct appdata *ad = data;
 	MP_CHECK_FALSE(ad);
 	int err = -1;
+	int error = SOUND_MANAGER_ERROR_NONE;
 
 	mp_util_release_cpu();
 
@@ -897,6 +902,10 @@ mp_player_mgr_pause(void *data)
 
 	PLAYER_ENTER_LOG("pause");
 	err = g_player_apis.pause(_player);
+	error = sound_manager_release_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		ERROR_TRACE("failed to release focus error[%x]", error);
+	}
 	PLAYER_LEAVE_LOG("pause");
 
 	if (err != PLAYER_ERROR_NONE) {
@@ -1102,19 +1111,36 @@ mp_player_mgr_safety_volume_set(int foreground)
 	return 0;
 }
 
+void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change,
+					const char *additional_info, void *user_data)
+{
+	struct appdata *ad = user_data;
+
+	sound_stream_focus_state_e state_for_playback;
+	sound_stream_focus_state_e state_for_recording;
+	int ret = -1;
+	ret = sound_manager_get_focus_state(ad->stream_info, &state_for_playback,
+										&state_for_recording);
+	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
+		mp_player_mgr_pause(ad);
+		sound_manager_release_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	} else {
+		ret = mp_player_mgr_play(ad);
+		sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	}
+}
+
+
 bool
 mp_player_mgr_session_init(void)
 {
+	struct appdata *ad = mp_util_get_appdata();
 	int ret = SOUND_MANAGER_ERROR_NONE;
 
 	PLAYER_ENTER_LOG("sound_manager_set_session_type");
-	ret = sound_manager_set_session_type(SOUND_SESSION_TYPE_MEDIA);
+	ret = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, mp_player_focus_callback, ad, &ad->stream_info);
 	PLAYER_LEAVE_LOG("sound_manager_set_session_type");
 
-	PLAYER_ENTER_LOG("sound_manager_set_media_session_option");
-	ret = sound_manager_set_media_session_option(SOUND_SESSION_OPTION_PAUSE_OTHERS_WHEN_START,
-	        SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
-	PLAYER_LEAVE_LOG("sound_manager_set_media_session_option");
 
 	if (ret != SOUND_MANAGER_ERROR_NONE) {
 		return FALSE;

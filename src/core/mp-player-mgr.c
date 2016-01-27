@@ -49,6 +49,7 @@ static bool is_seeking = false;
 static bool resume_on_seek_done = false;
 static bool pause_on_seek_done = false;
 static int g_reserved_seek_pos = -1;
+bool reacquire_state;
 
 static Seek_Done_Cb g_requesting_cb = NULL;
 static void *g_requesting_cb_data = NULL;
@@ -781,6 +782,10 @@ mp_player_mgr_play(void *data)
 	}
 
 	PLAYER_ENTER_LOG("start");
+	sound_manager_get_focus_reacquisition(ad->stream_info, &reacquire_state);
+	if (reacquire_state == EINA_FALSE) {
+		sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
+	}
 	error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
 	if (error != SOUND_MANAGER_ERROR_NONE) {
 		ERROR_TRACE("failed to acquire focus [%x]", error);
@@ -1123,10 +1128,16 @@ void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 										&state_for_recording);
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
 		mp_player_mgr_pause(ad);
-		sound_manager_release_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+
+		if (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_ALARM ||
+				reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
+			sound_manager_get_focus_reacquisition(ad->stream_info, &reacquire_state);
+			if (reacquire_state == EINA_TRUE) {
+				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_FALSE);
+			}
+		}
 	} else {
 		ret = mp_player_mgr_play(ad);
-		sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
 	}
 }
 
@@ -1137,12 +1148,10 @@ mp_player_mgr_session_init(void)
 	struct appdata *ad = mp_util_get_appdata();
 	int ret = SOUND_MANAGER_ERROR_NONE;
 
-	PLAYER_ENTER_LOG("sound_manager_set_session_type");
 	ret = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, mp_player_focus_callback, ad, &ad->stream_info);
-	PLAYER_LEAVE_LOG("sound_manager_set_session_type");
-
 
 	if (ret != SOUND_MANAGER_ERROR_NONE) {
+		EVENT_TRACE("failed to create_stream_information %x", ret);
 		return FALSE;
 	}
 

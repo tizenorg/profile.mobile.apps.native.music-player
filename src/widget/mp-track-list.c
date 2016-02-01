@@ -680,10 +680,17 @@ _mp_track_list_shuffle_icon_get(void *data, Evas_Object * obj, const char *part)
 
 	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *icon;
-		icon = mp_util_create_image(obj, IMAGE_EDJ_NAME, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
+		char mp_image_path[1024] = {0};
+		char *icon_path = app_get_resource_path();
+		if (icon_path == NULL) {
+			return NULL;
+		}
+		snprintf(mp_image_path, 1024, "%s%s/%s", icon_path, "edje", IMAGE_EDJ_NAME);
+		icon = mp_util_create_image(obj, mp_image_path, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
 		evas_object_color_set(icon, 21, 108, 148, 255);
+		free(icon_path);
 
-		elm_layout_theme_set(content, "layout", "list/B/type.3", "default");
+		elm_layout_theme_set(content, "layout", "list/C/type.2", "default");
 		elm_layout_content_set(content, "elm.swallow.content", icon);
 
 		return content;

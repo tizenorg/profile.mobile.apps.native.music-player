@@ -19,9 +19,6 @@
 #ifndef __MP_VCONF_PRIVATE_KEYS_H__
 #define __MP_VCONF_PRIVATE_KEYS_H__
 
-#ifdef GBS_BUILD
-#include <vconf-keys.h>
-#endif
 #include <app_preference.h>
 
 #define MP_PRIVATE			"private/"PKG_NAME"/"

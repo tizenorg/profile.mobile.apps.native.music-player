@@ -29,6 +29,7 @@
 #include "mp-artist-detail-list.h"
 #include "mp-playlist-list.h"
 #include "mp-lockscreenmini.h"
+#include "mp-minicontroller.h"
 #include "mp-folder-list.h"
 #include "mp-create-playlist-view.h"
 #include "mp-common.h"

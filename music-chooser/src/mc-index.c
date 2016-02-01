@@ -17,9 +17,6 @@
 
 #include "mc-index.h"
 #include "mc-debug.h"
-#ifdef GBSBUILD
-#include <vconf.h>
-#endif
 #include "mc-track-list.h"
 #include <system_settings.h>
 

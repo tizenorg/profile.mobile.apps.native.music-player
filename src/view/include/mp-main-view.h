@@ -31,10 +31,6 @@
 
 #include "music.h"
 
-#ifdef IDEBUILD
-#include "idebuild.h"
-#endif
-
 typedef struct
 {
 	INHERIT_MP_LIST_VIEW;

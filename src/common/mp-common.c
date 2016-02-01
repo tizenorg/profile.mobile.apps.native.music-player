@@ -53,10 +53,6 @@
 #include "mp-edit-playlist.h"
 #include "mp-file-util.h"
 
-#ifdef IDEBUILD
-#include "idebuild.h"
-#endif
-
 #ifdef MP_3D_FEATURE
 #endif
 

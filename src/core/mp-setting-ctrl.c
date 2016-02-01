@@ -85,8 +85,6 @@ static void
 _mp_setting_auto_off_changed_cb(const char *key, void *user_data)
 {
 	mp_setting_t *sd = NULL;
-	keynode_t *node = (keynode_t *) key;
-	mp_retm_if(node == NULL, "keymode is NULL");
 	mp_retm_if(user_data == NULL, "user_date is NULL");
 	sd = (mp_setting_t *) user_data;
 
@@ -110,8 +108,6 @@ static void
 _mp_setting_play_speed_changed_cb(const char *key, void *user_data)
 {
 	mp_setting_t *sd = NULL;
-	keynode_t * node = (keynode_t *) key;
-	mp_retm_if(node == NULL, "keymode is NULL");
 	mp_retm_if(user_data == NULL, "user_date is NULL");
 	sd = (mp_setting_t *) user_data;
 
@@ -494,7 +490,7 @@ mp_setting_get_nowplaying_id(void)
 	char line[MAX_NAM_LEN + 1];
 	int pid = -1;
 	if ((fp = fopen(MP_NOW_PLAYING_ID_INI, "r")) == NULL) {
-		DEBUG_TRACE("unable to open %s/shared/data/NowPlayingStatus", DATA_PREFIX);
+		DEBUG_TRACE("unable to open %s/shared/data/NowPlayingId.ini", DATA_PREFIX);
 		return -1;
 	}
 	if (fgets(line, MAX_NAM_LEN, fp)) { /* #Nowplaying */

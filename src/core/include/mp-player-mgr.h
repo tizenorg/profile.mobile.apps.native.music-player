@@ -21,9 +21,6 @@
 
 #include <sound_manager.h>
 #include <player.h>
-#ifdef GBSBUILD
-#include <vconf.h>
-#endif
 #include "ms-key-ctrl.h"
 
 typedef enum {

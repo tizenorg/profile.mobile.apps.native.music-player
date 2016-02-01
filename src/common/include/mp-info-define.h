@@ -25,9 +25,6 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <glib.h>
-#ifdef GBSBUILD
-#include <vconf.h>
-#endif
 #include <Ecore_IMF.h>
 #include <app.h>
 #include <Edje.h>

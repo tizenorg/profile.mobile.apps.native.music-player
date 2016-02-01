@@ -31,10 +31,6 @@
 #include "mp-ug-launch.h"
 #include "mp-define.h"
 
-#ifdef IDEBUILD
-#include "idebuild.h"
-#endif
-
 #include "music.h"
 #include "mp-item.h"
 #include "mp-player-debug.h"

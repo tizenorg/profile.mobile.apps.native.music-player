@@ -26,10 +26,6 @@
 #include "mp-file-util.h"
 #include <efl_extension.h>
 
-#ifdef IDEBUILD
-#include "idebuild.h"
-#endif
-
 #include <signal.h>
 // TEMP_BLOCK
 //#include <power.h>
@@ -227,71 +223,6 @@ void
 _mp_app_system_settings_changed_cb(system_settings_key_e key, void *user_data)
 {
 	EVENT_TRACE("");
-}
-
-void
-_mp_app_noti_changed_cb(keynode_t * node, void *data)
-{
-	EVENT_TRACE("");
-
-	struct appdata *ad = (struct appdata *)data;
-	MP_CHECK(ad);
-
-#ifdef GBSBUILD
-	char *keyname = vconf_keynode_get_name(node);
-#endif
-#ifdef IDEBUILD
-	char * keyname = "";
-#endif
-
-	SECURE_DEBUG("%s changed", keyname);
-
-	if (keyname == NULL) {
-		return;
-	}
-
-	if (strcmp(keyname, MP_PREFKEY_PLAYING_PID) == 0) {
-#ifdef GBSBUILD
-		int playing_pid = vconf_keynode_get_int(node);
-#endif
-#ifdef IDEBUILD
-		int playing_pid = 0;
-#endif
-#ifndef MP_SOUND_PLAYER
-		if (!playing_pid) {
-			if (ad->player_state == PLAY_STATE_PAUSED) {
-				DEBUG_TRACE("sound-player terminated.. show minicontroller");
-
-				if (!ad->win_minicon) {
-					mp_minicontroller_create(ad);
-				}
-				if (ad->win_minicon) {
-					mp_minicontroller_show(ad);
-				}
-#ifdef MP_FEATURE_LOCKSCREEN
-				if (!ad->win_lockmini) {
-					mp_lockscreenmini_create(ad);
-				}
-				if (ad->win_lockmini) {
-					mp_lockscreenmini_show(ad);
-				}
-#endif
-				mp_setting_save_playing_info(ad);
-			}
-		} else
-#endif
-			if (playing_pid != getpid()) {
-				DEBUG_TRACE("other player activated : [pid:%d]", playing_pid);
-				if (ad->player_state == PLAY_STATE_PLAYING) {
-					ad->paused_by_other_player = TRUE;
-					mp_play_control_play_pause(ad, false);
-				}
-				mp_minicontroller_destroy(ad);
-#ifdef MP_FEATURE_LOCKSCREEN
-				mp_lockscreenmini_destroy(ad);
-#endif
-			}
-	}
 }
 
 #ifdef MP_FEATURE_PERSONAL_PAGE

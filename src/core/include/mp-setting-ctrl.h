@@ -18,15 +18,6 @@
 #ifndef __MP_SETTING_CTRL_H_
 #define __MP_SETTING_CTRL_H_
 
-#ifdef GBSBUILD
-#include <vconf.h>
-#endif
-
-#ifdef IDEBUILD
-#include "idebuild.h"
-#endif
-
-
 typedef void (*MpSettingPlaylist_Cb) (int state, void *data);
 typedef void (*MpSettingSaChange_Cb) (int state, void *data);
 typedef void (*MpSettingAutoOff_Cb)(int min, void *data);

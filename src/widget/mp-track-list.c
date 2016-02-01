@@ -675,15 +675,15 @@ _mp_track_list_shuffle_text_get(void *data, Evas_Object *obj, const char *part)
 Evas_Object *
 _mp_track_list_shuffle_icon_get(void *data, Evas_Object * obj, const char *part)
 {
-	Evas_Object *content = NULL;
-	content = elm_layout_add(obj);
+	//Evas_Object *content = NULL;
+	//content = elm_layout_add(obj);
 
 	if (!strcmp(part, "elm.swallow.icon")) {
 		Evas_Object *icon;
 		icon = mp_util_create_image(obj, IMAGE_EDJ_NAME, MP_LITE_SHUFFLE_ICON, MP_LIST_SHUFFLE_ICON_SIZE, MP_LIST_SHUFFLE_ICON_SIZE);
 		evas_object_color_set(icon, 21, 108, 148, 255);
+		elm_layout_theme_set(content, "layout", "list/B/type.3", "default")
 
-		elm_layout_theme_set(content, "layout", "list/B/type.3", "default");
 		elm_layout_content_set(content, "elm.swallow.content", icon);
 
 		return content;

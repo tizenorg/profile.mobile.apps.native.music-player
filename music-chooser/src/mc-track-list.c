@@ -100,7 +100,7 @@ static void _check_changed_cb(void *data, Evas_Object *obj, void *event_info)
 
 static Evas_Object *_gl_select_all_content_get(void *data, Evas_Object *obj, const char *part)
 {
-	if (!strcmp(part, "elm.icon")) {
+	if (!strcmp(part, "elm.swallow.end")) {
 		Evas_Object *content = elm_check_add(obj);
 		elm_object_style_set(content, "default/genlist");
 		evas_object_smart_callback_add(content, "changed", _mc_track_list_select_all_selected_item_data_get, data);
@@ -133,7 +133,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 	}
 
 	if (previous_item_data && (g_strcmp0(prev_uri, cur_uri) != 0)) {
-		prev_part_content = elm_object_item_part_content_get(previous_item_data->it, "elm.icon.1");
+		prev_part_content = elm_object_item_part_content_get(previous_item_data->it, "elm.swallow.icon");
 		DEBUG_TRACE("Previous URI: %s", prev_uri);
 		if (prev_part_content) {
 			elm_object_signal_emit(prev_part_content, "show_default", "*");
@@ -144,7 +144,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 	if (cur_item_data) {
 		mp_media_info_get_file_path((mp_media_info_h)(cur_item_data->media), &cur_uri);
 		DEBUG_TRACE("Current URI is: %s", cur_uri);
-		part_content = elm_object_item_part_content_get(cur_item_data->it, "elm.icon.1");
+		part_content = elm_object_item_part_content_get(cur_item_data->it, "elm.swallow.icon");
 		player_state_e state = mc_pre_play_get_player_state();
 
 		if (part_content) {
@@ -243,7 +243,7 @@ char *mc_create_selectioninfo_text_with_count(int count)
 static char *_gl_select_all_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	startfunc;
-	if (!strcmp(part, "elm.text.main")) {
+	if (!strcmp(part, "elm.text")) {
 		char *name = GET_SYS_STR("IDS_MUSIC_BODY_SELECT_ALL");
 		return g_strdup(name);
 	}
@@ -466,7 +466,7 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 		g_position = 0;
 		if (item) {
 			index = it_data->index;
-			Evas_Object *radio = elm_object_item_part_content_get(item, "elm.icon.2");
+			Evas_Object *radio = elm_object_item_part_content_get(item, "elm.swallow.end");
 			MP_CHECK(radio);
 
 			state_index = index;
@@ -499,19 +499,19 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	if (ld->ad->select_type == MC_SELECT_MULTI && !it_data->checkbox_cb) {
-		Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon.right");
+		Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 		Eina_Bool check_state = elm_check_state_get(check);
 		elm_check_state_set(check, !check_state);
 	}
 
-	elm_genlist_item_fields_update(event_info, "elm.icon.2", ELM_GENLIST_ITEM_FIELD_CONTENT);
+	elm_genlist_item_fields_update(event_info, "elm.swallow.end", ELM_GENLIST_ITEM_FIELD_CONTENT);
 
 	if ((ld->ad->select_type == MC_SELECT_MULTI) && ((ld->ad->limitsize > 0) && (item_size + mpFileInfo.st_size > ld->ad->limitsize)) && it_data->checked) {
 		WARN_TRACE("Exceeded max size by caller");
 		size_exceeded = true;
 		it_data->checked = !it_data->checked;
 		if (!it_data->checkbox_cb) {
-			Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon.right");
+			Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 			Eina_Bool check_state = elm_check_state_get(check);
 			elm_check_state_set(check, !check_state);
 		}
@@ -524,7 +524,7 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 		WARN_TRACE("Exceeded max count by caller");
 		it_data->checked = !it_data->checked;
 		if (!it_data->checkbox_cb) {
-			Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon.right");
+			Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 			Eina_Bool check_state = elm_check_state_get(check);
 			elm_check_state_set(check, !check_state);
 		}
@@ -536,7 +536,7 @@ static void _gl_sel_cb(void *data, Evas_Object *obj, void *event_info)
 
 	if (ld->ad->select_type == MC_SELECT_MULTI) {
 		Elm_Object_Item *selected_item = elm_genlist_first_item_get(ld->genlist);
-		Evas_Object *check = elm_object_item_part_content_get(selected_item, "elm.icon");
+		Evas_Object *check = elm_object_item_part_content_get(selected_item, "elm.swallow.end");
 		if (!size_exceeded) {
 			if (it_data->checked) {
 				item_size = item_size + mpFileInfo.st_size;
@@ -826,7 +826,7 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	Eina_Bool all_selected = EINA_FALSE;
 
 	item = elm_genlist_first_item_get(ld->genlist);
-	Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon");
+	Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 	Eina_Bool state = elm_check_state_get(check);
 	all_selected = state;
 
@@ -854,7 +854,7 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
 		it_data->checked = all_selected;
-		elm_genlist_item_fields_update(item, "elm.icon.right", ELM_GENLIST_ITEM_FIELD_CONTENT);
+		elm_genlist_item_fields_update(item, "elm.swallow.end", ELM_GENLIST_ITEM_FIELD_CONTENT);
 		item = elm_genlist_item_next_get(item);
 	}
 
@@ -880,7 +880,7 @@ void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
 	elm_genlist_item_selected_set(event_info, EINA_FALSE);
 
 	item = elm_genlist_first_item_get(ld->genlist);
-	Evas_Object *check = elm_object_item_part_content_get(item, "elm.icon");
+	Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 	Eina_Bool state = elm_check_state_get(check);
 	if (state == EINA_FALSE && ld->ad->max_count <= 0) {
 		elm_check_state_set(check, !state);
@@ -951,7 +951,7 @@ Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad)
 	ld->itc.func.del = _gl_del;
 //	ld->itc.decorate_all_item_style = "edit_default";
 
-	ld->itc_select_all.item_style = "select_all";
+	ld->itc_select_all.item_style = "default";
 	ld->itc_select_all.func.content_get = _gl_select_all_content_get;
 	ld->itc_select_all.func.text_get = _gl_select_all_text_get;
 

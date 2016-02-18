@@ -874,6 +874,7 @@ mp_player_mgr_resume(void *data)
 	error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
 	if (error != SOUND_MANAGER_ERROR_NONE) {
 		ERROR_TRACE("failed to acquire focus [%x]", error);
+		return error;
 	}
 
 	sound_manager_get_focus_reacquisition(ad->stream_info, &reacquire_state);
@@ -1152,7 +1153,7 @@ void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 			}
 		}
 	} else {
-		ret = mp_player_mgr_play(ad);
+		ret = mp_player_mgr_resume(ad);
 	}
 }
 

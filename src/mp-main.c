@@ -1462,6 +1462,13 @@ mp_terminate(void *data)
 
 	mp_volume_finalize();
 
+	if(ad->stream_info) {
+		int error = sound_manager_destroy_stream_information(ad->stream_info);
+		if (error != SOUND_MANAGER_ERROR_NONE) {
+			ERROR_TRACE("unable to destroy stream. error code [%x]", error);
+		}
+	}
+
 #ifdef MP_SOUND_PLAYER
 	mp_setting_set_nowplaying_id(0);
 #endif

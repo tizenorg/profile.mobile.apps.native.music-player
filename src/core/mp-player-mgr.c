@@ -708,10 +708,6 @@ mp_player_mgr_destroy(void *data)
 		mp_setting_set_player_state(MP_PLAY_STATE_NONE);
 	}
 
-	error = sound_manager_destroy_stream_information(ad->stream_info);
-	if (error != SOUND_MANAGER_ERROR_NONE) {
-		DEBUG_TRACE("unable to destroy stream. error code [%x]", error);
-	}
 	is_seeking = false;
 	g_reserved_seek_pos = -1;
 	g_reserved_cb = NULL;

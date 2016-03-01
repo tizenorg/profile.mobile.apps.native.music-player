@@ -3852,6 +3852,7 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 		}
 #endif
 #endif
+		break;
 	}
 
 	case MP_LYRIC_UPDATE: {

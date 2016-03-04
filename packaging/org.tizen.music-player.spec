@@ -96,7 +96,7 @@ Description: music-chooser chooser
 %prep
 %setup -q
 
-%define SHARE_DIR %{TZ_SYS_SHARE}
+%define SHARE_DIR %{TZ_SYS_RO_PACKAGES}
 %define INSTALL_DIR	 %{TZ_SYS_RO_APP}
 
 %define PKG_NAME %{name}
@@ -111,7 +111,6 @@ Description: music-chooser chooser
 %define SP_DATA_PREFIX %{INSTALL_DIR}/%{SP_PKG_NAME}
 
 %define _app_icon_dir %{TZ_SYS_RO_ICONS}/default/small/
-%define _app_share_packages_dir %{TZ_SYS_RO_PACKAGES}
 %define _app_license_dir %{TZ_SYS_SHARE}/license
 
 %build
@@ -176,7 +175,7 @@ fi
 %post
 %files
 %manifest %{name}.manifest
-%{_app_share_packages_dir}/%{name}.xml
+%{SHARE_DIR}/%{name}.xml
 %{_app_icon_dir}/%{name}.png
 %{_app_icon_dir}/preview_music_4x2.png
 %{PREFIX}/bin/*
@@ -194,7 +193,7 @@ fi
 
 %files -n org.tizen.music-chooser
 %manifest org.tizen.music-chooser.manifest
-%{SHARE_DIR}/packages/org.tizen.music-chooser.xml
+%{SHARE_DIR}/org.tizen.music-chooser.xml
 %{MC_PREFIX}/res/locale/*/LC_MESSAGES/*.mo
 %defattr(-,root,root,-)
 %{MC_PREFIX}/bin/*

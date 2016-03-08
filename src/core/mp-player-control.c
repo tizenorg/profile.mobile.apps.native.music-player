@@ -284,7 +284,7 @@ _mp_play_control_interrupted_cb(player_interrupted_code_e code, void *userdata)
 		break;
 	}
 
-	/* if playback interrupted while seeking, seek complete callback will not be ivoked. */
+	/* if playback interrupted while seeking, seek complete callback will not be invoked. */
 	mp_player_mgr_seek_done(ad);
 
 	ad->paused_by_user = true;

@@ -3852,6 +3852,8 @@ static void _mp_player_view_on_event(void *thiz, MpViewEvent_e event)
 		}
 #endif
 #endif
+		//Enable Lyrics settings
+		_mp_player_view_show_lyric(view);
 		break;
 	}
 

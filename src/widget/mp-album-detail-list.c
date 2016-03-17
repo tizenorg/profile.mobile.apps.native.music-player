@@ -277,7 +277,7 @@ _mp_album_detail_list_album_text_get(void *data, Evas_Object *obj, const char *p
 
 	if (!strcmp(part, "elm.text")) {
 		return g_strdup(elm_entry_utf8_to_markup(list->artist));
-	} else if (!strcmp(part, "elm.text.end")) {
+	} else if (!strcmp(part, "elm.text.sub")) {
 		char *text = NULL;
 		char *tmp = NULL;
 		char time[16] = "";

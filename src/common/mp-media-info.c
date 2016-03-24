@@ -1705,7 +1705,6 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 	if (res  != MEDIA_CONTENT_ERROR_NONE) {
 		audio_meta_destroy(audio);
 		IF_FREE(album);
-		audio_meta_destroy(audio);
 		return false;
 	}
 
@@ -1713,7 +1712,6 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 	if (res  != MEDIA_CONTENT_ERROR_NONE) {
 		audio_meta_destroy(audio);
 		IF_FREE(album);
-		audio_meta_destroy(audio);
 		return false;
 	}
 
@@ -1722,7 +1720,6 @@ static inline bool _album_track_foreach_cb(media_info_h media, void *user_data)
 		audio_meta_destroy(audio);
 		IF_FREE(album);
 		IF_FREE(track_num)
-		audio_meta_destroy(audio);
 		return false;
 	}
 

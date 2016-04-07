@@ -59,6 +59,7 @@
 
 	<privileges>
 		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
 		<privilege>http://tizen.org/privilege/systemsettings</privilege>
 		<privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
 		<privilege>http://tizen.org/privilege/externalstorage</privilege>

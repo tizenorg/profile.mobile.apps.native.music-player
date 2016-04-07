@@ -254,6 +254,13 @@ _mp_add_available_route_changed_cb(sound_device_h  device, bool available, void 
 	pipe_data.user_data = user_data;
 
 	ecore_pipe_write(gNotiPipe, &pipe_data, sizeof(mp_app_pipe_data_s));
+
+	if (!available) {
+        struct appdata *ad = user_data;
+
+        mp_player_mgr_pause(ad);
+    }
+
 }
 static void
 _mp_app_active_device_chaged_cb(sound_device_h  in, sound_device_changed_info_e  out, void *user_data)

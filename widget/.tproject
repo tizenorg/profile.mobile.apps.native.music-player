@@ -8,9 +8,5 @@
     <package>
         <blacklist/>
         <resFallback autoGen="true"/>
-        <subProjects>
-            <tizenProject project="music-chooser"/>
-            <tizenProject project="widget"/>
-        </subProjects>
     </package>
 </tproject>

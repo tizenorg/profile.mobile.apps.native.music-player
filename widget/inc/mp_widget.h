@@ -18,6 +18,8 @@
 #ifndef MP_WIDGET_H
 #define MP_WIDGET_H
 
+#include <Elementary.h>
+
 typedef struct _widget_data {
 	Evas_Object *win;
 	Evas_Object *layout;

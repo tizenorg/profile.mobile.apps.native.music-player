@@ -353,9 +353,17 @@ static void mp_widget_read_ini_file(char *path, void *data)
 	fclose(file);
 }
 
-static void mp_widget_music_player_result_callback(void *data)
+static void mp_widget_music_player_result_callback(app_control_h request, app_control_h reply, app_control_result_e result, void *user_data)
 {
-	if (!data) {
+	if (!user_data) {
+		return;
+	}
+}
+
+
+static void mp_widget_music_player_result(void *user_data)
+{
+	if (!user_data) {
 		return;
 	}
 }
@@ -474,7 +482,7 @@ static void mp_widget_click_on_add_tracks_cb(void *data, Evas_Object *obj,
 
 	mp_widget_music_player_launch(layout, extra_data_keys,
 	                              extra_data_values, extra_data_len, EINA_TRUE, NULL);
-	mp_widget_music_player_result_callback(layout);
+	mp_widget_music_player_result(layout);
 
 	for (i = 0; i < extra_data_len; ++i) {
 		free(extra_data_keys[i]);
@@ -521,7 +529,7 @@ static void mp_widget_click_on_track_image_cb(void *data, Evas_Object *obj,
 
 	mp_widget_music_player_launch(layout, extra_data_keys,
 	                              extra_data_values, extra_data_len, EINA_TRUE, wgtdata->file_path);
-	mp_widget_music_player_result_callback(layout);
+	mp_widget_music_player_result(layout);
 
 	for (i = 0; i < extra_data_len; ++i) {
 		free(extra_data_keys[i]);
@@ -635,7 +643,7 @@ static void mp_widget_click_on_play_cb(void *data, Evas_Object *obj,
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
 		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
-		mp_widget_music_player_result_callback(layout);
+		mp_widget_music_player_result(layout);
 	}
 	for (i = 0; i < extra_data_len; ++i) {
 		free(extra_data_keys[i]);
@@ -697,7 +705,7 @@ static void mp_widget_click_on_previous_cb(void *data, Evas_Object *obj,
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
 		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
-		mp_widget_music_player_result_callback(layout);
+		mp_widget_music_player_result(layout);
 	}
 
 	for (i = 0; i < extra_data_len; ++i) {
@@ -760,7 +768,7 @@ static void mp_widget_click_on_next_cb(void *data, Evas_Object *obj,
 	if (message_port_init(extra_data_values[0]) != MESSAGE_PORT_ERROR_NONE) {
 		mp_widget_music_player_launch(layout, extra_data_keys,
 		                              extra_data_values, extra_data_len, EINA_FALSE, wgtdata->file_path);
-		mp_widget_music_player_result_callback(layout);
+		mp_widget_music_player_result(layout);
 	}
 
 	for (i = 0; i < extra_data_len; ++i) {
@@ -772,7 +780,7 @@ static void mp_widget_click_on_next_cb(void *data, Evas_Object *obj,
 	free(extra_data_values);
 }
 
-static void __mp_change_multiple_widgets(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, char *path)
+static void __mp_change_multiple_widgets(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path)
 {
 	Eina_List *temp_list = NULL;
 	WidgetData* wgtdata = NULL;

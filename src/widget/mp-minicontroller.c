@@ -363,7 +363,8 @@ static void _quick_panel_cb(minicontrol_viewer_event_e event_type, bundle *event
 {
 	startfunc;
 	struct appdata *ad = mp_util_get_appdata();
-	if (event_type == MINICONTROL_EVENT_REQUEST_HIDE) {
+	minicontrol_viewer_event_e event_hide = (minicontrol_viewer_event_e)MINICONTROL_EVENT_REQUEST_HIDE;
+	if (event_type == event_hide) {
 		DEBUG_TRACE("CLOSE");
 		if (!mp_util_is_other_player_playing()) {
 			int ret_set = 0;

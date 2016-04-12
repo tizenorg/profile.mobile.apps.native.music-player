@@ -328,7 +328,7 @@ int mc_group_play_list_update(Evas_Object *list, Elm_Object_Item *navi_it)
 
 	char image_path[1024] = {0};
 	char *path = app_get_resource_path();
-	MP_CHECK_NULL(path);
+	MP_CHECK_VAL(path, -1);
 	snprintf(image_path, 1024, "%s%s/%s", path, "edje", IMAGE_EDJ_NAME);
 	elm_image_file_set(ic, image_path, "00_icon_edit.png");
 	free(path);

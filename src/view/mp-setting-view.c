@@ -1019,6 +1019,7 @@ void mp_music_viewas_pop_cb(void)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 	Evas_Object *genlist = NULL;
+	int data = 0;
 	Elm_Genlist_Item_Class *itc = NULL;
 	/* elm_object_style_set(popup, "content/default"); */
 	elm_popup_orient_set(popup, ELM_POPUP_ORIENT_CENTER);
@@ -1062,9 +1063,10 @@ void mp_music_viewas_pop_cb(void)
 		itc->func.content_get = _lyrics_view_content_get;
 		itc->func.del = NULL;
 	}
-	elm_genlist_item_append(genlist, itc, 0, NULL,
+	elm_genlist_item_append(genlist, itc, &data, NULL,
 	                        ELM_GENLIST_ITEM_NONE, _lyrics_state_on_cb, (mp_setting_lyric_popup *)ly_popup);
-	elm_genlist_item_append(genlist, itc, 1, NULL,
+	data = 1;
+	elm_genlist_item_append(genlist, itc, &data, NULL,
 	                        ELM_GENLIST_ITEM_NONE, _lyrics_state_off_cb, (mp_setting_lyric_popup *)ly_popup);
 }
 

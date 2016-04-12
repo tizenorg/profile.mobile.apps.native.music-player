@@ -680,7 +680,6 @@ mp_player_mgr_destroy(void *data)
 	struct appdata *ad = data;
 	MP_CHECK_FALSE(ad);
 	int res = true;
-	int error = -1;
 	if (ad->current_track_info) {
 		if (mp_setting_read_playing_status(ad->current_track_info->uri, "paused") != 1) {
 			mp_setting_write_playing_status(ad->current_track_info->uri, "paused");
@@ -875,6 +874,9 @@ mp_player_mgr_resume(void *data)
 
 	if (ad->stream_info) {
 		ret = sound_manager_get_focus_state(ad->stream_info, &state_for_playback, &state_for_recording);
+		if(ret != SOUND_MANAGER_ERROR_NONE) {
+			ERROR_TRACE("failed in sound_manager_get_focus_state");
+		}
 		if (state_for_playback != SOUND_STREAM_FOCUS_STATE_ACQUIRED) {
 			error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
 			if (error != SOUND_MANAGER_ERROR_NONE) {
@@ -1151,7 +1153,10 @@ void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 	sound_stream_focus_state_e state_for_recording;
 	int ret = -1;
 	ret = sound_manager_get_focus_state(ad->stream_info, &state_for_playback,
-										&state_for_recording);
+			&state_for_recording);
+	if(ret != SOUND_MANAGER_ERROR_NONE) {
+		ERROR_TRACE("failed in sound_manager_get_focus_state");
+	}
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
 		mp_player_mgr_pause(ad);
 

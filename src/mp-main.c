@@ -1371,7 +1371,7 @@ mp_create(void *data)
 	MP_CHECK_VAL(path, EINA_FALSE);
 	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", THEME_NAME);
 
-	Elm_Theme *th = elm_theme_new();
+	/*Elm_Theme *th = elm_theme_new();*/
 	elm_theme_extension_add(NULL, edje_path);
 	free(path);
 	PROFILE_OUT("elm_theme_extension_add");

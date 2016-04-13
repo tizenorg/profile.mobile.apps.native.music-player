@@ -523,6 +523,7 @@ Evas_Object *
 mp_common_create_more_ctxpopup(void *view)
 {
 	Evas_Object *popup = elm_ctxpopup_add(GET_WINDOW());
+	elm_object_style_set(popup, "more/default");
 	evas_object_event_callback_add(popup, EVAS_CALLBACK_DEL, _ctx_popup_del_cb, view);
 	evas_object_smart_callback_add(popup, "dismissed", _ctx_popup_dismissed_cb, popup);
 	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);

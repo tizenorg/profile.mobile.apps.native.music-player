@@ -5,6 +5,7 @@
 	<projects>
 		<project>music-chooser</project>
 		<project>widget</project>
+		<project>sound-player</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

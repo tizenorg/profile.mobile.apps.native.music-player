@@ -1,0 +1,318 @@
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="AuthorSignature">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
+<Reference URI="bin%2Fmusic-chooser">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Uzg2f+5lppBxMROPUK1CKoozXiQ56UwVG1+B9R7bAew=</DigestValue>
+</Reference>
+<Reference URI="bin%2Fmusic-player">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>OS1CMBp9PbfGhsT4XdSAkYKgOhUxqal8Nz9BcenSTKs=</DigestValue>
+</Reference>
+<Reference URI="bin%2Fmusic-player-widget">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>jbf0sNFvsS0e3+Aj9zWhbY3Mos6JzcEh9MHtlHzsGAA=</DigestValue>
+</Reference>
+<Reference URI="bin%2Fsound-player">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>+vydSdzsotM1Y0bBmLn7x8IHwfrdnWaUtLqh1cXVVWc=</DigestValue>
+</Reference>
+<Reference URI="res%2FCMakeLists.txt">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>DPnRc6ch3a7ZmJA64h17s1miorohvRHlAxVzoSkenwI=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fedc_image_macro.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>stBJqfeEZd9xkgEnLQn+/tUdpQIStINRRjU2et6UWn0=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-custom-winset-style.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>c7J7ZkHluUIw3MVD+zzptVeWnNBEAOEBZWJp5MWaqts=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-defines.h">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>lNOAv2pOisFDg/Yqnn1lSOq+SiCfR/7fu6VbRsQMhJ8=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-fake-effect.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>/E/ttHDfkjkfToflKCzQsCtm//8G5yRjd+XUYDQs6G0=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-images.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>oselDEwserFWLhpp1FxYpsUdW67DYVbkzcZpYf7AL5g=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-library.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Zc5KPoyP8LSeCuErtcCHFKeVS9lwi5hnMOLPFSzK44A=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-lockscreenmini.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>yb2frSHzjj1daKs+FXCqZXm26XQUZgmZrivmyUNfkxg=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmp-minicontroller.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>vnIU+7xBvMtOPx2apVQR6OEcQFzP+KyURay3w2Z6K68=</DigestValue>
+</Reference>
+<Reference URI="res%2Fedje%2Flayout%2Fmusic.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>InY0dXvcIk3UaKWmYLhBSWv3Pt2mNcca9OC8I3dJpHI=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fbox_image_shadow.%23.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>3JwqRTgqie7weUHIu7Uy67jsSF/oQf7FaG5fInbccDI=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_next_dim.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>8kHD04DAC/SBo1YeghEES+Yf7HNjoYqTMB276jFyrRE=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_next_nor.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>UO7cQchVmxx5s7qIShijSYfHTmx1BeolpyBLxJBxicI=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_next_press.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>8m+Elw+bMe+/R68g6SR5Ob6kCMfJzsjrVdbi12lPbtY=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_pause_dim.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>yGdGuDcQvi3DE+6q58G3oQy7/dEUeajcF7gJlrJ+Lmw=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_pause_nor.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>9a7Vw6H+yhn7H0trF+XF8VcdhaPAFLfXyxc9iKkCBFY=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_pause_press.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ZF4VdtFy3bd+v/20MDa1CJemvhsH/S2548Myjc50UVk=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_play_dim.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>2AVeM6GjZSdWl5RLc0wsHRDFhUU4Ya3sTL8i1sFzAXw=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_play_nor.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>7GukwAYB8lKfLu1FyrAFdmqWG1HBhjzdxhZzOqME9Xw=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_play_press.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>35PrkAmv9TFF20/o5CYw+eQGI0CEsq/Gdrx5v4L2zE0=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_prev_dim.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>5BJrZT5aGPXlIog8/uWTKDj0YASR2D7tL9Q46M341vs=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_prev_nor.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>4vh7/4RtaKa4GlfmrJ978d6WL6AuKYALh+9YjZFpS2k=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_prev_press.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>PrYeZJwP1F9Q15x8hzv/BYPZFtje/Z0JtBGadcPuA8E=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_stop_dim.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>5qqMhIL5bNJSYlZKo3e2HnH0DSB3DMTf5PQ/oRcsCtk=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_stop_nor.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>p5NmY3H3qHNBipDTi+pxSso/+tTDW15hhTGswtiDHms=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fmusic_btn_player_stop_press.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>HDBAMpPThWKzEm6mBJrRoRjfrNJZ/8OWpfF/LE+brJ4=</DigestValue>
+</Reference>
+<Reference URI="res%2Fimages%2Fpreview_music_4x2.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>5ho8MoyiKEuT6gbdmXoBxTYr17tFLQ4aYkCk2auUl94=</DigestValue>
+</Reference>
+<Reference URI="res%2Fmusic_widget.edc">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XpUoKCWmkZB1n8xfqPvmh/h6ukhGH+pKH+/GiA0GnVA=</DigestValue>
+</Reference>
+<Reference URI="res%2Fmusic_widget.edj">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>dKHz9/wFukeg/YoIwqULmGTjZNQT1kawlRn2TKBOPrA=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Forg.tizen.music-player.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>kpbILPMIsjlPaoyLmpe+5Tu4BapsM+XmGNCzeH/Ztu4=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Forg.tizen.sound-player.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>NUk97COD5o0OOQXQ3cMPLyK3J+Pe9ZQLRswMDAmXWCE=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2F2x2_music_blue.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>vM0dNx045QBZXqMB/dagfru0eBNze0NTPewg5twSEmk=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2F2x2_music_green.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>LPfaSxeuKEX3QBtxn/qZUGr/J3kKOyZCn9hS5JXvm1k=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2F2x2_music_red.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>x5ipyCqdiAMoq1Gjjyquz1NDIi6hDTCzYUlrMVc217g=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2F2x2_music_yellow.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>I66gwpNiOQf9hJy8zZxkYAtDfvA7QTfIu46pjEFgVfY=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2F34_thumb_07.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>X5T48dZgMj4gahU/A67qaFlgIHiojl6X4oOw8tgEwX8=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_Nocontents_multimedia.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>t/gXAMsHKRBg5nNOYtlrM6/topf6B6gUeP7Yx/TX3fY=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_playlist_most_played.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>OnCt2YJRzIKoqaxzctBxBuFBCQewDxiEVBwhlCXVQ0Y=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_playlist_recently_added.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XxUoPsYmkwCUAQt7UxGhT9tvu466sttFfTV6vR/uDDg=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_playlist_recently_played.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>zrKqWx/bVpuHEg944kIBD/cPYyuUe31/sQa1OsRl8ZQ=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_playlist_starred.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ueAhXHCaIIEJUHBz0kWD/GooP+dAsQbUjNK9dP5Vh0U=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2FT02_playlist_thumbnail_created.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>gomrfkwtI1VwYgwOz8721wj3/FQfqTWj8ijSit3mWl8=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_album_art_120.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>0kRf49oinS0Cxu7ZC5HoCdIPq+QLQmkPmH6PSNVGmaw=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_album_art_480.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>a+zw3n1J0LyOX/nl7KMhQMbw7gMHGJ5pka2lEdQ+BYQ=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_album_art_96.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>qC1dZ3pe2Vu42rMo5rTSxhcFS/W5Dj0LXIlR3z7EFjg=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_albumart.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>QMva/+wllc6hfgprQYo7ydxvfuOXWE8AtDcTcBRZCNo=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_albumart_middle.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>0kRf49oinS0Cxu7ZC5HoCdIPq+QLQmkPmH6PSNVGmaw=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fshared_images%2Fdefault_albumart_small.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>qC1dZ3pe2Vu42rMo5rTSxhcFS/W5Dj0LXIlR3z7EFjg=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2F2x2_music_blue.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>vM0dNx045QBZXqMB/dagfru0eBNze0NTPewg5twSEmk=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2F2x2_music_green.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>LPfaSxeuKEX3QBtxn/qZUGr/J3kKOyZCn9hS5JXvm1k=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2F2x2_music_red.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>x5ipyCqdiAMoq1Gjjyquz1NDIi6hDTCzYUlrMVc217g=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2F2x2_music_yellow.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>I66gwpNiOQf9hJy8zZxkYAtDfvA7QTfIu46pjEFgVfY=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2F34_thumb_07.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>X5T48dZgMj4gahU/A67qaFlgIHiojl6X4oOw8tgEwX8=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_Nocontents_multimedia.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>t/gXAMsHKRBg5nNOYtlrM6/topf6B6gUeP7Yx/TX3fY=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_playlist_most_played.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>OnCt2YJRzIKoqaxzctBxBuFBCQewDxiEVBwhlCXVQ0Y=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_playlist_recently_added.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XxUoPsYmkwCUAQt7UxGhT9tvu466sttFfTV6vR/uDDg=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_playlist_recently_played.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>zrKqWx/bVpuHEg944kIBD/cPYyuUe31/sQa1OsRl8ZQ=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_playlist_starred.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>ueAhXHCaIIEJUHBz0kWD/GooP+dAsQbUjNK9dP5Vh0U=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2FT02_playlist_thumbnail_created.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>gomrfkwtI1VwYgwOz8721wj3/FQfqTWj8ijSit3mWl8=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Ftarget_images%2Fmusic_player%2Fallshare%2Fmyfile_icon_folder.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>4R3ClAY5WrE6ltlq+aBHHeks3oFCPpCFnO3aZbjpuQM=</DigestValue>
+</Reference>
+<Reference URI="shared%2Fres%2Fwidget.png">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
+</Reference>
+<Reference URI="tizen-manifest.xml">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>WxShQfeCA7QA+9ypEea06aoC+khEKiNRfZ57HyEYEWk=</DigestValue>
+</Reference>
+<Reference URI="#prop">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"></Transform>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>lpo8tUDs054eLlBQXiDPVDVKfw30ZZdtkRs1jd7H5K8=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>
+VDWoqrDEOkxqBjOYg5XsDKKQ4ZvLdwtFKmFCHCEkqXZb3IflxNhFPbRE4ybVeMYttb8e8Fhfpv2X
+WhcH7L9mWtREX0Sxf7r1SsMghjqVHlAi4AFnJUvYpH3nzNpKgsGIbcbvgFm/xbta6JTdJGwzexCp
+KzEioC386gPqJEqx/p4=
+</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509Certificate>
+MIIClTCCAX2gAwIBAgIGAVKskdGHMA0GCSqGSIb3DQEBBQUAMFYxGjAYBgNVBAoMEVRpemVuIEFz
+c29jaWF0aW9uMRowGAYDVQQLDBFUaXplbiBBc3NvY2lhdGlvbjEcMBoGA1UEAwwTVGl6ZW4gRGV2
+ZWxvcGVycyBDQTAeFw0xMjExMDEwMDAwMDBaFw0xOTAxMDEwMDAwMDBaMBExDzANBgNVBAMMBmF1
+dGhvcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAgNaIHeT805I064L5YCsvnrXEy7VeFuWo
+zSW9SU2vvAMvelTXKgqg4Xgk13us5r9w+VfgQ3u5khcvfKPuDfFfOA1FLkZxXk95u2rNV0OjVpYf
+zFHxeVViBeTBDq/c8jIQQtpItmmjDmN34fYGWh5TlbGcW/8RmIypbB74YeevKmECAwEAAaMyMDAw
+DAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcN
+AQEFBQADggEBAB8QkHvfq/I7IB1v9Gltvt4ONU9WVM9/becrIW+erg+HP/0DICqJP23BtD82LsJe
+jLIYI1WrOUKFQlSIr0BmojDjOWn/cjGHHnkIMY7dRtL6q+jLo9qBBZhBnIoEPL0qu+mircW3pNRU
+yyAFoMGxk4QhdWybda85nr2gCb0gzxy4hu6zn6ZXuPNunYEwSk4h4YOaMLhqOL9r3dfwmC9d8DuF
+v2x8tpvGR62i89iEbegjuUNu69ez5qJcXW10e7EduDpbqTkdEVzn7LShRKdlfOZBKCiAS2lx+KsA
+6Ei2wUn2c8OksH9h/NLLV81uM/cMn20/hjNyKS4xymcpgda2FLg=
+</X509Certificate>
+<X509Certificate>
+MIIDOTCCAiGgAwIBAgIBATANBgkqhkiG9w0BAQUFADBYMRowGAYDVQQKDBFUaXplbiBBc3NvY2lh
+dGlvbjEaMBgGA1UECwwRVGl6ZW4gQXNzb2NpYXRpb24xHjAcBgNVBAMMFVRpemVuIERldmVsb3Bl
+cnMgUm9vdDAeFw0xMjAxMDEwMDAwMDBaFw0yNzAxMDEwMDAwMDBaMFYxGjAYBgNVBAoMEVRpemVu
+IEFzc29jaWF0aW9uMRowGAYDVQQLDBFUaXplbiBBc3NvY2lhdGlvbjEcMBoGA1UEAwwTVGl6ZW4g
+RGV2ZWxvcGVycyBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANVGhRGmMIUyBA7o
+PCz8Sxut6z6HNkF4oDIuzuKaMzRYPeWodwe9O0gmqAkToQHfwg2giRhE5GoPld0fq+OYMMwSasCu
+g8dwODx1eDeSYVuOLWRxpAmbTXOsSFi6VoWeyaPEm18JBHvZBsU5YQtgZ6Kp7MqzvQg3pXOxtajj
+vyHxiatJl+xXrHgcXC1wgyG3buty7u/Fi2mvKXJ0PRJcCjjK81dqe/Vr20sRUCrbk02zbm5ggFt/
+jIEhV8wbFRQpliobc7J4dSTKhFfrqGM8rdd54LYhD7gSI1CFSe16pUXfcVR7FhJztRaiGLnCrwBE
+dyTZ248+D4L/qR/D0axb3jcCAwEAAaMQMA4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEAnOXXQ/1O/QTDHyrmQDtFziqPY3xWlJBqJtEqXiT7Y+Ljpe66e+Ee/OjQMlZe8gu21/8cKklH
+95RxjopMWCVedXDUbWdvS2+CdyvVW/quT2E0tjqIzXDekUTYwwhlPWlGxvfj3VsxqSFq3p8Brl04
+1Gx5RKAGyKVsMfTLhbbwSWwApuBUxYfcNpKwLWGPXkysu+HctY03OKv4/xKBnVWiN8ex/Sgesi0M
++OBAOMdZMPK32uJBTeKFx1xZgTLIhk45V0hPOomPjZloiv0LSS11eyd451ufjW0iHRE7WlpR6EvI
+W6TFyZgMpQq+kg4hWl2SBTf3s2VI8Ygz7gj8TMlClg==
+</X509Certificate>
+</X509Data>
+</KeyInfo>
+<Object Id="prop"><SignatureProperties xmlns:dsp="http://www.w3.org/2009/xmldsig-properties"><SignatureProperty Id="profile" Target="#AuthorSignature"><dsp:Profile URI="http://www.w3.org/ns/widgets-digsig#profile"></dsp:Profile></SignatureProperty><SignatureProperty Id="role" Target="#AuthorSignature"><dsp:Role URI="http://www.w3.org/ns/widgets-digsig#role-author"></dsp:Role></SignatureProperty><SignatureProperty Id="identifier" Target="#AuthorSignature"><dsp:Identifier></dsp:Identifier></SignatureProperty></SignatureProperties></Object>
+</Signature>

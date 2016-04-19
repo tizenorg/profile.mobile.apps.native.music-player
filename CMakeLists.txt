@@ -332,7 +332,7 @@ SET(MC_MUSIC_PROJECT_NAME org.tizen.music-chooser)
 ADD_SUBDIRECTORY(po)
 
 # Sound Player
-ADD_SUBDIRECTORY(sound_player)
+ADD_SUBDIRECTORY(sound-player)
 
 #START_PUBLIC_REMOVED_STRING
 # music-chooser

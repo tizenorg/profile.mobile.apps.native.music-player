@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.sound-player" version="1.0.0">
+    <profile name="mobile"/>
+    <ui-application appid="org.tizen.sound-player" exec="sound-player" launch_mode="single" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+        <label>sound-player</label>
+        <icon>org.tizen.sound-player.png</icon>
+    </ui-application>
+</manifest>

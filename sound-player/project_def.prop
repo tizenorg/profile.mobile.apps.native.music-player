@@ -1,9 +1,9 @@
-APPNAME = widget
+APPNAME = sound-player
 
 type = app
 profile = mobile-3.0
 
-USER_SRCS = src/mp-widget-main.c
+USER_SRCS = src/mp-main.c
 USER_DEFS =
 USER_INC_DIRS = inc
 USER_OBJS =

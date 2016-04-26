@@ -246,50 +246,50 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES INSTALL_RPATH ${LIBDIR})
 
 ADD_CUSTOM_TARGET(mp-custom-winset-style.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-custom-winset-style.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-custom-winset-style.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-custom-winset-style.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-custom-winset-style.edc ${CMAKE_BINARY_DIR}/res/edje/mp-custom-winset-style.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-custom-winset-style.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-custom-winset-style.edj)
 
 ADD_CUSTOM_TARGET(mp-library.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-library.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-library.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-library.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-library.edc ${CMAKE_BINARY_DIR}/res/edje/mp-library.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-library.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-library.edj)
 
 ADD_CUSTOM_TARGET(music.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
-		${CMAKE_SOURCE_DIR}/res/edje/layout/music.edc ${CMAKE_BINARY_DIR}/res/edje/layout/music.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/music.edc
+		${CMAKE_SOURCE_DIR}/res/edje/music.edc ${CMAKE_BINARY_DIR}/res/edje/music.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/music.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} music.edj)
 
 ADD_CUSTOM_TARGET(mp-minicontroller.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-minicontroller.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-minicontroller.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-minicontroller.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-minicontroller.edc ${CMAKE_BINARY_DIR}/res/edje/mp-minicontroller.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-minicontroller.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-minicontroller.edj)
 
 ADD_CUSTOM_TARGET(mp-lockscreenmini.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-lockscreenmini.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-lockscreenmini.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-lockscreenmini.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-lockscreenmini.edc ${CMAKE_BINARY_DIR}/res/edje/mp-lockscreenmini.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-lockscreenmini.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-lockscreenmini.edj)
 
 ADD_CUSTOM_TARGET(mp-images.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-images.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-images.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-images.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-images.edc ${CMAKE_BINARY_DIR}/res/edje/mp-images.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-images.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-images.edj)
 
 ADD_CUSTOM_TARGET(mp-fake-effect.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images/music_player
-		${CMAKE_SOURCE_DIR}/res/edje/layout/mp-fake-effect.edc ${CMAKE_BINARY_DIR}/res/edje/layout/mp-fake-effect.edj
-		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/layout/mp-fake-effect.edc
+		${CMAKE_SOURCE_DIR}/res/edje/mp-fake-effect.edc ${CMAKE_BINARY_DIR}/res/edje/mp-fake-effect.edj
+		DEPENDS ${CMAKE_SOURCE_DIR}/res/edje/mp-fake-effect.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} mp-fake-effect.edj)
 
@@ -305,14 +305,14 @@ ADD_DEFINITIONS("-DLIBDIR=\"${LIBDIR}\"")
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
 INSTALL(DIRECTORY DESTINATION ${DATADIR})
 INSTALL(DIRECTORY DESTINATION ${PREFIX}/shared/data)
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-custom-winset-style.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/music.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-library.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-minicontroller.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-lockscreenmini.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-images.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-library.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/mp-fake-effect.edj DESTINATION /usr/apps/${PKG_NAME}/shared/res)
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-custom-winset-style.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/music.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-library.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-minicontroller.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-lockscreenmini.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-images.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-library.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/mp-fake-effect.edj DESTINATION /usr/apps/${PKG_NAME}/shared/res)
 
 # install desktop file & icon
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/data/${PKG_NAME}.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})

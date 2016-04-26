@@ -48,7 +48,7 @@ ADD_DEFINITIONS("-DIMAGES_DIR=\"${IMAGES_DIR}\"")
 ADD_DEFINITIONS("-DEDJ_DIR=\"${EDJ_DIR}\"")
 ADD_CUSTOM_TARGET(ms-sound-alive.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images -sd ${CMAKE_CURRENT_SOURCE_DIR}/images/sounds
-		${CMAKE_CURRENT_SOURCE_DIR}/layout/ms-sound-alive.edc ${CMAKE_BINARY_DIR}/res/edje/layout/ms-sound-alive.edj
+		${CMAKE_CURRENT_SOURCE_DIR}/layout/ms-sound-alive.edc ${CMAKE_BINARY_DIR}/res/edje/ms-sound-alive.edj
 		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/layout/ms-sound-alive.edc
 )
 
@@ -56,7 +56,7 @@ ADD_DEPENDENCIES(${PROJECT_NAME} ms-sound-alive.edj)
 
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/ms-sound-alive.edj DESTINATION ${EDJ_DIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/ms-sound-alive.edj DESTINATION ${EDJ_DIR})
 
 #INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/images/ DESTINATION ${IMAGES_DIR}
 #                FILES_MATCHING

@@ -85,7 +85,7 @@
 #define mp_debug(fmt, arg...)			LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define mp_error(fmt, arg...)			LOGW_IF(TRUE,  LOG_COLOR_RED"[TID:%d]# ERROR   CHECK  #   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 
-#define VER_TRACE(fmt, arg...)	LOGD_IF(TRUE,  LOG_COLOR_RESET"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
+#define VER_TRACE(fmt, arg...)		LOGD_IF(TRUE,  LOG_COLOR_RESET"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define DEBUG_TRACE(fmt, arg...)	LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define INFO_TRACE(fmt, arg...) 	LOGI_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]    "fmt""LOG_COLOR_RESET, gettid(), ##arg)
 #define WARN_TRACE(fmt, arg...) 	LOGW_IF(TRUE,  LOG_COLOR_YELLOW"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)

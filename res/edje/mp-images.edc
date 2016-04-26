@@ -15,7 +15,7 @@
 * 
 */
 
-#include "../../../inc/mp-images.h"
+#include "../../inc/mp-images.h"
 
 #define RESOURCE_IMAGE( FILE_NAME ) \
    group { \

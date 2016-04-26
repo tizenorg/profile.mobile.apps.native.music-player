@@ -73,14 +73,14 @@ ADD_DEFINITIONS("-DMC_EDJ_NAME=\"${MC_EDJ_NAME}\"")
 ADD_CUSTOM_TARGET(music-chooser.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images
 		${CMAKE_CURRENT_SOURCE_DIR}/layout/music-chooser.edc
-		${CMAKE_BINARY_DIR}/res/edje/layout/music-chooser.edj
+		${CMAKE_BINARY_DIR}/res/edje/music-chooser.edj
 		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/layout/music-chooser.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} music-chooser.edj)
 
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
 INSTALL(DIRECTORY DESTINATION ${DATADIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/layout/music-chooser.edj DESTINATION ${MC_PREFIX}/res/edje)
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/music-chooser.edj DESTINATION ${MC_PREFIX}/res/edje)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.tizen.music-chooser.xml DESTINATION ${SHARE_DIR})
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/music-chooser.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})
 

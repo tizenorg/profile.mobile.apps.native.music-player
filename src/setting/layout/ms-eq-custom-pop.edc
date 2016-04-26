@@ -15,7 +15,7 @@
 * 
 */
 
-#include "../../../res/edje/layout/mp-defines.h"
+#include "../../../res/edje/mp-defines.h"
 
 #define MP_EQ_CUSTOM_SEGMENT_W  532
 #define MP_EQ_CUSTOM_SEGMENT_H  62

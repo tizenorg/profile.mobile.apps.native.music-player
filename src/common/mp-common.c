@@ -2156,7 +2156,6 @@ _mp_common_create_main_view(MpViewMgr_t *view_manager)
 		} else {
 			char *last_played_path = NULL;
 			mp_setting_get_now_playing_path_from_file(&last_played_path);
-			SECURE_DEBUG("last played path = %s", last_played_path);
 			if (mp_check_file_exist(last_played_path)) {
 				plst_item = mp_playlist_mgr_custom_item_new(last_played_path);
 			}

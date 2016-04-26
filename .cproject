@@ -38,6 +38,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -95,6 +96,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -229,6 +231,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -286,6 +289,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -412,12 +416,12 @@
 									<listOptionValue builtIn="false" value="MP_FEATURE_UNSUPPORT_DRM_CD_SD"/>
 									<listOptionValue builtIn="false" value="MP_FEATURE_GL"/>
 									<listOptionValue builtIn="false" value="MP_FEATURE_OPTIMIZATION_LAUNCH_TIME"/>
-									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/usr/apps/org.tizen.music-player/shared&quot;'"/>
-									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/usr/apps/org.tizen.music-player&quot;'"/>
-									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/usr/apps/org.tizen.music-player/po&quot;'"/>
-									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/usr/apps/org.tizen.music-player/res/edje/layout&quot;'"/>
+									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/shared&quot;'"/>
+									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/po&quot;'"/>
+									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/res/edje&quot;'"/>
 									<listOptionValue builtIn="false" value="PKG_NAME='&quot;org.tizen.music-player&quot;'"/>
-									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/usr/apps/org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1075050134" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1595248148" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -453,7 +457,7 @@
 							<tool id="org.tizen.nativecore.tool.sbi.po.compiler.39091737" name="PO Resource Compiler" superClass="org.tizen.nativecore.tool.sbi.po.compiler"/>
 							<tool id="org.tizen.nativecore.tool.sbi.edc.compiler.607859213" name="EDC Resource Compiler" superClass="org.tizen.nativecore.tool.sbi.edc.compiler">
 								<option command="-id " id="sbi.gnu.edc.compiler.option.misc.id.1123388004" name="Image Path (-id)" superClass="sbi.gnu.edc.compiler.option.misc.id" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/edje/images&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/images}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/music-chooser/images}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/setting/images}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/widget/res/images}&quot;"/>
@@ -462,21 +466,20 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/shared/res/target_images}&quot;"/>
 								</option>
 								<option command="-sd " id="sbi.gnu.edc.compiler.option.misc.sd.636642734" name="Sound Path (-sd)" superClass="sbi.gnu.edc.compiler.option.misc.sd" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/edje/sounds&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/images/sounds}&quot;"/>
 								</option>
 							</tool>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="data"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="images"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="data"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="images"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="lib"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="po"/>
-						<entry excluding="edje/layout/mp_genlist_define.edc|edje/layout/mp_genlist_macro.edc|edje/layout/mp-3d-view.edc|edje/layout/mp-all-view.edc|edje/layout/mp-button.edc|edje/layout/mp-check.edc|edje/layout/mp-defines.h|edje/layout/mp-edit-navi.edc|edje/layout/mp-editfield.edc|edje/layout/mp-gengrid-style.edc|edje/layout/mp-genlist-theme.edc|edje/layout/mp-info-view.edc|edje/layout/mp-label.edc|edje/layout/mp-layout-misc.edc|edje/layout/mp-list-view.edc|edje/layout/mp-list.edc|edje/layout/mp-lrc.edc|edje/layout/mp-motion-popup.edc|edje/layout/mp-naviframe.edc|edje/layout/mp-no-contents.edc|edje/layout/mp-nocontents.edc|edje/layout/mp-now-playing.edc|edje/layout/mp-play-control.edc|edje/layout/mp-play-info.edc|edje/layout/mp-play-menu.edc|edje/layout/mp-play-mini-app.edc|edje/layout/mp-play-option.edc|edje/layout/mp-play-progress.edc|edje/layout/mp-play-vew-landscape.edc|edje/layout/mp-play-view.edc|edje/layout/mp-player-progressbar.edc|edje/layout/mp-player-view-landscape.edc|edje/layout/mp-player-view.edc|edje/layout/mp-progressbar.edc|edje/layout/mp-rich-info.edc|edje/layout/mp-set-as.edc|edje/layout/mp-slider.edc|edje/layout/mp-square-view.edc|edje/layout/mp-toolbar.edc|edje/layout/mp-view.edc|edje/layout/mp-volume-widget.edc|edje/layout/search_bar.edc|edje/layout/tizen-hd-inc.edc|edje/layout/entry.edc|edje/layout/genlist/genlist_macro.edc|edje/layout/genlist/genlist_normal.edc|edje/layout/genlist/genlist_textblock_style.edc|edje/layout/genlist/genlist.edc" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="res"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="po"/>
+						<entry excluding="edje/mp_genlist_define.edc|edje/mp_genlist_macro.edc|edje/mp-3d-view.edc|edje/mp-all-view.edc|edje/mp-button.edc|edje/mp-check.edc|edje/mp-defines.h|edje/mp-edit-navi.edc|edje/mp-editfield.edc|edje/mp-gengrid-style.edc|edje/mp-genlist-theme.edc|edje/mp-info-view.edc|edje/mp-label.edc|edje/mp-layout-misc.edc|edje/mp-list-view.edc|edje/mp-list.edc|edje/mp-lrc.edc|edje/mp-motion-popup.edc|edje/mp-naviframe.edc|edje/mp-no-contents.edc|edje/mp-nocontents.edc|edje/mp-now-playing.edc|edje/mp-play-control.edc|edje/mp-play-info.edc|edje/mp-play-menu.edc|edje/mp-play-mini-app.edc|edje/mp-play-option.edc|edje/mp-play-progress.edc|edje/mp-play-vew-landscape.edc|edje/mp-play-view.edc|edje/mp-player-progressbar.edc|edje/mp-player-view-landscape.edc|edje/mp-player-view.edc|edje/mp-progressbar.edc|edje/mp-rich-info.edc|edje/mp-set-as.edc|edje/mp-slider.edc|edje/mp-square-view.edc|edje/mp-toolbar.edc|edje/mp-view.edc|edje/mp-volume-widget.edc|edje/search_bar.edc|edje/tizen-hd-inc.edc|edje/entry.edc|edje/genlist/genlist_macro.edc|edje/genlist/genlist_normal.edc|edje/genlist/genlist_textblock_style.edc|edje/genlist/genlist.edc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="res"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="shared"/>
-						<entry excluding="core/include/mp-context.h|core/include/mp-music-view-mgr.h|core/mp-music-view-mgr.c|view/include/mp-album-booklet-view.h|view/include/mp-artist-booklet-view.h|view/include/mp-make-offline-view.h|view/mp-album-booklet-view.c|view/mp-artist-booklet-view.c|view/mp-make-offline-view.c|core/include/mp-cloud.h|core/include/mp-floating-widget-mgr.h|core/include/mp-voice-control-mgr.h|core/include/mp-wifidirect-mgr.h|common/include/mp-albumart.h|common/include/mp-recommend.h|view/include/mp-main-view.h|view/mp-main-view.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
+						<entry excluding="core/include/mp-context.h|core/include/mp-music-view-mgr.h|core/mp-music-view-mgr.c|view/include/mp-album-booklet-view.h|view/include/mp-artist-booklet-view.h|view/include/mp-make-offline-view.h|view/mp-album-booklet-view.c|view/mp-artist-booklet-view.c|view/mp-make-offline-view.c|core/include/mp-cloud.h|core/include/mp-floating-widget-mgr.h|core/include/mp-voice-control-mgr.h|core/include/mp-wifidirect-mgr.h|common/include/mp-albumart.h|common/include/mp-recommend.h|view/include/mp-main-view.h|view/mp-main-view.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -523,6 +526,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -580,6 +584,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -625,6 +630,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -682,6 +688,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -767,5 +774,12 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/music-player"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/music-player"/>
+		</configuration>
+	</storageModule>
 </cproject>

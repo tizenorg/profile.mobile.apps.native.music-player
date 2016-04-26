@@ -54,7 +54,11 @@ int widget_Create(widget_context_h context, bundle *content, int w, int h, void 
 		return WIDGET_ERROR_OUT_OF_MEMORY;
 	}
 
-	bindtextdomain("music-player", "/usr/apps/org.tizen.music-player/res/locale");
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
+	snprintf(edje_path, 1024, "%s%s", path, "locale");
+	bindtextdomain("music-player", edje_path);
+	free(path);
 
 	widget_data->win = win;
 	widget_data->em = NULL;

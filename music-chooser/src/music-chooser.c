@@ -33,6 +33,7 @@
 extern Evas_Object *mc_tabbar;
 
 #define MC_SELECT_URI_KEY    "select_uri"
+#define THEME_NAME "mp-custom-winset-style.edj"
 
 static bool
 _mc_app_control_extra_data_cb(app_control_h service, const char *key, void *user_data)
@@ -191,7 +192,12 @@ mc_create(void *data)
 	ad->conformant = conformant;
 
 	//support light theme
-	elm_theme_extension_add(NULL, "/usr/apps/org.tizen.music-player/res/edje/mp-custom-winset-style.edj");
+	char edje_path[1024] ={0};
+	char * path = app_get_resource_path();
+	MP_CHECK_VAL(path, EINA_FALSE);
+	snprintf(edje_path, 1024, "%s%s/%s", path, "edje", THEME_NAME);
+	elm_theme_extension_add(NULL, edje_path);
+	free(path);
 
 
 	DEBUG_TRACE("end");

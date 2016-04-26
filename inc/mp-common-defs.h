@@ -57,10 +57,10 @@
 
 
 //1 Do not change default thumbnail path. it's shared by other apps
-#define DEFAULT_THUMBNAIL				"/usr/apps/org.tizen.music-player/shared/res/shared_images/default_album_art_120.png"
-#define DEFAULT_THUMBNAIL_MIDDLE		"/usr/apps/org.tizen.music-player/shared/res/shared_images/default_albumart_middle.png"
-#define DEFAULT_THUMBNAIL_SMALL			"/usr/apps/org.tizen.music-player/shared/res/shared_images/default_albumart_small.png"
-#define DEFAULT_PLAYER_THUMBNAIL		"/usr/apps/org.tizen.music-player/shared/res/shared_images/default_album_art_480.png"
+#define DEFAULT_THUMBNAIL				SHAREDDIR"/res/shared_images/default_album_art_120.png"
+#define DEFAULT_THUMBNAIL_MIDDLE		SHAREDDIR"/res/shared_images/default_albumart_middle.png"
+#define DEFAULT_THUMBNAIL_SMALL			SHAREDDIR"/res/shared_images/default_albumart_small.png"
+#define DEFAULT_PLAYER_THUMBNAIL		SHAREDDIR"/res/shared_images/default_album_art_480.png"
 #define BROKEN_ALBUMART_IMAGE_PATH		"/opt/usr/share/media/.thumb/thumb_default.png"
 
 #define PLAYLIST_CREATE_THUMBNAIL		"T02_playlist_thumbnail_created.png"

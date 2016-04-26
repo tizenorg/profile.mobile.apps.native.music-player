@@ -47,7 +47,7 @@
 #define domain_name "music-player"
 
 #define BROKEN_ALBUMART_IMAGE_PATH		"/opt/usr/share/media/.thumb/thumb_default.png"
-#define DEFAULT_ALBUM_ART_ICON "/usr/apps/org.tizen.music-player/shared/res/shared_images/default_albumart.png"
+#define DEFAULT_ALBUM_ART_ICON SHAREDDIR"/res/shared_images/default_albumart.png"
 #define NOW_PLAYING_INI_PATH DATA_PREFIX"/shared/data/NowPlayingStatus"
 
 static Eina_Bool is_play = EINA_FALSE;

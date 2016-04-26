@@ -17,6 +17,7 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <sound_manager.h>
 #include "mp-media-info.h"
 
@@ -715,20 +716,23 @@ mp_setting_get_now_playing_path_from_file(char **path)
 	char line[MAX_NAM_LEN + 1];
 	FILE *fp = NULL;
 
-	if ((fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "r")) == NULL) {
-		SECURE_ERROR("unable to open %s...", MP_NOWPLAYING_INI_FILE_NAME);
-		return;
+	if(access(MP_NOWPLAYING_INI_FILE_NAME, F_OK) != -1)
+	{
+		fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "r");
+		if (!fp) {
+			SECURE_ERROR("unable to open %s...", MP_NOWPLAYING_INI_FILE_NAME);
+			return;
+		}
+		if (fgets(line, MAX_NAM_LEN, fp)) { /* audio id */
+			/* skip */
+		}
+		if (fgets(line, MAX_NAM_LEN, fp)) { /* uri */
+			line[MAX_NAM_LEN] = 0;
+			line[strlen(line) - 1] = 0;
+			*path = g_strdup(line);
+		}
+		fclose(fp);
 	}
-	if (fgets(line, MAX_NAM_LEN, fp)) { /* audio id */
-		/* skip */
-	}
-	if (fgets(line, MAX_NAM_LEN, fp)) { /* uri */
-		line[MAX_NAM_LEN] = 0;
-		line[strlen(line) - 1] = 0;
-		*path = g_strdup(line);
-	}
-
-	fclose(fp);
 }
 
 #ifndef MP_SOUND_PLAYER
@@ -920,7 +924,7 @@ mp_setting_write_playing_status(char *uri, char *status)
 			if (ad->current_track_info->thumbnail_path) {
 				fprintf(fp, "thumbnail=%s\n", ad->current_track_info->thumbnail_path);
 			} else {
-				fprintf(fp, "thumbnail=/usr/apps/org.tizen.music-player/shared/res/shared_images/default_albumart.png\n");
+				fprintf(fp, "thumbnail=%s/res/shared_images/default_albumart.png\n", SHAREDDIR);
 			}
 		}
 #endif

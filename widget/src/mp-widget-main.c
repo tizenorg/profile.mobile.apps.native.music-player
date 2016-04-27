@@ -50,7 +50,7 @@ int widget_Create(widget_context_h context, bundle *content, int w, int h, void 
 
 	widget_data = calloc(1, sizeof(WidgetData));
 	if (!widget_data) {
-		DbgPrint("failed to create instance");
+		DEBUG_TRACE("failed to create instance");
 		return WIDGET_ERROR_OUT_OF_MEMORY;
 	}
 
@@ -68,7 +68,7 @@ int widget_Create(widget_context_h context, bundle *content, int w, int h, void 
 	evas_object_show(widget_data->win);
 
 	if (mp_widget_create(widget_data, w, h) != 0) {
-		DbgPrint("failed to create layout");
+		DEBUG_TRACE("failed to create layout");
 		return WIDGET_ERROR_INVALID_PARAMETER;
 	}
 	DbgPrint("Resized to %dx%d\n", w, h);
@@ -143,7 +143,7 @@ int widget_Update(widget_context_h context, bundle *content, int force, void *da
 
 static void app_language_changed(app_event_info_h event_info, void *data)
 {
-	DbgPrint("language change triggered");
+	DEBUG_TRACE("language change triggered");
 	char *lang = NULL;
 	app_event_get_language(event_info, &lang);
 	if (lang) {
@@ -154,7 +154,7 @@ static void app_language_changed(app_event_info_h event_info, void *data)
 
 static void app_region_changed(app_event_info_h event_info, void *data)
 {
-	DbgPrint("region change triggered");
+	DEBUG_TRACE("region change triggered");
 }
 
 widget_class_h app_create(void *data)

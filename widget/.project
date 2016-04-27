@@ -27,7 +27,7 @@
 		<link>
 			<name>common</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/common</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/common</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>

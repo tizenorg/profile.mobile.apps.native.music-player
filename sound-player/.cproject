@@ -38,6 +38,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -95,6 +96,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -228,6 +230,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -285,6 +288,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -410,12 +414,12 @@
 									<listOptionValue builtIn="false" value="MP_FEATURE_UNSUPPORT_DRM_CD_SD"/>
 									<listOptionValue builtIn="false" value="MP_FEATURE_GL"/>
 									<listOptionValue builtIn="false" value="MP_FEATURE_OPTIMIZATION_LAUNCH_TIME"/>
-									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/usr/apps/org.tizen.music-player/shared&quot;'"/>
-									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/usr/apps/org.tizen.music-player&quot;'"/>
-									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/usr/apps/org.tizen.music-player/po&quot;'"/>
-									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/usr/apps/org.tizen.music-player/res/edje/layout&quot;'"/>
+									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/shared&quot;'"/>
+									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/po&quot;'"/>
+									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/res/edje/layout&quot;'"/>
 									<listOptionValue builtIn="false" value="PKG_NAME='&quot;org.tizen.sound-player&quot;'"/>
-									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/usr/apps/org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.546855233" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

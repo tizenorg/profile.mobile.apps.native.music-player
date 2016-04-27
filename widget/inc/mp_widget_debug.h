@@ -29,9 +29,34 @@
 #include <dlog.h>
 
 #if !defined(FLOG)
-#define DbgPrint(format, arg...)	SECURE_LOGD(format, ##arg)
-#define ErrPrint(format, arg...)	SECURE_LOGE(format, ##arg)
-#define WarnPrint(format, arg...)	SECURE_LOGW(format, ##arg)
+
+#define DbgPrint(format, arg...)	dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#define ErrPrint(format, arg...)	dlog_print(DLOG_ERROR, LOG_TAG, ##arg)
+#define WarnPrint(format, arg...)	dlog_print(DLOG_INFO, LOG_TAG, ##arg)
+
+#ifndef LOGD_IF
+#define LOGD_IF(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+#ifndef LOGI_IF
+#define LOGI_IF(fmt, arg...) dlog_print(DLOG_INFO, LOG_TAG, ##arg)
+#endif
+#ifndef LOGW_IF
+#define LOGW_IF(fmt, arg...) dlog_print(DLOG_ERROR, LOG_TAG, ##arg)
+#endif
+#ifndef SECURE_LOGD
+#define SECURE_LOGD(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+#ifndef SECURE_LOGI
+#define SECURE_LOGI(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
+#endif
+
+#ifndef TRUE
+#define TRUE 1
+#endif
+
+#ifndef FALSE
+#define FALSE 0
+#endif
 
 #define LOG_COLOR_RESET		"\033[0m"
 #define LOG_COLOR_RED		"\033[31m"

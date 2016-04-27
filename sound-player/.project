@@ -27,32 +27,32 @@
 		<link>
 			<name>src/common</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/common</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/common</locationURI>
 		</link>
 		<link>
 			<name>src/core</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/core</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/core</locationURI>
 		</link>
 		<link>
 			<name>src/mp-main.c</name>
 			<type>1</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/mp-main.c</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/mp-main.c</locationURI>
 		</link>
 		<link>
 			<name>src/setting</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/setting/src</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/setting/src</locationURI>
 		</link>
 		<link>
 			<name>src/view</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/view</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/view</locationURI>
 		</link>
 		<link>
 			<name>src/widget</name>
 			<type>2</type>
-			<location>/home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/widget</location>
+			<locationURI>PARENT-1-PROJECT_LOC/src/widget</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>

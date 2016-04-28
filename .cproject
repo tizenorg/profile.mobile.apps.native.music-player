@@ -20,7 +20,12 @@
 					<folderInfo id="org.tizen.nativecore.config.sbi.gcc45.app.debug.9550515." name="/" resourcePath="">
 						<toolChain id="org.tizen.nativecore.toolchain.sbi.gcc45.app.debug.1356094993" name="Tizen Native Toolchain" superClass="org.tizen.nativecore.toolchain.sbi.gcc45.app.debug">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="org.tizen.nativeide.target.sbi.gnu.platform.base.323433074" osList="linux,win32" superClass="org.tizen.nativeide.target.sbi.gnu.platform.base"/>
-							<builder autoBuildTarget="all" buildPath="${workspace_loc:/EmptyApplicationMusicPlayer}/Debug" enableAutoBuild="true" id="org.tizen.nativecore.target.sbi.gnu.builder.910013900" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Tizen Application Builder" superClass="org.tizen.nativecore.target.sbi.gnu.builder"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/EmptyApplicationMusicPlayer}/Debug" enableAutoBuild="true" id="org.tizen.nativecore.target.sbi.gnu.builder.910013900" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Tizen Application Builder" superClass="org.tizen.nativecore.target.sbi.gnu.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
 							<tool id="org.tizen.nativecore.tool.sbi.gnu.archiver.1690007572" name="Archiver" superClass="org.tizen.nativecore.tool.sbi.gnu.archiver"/>
 							<tool command="clang++" id="org.tizen.nativecore.tool.sbi.gnu.cpp.compiler.1492789420" name="C++ Compiler" superClass="org.tizen.nativecore.tool.sbi.gnu.cpp.compiler">
 								<option id="gnu.cpp.compiler.option.optimization.level.115468609" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
@@ -120,7 +125,88 @@
 									<listOptionValue builtIn="false" value="-mthumb"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.paths.728547428" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/libxml2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appcore-agent"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appfw"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/attach-panel"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/badge"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/base"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/cairo"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/calendar-service2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ckm"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/contacts-svc"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/context-service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali-toolkit"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dbus-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/device"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dlog"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-buffer-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-con-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-file-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-ipc-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ector-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/e_dbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/edje-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-extension"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efreet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1/eina"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eio-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eldbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/elementary-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/embryo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/emile-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eom"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-client-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/feedback"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/fontconfig"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/geofence"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/gio-unix-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/glib-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/harfbuzz"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/iotcon"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/json-glib-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/location"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/maps"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media-content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/messaging"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/metadata-editor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minicontrol"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minizip"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/network"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/notification"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/phonenumber-utils"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/sensor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/service-adaptor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/shortcut"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/storage"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/system"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/telephony"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ui"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/web"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_viewer_evas"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/wifi-direct"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/dbus-1.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/glib-2.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/chromium-ewk"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/nsd/"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/libxml2&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/appcore-agent&quot;"/>
@@ -130,6 +216,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -187,6 +274,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -201,6 +289,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/wifi-direct&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/lib/dbus-1.0/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/lib/glib-2.0/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/common/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/core/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/include}&quot;"/>
@@ -208,11 +297,29 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/view/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/widget/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/setting/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/music-chooser/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/sound-player/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/res/edje/layout}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/widget/include}&quot;"/>
 								</option>
 								<option id="sbi.gnu.cpp.compiler.option.frameworks.core.1468500756" name="Tizen-Frameworks" superClass="sbi.gnu.cpp.compiler.option.frameworks.core" valueType="userObjs">
 									<listOptionValue builtIn="false" value="Native_API"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.574361844" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.67603352" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MP_FEATURE_NO_END"/>
+									<listOptionValue builtIn="false" value="MP_FEATURE_LOCKSCREEN"/>
+									<listOptionValue builtIn="false" value="MP_FEATURE_PERSONAL_PAGE"/>
+									<listOptionValue builtIn="false" value="MP_FEATURE_UNSUPPORT_DRM_CD_SD"/>
+									<listOptionValue builtIn="false" value="MP_FEATURE_GL"/>
+									<listOptionValue builtIn="false" value="MP_FEATURE_OPTIMIZATION_LAUNCH_TIME"/>
+									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/shared&quot;'"/>
+									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/po&quot;'"/>
+									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/res/edje&quot;'"/>
+									<listOptionValue builtIn="false" value="PKG_NAME='&quot;org.tizen.music-player&quot;'"/>
+									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1327645944" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool command="clang" id="org.tizen.nativecore.tool.sbi.gnu.c.compiler.270131291" name="C Compiler" superClass="org.tizen.nativecore.tool.sbi.gnu.c.compiler">
@@ -313,7 +420,88 @@
 									<listOptionValue builtIn="false" value="-mthumb"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.225786244" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/libxml2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appcore-agent"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appfw"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/attach-panel"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/badge"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/base"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/cairo"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/calendar-service2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ckm"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/contacts-svc"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/context-service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali-toolkit"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dbus-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/device"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dlog"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-buffer-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-con-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-file-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-ipc-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ector-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/e_dbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/edje-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-extension"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efreet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1/eina"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eio-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eldbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/elementary-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/embryo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/emile-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eom"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-client-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/feedback"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/fontconfig"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/geofence"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/gio-unix-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/glib-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/harfbuzz"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/iotcon"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/json-glib-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/location"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/maps"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media-content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/messaging"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/metadata-editor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minicontrol"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minizip"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/network"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/notification"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/phonenumber-utils"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/sensor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/service-adaptor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/shortcut"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/storage"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/system"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/telephony"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ui"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/web"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_viewer_evas"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/wifi-direct"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/dbus-1.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/glib-2.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/chromium-ewk"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/nsd/"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/libxml2&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/appcore-agent&quot;"/>
@@ -323,6 +511,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/base&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/cairo&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/calendar-service2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/chromium-ewk&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ckm&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
@@ -380,6 +569,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/minizip&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/network&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/nsd/&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/phonenumber-utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/sensor&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/service-adaptor&quot;"/>
@@ -394,17 +584,18 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/wifi-direct&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/lib/dbus-1.0/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/lib/glib-2.0/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/res/edje/layout}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/music-chooser/src/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/common/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/core/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/lib/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/setting/src/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/view/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/widget/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/setting/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/music-chooser/src/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/sound-player/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/common/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/core/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/widget/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/res/edje/layout}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/inc}&quot;"/>
 								</option>
 								<option id="sbi.gnu.c.compiler.option.frameworks.core.990178351" name="Tizen-Frameworks" superClass="sbi.gnu.c.compiler.option.frameworks.core" valueType="userObjs">
 									<listOptionValue builtIn="false" value="Native_API"/>
@@ -418,7 +609,7 @@
 									<listOptionValue builtIn="false" value="MP_FEATURE_OPTIMIZATION_LAUNCH_TIME"/>
 									<listOptionValue builtIn="false" value="SHAREDDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/shared&quot;'"/>
 									<listOptionValue builtIn="false" value="DATA_PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
-									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/po&quot;'"/>
+									<listOptionValue builtIn="false" value="LOCALEDIR='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/res/locale&quot;'"/>
 									<listOptionValue builtIn="false" value="EDJPATH='&quot;/opt/home/owner/apps_rw/org.tizen.music-player/res/edje&quot;'"/>
 									<listOptionValue builtIn="false" value="PKG_NAME='&quot;org.tizen.music-player&quot;'"/>
 									<listOptionValue builtIn="false" value="PREFIX='&quot;/opt/home/owner/apps_rw/org.tizen.music-player&quot;'"/>
@@ -438,15 +629,109 @@
 									<listOptionValue builtIn="false" value="-L&quot;${SBI_SYSROOT}/usr/lib&quot;"/>
 									<listOptionValue builtIn="false" value="$(RS_LIBRARIES)"/>
 								</option>
-								<option id="gnu.cpp.link.option.paths.1497684239" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib}&quot;"/>
-								</option>
+								<option id="gnu.cpp.link.option.paths.1497684239" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.544827685" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
 							</tool>
 							<tool command="arm-linux-gnueabi-as" id="org.tizen.nativeapp.tool.sbi.gnu.assembler.base.1489466124" name="Assembler" superClass="org.tizen.nativeapp.tool.sbi.gnu.assembler.base">
+								<option id="gnu.both.asm.option.include.paths.730706479" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/libxml2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appcore-agent"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/appfw"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/attach-panel"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/badge"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/base"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/cairo"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/calendar-service2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ckm"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/contacts-svc"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/context-service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dali-toolkit"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dbus-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/device"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/dlog"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-buffer-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-con-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-file-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-imf-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-input-evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ecore-ipc-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ector-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/e_dbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/edje-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efl-extension"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/efreet-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eina-1/eina"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eio-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eldbus-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/elementary-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/embryo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/emile-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eo-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/eom"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ethumb-client-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/evas-1"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/feedback"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/fontconfig"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/freetype2"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/geofence"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/gio-unix-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/glib-2.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/harfbuzz"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/iotcon"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/json-glib-1.0"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/location"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/maps"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/media-content"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/messaging"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/metadata-editor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minicontrol"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/minizip"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/network"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/notification"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/phonenumber-utils"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/sensor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/service-adaptor"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/shortcut"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/storage"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/system"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/telephony"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/ui"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/web"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_service"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/widget_viewer_evas"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/wifi-direct"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/dbus-1.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/lib/glib-2.0/include"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/chromium-ewk"/>
+									<listOptionValue builtIn="false" value="/home/bhutani.92/Tizen/tizen-sdk/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-device.core/usr/include/nsd/"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/music-player/src/common/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/lib/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/view/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/widget/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/setting/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/music-chooser/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/sound-player/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/core/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/widget/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/music-player/res/edje/layout}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1429064343" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 							<tool id="org.tizen.nativecore.tool.fnmapgen.1570521208" name="C FN-Map Generator" superClass="org.tizen.nativecore.tool.fnmapgen"/>
@@ -476,17 +761,16 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="images"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lib"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="po"/>
-						<entry excluding="edje/mp_genlist_define.edc|edje/mp_genlist_macro.edc|edje/mp-3d-view.edc|edje/mp-all-view.edc|edje/mp-button.edc|edje/mp-check.edc|edje/mp-defines.h|edje/mp-edit-navi.edc|edje/mp-editfield.edc|edje/mp-gengrid-style.edc|edje/mp-genlist-theme.edc|edje/mp-info-view.edc|edje/mp-label.edc|edje/mp-layout-misc.edc|edje/mp-list-view.edc|edje/mp-list.edc|edje/mp-lrc.edc|edje/mp-motion-popup.edc|edje/mp-naviframe.edc|edje/mp-no-contents.edc|edje/mp-nocontents.edc|edje/mp-now-playing.edc|edje/mp-play-control.edc|edje/mp-play-info.edc|edje/mp-play-menu.edc|edje/mp-play-mini-app.edc|edje/mp-play-option.edc|edje/mp-play-progress.edc|edje/mp-play-vew-landscape.edc|edje/mp-play-view.edc|edje/mp-player-progressbar.edc|edje/mp-player-view-landscape.edc|edje/mp-player-view.edc|edje/mp-progressbar.edc|edje/mp-rich-info.edc|edje/mp-set-as.edc|edje/mp-slider.edc|edje/mp-square-view.edc|edje/mp-toolbar.edc|edje/mp-view.edc|edje/mp-volume-widget.edc|edje/search_bar.edc|edje/tizen-hd-inc.edc|edje/entry.edc|edje/genlist/genlist_macro.edc|edje/genlist/genlist_normal.edc|edje/genlist/genlist_textblock_style.edc|edje/genlist/genlist.edc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="res"/>
+						<entry excluding="edje/mp-label.edc|edje/mp-progressbar.edc|edje/mp-set-as.edc|edje/mp-player-view-landscape.edc|edje/genlist/genlist.edc|edje/mp-gengrid-style.edc|edje/mp-layout-misc.edc|edje/genlist/genlist_textblock_style.edc|edje/mp-square-view.edc|edje/mp-list.edc|edje/mp-volume-widget.edc|edje/mp-check.edc|edje/mp-player-progressbar.edc|edje/mp-rich-info.edc|edje/mp-view.edc|edje/genlist/genlist_macro.edc|edje/mp-motion-popup.edc|edje/mp-slider.edc|edje/mp-naviframe.edc|edje/mp-nocontents.edc|edje/mp-play-menu.edc|edje/mp-toolbar.edc|edje/mp-now-playing.edc|edje/mp_genlist_define.edc|edje/mp-button.edc|edje/mp-editfield.edc|edje/mp-edit-navi.edc|edje/mp-no-contents.edc|edje/mp-play-info.edc|edje/search_bar.edc|edje/mp-info-view.edc|edje/mp-3d-view.edc|edje/mp-play-control.edc|edje/mp-play-mini-app.edc|edje/entry.edc|edje/mp-genlist-theme.edc|edje/tizen-hd-inc.edc|edje/mp-play-progress.edc|edje/mp-play-view.edc|edje/mp-lrc.edc|edje/mp_genlist_macro.edc|edje/mp-defines.h|edje/mp-list-view.edc|edje/mp-play-vew-landscape.edc|edje/mp-player-view.edc|edje/genlist/genlist_normal.edc|edje/mp-all-view.edc|edje/mp-play-option.edc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="res"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="shared"/>
-						<entry excluding="core/include/mp-context.h|core/include/mp-music-view-mgr.h|core/mp-music-view-mgr.c|view/include/mp-album-booklet-view.h|view/include/mp-artist-booklet-view.h|view/include/mp-make-offline-view.h|view/mp-album-booklet-view.c|view/mp-artist-booklet-view.c|view/mp-make-offline-view.c|core/include/mp-cloud.h|core/include/mp-floating-widget-mgr.h|core/include/mp-voice-control-mgr.h|core/include/mp-wifidirect-mgr.h|common/include/mp-albumart.h|common/include/mp-recommend.h|view/include/mp-main-view.h|view/mp-main-view.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="core/include/mp-cloud.h|view/mp-artist-booklet-view.c|core/include/mp-voice-control-mgr.h|core/include/mp-music-view-mgr.h|view/mp-album-booklet-view.c|view/mp-make-offline-view.c|core/include/mp-context.h|view/include/mp-album-booklet-view.h|view/include/mp-make-offline-view.h|view/include/mp-main-view.h|common/include/mp-recommend.h|core/include/mp-floating-widget-mgr.h|core/mp-music-view-mgr.c|common/include/mp-albumart.h|view/include/mp-artist-booklet-view.h|core/include/mp-wifidirect-mgr.h|view/mp-main-view.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
 				<externalSettings containerId="music-chooser;" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
-				<externalSettings containerId="widget;" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
 				<externalSettings containerId="sound-player;" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
+				<externalSettings containerId="widget;" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
 			</storageModule>
 		</cconfiguration>
 		<cconfiguration id="org.tizen.nativecore.config.sbi.gcc45.app.release.609740240">

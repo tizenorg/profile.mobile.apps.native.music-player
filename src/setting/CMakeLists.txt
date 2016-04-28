@@ -62,4 +62,4 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/ms-sound-alive.edj DESTINATION ${EDJ_
 #                FILES_MATCHING
 #                PATTERN "*.png"
 #)
-#ADD_SUBDIRECTORY(po)
+#ADD_SUBDIRECTORY(res/po)

@@ -975,8 +975,9 @@ static void _lyrics_state_off_cb(void *data, Evas_Object * obj, void *event_info
 
 static char *_lyrics_view_label_get(void *data, Evas_Object * obj, const char *part)
 {
-	int index = (int)data;
-	if (index == 0) {
+	int *index = (int *)data;
+	DEBUG_TRACE("inddex : %d:", *index);
+	if (*index == 0) {
 		return g_strdup(GET_STR(STR_MP_SHOW_LYRICS));
 	} else {
 		return g_strdup(GET_STR(STR_MP_HIDE_LYRICS));
@@ -986,12 +987,12 @@ static char *_lyrics_view_label_get(void *data, Evas_Object * obj, const char *p
 
 static Evas_Object *_lyrics_view_content_get(void *data, Evas_Object * obj, const char *part)
 {
-	int index = (int)data;
+	int *index = (int *)data;
 	if (!strcmp(part, "elm.swallow.end")) {
 
 		bool lyrics_state;
 		preference_get_boolean(KEY_MUSIC_LYRICS, &lyrics_state);
-
+		DEBUG_TRACE("state : %d", lyrics_state);
 		if (lyrics_state) {
 			elm_radio_value_set(group_radio, 0);
 		} else {
@@ -1000,7 +1001,7 @@ static Evas_Object *_lyrics_view_content_get(void *data, Evas_Object * obj, cons
 
 		Evas_Object *radio = elm_radio_add(obj);
 		elm_radio_group_add(radio, group_radio);
-		elm_radio_state_value_set(radio, index);
+		elm_radio_state_value_set(radio, *index);
 		evas_object_size_hint_weight_set(radio, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(radio, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_propagate_events_set(radio, EINA_TRUE);
@@ -1019,7 +1020,6 @@ void mp_music_viewas_pop_cb(void)
 	struct appdata *ad = mp_util_get_appdata();
 	MP_CHECK(ad);
 	Evas_Object *genlist = NULL;
-	int data = 0;
 	Elm_Genlist_Item_Class *itc = NULL;
 	/* elm_object_style_set(popup, "content/default"); */
 	elm_popup_orient_set(popup, ELM_POPUP_ORIENT_CENTER);
@@ -1055,6 +1055,8 @@ void mp_music_viewas_pop_cb(void)
 
 	ly_popup->popup = popup;
 	ly_popup->group_radio = group_radio;
+	ly_popup->show_lyrics = 0;
+	ly_popup->hide_lyrics = 1;
 
 	itc = elm_genlist_item_class_new();
 	if (itc) {
@@ -1063,10 +1065,10 @@ void mp_music_viewas_pop_cb(void)
 		itc->func.content_get = _lyrics_view_content_get;
 		itc->func.del = NULL;
 	}
-	elm_genlist_item_append(genlist, itc, &data, NULL,
+	elm_genlist_item_append(genlist, itc, &(ly_popup->show_lyrics), NULL,
 	                        ELM_GENLIST_ITEM_NONE, _lyrics_state_on_cb, (mp_setting_lyric_popup *)ly_popup);
-	data = 1;
-	elm_genlist_item_append(genlist, itc, &data, NULL,
+//	data = 1;
+	elm_genlist_item_append(genlist, itc, &(ly_popup->hide_lyrics), NULL,
 	                        ELM_GENLIST_ITEM_NONE, _lyrics_state_off_cb, (mp_setting_lyric_popup *)ly_popup);
 }
 

@@ -177,6 +177,8 @@ typedef struct {
 typedef struct {
 	Evas_Object * popup;
 	Evas_Object *group_radio;
+	int show_lyrics;
+	int hide_lyrics;
 } mp_setting_lyric_popup;
 
 EXPORT_API MpSettingView_t *mp_setting_view_create(Evas_Object *parent, MpSettingViewType_e type, void *data);

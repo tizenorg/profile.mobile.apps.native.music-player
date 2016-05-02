@@ -183,6 +183,8 @@ fi
 %{PREFIX}/res/images/*
 %{PREFIX}/res/edje/*.edj
 %{PREFIX}/shared/res/*
+%{PREFIX}/shared/data
+%{PREFIX}/data
 %{PREFIX}/lib/*.so*
 %{_app_license_dir}/%{name}
 

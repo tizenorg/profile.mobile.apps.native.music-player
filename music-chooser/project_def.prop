@@ -35,8 +35,8 @@ USER_OBJS_ABS =
 
 # User Includes
 ## C Compiler
-USER_INC_DIRS = src/include 
-USER_INC_DIRS_ABS =  
+USER_INC_DIRS = src/include
+USER_INC_DIRS_ABS = $(workspace_loc)/inc $(workspace_loc)/src/common/include $(workspace_loc)/include $(workspace_loc)/MusicPlayer/music-player/inc $(workspace_loc)/MusicPlayer/music-player/src/common/include $(workspace_loc)/MusicPlayer/music-player/src/include 
 USER_INC_FILES = 
 USER_INC_FILES_ABS = 
 ## C++ Compiler

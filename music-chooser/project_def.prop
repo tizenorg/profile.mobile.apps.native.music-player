@@ -10,7 +10,7 @@ profile = mobile-3.0
 
 # C Sources
 USER_SRCS = src/mc-index.c src/mc-library-view.c src/mc-search.c src/mc-track-list.c src/mc-search-list.c src/mc-group-list.c src/music-chooser.c src/mc-list-play.c src/mc-group-play-list.c src/mc-common.c src/mc-select-view.c src/mc-widget.c src/mc-voice-clip-list.c src/mc-search-view.c 
-USER_SRCS_ABS = /home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/common/mp-media-info.c /home/bhutani.92/workspace_3.0/MusicPlayer/music-player/src/common/mp-file-util.c 
+USER_SRCS_ABS = $(workspace_loc)/src/common/mp-media-info.c $(workspace_loc)/src/common/mp-file-util.c 
 
 # EDC Sources
 USER_EDCS =  
@@ -35,8 +35,8 @@ USER_OBJS_ABS =
 
 # User Includes
 ## C Compiler
-USER_INC_DIRS = src/include 
-USER_INC_DIRS_ABS =  
+USER_INC_DIRS = src/include $(workspace_loc)/inc $(workspace_loc)/src/common/include $(workspace_loc)/include
+USER_INC_DIRS_ABS = $(workspace_loc)/inc $(workspace_loc)/src/common/include $(workspace_loc)/src/include 
 USER_INC_FILES = 
 USER_INC_FILES_ABS = 
 ## C++ Compiler
@@ -51,7 +51,7 @@ USER_LIB_DIRS_ABS =
 
 # EDC Resource Path
 USER_EDCS_IMAGE_DIRS = . images edje/images 
-USER_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/MusicPlayer/music-player/images/music_player $(workspace_loc)/MusicPlayer/music-player/shared/res/shared_images $(workspace_loc)/MusicPlayer/music-player/shared/res/target_images 
+USER_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/images/music_player $(workspace_loc)/shared/res/shared_images $(workspace_loc)/shared/res/target_images 
 USER_EDCS_SOUND_DIRS = edje/sounds 
 USER_EDCS_SOUND_DIRS_ABS = 
 USER_EDCS_FONT_DIRS = edje/fonts 
@@ -62,7 +62,7 @@ USER_EXT_EDC_KEYS = EDC0
 
 USER_EXT_EDC0_EDCS = layout/music-chooser.edc 
 USER_EXT_EDC0_EDCS_IMAGE_DIRS = . images edje/images 
-USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/MusicPlayer/music-player/images/music_player $(workspace_loc)/MusicPlayer/music-player/shared/res/shared_images $(workspace_loc)/MusicPlayer/music-player/shared/res/target_images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/images/music_player $(workspace_loc)/shared/res/shared_images $(workspace_loc)/shared/res/target_images 
 USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds 
 USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
 USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 

@@ -19,7 +19,7 @@ USER_EDCS =
 USER_POS = 
 
 # User Defines
-USER_DEFS = DATA_PREFIX='"/opt/home/owner/apps_rw/org.tizen.music-player"' 
+USER_DEFS = DATA_PREFIX='"/opt/home/owner/apps_rw/org.tizen.music-player"' SHAREDDIR='"/opt/home/owner/apps_rw/org.tizen.music-player/shared"' 
 USER_CPP_DEFS = 
 
 # User Undefines
@@ -35,8 +35,8 @@ USER_OBJS_ABS =
 
 # User Includes
 ## C Compiler
-USER_INC_DIRS = inc 
-USER_INC_DIRS_ABS = 
+USER_INC_DIRS = inc $(workspace_loc)/src/common/include $(workspace_loc)/src/include $(workspace_loc)/inc
+USER_INC_DIRS_ABS = $(workspace_loc)/inc $(workspace_loc)/src/common/include $(workspace_loc)/src/include 
 USER_INC_FILES = inc/mp_widget.h 
 USER_INC_FILES_ABS = 
 ## C++ Compiler

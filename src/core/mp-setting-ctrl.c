@@ -675,11 +675,18 @@ void
 mp_setting_remove_now_playing_shared_status(void)
 {
 	startfunc;
+	char *path = app_get_data_path();
+	char playing_status[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	free(path);
 
-	FILE *fp = fopen(MP_SHARED_PLAYING_STATUS_INI, "w");	/* make new file. */
+	FILE *fp = fopen(playing_status, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_INI_FILE_NAME);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_status);
 		return;
 	}
 	fprintf(fp, " \n");
@@ -844,10 +851,18 @@ mp_setting_read_playing_status(char *uri, char *status)
 	char str[1000] = {0,};
 	int valid_uri = 0;
 	int valid_status = 0;
-	FILE *fp = fopen(MP_SHARED_PLAYING_STATUS_INI, "r");	/* read MP_SHARED_PLAYING_STATUS_INI file.  */
+	char *path = app_get_data_path();
+	char playing_status[1024] = {0};
+	if (path == NULL) {
+		return -1;
+	}
+	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	free(path);
+
+	FILE *fp = fopen(playing_status, "r");	/* read MP_SHARED_PLAYING_STATUS_INI file.  */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_SHARED_PLAYING_STATUS_INI);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_status);
 		return -1;
 	}
 	char *sptr = NULL;
@@ -905,10 +920,19 @@ mp_setting_write_playing_status(char *uri, char *status)
 	if (count <= 0) {
 		mp_setting_remove_now_playing_shared_status();
 	} else {
-		FILE *fp = fopen(MP_SHARED_PLAYING_STATUS_INI, "w");	/* make new file. */
+		char *path = app_get_data_path();
+		DEBUG_TRACE("Path is: %s", path);
+		char playing_status[1024] = {0};
+		if (path == NULL) {
+			return;
+		}
+		snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+		free(path);
+
+		FILE *fp = fopen(playing_status, "w");	/* make new file. */
 
 		if (fp == NULL) {
-			SECURE_ERROR("Failed to open ini files. : %s", MP_SHARED_PLAYING_STATUS_INI);
+			ERROR_TRACE("Failed to open ini files. : %s", playing_status);
 			return;
 		}
 

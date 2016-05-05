@@ -48,7 +48,7 @@
 
 #define BROKEN_ALBUMART_IMAGE_PATH		"/opt/usr/share/media/.thumb/thumb_default.png"
 #define DEFAULT_ALBUM_ART_ICON SHAREDDIR"/res/shared_images/default_albumart.png"
-#define NOW_PLAYING_INI_PATH DATA_PREFIX"/shared/data/NowPlayingStatus"
+#define NOW_PLAYING_INI_PATH "NowPlayingStatus"
 
 static Eina_Bool is_play = EINA_FALSE;
 Eina_List *widget_list = NULL;
@@ -211,10 +211,18 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 
 void __create_read_ini_file(void)
 {
-	FILE *fp = fopen(NOW_PLAYING_INI_PATH, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char playing_status[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(playing_status, 1024, "%s%s", path, NOW_PLAYING_INI_PATH);
+	free(path);
+
+	FILE *fp = fopen(playing_status, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		ERROR_TRACE("Failed to open ini files. : %s", NOW_PLAYING_INI_PATH);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_status);
 		return;
 	}
 	fprintf(fp, " \n");
@@ -787,7 +795,14 @@ static void __mp_change_multiple_widgets(void *data, Ecore_File_Monitor *em, Eco
 	if (event == ECORE_FILE_EVENT_MODIFIED || event == ECORE_FILE_EVENT_CREATED_FILE) {
 		DEBUG_TRACE("The monitored file path is: %s", ecore_file_monitor_path_get(em));
 		EINA_LIST_FOREACH(widget_list, temp_list, wgtdata) {
-			mp_widget_read_ini_file_ecore(wgtdata, NOW_PLAYING_INI_PATH);
+			char *path = app_get_data_path();
+			char playing_status[1024] = {0};
+			if (path == NULL) {
+				return;
+			}
+			snprintf(playing_status, 1024, "%s%s", path, NOW_PLAYING_INI_PATH);
+			free(path);
+			mp_widget_read_ini_file_ecore(wgtdata, playing_status);
 		}
 	}
 	free(temp_list);
@@ -833,14 +848,18 @@ int mp_widget_create(WidgetData* data, int w, int h)
 
 	elm_object_domain_translatable_part_text_set(layout, "noitems_title", "music-player", "IDS_MUSIC_BODY_MUSIC");
 	elm_object_domain_translatable_part_text_set(layout, "noitems_subtitle", "music-player", "IDS_MUSIC_SK3_ADD_TRACKS");
+	char *path = app_get_data_path();
+	DEBUG_TRACE("Path is: %s", path);
+	char playing_status[1024] = {0};
+	if (path == NULL) {
+		return -1;
+	}
+	snprintf(playing_status, 1024, "%s%s", path, NOW_PLAYING_INI_PATH);
+	free(path);
+	mp_widget_read_ini_file(playing_status, data);
 
-	mp_widget_read_ini_file(NOW_PLAYING_INI_PATH, data);
-
-	char *path = NULL;
-	path = g_strdup_printf("%s/shared/data/NowPlayingStatus", DATA_PREFIX);
-	DEBUG_TRACE("path :%s", path);
 	if (data->em == NULL) {
-		data->em = ecore_file_monitor_add(path, __mp_change_multiple_widgets, NULL);
+		data->em = ecore_file_monitor_add(playing_status, __mp_change_multiple_widgets, NULL);
 	}
 
 	elm_object_signal_callback_add(layout, "mouse,down,1",

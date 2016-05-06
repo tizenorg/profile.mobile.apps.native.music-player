@@ -65,10 +65,6 @@
 
 #define DATA_DIR	DATA_PREFIX"/data"
 
-#ifndef MP_INI_DIR
-#define MP_INI_DIR DATA_DIR
-#endif
-
 #define PKGNAME_FOR_SHORTCUT	PKG_NAME
 
 #define EDJ_PATH EDJDIR
@@ -406,14 +402,14 @@ typedef enum
 #ifndef MP_SOUND_PLAYER
 #define MP_LSCR_CONTROL			        "lock_music_ctrl"
 #else
-#define MP_LSCR_CONTROL					"lock_sound_ctrl"
+#define MP_LSCR_CONTROL				"lock_sound_ctrl"
 #endif
 
 
-#define MP_SHORTCUT_INI_FILE_NAME_0		MP_INI_DIR"/shortcut_0.ini"
-#define MP_SHORTCUT_INI_FILE_NAME_1		MP_INI_DIR"/shortcut_1.ini"
-#define MP_SHORTCUT_INI_FILE_NAME_2		MP_INI_DIR"/shortcut_2.ini"
-#define MP_SHORTCUT_INI_FILE_NAME_3		MP_INI_DIR"/shortcut_3.ini"
+#define MP_SHORTCUT_INI_FILE_NAME_0		"shortcut_0.ini"
+#define MP_SHORTCUT_INI_FILE_NAME_1		"shortcut_1.ini"
+#define MP_SHORTCUT_INI_FILE_NAME_2		"shortcut_2.ini"
+#define MP_SHORTCUT_INI_FILE_NAME_3		"shortcut_3.ini"
 
 #define SINGLE_BYTE_MAX 0x7F
 

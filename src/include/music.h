@@ -243,6 +243,7 @@ struct appdata
 	int win_angle;
 	int del_cb_invoked;
 	bool exit_status;
+	char *lockscreen_wallpaper;
 
 #if 0
 	Ecore_X_Window xwin;

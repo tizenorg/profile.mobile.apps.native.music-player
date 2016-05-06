@@ -247,6 +247,8 @@ struct appdata
 	bool exit_status;
 	bool disable_detail_view;
 
+	char *lockscreen_wallpaper;
+
 #if 0
 	Ecore_X_Window xwin;
 #else

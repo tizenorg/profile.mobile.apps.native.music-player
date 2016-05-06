@@ -450,6 +450,8 @@ void _mp_app_db_update_cb(void *data)
 			free(data_path);
 			mp_file_remove(playing_ini);
 #endif
+			if(path)
+				free(path);
 		} else if (next_play) {
 			mp_play_new_file(ad, true);
 		}

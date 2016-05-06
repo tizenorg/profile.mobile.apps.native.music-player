@@ -648,6 +648,8 @@ mp_setting_save_playing_info(void *data)
 	free(data_path);
 	fp = fopen(playing_ini, "w");        /* make new file. */
 #endif
+	if(path)
+		free(path);
 
 	if (fp == NULL) {
 #ifndef MP_SOUND_PLAYER
@@ -832,32 +834,47 @@ mp_setting_save_shortcut(char *shortcut_title, char *artist, char *shortcut_desc
 	FILE *fp = NULL;
 	int ret = 0;
 
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_2)) {
-		ret = rename(MP_SHORTCUT_INI_FILE_NAME_2, MP_SHORTCUT_INI_FILE_NAME_3);
+	char *path = app_get_data_path();
+	char shortcut_path_0[1024] = {0};
+	char shortcut_path_1[1024] = {0};
+	char shortcut_path_2[1024] = {0};
+	char shortcut_path_3[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+
+	snprintf(shortcut_path_0, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_0);
+	snprintf(shortcut_path_1, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_1);
+	snprintf(shortcut_path_2, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_2);
+	snprintf(shortcut_path_3, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_3);
+
+	free(path);
+	if (mp_file_exists(shortcut_path_2)) {
+		ret = rename(shortcut_path_2, shortcut_path_3);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_1)) {
-		rename(MP_SHORTCUT_INI_FILE_NAME_1, MP_SHORTCUT_INI_FILE_NAME_2);
+	if (mp_file_exists(shortcut_path_1)) {
+		rename(shortcut_path_1, shortcut_path_2);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_0)) {
-		rename(MP_SHORTCUT_INI_FILE_NAME_0, MP_SHORTCUT_INI_FILE_NAME_1);
+	if (mp_file_exists(shortcut_path_0)) {
+		rename(shortcut_path_0, shortcut_path_1);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
 
-	fp = fopen(MP_SHORTCUT_INI_FILE_NAME_0, "w");	/* make new file. */
+	fp = fopen(shortcut_path_0, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_SHORTCUT_INI_FILE_NAME_0);
+		SECURE_ERROR("Failed to open ini files. : %s", shortcut_path_0);
 		return;
 	}
 

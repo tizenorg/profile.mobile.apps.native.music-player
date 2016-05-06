@@ -689,13 +689,28 @@ static void _mp_edit_cb_check_playlist()
 #endif
 
 			/*as all the items are removed, remove now-playing.ini to avoid copy the same track but in DB, they are different*/
-			mp_file_remove(MP_NOWPLAYING_INI_FILE_NAME);
+			char *path = app_get_data_path();
+			char playing_info[1024] = {0};
+			if (path == NULL) {
+				return;
+			}
+			snprintf(playing_info, 1024, "%s%s", path, MP_NOWPLAYING_INI_FILE_NAME);
+			mp_file_remove(playing_info);
 			/* remove playing_track.ini to avoid lockscreen still using the file content*/
+
+			char playing_ini_file_name[1024] = {0};
+			if (path == NULL) {
+				return;
+			}
 #ifndef MP_SOUND_PLAYER
-			mp_file_remove(MP_PLAYING_INI_FILE_NAME_MUSIC);
+			snprintf(playing_ini_file_name, 1024, "%s%s", path, MP_PLAYING_INI_FILE_NAME_MUSIC);
+			mp_file_remove(playing_ini_file_name);
 #else
-			mp_file_remove(MP_PLAYING_INI_FILE_NAME_SOUND);
+			snprintf(playing_ini_file_name, 1024, "%s%s", path, MP_PLAYING_INI_FILE_NAME_SOUND);
+			mp_file_remove(playing_ini_file_name);
 #endif
+			if(path)
+				free(path);
 		} else if (next_play) {
 			mp_play_new_file(ad, true);
 		}

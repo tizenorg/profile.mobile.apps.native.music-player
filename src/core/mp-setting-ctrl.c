@@ -466,10 +466,17 @@ mp_setting_set_nowplaying_id(int val)
 {
 	startfunc;
 
-	FILE *fp = fopen(MP_NOW_PLAYING_ID_INI, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char playing_id[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(playing_id, 1024, "%s%s", path, MP_NOW_PLAYING_ID_INI);
+	free(path);
+	FILE *fp = fopen(playing_id, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOW_PLAYING_ID_INI);
+		SECURE_ERROR("Failed to open ini files. : %s", playing_id);
 		return;
 	}
 
@@ -490,8 +497,15 @@ mp_setting_get_nowplaying_id(void)
 	FILE *fp = NULL;
 	char line[MAX_NAM_LEN + 1];
 	int pid = -1;
-	if ((fp = fopen(MP_NOW_PLAYING_ID_INI, "r")) == NULL) {
-		DEBUG_TRACE("unable to open %s/shared/data/NowPlayingId.ini", DATA_PREFIX);
+	char *path = app_get_data_path();
+	char playing_id[1024] = {0};
+	if (path == NULL) {
+		return 0;
+	}
+	snprintf(playing_id, 1024, "%s%s", path, MP_NOW_PLAYING_ID_INI);
+	free(path);
+	if ((fp = fopen(playing_id, "r")) == NULL) {
+		ERROR_TRACE("unable to open ini file: %s", playing_id);
 		return -1;
 	}
 	if (fgets(line, MAX_NAM_LEN, fp)) { /* #Nowplaying */
@@ -524,10 +538,17 @@ mp_setting_set_player_state(int val)
 		return;
 	}
 
-	FILE *fp = fopen(MP_PLAY_STATE, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char play_state_file[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(play_state_file, 1024, "%s%s", path, MP_PLAY_STATE);
+	free(path);
+	FILE *fp = fopen(play_state_file, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_PLAY_STATE);
+		SECURE_ERROR("Failed to open ini files. : %s", play_state_file);
 		return;
 	}
 
@@ -623,17 +644,26 @@ mp_setting_save_playing_info(void *data)
 	MP_CHECK(item);
 	MP_CHECK(ad->current_track_info);
 
+	char *path = app_get_data_path();
+	char playing_ini_file_name[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
 #ifndef MP_SOUND_PLAYER
-	fp = fopen(MP_PLAYING_INI_FILE_NAME_MUSIC, "w");        /* make new file. */
+	snprintf(playing_ini_file_name, 1024, "%s%s", path, MP_PLAYING_INI_FILE_NAME_MUSIC);
+	fp = fopen(playing_ini_file_name, "w");        /* make new file. */
 #else
-	fp = fopen(MP_PLAYING_INI_FILE_NAME_SOUND, "w");        /* make new file. */
+	snprintf(playing_ini_file_name, 1024, "%s%s", path, MP_PLAYING_INI_FILE_NAME_SOUND);
+	fp = fopen(playing_ini_file_name, "w");        /* make new file. */
 #endif
+	if(path)
+		free(path);
 
 	if (fp == NULL) {
 #ifndef MP_SOUND_PLAYER
-		ERROR_TRACE("Failed to open ini files. : %s", MP_PLAYING_INI_FILE_NAME_MUSIC);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_ini_file_name);
 #else
-		ERROR_TRACE("Failed to open ini files. : %s", MP_PLAYING_INI_FILE_NAME_SOUND);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_ini_file_name);
 #endif
 		return;
 	}
@@ -680,7 +710,7 @@ mp_setting_remove_now_playing_shared_status(void)
 	if (path == NULL) {
 		return;
 	}
-	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 	free(path);
 
 	FILE *fp = fopen(playing_status, "w");	/* make new file. */
@@ -702,10 +732,17 @@ mp_setting_remove_now_playing(void)
 	startfunc;
 	FILE *fp = NULL;
 
-	fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char playing_info[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(playing_info, 1024, "%s%s", path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(path);
+	fp = fopen(playing_info, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_INI_FILE_NAME);
+		SECURE_ERROR("Failed to open ini files. : %s", playing_info);
 		return;
 	}
 	fprintf(fp, " \n");
@@ -723,11 +760,18 @@ mp_setting_get_now_playing_path_from_file(char **path)
 	char line[MAX_NAM_LEN + 1];
 	FILE *fp = NULL;
 
-	if(access(MP_NOWPLAYING_INI_FILE_NAME, F_OK) != -1)
+	char *data_path = app_get_data_path();
+	char playing_info[1024] = {0};
+	if (data_path == NULL) {
+		return;
+	}
+	snprintf(playing_info, 1024, "%s%s", data_path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(data_path);
+	if(access(playing_info, F_OK) != -1)
 	{
-		fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "r");
+		fp = fopen(playing_info, "r");
 		if (!fp) {
-			SECURE_ERROR("unable to open %s...", MP_NOWPLAYING_INI_FILE_NAME);
+			SECURE_ERROR("unable to open %s...", playing_info);
 			return;
 		}
 		if (fgets(line, MAX_NAM_LEN, fp)) { /* audio id */
@@ -758,10 +802,17 @@ mp_setting_save_now_playing(void *data)
 	MP_CHECK(item);
 	MP_CHECK(ad->current_track_info);
 
-	fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char playing_info[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+	snprintf(playing_info, 1024, "%s%s", path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(path);
+	fp = fopen(playing_info, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_INI_FILE_NAME);
+		SECURE_ERROR("Failed to open ini files. : %s", playing_info);
 		return;
 	}
 
@@ -800,32 +851,47 @@ mp_setting_save_shortcut(char *shortcut_title, char *artist, char *shortcut_desc
 	FILE *fp = NULL;
 	int ret = 0;
 
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_2)) {
-		ret = rename(MP_SHORTCUT_INI_FILE_NAME_2, MP_SHORTCUT_INI_FILE_NAME_3);
+	char *path = app_get_data_path();
+	char shortcut_path_0[1024] = {0};
+	char shortcut_path_1[1024] = {0};
+	char shortcut_path_2[1024] = {0};
+	char shortcut_path_3[1024] = {0};
+	if (path == NULL) {
+		return;
+	}
+
+	snprintf(shortcut_path_0, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_0);
+	snprintf(shortcut_path_1, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_1);
+	snprintf(shortcut_path_2, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_2);
+	snprintf(shortcut_path_3, 1024, "%s%s", path, MP_SHORTCUT_INI_FILE_NAME_3);
+
+	free(path);
+	if (mp_file_exists(shortcut_path_2)) {
+		ret = rename(shortcut_path_2, shortcut_path_3);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_1)) {
-		rename(MP_SHORTCUT_INI_FILE_NAME_1, MP_SHORTCUT_INI_FILE_NAME_2);
+	if (mp_file_exists(shortcut_path_1)) {
+		rename(shortcut_path_1, shortcut_path_2);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
-	if (mp_file_exists(MP_SHORTCUT_INI_FILE_NAME_0)) {
-		rename(MP_SHORTCUT_INI_FILE_NAME_0, MP_SHORTCUT_INI_FILE_NAME_1);
+	if (mp_file_exists(shortcut_path_0)) {
+		rename(shortcut_path_0, shortcut_path_1);
 		if (ret != 0) {
 			ERROR_TRACE("Failed to rename file:error=%d", ret);
 			return;
 		}
 	}
 
-	fp = fopen(MP_SHORTCUT_INI_FILE_NAME_0, "w");	/* make new file. */
+	fp = fopen(shortcut_path_0, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_SHORTCUT_INI_FILE_NAME_0);
+		SECURE_ERROR("Failed to open ini files. : %s", shortcut_path_0);
 		return;
 	}
 
@@ -856,7 +922,7 @@ mp_setting_read_playing_status(char *uri, char *status)
 	if (path == NULL) {
 		return -1;
 	}
-	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 	free(path);
 
 	FILE *fp = fopen(playing_status, "r");	/* read MP_SHARED_PLAYING_STATUS_INI file.  */
@@ -926,7 +992,7 @@ mp_setting_write_playing_status(char *uri, char *status)
 		if (path == NULL) {
 			return;
 		}
-		snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+		snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 		free(path);
 
 		FILE *fp = fopen(playing_status, "w");	/* make new file. */

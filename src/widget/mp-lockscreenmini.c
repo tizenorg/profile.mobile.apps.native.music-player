@@ -29,11 +29,15 @@
 #include "mp-player-view.h"
 #include <device/display.h>
 #include <device/callback.h>
+#include <system_settings.h>
 
 #ifdef MP_FEATURE_LOCKSCREEN
 
 int LOCKSCREEN_MINI_CONTROLLER_WIDTH;
 #define LOCKSCREEN_MINI_CONTROLLER_HEIGHT (93)
+
+/*lockscreen wallpaper length*/
+#define WALLPAPER_LENGTH 1024
 
 //#define LOCKSCREEN_MSG_DOMAIN_CONTROL_ACCESS (int)ECORE_X_ATOM_E_ILLUME_ACCESS_CONTROL
 
@@ -280,13 +284,23 @@ _load_lockscreenmini(struct appdata *ad)
 	win = minicontrol_create_window("sound-minicontrol.LOCKSCREEN", MINICONTROL_TARGET_VIEWER_STOCK_LOCK_SCREEN, _lockscreen_cb);
 #endif
 
-
 	if (!win) {
 		return;
 	}
 	elm_win_alpha_set(win, EINA_TRUE);
 
 	ad->win_lockmini = win;
+
+	int ret = -1;
+	ad->lockscreen_wallpaper = (char *)malloc(WALLPAPER_LENGTH * sizeof(char));
+	ret = system_settings_get_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, &ad->lockscreen_wallpaper);
+	if(ret != SYSTEM_SETTINGS_ERROR_NONE) {
+		ERROR_TRACE("Failed to get locksreen wallpaper");
+	}
+	if(ad->lockscreen_wallpaper)
+		DEBUG_TRACE("lockscreen_wallpaper path is: %s", ad->lockscreen_wallpaper);
+	else
+		ERROR_TRACE("Could not fetch current wallpaper path");
 
 	/* load edje */
 	_mp_lockscreenmini_update_layout(ad, false);
@@ -545,7 +559,14 @@ mp_lockscreenmini_show(struct appdata *ad)
 	ad->b_lockmini_show = TRUE;
 	mp_lockscreenmini_update(ad);
 
-	FILE *fp = fopen(MP_LSCR_CONTROL, "w");
+	char *path = app_get_data_path();
+	char lockscreen_info[1024] = {0};
+	if (path == NULL) {
+		ERROR_TRACE("Unable to get data path");
+	}
+	snprintf(lockscreen_info, 1024, "%s%s", path, MP_LSCR_CONTROL);
+	free(path);
+	FILE *fp = fopen(lockscreen_info, "w");
 	if (fp) {
 		fclose(fp);
 	}
@@ -789,7 +810,9 @@ _mp_lockscreenmini_title_set(struct appdata *ad)
 	DEBUG_TRACE("title set");
 
 	MP_CHECK(ad);
-	Evas_Object *label = elm_object_part_content_get(ad->lockmini_layout, "elm.text");
+	Evas_Object *label = NULL;
+
+	label = elm_object_part_content_get(ad->lockmini_layout, "elm.text");
 
 	mp_track_info_t *current_item = ad->current_track_info;
 	MP_CHECK(current_item);
@@ -810,7 +833,7 @@ _mp_lockscreenmini_title_set(struct appdata *ad)
 		}
 	}
 
-	/*edje_object_part_text_set(_EDJ(ad->lockmini_layout), "artist.text", markup_artist);*/
+	edje_object_part_text_set(_EDJ(ad->lockmini_layout), "artist.text", markup_artist);
 	if (!label) {
 		label = mp_widget_slide_title_create(ad->lockmini_layout, "slide_roll", title);
 		elm_object_part_content_set(ad->lockmini_layout, "elm.text", label);
@@ -841,6 +864,23 @@ mp_lockscreenmini_update(struct appdata *ad)
 	mp_retm_if(ad == NULL, "appdata is NULL");
 	MP_CHECK(ad->win_lockmini);
 	MP_CHECK(!ad->is_lcd_off);
+
+	int ret = -1;
+
+	if (ad->current_track_info->thumbnail_path) {
+		DEBUG_TRACE("Thumbnail Location: %s", ad->current_track_info->thumbnail_path);
+		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->current_track_info->thumbnail_path);
+	}
+	else
+	{
+		char wallpaper_path[1024] = {0};
+		snprintf(wallpaper_path, 1024, "%s/res/shared_images/default_albumart.png", SHAREDDIR);
+		DEBUG_TRACE("Setting Default Thumbnail :%s", wallpaper_path);
+		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, wallpaper_path);
+	}
+	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {
+		ERROR_TRACE("Failed to set locksreen wallpaper");
+	}
 
 	mp_lockscreenmini_update_control(ad);
 	if (ad->player_state == PLAY_STATE_PLAYING) {
@@ -878,7 +918,6 @@ mp_lockscreenmini_hide(struct appdata *ad)
 	mp_ecore_timer_del(ad->lockmini_button_timer);
 
 	return 0;
-
 }
 
 int
@@ -897,7 +936,19 @@ mp_lockscreenmini_destroy(struct appdata *ad)
 	mp_ecore_timer_del(ad->lockmini_button_timer);
 	ad->lockmini_visible = false;
 
-	ecore_file_remove(MP_LSCR_CONTROL);
+	int ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->lockscreen_wallpaper);
+	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {
+		ERROR_TRACE("Failed to set original locksreen wallpaper");
+	}
+
+	char *path = app_get_data_path();
+	char lockscreen_info[1024] = {0};
+	if (path == NULL) {
+		return 0;
+	}
+	snprintf(lockscreen_info, 1024, "%s%s", path, MP_LSCR_CONTROL);
+	free(path);
+	ecore_file_remove(lockscreen_info);
 	return 0;
 }
 

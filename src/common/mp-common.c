@@ -1547,7 +1547,14 @@ void mp_common_create_default_playlist()
 	mp_common_create_playlist_mgr();
 	mp_playlist_mgr_clear(ad->playlist_mgr);
 
-	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_NOWPLAYING_LIST_DATA, last_played_path, -1);
+	char *path = app_get_data_path();
+	char playing_data[1024] = {0};
+	if (path == NULL) {
+		ERROR_TRACE("Unable to get data path");
+	}
+	snprintf(playing_data, 1024, "%s%s", path, MP_NOWPLAYING_LIST_DATA);
+	free(path);
+	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, playing_data, last_played_path, -1);
 
 	if (mp_playlist_mgr_count(ad->playlist_mgr) == 0) {
 		mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, NULL, 0, &count);

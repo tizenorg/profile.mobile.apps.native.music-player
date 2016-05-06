@@ -389,26 +389,26 @@ typedef enum
 
 #define MP_FILE_PREFIX "file://"
 
-#define MP_NOW_PLAYING_ID_INI		DATA_PREFIX"/shared/data/NowPlayingId.ini"	//playing thread id
+#define MP_NOW_PLAYING_ID_INI		"NowPlayingId.ini"	//playing thread id
 #ifdef MP_SOUND_PLAYER
-#define MP_SHARED_PLAYING_STATUS_INI	DATA_PREFIX"/shared/data/nowplaying.ini"	//share track info of sound-player
+#define MP_SHARED_PLAYING_STATUS_INI	"nowplaying.ini"	//share track info of sound-player
 #else
-#define MP_SHARED_PLAYING_STATUS_INI	DATA_PREFIX"/shared/data/NowPlayingStatus" //share track info of music-player
+#define MP_SHARED_PLAYING_STATUS_INI	"NowPlayingStatus" //share track info of music-player
 #endif
 //@@ MP_PLAYING_INI_FILE_NAME
 //this hard corded value is used for music player & sound player.
 //if this is need to be changed, you need to inform about it to lockscreen.
-#define MP_PLAYING_INI_FILE_NAME_MUSIC		DATA_PREFIX"/data/playing_track_music.ini"
-#define MP_PLAYING_INI_FILE_NAME_SOUND		DATA_PREFIX"/data/playing_track_sound.ini"
+#define MP_PLAYING_INI_FILE_NAME_MUSIC		"playing_track_music.ini"
+#define MP_PLAYING_INI_FILE_NAME_SOUND		"playing_track_sound.ini"
 
 /* music play state for livebox and music player and sound player */
-#define MP_PLAY_STATE				DATA_PREFIX"/shared/data/MusicPlayStatus.ini"	//player state
+#define MP_PLAY_STATE				"MusicPlayStatus.ini"	//player state
 
 
 #ifndef MP_SOUND_PLAYER
-#define MP_LSCR_CONTROL			        DATA_PREFIX"/data/lock_music_ctrl"
+#define MP_LSCR_CONTROL			        "lock_music_ctrl"
 #else
-#define MP_LSCR_CONTROL				DATA_PREFIX"/data/lock_sound_ctrl"
+#define MP_LSCR_CONTROL				"lock_sound_ctrl"
 #endif
 
 

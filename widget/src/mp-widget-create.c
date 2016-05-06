@@ -148,7 +148,7 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 		}
 		if (!strcmp(key, "thumbnail")) {
 			if (value) {
-				image_path = (char*)malloc((strlen(value) + 1) * sizeof(char));
+				image_path = (char *)malloc((strlen(value) + 1) * sizeof(char));
 
 				if (image_path != NULL) {
 					strncpy(image_path, value, strlen(value));

@@ -102,12 +102,12 @@ typedef enum {
 #define MP_REQ_TYPE_SHORTCUT_DESC "shortcut_desc"
 
 //for supprot nowplaying list in PD
-#define MP_NOWPLAYING_LIST_DATA		MP_INI_DIR"/MpPlayingList.dat"
+#define MP_NOWPLAYING_LIST_DATA		"MpPlayingList.dat"
 
 //for supprot group list in PD
-#define MP_GROUP_LIST_DATA		MP_INI_DIR"/MpGroupList.dat"
+#define MP_GROUP_LIST_DATA		"MpGroupList.dat"
 
-#define MP_NOWPLAYING_INI_FILE_NAME	MP_INI_DIR"/now_playing.ini"
+#define MP_NOWPLAYING_INI_FILE_NAME	"now_playing.ini"
 
 #define MP_AUTO_PLAYLIST_ITEM_MAX 	50
 

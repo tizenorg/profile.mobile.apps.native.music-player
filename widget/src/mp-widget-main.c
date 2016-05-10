@@ -71,7 +71,6 @@ int widget_Create(widget_context_h context, bundle *content, int w, int h, void 
 		DEBUG_TRACE("failed to create layout");
 		return WIDGET_ERROR_INVALID_PARAMETER;
 	}
-	DbgPrint("Resized to %dx%d\n", w, h);
 
 	widget_app_context_set_tag(context, widget_data);
 

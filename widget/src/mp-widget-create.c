@@ -169,6 +169,7 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 
 					if (!strcmp(BROKEN_ALBUMART_IMAGE_PATH, image_path)) {
 						free(image_path);
+						image_path = NULL;
 						image_path = (char*)malloc((strlen(DEFAULT_ALBUM_ART_ICON) + 1) * sizeof(char));
 						if (image_path != NULL) {
 							strncpy(image_path, DEFAULT_ALBUM_ART_ICON, strlen(DEFAULT_ALBUM_ART_ICON));

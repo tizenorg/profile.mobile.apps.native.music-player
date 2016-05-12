@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.music-chooser" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.music-chooser" exec="music-chooser" launch_mode="single" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+    <ui-application appid="org.tizen.music-chooser" exec="music-chooser" hw-acceleration="on" launch_mode="single" multiple="false" nodisplay="false" process-pool="true" taskmanage="true" type="capp">
         <label>music-chooser</label>
         <icon>music-chooser.png</icon>
     </ui-application>

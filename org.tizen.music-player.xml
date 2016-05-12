@@ -3,7 +3,7 @@
 	<label>Music</label>
 	<author email="hm2007.kim@samsung.com" href="www.samsung.com">Hyungmin Kim</author>
 	<description>Music player</description>
-	<ui-application appid="org.tizen.music-player" exec="/usr/apps/org.tizen.music-player/bin/music-player" nodisplay="false" multiple="false" type="capp" taskmanage="true" process-pool="true" indicatordisplay="false" effectimage-type="edj-light" portrait-effectimage="/usr/apps/org.tizen.music-player/shared/res/mp-fake-effect.edj">
+	<ui-application appid="org.tizen.music-player" exec="/usr/apps/org.tizen.music-player/bin/music-player" nodisplay="false" multiple="false" type="capp" taskmanage="true" hw-acceleration="on" process-pool="true" indicatordisplay="false" effectimage-type="edj-light" portrait-effectimage="/usr/apps/org.tizen.music-player/shared/res/mp-fake-effect.edj">
 		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
 		<label>Music</label>
 		<icon>org.tizen.music-player.png</icon>

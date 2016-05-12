@@ -54,7 +54,7 @@
 	<label xml:lang="fr-ca">Music Appcontrol</label>
         <author email="hm2007.kim" href="www.samsung.com">Hyungmin Kim</author>
         <description>Music chooser</description>
-        <ui-application appid="org.tizen.music-chooser" exec="/usr/apps/org.tizen.music-chooser/bin/music-chooser" nodisplay="true" multiple="true" type="capp" taskmanage="false" launch_mode="caller">
+        <ui-application appid="org.tizen.music-chooser" exec="/usr/apps/org.tizen.music-chooser/bin/music-chooser" nodisplay="true" hw-acceleration="on" process-pool="true" multiple="true" type="capp" taskmanage="false" launch_mode="caller">
                 <icon>/usr/share/icons/default/small/music-chooser.png</icon>
                 <label>Music</label>
 		<label xml:lang="hy-am">Երաժշտությն</label>

@@ -385,6 +385,9 @@ static void _quick_panel_cb(minicontrol_viewer_event_e event_type, bundle *event
 		}
 		ad->is_sdcard_removed = false;
 	}
+	if (event_type == (minicontrol_viewer_event_e)MINICONTROL_VIEWER_EVENT_REPORT_ANGLE) {
+		mp_minicontroller_rotate(ad, ad->quickpanel_angle);
+	}
 }
 
 static void

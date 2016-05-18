@@ -1870,7 +1870,9 @@ mp_device_orientation(app_event_info_h event_info, void *data)
 	eventfunc;
 	struct appdata *ad = (struct appdata *)data;
 	MP_CHECK(ad);
-
+	app_device_orientation_e orientation;
+	app_event_get_device_orientation(event_info, &orientation);
+	ad->quickpanel_angle = orientation;
 #ifdef MP_FEATURE_LANDSCAPE
 	mp_view_mgr_post_event(GET_VIEW_MGR, MP_VIEW_ROTATE_START);
 #endif

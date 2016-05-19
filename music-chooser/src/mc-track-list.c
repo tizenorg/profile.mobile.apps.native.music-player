@@ -854,7 +854,10 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
 		it_data->checked = all_selected;
-		elm_genlist_item_fields_update(item, "elm.swallow.end", ELM_GENLIST_ITEM_FIELD_CONTENT);
+		Evas_Object *chk = elm_object_item_part_content_get(item, "elm.swallow.end");
+		if (chk) {
+			elm_check_state_set(chk, all_selected);
+		}
 		item = elm_genlist_item_next_get(item);
 	}
 
@@ -882,24 +885,8 @@ void _mc_track_list_select_cb(void *data, Evas_Object *obj, void *event_info)
 	item = elm_genlist_first_item_get(ld->genlist);
 	Evas_Object *check = elm_object_item_part_content_get(item, "elm.swallow.end");
 	Eina_Bool state = elm_check_state_get(check);
-	if (state == EINA_FALSE && ld->ad->max_count <= 0) {
+	if (ld->ad->max_count <= 0) {
 		elm_check_state_set(check, !state);
-	}
-
-	if ((ld->ad->limitsize > 0) && (_get_total_size(ld) > ld->ad->limitsize)) {
-		char *name = g_strdup(GET_STR(STR_MC_MAX_SIZE_EXCEEDED));
-		mc_post_status_message(name);
-		IF_FREE(name);
-		WARN_TRACE("Exceeded max size by caller");
-		return;
-	}
-
-	if ((ld->ad->max_count > 0) && (_get_media_list_count(ld) > ld->ad->max_count)) {
-		char *name = g_strdup_printf(GET_STR(STR_MC_MAX_COUNT_EXCEEDED), ld->ad->max_count);
-		mc_post_status_message(name);
-		IF_FREE(name);
-		WARN_TRACE("Exceeded max count by caller");
-		return;
 	}
 
 	_mc_track_list_select_all_selected_item_data_get(data, obj, event_info);

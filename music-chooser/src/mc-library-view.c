@@ -54,6 +54,7 @@ static void _all_cb(void *data, Evas_Object *obj, void *event_info)
 	startfunc;
 	struct app_data *ad = data;
 	MP_CHECK(ad);
+	mc_common_obj_domain_text_translate(ad->navi_bar, mc_create_selectioninfo_text_with_count(0));
 	Evas_Object *sub_view;
 	if (detail_view) {
 		elm_naviframe_item_pop(ad->navi_bar);
@@ -84,6 +85,7 @@ static void _playlist_cb(void *data, Evas_Object *obj, void *event_info)
 	startfunc;
 	struct app_data *ad = data;
 	MP_CHECK(ad);
+	mc_common_obj_domain_text_translate(ad->navi_bar, mc_create_selectioninfo_text_with_count(0));
 	Evas_Object *sub_view;
 	if (detail_view) {
 		elm_naviframe_item_pop(ad->navi_bar);
@@ -114,6 +116,7 @@ static void _artist_cb(void *data, Evas_Object *obj, void *event_info)
 	startfunc;
 	struct app_data *ad = data;
 	MP_CHECK(ad);
+	mc_common_obj_domain_text_translate(ad->navi_bar, mc_create_selectioninfo_text_with_count(0));
 	Evas_Object *sub_view;
 	if (detail_view) {
 		elm_naviframe_item_pop(ad->navi_bar);
@@ -142,6 +145,7 @@ static void _album_cb(void *data, Evas_Object *obj, void *event_info)
 	startfunc;
 	struct app_data *ad = data;
 	MP_CHECK(ad);
+	mc_common_obj_domain_text_translate(ad->navi_bar, mc_create_selectioninfo_text_with_count(0));
 	Evas_Object *sub_view;
 	if (detail_view) {
 		elm_naviframe_item_pop(ad->navi_bar);

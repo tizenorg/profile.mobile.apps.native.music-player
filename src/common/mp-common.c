@@ -1672,6 +1672,9 @@ _mp_common_multiple_view_operation(app_control_h app_control)
 				item->artist = g_strdup(artist[i]);
 			}
 			IF_FREE(path);
+			IF_FREE(item->thumbnail_path);
+			IF_FREE(item->title);
+			IF_FREE(item->artist);
 		}
 		mp_playlist_mgr_set_current(ad->playlist_mgr, mp_playlist_mgr_get_nth(ad->playlist_mgr, 0));
 		res = true;
@@ -1711,11 +1714,10 @@ _mp_common_get_track_list_by_folder(const char *folder)
 			DEBUG_TRACE("mime_type: %s", mime);
 			if (mime && strstr(mime, "audio/")) {
 				audio_list = eina_list_append(audio_list, (void *)path);
-			} else {
-				IF_FREE(path);
 			}
 			IF_FREE(mime);
 		}
+		IF_FREE(path);
 	}
 
 	eina_list_free(ls);

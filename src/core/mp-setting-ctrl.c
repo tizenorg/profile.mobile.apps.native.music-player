@@ -1046,9 +1046,11 @@ mp_setting_update_active_device()
 
 int mp_setting_get_side_sync_status(void)
 {
+	int ret = 0;
 	if (!g_setting) {
-		mp_setting_init(mp_util_get_appdata());
+		ret = mp_setting_init(mp_util_get_appdata());
 	}
+
 	return g_setting->side_sync_status;
 
 }

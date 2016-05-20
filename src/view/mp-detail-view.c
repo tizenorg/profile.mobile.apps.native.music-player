@@ -492,7 +492,7 @@ _mp_detail_view_create_local_without_metadata(void *thiz)
 			error_code = player_get_duration(current_player, &duration);
 			if (error_code != PLAYER_ERROR_NONE) {
 				IF_FREE(temp_string);
-				temp_string = g_strdup(GET_SYS_STR("IDS_COM_BODY_UNKNOWN"));
+//				temp_string = g_strdup(GET_SYS_STR("IDS_COM_BODY_UNKNOWN"));
 			}
 
 			int dur_sec = duration / 1000;

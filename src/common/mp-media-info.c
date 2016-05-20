@@ -1252,6 +1252,7 @@ int mp_media_info_get_year(mp_media_info_h media, char **year)
 		res = audio_meta_get_year(media->s.meta, &media->i.minfo->year);
 		if (res != MEDIA_CONTENT_ERROR_NONE) {
 			ERROR_TRACE("Error code 0x%x", res);
+			return res;
 		}
 	}
 	if (!g_strcmp0(media->i.minfo->year, "Unknown")) {

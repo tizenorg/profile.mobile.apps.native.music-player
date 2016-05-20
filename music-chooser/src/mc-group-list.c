@@ -319,6 +319,7 @@ int mc_group_list_set_data(Evas_Object *list, int group_type, const char *type_s
 
 	ld->type = group_type;
 	ld->type_str = g_strdup(type_str);
+	IF_FREE(type_str);
 
 	_mc_itc_init(group_type, ld);
 

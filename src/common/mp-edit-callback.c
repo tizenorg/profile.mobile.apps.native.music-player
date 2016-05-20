@@ -1250,12 +1250,6 @@ static int _mp_edit_cb_get_root_path_by_full(const char *full_path, char **path)
 
 	store_type = _mp_edit_cb_get_store_type_by_full(full_path);
 
-	*path = g_strdup(full_path);
-	if (*path == NULL) {
-		return -1;
-	}
-
-	memset(*path, 0, strlen(*path));
 	switch (store_type) {
 	case 0:
 		*path = g_strdup(MP_MUSIC_DIR);
@@ -1267,6 +1261,7 @@ static int _mp_edit_cb_get_root_path_by_full(const char *full_path, char **path)
 		*path = g_strdup(MP_PERSONAL_PAGE_DIR);
 		break;
 	default:
+		*path = g_strdup(full_path);
 		return -1;
 	}
 	return 0;
@@ -1442,6 +1437,8 @@ _move_folder(mp_media_info_h item_handle)
 			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
+				IF_FREE(path);
+				IF_FREE(root_path);
 				return -1;
 			}
 
@@ -1500,6 +1497,8 @@ _move_folder(mp_media_info_h item_handle)
 			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
+				IF_FREE(path);
+				IF_FREE(root_path);
 				return -1;
 			}
 
@@ -1537,6 +1536,8 @@ _move_folder(mp_media_info_h item_handle)
 			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
+				IF_FREE(path);
+				IF_FREE(root_path);
 				return -1;
 			}
 
@@ -1595,6 +1596,8 @@ _move_folder(mp_media_info_h item_handle)
 			if (count == 0) {
 				ERROR_TRACE("empty folder");
 				IF_FREE(folder_id);
+				IF_FREE(path);
+				IF_FREE(root_path);
 				return -1;
 			}
 
@@ -1618,6 +1621,8 @@ _move_folder(mp_media_info_h item_handle)
 		}
 	}
 
+	IF_FREE(path);
+	IF_FREE(root_path);
 	return 0;
 }
 

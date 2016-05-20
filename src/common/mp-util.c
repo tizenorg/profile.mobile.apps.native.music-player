@@ -146,9 +146,11 @@ EXPORT_API struct appdata *mp_util_get_appdata(void) {
 static int
 _mp_util_get_len(const char *p)
 {
-	int i, r = -1;
-	unsigned char c;
+	int r = -1;
 
+#if 0
+	int i;
+	unsigned char c;
 	if (p) {
 		c = *p;
 		for (i = 0; i < sizeof(mask_len) / sizeof(char); i = i + 2) {
@@ -158,6 +160,7 @@ _mp_util_get_len(const char *p)
 			}
 		}
 	}
+#endif
 
 	return r;
 }
@@ -735,9 +738,13 @@ char * mp_util_file_mime_type_get(const char *uri)
 	char *file_ext = g_strdup(extension + 1);
 	retcode = mime_type_get_mime_type(file_ext, &mime);
 	if ((mime == NULL) || (retcode != MIME_TYPE_ERROR_NONE)) {
+		free(extension);
+		free(file_ext);
 		WARN_TRACE("Fail to get mime type with return value [%d]", retcode);
 		return NULL;
 	}
+	free(extension);
+	free(file_ext);
 	return mime;
 }
 

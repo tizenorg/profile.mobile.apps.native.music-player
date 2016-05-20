@@ -235,9 +235,9 @@ char *mc_create_selectioninfo_text_with_count(int count)
 	if (count > 0) {
 		name =  g_strdup_printf(GET_STR(STR_MP_SELECT_ITEMS), count);
 	} else {
-		name = GET_STR(MC_TEXT_SELECT);
+		name = g_strdup_printf(GET_STR(MC_TEXT_SELECT));
 	}
-	return g_strdup(name);
+	return name;
 }
 
 static char *_gl_select_all_text_get(void *data, Evas_Object *obj, const char *part)

@@ -905,7 +905,7 @@ _mp_playlist_genlist_group_index_user_text_get(void *data, Evas_Object * obj, co
 	const char *text = NULL;
 	if (!strcmp(part, "elm.text")) {
 		if (item_data->index != 0) {
-			text = STR_MP_MY_PLAYLIST_GROUP_TITLE;
+			text = g_strdup(GET_STR(STR_MP_MY_PLAYLIST_GROUP_TITLE));
 		}
 	} else if (!strcmp(part, "elm.text.end")) {
 		MpPlaylistList_t *list = evas_object_data_get(obj, "list_data");
@@ -921,7 +921,7 @@ _mp_playlist_genlist_group_index_user_text_get(void *data, Evas_Object * obj, co
 			}
 		}
 	}
-	return g_strdup(GET_STR(text));
+	return text;
 }
 
 static void

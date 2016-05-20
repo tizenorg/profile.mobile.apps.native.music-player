@@ -192,7 +192,7 @@ mp_http_mgr_get_state(void *data)
 	}
 
 	mp_http_mgr_t *http_mgr = ad->http_mgr;
-
+	MP_CHECK_FALSE(http_mgr);
 	return http_mgr->http_state;
 }
 

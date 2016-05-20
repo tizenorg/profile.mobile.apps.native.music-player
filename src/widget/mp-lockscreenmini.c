@@ -826,6 +826,7 @@ _mp_lockscreenmini_title_set(struct appdata *ad)
 		elm_label_slide_go(label);
 	}
 
+	SAFE_FREE(title_shadow);
 	SAFE_FREE(title);
 	SAFE_FREE(markup_title);
 	SAFE_FREE(markup_artist);

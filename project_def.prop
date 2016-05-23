@@ -35,7 +35,7 @@ USER_OBJS_ABS =
 # User Includes
 ## C Compiler
 USER_INC_DIRS = src/include src/lib/include src/view/include src/widget/include src/setting/src/include music-chooser/src/include sound-player/src/include src/common/include src/core/include inc 
-USER_INC_DIRS_ABS = 
+USER_INC_DIRS_ABS =
 USER_INC_FILES = 
 USER_INC_FILES_ABS = 
 ## C++ Compiler

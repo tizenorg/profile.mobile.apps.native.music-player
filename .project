@@ -3,7 +3,6 @@
 	<name>music-player</name>
 	<comment></comment>
 	<projects>
-		<project>music-chooser</project>
 		<project>widget</project>
 		<project>sound-player</project>
 	</projects>

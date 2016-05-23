@@ -34,7 +34,7 @@ USER_OBJS_ABS =
 
 # User Includes
 ## C Compiler
-USER_INC_DIRS = inc src/include $(workspace_loc)/src/include $(workspace_loc)/src/common/include $(workspace_loc)/src/core/include $(workspace_loc)/src/lib/include $(workspace_loc)/src/setting/src/include $(workspace_loc)/src/view/include $(workspace_loc)/src/widget/include $(workspace_loc)/inc $(workspace_loc)/widget/include
+USER_INC_DIRS = src/include 
 USER_INC_DIRS_ABS = $(workspace_loc)/src/common/include $(workspace_loc)/src/include $(workspace_loc)/src/core/include $(workspace_loc)/src/lib/include $(workspace_loc)/src/setting/src/include $(workspace_loc)/src/view/include $(workspace_loc)/src/widget/include $(workspace_loc)/inc 
 USER_INC_FILES = 
 USER_INC_FILES_ABS = 
@@ -45,7 +45,7 @@ USER_CPP_INC_FILES =
 USER_CPP_INC_FILES_ABS = 
 
 # User Library Path
-USER_LIB_DIRS = lib 
+USER_LIB_DIRS = 
 USER_LIB_DIRS_ABS = 
 
 # EDC Resource Path

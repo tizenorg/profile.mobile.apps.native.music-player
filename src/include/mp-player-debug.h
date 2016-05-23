@@ -51,29 +51,6 @@
 #define LOG_TAG "MUSIC_PLAYER"
 #endif
 
-#define LOG_COLOR_RESET    "\033[0m"
-#define LOG_COLOR_RED      "\033[31m"
-#define LOG_COLOR_YELLOW   "\033[33m"
-#define LOG_COLOR_GREEN  	"\033[32m"
-#define LOG_COLOR_BLUE		"\033[36m"
-#define LOG_COLOR_PURPLE   "\033[35m"
-
-#ifndef LOGD_IF
-#define LOGD_IF(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
-#endif
-#ifndef LOGI_IF
-#define LOGI_IF(fmt, arg...) dlog_print(DLOG_INFO, LOG_TAG, ##arg)
-#endif
-#ifndef LOGW_IF
-#define LOGW_IF(fmt, arg...) dlog_print(DLOG_ERROR, LOG_TAG, ##arg)
-#endif
-#ifndef SECURE_LOGD
-#define SECURE_LOGD(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
-#endif
-#ifndef SECURE_LOGI
-#define SECURE_LOGI(fmt, arg...) dlog_print(DLOG_DEBUG, LOG_TAG, ##arg)
-#endif
-
 #ifndef TRUE
 #define TRUE 1
 #endif
@@ -82,31 +59,31 @@
 #define FALSE 0
 #endif
 
-#define mp_debug(fmt, arg...)			LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define mp_error(fmt, arg...)			LOGW_IF(TRUE,  LOG_COLOR_RED"[TID:%d]# ERROR   CHECK  #   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
+#define mp_debug(fmt, arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define mp_error(fmt, arg...)			dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
 
-#define VER_TRACE(fmt, arg...)		LOGD_IF(TRUE,  LOG_COLOR_RESET"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define DEBUG_TRACE(fmt, arg...)	LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define INFO_TRACE(fmt, arg...) 	LOGI_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]    "fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define WARN_TRACE(fmt, arg...) 	LOGW_IF(TRUE,  LOG_COLOR_YELLOW"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define EVENT_TRACE(fmt, arg...) 	LOGW_IF(TRUE,  LOG_COLOR_BLUE"[TID:%d]   [MUSIC_PLAYER_EVENT]"fmt""LOG_COLOR_RESET, gettid(), ##arg)
-#define ERROR_TRACE(fmt, arg...)	LOGW_IF(TRUE,  LOG_COLOR_RED"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
+#define VER_TRACE(fmt, arg...)		dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define DEBUG_TRACE(fmt, arg...)	dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define INFO_TRACE(fmt, arg...) 	dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define WARN_TRACE(fmt, arg...) 	dlog_print(DLOG_WARN, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define EVENT_TRACE(fmt, arg...) 	dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
+#define ERROR_TRACE(fmt, arg...)	dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
 #ifdef MP_DEBUG_MODE
-#define mp_debug_temp(fmt, arg...)	LOGD_IF(TRUE,  LOG_COLOR_GREEN"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
+#define mp_debug_temp(fmt, arg...)	dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
 #else
 #define mp_debug_temp(fmt, arg...)
 #endif
-#define TIMER_TRACE(fmt, arg...)	do { if (mp_file_exists("/tmp/mp_show_timer_log")) LOGD_IF(TRUE,  LOG_COLOR_PURPLE"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg); } while (0)
-#define PARAM_CHECK(fmt, arg...) 	LOGD_IF(TRUE,  LOG_COLOR_YELLOW"[TID:%d]   "fmt""LOG_COLOR_RESET, gettid(), ##arg)
+#define TIMER_TRACE(fmt, arg...)	do { if (mp_file_exists("/tmp/mp_show_timer_log")) dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg); } while (0)
+#define PARAM_CHECK(fmt, arg...) 	dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##arg)
 
 //#define PROFILE_IN(func) 		LOG(LOG_DEBUG, "LAUNCH","[music-player:Application:"func":IN]"); TA(1, func);
 //#define PROFILE_OUT(func)		LOG(LOG_DEBUG, "LAUNCH","[music-player:Application:"func":OUT]"); TA(0, func);
 #define PROFILE_IN(func) 		TA(1, func);
 #define PROFILE_OUT(func)		TA(0, func);
 
-#define SECURE_DEBUG(fmt, args...)	SECURE_LOGD("[T:%d] " fmt, gettid(), ##args)
-#define SECURE_INFO(fmt, args...)	SECURE_LOGI("[T:%d] " fmt, gettid(), ##args)
-#define SECURE_ERROR(fmt, args...)	SECURE_LOGD("[T:%d] " fmt, gettid(), ##args)
+#define SECURE_DEBUG(fmt, args...)	dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##args)
+#define SECURE_INFO(fmt, args...)	dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##args)
+#define SECURE_ERROR(fmt, args...)	dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, gettid(), ##args)
 
 #define SM_ERROR_CHECK(err)\
 do{\

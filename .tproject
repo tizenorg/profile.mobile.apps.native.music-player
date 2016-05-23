@@ -9,9 +9,8 @@
         <blacklist/>
         <resFallback autoGen="true"/>
         <subProjects>
-            <tizenProject project="music-chooser"/>
-            <tizenProject project="widget"/>
             <tizenProject project="sound-player"/>
+            <tizenProject project="widget"/>
         </subProjects>
     </package>
 </tproject>

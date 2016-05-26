@@ -33,7 +33,7 @@
 #include <app.h>
 
 #include <sys/times.h>
-#include <storage.h>
+#include <storage/storage.h>
 #include <sound_manager.h>
 #include "mp-define.h"
 #include "mp-resource.h"

@@ -20,7 +20,7 @@
 #include "music.h"
 #include "mp-http-mgr.h"
 #include <runtime_info.h>
-#include <wifi.h>
+#include <network/wifi.h>
 
 static MpHttpState_t _mp_http_mgr_get_network_status();
 static void _mp_http_mgr_refresh_network_info(mp_http_mgr_t *http_mgr);

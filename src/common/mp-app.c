@@ -68,7 +68,7 @@
 #ifdef MP_FEATURE_VOICE_CONTROL
 #include "mp-voice-control-mgr.h"
 #endif
-#include <storage.h>
+#include <storage/storage.h>
 
 void mp_play_next_and_updateview(void *data);
 

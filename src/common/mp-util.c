@@ -33,7 +33,7 @@
 #include <mime_type.h>
 #include <mp-file-util.h>
 #include <runtime_info.h>
-#include <storage.h>
+#include <storage/storage.h>
 #include <device/display.h>
 #include <device/callback.h>
 #include <device/power.h>

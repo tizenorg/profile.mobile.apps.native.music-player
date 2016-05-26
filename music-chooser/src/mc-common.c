@@ -25,7 +25,7 @@
 #include <notification.h>
 #include <efl_extension.h>
 #include <mp-file-util.h>
-#include <storage.h>
+#include <storage/storage.h>
 
 #define MC_FILE_PREFIX "file://"
 

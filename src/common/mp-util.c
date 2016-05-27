@@ -738,13 +738,13 @@ char * mp_util_file_mime_type_get(const char *uri)
 	char *file_ext = g_strdup(extension + 1);
 	retcode = mime_type_get_mime_type(file_ext, &mime);
 	if ((mime == NULL) || (retcode != MIME_TYPE_ERROR_NONE)) {
-		free(extension);
 		free(file_ext);
 		WARN_TRACE("Fail to get mime type with return value [%d]", retcode);
 		return NULL;
 	}
-	free(extension);
-	free(file_ext);
+	if (file_ext) {
+		free(file_ext);
+	}
 	return mime;
 }
 

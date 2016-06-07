@@ -35,7 +35,7 @@
 
 #define ICON_SIZE 64*elm_config_scale_get()
 
-#define DOMAIN_NAME "org.tizen.music-chooser"
+#define DOMAIN_NAME "music-player"
 #define LOCALE_DIR  "locale"
 #define IMAGE_EDJ_NAME "mp-images.edj"
 #define SYS_DOMAIN_NAME "sys_string"

@@ -554,10 +554,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="mp-app.c|mp-common.c|mp-edit-callback.c|mp-item.c|mp-menu.c|mp-play.c|mp-ta.c|mp-ug-launch.c|mp-util.c|mp-widget.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="common"/>
+						<entry excluding="mp-util.c|mp-app.c|mp-common.c|mp-ug-launch.c|mp-widget.c|mp-edit-callback.c|mp-item.c|mp-ta.c|mp-menu.c|mp-play.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="common"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
-						<entry excluding="genlist_macro.edc|genlist_normal.edc|genlist_textblock_style.edc|genlist.edc|HD-inc.edc|mc-naviframe.edc|mc-tabbar.edc|toolbar.edc" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="layout"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="res"/>
+						<entry excluding="genlist_macro.edc|genlist_normal.edc|genlist_textblock_style.edc|genlist.edc|HD-inc.edc|mc-naviframe.edc|mc-tabbar.edc|toolbar.edc" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="res"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="shared"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>

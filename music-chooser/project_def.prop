@@ -18,7 +18,7 @@ USER_EDCS =
 USER_POS = 
 
 # User Defines
-USER_DEFS = SHAREDDIR='"/opt/home/owner/apps_rw/org.tizen.music-player/shared"' 
+USER_DEFS = SHAREDDIR='"/opt/home/owner/apps_rw/org.tizen.music-player/shared"'
 USER_CPP_DEFS = 
 
 # User Undefines
@@ -59,7 +59,7 @@ USER_EDCS_FONT_DIRS_ABS =
 # EDC Flags
 USER_EXT_EDC_KEYS = EDC0 
 
-USER_EXT_EDC0_EDCS = layout/music-chooser.edc 
+USER_EXT_EDC0_EDCS = res/music-chooser.edc 
 USER_EXT_EDC0_EDCS_IMAGE_DIRS = . images edje/images 
 USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/images/music_player $(workspace_loc)/shared/res/shared_images $(workspace_loc)/shared/res/target_images 
 USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds 

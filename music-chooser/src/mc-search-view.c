@@ -154,7 +154,7 @@ _mc_search_init(Evas_Object *parent, void *thiz)
 	if (path == NULL) {
 		return;
 	}
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	Evas_Object *layout = mc_common_load_edj(parent, mc_edj_path, "view_layout");
 

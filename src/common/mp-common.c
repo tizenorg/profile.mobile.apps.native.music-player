@@ -538,6 +538,7 @@ mp_common_create_more_ctxpopup(void *view)
 	return popup;
 }
 
+#ifndef MP_SOUND_PLAYER
 static Eina_Bool
 _mp_timer_delay_cb(void *data)
 {
@@ -582,6 +583,7 @@ _mp_timer_delay_cb(void *data)
 
 	return ECORE_CALLBACK_DONE;
 }
+#endif
 
 static void _mp_common_set_label_for_detail(Evas_Object *pBox, char *szString)
 {
@@ -606,7 +608,7 @@ static void _mp_common_set_label_for_detail(Evas_Object *pBox, char *szString)
 
 }
 
-
+#ifndef MP_SOUND_PLAYER
 static void _mp_common_list_track_more_detail(void *parent, void *data)
 {
 	MpList_t *list = data;
@@ -1046,6 +1048,7 @@ void mp_common_list_update_albumart_cb(void *data, Evas_Object * obj, void *even
 		sel_list = NULL;
 	}
 }
+#endif
 
 /*
 **	start_playback : if it is set true, either playing a file from start or resume playing
@@ -1402,6 +1405,7 @@ static void _search_by_internet(const char *keyword)
 	app_control_destroy(app_control);
 }
 
+#ifndef MP_SOUND_PLAYER
 static void _searcy_by_music_app(const char *keyword)
 {
 	startfunc;
@@ -1454,6 +1458,7 @@ mp_common_search_by(const char *keyword)
 		++i;
 	}
 }
+#endif
 
 MpView_t *mp_common_get_all_view()
 {
@@ -1465,6 +1470,7 @@ MpView_t *mp_common_get_all_view()
 	return all_view;
 }
 
+#ifndef MP_SOUND_PLAYER
 void mp_common_show_add_tracks_view(int playlist_id)
 {
 	MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
@@ -1483,6 +1489,7 @@ void mp_common_show_add_tracks_view(int playlist_id)
 	mp_list_view_set_done_btn((MpListView_t*)view, true, MP_DONE_ADD_TRACK_TYPE);
 
 }
+#endif
 
 static void
 _mp_common_playlist_item_change_callback(mp_plst_item *item, void *userdata)
@@ -2218,6 +2225,7 @@ void mp_common_create_initial_view(void *appdata, app_control_h app_control, int
 
 }
 
+#ifndef MP_SOUND_PLAYER
 /*used for long press playall*/
 static void
 _mp_common_selected_item_data_get(void *thiz, GList **selected)
@@ -2414,6 +2422,7 @@ void mp_common_playlist_rename_cb(void *data, Evas_Object *obj, void *event_info
 		mp_edit_playlist_content_create(mp_playlist_data);
 	}
 }
+#endif
 
 int mp_common_get_playlist_totaltime(mp_track_type_e track_type, int playlist_id, int count)
 {
@@ -2546,6 +2555,7 @@ void mp_common_add_to_home_cb(void *data, Evas_Object * obj, void *event_info)
 }
 #endif
 
+#ifndef MP_SOUND_PLAYER
 #ifdef MP_FEATURE_PERSONAL_PAGE
 all_in_personal_e mp_common_is_all_in_personal_page(Evas_Object *genlist)
 {
@@ -2685,7 +2695,6 @@ mp_common_longpress_private_move_cb(void *data, Evas_Object * obj, void *event_i
 
 #endif
 
-#ifndef MP_SOUND_PLAYER
 void mp_common_force_close_delete()
 {
 	Ecore_Thread *delete_thread = (Ecore_Thread *)mp_edit_get_delete_thread();

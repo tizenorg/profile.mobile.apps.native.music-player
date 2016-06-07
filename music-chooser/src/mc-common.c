@@ -62,7 +62,7 @@ void mc_common_push_track_view_by_group_name(void *data, int track_type, const c
 	if (path == NULL) {
 		return;
 	}
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	Evas_Object *navi_layout = mc_common_load_edj(ad->navi_bar, mc_edj_path, "view_layout_tabbar");
 	g_navi_it = elm_naviframe_top_item_get(ad->navi_bar);
@@ -416,7 +416,11 @@ Evas_Object * mc_group_content_get(void *data, Evas_Object *obj, const char *par
 		if (mc_check_image_valid(evas_object_evas_get(obj), thumbpath)) {
 			elm_image_file_set(icon, thumbpath, NULL);
 		} else {
-			elm_image_file_set(icon, DEFAULT_THUMBNAIL, NULL);
+			char default_thumbnail[1024] = {0};
+			char *shared_path = app_get_shared_resource_path();
+			snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+			free(shared_path);
+			elm_image_file_set(icon, default_thumbnail, NULL);
 		}
 
 		elm_layout_theme_set(content, "layout", "list/B/type.1", "default");
@@ -544,7 +548,7 @@ Evas_Object *mc_common_create_processing_popup(void *data)
 	char mc_edj_path[1024] = {0};
 	char *path = app_get_resource_path();
 	MP_CHECK_NULL(path);
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	Evas_Object *layout = elm_layout_add(popup);
 	elm_layout_file_set(layout, mc_edj_path, "popup_processingview_1button");
@@ -676,7 +680,11 @@ Evas_Object *mc_common_create_thumb_icon(Evas_Object * obj, const char *path, in
 	}
 
 	if ((!path) || !g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR) || !strcmp(BROKEN_ALBUMART_IMAGE_PATH, path)) {
-		path = DEFAULT_THUMBNAIL;
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		path = g_strdup(default_thumbnail);
 	}
 	elm_image_file_set(thumbnail, path, NULL);
 

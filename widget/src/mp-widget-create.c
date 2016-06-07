@@ -27,15 +27,15 @@
 #include <notification.h>
 #include <dirent.h>
 #include <unistd.h>
-#include "mp_widget.h"
-#include "mp_widget_debug.h"
 #include "mp-common-defs.h"
 #include "mp-resource.h"
 #include "mp-define.h"
+#include "mp_widget.h"
+#include "mp_widget_debug.h"
 
 #define WIDGET_HEIGHT 500
 #define WIDGET_WIDTH 712
-#define EDJE_FILE "edje/musicwidget.edj"
+#define EDJE_FILE "music_widget.edj"
 #define APP_ID "org.tizen.music-player"
 #define MP_LB_EVENT_KEY "LiveboxEvent"
 #define MP_LB_EVENT_PLAY_CLICKED "OnLBPlayClicked"
@@ -47,7 +47,7 @@
 #define domain_name "music-player"
 
 #define BROKEN_ALBUMART_IMAGE_PATH		"/opt/usr/share/media/.thumb/thumb_default.png"
-#define DEFAULT_ALBUM_ART_ICON SHAREDDIR"/res/shared_images/default_albumart.png"
+#define DEFAULT_ALBUM_ART_ICON 			"default_albumart.png"
 #define NOW_PLAYING_INI_PATH "NowPlayingStatus"
 
 static Eina_Bool is_play = EINA_FALSE;
@@ -63,19 +63,6 @@ void mp_widget_key_down_cb(void *data, Evas *evas, Evas_Object *obj,
                            void *event_info)
 {
 	elm_exit();
-}
-
-void mp_widget_app_get_resource(const char *edj_file_in, char *edj_path_out,
-                                int edj_path_max)
-{
-	char *res_path = app_get_resource_path();
-	if (res_path) {
-		snprintf(edj_path_out, edj_path_max, "%s%s", res_path,
-		         edj_file_in);
-	}
-	if (res_path) {
-		free(res_path);
-	}
 }
 
 static void mp_widget_read_ini_file_ecore(void *data, char *path)
@@ -170,11 +157,11 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 					if (!strcmp(BROKEN_ALBUMART_IMAGE_PATH, image_path)) {
 						free(image_path);
 						image_path = NULL;
-						image_path = (char*)malloc((strlen(DEFAULT_ALBUM_ART_ICON) + 1) * sizeof(char));
-						if (image_path != NULL) {
-							strncpy(image_path, DEFAULT_ALBUM_ART_ICON, strlen(DEFAULT_ALBUM_ART_ICON));
-							image_path[strlen(DEFAULT_ALBUM_ART_ICON)] = '\0';
-						}
+						char *shared_path = app_get_shared_resource_path();
+						char default_icon[1024] = {0};
+						snprintf(default_icon, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_ALBUM_ART_ICON);
+						free(shared_path);
+						image_path = g_strdup(default_icon);
 					}
 				}
 			}
@@ -192,12 +179,13 @@ static void mp_widget_read_ini_file_ecore(void *data, char *path)
 
 		if (!elm_image_file_set(image_object, image_path, NULL)) {
 			free(image_path);
-			image_path = (char*)malloc((strlen(DEFAULT_ALBUM_ART_ICON) + 1) * sizeof(char));
-			if (image_path != NULL) {
-				strncpy(image_path, DEFAULT_ALBUM_ART_ICON, strlen(DEFAULT_ALBUM_ART_ICON));
-				image_path[strlen(DEFAULT_ALBUM_ART_ICON)] = '\0';
-				elm_image_file_set(image_object, image_path, NULL);
-			}
+			image_path = NULL;
+			char *shared_path = app_get_shared_resource_path();
+			char default_icon[1024] = {0};
+			snprintf(default_icon, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_ALBUM_ART_ICON);
+			free(shared_path);
+			image_path = g_strdup(default_icon);
+			elm_image_file_set(image_object, image_path, NULL);
 		}
 
 		elm_image_aspect_fixed_set(image_object, EINA_FALSE);
@@ -258,7 +246,7 @@ static void mp_widget_read_ini_file(char *path, void *data)
 	if (!file) {
 		__create_read_ini_file();
 		ERROR_TRACE("ERROR VAlUE is (%d)", strerror_r(errno, buffer, 1000));
-		ERROR_TRACE("Failed to open file(%s)", buffer);
+		ERROR_TRACE("Failed to open %s file", path);
 		elm_object_signal_emit(layout, "no_music", "elm");
 		return;
 	}
@@ -346,12 +334,12 @@ static void mp_widget_read_ini_file(char *path, void *data)
 
 	image_object = elm_image_add(layout);
 	if (!elm_image_file_set(image_object, image_path, NULL)) {
-		image_path = (char*)malloc((strlen(DEFAULT_ALBUM_ART_ICON) + 1) * sizeof(char));
-		if (image_path) {
-			strncpy(image_path, DEFAULT_ALBUM_ART_ICON, strlen(DEFAULT_ALBUM_ART_ICON));
-			image_path[strlen(DEFAULT_ALBUM_ART_ICON)] = '\0';
-			elm_image_file_set(image_object, image_path, NULL);
-		}
+		char *shared_path = app_get_shared_resource_path();
+		char default_icon[1024] = {0};
+		snprintf(default_icon, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_ALBUM_ART_ICON);
+		free(shared_path);
+		image_path = g_strdup(default_icon);
+		elm_image_file_set(image_object, image_path, NULL);
 	}
 
 	elm_image_aspect_fixed_set(image_object, EINA_FALSE);
@@ -825,8 +813,16 @@ int mp_widget_create(WidgetData* data, int w, int h)
 	}
 	data->layout = layout;
 
-	mp_widget_app_get_resource(EDJE_FILE, edj_path, (int)PATH_MAX);
-	elm_layout_file_set(layout, edj_path, "mp_widget_main");
+	char *res_path = app_get_resource_path();
+	DEBUG_TRACE("Resource Path is: %s", res_path);
+	if (res_path == NULL) {
+		return -1;
+	}
+	snprintf(edj_path, PATH_MAX, "%s%s", res_path, EDJE_FILE);
+	free(res_path);
+
+	Eina_Bool fileSet = elm_layout_file_set(layout, edj_path, "mp_widget_main");
+	DEBUG_TRACE("Widget Layout File Set: %d", fileSet);
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	if ((elm_config_scale_get() - 1.7) < 0.0001) {
@@ -878,6 +874,7 @@ int mp_widget_create(WidgetData* data, int w, int h)
 	elm_object_signal_callback_add(layout, "mouse,down,1",
 	                               "track_next_image", mp_widget_click_on_next_cb,
 	                               (void *)data);
+
 
 	return 0;
 }

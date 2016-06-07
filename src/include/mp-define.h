@@ -54,9 +54,7 @@
 
 #define DOMAIN_NAME "music-player"
 #define SYS_DOMAIN_NAME "sys_string"
-#ifndef LOCALE_DIR
-#define LOCALE_DIR LOCALEDIR
-#endif
+#define LOCALE_DIR "locale"
 #ifndef GET_STR
 #define GET_STR(str) (char *)mp_util_get_text(str)
 #endif

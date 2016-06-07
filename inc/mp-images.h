@@ -17,33 +17,33 @@
 
 //2 icons directly installed to res/image
 #define ICON_DIRECTORY      SHAREDDIR"/res/shared_images"
-#define MORE_BTN_DIR "more icon"
+#define MORE_BTN_DIR 		"more icon"
 #define STORAGE_TYPE_DIR	"storage_type"
 
 
-#define MP_LITE_PAUSE_ICON  "lite/play_list_control_pause.png"
-#define MP_LITE_PLAY_ICON   "lite/play_list_control_play.png"
-#define MP_LITE_SHUFFLE_ICON   "lite/Icon/play_icon_shuffle.png"
-#define MP_LITE_REORDER_ICON   "lite/core_button_reorder.png"
+#define MP_LITE_PAUSE_ICON  	"lite/play_list_control_pause.png"
+#define MP_LITE_PLAY_ICON   	"lite/play_list_control_play.png"
+#define MP_LITE_SHUFFLE_ICON   	"lite/Icon/play_icon_shuffle.png"
+#define MP_LITE_REORDER_ICON   	"lite/core_button_reorder.png"
 
-#define NOCONTENT_MULTIMEDIA		ICON_DIRECTORY"/T02_Nocontents_multimedia.png"
+#define NOCONTENT_MULTIMEDIA		"T02_Nocontents_multimedia.png"
 
 #define THUMBNAIL_MOST_PLAYED   	ICON_DIRECTORY"/T02_playlist_most_played.png"
-#define THUMBNAIL_RECENTLY_PLAYED       ICON_DIRECTORY"/T02_playlist_recently_played.png"
+#define THUMBNAIL_RECENTLY_PLAYED   ICON_DIRECTORY"/T02_playlist_recently_played.png"
 #define THUMBNAIL_RECENTLY_ADDED   	ICON_DIRECTORY"/T02_playlist_recently_added.png"
 #define THUMBNAIL_QUICK_LIST   		ICON_DIRECTORY"/T02_playlist_starred.png"
 
-#define LIVE_THUMBNAIL_MOST_PLAYED   	ICON_DIRECTORY"/2x2_music_yellow.png"
-#define LIVE_THUMBNAIL_RECENTLY_PLAYED  ICON_DIRECTORY"/2x2_music_green.png"
-#define LIVE_THUMBNAIL_RECENTLY_ADDED   ICON_DIRECTORY"/2x2_music_blue.png"
-#define LIVE_THUMBNAIL_QUICK_LIST   	ICON_DIRECTORY"/2x2_music_red.png"
+#define LIVE_THUMBNAIL_MOST_PLAYED   	"2x2_music_yellow.png"
+#define LIVE_THUMBNAIL_RECENTLY_PLAYED  "2x2_music_green.png"
+#define LIVE_THUMBNAIL_RECENTLY_ADDED   "2x2_music_blue.png"
+#define LIVE_THUMBNAIL_QUICK_LIST   	"2x2_music_red.png"
 
-#define LIVE_ICON_MOST_PLAYED   	ICON_DIRECTORY"/music_icon_most.png"
-#define LIVE_ICON_RECENTLY_PLAYED       ICON_DIRECTORY"/music_icon_recently_play.png"
-#define LIVE_ICON_RECENTLY_ADDED   	ICON_DIRECTORY"/music_icon_recently_add.png"
-#define LIVE_ICON_QUICK_LIST   		ICON_DIRECTORY"/music_icon_favourites.png"
+#define LIVE_ICON_MOST_PLAYED   	"music_icon_most.png"
+#define LIVE_ICON_RECENTLY_PLAYED   "music_icon_recently_play.png"
+#define LIVE_ICON_RECENTLY_ADDED   	"music_icon_recently_add.png"
+#define LIVE_ICON_QUICK_LIST   		"music_icon_favourites.png"
 
-#define MP_ICON_ALLSHARE_FOLDER	ICON_DIRECTORY"/allshare/myfile_icon_folder.png"
+#define MP_ICON_ALLSHARE_FOLDER	"myfile_icon_folder.png"
 
 
 //2  icons included in edj file

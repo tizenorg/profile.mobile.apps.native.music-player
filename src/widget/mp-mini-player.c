@@ -573,11 +573,15 @@ mp_mini_player_refresh(void *data)
 	MP_CHECK(current_item);
 
 	/* albumart */
-	const char *albumart_path = NULL;
+	char *albumart_path = NULL;
 	if (ad->current_track_info && mp_util_is_image_valid(ad->evas, ad->current_track_info->thumbnail_path)) {
 		albumart_path = ad->current_track_info->thumbnail_path;
 	} else {
-		albumart_path = DEFAULT_THUMBNAIL;
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		albumart_path = g_strdup(default_thumbnail);
 	}
 
 	DEBUG_TRACE("albumart = %s", albumart_path);

@@ -913,7 +913,11 @@ Evas_Object *mp_widget_lock_icon_create(Evas_Object *obj, const char *thumbpath)
 	if (thumbpath != NULL) {
 		elm_image_file_set(thumb, thumbpath, NULL);
 	} else {
-		elm_image_file_set(thumb, DEFAULT_THUMBNAIL, NULL);
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		elm_image_file_set(thumb, default_thumbnail, NULL);
 	}
 
 	elm_object_part_content_set(layout, "default_thumbnail", thumb);

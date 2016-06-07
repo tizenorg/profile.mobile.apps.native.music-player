@@ -85,17 +85,20 @@ static char *_mp_media_info_get_live_auto_playlist_icon_by_name(const char *name
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char *icon_path = NULL;
+	char icon_path[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
-		icon_path = LIVE_ICON_QUICK_LIST;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_QUICK_LIST);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
-		icon_path = LIVE_ICON_RECENTLY_PLAYED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_RECENTLY_PLAYED);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
-		icon_path = LIVE_ICON_RECENTLY_ADDED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_RECENTLY_ADDED);
 	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
-		icon_path = LIVE_ICON_MOST_PLAYED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_MOST_PLAYED);
 	}
+
+	free(shared_path);
 
 	return icon_path;
 }
@@ -104,17 +107,19 @@ static char *_mp_media_info_get_live_auto_playlist_thumbnail_by_name(const char 
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char *thumb_path = NULL;
+	char thumb_path[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
-		thumb_path = LIVE_THUMBNAIL_QUICK_LIST;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_QUICK_LIST);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
-		thumb_path = LIVE_THUMBNAIL_RECENTLY_PLAYED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_RECENTLY_PLAYED);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
-		thumb_path = LIVE_THUMBNAIL_RECENTLY_ADDED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_RECENTLY_ADDED);
 	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
-		thumb_path = LIVE_THUMBNAIL_MOST_PLAYED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_MOST_PLAYED);
 	}
+	free(shared_path);
 
 	return thumb_path;
 }

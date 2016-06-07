@@ -73,7 +73,11 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		if (mc_check_image_valid(evas_object_evas_get(obj), thumbpath)) {
 			elm_bg_file_set(content, thumbpath, NULL);
 		} else {
-			elm_bg_file_set(content, DEFAULT_THUMBNAIL, NULL);
+			char default_thumbnail[1024] = {0};
+			char *shared_path = app_get_shared_resource_path();
+			snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+			free(shared_path);
+			elm_bg_file_set(content, default_thumbnail, NULL);
 		}
 	}
 

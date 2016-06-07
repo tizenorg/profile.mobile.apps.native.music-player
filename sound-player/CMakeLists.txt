@@ -27,7 +27,7 @@ pkg_check_modules(sp_pkgs REQUIRED
     storage
     vconf
     efl-extension
-   # ecore-x
+#   ecore-x
     edje
     evas
 	capi-appfw-application
@@ -113,9 +113,9 @@ SET(SRCS
 
 	${CMAKE_SOURCE_DIR}/src/view/mp-view.c
 	${CMAKE_SOURCE_DIR}/src/view/mp-player-view.c
-	#${CMAKE_SOURCE_DIR}/src/view/mp-lyric-view.c
+#	${CMAKE_SOURCE_DIR}/src/view/mp-lyric-view.c
 	${CMAKE_SOURCE_DIR}/src/view/mp-detail-view.c
-	#${CMAKE_SOURCE_DIR}/src/view/mp-set-as-view.c
+#	${CMAKE_SOURCE_DIR}/src/view/mp-set-as-view.c
 
 	${CMAKE_SOURCE_DIR}/src/widget/mp-smart-event-box.c
 	${CMAKE_SOURCE_DIR}/src/widget/mp-popup.c

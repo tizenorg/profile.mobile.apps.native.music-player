@@ -1,8 +1,8 @@
 # install edj
-ADD_CUSTOM_TARGET(musicwidget.edj
+ADD_CUSTOM_TARGET(music_widget.edj
 		COMMAND edje_cc -id ${CMAKE_CURRENT_SOURCE_DIR}/images ${EDJE_CFLAGS}
-		${CMAKE_CURRENT_SOURCE_DIR}/music_widget.edc musicwidget.edj
+		${CMAKE_CURRENT_SOURCE_DIR}/music_widget.edc music_widget.edj
 		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/music_widget.edc
 )
-ADD_DEPENDENCIES(${PROJECT_NAME} musicwidget.edj)
-INSTALL(FILES musicwidget.edj DESTINATION ${EDJDIR})
+ADD_DEPENDENCIES(${PROJECT_NAME} music_widget.edj)
+INSTALL(FILES music_widget.edj DESTINATION ${PREFIX}/widget/res)

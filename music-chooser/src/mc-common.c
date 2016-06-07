@@ -62,7 +62,7 @@ void mc_common_push_track_view_by_group_name(void *data, int track_type, const c
 	if (path == NULL) {
 		return;
 	}
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	Evas_Object *navi_layout = mc_common_load_edj(ad->navi_bar, mc_edj_path, "view_layout_tabbar");
 	g_navi_it = elm_naviframe_top_item_get(ad->navi_bar);
@@ -544,7 +544,7 @@ Evas_Object *mc_common_create_processing_popup(void *data)
 	char mc_edj_path[1024] = {0};
 	char *path = app_get_resource_path();
 	MP_CHECK_NULL(path);
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	Evas_Object *layout = elm_layout_add(popup);
 	elm_layout_file_set(layout, mc_edj_path, "popup_processingview_1button");

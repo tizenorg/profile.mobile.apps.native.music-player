@@ -51,6 +51,7 @@ SET(EXTRA_CXXFLAGS "${EXTRA_CXXFLAGS} -fvisibility=hidden -Wall")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${EXTRA_CXXFLAGS}")
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CMAKE_CXX_FLAGS} -Wno-format-extra-args")
 SET(CMAKE_LDFLAGS "-Wl,-zdefs" )
+ADD_DEFINITIONS("-DDOMAIN_NAME=\"org.tizen.music-chooser\"")
 ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
 ADD_DEFINITIONS("-DMC_MUSIC_PLAYER")
 ADD_DEFINITIONS("-DMC_ENABLE_TAB")
@@ -65,22 +66,24 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${pkgs_LDFLAGS} -lm)
 SET(BINDIR "${MC_PREFIX}/bin")
 
 # set extra defines
-SET(IMAGES_DIR "${MC_PREFIX}/res/edje/music-chooser")
-SET(MC_EDJ_NAME "${MC_PREFIX}/res/edje/music-chooser.edj")
+SET(IMAGES_DIR "${MC_PREFIX}/res/music-chooser")
+SET(MC_EDJ_NAME "${MC_PREFIX}/res/music-chooser.edj")
 ADD_DEFINITIONS("-DPREFIX=\"${CMAKE_INSTALL_PREFIX}\"")
 ADD_DEFINITIONS("-DIMAGES_DIR=\"${IMAGES_DIR}\"")
 ADD_DEFINITIONS("-DMC_EDJ_NAME=\"${MC_EDJ_NAME}\"")
 ADD_CUSTOM_TARGET(music-chooser.edj
 		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/images
-		${CMAKE_CURRENT_SOURCE_DIR}/layout/music-chooser.edc
-		${CMAKE_BINARY_DIR}/res/edje/music-chooser.edj
-		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/layout/music-chooser.edc
+		${CMAKE_CURRENT_SOURCE_DIR}/res/music-chooser.edc
+		${CMAKE_BINARY_DIR}/res/music-chooser.edj
+		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/res/music-chooser.edc
 )
 ADD_DEPENDENCIES(${PROJECT_NAME} music-chooser.edj)
 
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${BINDIR})
 INSTALL(DIRECTORY DESTINATION ${DATADIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/music-chooser.edj DESTINATION ${MC_PREFIX}/res/edje)
+INSTALL(DIRECTORY DESTINATION ${MC_PREFIX}/shared/res/shared_images)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/shared/res/shared_images/default_album_art_120.png DESTINATION ${MC_PREFIX}/shared/res/shared_images)
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/music-chooser.edj DESTINATION ${MC_PREFIX}/res)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/org.tizen.music-chooser.xml DESTINATION ${SHARE_DIR})
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/music-chooser.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})
 

@@ -538,6 +538,7 @@ mp_common_create_more_ctxpopup(void *view)
 	return popup;
 }
 
+#ifndef MP_SOUND_PLAYER
 static Eina_Bool
 _mp_timer_delay_cb(void *data)
 {
@@ -582,6 +583,7 @@ _mp_timer_delay_cb(void *data)
 
 	return ECORE_CALLBACK_DONE;
 }
+#endif
 
 static void _mp_common_set_label_for_detail(Evas_Object *pBox, char *szString)
 {
@@ -606,7 +608,7 @@ static void _mp_common_set_label_for_detail(Evas_Object *pBox, char *szString)
 
 }
 
-
+#ifndef MP_SOUND_PLAYER
 static void _mp_common_list_track_more_detail(void *parent, void *data)
 {
 	MpList_t *list = data;
@@ -1046,6 +1048,7 @@ void mp_common_list_update_albumart_cb(void *data, Evas_Object * obj, void *even
 		sel_list = NULL;
 	}
 }
+#endif
 
 /*
 **	start_playback : if it is set true, either playing a file from start or resume playing
@@ -1402,6 +1405,7 @@ static void _search_by_internet(const char *keyword)
 	app_control_destroy(app_control);
 }
 
+#ifndef MP_SOUND_PLAYER
 static void _searcy_by_music_app(const char *keyword)
 {
 	startfunc;
@@ -1454,6 +1458,7 @@ mp_common_search_by(const char *keyword)
 		++i;
 	}
 }
+#endif
 
 MpView_t *mp_common_get_all_view()
 {
@@ -1465,6 +1470,7 @@ MpView_t *mp_common_get_all_view()
 	return all_view;
 }
 
+#ifndef MP_SOUND_PLAYER
 void mp_common_show_add_tracks_view(int playlist_id)
 {
 	MpViewMgr_t *view_manager = mp_view_mgr_get_view_manager();
@@ -1483,6 +1489,7 @@ void mp_common_show_add_tracks_view(int playlist_id)
 	mp_list_view_set_done_btn((MpListView_t*)view, true, MP_DONE_ADD_TRACK_TYPE);
 
 }
+#endif
 
 static void
 _mp_common_playlist_item_change_callback(mp_plst_item *item, void *userdata)
@@ -1587,7 +1594,11 @@ mp_common_playlist_album_update(mp_media_info_h playlist_handle)
 	mp_media_info_get_thumbnail_path(media_info, &path);
 
 	if (!path || !g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR) || !strcmp(BROKEN_ALBUMART_IMAGE_PATH, path)) {
-		path = DEFAULT_THUMBNAIL;
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		path = g_strdup(default_thumbnail);
 	}
 
 	mp_media_info_playlist_set_thumbnail_path(playlist_handle, path);
@@ -2223,6 +2234,7 @@ void mp_common_create_initial_view(void *appdata, app_control_h app_control, int
 
 }
 
+#ifndef MP_SOUND_PLAYER
 /*used for long press playall*/
 static void
 _mp_common_selected_item_data_get(void *thiz, GList **selected)
@@ -2419,6 +2431,7 @@ void mp_common_playlist_rename_cb(void *data, Evas_Object *obj, void *event_info
 		mp_edit_playlist_content_create(mp_playlist_data);
 	}
 }
+#endif
 
 int mp_common_get_playlist_totaltime(mp_track_type_e track_type, int playlist_id, int count)
 {
@@ -2453,17 +2466,19 @@ static char *_mp_media_info_get_live_auto_playlist_thumbnail_by_name(const char 
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char *thumb_path = NULL;
+	char thumb_path[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
-		thumb_path = LIVE_THUMBNAIL_QUICK_LIST;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_QUICK_LIST);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
-		thumb_path = LIVE_THUMBNAIL_RECENTLY_PLAYED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_RECENTLY_PLAYED);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
-		thumb_path = LIVE_THUMBNAIL_RECENTLY_ADDED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_RECENTLY_ADDED);
 	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
-		thumb_path = LIVE_THUMBNAIL_MOST_PLAYED;
+		snprintf(thumb_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_THUMBNAIL_MOST_PLAYED);
 	}
+	free(shared_path);
 
 	return thumb_path;
 }
@@ -2472,17 +2487,20 @@ static char *_mp_media_info_get_live_auto_playlist_icon_by_name(const char *name
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char *icon_path = NULL;
+	char icon_path[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
-		icon_path = LIVE_ICON_QUICK_LIST;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_QUICK_LIST);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_PLAYED)) {
-		icon_path = LIVE_ICON_RECENTLY_PLAYED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_RECENTLY_PLAYED);
 	} else if (!g_strcmp0(name, STR_MP_RECENTLY_ADDED)) {
-		icon_path = LIVE_ICON_RECENTLY_ADDED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_RECENTLY_ADDED);
 	} else if (!g_strcmp0(name, STR_MP_MOST_PLAYED)) {
-		icon_path = LIVE_ICON_MOST_PLAYED;
+		snprintf(icon_path, 1024, "%s%s/%s", shared_path, "shared_images", LIVE_ICON_MOST_PLAYED);
 	}
+
+	free(shared_path);
 
 	return icon_path;
 }
@@ -2551,6 +2569,7 @@ void mp_common_add_to_home_cb(void *data, Evas_Object * obj, void *event_info)
 }
 #endif
 
+#ifndef MP_SOUND_PLAYER
 #ifdef MP_FEATURE_PERSONAL_PAGE
 all_in_personal_e mp_common_is_all_in_personal_page(Evas_Object *genlist)
 {
@@ -2690,7 +2709,6 @@ mp_common_longpress_private_move_cb(void *data, Evas_Object * obj, void *event_i
 
 #endif
 
-#ifndef MP_SOUND_PLAYER
 void mp_common_force_close_delete()
 {
 	Ecore_Thread *delete_thread = (Ecore_Thread *)mp_edit_get_delete_thread();

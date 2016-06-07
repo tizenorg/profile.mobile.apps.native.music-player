@@ -84,6 +84,7 @@ int widget_Destroy(widget_context_h context, widget_app_destroy_type_e reason, b
 		// Save the current status at the bundle object.
 	}
 #endif
+	DEBUG_TRACE("Widget Destroy");
 	WidgetData *widget_data = NULL;
 
 	widget_data = (WidgetData *)getWidgetData(context);
@@ -111,16 +112,19 @@ int widget_Destroy(widget_context_h context, widget_app_destroy_type_e reason, b
 
 int widget_Pause(widget_context_h context, void *data)
 {
+	DEBUG_TRACE("Widget Pause");
 	return WIDGET_ERROR_NONE;
 }
 
 int widget_Resume(widget_context_h context, void *data)
 {
+	DEBUG_TRACE("Widget Resume");
 	return WIDGET_ERROR_NONE;
 }
 
 int widget_Resize(widget_context_h context, int w, int h, void *data)
 {
+	DEBUG_TRACE("Widget Resize");
 	WidgetData *widget_data = NULL;
 
 	widget_data = (WidgetData *)getWidgetData(context);
@@ -137,6 +141,7 @@ int widget_Resize(widget_context_h context, int w, int h, void *data)
 
 int widget_Update(widget_context_h context, bundle *content, int force, void *data)
 {
+	DEBUG_TRACE("Widget Update");
 	return WIDGET_ERROR_NONE;
 }
 

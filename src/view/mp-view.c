@@ -132,7 +132,11 @@ static int _mp_view_update_nowplaying(void *thiz, bool with_title)
 	if (mp_util_is_image_valid(ad->evas, info->thumbnail_path)) {
 		thumbpath = info->thumbnail_path;
 	} else {
-		thumbpath = DEFAULT_THUMBNAIL;
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		thumbpath = g_strdup(default_thumbnail);
 	}
 
 	if (!view->nowplaying_bar) {

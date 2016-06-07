@@ -224,6 +224,7 @@ mc_app_control(app_control_h app_control, void* data)
 		return;
 	}
 	snprintf(locale_path, 1024, "%s%s", path, LOCALE_DIR);
+	DEBUG_TRACE("locale_path is: %s", locale_path);
 	bindtextdomain(DOMAIN_NAME, locale_path);
 	free(path);
 

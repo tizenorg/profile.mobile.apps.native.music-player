@@ -189,7 +189,7 @@ Evas_Object *_create_tabbar(Evas_Object *parent, struct app_data *ad)
 	char mc_edj_path[1024] = {0};
 	char *path = app_get_resource_path();
 	MP_CHECK_NULL(path);
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	elm_theme_extension_add(NULL, mc_edj_path);
 	elm_object_style_set(obj, "scroll/tabbar");
@@ -262,7 +262,7 @@ mc_library_view_create(struct app_data *ad)
 		if (path == NULL) {
 			return;
 		}
-		snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+		snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 		free(path);
 		g_ly = mc_common_load_edj(ad->navi_bar, mc_edj_path, "view_layout_tabbar");
 		g_navi_it = elm_naviframe_item_push(ad->navi_bar, NULL, NULL, NULL, g_ly, NULL);

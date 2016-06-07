@@ -185,6 +185,7 @@ fi
 %{PREFIX}/shared/res/*
 %{PREFIX}/shared/data
 %{PREFIX}/data
+%{PREFIX}/res/*.edj
 %{PREFIX}/lib/*.so*
 %{_app_license_dir}/%{name}
 
@@ -199,7 +200,8 @@ fi
 %{MC_PREFIX}/res/locale/*/LC_MESSAGES/*.mo
 %defattr(-,root,root,-)
 %{MC_PREFIX}/bin/*
-%{MC_PREFIX}/res/edje/music-chooser.edj
+%{MC_PREFIX}/shared/res/*
+%{MC_PREFIX}/res/music-chooser.edj
 %{TZ_SYS_RO_ICONS}/default/small/music-chooser.png
 
 #END_START_PUBLIC_REMOVED_STRING

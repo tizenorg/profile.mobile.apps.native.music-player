@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.music-player-widget" version="1.0.0">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.music-player" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.music-player-widget" exec="music-player-widget" launch_mode="single" multiple="false" nodisplay="false" taskmanage="true" type="capp">
-        <label>widget</label>
-        <icon>widget.png</icon>
-    </ui-application>
+    <widget-application appid="org.tizen.music-player.widget" exec="music-player-widget" main="false" update-period="60">
+        <label>Music player</label>
+        <label xml:lang="hy-am">Նվագարկիչ</label>
+	<label xml:lang="az-az">Pleyer</label>
+	<label xml:lang="eu-es">Musika Jogailua</label>
+	<label xml:lang="bg-bg">Музикален плейър</label>
+	<label xml:lang="ca-es">Reproductor de música</label>
+	<label xml:lang="zh-cn">音乐播放器</label>
+	<label xml:lang="zh-hk">音樂播放器</label>
+	<label xml:lang="zh-tw">音樂播放器</label>
+	<label xml:lang="hr-hr">Music Player</label>
+	<label xml:lang="cs-cz">Hudební přehrávač</label>
+	<label xml:lang="da-dk">Musikafspiller</label>
+	<label xml:lang="nl-nl">MP3-speler</label>
+	<label xml:lang="en-gb">Music Player</label>
+	<label xml:lang="en-us">Music Player</label>
+	<label xml:lang="et-ee">MP3-mängija</label>
+	<label xml:lang="fi-fi">Musiikki</label>
+	<label xml:lang="fr-fr">Lecteur MP3</label>
+	<label xml:lang="gl-es">Reprodutor de Música</label>
+	<label xml:lang="ka-ge">პლეერი</label>
+	<label xml:lang="de-de">MP3-Player</label>
+	<label xml:lang="el-gr">Μουσική</label>
+	<label xml:lang="hu-hu">Zenelejátszó</label>
+	<label xml:lang="is-is">Tónlistarspilari</label>
+	<label xml:lang="ga-ie">Seinnteoir Ceoil</label>
+	<label xml:lang="it-it">Lettore musicale</label>
+	<label xml:lang="ja-jp">音楽</label>
+	<label xml:lang="kk-kz">Музыкалық плейер</label>
+	<label xml:lang="ko-kr">뮤직</label>
+	<label xml:lang="lv-lv">Mūzikas Atskaņotājs</label>
+	<label xml:lang="lt-lt">Muzikos grotuvas</label>
+	<label xml:lang="mk-mk">Плеер за музика</label>
+	<label xml:lang="nb-no">Musikk-spiller</label>
+	<label xml:lang="pl-pl">Odtwarzacz muzyki</label>
+	<label xml:lang="pt-pt">Leitor de Música</label>
+	<label xml:lang="pt-br">Music Player</label>
+	<label xml:lang="ro-ro">Player muzical</label>
+	<label xml:lang="ru-ru">Музыка</label>
+	<label xml:lang="sr-rs">Muzički plejer</label>
+	<label xml:lang="sk-sk">Prehrávač hudby</label>
+	<label xml:lang="sl-si">Predvajalnik glasbe</label>
+	<label xml:lang="es-es">Música</label>
+	<label xml:lang="es-us">Música</label>
+	<label xml:lang="sv-se">Musikspelare</label>
+	<label xml:lang="tr-tr">Müzik Çalar</label>
+	<label xml:lang="uk-ua">Музичний плеєр</label>
+	<label xml:lang="uz-uz">Musiqa pleyeri</label>
+	<label xml:lang="ar-ae">مشغل الموسيقى</label>
+	<label xml:lang="zh-sg">音樂播放器</label>
+	<label xml:lang="hi-in">संगीत प्लेयर</label>
+	<label xml:lang="en-ph">Music Player</label>
+	<label xml:lang="fr-ca">Lecteur de musique</label>
+	<icon>widget.png</icon>
+        <support-size preview="preview_music_4x2.png">4x2</support-size>
+    </widget-application>
 </manifest>

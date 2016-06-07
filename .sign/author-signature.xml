@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fmusic-player">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0We5r+L+zAgxqji5riI0MoqHGs1+PLbXaotz5/JVeH0=</DigestValue>
+<DigestValue>PbK5DKjVMCKTHz0Jyqrt//ZZTUWZUkurNO8lMEi0x5I=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fedc_image_macro.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -36,11 +36,11 @@
 </Reference>
 <Reference URI="res%2Fedje%2Fmp-minicontroller.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0aUmyeppERx7bw2npNG71b84764fyUr6MOMEhxISEs8=</DigestValue>
+<DigestValue>QXEl/uLVYRFLk1pxvrjs+mZmBn3MmYZ8/yWYOrZC/aY=</DigestValue>
 </Reference>
 <Reference URI="res%2Fedje%2Fmusic.edj">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Xl++RiWWZECmtH+YtrO0rZwJ0HNu8HIuIsKNpOyrYSw=</DigestValue>
+<DigestValue>t9sxyWMrBlg30YdRDdHh+vzr5EgCR80PbrjBo2Qo6us=</DigestValue>
 </Reference>
 <Reference URI="res%2Flocale%2Far%2FLC_MESSAGES%2Fmusic-player.mo">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -411,9 +411,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Z9gtN0SB90o1ZYkj/WTX9wxhBRQAKAMZ/KWb6DEfjwJCjlylPn64j551LAOGj204DuepFfopOrX5
-M8YWj2KsPJcm6PjAtl9dZciotv6zwSa4S4P2DMESpxiE10VmTgn9VaqKoi0VzYwdML46+bcJiTD7
-gMkh98nNLn53pK019QI=
+iGPrz4KcChdMja6XpfrsCiGVzJ6D1rhxunRQa1eVhAcUFKkRM4++Q7ZPCGIztwjdwXXE8w6t0TDm
+FzVeH1EwHTkce70XVIQ6xM3CGEkDyXFPjOZSZlQQ710wYDn30isql4O097SRgRC3t57nHULvE+UW
+gSPQfDvq9JZSxeAw8eA=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

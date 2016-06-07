@@ -921,6 +921,7 @@ mp_setting_write_playing_status(char *uri, char *status)
 		mp_setting_remove_now_playing_shared_status();
 	} else {
 		char *path = app_get_data_path();
+		char *shared_path = app_get_shared_resource_path();
 		DEBUG_TRACE("Path is: %s", path);
 		char playing_status[1024] = {0};
 		if (path == NULL) {
@@ -948,7 +949,7 @@ mp_setting_write_playing_status(char *uri, char *status)
 			if (ad->current_track_info->thumbnail_path) {
 				fprintf(fp, "thumbnail=%s\n", ad->current_track_info->thumbnail_path);
 			} else {
-				fprintf(fp, "thumbnail=%s/res/shared_images/default_albumart.png\n", SHAREDDIR);
+				fprintf(fp, "thumbnail=%sshared_images/default_albumart.png\n", shared_path);
 			}
 		}
 #endif

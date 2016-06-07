@@ -28,7 +28,11 @@ mc_widget_no_content_add(Evas_Object *parent, NoContentType_e type)
 	elm_layout_theme_set(nocontents, "layout", "nocontents", "default");
 
 	Evas_Object *icon = elm_image_add(nocontents);
-	elm_image_file_set(icon, NOCONTENT_MULTIMEDIA, NULL);
+	char *shared_path = app_get_shared_resource_path();
+	char nocontent_mm[1024] = {0};
+	snprintf(nocontent_mm, 1024, "%s%s/%s", shared_path, "shared_images", NOCONTENT_MULTIMEDIA);
+	free(shared_path);
+	elm_image_file_set(icon, nocontent_mm, NULL);
 	elm_object_part_content_set(nocontents, "nocontents.image", icon);
 
 	const char *ids;

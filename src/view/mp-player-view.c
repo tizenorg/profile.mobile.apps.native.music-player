@@ -395,6 +395,11 @@ static void _mp_player_view_set_queue_list_btn_icon(void *data)
 	elm_image_fill_outside_set(image, EINA_TRUE);
 	elm_image_file_get(image, &path, &group);
 
+	char default_thumbnail[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
+	snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", PLAYER_VIEW_DETAULT_ALBUM_IMAGE);
+	free(shared_path);
+
 	if (ad->current_track_info && mp_util_is_image_valid(ad->evas,
 	        ad->current_track_info->thumbnail_path) && strcmp(ad->current_track_info->thumbnail_path,
 	                BROKEN_ALBUMART_IMAGE_PATH)) {
@@ -403,10 +408,10 @@ static void _mp_player_view_set_queue_list_btn_icon(void *data)
 		}
 		elm_image_file_set(image, ad->current_track_info->thumbnail_path, NULL);
 	} else {
-		if (!g_strcmp0(path, PLAYER_VIEW_DETAULT_ALBUM_IMAGE)) {
+		if (!g_strcmp0(path, default_thumbnail)) {
 			return;
 		}
-		elm_image_file_set(image, PLAYER_VIEW_DETAULT_ALBUM_IMAGE, NULL);
+		elm_image_file_set(image, default_thumbnail, NULL);
 	}
 
 	endfunc;
@@ -439,7 +444,11 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 		                BROKEN_ALBUMART_IMAGE_PATH)) {
 			elm_image_file_set(image, ad->current_track_info->thumbnail_path, NULL);
 		} else {
-			elm_image_file_set(image, PLAYER_VIEW_DETAULT_ALBUM_IMAGE, NULL);
+			char default_thumbnail[1024] = {0};
+			char *shared_path = app_get_shared_resource_path();
+			snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", PLAYER_VIEW_DETAULT_ALBUM_IMAGE);
+			free(shared_path);
+			elm_image_file_set(image, default_thumbnail, NULL);
 		}
 		elm_image_fill_outside_set(image, EINA_TRUE);
 	} else {
@@ -3527,14 +3536,22 @@ _mp_player_view_create_album_image(Evas_Object *obj, const char *path, int w, in
 	if (path && strcmp(BROKEN_ALBUMART_IMAGE_PATH, path)) {
 		evas_object_image_file_set(thumbnail, path, NULL);
 	} else {
-		evas_object_image_file_set(thumbnail, DEFAULT_PLAYER_THUMBNAIL, NULL);
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_PLAYER_THUMBNAIL);
+		free(shared_path);
+		evas_object_image_file_set(thumbnail, default_thumbnail, NULL);
 	}
 
 	evas_object_image_size_get(thumbnail, &width, &height);
 	evas_object_image_filled_set(thumbnail, true);
 
 	if (width <= 0 || height <= 0) {
-		evas_object_image_file_set(thumbnail, DEFAULT_PLAYER_THUMBNAIL, NULL);
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_PLAYER_THUMBNAIL);
+		free(shared_path);
+		evas_object_image_file_set(thumbnail, default_thumbnail, NULL);
 	}
 	evas_object_image_preload(thumbnail, EINA_TRUE);
 

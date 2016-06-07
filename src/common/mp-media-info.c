@@ -2070,6 +2070,7 @@ int mp_media_info_group_list_create(mp_media_list_h *media_list, mp_group_type_e
 
 		char names[][50] =
 		{ STR_MP_FAVOURITES, STR_MP_RECENTLY_ADDED, STR_MP_MOST_PLAYED, STR_MP_RECENTLY_PLAYED};
+
 		char thumb[][4096] =
 		{ THUMBNAIL_QUICK_LIST, THUMBNAIL_RECENTLY_ADDED, THUMBNAIL_MOST_PLAYED, THUMBNAIL_RECENTLY_PLAYED};
 

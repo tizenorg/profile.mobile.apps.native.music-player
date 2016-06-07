@@ -166,7 +166,12 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		if (mc_check_image_valid(evas_object_evas_get(obj), thumbpath)) {
 			elm_image_file_set(icon, thumbpath, NULL);
 		} else {
-			elm_image_file_set(icon, DEFAULT_THUMBNAIL, NULL);
+			char default_thumbnail[1024] = {0};
+			char *shared_path = app_get_shared_resource_path();
+			DEBUG_TRACE("Chooser Shared Path : %s", shared_path);
+			snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+			free(shared_path);
+			elm_image_file_set(icon, default_thumbnail, NULL);
 		}
 
 		elm_layout_theme_set(content, "layout", "list/B/type.1", "default");
@@ -907,7 +912,7 @@ Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad)
 	char mc_edj_path[1024] = {0};
 	char *path = app_get_resource_path();
 	MP_CHECK_NULL(path);
-	snprintf(mc_edj_path, 1024, "%s%s/%s", path, "edje", MC_EDJ_FILE);
+	snprintf(mc_edj_path, 1024, "%s%s", path, MC_EDJ_FILE);
 	free(path);
 	layout = mc_common_load_edj(parent, mc_edj_path, "list_layout");
 	MP_CHECK_NULL(layout);

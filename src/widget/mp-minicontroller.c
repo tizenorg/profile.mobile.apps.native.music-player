@@ -880,7 +880,11 @@ mp_minicontroller_update(struct appdata *ad, bool with_title)
 		        && strcmp(BROKEN_ALBUMART_IMAGE_PATH, current_item->thumbnail_path)) {
 			elm_image_file_set(ad->minicon_icon, current_item->thumbnail_path, NULL);
 		} else {
-			elm_image_file_set(ad->minicon_icon, DEFAULT_THUMBNAIL_MIDDLE, NULL);
+			char default_thumbnail[1024] = {0};
+			char *shared_path = app_get_shared_resource_path();
+			snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+			free(shared_path);
+			elm_image_file_set(ad->minicon_icon, default_thumbnail, NULL);
 		}
 #ifdef MINICONTROLLER_ENABLE_PROGRESS
 		_mp_minicontroller_update_elapsed_time(ad, true);

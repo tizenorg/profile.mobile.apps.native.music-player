@@ -345,7 +345,7 @@ typedef enum
 	MP_DONE_MAX,
 } mp_done_operator_type_t;
 
-enum
+typedef enum
 {
 	MP_PLAY_STATE_NONE,
 	MP_PLAY_STATE_PLAYING,

@@ -380,7 +380,7 @@ typedef enum
 #define 	MP_ALBUM_LIST_ICON_SIZE 48 * elm_config_scale_get()
 #define 	MP_ARTIST_ALBUM_LIST_ICON_SIZE (64 * elm_config_scale_get())
 #define 	MP_PLAY_VIEW_ARTWORK_SIZE 480 * elm_config_scale_get()
-#define	        MP_LIST_SHUFFLE_ICON_SIZE (36* elm_config_scale_get())
+#define	    MP_LIST_SHUFFLE_ICON_SIZE (36* elm_config_scale_get())
 
 #define 	MP_ARTIST_THUMB_ICON_SIZE	        162
 #define 	MP_LANDSCAPE_ARTIST_THUMB_ICON_SIZE	166

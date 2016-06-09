@@ -818,13 +818,8 @@ _mp_lockscreenmini_title_set(struct appdata *ad)
 		elm_object_text_set(label, title);
 	}
 
-	if (ad->lockmini_visible) {
-		elm_label_slide_mode_set(label, ELM_LABEL_SLIDE_MODE_ALWAYS);
-		elm_label_slide_go(label);
-	} else {
-		elm_label_slide_mode_set(label, ELM_LABEL_SLIDE_MODE_NONE);
-		elm_label_slide_go(label);
-	}
+	elm_label_slide_mode_set(label, ELM_LABEL_SLIDE_MODE_ALWAYS);
+	elm_label_slide_go(label);
 
 	SAFE_FREE(title_shadow);
 	SAFE_FREE(title);

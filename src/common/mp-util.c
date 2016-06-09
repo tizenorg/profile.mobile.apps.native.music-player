@@ -352,10 +352,25 @@ mp_util_create_image(Evas_Object * obj, const char *path, const char *group, int
 		elm_image_fill_outside_set(image, true);
 	}
 
+	elm_image_smooth_set(image, EINA_TRUE);
+	elm_image_aspect_fixed_set(image, EINA_TRUE);
+
 	if (!path) {
 		path = DEFAULT_THUMBNAIL;
 	}
-	elm_image_file_set(image, path, group);
+
+	char mp_image_path[1024] = {0};
+	char *shared_path = app_get_shared_resource_path();
+	if (shared_path) {
+		snprintf(mp_image_path, 1024, "%s%s", shared_path, "shared_images/play_icon_shuffle.png");
+		free(shared_path);
+		DEBUG_TRACE("Shuffle Icon path is: %s", mp_image_path);
+		elm_image_file_set(image, mp_image_path, NULL);
+	} else {
+		elm_image_file_set(image, path, group);
+	}
+
+
 
 	elm_image_resizable_set(image, EINA_TRUE, EINA_TRUE);
 	evas_object_size_hint_align_set(image, EVAS_HINT_FILL, EVAS_HINT_FILL);

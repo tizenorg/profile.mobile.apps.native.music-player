@@ -1108,7 +1108,7 @@
 //macro for lite
 // Normal style
 #define LIST_ITEM_HEIGHT                    120
-#define LIST_ALBUM_DETAIL_ITEM_HEIGHT       120
+#define LIST_ALBUM_DETAIL_ITEM_HEIGHT       50
 #define LIST_PADDING_TOP_SIZE               29   // FIXME: please check font height
 #define LIST_PADDING_BOTTOM_SIZE            24   // FIXME: please check font height
 #define LIST_2LINE_PADDING_TOP_SIZE         24   // FIXME: please check font height

@@ -371,7 +371,7 @@ _mp_album_detail_list_shuffle_icon_get(void *data, Evas_Object * obj, const char
 		evas_object_color_set(icon, 21, 108, 148, 255);
 		free(path);
 
-		elm_layout_theme_set(content, "layout", "list/B/type.3", "default");
+		elm_layout_theme_set(content, "layout", "list/B/music.type.3", "default");
 		elm_layout_content_set(content, "elm.swallow.content", icon);
 
 		return content;

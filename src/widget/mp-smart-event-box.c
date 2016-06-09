@@ -20,7 +20,7 @@
 #include "mp-player-debug.h"
 #include "mp-define.h"
 
-#define SCROLL_THREASHOLD 5
+#define SCROLL_THREASHOLD 20
 #define FLICK_THREASHOLD 5
 
 #ifndef ABS

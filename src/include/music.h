@@ -25,6 +25,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <glib.h>
+#include <notification.h>
 #include <Ecore_IMF.h>
 //#include <Ecore_X.h>
 #include <Edje.h>
@@ -286,6 +287,9 @@ struct appdata
 	Evas_Object *preload_player_view;
 	Ecore_Idler *create_on_play_lay_idler;
 	Ecore_Timer *play_after_transit_timer;
+	Ecore_File_Monitor *monitor;
+
+	notification_h noti;
 
 	Evas_Object *editfiled_new_playlist;
 	Evas_Object *editfiled_entry;

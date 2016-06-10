@@ -224,7 +224,7 @@ void mp_language_mgr_object_item_text_ID_set(Elm_Object_Item *object_item, const
 	obj_item_data *data;
 
 	G_LIST_FOREACH(g_lang_mgr->obj_items, l, data) {
-		if (data->obj_item == object_item) {
+		if (data && data->obj_item == object_item) {
 			data->text_id = text_ID;
 			break;
 		}

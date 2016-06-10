@@ -66,6 +66,7 @@ Evas_Object * 			mp_util_create_selectioninfo_with_count(void *data, int count);
 void mp_util_post_status_message(struct appdata *ad, const char *text);
 void mp_util_post_add_to_playlist_popup_message(int count);
 char *			mp_util_get_new_playlist_name (void);
+void mp_post_notification_indicator(char *status);
 mp_file_delete_err_t mp_util_delete_track(void *data, char *fid, char *file_path);
 
 int				mp_util_share_via_bt(const char *formed_path, int file_cnt);
@@ -76,8 +77,10 @@ char* 			mp_util_isf_get_edited_str(Evas_Object *isf_entry, bool permit_first_bl
 int				mp_util_create_playlist(struct appdata *ad, char *name, mp_playlist_h *playlist_handle);
 
 bool 			mp_util_set_screen_mode(void *data , int mode);
+void mp_noti_read_ini_file(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path);
 
 bool mp_util_launch_browser(const char *url, struct appdata *ad);
+const char *util_get_file_path(const char *relative);
 
 
 #define mp_object_free(obj)	\

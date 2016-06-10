@@ -48,6 +48,7 @@
 
 bool track_deleted = false;
 #define SINGLE_BYTE_MAX 0x7F
+#define PATH_MAX 4096
 
 struct index_s {
 	const char *index;
@@ -860,7 +861,7 @@ mp_util_get_title_from_path(const char *path)
 bool
 mp_util_is_playlist_name_valid(char *name)
 {
-	MP_CHECK_NULL(name);
+	MP_CHECK_FALSE(name);
 
 	char *test_space = strdup(name);
 	if (strlen(g_strchug(test_space)) == 0) {
@@ -920,6 +921,7 @@ mp_util_reset_genlist_mode_item(Evas_Object *genlist)
 		elm_genlist_item_decorate_mode_set(gl_item, "slide", EINA_FALSE);
 		elm_genlist_item_select_mode_set(gl_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
 		mp_list_item_data_t *item_data = elm_object_item_data_get(gl_item);
+		MP_CHECK(item_data);
 		item_data->checked = true;
 	}
 }
@@ -2599,3 +2601,112 @@ mp_dir_e mp_util_get_file_location(const char *uri)
 }
 
 
+const char *util_get_file_path(const char *relative)
+{
+	startfunc;
+	static char buf[PATH_MAX];
+	char *prefix = app_get_shared_resource_path();
+	if (!prefix) {
+		return NULL;
+	}
+
+	DEBUG_TRACE("Shared Path is: %s", prefix);
+
+	size_t res = eina_file_path_join(buf, sizeof(buf), prefix, relative);
+	free(prefix);
+	if (res > sizeof(buf)) {
+		DEBUG_TRACE("Path exceeded PATH_MAX");
+		return NULL;
+	}
+
+	if (!ecore_file_exists(&buf[0]))
+	{
+		DEBUG_TRACE("icon file does not exist!!: %s", &buf[0]);
+		return NULL;
+	}
+	return &buf[0];
+}
+
+
+void mp_post_notification_indicator(char *status)
+{
+	startfunc;
+
+	struct appdata *ad = mp_util_get_appdata();
+	int ret = 0;
+
+	int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
+	notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
+	notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
+	char *path = app_get_shared_resource_path();
+
+	//DEBUG_TRACE("Shared Resource Path is %s", path);
+	char icon_path[1024] = {0};
+
+	if (!strcmp(status, "playing")) {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_play.png", path);
+	} else {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
+	}
+	free(path);
+
+	if(!ad->noti) {
+		DEBUG_TRACE("notification create");
+		notification_delete_all(NOTIFICATION_TYPE_NOTI);
+		ad->noti = notification_create(noti_type);
+		ret = notification_set_image(ad->noti, img_type, icon_path);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification image");
+		}
+		ret = notification_set_display_applist(ad->noti, applist);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the display applist");
+			notification_free(ad->noti);
+			return;
+		}
+		notification_post(ad->noti);
+	} else {
+		ret = notification_set_image(ad->noti, img_type, icon_path);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification image");
+		}
+		notification_update(ad->noti);
+	}
+	DEBUG_TRACE("Icon Path is: %s", icon_path);
+	endfunc;
+}
+
+void mp_noti_read_ini_file(void *data, Ecore_File_Monitor *em, Ecore_File_Event event, const char *path)
+{
+	startfunc;
+	DEBUG_TRACE("Path of file monitor is: %s", path);
+	if (!path) {
+		DEBUG_TRACE("Invalid path information");
+		return;
+	}
+	char str[1000] = {0,};
+	FILE *file = fopen(path, "r");
+
+	char *sptr = NULL;
+	while (fgets(str, sizeof(str), file)) {
+		DEBUG_TRACE("inside while");
+		char *key = NULL;
+		char *value = NULL;
+		key = strtok_r(str, "=", &sptr);
+		value = strtok_r(NULL, "=", &sptr);
+		DEBUG_TRACE("key is: %s and value is: %s", key, value);
+		if (value != NULL) {
+			value[strlen(value) - 1] = '\0';
+		} else {
+			DEBUG_TRACE("value is NULL");
+			continue;
+		}
+
+		if (!strcmp(key, "status")) {
+			mp_post_notification_indicator(value);
+			break;
+		}
+	}
+
+	fclose(file);
+}

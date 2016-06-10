@@ -41,6 +41,7 @@
 /* #include <power.h> */
 #include <device/display.h>
 #include <device/callback.h>
+#include <notification.h>
 #include "mp-minicontroller.h"
 #include "mp-lockscreenmini.h"
 #include "mp-app.h"
@@ -1595,6 +1596,8 @@ mp_terminate(void *data)
 	mp_music_view_mgr_release();
 #endif
 
+	notification_delete(ad->noti);
+	notification_free(ad->noti);
 	return;
 }
 
@@ -1816,6 +1819,20 @@ app_control(app_control_h app_control, void *data)
 		app_control_destroy(reply);
 	}
 	PROFILE_OUT("mp_service");
+
+
+	char *path = app_get_data_path();
+	DEBUG_TRACE("Path is: %s", path);
+	char playing_status[1024] = {0};
+	if (path == NULL) {
+		ERROR_TRACE("unable to get data path");
+	}
+	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	free(path);
+
+	if (ad->monitor == NULL) {
+		ad->monitor = ecore_file_monitor_add(playing_status, mp_noti_read_ini_file, NULL);
+	}
 
 
 #ifdef MP_DEBUG_MODE

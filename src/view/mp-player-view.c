@@ -2964,7 +2964,7 @@ static void _mp_player_view_add_callbacks(void *data)
 	MP_CHECK(view);
 	CHECK_VIEW(view);
 	struct appdata *ad = mp_util_get_appdata();
-
+	MP_CHECK(ad);
 
 #ifdef MP_FEATURE_LANDSCAPE
 	bool landscape = mp_util_is_landscape();

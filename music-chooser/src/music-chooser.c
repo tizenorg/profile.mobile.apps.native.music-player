@@ -344,6 +344,9 @@ mc_destroy(void *data)
 			ecore_pipe_del(ad->smat_pipe);
 			ad->smat_pipe = NULL;
 		}
+
+		notification_delete(ad->noti);
+		notification_free(ad->noti);
 	}
 }
 

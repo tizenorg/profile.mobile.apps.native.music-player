@@ -236,6 +236,9 @@ _mp_edit_playlist_entry_changed_cb(void *data, Evas_Object * obj, void *event_in
 
 	char *name = (char *)elm_entry_entry_get(mp_playlist_data->editfiled_entry);
 	char *szFileName = elm_entry_markup_to_utf8(name);
+	if (!szFileName) {
+		return;
+	}
 
 	int nDstLen = 0;
 	if (!mp_util_is_playlist_name_valid(szFileName)) {

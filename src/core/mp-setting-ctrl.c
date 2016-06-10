@@ -889,9 +889,6 @@ mp_setting_read_playing_status(char *uri, char *status)
 	}
 	DEBUG_TRACE("Data Path is: %s", path);
 	char playing_status[1024] = {0};
-	if (path == NULL) {
-		return -1;
-	}
 	snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 	free(path);
 

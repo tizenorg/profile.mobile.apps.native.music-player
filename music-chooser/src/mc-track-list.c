@@ -111,6 +111,54 @@ static Evas_Object *_gl_select_all_content_get(void *data, Evas_Object *obj, con
 	return NULL;
 }
 
+void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e state)
+{
+	startfunc;
+	MP_CHECK_NULL(it_data);
+	struct app_data *ad = it_data->ad;
+	int ret = 0;
+
+	int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
+	notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
+	notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
+	char *path = app_get_shared_resource_path();
+
+	//DEBUG_TRACE("Shared Resource Path is %s", path);
+	char icon_path[1024] = {0};
+
+	if (state == PLAYER_STATE_PLAYING || state == PLAYER_STATE_IDLE) {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_play.png", path);
+	} else {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
+	}
+	free(path);
+
+	if(!ad->noti) {
+		DEBUG_TRACE("notification create");
+		notification_delete_all(NOTIFICATION_TYPE_NOTI);
+		ad->noti = notification_create(noti_type);
+		ret = notification_set_image(ad->noti, img_type, icon_path);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification image");
+		}
+		ret = notification_set_display_applist(ad->noti, applist);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the display applist");
+			notification_free(ad->noti);
+			return;
+		}
+		notification_post(ad->noti);
+	} else {
+		ret = notification_set_image(ad->noti, img_type, icon_path);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification image");
+		}
+		notification_update(ad->noti);
+	}
+	DEBUG_TRACE("Icon Path is: %s", icon_path);
+	endfunc;
+}
+
 static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *part)
 {
 	char *thumbpath = NULL;
@@ -153,6 +201,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 			} else {
 				elm_object_signal_emit(part_content, "show_pause", "*");
 			}
+			mc_post_notification_indicator(it_data, state);
 
 			//elm_object_item_signal_emit(cur_item_data->it, "show_color" ,"*");
 		}

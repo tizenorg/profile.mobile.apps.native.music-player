@@ -319,6 +319,9 @@ _mc_select_view_init(int type, sel_view_data_t *vd)
 	MP_CHECK(vd);
 
 	itc = elm_genlist_item_class_new();
+	if (!itc) {
+		return;
+	}
 	itc->func.content_get = mc_group_content_get;
 	switch (type) {
 	case MC_SHORTCUT_ALBUM:

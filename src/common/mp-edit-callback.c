@@ -268,6 +268,7 @@ _mp_edit_progress_popup_response_cb(void *data, Evas_Object * obj, void *event_i
 
 		//set selection info && update buttons
 		MpListView_t *view = (MpListView_t *)mp_view_mgr_get_top_view(GET_VIEW_MGR);
+		MP_CHECK(view);
 		bool list_view = false;
 		mp_list_view_is_list_view(view, &list_view);
 		if (list_view && mp_list_get_edit(view->content_to_show)) {

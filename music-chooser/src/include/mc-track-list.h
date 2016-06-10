@@ -19,6 +19,7 @@
 #define __MC_TRACK_LIST_H__
 
 #include <player.h>
+#include <notification.h>
 #include "music-chooser.h"
 #include "mp-media-info.h"
 
@@ -39,6 +40,7 @@ typedef struct
 
 
 Evas_Object *mc_track_list_create(Evas_Object *parent, struct app_data *ad);
+void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e state)
 int mc_track_list_set_data(Evas_Object *list, int track_type, const char *type_str, int playlist_id);
 void mc_track_list_set_uri_selected(void *thiz, const char *uri);
 int mc_track_list_update(Evas_Object *list, Elm_Object_Item *navi_it, Evas_Object *sub_view);

@@ -116,6 +116,19 @@ group {
 				align: 1.0 0.0;
 			}
 		}
+		part {
+			name: "select_all_bg_rect";
+			type: RECT;
+			scale: 1;
+			clip_to: "info_text_bar_clip";
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				color: 255 255 255 255;
+				rel1 { relative: 0 0; to: "info_text_bar_clip"; }
+				rel2 { relative: 1 0.5; to: "info_text_bar_clip"; }
+			}
+		}
 		part { name: "select_all_bg";
 			type: SWALLOW;
 			scale: 1;

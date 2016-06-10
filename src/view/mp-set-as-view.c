@@ -65,6 +65,9 @@ static char *_mp_set_as_view_time_to_string(int time)
 		minutes_fmt = "%d";
 	}
 	char *format = g_strconcat(minutes_fmt, ":", seconds_fmt, NULL);
+	if (!format) {
+		return NULL;
+	}
 	char *total_txt = g_strdup_printf(format, minutes, seconds);
 	IF_FREE(format);
 	return total_txt;

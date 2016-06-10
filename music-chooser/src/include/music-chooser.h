@@ -23,6 +23,7 @@
 #include <libintl.h>
 #include <app_control.h>
 #include <app.h>
+#include <notification.h>
 
 #include "mc-debug.h"
 #include "mp-common-defs.h"
@@ -92,6 +93,7 @@ struct app_data
 	Evas_Object *base_layout;
 	Evas_Object *navi_bar;
 	int max_count;
+	notification_h noti;
 
 	char *select_uri;
 	ug_type select_type;

@@ -22,6 +22,7 @@
 #include <unistd.h>
 #include "assert.h"
 #include <linux/unistd.h>
+#define LOG_TAG "MUSIC_WIDGET"
 
 
 #define gettid() syscall(__NR_gettid)

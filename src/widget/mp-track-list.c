@@ -466,7 +466,11 @@ _mp_track_list_albumart_index_list_append(MpTrackList_t *list, const mp_media_in
 	char *path = NULL;
 	mp_media_info_get_thumbnail_path(media, &path);
 	if (path == NULL || strlen(path) == 0) {
-		path = g_strdup(DEFAULT_THUMBNAIL);
+		char default_thumbnail[1024] = {0};
+		char *shared_path = app_get_shared_resource_path();
+		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
+		free(shared_path);
+		path = g_strdup(default_thumbnail);
 	}
 	MP_CHECK(path);
 	//mp_debug("path = %s", path);

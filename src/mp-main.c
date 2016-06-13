@@ -502,7 +502,11 @@ static bool _parse_widget_event(bundle *b, bool *activate_window)
 		mp_common_create_playlist_mgr();
 		mp_playlist_mgr_clear(ad->playlist_mgr);
 
-		mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_GROUP_LIST_DATA, NULL, index);
+		char *data_path = app_get_data_path();
+		char group_list_data[1024] = {0};
+		snprintf(group_list_data, 1024, "%s%s", data_path, MP_GROUP_LIST_DATA);
+		free(data_path);
+		mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, group_list_data, NULL, index);
 		return true;
 	}
 
@@ -614,7 +618,11 @@ _mp_main_app_init_idler_cb(void *data)
 
 		if (ad->playlist_mgr && ad->current_track_info) {
 			if (ad->current_track_info->uri) {
-				mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_NOWPLAYING_LIST_DATA, ad->current_track_info->uri, -1);
+				char *data_path = app_get_data_path();
+				char nowplaying_list_data[1024] = {0};
+				snprintf(nowplaying_list_data, 1024, "%s%s", data_path, MP_NOWPLAYING_LIST_DATA);
+				free(data_path);
+				mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, nowplaying_list_data, ad->current_track_info->uri, -1);
 			}
 		}
 	}
@@ -938,7 +946,11 @@ _mp_main_create_default_playing_list(struct appdata *ad, int index)
 	mp_common_create_playlist_mgr();
 	mp_playlist_mgr_clear(ad->playlist_mgr);
 
-	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_NOWPLAYING_LIST_DATA, last_played_path, -1);
+	char *data_path = app_get_data_path();
+	char nowplaying_list_data[1024] = {0};
+	snprintf(nowplaying_list_data, 1024, "%s%s", data_path, MP_NOWPLAYING_LIST_DATA);
+	free(data_path);
+	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, nowplaying_list_data, last_played_path, -1);
 
 	if (mp_playlist_mgr_count(ad->playlist_mgr) == 0) {
 		mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, NULL, 0, &count);
@@ -1033,7 +1045,11 @@ _mp_main_parse_livebox_event(app_control_h app_control, bool *activate_window, b
 		mp_common_create_playlist_mgr();
 		mp_playlist_mgr_clear(ad->playlist_mgr);
 
-		mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_GROUP_LIST_DATA, NULL, index);
+		char *data_path = app_get_data_path();
+		char group_list_data[1024] = {0};
+		snprintf(group_list_data, 1024, "%s%s", data_path, MP_GROUP_LIST_DATA);
+		free(data_path);
+		mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, group_list_data, NULL, index);
 		*start_playback = true;
 		return true;
 	}

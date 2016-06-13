@@ -545,7 +545,11 @@ mp_lockscreenmini_show(struct appdata *ad)
 	ad->b_lockmini_show = TRUE;
 	mp_lockscreenmini_update(ad);
 
-	FILE *fp = fopen(MP_LSCR_CONTROL, "w");
+	char *path = app_get_data_path();
+	char lscr_state[1024] = {0};
+	snprintf(lscr_state, 1024, "%s%s", path, MP_LSCR_CONTROL);
+	free(path);
+	FILE *fp = fopen(lscr_state, "w");
 	if (fp) {
 		fclose(fp);
 	}
@@ -892,7 +896,11 @@ mp_lockscreenmini_destroy(struct appdata *ad)
 	mp_ecore_timer_del(ad->lockmini_button_timer);
 	ad->lockmini_visible = false;
 
-	ecore_file_remove(MP_LSCR_CONTROL);
+	char *path = app_get_data_path();
+	char lscr_state[1024] = {0};
+	snprintf(lscr_state, 1024, "%s%s", path, MP_LSCR_CONTROL);
+	free(path);
+	ecore_file_remove(lscr_state);
 	return 0;
 }
 

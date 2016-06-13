@@ -466,10 +466,15 @@ mp_setting_set_nowplaying_id(int val)
 {
 	startfunc;
 
-	FILE *fp = fopen(MP_NOW_PLAYING_ID_INI, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char now_playing_id[1024] = {0};
+
+	snprintf(now_playing_id, 1024, "%s%s", path, MP_NOW_PLAYING_ID_INI);
+	free(path);
+	FILE *fp = fopen(now_playing_id, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOW_PLAYING_ID_INI);
+		SECURE_ERROR("Failed to open ini files. : %s", now_playing_id);
 		return;
 	}
 
@@ -490,8 +495,13 @@ mp_setting_get_nowplaying_id(void)
 	FILE *fp = NULL;
 	char line[MAX_NAM_LEN + 1];
 	int pid = -1;
-	if ((fp = fopen(MP_NOW_PLAYING_ID_INI, "r")) == NULL) {
-		DEBUG_TRACE("unable to open %s/shared/data/NowPlayingId.ini", DATA_PREFIX);
+	char *path = app_get_data_path();
+	char now_playing_id[1024] = {0};
+
+	snprintf(now_playing_id, 1024, "%s%s", path, MP_NOW_PLAYING_ID_INI);
+	free(path);
+	if ((fp = fopen(now_playing_id, "r")) == NULL) {
+		DEBUG_TRACE("unable to open %s", now_playing_id);
 		return -1;
 	}
 	if (fgets(line, MAX_NAM_LEN, fp)) { /* #Nowplaying */
@@ -524,10 +534,14 @@ mp_setting_set_player_state(int val)
 		return;
 	}
 
-	FILE *fp = fopen(MP_PLAY_STATE, "w");	/* make new file. */
+	char *path = app_get_data_path();
+	char play_state[1024] = {0};
+	snprintf(play_state, 1024, "%s%s", path, MP_PLAY_STATE);
+	free(path);
+	FILE *fp = fopen(play_state, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_PLAY_STATE);
+		SECURE_ERROR("Failed to open ini files. : %s", play_state);
 		return;
 	}
 
@@ -623,17 +637,23 @@ mp_setting_save_playing_info(void *data)
 	MP_CHECK(item);
 	MP_CHECK(ad->current_track_info);
 
+	char *data_path = app_get_data_path();
+	char playing_ini[1024] = {0};
 #ifndef MP_SOUND_PLAYER
-	fp = fopen(MP_PLAYING_INI_FILE_NAME_MUSIC, "w");        /* make new file. */
+	snprintf(playing_ini, 1024, "%s%s", data_path, MP_PLAYING_INI_FILE_NAME_MUSIC);
+	free(data_path);
+	fp = fopen(playing_ini, "w");        /* make new file. */
 #else
-	fp = fopen(MP_PLAYING_INI_FILE_NAME_SOUND, "w");        /* make new file. */
+	snprintf(playing_ini, 1024, "%s%s", data_path, MP_PLAYING_INI_FILE_NAME_SOUND);
+	free(data_path);
+	fp = fopen(playing_ini, "w");        /* make new file. */
 #endif
 
 	if (fp == NULL) {
 #ifndef MP_SOUND_PLAYER
-		ERROR_TRACE("Failed to open ini files. : %s", MP_PLAYING_INI_FILE_NAME_MUSIC);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_ini);
 #else
-		ERROR_TRACE("Failed to open ini files. : %s", MP_PLAYING_INI_FILE_NAME_SOUND);
+		ERROR_TRACE("Failed to open ini files. : %s", playing_ini);
 #endif
 		return;
 	}
@@ -680,7 +700,7 @@ mp_setting_remove_now_playing_shared_status(void)
 	if (path == NULL) {
 		return;
 	}
-	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 	free(path);
 
 	FILE *fp = fopen(playing_status, "w");	/* make new file. */
@@ -702,10 +722,14 @@ mp_setting_remove_now_playing(void)
 	startfunc;
 	FILE *fp = NULL;
 
-	fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "w");	/* make new file. */
+	char *data_path = app_get_data_path();
+	char nowplaying_ini[1024] = {0};
+	snprintf(nowplaying_ini, 1024, "%s%s", data_path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(data_path);
+	fp = fopen(nowplaying_ini, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_INI_FILE_NAME);
+		SECURE_ERROR("Failed to open ini files. : %s", nowplaying_ini);
 		return;
 	}
 	fprintf(fp, " \n");
@@ -723,11 +747,15 @@ mp_setting_get_now_playing_path_from_file(char **path)
 	char line[MAX_NAM_LEN + 1];
 	FILE *fp = NULL;
 
-	if(access(MP_NOWPLAYING_INI_FILE_NAME, F_OK) != -1)
+	char *data_path = app_get_data_path();
+	char nowplaying_ini[1024] = {0};
+	snprintf(nowplaying_ini, 1024, "%s%s", data_path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(data_path);
+	if(access(nowplaying_ini, F_OK) != -1)
 	{
-		fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "r");
+		fp = fopen(nowplaying_ini, "r");
 		if (!fp) {
-			SECURE_ERROR("unable to open %s...", MP_NOWPLAYING_INI_FILE_NAME);
+			SECURE_ERROR("unable to open %s...", nowplaying_ini);
 			return;
 		}
 		if (fgets(line, MAX_NAM_LEN, fp)) { /* audio id */
@@ -758,10 +786,14 @@ mp_setting_save_now_playing(void *data)
 	MP_CHECK(item);
 	MP_CHECK(ad->current_track_info);
 
-	fp = fopen(MP_NOWPLAYING_INI_FILE_NAME, "w");	/* make new file. */
+	char *data_path = app_get_data_path();
+	char nowplaying_ini[1024] = {0};
+	snprintf(nowplaying_ini, 1024, "%s%s", data_path, MP_NOWPLAYING_INI_FILE_NAME);
+	free(data_path);
+	fp = fopen(nowplaying_ini, "w");	/* make new file. */
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_INI_FILE_NAME);
+		SECURE_ERROR("Failed to open ini files. : %s", nowplaying_ini);
 		return;
 	}
 
@@ -852,11 +884,15 @@ mp_setting_read_playing_status(char *uri, char *status)
 	int valid_uri = 0;
 	int valid_status = 0;
 	char *path = app_get_data_path();
+	if (!path) {
+		return -1;
+	}
+	DEBUG_TRACE("Data Path is: %s", path);
 	char playing_status[1024] = {0};
 	if (path == NULL) {
 		return -1;
 	}
-	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+	snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 	free(path);
 
 	FILE *fp = fopen(playing_status, "r");	/* read MP_SHARED_PLAYING_STATUS_INI file.  */
@@ -922,12 +958,13 @@ mp_setting_write_playing_status(char *uri, char *status)
 	} else {
 		char *path = app_get_data_path();
 		char *shared_path = app_get_shared_resource_path();
-		DEBUG_TRACE("Path is: %s", path);
+		DEBUG_TRACE("Data Path is: %s", path);
+		DEBUG_TRACE("Shared Resource Path is: %s", shared_path);
 		char playing_status[1024] = {0};
 		if (path == NULL) {
 			return;
 		}
-		snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
+		snprintf(playing_status, 1024, "%s%s", path, MP_SHARED_PLAYING_STATUS_INI);
 		free(path);
 
 		FILE *fp = fopen(playing_status, "w");	/* make new file. */

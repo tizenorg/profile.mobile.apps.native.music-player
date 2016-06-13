@@ -1554,7 +1554,11 @@ void mp_common_create_default_playlist()
 	mp_common_create_playlist_mgr();
 	mp_playlist_mgr_clear(ad->playlist_mgr);
 
-	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, MP_NOWPLAYING_LIST_DATA, last_played_path, -1);
+	char *data_path = app_get_data_path();
+	char nowplaying_list_data[1024] = {0};
+	snprintf(nowplaying_list_data, 1024, "%s%s", data_path, MP_NOWPLAYING_LIST_DATA);
+	free(data_path);
+	mp_playlist_mgr_lazy_append_with_file(ad->playlist_mgr, nowplaying_list_data, last_played_path, -1);
 
 	if (mp_playlist_mgr_count(ad->playlist_mgr) == 0) {
 		mp_media_info_list_count(MP_TRACK_ALL, NULL, NULL, NULL, 0, &count);

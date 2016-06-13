@@ -434,12 +434,20 @@ void _mp_app_db_update_cb(void *data)
 #endif
 
 			/*as all the items are removed, remove now-playing.ini to avoid copy the same track but in DB, they are different*/
-			mp_file_remove(MP_NOWPLAYING_INI_FILE_NAME);
+			char *data_path = app_get_data_path();
+			char nowplaying_ini[1024] = {0};
+			snprintf(nowplaying_ini, 1024, "%s%s", data_path, MP_NOWPLAYING_INI_FILE_NAME);
+			mp_file_remove(nowplaying_ini);
 			/* remove playing_track.ini to avoid lockscreen still using the file content*/
+			char playing_ini[1024] = {0};
 #ifndef MP_SOUND_PLAYER
-			mp_file_remove(MP_PLAYING_INI_FILE_NAME_MUSIC);
+			snprintf(playing_ini, 1024, "%s%s", data_path, MP_PLAYING_INI_FILE_NAME_MUSIC);
+			free(data_path);
+			mp_file_remove(playing_ini);
 #else
-			mp_file_remove(MP_PLAYING_INI_FILE_NAME_SOUND);
+			snprintf(playing_ini, 1024, "%s%s", data_path, MP_PLAYING_INI_FILE_NAME_SOUND);
+			free(data_path);
+			mp_file_remove(playing_ini);
 #endif
 		} else if (next_play) {
 			mp_play_new_file(ad, true);
@@ -552,7 +560,12 @@ mp_app_noti_init(void *data)
 		ERROR_TRACE("Fail to register KEY_MUSIC_MENU_CHANGE key callback [%d]", retcode);
 		res = FALSE;
 	}
-	ecore_file_monitor_add(MP_NOW_PLAYING_ID_INI, mp_app_now_playing_id_changed_cb, ad);
+	char *path = app_get_data_path();
+	char now_playing_id[1024] = {0};
+
+	snprintf(now_playing_id, 1024, "%s%s", path, MP_NOW_PLAYING_ID_INI);
+	free(path);
+	ecore_file_monitor_add(now_playing_id, mp_app_now_playing_id_changed_cb, ad);
 
 	if (storage_set_state_changed_cb(ad->externalStorageId, _mp_app_storage_state_changed_cb, ad) < 0) {
 		ERROR_TRACE("Fail to register storage state changed callback");

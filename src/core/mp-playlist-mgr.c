@@ -112,10 +112,14 @@ __save_playing_list(mp_plst_mgr *playlist_mgr)
 
 	int i;
 
-	fp = fopen(MP_NOWPLAYING_LIST_DATA, "w");
+	char *data_path = app_get_data_path();
+	char nowplaying_list_data[1024] = {0};
+	snprintf(nowplaying_list_data, 1024, "%s%s", data_path, MP_NOWPLAYING_LIST_DATA);
+	free(data_path);
+	fp = fopen(nowplaying_list_data, "w");
 
 	if (fp == NULL) {
-		SECURE_ERROR("Failed to open ini files. : %s", MP_NOWPLAYING_LIST_DATA);
+		SECURE_ERROR("Failed to open ini files. : %s", nowplaying_list_data);
 		return;
 	}
 

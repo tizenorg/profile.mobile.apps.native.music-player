@@ -1677,7 +1677,7 @@ _mp_common_multiple_view_operation(app_control_h app_control)
 		for (i = 0; i < length; i++) {
 			char *path = _mp_util_convert_url(value[i]);
 			mp_plst_item *item = mp_playlist_mgr_item_append(ad->playlist_mgr, path, NULL, NULL, NULL, MP_TRACK_URI);
-			MP_CHECK(item);
+			MP_CHECK_FALSE(item);
 			if (thumbs) {
 				item->thumbnail_path = g_strdup(thumbs[i]);
 			}

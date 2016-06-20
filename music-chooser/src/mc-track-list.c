@@ -114,7 +114,7 @@ static Evas_Object *_gl_select_all_content_get(void *data, Evas_Object *obj, con
 void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e state)
 {
 	startfunc;
-	MP_CHECK_NULL(it_data);
+	MP_CHECK(it_data);
 	struct app_data *ad = it_data->ad;
 	int ret = 0;
 

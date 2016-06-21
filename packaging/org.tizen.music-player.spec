@@ -1,5 +1,5 @@
 Name:       org.tizen.music-player
-#VCS_FROM:   profile/mobile/apps/native/music-player#1f760123f631d986a21ff0ae398aa7b823a14c39
+#VCS_FROM:   profile/mobile/apps/native/music-player#5f45b182683857e310ade5888e75f49f67513980
 #RS_Ver:    20160620_2 
 Summary:    music player application
 Version:    1.0.0
@@ -26,7 +26,7 @@ Requires(post):  /usr/bin/tpk-backend
 %endif
 
 %description
-profile/mobile/apps/native/music-player#1f760123f631d986a21ff0ae398aa7b823a14c39
+profile/mobile/apps/native/music-player#5f45b182683857e310ade5888e75f49f67513980
 This is a container package which have preload TPK files
 
 %prep

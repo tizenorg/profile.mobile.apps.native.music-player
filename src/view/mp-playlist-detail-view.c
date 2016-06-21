@@ -516,7 +516,7 @@ _mp_playlist_detail_view_on_event_cb(void *thiz, MpViewEvent_e event)
 		break;
 	case MP_VIEW_TRANSITION_FINISHED:
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_PLAYLIST_CREATED);
-		eext_object_event_callback_add(GET_VIEW_MGR->navi, EEXT_CALLBACK_BACK, eext_naviframe_back_cb, NULL);
+//		eext_object_event_callback_add(GET_VIEW_MGR->navi, EEXT_CALLBACK_BACK, eext_naviframe_back_cb, NULL);
 		break;
 	case MP_START_PLAYBACK:
 	case MP_RESUME_PLAYBACK:

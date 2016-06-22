@@ -134,8 +134,6 @@ int widget_Resize(widget_context_h context, int w, int h, void *data)
 
 	evas_object_resize(widget_data->win, w, h);
 
-	DbgPrint("Resized to %dx%d\n", w, h);
-
 	return WIDGET_ERROR_NONE;
 }
 

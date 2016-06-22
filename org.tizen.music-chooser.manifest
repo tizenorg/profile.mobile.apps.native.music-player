@@ -1,12 +1,6 @@
 <manifest>
-	<define>
-		<domain name="org.tizen.music-chooser" />
-	</define>
-	<request>
-		<domain name="org.tizen.music-chooser" />
-	</request>
-	<assign>
-		<filesystem path="/usr/share/icons/default/small/music-chooser.png" label="_" />
-		<filesystem path="/usr/share/icons/default/small/preview_music_4x2.png" label="_" />
-	</assign>
+ <request>
+    <domain name="_"/>
+ </request>
 </manifest>
+

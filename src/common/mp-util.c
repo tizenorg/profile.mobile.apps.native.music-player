@@ -2635,7 +2635,7 @@ const char *util_get_file_path(const char *relative)
 	return &buf[0];
 }
 
-
+#ifndef SOUND_PLAYER
 void mp_post_notification_indicator(char *status)
 {
 	startfunc;
@@ -2652,9 +2652,9 @@ void mp_post_notification_indicator(char *status)
 	char icon_path[1024] = {0};
 
 	if (!strcmp(status, "playing")) {
-		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
-	} else {
 		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_play.png", path);
+	} else {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
 	}
 	free(path);
 
@@ -2662,6 +2662,10 @@ void mp_post_notification_indicator(char *status)
 		DEBUG_TRACE("notification create");
 		notification_delete_all(NOTIFICATION_TYPE_NOTI);
 		ad->noti = notification_create(noti_type);
+		ret = notification_set_property(ad->noti, NOTIFICATION_PROP_VOLATILE_DISPLAY);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification property");
+		}
 		ret = notification_set_image(ad->noti, img_type, icon_path);
 		if (ret != NOTIFICATION_ERROR_NONE) {
 			DEBUG_TRACE("Cannot set the notification image");
@@ -2718,3 +2722,4 @@ void mp_noti_read_ini_file(void *data, Ecore_File_Monitor *em, Ecore_File_Event 
 
 	fclose(file);
 }
+#endif

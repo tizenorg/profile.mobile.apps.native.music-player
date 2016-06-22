@@ -1604,8 +1604,10 @@ mp_terminate(void *data)
 	mp_music_view_mgr_release();
 #endif
 
+#ifndef SOUND_PLAYER
 	notification_delete(ad->noti);
 	notification_free(ad->noti);
+#endif
 	return;
 }
 
@@ -1828,7 +1830,7 @@ app_control(app_control_h app_control, void *data)
 	}
 	PROFILE_OUT("mp_service");
 
-
+#ifndef SOUND_PLAYER
 	char *path = app_get_data_path();
 	DEBUG_TRACE("Path is: %s", path);
 	char playing_status[1024] = {0};
@@ -1841,6 +1843,7 @@ app_control(app_control_h app_control, void *data)
 	if (ad->monitor == NULL) {
 		ad->monitor = ecore_file_monitor_add(playing_status, mp_noti_read_ini_file, NULL);
 	}
+#endif
 
 
 #ifdef MP_DEBUG_MODE

@@ -127,9 +127,9 @@ void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e st
 	char icon_path[1024] = {0};
 
 	if (state == PLAYER_STATE_PLAYING || state == PLAYER_STATE_IDLE) {
-		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
-	} else {
 		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_play.png", path);
+	} else {
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", path);
 	}
 	free(path);
 

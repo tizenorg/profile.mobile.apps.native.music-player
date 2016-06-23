@@ -1,5 +1,5 @@
 Name:       org.tizen.music-player
-VCS:         profile/mobile/apps/native/music-player#0dc60ef0d15133519bb893f5c3a403556bf71bd1
+VCS:         profile/mobile/apps/native/music-player#11e494a6a281e07953f68504ff55cfe9071e38cf
 #RS_Ver:    20160622_2 
 Summary:    music player application
 Version:    1.0.0

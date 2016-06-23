@@ -375,8 +375,6 @@ mp_util_create_image(Evas_Object * obj, const char *path, const char *group, int
 		elm_image_file_set(image, path, group);
 	}
 
-
-
 	elm_image_resizable_set(image, EINA_TRUE, EINA_TRUE);
 	evas_object_size_hint_align_set(image, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_size_hint_weight_set(image, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -2216,6 +2214,7 @@ EXPORT_API void dump_win(Evas_Object *obj, int max_depth)
 	}
 
 	void *pData = evas_object_smart_data_get(obj);
+	MP_CHECK(pData);
 	volatile int Diff;
 
 	Diff = 0xC4;
@@ -2641,6 +2640,7 @@ void mp_post_notification_indicator(char *status)
 	startfunc;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	int ret = NOTIFICATION_ERROR_NONE;
 
 	int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
@@ -2682,6 +2682,10 @@ void mp_noti_read_ini_file(void *data, Ecore_File_Monitor *em, Ecore_File_Event 
 	}
 	char str[1000] = {0,};
 	FILE *file = fopen(path, "r");
+	if (!file) {
+		ERROR_TRACE("File doesn't exists");
+		return;
+	}
 
 	char *sptr = NULL;
 	while (fgets(str, sizeof(str), file)) {
@@ -2695,6 +2699,10 @@ void mp_noti_read_ini_file(void *data, Ecore_File_Monitor *em, Ecore_File_Event 
 			value[strlen(value) - 1] = '\0';
 		} else {
 			DEBUG_TRACE("value is NULL");
+			continue;
+		}
+
+		if (key == NULL) {
 			continue;
 		}
 

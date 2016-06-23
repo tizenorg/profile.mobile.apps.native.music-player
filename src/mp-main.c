@@ -840,7 +840,7 @@ _mp_main_parse_request_type(struct appdata *ad, app_control_h app_control, const
 		*start_playback = true;
 	} else if (!g_strcmp0(request, "livebox")) {
 	} else {
-		WARN_TRACE("Inavlid request: %s", request);
+		WARN_TRACE("Invalid request: %s", request);
 		ret = -1;
 	}
 
@@ -1114,6 +1114,14 @@ _mp_main_parse_service(struct appdata *ad, app_control_h app_control, bool *acti
 #ifdef MP_SOUND_PLAYER
 	/* create playlist mgr before parse service */
 	mp_common_create_playlist_mgr();
+
+	if(!app_control_get_extra_data(app_control, APP_EXIT_STATUS, &value)) {
+		DEBUG_TRACE("Application Exit Status is %s", value);
+		ad->exit_status = false;
+	} else {
+		ERROR_TRACE("Application Exit Status cannot be determined");
+		ad->exit_status = true;
+	}
 
 	if (!app_control_get_extra_data(app_control, MP_REQ_TYPE, &value)) {
 		DEBUG_TRACE("request_type: %s", value);

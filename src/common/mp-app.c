@@ -200,7 +200,7 @@ _mp_app_storage_state_changed_cb(int storage_id, storage_state_e state, void *us
 
 	struct appdata *ad = (struct appdata *)user_data;
 	MP_CHECK(ad);
-	ad->is_sdcard_removed = TRUE;
+	ad->is_sdcard_removed = true;
 	if (state == STORAGE_STATE_REMOVED) {
 		mp_view_mgr_post_event(GET_VIEW_MGR, MP_MMC_REMOVED);
 #ifndef MP_SOUND_PLAYER

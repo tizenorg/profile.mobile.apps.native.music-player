@@ -1193,6 +1193,10 @@ static Eina_Bool _mp_player_view_back_button_clicked_cb(void *data, Elm_Object_I
 #ifdef MP_SOUND_PLAYER
 	MP_CHECK_FALSE(view);
 
+	if(ad->exit_status == true) {
+		elm_exit();
+	}
+
 	if (ad->caller_win_id || ad->player_state == PLAY_STATE_NONE) {
 		elm_exit();
 	} else {

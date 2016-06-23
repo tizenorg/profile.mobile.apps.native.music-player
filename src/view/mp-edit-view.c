@@ -139,7 +139,7 @@ void mp_edit_view_remove_cb(void *data, Evas_Object *obj, void *event_info)
 	int list_count = _mp_list_get_count(view->content_to_show, MP_LIST_EDIT_TYPE_NORMAL);
 
 	if (list_count == mp_list_get_checked_count(view->content_to_show)) {
-		ad->is_sdcard_removed = 1;
+		ad->is_sdcard_removed = true;
 		mp_lockscreenmini_destroy(ad);
 		mp_minicontroller_destroy(ad);
 	}

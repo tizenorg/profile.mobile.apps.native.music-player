@@ -356,12 +356,14 @@ mp_util_create_image(Evas_Object * obj, const char *path, const char *group, int
 	elm_image_smooth_set(image, EINA_TRUE);
 	elm_image_aspect_fixed_set(image, EINA_TRUE);
 
+	int path_allocated = 0;
 	if (!path) {
 		char default_thumbnail[1024] = {0};
 		char *shared_path = app_get_shared_resource_path();
 		snprintf(default_thumbnail, 1024, "%s%s/%s", shared_path, "shared_images", DEFAULT_THUMBNAIL);
 		free(shared_path);
 		path = g_strdup(default_thumbnail);
+		path_allocated = 1;
 	}
 
 	char mp_image_path[1024] = {0};
@@ -373,6 +375,10 @@ mp_util_create_image(Evas_Object * obj, const char *path, const char *group, int
 		elm_image_file_set(image, mp_image_path, NULL);
 	} else {
 		elm_image_file_set(image, path, group);
+	}
+
+	if (path_allocated) {
+		free(path);
 	}
 
 	elm_image_resizable_set(image, EINA_TRUE, EINA_TRUE);

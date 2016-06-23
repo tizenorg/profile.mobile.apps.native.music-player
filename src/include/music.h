@@ -242,6 +242,7 @@ struct appdata
 	Evas_Object *popup[MP_POPUP_MAX];
 	int win_angle;
 	int del_cb_invoked;
+	bool exit_status;
 
 #if 0
 	Ecore_X_Window xwin;

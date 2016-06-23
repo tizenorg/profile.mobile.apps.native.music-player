@@ -379,6 +379,9 @@ _get_total_size(void *data)
 	item = elm_genlist_item_next_get(item);
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		mp_media_info_h media = it_data->media;
 		MP_CHECK_VAL(media, 0);
 		mp_media_info_get_file_path(media, &path);
@@ -405,6 +408,9 @@ _get_media_list_count(void *data)
 	item = elm_genlist_first_item_get(ld->genlist);
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		item = elm_genlist_item_next_get(item);
 		if (it_data) {
 			count++;
@@ -437,6 +443,9 @@ _get_select_count(void *data)//(Evas_Object *genlist)
 	}
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		item = elm_genlist_item_next_get(item);
 		if (it_data && it_data->checked) {
 			count++;
@@ -456,6 +465,9 @@ static Elm_Object_Item  *_get_select_radio(void *data)
 
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		item = elm_genlist_item_next_get(item);
 
 		int index = elm_radio_value_get(g_radio_main);
@@ -619,7 +631,9 @@ void mc_track_list_set_uri_selected(void *thiz, const char *uri)
 	while (item) {
 		char *path = NULL;
 		list_item_data_t *it_data = elm_object_item_data_get(item);
-
+		if (!it_data) {
+			continue;
+		}
 		mp_media_info_h media = it_data->media;
 		MP_CHECK(media);
 		mp_media_info_get_file_path(media, &path);
@@ -890,6 +904,9 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	item = elm_genlist_item_next_get(item);
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		it_data->checked = all_selected;
 		Evas_Object *chk = elm_object_item_part_content_get(item, "elm.swallow.end");
 		if (chk) {

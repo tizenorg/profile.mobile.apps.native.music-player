@@ -120,6 +120,7 @@ void mp_edit_create_track_delete_popup(void *data)
 {
 	DEBUG_TRACE("");
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	char *title_txt = NULL;
 	char *title = NULL;
 	char *help_txt = NULL;
@@ -2145,6 +2146,7 @@ mp_edit_create_delete_popup(void *data)
 {
 	DEBUG_TRACE("");
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	MpList_t *list = data;
 	MP_CHECK(list);

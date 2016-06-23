@@ -199,6 +199,22 @@ mc_create(void *data)
 	elm_theme_extension_add(NULL, edje_path);
 	free(path);
 
+	if (!ad->noti) {
+		DEBUG_TRACE("notification create");
+
+		int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
+		notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
+		int ret = NOTIFICATION_ERROR_NONE;
+
+		notification_delete_all(NOTIFICATION_TYPE_NOTI);
+		ad->noti = notification_create(noti_type);
+		ret = notification_set_display_applist(ad->noti, applist);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the display applist");
+			notification_free(ad->noti);
+		}
+		notification_post(ad->noti);
+	}
 
 	DEBUG_TRACE("end");
 
@@ -243,6 +259,7 @@ mc_app_control(app_control_h app_control, void* data)
 		ad->navi_bar = _mc_create_navigation_layout(ad->base_layout);
 		elm_object_part_content_set(ad->base_layout, "elm.swallow.content", ad->navi_bar);
 	}
+
 	if (ad->select_type >= MC_SHORTCUT_ALBUM) {
 		mc_select_view_create(ad);
 	} else {

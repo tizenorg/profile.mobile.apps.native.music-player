@@ -1451,7 +1451,7 @@ mp_create(void *data)
 	conformant = elm_conformant_add(ad->win_main);
 	MP_CHECK_FALSE(conformant);
 
-#ifndef SOUND_PLAYER
+#ifndef MP_SOUND_PLAYER
 	if (!ad->noti) {
 		DEBUG_TRACE("notification create");
 
@@ -1655,7 +1655,7 @@ mp_terminate(void *data)
 	mp_music_view_mgr_release();
 #endif
 
-#ifndef SOUND_PLAYER
+#ifndef MP_SOUND_PLAYER
 	notification_delete(ad->noti);
 	notification_free(ad->noti);
 #endif

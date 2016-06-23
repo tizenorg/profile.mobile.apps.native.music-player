@@ -2635,7 +2635,7 @@ const char *util_get_file_path(const char *relative)
 	return &buf[0];
 }
 
-#ifndef SOUND_PLAYER
+#ifndef MP_SOUND_PLAYER
 void mp_post_notification_indicator(char *status)
 {
 	startfunc;

@@ -35,6 +35,7 @@
 #include <signal.h>
 #include <glib.h>
 #include <glib-object.h>
+#include <notification.h>
 #include "mp-player-mgr.h"
 #include "mp-player-debug.h"
 /* TEMP_BLOCK */
@@ -1384,7 +1385,7 @@ mp_create(void *data)
 	PROFILE_IN("elm_theme_extension_add");
 	/* do extension add before add elm object.*/
 	char edje_path[1024] ={0};
-	char * path = app_get_resource_path();
+	char *path = app_get_resource_path();
 	if (path == NULL) {
 		return false;
 	}
@@ -1449,6 +1450,56 @@ mp_create(void *data)
 	Evas_Object *conformant = NULL;
 	conformant = elm_conformant_add(ad->win_main);
 	MP_CHECK_FALSE(conformant);
+
+#ifndef SOUND_PLAYER
+	if (!ad->noti) {
+		DEBUG_TRACE("notification create");
+
+		int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
+		notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
+		notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
+		int ret = NOTIFICATION_ERROR_NONE;
+
+		char *shared_path = app_get_shared_resource_path();
+		if (!shared_path) {
+			ERROR_TRACE("Shared Resource Path is NULL");
+		}
+
+		char icon_path[1024] = {0};
+		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", shared_path);
+		free(shared_path);
+
+		notification_delete_all(NOTIFICATION_TYPE_NOTI);
+		ad->noti = notification_create(noti_type);
+		ret = notification_set_property(ad->noti, NOTIFICATION_PROP_VOLATILE_DISPLAY);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification property");
+		}
+		ret = notification_set_image(ad->noti, img_type, icon_path);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the notification image");
+		}
+		ret = notification_set_display_applist(ad->noti, applist);
+		if (ret != NOTIFICATION_ERROR_NONE) {
+			DEBUG_TRACE("Cannot set the display applist");
+			notification_free(ad->noti);
+		}
+		notification_post(ad->noti);
+
+		char *data_path = app_get_data_path();
+		DEBUG_TRACE("Path is: %s", data_path);
+		char playing_status[1024] = {0};
+		if (data_path == NULL) {
+			ERROR_TRACE("unable to get data path");
+		}
+		snprintf(playing_status, 1024, "%s%s", data_path, "NowPlayingStatus");
+		free(data_path);
+
+		if (ad->monitor == NULL) {
+			ad->monitor = ecore_file_monitor_add(playing_status, mp_noti_read_ini_file, NULL);
+		}
+	}
+#endif
 
 	elm_object_signal_emit(conformant, "elm,state,indicator,overlap", "");
 	evas_object_data_set(conformant, "overlap", (void *)EINA_TRUE);
@@ -1829,22 +1880,6 @@ app_control(app_control_h app_control, void *data)
 		app_control_destroy(reply);
 	}
 	PROFILE_OUT("mp_service");
-
-#ifndef SOUND_PLAYER
-	char *path = app_get_data_path();
-	DEBUG_TRACE("Path is: %s", path);
-	char playing_status[1024] = {0};
-	if (path == NULL) {
-		ERROR_TRACE("unable to get data path");
-	}
-	snprintf(playing_status, 1024, "%s%s", path, "NowPlayingStatus");
-	free(path);
-
-	if (ad->monitor == NULL) {
-		ad->monitor = ecore_file_monitor_add(playing_status, mp_noti_read_ini_file, NULL);
-	}
-#endif
-
 
 #ifdef MP_DEBUG_MODE
 	TA_S_L(0, "RENDER_FLUSH_POST(service to render)");

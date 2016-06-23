@@ -116,10 +116,8 @@ void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e st
 	startfunc;
 	MP_CHECK(it_data);
 	struct app_data *ad = it_data->ad;
-	int ret = 0;
+	int ret = NOTIFICATION_ERROR_NONE;
 
-	int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
-	notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
 	notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
 	char *path = app_get_shared_resource_path();
 
@@ -133,22 +131,7 @@ void mc_post_notification_indicator(list_item_data_t *it_data, player_state_e st
 	}
 	free(path);
 
-	if(!ad->noti) {
-		DEBUG_TRACE("notification create");
-		notification_delete_all(NOTIFICATION_TYPE_NOTI);
-		ad->noti = notification_create(noti_type);
-		ret = notification_set_image(ad->noti, img_type, icon_path);
-		if (ret != NOTIFICATION_ERROR_NONE) {
-			DEBUG_TRACE("Cannot set the notification image");
-		}
-		ret = notification_set_display_applist(ad->noti, applist);
-		if (ret != NOTIFICATION_ERROR_NONE) {
-			DEBUG_TRACE("Cannot set the display applist");
-			notification_free(ad->noti);
-			return;
-		}
-		notification_post(ad->noti);
-	} else {
+	if (ad->noti) {
 		ret = notification_set_image(ad->noti, img_type, icon_path);
 		if (ret != NOTIFICATION_ERROR_NONE) {
 			DEBUG_TRACE("Cannot set the notification image");

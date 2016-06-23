@@ -890,6 +890,9 @@ void _mc_track_list_select_all_selected_item_data_get(void *data, Evas_Object *o
 	item = elm_genlist_item_next_get(item);
 	while (item) {
 		list_item_data_t *it_data = elm_object_item_data_get(item);
+		if (!it_data) {
+			continue;
+		}
 		it_data->checked = all_selected;
 		Evas_Object *chk = elm_object_item_part_content_get(item, "elm.swallow.end");
 		if (chk) {

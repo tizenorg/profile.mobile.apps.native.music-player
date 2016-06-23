@@ -735,6 +735,9 @@ _mp_player_view_add_playlist_select_cb(void *data, Evas_Object * obj, void *even
 	mp_media_info_h item_handler = data;
 
 	Popup_genlist_item *gli_data = elm_object_item_data_get(event_info);
+	if (!gli_data) {
+		return;
+	}
 	mp_media_info_h plst = gli_data->item_data;
 
 	char *playlist_name = NULL;

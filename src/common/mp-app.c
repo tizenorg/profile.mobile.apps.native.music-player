@@ -402,6 +402,7 @@ void _mp_app_db_update_cb(void *data)
 	EVENT_TRACE("Post DB Update event");
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	//mp_plst_item *item = mp_playlist_mgr_get_current(ad->playlist_mgr);
 
 	bool current_removed = false;

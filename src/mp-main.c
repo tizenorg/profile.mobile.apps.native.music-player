@@ -1397,9 +1397,6 @@ mp_create(void *data)
 	PROFILE_OUT("elm_theme_extension_add");
 
 	char locale_path[1024] = {0};
-	if (path == NULL) {
-		return false;
-	}
 	snprintf(locale_path, 1024, "%s%s", path, LOCALE_DIR);
 	free(path);
 	PROFILE_IN("bindtextdomain");

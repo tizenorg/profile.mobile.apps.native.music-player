@@ -2280,6 +2280,7 @@ void mp_common_playall_cb(void *data, Evas_Object * obj, void *event_info)
 	eventfunc;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	MpList_t *list = data;
 	MP_CHECK(list);

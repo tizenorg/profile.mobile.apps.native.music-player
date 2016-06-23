@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.music-player" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.music-player" exec="music-player" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+    <ui-application appid="org.tizen.music-player" exec="music-player" multiple="false" nodisplay="false" taskmanage="true" type="capp" hw-acceleration="on">
       		 <label>Music</label>
 		<label xml:lang="hy-am">Երաժշտություն</label>
 		<label xml:lang="az-az">Musiqi</label>

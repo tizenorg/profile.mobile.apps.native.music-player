@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.sound-player" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.sound-player" exec="sound-player" multiple="false" nodisplay="true" taskmanage="true" type="capp" launch_mode="caller">
+    <ui-application appid="org.tizen.sound-player" exec="sound-player" multiple="false" nodisplay="true" taskmanage="true" type="capp" launch_mode="caller" hw-acceleration="on">
         <label>Sound Player</label>
 	<label xml:lang="hy-am">Ձայնի նվագարկում</label>
 	<label xml:lang="az-az">Səs pleyeri</label>

@@ -145,26 +145,7 @@ images {
             color: 255 255 255 255;
          }
       }
-      part { name: "right_btn_padding_rect";
-         type: SPACER;
-         //scale: 1;
-         description { state: "default" 0.0;
-            min: 0 0;
-            //fixed: 1 0;
-            align: 1.0 0.0;
-            rel1.relative: 0.0 0.0;
-            rel1.to: "right_padding_rect";
-            rel2.relative: 0.0 1.0;
-            rel2.to: "right_padding_rect";
-         }
-         description { state: "in" 0.0;
-            inherit: "default" 0.0;
-            min: SEARCHBAR_CANCEL_BUTTON_LEFT_PADDING_INC 0;
-            rel1.to: "button_cancel";
-            rel2.to: "button_cancel";
-         }
-      }
-      part { name: "button_cancel";
+   	part { name: "button_cancel";
          type: RECT;
          mouse_events: 1;
          //scale: 1;

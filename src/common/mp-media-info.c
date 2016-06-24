@@ -1259,8 +1259,10 @@ int mp_media_info_get_year(mp_media_info_h media, char **year)
 		char *default_year = "2014";
 		strncpy(media->i.minfo->year, default_year, strlen(default_year));
 	}
-	*year = media->i.minfo->year;
-	PRINT_STR(*year);
+	if (media->i.minfo->year) {
+		*year = media->i.minfo->year;
+		PRINT_STR(*year);
+	}
 	return res;
 }
 int mp_media_info_get_copyright(mp_media_info_h media, char **copyright)

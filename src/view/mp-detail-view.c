@@ -186,7 +186,7 @@ void _mp_detail_view_get_file_size_info(char **file_size, off_t src_size)
 	int index = 0;
 	int len = 0;
 
-	original_size = src_size;
+	original_size = (unsigned long long)src_size;
 	size = (double)original_size;
 
 	while (size >= 1024) {

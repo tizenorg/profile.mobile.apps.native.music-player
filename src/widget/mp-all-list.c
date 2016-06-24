@@ -950,7 +950,6 @@ _mp_album_list_grid_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(grid_data->item_data);
 
 	bool landscape = mp_util_is_landscape();
-	/*MpAllList_t *list = evas_object_data_get(obj, "list_data");*/
 
 	if (!landscape) {
 		content = mp_common_load_edj(obj, MP_EDJ_NAME, "artist_album_grid_layout");
@@ -1176,8 +1175,10 @@ static void _mp_all_list_load_album_list(MpAllList_t *list)
 			list->itc->func.text_get = NULL;
 			list->itc->func.del = _mp_all_list_grid_item_del_cb;
 			/*
-						if (!list->gengrid_itc)
+						if (!list->gengrid_itc) {
 							list->gengrid_itc= elm_gengrid_item_class_new();
+							MP_CHECK(list->gengrid_itc);
+						}
 
 						bool landscape = mp_util_is_landscape();
 						DEBUG_TRACE("landscape: %d", landscape);
@@ -1607,7 +1608,6 @@ _mp_artist_list_grid_get(void *data, Evas_Object * obj, const char *part)
 	MP_CHECK_NULL(grid_data->item_data);
 
 	bool landscape = mp_util_is_landscape();
-	/*MpAllList_t *list = evas_object_data_get(obj, "list_data");*/
 
 	if (!landscape) {
 		content = mp_common_load_edj(obj, MP_EDJ_NAME, "artist_album_grid_layout");
@@ -1663,6 +1663,7 @@ static void mp_all_list_playall_cb(void *data, Evas_Object * obj, void *event_in
 	eventfunc;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	MpAllList_t *list = data;
 	MP_CHECK(list);
@@ -1766,11 +1767,12 @@ END:
 	endfunc;
 }
 
+#if 0
 static char *_mp_media_info_get_live_auto_playlist_thumbnail_by_name(const char *name)
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char thumb_path[1024] = {0};
+	char *thumb_path = (char *)malloc(1024*sizeof(char));
 	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
@@ -1791,7 +1793,7 @@ static char *_mp_media_info_get_live_auto_playlist_icon_by_name(const char *name
 {
 	MP_CHECK_VAL(name, NULL);
 
-	char icon_path[1024] = {0};
+	char *icon_path = (char *)malloc(1024*sizeof(char));
 	char *shared_path = app_get_shared_resource_path();
 
 	if (!g_strcmp0(name, STR_MP_FAVOURITES)) {
@@ -1806,6 +1808,7 @@ static char *_mp_media_info_get_live_auto_playlist_icon_by_name(const char *name
 
 	return icon_path;
 }
+#endif
 
 #ifdef MP_FEATURE_ADD_TO_HOME
 static void mp_all_add_to_home_cb(void *data, Evas_Object * obj, void *event_info)
@@ -1813,6 +1816,7 @@ static void mp_all_add_to_home_cb(void *data, Evas_Object * obj, void *event_inf
 	eventfunc;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	MpAllList_t *list = data;
 	MP_CHECK(list);
@@ -1909,6 +1913,7 @@ _mp_all_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_info)
 
 	while (temp) {
 		item_data = elm_object_item_data_get(temp);
+		MP_CHECK(item_data);
 		item_data->checked = false;
 		temp = elm_genlist_item_next_get(temp);
 	}
@@ -2048,6 +2053,7 @@ static void _mp_all_list_load_artist_list(MpAllList_t *list)
 
 			if (!list->gengrid_itc) {
 				list->gengrid_itc = elm_gengrid_item_class_new();
+				MP_CHECK(list->gengrid_itc);
 			}
 
 			list->gengrid_itc->item_style = "default_gridtext";
@@ -2326,6 +2332,7 @@ _mp_all_list_content_get(void *data, Evas_Object * obj, const char *part)
 	Evas_Object *content = NULL;
 
 	MpAllList_t *list = evas_object_data_get(obj, "list_data");
+	MP_CHECK_NULL(list);
 	PROFILE_IN("_mp_all_list_content_get");
 	if (type == MP_ALL_LIST_SHORTCUT) {
 		PROFILE_IN("mp_shortcut_add");

@@ -869,13 +869,6 @@ _mp_playlist_list_gengrid_create(MpPlaylistList_t *list)
 		list->gengrid_itc->func.content_get = _mp_playlist_list_icon_get;
 		list->gengrid_itc->func.del = _mp_playlist_list_item_del_cb;
 	}
-
-	/*if (!list->gengrid_add_itc) {
-		list->gengrid_add_itc = elm_gengrid_item_class_new();
-		list->gengrid_add_itc->func.text_get = _mp_playlist_add_label_get;
-		list->gengrid_add_itc->func.content_get = _mp_playlist_add_icon_get;
-		list->gengrid_add_itc->func.del = NULL;
-	}*/
 	_mp_playlist_list_set_grid_style(list);
 	evas_object_smart_callback_add(list->genlist, "longpressed", _mp_playlist_list_item_longpressed_cb, list);
 

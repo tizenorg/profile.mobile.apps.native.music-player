@@ -872,6 +872,7 @@ _mp_playlist_list_gengrid_create(MpPlaylistList_t *list)
 
 	/*if (!list->gengrid_add_itc) {
 		list->gengrid_add_itc = elm_gengrid_item_class_new();
+		MP_CHECK(list->gengrid_add_itc);
 		list->gengrid_add_itc->func.text_get = _mp_playlist_add_label_get;
 		list->gengrid_add_itc->func.content_get = _mp_playlist_add_icon_get;
 		list->gengrid_add_itc->func.del = NULL;

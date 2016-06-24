@@ -4394,6 +4394,7 @@ static void _mp_player_view_genrid_create(MpPlayerView_t *thiz)
 
 	if (playing_view->gic == NULL) {
 		playing_view->gic = elm_gengrid_item_class_new();
+		MP_CHECK(playing_view->gic);
 		playing_view->gic->item_style = "music/cast_side";
 		playing_view->gic->func.text_get = _mp_player_view_gengrid_text_get;
 		playing_view->gic->func.content_get = _mp_player_view_gengrid_content_get;

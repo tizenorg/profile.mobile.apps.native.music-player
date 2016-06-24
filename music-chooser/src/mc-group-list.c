@@ -116,7 +116,7 @@ _layout_del_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 		ld->playlists_auto = NULL;
 	}
 
-	IF_FREE(ld->type_str);
+	IF_G_FREE(ld->type_str);
 
 	free(ld);
 }
@@ -318,6 +318,7 @@ int mc_group_list_set_data(Evas_Object *list, int group_type, const char *type_s
 	MP_CHECK_VAL(ld, -1);
 
 	ld->type = group_type;
+	IF_G_FREE(ld->type_str);
 	ld->type_str = g_strdup(type_str);
 	IF_FREE(type_str);
 

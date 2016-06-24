@@ -431,6 +431,7 @@ _mp_album_booklet_view_gengrid_create(Evas_Object *parent, MpAlbumBookletView_t 
 
 		if (!view->album_itc) {
 			view->album_itc = elm_gengrid_item_class_new();
+			MP_CHECK_NULL(view->album_itc);
 			view->album_itc->item_style = "music/album_grid";
 			view->album_itc->func.text_get = _mp_album_booklet_album_label_get;
 			view->album_itc->func.content_get = _mp_album_booklet_album_icon_get;

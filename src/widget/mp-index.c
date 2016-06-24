@@ -244,7 +244,7 @@ _widget_del_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 	startfunc;
 	MpIndexData_t *wd = data;
 	MP_CHECK(wd);
-	IF_FREE(wd->first);
+	IF_G_FREE(wd->first);
 	IF_FREE(wd);
 }
 

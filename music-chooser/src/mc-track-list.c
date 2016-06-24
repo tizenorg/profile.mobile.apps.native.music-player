@@ -661,7 +661,7 @@ _layout_del_cb(void *data, Evas * e, Evas_Object * obj, void *event_info)
 	track_list_data_t *ld  = data;
 	MP_CHECK(ld);
 
-	IF_FREE(ld->type_str);
+	IF_G_FREE(ld->type_str);
 
 	mc_pre_play_mgr_destroy_play();
 	mc_pre_play_control_clear_pre_item_data();
@@ -1131,8 +1131,9 @@ int mc_track_list_set_data(Evas_Object *list, int track_type, const char *type_s
 	MP_CHECK_VAL(ld, -1);
 
 	ld->t_type = track_type;
-	IF_FREE(ld->type_str);
+	IF_G_FREE(ld->type_str);
 	ld->type_str = g_strdup(type_str);
+	IF_FREE(type_str);
 	ld->playlist_id = playlist_id;
 
 	return 0;

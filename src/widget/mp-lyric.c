@@ -353,6 +353,7 @@ Evas_Object *mp_lyric_create(Evas_Object *parent, const char *path)
 
 ERROR:
 	ERROR_TRACE("Unable to create lyric");
+	IF_FREE(wd->path);
 	IF_FREE(wd);
 
 	mp_lyric_mgr_destory(lyric_mgr);

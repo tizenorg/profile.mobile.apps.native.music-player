@@ -632,10 +632,7 @@ _mp_artist_list_gengrid_create(MpArtistList_t *list)
 
 	if (!list->gengrid_itc) {
 		list->gengrid_itc = elm_gengrid_item_class_new();
-		if (list->gengrid_itc == NULL) {
-			ERROR_TRACE("Unable to create artist list gengrid");
-			return;
-		}
+		MP_CHECK(list->gengrid_itc);
 		list->gengrid_itc->func.text_get = _mp_artist_list_label_get;
 		list->gengrid_itc->func.content_get = _mp_artist_list_icon_get;
 		list->gengrid_itc->func.del = _mp_artist_list_item_del_cb;

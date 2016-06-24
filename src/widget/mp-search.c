@@ -125,8 +125,7 @@ mp_search_create_new(Evas_Object * parent, Evas_Smart_Cb change_cb, void *change
 	elm_entry_input_panel_return_key_type_set(en, ELM_INPUT_PANEL_RETURN_KEY_TYPE_SEARCH);
 
 	evas_object_size_hint_weight_set(searchfield, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_size_hint_align_set(searchfield, EVAS_HINT_FILL, 0.0);
-	elm_entry_text_style_user_push(en, style);
+	evas_object_size_hint_align_set(searchfield, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	mp_util_domain_translatable_part_text_set(en, "elm.guide", STR_SEARCH_GUIDE);
 	evas_object_smart_callback_add(en, "changed", _mp_searchfield_changed_cb, searchfield);
 	elm_object_signal_callback_add(searchfield, "elm,eraser,clicked", "elm", _mp_search_eraser_clicked_cb, en);

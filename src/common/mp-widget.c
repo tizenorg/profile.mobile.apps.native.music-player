@@ -50,6 +50,11 @@ static void _unrealized_cb(void *data, Evas_Object *obj, void *event_info)
 }
 #endif
 
+static void mp_language_changed(void *data, Evas_Object *obj, void *event_info)
+{
+	elm_genlist_realized_items_update(obj);
+}
+
 EXPORT_API Evas_Object *
 mp_widget_genlist_create(Evas_Object * parent)
 {
@@ -60,6 +65,8 @@ mp_widget_genlist_create(Evas_Object * parent)
 #ifdef MP_WATCH_DOG
 	evas_object_smart_callback_add(list, "unrealized", _unrealized_cb, list);
 #endif
+
+	evas_object_smart_callback_add(list, "language,changed", mp_language_changed, list);
 	elm_scroller_bounce_set(list, EINA_FALSE, EINA_TRUE);
 	return list;
 }

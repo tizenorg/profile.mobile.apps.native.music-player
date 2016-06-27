@@ -972,6 +972,7 @@ group {
 				state: "default" 0.0;
 				visible: 0;
 				align: 1 0;
+				fixed: 1 1;
 				rel1 {
 					relative: 0.0 0.0;
 					//to: "album_area";
@@ -1157,7 +1158,7 @@ group {
 					state: "default" 0.0;
 					//min: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
 				 	//max: PV_ALBUM_IMAGE_W PV_ALBUM_IMAGE_H;
-					//fixed: 1 1;
+					fixed: 1 1;
 					align: 0.5 0.5;
 					rel1 {
 						relative: 0.0 0.0; to: "album_area";

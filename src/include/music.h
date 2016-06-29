@@ -242,7 +242,10 @@ struct appdata
 	Evas_Object *popup[MP_POPUP_MAX];
 	int win_angle;
 	int del_cb_invoked;
+
+	/* App control parameters */
 	bool exit_status;
+	bool disable_detail_view;
 
 #if 0
 	Ecore_X_Window xwin;

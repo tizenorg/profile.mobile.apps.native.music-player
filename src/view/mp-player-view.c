@@ -1260,6 +1260,9 @@ static void mp_player_view_set_title_and_buttons(void *thiz)
 	MP_CHECK(view);
 	CHECK_VIEW(view);
 
+	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
+
 	/* set title and sub title */
 	mp_player_view_set_title(view);
 
@@ -1284,6 +1287,10 @@ static void mp_player_view_set_title_and_buttons(void *thiz)
 
 	/* Add Title More Button */
 	bool playable = true;
+
+	if (ad->disable_detail_view) {
+		playable = false;
+	}
 
 	if (playable) {
 		Evas_Object *btn = _mp_player_view_create_toolbar_more_btn(view->layout, _mp_player_view_more_button_clicked_cb, view);

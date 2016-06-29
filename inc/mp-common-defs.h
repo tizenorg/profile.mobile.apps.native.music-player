@@ -23,7 +23,11 @@
 #define MP_PLAY_RECENT "play_recent"
 #define MP_REQ_TYPE "request_type"
 #define MP_HOST_TYPE "host_type"
+
+#ifdef MP_SOUND_PLAYER
+#define IS_TEMP_FILE "Menu State"
 #define APP_EXIT_STATUS "App Exit"
+#endif
 
 #define MP_SAMSUNG_LINK_ARTIST "http://tizen.org/appcontrol/data/artist"
 

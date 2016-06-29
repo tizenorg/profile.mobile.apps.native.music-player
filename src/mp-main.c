@@ -1115,6 +1115,14 @@ _mp_main_parse_service(struct appdata *ad, app_control_h app_control, bool *acti
 	/* create playlist mgr before parse service */
 	mp_common_create_playlist_mgr();
 
+	if(!app_control_get_extra_data(app_control, IS_TEMP_FILE, &value)) {
+		DEBUG_TRACE("This is a temporary file.... Do not display detail view");
+		ad->disable_detail_view = true;
+	} else {
+		ERROR_TRACE("Menu State cannot be determined");
+		ad->disable_detail_view = false;
+	}
+
 	if(!app_control_get_extra_data(app_control, APP_EXIT_STATUS, &value)) {
 		DEBUG_TRACE("Application Exit Status is %s", value);
 		ad->exit_status = false;

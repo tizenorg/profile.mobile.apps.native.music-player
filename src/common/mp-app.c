@@ -646,7 +646,7 @@ mp_app_noti_ignore(void *data)
 	//sound_manager_unset_available_route_changed_cb();
 	//sound_manager_unset_active_device_changed_cb();
 
-	mp_media_info_unset_db_update_cb();
+	//mp_media_info_unset_db_update_cb();
 	retcode = system_settings_unset_changed_cb(SYSTEM_SETTINGS_KEY_SOUND_SILENT_MODE);
 	if (retcode != SYSTEM_SETTINGS_ERROR_NONE) {
 		ERROR_TRACE("Error when ignore callback [%d]", retcode);

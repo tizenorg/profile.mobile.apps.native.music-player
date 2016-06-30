@@ -356,6 +356,9 @@ _mp_genre_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_inf
 		temp = elm_gengrid_first_item_get(list->genlist);
 		while (temp) {
 			item_data = elm_object_item_data_get(temp);
+			if (!item_data) {
+				continue;
+			}
 			item_data->checked = false;
 			temp = elm_gengrid_item_next_get(temp);
 		}
@@ -363,6 +366,9 @@ _mp_genre_list_item_longpressed_cb(void *data, Evas_Object *obj, void *event_inf
 		temp = elm_genlist_first_item_get(list->genlist);
 		while (temp) {
 			item_data = elm_object_item_data_get(temp);
+			if (!item_data) {
+				continue;
+			}
 			item_data->checked = false;
 			temp = elm_genlist_item_next_get(temp);
 		}

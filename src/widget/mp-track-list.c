@@ -54,6 +54,7 @@ _mp_track_list_label_get(void *data, Evas_Object * obj, const char *part)
 		MP_CHECK_NULL(list);
 
 		struct appdata *ad = mp_util_get_appdata();
+		MP_CHECK_NULL(ad);
 		mp_track_info_t* current = ad->current_track_info;
 
 

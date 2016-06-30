@@ -82,6 +82,7 @@ EXPORT_API Evas_Object *
 mp_widget_text_popup(void *data, const char *message)
 {
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 	Evas_Object *popup = NULL;
 	popup = mp_popup_create(ad->win_main, MP_POPUP_NOTIFY, NULL, ad, _mp_widget_text_popup_timeout_cb, ad);
 
@@ -99,6 +100,7 @@ EXPORT_API Evas_Object *
 mp_widget_text_popup_show(void *data, const char *message, bool show)
 {
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 	Evas_Object *popup = NULL;
 	popup = mp_popup_create(ad->win_main, MP_POPUP_NOTIFY, NULL, ad, _mp_widget_text_popup_timeout_cb, ad);
 
@@ -136,6 +138,7 @@ EXPORT_API Evas_Object *
 mp_widget_text_cb_popup(void *data, const char *message, Evas_Smart_Cb cb)
 {
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 	Evas_Object *popup = NULL;
 	popup = mp_popup_create(ad->win_main, MP_POPUP_NOTIFY, NULL, ad, cb, ad);
 

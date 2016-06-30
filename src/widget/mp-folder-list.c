@@ -48,6 +48,7 @@ _mp_folder_list_playall_button_cb(void *data, Evas_Object * obj, void *event_inf
 	eventfunc;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	mp_media_info_h handle = data;
 	MP_CHECK(handle);

@@ -1179,6 +1179,7 @@ bool
 mp_player_mgr_session_init(void)
 {
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_FALSE(ad);
 	int ret = SOUND_MANAGER_ERROR_NONE;
 	if (!ad->stream_info) {
 		ret = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, mp_player_focus_callback, ad, &ad->stream_info);

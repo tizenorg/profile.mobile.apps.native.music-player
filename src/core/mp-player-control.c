@@ -817,6 +817,7 @@ mp_play_control_menu_cb(void *data, Evas_Object * o, const char *emission, const
 {
 	eventfunc;
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	EVENT_TRACE("mp_play_control_menu_cb with[%s]\n", emission);
 
 	if (!strcmp(emission, SIGNAL_SHUFFLE_ON)) {			/* TURN OFF SHUFFLE */

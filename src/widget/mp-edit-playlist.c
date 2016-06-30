@@ -44,6 +44,7 @@ _mp_edit_playlist_destory(void * thiz)
 	MP_CHECK(mp_playlist_data);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	ad->del_cb_invoked = 0;
 	// TODO: release resource..
 	IF_FREE(mp_playlist_data->adding_media_id);
@@ -571,6 +572,7 @@ mp_edit_playlist_rename_done_cb(void *data, Evas_Object * obj, void *event_info)
 	MP_CHECK(playlist);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	text = mp_util_isf_get_edited_str(editfiled_entry, TRUE);
 
 	if (!mp_util_is_playlist_name_valid((char *)text)) {

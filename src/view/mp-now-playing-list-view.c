@@ -108,6 +108,7 @@ _mp_now_playing_list_view_remove_popup_show(MpNowPlayingListiew_t *view)
 {
 	DEBUG_TRACE("");
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 
 	MpList_t *list = view->content_to_show;
 	MP_CHECK(list);

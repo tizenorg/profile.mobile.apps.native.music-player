@@ -972,6 +972,7 @@ _mp_main_parse_livebox_event(app_control_h app_control, bool *activate_window, b
 	char *value = NULL;
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_VAL(ad, -1);
 
 	if (!app_control_get_extra_data(app_control, MP_LB_EVENT_KEY, &value)) {
 		*activate_window = false;

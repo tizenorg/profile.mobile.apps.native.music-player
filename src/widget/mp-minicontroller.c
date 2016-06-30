@@ -363,6 +363,7 @@ static void _quick_panel_cb(minicontrol_viewer_event_e event_type, bundle *event
 {
 	startfunc;
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	minicontrol_viewer_event_e event_hide = (minicontrol_viewer_event_e)MINICONTROL_EVENT_REQUEST_HIDE;
 	if (event_type == event_hide) {
 		DEBUG_TRACE("CLOSE");

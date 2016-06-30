@@ -209,6 +209,7 @@ static int _mp_view_set_nowplaying(void *thiz)
 	}
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_VAL(ad, -1);
 	if (!ad->current_track_info) {
 		return 0;
 	}

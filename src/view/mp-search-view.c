@@ -247,6 +247,7 @@ _mp_search_view_on_event_cb(void *thiz, MpViewEvent_e event)
 		if ((int)mp_view_mgr_get_top_view(GET_VIEW_MGR) ==
 		        (int)view) {
 			struct appdata *ad = mp_util_get_appdata();
+			MP_CHECK(ad);
 			if (ad->sip_state) {
 				elm_object_focus_allow_set(
 				    mp_search_entry_get(view->search_bar),

@@ -41,6 +41,7 @@ _mp_now_playing_list_label_get(void *data, Evas_Object * obj, const char *part)
 	mp_retvm_if(!track, NULL, "data is null");
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 	mp_plst_item * current = mp_playlist_mgr_get_current(ad->playlist_mgr);
 
 	if (!strcmp(part, "elm.text") || !strcmp(part, "elm.text.sub")) {

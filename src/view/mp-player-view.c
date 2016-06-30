@@ -425,6 +425,7 @@ static void _mp_player_view_update_control_queue_list_btn(void *data)
 	MP_CHECK(view->navi_it);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	Evas_Object *image = elm_object_content_get(view->option_button[OPTION_QUEUE]);
 
 	char mp_image_path[1024] = {0};
@@ -1392,6 +1393,7 @@ static int _mp_player_view_update_options(void *thiz)
 	MP_CHECK_FALSE(playing_view);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_VAL(ad, -1);
 	mp_plst_item *item = mp_playlist_mgr_get_current(ad->playlist_mgr);
 	if (item == NULL) {
 		if (ad->current_track_info) {

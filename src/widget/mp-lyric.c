@@ -335,7 +335,7 @@ Evas_Object *mp_lyric_create(Evas_Object *parent, const char *path)
 
 	wd = calloc(1, sizeof(MpLyricData_t));
 	if (!wd) {
-		goto ERROR;
+		return NULL;
 	}
 
 	lyric_layout = _create_lyric(parent, wd);

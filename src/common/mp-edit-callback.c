@@ -153,6 +153,9 @@ _mp_edit_cb_add_to_playlist_cb(void *data, Evas_Object * obj, void *event_info)
 
 	Elm_Object_Item *selected_item = event_info;
 	Popup_genlist_item *gli_data = (Popup_genlist_item *)elm_object_item_data_get(selected_item);
+	if (!gli_data) {
+		return;
+	}
 
 	char *playlist_name;
 	mp_media_info_h item = data;

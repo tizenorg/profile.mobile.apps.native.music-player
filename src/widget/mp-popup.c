@@ -591,6 +591,7 @@ mp_genlist_popup_create(Evas_Object * parent, mp_popup_t type, void *user_data, 
 {
 	mp_retvm_if(parent == NULL, NULL, "parent is NULL");
 	ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 
 	if (_mp_popup_popup_exist(ad, MP_POPUP_GENLIST)) {
 		DEBUG_TRACE("popup already exist...");

@@ -85,6 +85,7 @@ static Eina_Bool _mp_edit_view_back_cb(void *data, Elm_Object_Item *it)
 	MP_CHECK_VAL(view, EINA_TRUE);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_FALSE(ad);
 	ad->del_cb_invoked = 0;
 
 	/*

@@ -508,6 +508,7 @@ static void _gl_sel(void *data, Evas_Object *obj, void *event_info)
 
 		/*pause the main player*/
 		struct appdata *ad = mp_util_get_appdata();
+		MP_CHECK(ad);
 		if (ad->player_state == PLAY_STATE_PLAYING) {
 			view->need_to_resume = TRUE;
 			mp_play_control_play_pause(ad, FALSE);

@@ -522,6 +522,7 @@ static void _set_layout(Evas_Object *obj)
 {
 	int w, h;
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK(ad);
 	evas_object_geometry_get(ad->win_main, NULL, NULL, &w, &h);
 	DEBUG_TRACE("Nowplaying bar w: %d", w);
 	evas_object_size_hint_min_set(obj, w, 0);

@@ -42,6 +42,9 @@ static void _print_view_stack()
 	Elm_Object_Item *data = NULL;
 	EINA_LIST_FOREACH(list, l, data) {
 		MpView_t *view = elm_object_item_data_get(data);
+		if (!view) {
+			continue;
+		}
 		WARN_TRACE("view[0x%x], depth[%d], type[%d]", view, i, view->view_type);
 		i++;
 	}
@@ -139,6 +142,7 @@ MpViewMgr_t *mp_view_mgr_create(Evas_Object *parent)
 	view_mgr->navi = mp_widget_navigation_new(parent);
 
 	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_NULL(ad);
 	evas_object_event_callback_add(ad->win_main, EVAS_CALLBACK_RESIZE, _mp_view_mgr_win_resize_cb, view_mgr->navi);
 
 	eext_object_event_callback_add(view_mgr->navi, EEXT_CALLBACK_BACK, eext_naviframe_back_cb, NULL);
@@ -185,6 +189,9 @@ EXPORT_API MpView_t *mp_view_mgr_get_view(MpViewMgr_t *view_mgr, MpViewType_e ty
 	Elm_Object_Item *data = NULL;
 	EINA_LIST_FOREACH(list, l, data) {
 		view = elm_object_item_data_get(data);
+		if (!view) {
+			continue;
+		}
 		if (view->view_type == type) {
 			break;
 		}
@@ -206,6 +213,9 @@ EXPORT_API MpView_t *mp_view_mgr_get_view_prev(MpViewMgr_t *view_mgr, MpViewType
 	MpView_t *prev_view = NULL;
 	EINA_LIST_FOREACH(list, l, data) {
 		view = elm_object_item_data_get(data);
+		if (!view) {
+			return NULL;
+		}
 		if (view->view_type == type) {
 			break;
 		}
@@ -265,7 +275,9 @@ EXPORT_API int mp_view_mgr_push_view_with_effect(MpViewMgr_t *view_mgr, MpView_t
 	_print_view_stack();
 
 #ifndef MP_SOUND_PLAYER
-	if (mp_util_get_appdata()->current_track_info) {
+	struct appdata *ad = mp_util_get_appdata();
+	MP_CHECK_VAL(ad, -1);
+	if (ad->current_track_info) {
 		mp_view_set_nowplaying(view);
 		mp_view_update_nowplaying(view, true);
 	}
@@ -304,6 +316,7 @@ int mp_view_mgr_pop_view(MpViewMgr_t *view_mgr, bool pop_view)
 	if (!list) {
 		DEBUG_TRACE("There is no previous view..");
 		struct appdata *ad = mp_util_get_appdata();
+		MP_CHECK_VAL(ad, -1);
 		elm_win_lower(ad->win_main);
 		ecore_idler_add(_create_main_view_cb, ad);
 		goto END;

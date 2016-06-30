@@ -1080,6 +1080,7 @@ mp_common_show_player_view(int launch_type, bool disable_effect, bool start_play
 
 	if (start_playback) {
 		struct appdata *ad = mp_util_get_appdata();
+		MP_CHECK(ad);
 		player_view->start_on_transition_finish = true;
 		ad->player_state = PLAY_STATE_PLAYING;
 	}

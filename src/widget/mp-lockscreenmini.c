@@ -864,12 +864,8 @@ mp_lockscreenmini_update(struct appdata *ad)
 		DEBUG_TRACE("Thumbnail Location: %s", ad->current_track_info->thumbnail_path);
 		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->current_track_info->thumbnail_path);
 	}
-	else
-	{
-		char wallpaper_path[1024] = {0};
-		snprintf(wallpaper_path, 1024, "%s/res/shared_images/default_albumart.png", SHAREDDIR);
-		DEBUG_TRACE("Setting Default Thumbnail :%s", wallpaper_path);
-		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, wallpaper_path);
+	else {
+		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->lockscreen_wallpaper);
 	}
 	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {
 		ERROR_TRACE("Failed to set locksreen wallpaper");

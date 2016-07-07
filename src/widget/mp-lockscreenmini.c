@@ -30,6 +30,7 @@
 #include <device/display.h>
 #include <device/callback.h>
 #include <system_settings.h>
+#include <message_port.h>
 
 #ifdef MP_FEATURE_LOCKSCREEN
 
@@ -58,7 +59,32 @@ static void _mp_lockscreenmini_update_layout(struct appdata *ad, bool landscape)
 #ifdef MP_FEATURE_LOCKSCREEN
 static void _mp_lockscreenmini_set_repeate_image(void *data, int repeate_state);
 static void _mp_lockscreenmini_set_shuffle_image(void *data, int shuffle_state);
+static int port_id;
 #endif
+
+
+static void lockscreen_message_port_cb(int trusted_local_port_id, const char *remote_app_id,
+    const char *remote_port, bool trusted_remote_port, bundle *message, void *data)
+{
+	//do nothing
+}
+
+void register_port()
+{
+    port_id = message_port_register_trusted_local_port("local/port/id/to/specify", lockscreen_message_port_cb, NULL);
+    if (port_id < 0) {
+    	DEBUG_TRACE("unable to register port");
+    }
+}
+
+void deregister_port()
+{
+	int ret;
+    ret = message_port_unregister_trusted_local_port(port_id);
+    if (ret != MESSAGE_PORT_ERROR_NONE) {
+    	DEBUG_TRACE("unable to deregister");
+    }
+}
 
 static bool _mp_lockscreenmini_is_long_press()
 {
@@ -292,11 +318,24 @@ _load_lockscreenmini(struct appdata *ad)
 	ad->win_lockmini = win;
 
 	int ret = -1;
+	register_port();
+	bundle *b = bundle_create();
+	if (b == NULL) {
+		ERROR_TRACE("Unable to add data to bundle");
+		return;
+	}
+	ret = bundle_add_str(b,"lockscreen/background/file_path", ad->lockscreen_wallpaper);
+	if (ret != BUNDLE_ERROR_NONE) {
+		ERROR_TRACE("failed bundle_add_str in ad->current_track_info->thumbnail_path");
+		bundle_free(b);
+		return;
+	}
 	ad->lockscreen_wallpaper = (char *)malloc(WALLPAPER_LENGTH * sizeof(char));
 	ret = system_settings_get_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, &ad->lockscreen_wallpaper);
 	if(ret != SYSTEM_SETTINGS_ERROR_NONE) {
 		ERROR_TRACE("Failed to get locksreen wallpaper");
 	}
+	ret = message_port_send_trusted_message_with_local_port("org.tizen.lockscreen", "lockscreen/port/background/ondemand", b, port_id);
 	if(ad->lockscreen_wallpaper)
 		DEBUG_TRACE("lockscreen_wallpaper path is: %s", ad->lockscreen_wallpaper);
 	else
@@ -306,7 +345,7 @@ _load_lockscreenmini(struct appdata *ad)
 	_mp_lockscreenmini_update_layout(ad, false);
 
 	/*evas_object_show(eo);*/
-
+	bundle_free(b);
 	return;
 }
 
@@ -860,17 +899,42 @@ mp_lockscreenmini_update(struct appdata *ad)
 
 	int ret = -1;
 
-	if (ad->current_track_info->thumbnail_path) {
-		DEBUG_TRACE("Thumbnail Location: %s", ad->current_track_info->thumbnail_path);
-		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->current_track_info->thumbnail_path);
-	}
-	else {
-		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->lockscreen_wallpaper);
-	}
-	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {
-		ERROR_TRACE("Failed to set locksreen wallpaper");
+	bundle *b = bundle_create();
+	if (b == NULL) {
+		ERROR_TRACE("Unable to add data to bundle");
+		bundle_free(b);
+		return;
 	}
 
+	if (ad->current_track_info->thumbnail_path) {
+		DEBUG_TRACE("Thumbnail Location: %s", ad->current_track_info->thumbnail_path);
+		//		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->current_track_info->thumbnail_path);
+		ret = bundle_add_str(b,"lockscreen/background/file_path", ad->current_track_info->thumbnail_path);
+		if (ret != BUNDLE_ERROR_NONE) {
+			ERROR_TRACE("failed bundle_add_str in ad->current_track_info->thumbnail_path");
+			bundle_free(b);
+			return;
+		}
+	}
+	else {
+		//		ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->lockscreen_wallpaper);
+		if(ad->lockscreen_wallpaper) {
+			ret = bundle_add_str(b,"lockscreen/background/file_path", ad->lockscreen_wallpaper);
+			if (ret != BUNDLE_ERROR_NONE) {
+				ERROR_TRACE("failed bundle_add_str in ad->lockscreen_wallpaper");
+				bundle_free(b);
+			}
+		} else {
+			DEBUG_TRACE("wallpaper is empty");
+		}
+	}
+	ret = message_port_send_trusted_message_with_local_port("org.tizen.lockscreen", "lockscreen/port/background/ondemand", b, port_id);
+	if (ret != MESSAGE_PORT_ERROR_NONE) {
+		ERROR_TRACE("Failed to send message via port, value = %s ", get_error_message(ret));
+		bundle_free(b);
+		return;
+	}
+	bundle_free(b);
 	mp_lockscreenmini_update_control(ad);
 	if (ad->player_state == PLAY_STATE_PLAYING) {
 #ifdef LOCKSCREEN_ENABLE_PROGRESS
@@ -924,6 +988,7 @@ mp_lockscreenmini_destroy(struct appdata *ad)
 	mp_ecore_timer_del(ad->lockmini_progress_timer);
 	mp_ecore_timer_del(ad->lockmini_button_timer);
 	ad->lockmini_visible = false;
+	deregister_port();
 
 	int ret = system_settings_set_value_string(SYSTEM_SETTINGS_KEY_WALLPAPER_LOCK_SCREEN, ad->lockscreen_wallpaper);
 	if (ret != SYSTEM_SETTINGS_ERROR_NONE) {

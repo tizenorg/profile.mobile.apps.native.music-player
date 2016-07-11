@@ -1159,18 +1159,17 @@ void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 	}
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
 		mp_player_mgr_pause(ad);
+
+		DEBUG_TRACE("reason for change is %d", reason_for_change);
 		if (reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_ALARM &&
 				reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
-			DEBUG_TRACE("reason for change is %d", reason_for_change);
 			sound_manager_get_focus_reacquisition(ad->stream_info, &reacquire_state);
-			if (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_RINGTONE) {
+			if (!strcmp(additional_info, "cam_capture")) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
-			} else if (!strcmp(additional_info, "cam_capture")) {
+			} else if (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_RINGTONE || SOUND_STREAM_FOCUS_CHANGED_BY_VOIP || SOUND_STREAM_FOCUS_CHANGED_BY_CALL) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
 			} else if (reacquire_state == EINA_TRUE) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_FALSE);
-			} else {
-				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
 			}
 		}
 	} else {

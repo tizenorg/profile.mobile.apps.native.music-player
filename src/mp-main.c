@@ -1563,6 +1563,7 @@ mp_terminate(void *data)
 	mp_setting_set_nowplaying_id(0);
 #endif
 
+	ecore_file_monitor_del(ad->monitor);
 	mp_language_mgr_destroy();
 	mp_ecore_idler_del(ad->app_init_idler);
 	mp_ecore_timer_del(ad->longpress_timer);

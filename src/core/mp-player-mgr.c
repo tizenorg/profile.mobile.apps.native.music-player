@@ -784,7 +784,8 @@ mp_player_mgr_play(void *data)
 
 	PLAYER_ENTER_LOG("start");
 	if (ad->stream_info) {
-		error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+		const char *str = "music_playing";
+		error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, str);
 		if (error != SOUND_MANAGER_ERROR_NONE) {
 			ERROR_TRACE("failed to acquire focus [%x]", error);
 		}
@@ -878,7 +879,8 @@ mp_player_mgr_resume(void *data)
 			ERROR_TRACE("failed in sound_manager_get_focus_state");
 		}
 		if (state_for_playback != SOUND_STREAM_FOCUS_STATE_ACQUIRED) {
-			error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+			const char *str = "music_playing";
+			error = sound_manager_acquire_focus(ad->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, str);
 			if (error != SOUND_MANAGER_ERROR_NONE) {
 				ERROR_TRACE("failed to acquire focus [%x]", error);
 				return error;

@@ -1474,22 +1474,13 @@ mp_create(void *data)
 		notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
 		int ret = NOTIFICATION_ERROR_NONE;
 
-		char *shared_path = app_get_shared_resource_path();
-		if (!shared_path) {
-			ERROR_TRACE("Shared Resource Path is NULL");
-		}
-
-		char icon_path[1024] = {0};
-		snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_pause.png", shared_path);
-		free(shared_path);
-
 		notification_delete_all(NOTIFICATION_TYPE_NOTI);
 		ad->noti = notification_create(noti_type);
 		ret = notification_set_property(ad->noti, NOTIFICATION_PROP_VOLATILE_DISPLAY);
 		if (ret != NOTIFICATION_ERROR_NONE) {
 			DEBUG_TRACE("Cannot set the notification property");
 		}
-		ret = notification_set_image(ad->noti, img_type, icon_path);
+		ret = notification_set_image(ad->noti, img_type, NULL);
 		if (ret != NOTIFICATION_ERROR_NONE) {
 			DEBUG_TRACE("Cannot set the notification image");
 		}

@@ -184,7 +184,9 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 			} else {
 				elm_object_signal_emit(part_content, "show_pause", "*");
 			}
+#if 0		//Posts play and pause icon in notification indicator area
 			mc_post_notification_indicator(it_data, state);
+#endif
 
 			//elm_object_item_signal_emit(cur_item_data->it, "show_color" ,"*");
 		}

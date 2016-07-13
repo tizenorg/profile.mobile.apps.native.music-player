@@ -199,23 +199,6 @@ mc_create(void *data)
 	elm_theme_extension_add(NULL, edje_path);
 	free(path);
 
-	if (!ad->noti) {
-		DEBUG_TRACE("notification create");
-
-		int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
-		notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
-		int ret = NOTIFICATION_ERROR_NONE;
-
-		notification_delete_all(NOTIFICATION_TYPE_NOTI);
-		ad->noti = notification_create(noti_type);
-		ret = notification_set_display_applist(ad->noti, applist);
-		if (ret != NOTIFICATION_ERROR_NONE) {
-			DEBUG_TRACE("Cannot set the display applist");
-			notification_free(ad->noti);
-		}
-		notification_post(ad->noti);
-	}
-
 	DEBUG_TRACE("end");
 
 	return EINA_TRUE;
@@ -363,8 +346,13 @@ mc_destroy(void *data)
 			ad->smat_pipe = NULL;
 		}
 
-		notification_delete(ad->noti);
-		notification_free(ad->noti);
+#if 0		//Free notification handle
+		if (ad->noti) {
+			notification_delete(ad->noti);
+			notification_free(ad->noti);
+		}
+#endif
+
 	}
 }
 

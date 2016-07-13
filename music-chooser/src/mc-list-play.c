@@ -250,6 +250,40 @@ void mc_player_play(void)
 	player_state_e play_status = mc_pre_play_get_player_state();
 
 	if (PLAYER_STATE_PLAYING == play_status) {
+#if 0	//Enable notification post for play and pause in indicator
+		MP_CHECK(cur_item_data->ad);
+
+		struct app_data *ad = cur_item_data->ad;
+		MP_CHECK(ad);
+		if (!ad->noti) {
+			DEBUG_TRACE("notification create");
+
+			int applist = NOTIFICATION_DISPLAY_APP_INDICATOR;
+			notification_type_e noti_type = NOTIFICATION_TYPE_NOTI;
+			notification_image_type_e img_type = NOTIFICATION_IMAGE_TYPE_ICON_FOR_INDICATOR;
+			int ret = NOTIFICATION_ERROR_NONE;
+
+			char *path = app_get_shared_resource_path();
+
+			char icon_path[1024] = {0};
+			snprintf(icon_path, 1024, "%sshared_images/T02_control_circle_icon_play.png", path);
+			DEBUG_TRACE("Icon Path is : %s", icon_path);
+			free(path);
+
+			notification_delete_all(NOTIFICATION_TYPE_NOTI);
+			ad->noti = notification_create(noti_type);
+			ret = notification_set_image(ad->noti, img_type, icon_path);
+			if (ret != NOTIFICATION_ERROR_NONE) {
+				DEBUG_TRACE("Cannot set the notification image");
+			}
+			ret = notification_set_display_applist(ad->noti, applist);
+			if (ret != NOTIFICATION_ERROR_NONE) {
+				DEBUG_TRACE("Cannot set the display applist");
+				notification_free(ad->noti);
+			}
+			notification_post(ad->noti);
+		}
+#endif
 		_mc_pre_play_mgr_player_start();
 	}
 	_mc_pre_play_mgr_update_play_button_status(cur_item_data);

@@ -414,11 +414,13 @@ void _mp_all_list_append_shuffle_item(MpAllList_t *list)
 
 	if (NULL == list->itc_shuffle) {
 		list->itc_shuffle = elm_genlist_item_class_new();
-		list->itc_shuffle->item_style = "music/1text.2icon.3";/*"music/3text.1icon.2"*/
-		list->itc_shuffle->func.text_get = _mp_all_list_shuffle_text_get;
-		list->itc_shuffle->decorate_all_item_style = NULL;
-		list->itc_shuffle->func.content_get = _mp_all_list_shuffle_icon_get;
-		list->itc_shuffle->func.del = _mp_all_list_songs_item_del_cb;
+		if (list->itc_shuffle) {
+			list->itc_shuffle->item_style = "music/1text.2icon.3";/*"music/3text.1icon.2"*/
+			list->itc_shuffle->func.text_get = _mp_all_list_shuffle_text_get;
+			list->itc_shuffle->decorate_all_item_style = NULL;
+			list->itc_shuffle->func.content_get = _mp_all_list_shuffle_icon_get;
+			list->itc_shuffle->func.del = _mp_all_list_songs_item_del_cb;
+		}
 	}
 
 	mp_list_item_data_t *item_data;
@@ -2482,9 +2484,11 @@ static void _mp_all_list_create_genlist(Evas_Object *parent, MpAllList_t *list)
 	list->itc = elm_genlist_item_class_new();
 
 	list->itc_icon = elm_genlist_item_class_new();
-	list->itc_icon->item_style = "music/1icon/no_padding";/*"music/3text.1icon.2"*/
-	list->itc_icon->func.content_get = _mp_all_list_content_get;
-	list->itc_icon->func.del = NULL;
+	if (list->itc_icon) {
+		list->itc_icon->item_style = "music/1icon/no_padding";/*"music/3text.1icon.2"*/
+		list->itc_icon->func.content_get = _mp_all_list_content_get;
+		list->itc_icon->func.del = NULL;
+	}
 
 	/*create floating widget manager*/
 	list->FwMgr = mp_floating_widget_mgr_create(list->genlist);

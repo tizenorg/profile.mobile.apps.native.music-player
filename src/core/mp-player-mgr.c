@@ -1168,7 +1168,7 @@ void mp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 			sound_manager_get_focus_reacquisition(ad->stream_info, &reacquire_state);
 			if (!strcmp(additional_info, "cam_capture")) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
-			} else if (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_RINGTONE || SOUND_STREAM_FOCUS_CHANGED_BY_VOIP || SOUND_STREAM_FOCUS_CHANGED_BY_CALL) {
+			} else if ((reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_RINGTONE) || (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_VOIP) || (reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_CALL)) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_TRUE);
 			} else if (reacquire_state == EINA_TRUE) {
 				sound_manager_set_focus_reacquisition(ad->stream_info, EINA_FALSE);

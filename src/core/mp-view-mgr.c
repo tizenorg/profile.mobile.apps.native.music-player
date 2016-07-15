@@ -597,7 +597,9 @@ void mp_view_mgr_post_event(MpViewMgr_t *view_mgr, MpViewEvent_e event)
 		}
 	} else {
 		EINA_LIST_FOREACH(list, l, data) {
-			_view_foreach_cb(elm_object_item_data_get(data), (void *)event);
+			if (data) {
+				_view_foreach_cb(elm_object_item_data_get(data), (void *)event);
+			}
 		}
 	}
 

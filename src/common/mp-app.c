@@ -525,10 +525,12 @@ static void mp_app_now_playing_id_changed_cb(void *data, Ecore_File_Monitor *em,
 				ad->paused_by_other_player = TRUE;
 				mp_play_control_play_pause(ad, false);
 			}
+/*
 			mp_minicontroller_destroy(ad);
 #ifdef MP_FEATURE_LOCKSCREEN
 			mp_lockscreenmini_destroy(ad);
 #endif
+*/
 		}
 
 }

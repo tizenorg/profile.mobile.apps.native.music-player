@@ -55,6 +55,7 @@
 		<label xml:lang="en-ph">Music</label>
 		<label xml:lang="fr-ca">Musique</label>
 		<icon>org.tizen.music-player.png</icon>
+                <background-category value="media"/>
     </ui-application>
     <privileges>
         <privilege>http://tizen.org/privilege/network.get</privilege>

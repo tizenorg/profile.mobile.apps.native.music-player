@@ -49,6 +49,8 @@
 bool track_deleted = false;
 #define SINGLE_BYTE_MAX 0x7F
 #define PATH_MAX 4096
+static int externalStorageId = -1;
+static int internalStorageId = -1;
 
 struct index_s {
 	const char *index;
@@ -135,8 +137,6 @@ static unsigned char mask_len[] = {
 	0xFC, /* 1111 1100 */ 0xF8,	/* 1111 10xx */
 	0xFE, /* 1111 1110 */ 0xFC,	/* 1111 110x */
 };
-
-static int externalStorageId = -1;
 
 extern struct appdata *g_ad;
 
@@ -2595,16 +2595,65 @@ mp_util_media_is_uhqa(const char *media_id)
 	return (bool)(sample_rate >= 192000);
 }
 
+static bool __mp_get_all_supported_storageids_cb(int storageId, storage_type_e type, storage_state_e state, const char *path, void *userData)
+{
+	if (type == STORAGE_TYPE_EXTERNAL) {
+		externalStorageId = storageId;
+	}
+	if (type == STORAGE_TYPE_INTERNAL) {
+		internalStorageId = storageId;
+	}
+
+	return true;
+}
+
+char *mp_get_media_directory(storage_type_e storage_type) {
+	char *path = NULL;
+	int error_code = storage_foreach_device_supported(__mp_get_all_supported_storageids_cb, NULL);
+	if (error_code != STORAGE_ERROR_NONE) {
+		ERROR_TRACE("Failed to get Storage Id");
+		return NULL;
+	}
+	if (storage_type == STORAGE_TYPE_INTERNAL && internalStorageId != -1) {
+		storage_get_root_directory(internalStorageId, &path);
+	} else if (storage_type == STORAGE_TYPE_EXTERNAL && externalStorageId != -1) {
+		storage_get_root_directory(externalStorageId, &path);
+	} else {
+		ERROR_TRACE("Invalid Storage Id");
+		return NULL;
+	}
+	return path;
+}
+
 mp_dir_e mp_util_get_file_location(const char *uri)
 {
+	int len_phone = 0;
+	int len_memory = 0;
+	int len_http = 0;
 
-	int len_phone = strlen(MP_MUSIC_DIR);
-	int len_memory = strlen(MP_MMC_DIR);
-	int len_http = strlen(MP_HTTP_DIR);
+	char *externalPath = NULL;
+	char *internalPath = NULL;
+	if (!mp_get_media_directory(STORAGE_TYPE_INTERNAL)) {
+		ERROR_TRACE("Internal Storage Path cannot be determined");
+	} else {
+		internalPath = g_strdup(mp_get_media_directory(STORAGE_TYPE_INTERNAL));
+		len_phone = strlen(internalPath);
+		DEBUG_TRACE("External Storage Path is: %s", externalPath);
+	}
 
-	if (strncmp(uri, MP_MUSIC_DIR, len_phone) == 0) {
+	if (!mp_get_media_directory(STORAGE_TYPE_EXTERNAL)) {
+		ERROR_TRACE("External Storage Path cannot be determined");
+	} else {
+		externalPath = g_strdup(mp_get_media_directory(STORAGE_TYPE_EXTERNAL));
+		len_memory = strlen(externalPath);
+		DEBUG_TRACE("External Storage Path is: %s", externalPath);
+	}
+
+	len_http = strlen(MP_HTTP_DIR);
+
+	if (strncmp(uri, internalPath, len_phone) == 0) {
 		return MP_DIR_PHONE;
-	} else if (strncmp(uri, MP_MMC_DIR, len_memory) == 0) {
+	} else if (strncmp(uri, externalPath, len_memory) == 0) {
 		return MP_DIR_MMC;
 	} else if (strncmp(uri, MP_HTTP_DIR, len_http) == 0) {
 		return MP_DIR_HTTP;
